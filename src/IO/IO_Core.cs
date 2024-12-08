@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Koneko
+namespace Koneko.IO
 {
 
-    public abstract class IoCore
+    public abstract class IO_Core
     {
         public String PathUrl = "files://";
 

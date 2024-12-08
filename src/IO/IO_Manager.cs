@@ -1,20 +1,20 @@
 using System.Collections.Generic;
 
-namespace Koneko
+namespace Koneko.IO
 {
 
-    public class IoManager : IoCore
+    public class IO_Manager : IO_Core
     {
-        public List<IoCore> IoCores { get; } = new List<IoCore>();
+        public List<IO_Core> IoCores { get; } = new List<IO_Core>();
 
-        public IoManager()
+        public IO_Manager()
         {
             PathUrl = "ioCoreMulti://";
         }
 
-        public void Register(IoCore ioCore)
+        public void Register(IO_Core ioCore)
         {
-            if (ioCore is IoManager)
+            if (ioCore is IO_Manager)
             {
                 throw new System.Exception("Cannot register IoManager");
             }
@@ -23,10 +23,10 @@ namespace Koneko
         
         public void RegisterPath(string path, string pathUrl)
         {
-            Register(new FileSystemIo(path, pathUrl));
+            Register(new FileSystem_IO(path, pathUrl));
         }
 
-        public void Unregister(IoCore ioCore)
+        public void Unregister(IO_Core ioCore)
         {
             IoCores.Remove(ioCore);
         }
@@ -147,7 +147,7 @@ namespace Koneko
                 var ioCore = IoCores[i];
                 if (path.StartsWith(ioCore.PathUrl))
                 {
-                    if (ioCore is FileSystemIo fileSys)
+                    if (ioCore is FileSystem_IO fileSys)
                     {
                         return fileSys.GetFilePath(path);
                     }

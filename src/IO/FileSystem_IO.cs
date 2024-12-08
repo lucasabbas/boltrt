@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Koneko
+namespace Koneko.IO
 {
 
-    public class FileSystemIo : IoCore
+    public class FileSystem_IO : IO_Core
     {
         public String Path;
         public String AltPath;
         public String AltPath2;
 
-        public FileSystemIo(String path, String pathUrl)
+        public FileSystem_IO(String path, String pathUrl)
         {
             if (!path.EndsWith("/") && !path.EndsWith("\\"))
             {
