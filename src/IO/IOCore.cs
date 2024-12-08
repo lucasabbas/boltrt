@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Koneko.IO
 {
 
-    public abstract class IO_Core
+    public abstract class IOCore
     {
         public String PathUrl = "files://";
 

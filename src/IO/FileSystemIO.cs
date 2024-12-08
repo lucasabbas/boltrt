@@ -5,13 +5,13 @@ using System.IO;
 namespace Koneko.IO
 {
 
-    public class FileSystem_IO : IO_Core
+    public class FileSystemIO : IOCore
     {
         public String Path;
         public String AltPath;
         public String AltPath2;
 
-        public FileSystem_IO(String path, String pathUrl)
+        public FileSystemIO(String path, String pathUrl)
         {
             if (!path.EndsWith("/") && !path.EndsWith("\\"))
             {
