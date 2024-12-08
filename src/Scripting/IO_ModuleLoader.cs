@@ -9,14 +9,14 @@ using StringExtensions = Godot.StringExtensions;
 
 namespace Koneko.Scripting
 {
-    public class IoModuleLoader : ModuleLoader
+    public class IO_ModuleLoader : ModuleLoader
     {
         private readonly Uri _basePath;
         public IoManager AssetIo;
         
         private readonly Dictionary<string, string> _modules = new();
 
-        public IoModuleLoader(AssetIo assetIo)
+        public IO_ModuleLoader(AssetIo assetIo)
         {
             AssetIo = assetIo;
             _basePath = new Uri("assets://");
