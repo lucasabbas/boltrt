@@ -3,13 +3,15 @@
     <TargetFramework>net472</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Jint" Version="4.1.0" />
     <PackageReference Include="MoonSharp" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\Plugins\" />
     <Folder Include="Tests\HelloHaxe\data\" />
-    <Folder Include="Tests\HelloHaxe\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tests\HelloHaxe\src\errorPatch.lua" />
   </ItemGroup>
 </Project>

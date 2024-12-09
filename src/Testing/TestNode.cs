@@ -2,7 +2,7 @@ using Godot;
 using Koneko.Scripting;
 
 
-public partial class TestNode : ScriptNode
+public partial class TestNode : LuaNode
 {
     [Export(PropertyHint.Dir)] 
     public string DirPath = "res://Testing/";

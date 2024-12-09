@@ -57,6 +57,8 @@ namespace Koneko.Scripting
 
             UserData.RegisterType<IOManager>(); // Register the IoCoreMulti type
             Script.Globals["ioCore"] = IoCore;
+            Script.Globals["__lua__"] = (Func<string, DynValue>)eval;
+            Script.Globals["eval"] = (Func<string, DynValue>)eval;
 
             EnviromentVariables["PLATFORM"] = "Lucidware";
             EnviromentVariables["PLATFORM_VERSION"] = "1.0.0";
@@ -85,17 +87,38 @@ namespace Koneko.Scripting
 
         public void Start(string entryPoint)
         {
-            string fullPath = IoCore.GetFullPath(entryPoint);
-            GD.Print($"Loading script from path: {fullPath}");
+            try
+            {
+                string fullPath = IoCore.GetFullPath(entryPoint);
+                GD.Print($"Loading script from path: {fullPath}");
 
-            server.AttachToScript(Script, fullPath, code => fullPath);
-            server.Start();
-            Script.DoFile(entryPoint);
+                server.AttachToScript(Script, fullPath, code => fullPath);
+                server.Start();
+
+                Script.DoFile(entryPoint);
+            }
+            catch (Exception e)
+            {
+                if (e is ScriptRuntimeException)
+                {
+                    var ex = (ScriptRuntimeException)e;
+                    GD.Print($"Error: {ex.DecoratedMessage}");
+                }
+                else
+                {
+                    GD.Print("Error: ");
+                }
+            }
         }
 
         public void LoadScript(string path)
         {
 
+        }
+        
+        public DynValue eval(string code)
+        {
+            return Script.DoString(code);
         }
 
         public void Exit(int exitCode)

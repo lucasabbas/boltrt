@@ -183,6 +183,8 @@ local Class = _hx_e();
 local Enum = _hx_e();
 
 local Array = _hx_e()
+local MonoObject = _hx_e()
+local HelloHelper = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Person = _hx_e()
@@ -546,6 +548,25 @@ Array.prototype.resize = function(self,len)
   end;
 end
 
+MonoObject.new = {}
+MonoObject.__name__ = true
+
+HelloHelper.new = function() 
+  local self = _hx_new(HelloHelper.prototype)
+  HelloHelper.super(self)
+  return self
+end
+HelloHelper.super = function(self) 
+  self.instance = _HelloHelper.__new();
+end
+HelloHelper.__name__ = true
+HelloHelper.prototype = _hx_e();
+HelloHelper.prototype.sayHello = function(self,name) 
+  self.instance:sayHello(name);
+end
+HelloHelper.__super__ = MonoObject
+setmetatable(HelloHelper.prototype,{__index=MonoObject.prototype})
+
 Main.new = {}
 Main.__name__ = true
 Main.main = function() 
@@ -558,12 +579,14 @@ Main.main = function()
   local lucas = Person.new("Lucas", 20, "2004-10-04");
   __haxe_Log.trace(lucas:toString(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=15,className="Main",methodName="main"}));
   lucas:sayHello();
+  local helper = HelloHelper.new();
+  helper:sayHello("mintkat");
 end
 Main.add = function(a,b) 
   do return a + b end;
 end
 Main.sayHello = function(name) 
-  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=24,className="Main",methodName="sayHello"}));
+  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=30,className="Main",methodName="sayHello"}));
 end
 
 Math.new = {}

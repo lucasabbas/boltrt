@@ -14,6 +14,12 @@ class Main {
         var lucas = new Person("Lucas", 20, "2004-10-04");
         trace(lucas.toString());
         lucas.sayHello();
+
+        //var testObject = new TestClass();
+        //testObject.hello();
+
+        var helper = new HelloHelper();
+        helper.sayHello("mintkat");
     }
 
     public static function add(a:Int, b:Int):Int {

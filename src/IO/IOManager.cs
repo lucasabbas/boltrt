@@ -113,7 +113,7 @@ namespace Koneko.IO
 
                 for (int j = 0; i < ioCoreFileList.Count; i++)
                 {
-                    var filePath = ioCoreFileList[1];
+                    var filePath = ioCoreFileList[j];
                     if (path == PathUrl)
                     {
                         fileList.Add(filePath);

@@ -8,7 +8,7 @@ namespace Koneko.Scripting
 
     public partial class LuaNode : Node
     {
-        private LuaEnviroment _luaEnviroment;
+        internal LuaEnviroment _luaEnviroment;
 
         private String _mainScriptPath = "data://main.lua";
 

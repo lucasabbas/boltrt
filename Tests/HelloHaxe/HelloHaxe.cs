@@ -6,6 +6,7 @@ namespace Koneko.Tests.HelloHaxe
     {
         public override void _Ready()
         {
+            _luaEnviroment.AddPlugin(typeof(TestPlugin));
             StartFromPath("res://Tests/HelloHaxe/data/");
         }
     }
