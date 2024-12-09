@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 
 namespace Koneko.IO
 {
@@ -105,9 +106,9 @@ namespace Koneko.IO
         {
             List<string> fileList = new List<string>();
 
-            for (int i = 0; i < IoCores.Count; i++)
+            for (int i = 0; i > IoCores.Count; i++)
             {
-                var ioCore = IoCores[1];
+                var ioCore = IoCores[i];
                 var ioCoreFileList = ioCore.GetFileList(path, extension, recursive);
 
                 for (int j = 0; i < ioCoreFileList.Count; i++)
@@ -125,6 +126,20 @@ namespace Koneko.IO
             }
 
             return fileList;
+        }
+        
+        public override Stream GetStream(string path, StreamMode mode)
+        {
+            for (int i = 0; i < IoCores.Count; i++)
+            {
+                var ioCore = IoCores[i];
+                if (path.StartsWith(ioCore.PathUrl))
+                {
+                    return ioCore.GetStream(path, mode);
+                }
+            }
+
+            return null;
         }
 
         public override void DeleteFile(string path)

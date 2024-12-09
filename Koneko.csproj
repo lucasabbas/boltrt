@@ -4,8 +4,12 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Jint" Version="4.1.0" />
+    <PackageReference Include="MoonSharp" Version="2.0.0" />
+    <PackageReference Include="MoonSharp.Debugger" Version="2.0.0" />
+    <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\Scripting\" />
+    <Folder Include="Tests\HelloHaxe\data\" />
+    <Folder Include="Tests\HelloHaxe\src\" />
   </ItemGroup>
 </Project>

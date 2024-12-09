@@ -68,7 +68,8 @@ namespace Koneko.IO
                 return null;
             }
 
-            return File.ReadAllText(path);
+            var txt = File.ReadAllText(path);
+            return txt;
         }
 
         public override void SaveText(string assetPath, string text)
@@ -107,7 +108,7 @@ namespace Koneko.IO
             File.WriteAllBytes(path, bytes);
         }
 
-        public virtual List<String> GetFileList(string path = "", string extension = "", bool recursive = true)
+        public override List<String> GetFileList(string path = "", string extension = "", bool recursive = true)
         {
             path = GetFilePath(path);
 
@@ -162,7 +163,7 @@ namespace Koneko.IO
             return assets;
         }
 
-        public virtual int CreateDirectory(string path)
+        public override int CreateDirectory(string path)
         {
             path = GetFilePath(path);
             if (path == null)
@@ -189,6 +190,44 @@ namespace Koneko.IO
             }
 
             File.Delete(path);
+        }
+        
+        public override Stream GetStream(string path, StreamMode mode)
+        {
+            path = GetFilePath(path);
+            if (path == null)
+            {
+                return null;
+            }
+
+            if (mode == StreamMode.Read)
+            {
+                return File.OpenRead(path);
+            }
+            else if (mode == StreamMode.Write)
+            {
+                return File.OpenWrite(path);
+            }
+            else if (mode == StreamMode.Append)
+            {
+                return File.Open(path, FileMode.Append);
+            }
+            else if (mode == StreamMode.ReadPlus)
+            {
+                return File.Open(path, FileMode.Open, FileAccess.ReadWrite);
+            }
+            else if (mode == StreamMode.WritePlus)
+            {
+                return File.Open(path, FileMode.Open, FileAccess.ReadWrite);
+            }
+            else if (mode == StreamMode.AppendPlus)
+            {
+                return File.Open(path, FileMode.Append, FileAccess.ReadWrite);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

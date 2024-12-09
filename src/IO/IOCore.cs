@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Koneko.Scripting;
 
 namespace Koneko.IO
 {
@@ -58,6 +60,16 @@ namespace Koneko.IO
         public virtual int CreateDirectory(string path)
         {
             return 1;
+        }
+        
+        public virtual Stream GetStream(String path, StreamMode mode)
+        {
+            return null;
+        }
+    
+        public String GetTempFilename()
+        {
+            return PathUrl + Path.GetTempFileName();
         }
     }
 }

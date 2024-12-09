@@ -4,7 +4,7 @@ using Jint;
 using Jint.Runtime;
 using Jint.Runtime.Modules;
 using System.IO;
-using Koneko.Io;
+using Koneko.IO;
 using StringExtensions = Godot.StringExtensions;
 
 namespace Koneko.Scripting
@@ -12,14 +12,14 @@ namespace Koneko.Scripting
     public class IOModuleLoader : ModuleLoader
     {
         private readonly Uri _basePath;
-        public IoManager AssetIo;
+        public IOManager IoManager;
         
-        private readonly Dictionary<string, string> _modules = new();
+        private readonly Dictionary<string, string> _modules = new Dictionary<string, string>();
 
-        public IOModuleLoader(AssetIo assetIo)
+        public IOModuleLoader(IOManager ioManager)
         {
-            AssetIo = assetIo;
-            _basePath = new Uri("assets://");
+            IoManager = ioManager;
+            _basePath = new Uri("data://");
         }
 
         public override ResolvedSpecifier Resolve(string referencingModuleLocation, ModuleRequest moduleRequest)
@@ -36,9 +36,9 @@ namespace Koneko.Scripting
                 else
                     specifier = resolvedUri.AbsoluteUri;
             }
-            else if (!specifier.StartsWith("assets://"))
+            else if (!specifier.Contains("://"))
             {
-                foreach (var filePath in AssetIo.GetAllAssetsByExtension(".js"))
+                foreach (var filePath in IoManager.GetFileListAll(".js"))
                 {
                     if (filePath.EndsWith(specifier))
                     {
@@ -96,9 +96,9 @@ namespace Koneko.Scripting
             );
         }
 
-        private Uri BuildBaseUri(string? referencingModuleLocation)
+        private Uri BuildBaseUri(string referencingModuleLocation)
         {
-            if (referencingModuleLocation is not null)
+            if (referencingModuleLocation != null)
             {
                 var moduleDir = GetModuleDirectory(referencingModuleLocation);
                 if (moduleDir != null)
@@ -149,14 +149,14 @@ namespace Koneko.Scripting
             
             if (!specifier.EndsWith(".js"))
             {
-                return AssetIo.LoadString(specifier + ".js");
+                return IoManager.LoadText(specifier + ".js");
             }
-            return AssetIo.LoadString(specifier);
+            return IoManager.LoadText(specifier);
         }
 
         private static bool IsRelative(string specifier)
         {
-            return specifier.StartsWith('.') || specifier.StartsWith('/');
+            return specifier.StartsWith(".") || specifier.StartsWith("/");
         }
 
         public string GetAbsoluteModulePath(string referencingModuleLocation, ModuleRequest moduleRequest)
