@@ -185,6 +185,7 @@ local Enum = _hx_e();
 local Array = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
+local Person = _hx_e()
 local String = _hx_e()
 local Std = _hx_e()
 __haxe_Exception = _hx_e()
@@ -548,18 +549,21 @@ end
 Main.new = {}
 Main.__name__ = true
 Main.main = function() 
-  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=3,className="Main",methodName="main"}));
-  __haxe_Log.trace(Main.add(4, 6), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=4,className="Main",methodName="main"}));
-  __haxe_Log.trace(100, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true,customParams=true},fileName="src/Main.hx",lineNumber=5,className="Main",methodName="main",customParams=_hx_tab_array({[0]=28}, 1)}));
+  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=7,className="Main",methodName="main"}));
+  __haxe_Log.trace(Main.add(4, 6), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=8,className="Main",methodName="main"}));
+  __haxe_Log.trace(100, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true,customParams=true},fileName="src/Main.hx",lineNumber=9,className="Main",methodName="main",customParams=_hx_tab_array({[0]=28}, 1)}));
   Main.sayHello("mintkat");
   Main.sayHello("Lucas C. Abbas");
   Main.sayHello("Lily");
+  local lucas = Person.new("Lucas", 20, "2004-10-04");
+  __haxe_Log.trace(lucas:toString(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=15,className="Main",methodName="main"}));
+  lucas:sayHello();
 end
 Main.add = function(a,b) 
   do return a + b end;
 end
 Main.sayHello = function(name) 
-  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=16,className="Main",methodName="sayHello"}));
+  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=24,className="Main",methodName="sayHello"}));
 end
 
 Math.new = {}
@@ -580,6 +584,37 @@ Math.min = function(a,b)
   else
     do return _G.math.min(a, b) end;
   end;
+end
+
+Person.new = function(name,age,birthday) 
+  local self = _hx_new(Person.prototype)
+  Person.super(self,name,age,birthday)
+  return self
+end
+Person.super = function(self,name,age,birthday) 
+  self.name = name;
+  self.age = age;
+  self.birthday = birthday;
+end
+Person.__name__ = true
+Person.prototype = _hx_e();
+Person.prototype.sayHello = function(self) 
+  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(self.name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Person.hx",lineNumber=15,className="Person",methodName="sayHello"}));
+end
+Person.prototype.getAge = function(self) 
+  do return self.age end
+end
+Person.prototype.setAge = function(self,age) 
+  self.age = age;
+end
+Person.prototype.getBirthday = function(self) 
+  do return self.birthday end
+end
+Person.prototype.setBirthday = function(self,birthday) 
+  self.birthday = birthday;
+end
+Person.prototype.toString = function(self) 
+  do return Std.string(Std.string(Std.string(Std.string(Std.string(Std.string("Person { name = ") .. Std.string(self.name)) .. Std.string(", age = ")) .. Std.string(self.age)) .. Std.string(", birthday = ")) .. Std.string(self.birthday)) .. Std.string(" } ") end
 end
 
 String.new = function(string) 

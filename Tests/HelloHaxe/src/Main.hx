@@ -1,3 +1,7 @@
+//import haxe.display.JsonModuleTypes.JsonTypeParameters;
+
+package;
+
 class Main {
     public static function main() {
         trace("Hello, World!");
@@ -6,6 +10,10 @@ class Main {
         sayHello("mintkat");
         sayHello("Lucas C. Abbas");
         sayHello("Lily");
+
+        var lucas = new Person("Lucas", 20, "2004-10-04");
+        trace(lucas.toString());
+        lucas.sayHello();
     }
 
     public static function add(a:Int, b:Int):Int {
