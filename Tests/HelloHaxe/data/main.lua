@@ -549,6 +549,17 @@ Main.new = {}
 Main.__name__ = true
 Main.main = function() 
   __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=3,className="Main",methodName="main"}));
+  __haxe_Log.trace(Main.add(4, 6), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=4,className="Main",methodName="main"}));
+  __haxe_Log.trace(100, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true,customParams=true},fileName="src/Main.hx",lineNumber=5,className="Main",methodName="main",customParams=_hx_tab_array({[0]=28}, 1)}));
+  Main.sayHello("mintkat");
+  Main.sayHello("Lucas C. Abbas");
+  Main.sayHello("Lily");
+end
+Main.add = function(a,b) 
+  do return a + b end;
+end
+Main.sayHello = function(name) 
+  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=16,className="Main",methodName="sayHello"}));
 end
 
 Math.new = {}
