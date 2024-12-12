@@ -2,6 +2,9 @@
 
 package;
 
+import haxe.ds.Vector;
+import koneko.godot.Vector3;
+
 class Main {
     public static function main() {
         trace("Hello, World!");
@@ -20,6 +23,9 @@ class Main {
 
         var helper = new HelloHelper();
         helper.sayHello("mintkat");
+
+        var vec3 = new Vector3(3, 2, 3);
+        trace(vec3.toString());
     }
 
     public static function add(a:Int, b:Int):Int {

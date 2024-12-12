@@ -80,7 +80,7 @@ namespace Koneko.Plugins
 
                     if (!isNested)
                     {
-                        //UserData.RegisterType(type);
+                        //UserData.RegisterType(type, InteropAccessMode.NoReflectionAllowed);
                         GdCoreNamespace[type.Name] = type;
                     }
                 }
@@ -94,7 +94,7 @@ namespace Koneko.Plugins
 
                 if (!isNested)
                 {
-                    //UserData.RegisterType(type);
+                    //UserData.RegisterType(type, InteropAccessMode.NoReflectionAllowed);
                     GdCoreNamespace[type.Name] = type;
                 }
             }

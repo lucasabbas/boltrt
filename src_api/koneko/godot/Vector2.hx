@@ -1,6 +1,6 @@
-package lucidware.godot;
+package koneko.godot;
 
-import lucidware.core.*;
+import koneko.core.*;
 
 @:native("godot.Vector2")
 extern class Vector2Native {

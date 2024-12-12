@@ -1,4 +1,4 @@
-package lucidware.core;
+package koneko.core;
 
 class InstanceObject {
     var instance : Dynamic;

@@ -1,6 +1,6 @@
-package lucidware.godot;
+package koneko.godot;
 
-import lucidware.core.*;
+import koneko.core.*;
 
 @:native("godot.Vector3")
 extern class Vector3Native extends NativeObject {
@@ -68,7 +68,7 @@ class Vector3 extends InstanceObject {
 
     public static var ONE : Vector3 = new Vector3(1, 1, 1);
 
-    public static var INF : Vector3 = new Vector3(Infinity, Infinity, Infinity);
+    public static var INF : Vector3 = untyped Vector3Native.inf;
 
     public static var UP : Vector3 = new Vector3(0, 1, 0);
 
@@ -239,14 +239,14 @@ class Vector3 extends InstanceObject {
     }
 
     public function slide(normal : Vector3) : Vector3 {
-        return untyped this.instance.slide(normal.instance));
+        return Vector3.fromInstance(untyped this.instance.slide(normal.instance));
     }
 
     public function snapped(step : Vector3) : Vector3 {
         return Vector3.fromInstance(untyped this.instance.snapped(step.instance));
     }
 
-    public function snapped(step : Float) : Vector3 {
+    public function snappedf(step : Float) : Vector3 {
         return Vector3.fromInstance(untyped this.instance.snapped(step));
     }
     

@@ -1,3 +1,4 @@
+--library koneko
 --class-path src
 --main Main
 --lua data/main.lua
