@@ -4,6 +4,7 @@ package;
 
 import haxe.ds.Vector;
 import koneko.godot.Vector3;
+import koneko.godot.Vector2;
 
 class Main {
     public static function main() {
@@ -26,6 +27,9 @@ class Main {
 
         var vec3 = new Vector3(3, 2, 3);
         trace(vec3.toString());
+
+        var vec2 = new Vector2(6, 1);
+        trace(vec2.toString());
     }
 
     public static function add(a:Int, b:Int):Int {

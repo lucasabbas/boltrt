@@ -260,7 +260,7 @@ class Vector3 extends InstanceObject {
     }
 
     @:op(A - B)
-    public function sub(rhs: Any) : Vector3 {
+    public function subtract(rhs: Any) : Vector3 {
         if (Std.isOfType(rhs, Vector3)) {
             return Vector3.fromInstance(untyped this.instance - rhs.instance);
         } else {
@@ -269,7 +269,7 @@ class Vector3 extends InstanceObject {
     }
 
     @:op(A * B)
-    public function mul(rhs: Any) : Vector3 {
+    public function multiply(rhs: Any) : Vector3 {
         if (Std.isOfType(rhs, Vector3)) {
             return Vector3.fromInstance(untyped this.instance * rhs.instance);
         } else {
@@ -278,7 +278,7 @@ class Vector3 extends InstanceObject {
     }
 
     @:op(A / B)
-    public function div(rhs: Any) : Vector3 {
+    public function divide(rhs: Any) : Vector3 {
         if (Std.isOfType(rhs, Vector3)) {
             return Vector3.fromInstance(untyped this.instance / rhs.instance);
         } else {
@@ -287,7 +287,7 @@ class Vector3 extends InstanceObject {
     }
 
     @:op(A % B)
-    public function mod(rhs: Any) : Vector3 {
+    public function modulo(rhs: Any) : Vector3 {
         if (Std.isOfType(rhs, Vector3)) {
             return Vector3.fromInstance(untyped this.instance % rhs.instance);
         } else {
@@ -296,32 +296,32 @@ class Vector3 extends InstanceObject {
     }
 
     @:op(a == b)
-    public function eq(rhs: Vector3) : Bool {
+    public function equal(rhs: Vector3) : Bool {
         return untyped this.instance == rhs.instance;
     }
 
     @:op(a != b)
-    public function neq(rhs: Vector3) : Bool {
+    public function noequal(rhs: Vector3) : Bool {
         return untyped this.instance != rhs.instance;
     }
 
     @:op(a < b)
-    public function lt(rhs: Vector3) : Bool {
+    public function lessthan(rhs: Vector3) : Bool {
         return untyped this.instance < rhs.instance;
     }
 
     @:op(a <= b)
-    public function lte(rhs: Vector3) : Bool {
+    public function lessthanequal(rhs: Vector3) : Bool {
         return untyped this.instance <= rhs.instance;
     }
 
     @:op(a > b)
-    public function gt(rhs: Vector3) : Bool {
+    public function greaterthan(rhs: Vector3) : Bool {
         return untyped this.instance > rhs.instance;
     }
 
     @:op(a >= b)
-    public function gte(rhs: Vector3) : Bool {
+    public function greaterthanequal(rhs: Vector3) : Bool {
         return untyped this.instance >= rhs.instance;
     }
 

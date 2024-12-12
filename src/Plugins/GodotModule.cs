@@ -20,12 +20,17 @@ namespace Koneko.Plugins
             Table GdCoreNamespace = new Table(Enviroment.Script);
             Enviroment.Script.Globals["godot"] = GdCoreNamespace;
 
+            UserData.RegisterType(typeof(VisualServer));
+            UserData.RegisterType(typeof(PhysicsServer));
+            UserData.RegisterType(typeof(Physics2DServer));
             UserData.RegisterType(typeof(AudioServer));
             UserData.RegisterType(typeof(CameraServer));
             UserData.RegisterType(typeof(Time));
             UserData.RegisterType(typeof(TranslationServer));
             UserData.RegisterType(typeof(UndoRedo));
 
+            GdCoreNamespace[nameof(VisualServer)] = UserData.CreateStatic(typeof(VisualServer));
+            GdCoreNamespace[nameof(PhysicsServer)] = UserData.CreateStatic(typeof(PhysicsServer));
             GdCoreNamespace[nameof(AudioServer)] = UserData.CreateStatic(typeof(AudioServer));
             GdCoreNamespace[nameof(CameraServer)] = UserData.CreateStatic(typeof(CameraServer));
             GdCoreNamespace[nameof(Time)] = UserData.CreateStatic(typeof(Time));
@@ -154,6 +159,19 @@ namespace Koneko.Plugins
                 typeof(GodotScript),
                 typeof(Directory),
                 typeof(Engine),
+                typeof(UDPServer),
+                typeof(PacketPeerUDP),
+                typeof(TCP_Server),
+                typeof(StreamPeer),
+                typeof(StreamPeerTCP),
+                typeof(EditorScript),
+                typeof(GDScriptFunctionState),
+                typeof(JavaScript),
+                typeof(JavaScriptObject),
+                typeof(JavaClass),
+                typeof(JavaClassWrapper),
+                typeof(GDNative),
+                typeof(GDNativeLibrary),
             };
         }
 
