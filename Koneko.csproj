@@ -6,12 +6,14 @@
     <PackageReference Include="MoonSharp" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\Plugins\" />
     <Folder Include="Tests\HelloHaxe\data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Tests\HelloHaxe\src\errorPatch.lua" />
+    <Folder Include="Tests">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Folder>
   </ItemGroup>
 </Project>

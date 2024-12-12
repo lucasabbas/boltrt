@@ -3,10 +3,7 @@ package;
 @:native("_HelloHelper")
 extern class HelloHelperNative {
     @:native("__new")
-    public static function createInstance() : Dynamic;
-
-    @:native("sayHello")
-    public static function sayHello(instance : Dynamic, name : String) : Void;
+    public static function createInstance() : Dynamic'
 }
 
 class HelloHelper extends MonoObject {

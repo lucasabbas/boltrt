@@ -1,6 +1,7 @@
 using System;
 using Godot;
 using Koneko.IO;
+using Koneko.Plugins;
 using MoonSharp.Interpreter;
 
 namespace Koneko.Scripting
@@ -26,8 +27,8 @@ namespace Koneko.Scripting
         public LuaNode()
         {
             _luaEnviroment = new LuaEnviroment();
-            //_luaEnviroment.AddPlugin(typeof(GodotModule));
-            //_luaEnviroment.AddPlugin(typeof(GodotExtensions));
+            _luaEnviroment.AddPlugin(typeof(GodotModule));
+            _luaEnviroment.AddPlugin(typeof(GodotExtensions));
             //_luaEnviroment.AddPlugin(typeof(UiModule));
             UserData.RegisterType<LuaNode>();
             _luaEnviroment.Script.Globals["rootNode"] = this;
