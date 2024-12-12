@@ -8,6 +8,7 @@ using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
 using Timer = Godot.Timer;
 using GodotScript = Godot.Script;
+using GodotObject = Godot.Object;
 
 namespace Koneko.Plugins
 {
@@ -41,6 +42,7 @@ namespace Koneko.Plugins
             UserData.RegisterType<Plane>();
             UserData.RegisterType<Quat>();
             UserData.RegisterType<Node>();
+            UserData.RegisterType<GodotObject>();
 
             GdCoreNamespace["Color"] = typeof(Color);
             GdCoreNamespace["Vector3"] = typeof(Vector3);
@@ -51,6 +53,7 @@ namespace Koneko.Plugins
             GdCoreNamespace["Plane"] = typeof(Plane);
             GdCoreNamespace["Quaternion"] = typeof(Quat);
             GdCoreNamespace["Node"] = typeof(Node);
+            GdCoreNamespace["Object"] = typeof(GodotObject);
 
             
             UserData.RegistrationPolicy = InteropRegistrationPolicy.Automatic;
