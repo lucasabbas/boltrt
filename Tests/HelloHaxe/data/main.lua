@@ -188,6 +188,7 @@ local HelloHelper = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Person = _hx_e()
+local Reflect = _hx_e()
 local String = _hx_e()
 local Std = _hx_e()
 __haxe_Exception = _hx_e()
@@ -198,11 +199,8 @@ __haxe_exceptions_PosException = _hx_e()
 __haxe_exceptions_NotImplementedException = _hx_e()
 __haxe_iterators_ArrayIterator = _hx_e()
 __haxe_iterators_ArrayKeyValueIterator = _hx_e()
-__koneko_core_InstanceObject = _hx_e()
-__koneko_godot_Vector2Axis = _hx_e()
-__koneko_godot_Vector2 = _hx_e()
-__koneko_godot_Vector3Axis = _hx_e()
-__koneko_godot_Vector3 = _hx_e()
+__koneko_godot__Vector2_Vector2_Impl_ = _hx_e()
+__koneko_godot__Vector3_Vector3_Impl_ = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
@@ -595,16 +593,28 @@ Main.main = function()
   lucas:sayHello();
   local helper = HelloHelper.new();
   helper:sayHello("mintkat");
-  local vec3 = __koneko_godot_Vector3.new(3, 2, 3);
-  __haxe_Log.trace(vec3:toString(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=29,className="Main",methodName="main"}));
-  local vec2 = __koneko_godot_Vector2.new(6, 1);
-  __haxe_Log.trace(vec2:toString(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=32,className="Main",methodName="main"}));
+  local vec3 = __koneko_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
+  __haxe_Log.trace((__koneko_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=29,className="Main",methodName="main"}));
+  local vec2 = __koneko_godot__Vector2_Vector2_Impl_._new(6, 1);
+  __haxe_Log.trace((__koneko_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=32,className="Main",methodName="main"}));
+  local _hx_status, _hx_result = pcall(function() 
+  
+    return _hx_pcall_default
+  end)
+  if not _hx_status and _hx_result == "_hx_pcall_break" then
+  elseif not _hx_status then 
+    local _g = _hx_result;
+    local e = __haxe_Exception.caught(_g);
+    __haxe_Log.trace(e:get_message(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=38,className="Main",methodName="main"}));
+  elseif _hx_result ~= _hx_pcall_default then
+    return _hx_result
+  end;
 end
 Main.add = function(a,b) 
   do return a + b end;
 end
 Main.sayHello = function(name) 
-  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=40,className="Main",methodName="sayHello"}));
+  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=47,className="Main",methodName="sayHello"}));
 end
 
 Math.new = {}
@@ -659,6 +669,31 @@ Person.prototype.toString = function(self)
 end
 
 Person.prototype.__class__ =  Person
+
+Reflect.new = {}
+Reflect.__name__ = true
+Reflect.field = function(o,field) 
+  if (_G.type(o) == "string") then 
+    if (field == "length") then 
+      do return _hx_wrap_if_string_field(o,'length') end;
+    else
+      do return String.prototype[field] end;
+    end;
+  else
+    local _hx_status, _hx_result = pcall(function() 
+    
+        do return o[field] end;
+      return _hx_pcall_default
+    end)
+    if not _hx_status and _hx_result == "_hx_pcall_break" then
+    elseif not _hx_status then 
+      local _g = _hx_result;
+      do return nil end;
+    elseif _hx_result ~= _hx_pcall_default then
+      return _hx_result
+    end;
+  end;
+end
 
 String.new = function(string) 
   local self = _hx_new(String.prototype)
@@ -870,12 +905,31 @@ __haxe_Exception.super = function(self,message,previous,native)
   end;
 end
 __haxe_Exception.__name__ = true
+__haxe_Exception.caught = function(value) 
+  if (__lua_Boot.__instanceof(value, __haxe_Exception)) then 
+    do return value end;
+  else
+    do return __haxe_ValueException.new(value, nil, value) end;
+  end;
+end
+__haxe_Exception.thrown = function(value) 
+  if (__lua_Boot.__instanceof(value, __haxe_Exception)) then 
+    do return value:get_native() end;
+  else
+    local e = __haxe_ValueException.new(value);
+    e.__skipStack = e.__skipStack + 1;
+    do return e end;
+  end;
+end
 __haxe_Exception.prototype = _hx_e();
 __haxe_Exception.prototype.toString = function(self) 
   do return self:get_message() end
 end
 __haxe_Exception.prototype.get_message = function(self) 
   do return self.__exceptionMessage end
+end
+__haxe_Exception.prototype.get_native = function(self) 
+  do return self.__nativeException end
 end
 
 __haxe_Exception.prototype.__class__ =  __haxe_Exception
@@ -1024,248 +1078,165 @@ __haxe_iterators_ArrayKeyValueIterator.prototype = _hx_e();
 
 __haxe_iterators_ArrayKeyValueIterator.prototype.__class__ =  __haxe_iterators_ArrayKeyValueIterator
 
-__koneko_core_InstanceObject.new = {}
-__koneko_core_InstanceObject.__name__ = true
-__koneko_core_InstanceObject.prototype = _hx_e();
-
-__koneko_core_InstanceObject.prototype.__class__ =  __koneko_core_InstanceObject
-_hxClasses["koneko.godot.Vector2Axis"] = { __ename__ = true, __constructs__ = _hx_tab_array({[0]="X","Y"},2)}
-__koneko_godot_Vector2Axis = _hxClasses["koneko.godot.Vector2Axis"];
-__koneko_godot_Vector2Axis.X = _hx_tab_array({[0]="X",0,__enum__ = __koneko_godot_Vector2Axis},2)
-
-__koneko_godot_Vector2Axis.Y = _hx_tab_array({[0]="Y",1,__enum__ = __koneko_godot_Vector2Axis},2)
-
-
-__koneko_godot_Vector2.new = function(x,y) 
-  local self = _hx_new(__koneko_godot_Vector2.prototype)
-  __koneko_godot_Vector2.super(self,x,y)
-  return self
-end
-__koneko_godot_Vector2.super = function(self,x,y) 
-  self.instance = godot.Vector2.__new(x, y);
-end
-__koneko_godot_Vector2.__name__ = true
-__koneko_godot_Vector2.fromInstance = function(instance) 
-  local vector2 = __koneko_godot_Vector2.new(0, 0);
-  vector2.instance = instance;
-  do return vector2 end;
-end
-__koneko_godot_Vector2.prototype = _hx_e();
-__koneko_godot_Vector2.prototype.get_x = function(self) 
-  local untypedX = self.instance.x;
-  do return untypedX end
-end
-__koneko_godot_Vector2.prototype.set_x = function(self,value) 
-  self.instance.x = value;
-  do return value end
-end
-__koneko_godot_Vector2.prototype.get_y = function(self) 
-  local untypedY = self.instance.y;
-  do return untypedY end
-end
-__koneko_godot_Vector2.prototype.set_y = function(self,value) 
-  self.instance.y = value;
-  do return value end
-end
-__koneko_godot_Vector2.prototype.abs = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:abs()) end
-end
-__koneko_godot_Vector2.prototype.angle = function(self) 
-  do return self.instance:angle() end
-end
-__koneko_godot_Vector2.prototype.angleTo = function(self,point) 
-  do return self.instance:angleTo(point.instance) end
-end
-__koneko_godot_Vector2.prototype.angleToPoint = function(self,point) 
-  do return self.instance:angleToPoint(point.instance) end
-end
-__koneko_godot_Vector2.prototype.aspect = function(self) 
-  do return self.instance:aspect() end
-end
-__koneko_godot_Vector2.prototype.bounce = function(self,n) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:bounce(n.instance)) end
-end
-__koneko_godot_Vector2.prototype.ceil = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:ceil()) end
-end
-__koneko_godot_Vector2.prototype.cross = function(self,b) 
-  do return self.instance:cross(b.instance) end
-end
-__koneko_godot_Vector2.prototype.cubicInterpolate = function(self,b,preA,postB,weight) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:cubicInterpolate(b.instance, preA.instance, postB.instance, weight)) end
-end
-__koneko_godot_Vector2.prototype.directionTo = function(self,b) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:directionTo(b.instance)) end
-end
-__koneko_godot_Vector2.prototype.dot = function(self,with) 
-  do return self.instance:dot(with.instance) end
-end
-__koneko_godot_Vector2.prototype.floor = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:floor()) end
-end
-__koneko_godot_Vector2.prototype.inverse = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:inverse()) end
-end
-__koneko_godot_Vector2.prototype.isNormalized = function(self) 
-  do return self.instance:isNormalized() end
-end
-__koneko_godot_Vector2.prototype.length = function(self) 
-  do return _hx_wrap_if_string_field(self.instance,'length')(self.instance) end
-end
-__koneko_godot_Vector2.prototype.lengthSquared = function(self) 
-  do return self.instance:lengthSquared() end
-end
-__koneko_godot_Vector2.prototype.linearInterpolatef = function(self,b,t) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:linearInterpolate(b.instance, t)) end
-end
-__koneko_godot_Vector2.prototype.linearInterpolate = function(self,to,weight) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:linearInterpolate(to.instance, weight.instance)) end
-end
-__koneko_godot_Vector2.prototype.limitLength = function(self,length) 
-  if (length == nil) then 
-    length = 1;
+__koneko_godot__Vector2_Vector2_Impl_.new = {}
+__koneko_godot__Vector2_Vector2_Impl_.__name__ = true
+__koneko_godot__Vector2_Vector2_Impl_._new = function(x,y) 
+  if (y == nil) then 
+    y = 0;
   end;
-  do return __koneko_godot_Vector2.fromInstance(self.instance:limitLength(length)) end
+  if (x == nil) then 
+    x = 0;
+  end;
+  do return godot.Vector2.__new(x, y) end;
 end
-__koneko_godot_Vector2.prototype.maxAxis = function(self) 
-  local axis = self.instance:maxAxis();
-  if (axis == 0) then 
-    do return __koneko_godot_Vector2Axis.X end;
+__koneko_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+  if (name == "toString") then 
+    do return function() 
+      local v = this1;
+      do return v.toString() end;
+    end end;
   else
-    do return __koneko_godot_Vector2Axis.Y end;
+    local o = this1;
+    if ((function() 
+      local _hx_1
+      if ((_G.type(o) == "function") and not ((function() 
+        local _hx_2
+        if (_G.type(o) ~= "table") then 
+        _hx_2 = false; else 
+        _hx_2 = o.__name__; end
+        return _hx_2
+      end )() or (function() 
+        local _hx_3
+        if (_G.type(o) ~= "table") then 
+        _hx_3 = false; else 
+        _hx_3 = o.__ename__; end
+        return _hx_3
+      end )())) then 
+      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+      _hx_1 = o.__fields__[name] ~= nil; else 
+      _hx_1 = o[name] ~= nil; end
+      return _hx_1
+    end )()) then 
+      do return Reflect.field(this1, name) end;
+    else
+      _G.error(__haxe_Exception.thrown("Invalid field"),0);
+    end;
   end;
 end
-__koneko_godot_Vector2.prototype.minAxis = function(self) 
-  local axis = self.instance:minAxis();
-  if (axis == 0) then 
-    do return __koneko_godot_Vector2Axis.X end;
+__koneko_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+  local o = this1;
+  if ((function() 
+    local _hx_1
+    if ((_G.type(o) == "function") and not ((function() 
+      local _hx_2
+      if (_G.type(o) ~= "table") then 
+      _hx_2 = false; else 
+      _hx_2 = o.__name__; end
+      return _hx_2
+    end )() or (function() 
+      local _hx_3
+      if (_G.type(o) ~= "table") then 
+      _hx_3 = false; else 
+      _hx_3 = o.__ename__; end
+      return _hx_3
+    end )())) then 
+    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+    _hx_1 = o.__fields__[name] ~= nil; else 
+    _hx_1 = o[name] ~= nil; end
+    return _hx_1
+  end )()) then 
+    this1[name] = value;
   else
-    do return __koneko_godot_Vector2Axis.Y end;
+    _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__koneko_godot_Vector2.prototype.moveToward = function(self,to,delta) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:moveToward(to.instance, delta)) end
+__koneko_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
+  if (n == 0) then 
+    do return this1.x end;
+  end;
+  if (n == 1) then 
+    do return this1.y end;
+  end;
+  if (n == "x") then 
+    do return this1.x end;
+  end;
+  if (n == "y") then 
+    do return this1.y end;
+  end;
+  _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__koneko_godot_Vector2.prototype.normalized = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:normalized()) end
-end
-__koneko_godot_Vector2.prototype.perpendicular = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:perpendicular()) end
-end
-__koneko_godot_Vector2.prototype.posModf = function(self,mod) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:posMod(mod)) end
-end
-__koneko_godot_Vector2.prototype.posMod = function(self,mod) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:posMod(mod.instance)) end
-end
-__koneko_godot_Vector2.prototype.project = function(self,b) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:project(b.instance)) end
-end
-__koneko_godot_Vector2.prototype.reflect = function(self,n) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:reflect(n.instance)) end
-end
-__koneko_godot_Vector2.prototype.rotated = function(self,angle) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:rotated(angle)) end
-end
-__koneko_godot_Vector2.prototype.round = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:round()) end
-end
-__koneko_godot_Vector2.prototype.sign = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:sign()) end
-end
-__koneko_godot_Vector2.prototype.slerp = function(self,to,weight) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:slerp(to.instance, weight)) end
-end
-__koneko_godot_Vector2.prototype.slide = function(self,n) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:slide(n.instance)) end
-end
-__koneko_godot_Vector2.prototype.snapped = function(self,by) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:snapped(by.instance)) end
-end
-__koneko_godot_Vector2.prototype.tangent = function(self) 
-  do return __koneko_godot_Vector2.fromInstance(self.instance:tangent()) end
-end
-__koneko_godot_Vector2.prototype.add = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(_hx_dyn_add(self.instance,rhs.instance)) end;
+__koneko_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
+  if (n == 0) then 
+    this1.x = value;
   else
-    do return __koneko_godot_Vector3.fromInstance(self.instance + rhs) end;
+    if (n == 1) then 
+      this1.y = value;
+    else
+      if (n == "x") then 
+        this1.x = value;
+      else
+        if (n == "y") then 
+          this1.y = value;
+        else
+          _G.error(__haxe_Exception.thrown("Invalid index"),0);
+        end;
+      end;
+    end;
   end;
 end
-__koneko_godot_Vector2.prototype.subtract = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance - rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance - rhs) end;
-  end;
+__koneko_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs + rhs end;
 end
-__koneko_godot_Vector2.prototype.multiply = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance * rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance * rhs) end;
-  end;
+__koneko_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs - rhs end;
 end
-__koneko_godot_Vector2.prototype.divide = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance / rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance / rhs) end;
-  end;
+__koneko_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs * rhs end;
 end
-__koneko_godot_Vector2.prototype.modulo = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(_G.math.fmod(self.instance, rhs.instance)) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(_G.math.fmod(self.instance, rhs)) end;
-  end;
+__koneko_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs / rhs end;
 end
-__koneko_godot_Vector2.prototype.equal = function(self,rhs) 
-  do return self.instance == rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs % rhs end;
 end
-__koneko_godot_Vector2.prototype.noequal = function(self,rhs) 
-  do return self.instance ~= rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs == rhs end;
 end
-__koneko_godot_Vector2.prototype.lessthan = function(self,rhs) 
-  do return self.instance < rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs ~= rhs end;
 end
-__koneko_godot_Vector2.prototype.lessthanequal = function(self,rhs) 
-  do return self.instance <= rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs < rhs end;
 end
-__koneko_godot_Vector2.prototype.greaterthan = function(self,rhs) 
-  do return self.instance > rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs <= rhs end;
 end
-__koneko_godot_Vector2.prototype.greaterthanequal = function(self,rhs) 
-  do return self.instance >= rhs.instance end
+__koneko_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs > rhs end;
 end
-__koneko_godot_Vector2.prototype.isEqualApprox = function(self,other) 
-  do return self.instance:isEqualApprox(other.instance) end
+__koneko_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs >= rhs end;
 end
-__koneko_godot_Vector2.prototype.isZeroApprox = function(self) 
-  do return self.instance:isZeroApprox() end
-end
-__koneko_godot_Vector2.prototype.toString = function(self) 
-  do return self.instance.toString() end
+__koneko_godot__Vector2_Vector2_Impl_.toString = function(v) 
+  do return v.toString() end;
 end
 
-__koneko_godot_Vector2.prototype.__class__ =  __koneko_godot_Vector2
-__koneko_godot_Vector2.__super__ = __koneko_core_InstanceObject
-setmetatable(__koneko_godot_Vector2.prototype,{__index=__koneko_core_InstanceObject.prototype})
-_hxClasses["koneko.godot.Vector3Axis"] = { __ename__ = true, __constructs__ = _hx_tab_array({[0]="X","Y","Z"},3)}
-__koneko_godot_Vector3Axis = _hxClasses["koneko.godot.Vector3Axis"];
-__koneko_godot_Vector3Axis.X = _hx_tab_array({[0]="X",0,__enum__ = __koneko_godot_Vector3Axis},2)
-
-__koneko_godot_Vector3Axis.Y = _hx_tab_array({[0]="Y",1,__enum__ = __koneko_godot_Vector3Axis},2)
-
-__koneko_godot_Vector3Axis.Z = _hx_tab_array({[0]="Z",2,__enum__ = __koneko_godot_Vector3Axis},2)
-
-
-__koneko_godot_Vector3.new = function(x,y,z) 
-  local self = _hx_new(__koneko_godot_Vector3.prototype)
-  __koneko_godot_Vector3.super(self,x,y,z)
-  return self
-end
-__koneko_godot_Vector3.super = function(self,x,y,z) 
+__koneko_godot__Vector3_Vector3_Impl_.new = {}
+__koneko_godot__Vector3_Vector3_Impl_.__name__ = true
+__koneko_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
   if (z == nil) then 
     z = 0;
   end;
@@ -1275,234 +1246,166 @@ __koneko_godot_Vector3.super = function(self,x,y,z)
   if (x == nil) then 
     x = 0;
   end;
-  self.instance = godot.Vector3.__new(x, y, z);
+  do return godot.Vector3.__new(x, y, z) end;
 end
-__koneko_godot_Vector3.__name__ = true
-__koneko_godot_Vector3.fromInstance = function(instance) 
-  local vector3 = __koneko_godot_Vector3.new();
-  vector3.instance = instance;
-  do return vector3 end;
-end
-__koneko_godot_Vector3.prototype = _hx_e();
-__koneko_godot_Vector3.prototype.get_x = function(self) 
-  local untypedX = self.instance.x;
-  do return untypedX end
-end
-__koneko_godot_Vector3.prototype.set_x = function(self,value) 
-  self.instance.x = value;
-  do return value end
-end
-__koneko_godot_Vector3.prototype.get_y = function(self) 
-  local untypedY = self.instance.y;
-  do return untypedY end
-end
-__koneko_godot_Vector3.prototype.set_y = function(self,value) 
-  self.instance.y = value;
-  do return value end
-end
-__koneko_godot_Vector3.prototype.get_z = function(self) 
-  local untypedZ = self.instance.z;
-  do return untypedZ end
-end
-__koneko_godot_Vector3.prototype.set_z = function(self,value) 
-  self.instance.z = value;
-  do return value end
-end
-__koneko_godot_Vector3.prototype.abs = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:abs()) end
-end
-__koneko_godot_Vector3.prototype.angleTo = function(self,to) 
-  do return self.instance:angleTo(to.instance) end
-end
-__koneko_godot_Vector3.prototype.angleToPoint = function(self,to) 
-  do return self.instance:angleToPoint(to.instance) end
-end
-__koneko_godot_Vector3.prototype.bounce = function(self,n) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:bounce(n.instance)) end
-end
-__koneko_godot_Vector3.prototype.ceil = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:ceil()) end
-end
-__koneko_godot_Vector3.prototype.cross = function(self,b) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:cross(b.instance)) end
-end
-__koneko_godot_Vector3.prototype.cubicInterpolate = function(self,b,preA,postB,weight) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:cubicInterpolate(b.instance, preA.instance, postB.instance, weight)) end
-end
-__koneko_godot_Vector3.prototype.directionTo = function(self,to) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:directionTo(to.instance)) end
-end
-__koneko_godot_Vector3.prototype.distanceTo = function(self,to) 
-  do return self.instance:distanceTo(to.instance) end
-end
-__koneko_godot_Vector3.prototype.distanceSquaredTo = function(self,to) 
-  do return self.instance:distanceSquaredTo(to.instance) end
-end
-__koneko_godot_Vector3.prototype.dot = function(self,with) 
-  do return self.instance:dot(with.instance) end
-end
-__koneko_godot_Vector3.prototype.floor = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:floor()) end
-end
-__koneko_godot_Vector3.prototype.inverse = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:inverse()) end
-end
-__koneko_godot_Vector3.prototype.isNormalized = function(self) 
-  do return self.instance:isNormalized() end
-end
-__koneko_godot_Vector3.prototype.length = function(self) 
-  do return _hx_wrap_if_string_field(self.instance,'length')(self.instance) end
-end
-__koneko_godot_Vector3.prototype.lengthSquared = function(self) 
-  do return self.instance:lengthSquared() end
-end
-__koneko_godot_Vector3.prototype.linearInterpolate = function(self,to,weight) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:linearInterpolate(to.instance, weight)) end
-end
-__koneko_godot_Vector3.prototype.limitLength = function(self,length) 
-  if (length == nil) then 
-    length = 1;
-  end;
-  do return self.instance:limitLength(length) end
-end
-__koneko_godot_Vector3.prototype.maxAxis = function(self) 
-  local val = self.instance:maxAxis();
-  if (val == 0) then 
-    do return __koneko_godot_Vector3Axis.X end;
+__koneko_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
+  if (name == "toString") then 
+    do return function() 
+      local v = this1;
+      do return v.toString() end;
+    end end;
   else
-    if (val == 1) then 
-      do return __koneko_godot_Vector3Axis.Y end;
+    local o = this1;
+    if ((function() 
+      local _hx_1
+      if ((_G.type(o) == "function") and not ((function() 
+        local _hx_2
+        if (_G.type(o) ~= "table") then 
+        _hx_2 = false; else 
+        _hx_2 = o.__name__; end
+        return _hx_2
+      end )() or (function() 
+        local _hx_3
+        if (_G.type(o) ~= "table") then 
+        _hx_3 = false; else 
+        _hx_3 = o.__ename__; end
+        return _hx_3
+      end )())) then 
+      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+      _hx_1 = o.__fields__[name] ~= nil; else 
+      _hx_1 = o[name] ~= nil; end
+      return _hx_1
+    end )()) then 
+      do return Reflect.field(this1, name) end;
     else
-      do return __koneko_godot_Vector3Axis.Z end;
+      _G.error(__haxe_Exception.thrown("Invalid field"),0);
     end;
   end;
 end
-__koneko_godot_Vector3.prototype.minAxis = function(self) 
-  local val = self.instance:minAxis();
-  if (val == 0) then 
-    do return __koneko_godot_Vector3Axis.X end;
+__koneko_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
+  local o = this1;
+  if ((function() 
+    local _hx_1
+    if ((_G.type(o) == "function") and not ((function() 
+      local _hx_2
+      if (_G.type(o) ~= "table") then 
+      _hx_2 = false; else 
+      _hx_2 = o.__name__; end
+      return _hx_2
+    end )() or (function() 
+      local _hx_3
+      if (_G.type(o) ~= "table") then 
+      _hx_3 = false; else 
+      _hx_3 = o.__ename__; end
+      return _hx_3
+    end )())) then 
+    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+    _hx_1 = o.__fields__[name] ~= nil; else 
+    _hx_1 = o[name] ~= nil; end
+    return _hx_1
+  end )()) then 
+    this1[name] = value;
   else
-    if (val == 1) then 
-      do return __koneko_godot_Vector3Axis.Y end;
+    _G.error(__haxe_Exception.thrown("Invalid field"),0);
+  end;
+end
+__koneko_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+  if (n == 0) then 
+    do return this1.x end;
+  end;
+  if (n == 1) then 
+    do return this1.y end;
+  end;
+  if (n == 2) then 
+    do return this1.z end;
+  end;
+  if (n == "x") then 
+    do return this1.x end;
+  end;
+  if (n == "y") then 
+    do return this1.y end;
+  end;
+  if (n == "z") then 
+    do return this1.z end;
+  end;
+  _G.error(__haxe_Exception.thrown("Invalid index"),0);
+end
+__koneko_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+  if (n == 0) then 
+    this1.x = value;
+  else
+    if (n == 1) then 
+      this1.y = value;
     else
-      do return __koneko_godot_Vector3Axis.Z end;
+      if (n == 2) then 
+        this1.z = value;
+      else
+        if (n == "x") then 
+          this1.x = value;
+        else
+          if (n == "y") then 
+            this1.y = value;
+          else
+            if (n == "z") then 
+              this1.z = value;
+            else
+              _G.error(__haxe_Exception.thrown("Invalid index"),0);
+            end;
+          end;
+        end;
+      end;
     end;
   end;
 end
-__koneko_godot_Vector3.prototype.moveToward = function(self,to,delta) 
-  do return self.instance:moveToward(to.instance, delta) end
+__koneko_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs + rhs end;
 end
-__koneko_godot_Vector3.prototype.normalized = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:normalized()) end
+__koneko_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs - rhs end;
 end
-__koneko_godot_Vector3.prototype.outer = function(self,with) 
-  do return self.instance:outer(with.instance) end
+__koneko_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs * rhs end;
 end
-__koneko_godot_Vector3.prototype.posModf = function(self,mod) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:posMod(mod)) end
+__koneko_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs / rhs end;
 end
-__koneko_godot_Vector3.prototype.posMod = function(self,modv) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:posMod(modv.instance)) end
+__koneko_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs % rhs end;
 end
-__koneko_godot_Vector3.prototype.project = function(self,onNormal) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:project(onNormal.instance)) end
+__koneko_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs == rhs end;
 end
-__koneko_godot_Vector3.prototype.reflect = function(self,normal) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:reflect(normal.instance)) end
+__koneko_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs ~= rhs end;
 end
-__koneko_godot_Vector3.prototype.rotated = function(self,axis,angle) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:rotated(axis.instance, angle)) end
+__koneko_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs < rhs end;
 end
-__koneko_godot_Vector3.prototype.round = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:round()) end
+__koneko_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs <= rhs end;
 end
-__koneko_godot_Vector3.prototype.sign = function(self) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:sign()) end
+__koneko_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs > rhs end;
 end
-__koneko_godot_Vector3.prototype.signedAngleTo = function(self,to,axis) 
-  do return self.instance:signedAngleTo(to.instance, axis.instance) end
+__koneko_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs >= rhs end;
 end
-__koneko_godot_Vector3.prototype.slerp = function(self,to,weight) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:slerp(to.instance, weight)) end
+__koneko_godot__Vector3_Vector3_Impl_.toString = function(v) 
+  do return v.toString() end;
 end
-__koneko_godot_Vector3.prototype.slide = function(self,normal) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:slide(normal.instance)) end
-end
-__koneko_godot_Vector3.prototype.snapped = function(self,step) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:snapped(step.instance)) end
-end
-__koneko_godot_Vector3.prototype.snappedf = function(self,step) 
-  do return __koneko_godot_Vector3.fromInstance(self.instance:snapped(step)) end
-end
-__koneko_godot_Vector3.prototype.add = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(_hx_dyn_add(self.instance,rhs.instance)) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance + rhs) end;
-  end;
-end
-__koneko_godot_Vector3.prototype.subtract = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance - rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance - rhs) end;
-  end;
-end
-__koneko_godot_Vector3.prototype.multiply = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance * rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance * rhs) end;
-  end;
-end
-__koneko_godot_Vector3.prototype.divide = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(self.instance / rhs.instance) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(self.instance / rhs) end;
-  end;
-end
-__koneko_godot_Vector3.prototype.modulo = function(self,rhs) 
-  if (__lua_Boot.__instanceof(rhs, __koneko_godot_Vector3)) then 
-    do return __koneko_godot_Vector3.fromInstance(_G.math.fmod(self.instance, rhs.instance)) end;
-  else
-    do return __koneko_godot_Vector3.fromInstance(_G.math.fmod(self.instance, rhs)) end;
-  end;
-end
-__koneko_godot_Vector3.prototype.equal = function(self,rhs) 
-  do return self.instance == rhs.instance end
-end
-__koneko_godot_Vector3.prototype.noequal = function(self,rhs) 
-  do return self.instance ~= rhs.instance end
-end
-__koneko_godot_Vector3.prototype.lessthan = function(self,rhs) 
-  do return self.instance < rhs.instance end
-end
-__koneko_godot_Vector3.prototype.lessthanequal = function(self,rhs) 
-  do return self.instance <= rhs.instance end
-end
-__koneko_godot_Vector3.prototype.greaterthan = function(self,rhs) 
-  do return self.instance > rhs.instance end
-end
-__koneko_godot_Vector3.prototype.greaterthanequal = function(self,rhs) 
-  do return self.instance >= rhs.instance end
-end
-__koneko_godot_Vector3.prototype.equals = function(self,other) 
-  do return self.instance:equals(other.instance) end
-end
-__koneko_godot_Vector3.prototype.isEqualApprox = function(self,other) 
-  do return self.instance:isEqualApprox(other.instance) end
-end
-__koneko_godot_Vector3.prototype.isZeroApprox = function(self) 
-  do return self.instance:isZeroApprox() end
-end
-__koneko_godot_Vector3.prototype.toString = function(self) 
-  do return self.instance.toString() end
-end
-
-__koneko_godot_Vector3.prototype.__class__ =  __koneko_godot_Vector3
-__koneko_godot_Vector3.__super__ = __koneko_core_InstanceObject
-setmetatable(__koneko_godot_Vector3.prototype,{__index=__koneko_core_InstanceObject.prototype})
 
 __lua_Boot.new = {}
 __lua_Boot.__name__ = true
@@ -1658,37 +1561,7 @@ end
 local _hx_static_init = function()
   
   String.__name__ = true;
-  Array.__name__ = true;__koneko_godot_Vector3.ZERO = __koneko_godot_Vector3.new(0, 0, 0);
-  
-  __koneko_godot_Vector3.ONE = __koneko_godot_Vector3.new(1, 1, 1);
-  
-  __koneko_godot_Vector3.INF = godot.Vector3.inf;
-  
-  __koneko_godot_Vector3.UP = __koneko_godot_Vector3.new(0, 1, 0);
-  
-  __koneko_godot_Vector3.DOWN = __koneko_godot_Vector3.new(0, -1, 0);
-  
-  __koneko_godot_Vector3.LEFT = __koneko_godot_Vector3.new(-1, 0, 0);
-  
-  __koneko_godot_Vector3.RIGHT = __koneko_godot_Vector3.new(1, 0, 0);
-  
-  __koneko_godot_Vector3.FORWARD = __koneko_godot_Vector3.new(0, 0, -1);
-  
-  __koneko_godot_Vector3.BACK = __koneko_godot_Vector3.new(0, 0, 1);
-  
-  __koneko_godot_Vector3.MODEL_LEFT = __koneko_godot_Vector3.new(1, 0, 0);
-  
-  __koneko_godot_Vector3.MODEL_RIGHT = __koneko_godot_Vector3.new(-1, 0, 0);
-  
-  __koneko_godot_Vector3.MODEL_TOP = __koneko_godot_Vector3.new(0, 1, 0);
-  
-  __koneko_godot_Vector3.MODEL_BOTTOM = __koneko_godot_Vector3.new(0, -1, 0);
-  
-  __koneko_godot_Vector3.MODEL_FRONT = __koneko_godot_Vector3.new(0, 0, 1);
-  
-  __koneko_godot_Vector3.MODEL_REAR = __koneko_godot_Vector3.new(0, 0, -1);
-  
-  
+  Array.__name__ = true;
 end
 
 _hx_print = print or (function() end)
@@ -1717,14 +1590,6 @@ _hx_wrap_if_string_field = function(o, fld)
     return o[fld]
   end
 end
-
-_hx_dyn_add = function(a,b)
-  if (_G.type(a) == 'string' or _G.type(b) == 'string') then
-    return Std.string(a)..Std.string(b)
-  else
-    return a + b;
-  end;
-end;
 
 function _hx_handle_error(obj)
   local message = tostring(obj)

@@ -27,7 +27,7 @@ namespace Koneko.Scripting
         public LuaNode()
         {
             _luaEnviroment = new LuaEnviroment();
-            _luaEnviroment.AddPlugin(typeof(GodotModule));
+            _luaEnviroment.AddPlugin(typeof(GodotPlugin));
             _luaEnviroment.AddPlugin(typeof(GodotExtensions));
             //_luaEnviroment.AddPlugin(typeof(UiModule));
             UserData.RegisterType<LuaNode>();

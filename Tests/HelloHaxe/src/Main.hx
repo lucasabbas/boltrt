@@ -30,6 +30,13 @@ class Main {
 
         var vec2 = new Vector2(6, 1);
         trace(vec2.toString());
+
+        try {
+            //var godotObject = new GodotObject();
+            //trace(godotObject.toString());
+        } catch(e) {
+            trace(e.message);
+        }
     }
 
     public static function add(a:Int, b:Int):Int {

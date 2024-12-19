@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Godot;
 using Koneko.Scripting;
+using Koneko.SignalWrappers;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
 using Timer = Godot.Timer;
@@ -13,7 +14,7 @@ using GodotObject = Godot.Object;
 namespace Koneko.Plugins
 {
 
-    public class GodotModule : Plugin
+    public class GodotPlugin : Plugin
     {
         public override void Init()
         {
@@ -107,7 +108,21 @@ namespace Koneko.Plugins
                 }
             }
 
+            Type[] signalWrapperTypes = GetTypesInheritedFrom(typeof(SignalWrapper));
+            foreach (var type in signalWrapperTypes)
+            {
+                if (!IsBlackListedType(type) || Enviroment.Sandboxed == false)
+                {
+                    // hack fix to stop the .NET debugger from bitching.
+                    bool isNested = type.IsNested;
 
+                    if (!isNested)
+                    {
+                        //UserData.RegisterType(type);
+                        GdCoreNamespace[type.Name] = type;
+                    }
+                }
+            }
         }
 
         public Type[] GetTypesInheritedFrom(Type baseType)
