@@ -1,5 +1,7 @@
 package;
 
+import sys.io.File;
+import sys.FileSystem;
 import koneko.core.Vector2;
 import koneko.core.Vector3;
 import haxe.ds.Vector;
@@ -53,6 +55,9 @@ class Main extends App{
         } catch(e) {
             Sys.println(e.message);
         }
+
+        var file = File.getContent("data://textFile.txt");
+        Sys.println(file);
     }
 
     public override function process(delta : Float) : Void {
