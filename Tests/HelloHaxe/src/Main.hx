@@ -3,8 +3,7 @@ package;
 import koneko.core.Vector2;
 import koneko.core.Vector3;
 import haxe.ds.Vector;
-import koneko.core.Vector3;
-import koneko.core.Vector2;
+import koneko.godot.GodotObject;
 
 class Main {
     public static function main() {
@@ -44,8 +43,8 @@ class Main {
         Sys.println(vec2_3.toString());
 
         try {
-            //var godotObject = new GodotObject();
-            //trace(godotObject.toString());
+            var godotObject = new GodotObject();
+            Sys.println(godotObject.toString());
         } catch(e) {
             Sys.println(e.message);
         }

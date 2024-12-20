@@ -580,6 +580,8 @@ Main.main = function()
   _G.print(Std.string((__koneko_core__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
+      local godotObject = godot.Object.__new();
+      _G.print(Std.string(godotObject:toString()));
     return _hx_pcall_default
   end)
   if not _hx_status and _hx_result == "_hx_pcall_break" then
