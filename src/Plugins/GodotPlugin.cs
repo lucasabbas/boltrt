@@ -4,7 +4,6 @@ using System.Linq;
 using System.Reflection;
 using Godot;
 using Koneko.Scripting;
-using Koneko.SignalWrappers;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
 using Timer = Godot.Timer;
@@ -105,22 +104,6 @@ namespace Koneko.Plugins
 				{
 					UserData.RegisterType(type);
 					GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
-				}
-			}
-
-			Type[] signalWrapperTypes = GetTypesInheritedFrom(typeof(SignalWrapper));
-			foreach (var type in signalWrapperTypes)
-			{
-				if (!IsBlackListedType(type) || Enviroment.Sandboxed == false)
-				{
-					// hack fix to stop the .NET debugger from bitching.
-					bool isNested = type.IsNested;
-
-					if (!isNested)
-					{
-						UserData.RegisterType(type);
-						GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
-					}
 				}
 			}
 		}

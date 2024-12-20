@@ -21,6 +21,8 @@ namespace Koneko.Scripting
 
         public List<Plugin> Plugins = new List<Plugin>();
 
+        public Table Modules;
+
         private bool _sandboxed = false;
 
         public bool Sandboxed
@@ -52,13 +54,15 @@ namespace Koneko.Scripting
             server = new MoonSharpVsCodeDebugServer();
             IoCore = new IOManager();
             Script.GlobalOptions.Platform = new KonekoPlatformAccessor(this);
-            Script.Options.ScriptLoader = new IoScriptLoader(IoCore);
+            Script.Options.ScriptLoader = new IoScriptLoader(IoCore, this);
             Script.Globals["doubleToFloat"] = (Func<double, float>)DoubleToFloat;
 
             UserData.RegisterType<IOManager>(); // Register the IoCoreMulti type
             Script.Globals["ioCore"] = IoCore;
             Script.Globals["__lua__"] = (Func<string, DynValue>)eval;
             Script.Globals["eval"] = (Func<string, DynValue>)eval;
+            Modules = new Table(Script);
+            Script.Globals["_MD"] = Modules;
 
             EnviromentVariables["PLATFORM"] = "Lucidware";
             EnviromentVariables["PLATFORM_VERSION"] = "1.0.0";

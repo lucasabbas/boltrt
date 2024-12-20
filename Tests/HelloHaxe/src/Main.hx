@@ -56,6 +56,7 @@ class Main extends App{
             Sys.println(e.message);
         }
 
+        if (lua.)
         var file = File.getContent("data://textFile.txt");
         Sys.println(file);
     }

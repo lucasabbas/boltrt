@@ -8,19 +8,28 @@ namespace Koneko.Scripting
     public class IoScriptLoader : ScriptLoaderBase
     {
         private IOManager _ioManager;
+        private LuaEnviroment _enviroment;
 
-        public IoScriptLoader(IOManager ioManager)
+        public IoScriptLoader(IOManager ioManager, LuaEnviroment enviroment)
         {
             _ioManager = ioManager;
+            _enviroment = enviroment;
         }
 
         public override bool ScriptFileExists(string name)
         {
+            var isModule = _enviroment.Modules[name] != null;
+            if (isModule)
+                return true;
+            
             return _ioManager.FileExists(name);
         }
 
         public override object LoadFile(string file, Table globalContext)
         {
+            if (_enviroment.Modules[file] != null)
+                return $"return _MD[{file}]";
+
             return _ioManager.LoadText(file);
         }
 

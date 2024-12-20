@@ -202,7 +202,6 @@ __koneko_core__Vector3_Vector3_Impl_ = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
-__sys_io_File = _hx_e()
 
 local _hx_bind, _hx_bit, _hx_staticToInstance, _hx_funcToField, _hx_maxn, _hx_print, _hx_apply_self, _hx_box_mr, _hx_bit_clamp, _hx_table, _hx_bit_raw
 local _hx_pcall_default = {};
@@ -632,8 +631,6 @@ Main.prototype.init = function(self)
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
-  local file = __sys_io_File.getContent("data://textFile.txt");
-  _G.print(Std.string(file));
 end
 Main.prototype.process = function(self,delta) 
 end
@@ -1521,18 +1518,6 @@ __lua_UserData.__name__ = true
 
 __lua_Thread.new = {}
 __lua_Thread.__name__ = true
-
-__sys_io_File.new = {}
-__sys_io_File.__name__ = true
-__sys_io_File.getContent = function(path) 
-  local f = _G.io.open(path, "r");
-  if (f == nil) then 
-    _G.error(__haxe_Exception.thrown(Std.string("Invalid path : ") .. Std.string(path)),0);
-  end;
-  local s = f:read("*all");
-  f:close();
-  do return s end;
-end
 if _hx_bit_raw then
     _hx_bit_clamp = function(v)
     if v <= 2147483647 and v >= -2147483648 then
