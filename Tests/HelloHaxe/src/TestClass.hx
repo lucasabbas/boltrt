@@ -1,19 +1,12 @@
 package;
 
-@:native("_TestClass")
-extern class TestClassNative {
-    @:native("__new")
-    public static function createInstance() : Dynamic;
-    
-}
+import koneko.core.NativeObject;
 
 @:luaRequire("data://test.lua")
-class TestClass extends MonoObject {
-    public function new() {
-        instance = TestClassNative.createInstance();
-    }
+@:native("_TestClass")
+class TestClass extends NativeObject {
+    @:native("__new")
+    public function new();
 
-    public function hello() {
-        Reflect.callMethod(instance, Reflect.field(instance, "hello"), []);
-    }
+    public function hello() : Void;
 }
