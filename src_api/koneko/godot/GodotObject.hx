@@ -26,7 +26,7 @@ extern class GodotObject extends NativeObject {
     public function getClass() : String;
 
     @:native("isClass")
-    public function isClass(class : String) : Bool;
+    public function isClass(classname : String) : Bool;
 
     @:native("set")
     public function set(property : String, value : Dynamic) : Void;
