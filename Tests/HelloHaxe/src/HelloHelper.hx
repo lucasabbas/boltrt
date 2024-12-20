@@ -1,17 +1,9 @@
 package;
 
 @:native("_HelloHelper")
-extern class HelloHelperNative {
+extern class HelloHelper {
     @:native("__new")
-    public static function createInstance() : Dynamic;
-}
+    public function new();
 
-class HelloHelper extends MonoObject {
-    public function new() {
-        instance = HelloHelperNative.createInstance();
-    }
-
-    public function sayHello(name : String) {
-        untyped instance.sayHello(name);
-    }
+    public function sayHello(name : String) : Void;
 }

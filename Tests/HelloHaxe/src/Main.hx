@@ -8,15 +8,15 @@ import koneko.godot.Vector2;
 
 class Main {
     public static function main() {
-        trace("Hello, World!");
-        trace(add(4, 6));
-        trace(100, 28);
+        Sys.println("Hello, World!");
+        Sys.println(add(4, 6));
+        Sys.println(100 + " " + 28);
         sayHello("mintkat");
         sayHello("Lucas C. Abbas");
         sayHello("Lily");
 
         var lucas = new Person("Lucas", 20, "2004-10-04");
-        trace(lucas.toString());
+        Sys.println(lucas.toString());
         lucas.sayHello();
 
         //var testObject = new TestClass();
@@ -26,16 +26,16 @@ class Main {
         helper.sayHello("mintkat");
 
         var vec3 = new Vector3(3, 2, 3);
-        trace(vec3.toString());
+        Sys.println(vec3.toString());
 
         var vec2 = new Vector2(6, 1);
-        trace(vec2.toString());
+        Sys.println(vec2.toString());
 
         try {
             //var godotObject = new GodotObject();
             //trace(godotObject.toString());
         } catch(e) {
-            trace(e.message);
+            Sys.println(e.message);
         }
     }
 
@@ -44,6 +44,6 @@ class Main {
     }
 
     public static function sayHello(name:String) {
-        trace("Hello, " + name + "!");
+        Sys.println("Hello, " + name + "!");
     }
 }

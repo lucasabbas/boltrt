@@ -183,8 +183,6 @@ local Class = _hx_e();
 local Enum = _hx_e();
 
 local Array = _hx_e()
-local MonoObject = _hx_e()
-local HelloHelper = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Person = _hx_e()
@@ -192,7 +190,6 @@ local Reflect = _hx_e()
 local String = _hx_e()
 local Std = _hx_e()
 __haxe_Exception = _hx_e()
-__haxe_Log = _hx_e()
 __haxe_NativeStackTrace = _hx_e()
 __haxe_ValueException = _hx_e()
 __haxe_exceptions_PosException = _hx_e()
@@ -555,48 +552,24 @@ end
 
 Array.prototype.__class__ =  Array
 
-MonoObject.new = {}
-MonoObject.__name__ = true
-MonoObject.prototype = _hx_e();
-
-MonoObject.prototype.__class__ =  MonoObject
-
-HelloHelper.new = function() 
-  local self = _hx_new(HelloHelper.prototype)
-  HelloHelper.super(self)
-  return self
-end
-HelloHelper.super = function(self) 
-  self.instance = _HelloHelper.__new();
-end
-HelloHelper.__name__ = true
-HelloHelper.prototype = _hx_e();
-HelloHelper.prototype.sayHello = function(self,name) 
-  self.instance:sayHello(name);
-end
-
-HelloHelper.prototype.__class__ =  HelloHelper
-HelloHelper.__super__ = MonoObject
-setmetatable(HelloHelper.prototype,{__index=MonoObject.prototype})
-
 Main.new = {}
 Main.__name__ = true
 Main.main = function() 
-  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=11,className="Main",methodName="main"}));
-  __haxe_Log.trace(Main.add(4, 6), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=12,className="Main",methodName="main"}));
-  __haxe_Log.trace(100, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true,customParams=true},fileName="src/Main.hx",lineNumber=13,className="Main",methodName="main",customParams=_hx_tab_array({[0]=28}, 1)}));
+  _G.print("Hello, World!");
+  _G.print(Std.string(Main.add(4, 6)));
+  _G.print(Std.string(Std.string(Std.string(100) .. Std.string(" ")) .. Std.string(28)));
   Main.sayHello("mintkat");
   Main.sayHello("Lucas C. Abbas");
   Main.sayHello("Lily");
   local lucas = Person.new("Lucas", 20, "2004-10-04");
-  __haxe_Log.trace(lucas:toString(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=19,className="Main",methodName="main"}));
+  _G.print(Std.string(lucas:toString()));
   lucas:sayHello();
-  local helper = HelloHelper.new();
+  local helper = _HelloHelper.__new();
   helper:sayHello("mintkat");
   local vec3 = __koneko_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
-  __haxe_Log.trace((__koneko_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=29,className="Main",methodName="main"}));
+  _G.print(Std.string((__koneko_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
   local vec2 = __koneko_godot__Vector2_Vector2_Impl_._new(6, 1);
-  __haxe_Log.trace((__koneko_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=32,className="Main",methodName="main"}));
+  _G.print(Std.string((__koneko_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
     return _hx_pcall_default
@@ -605,7 +578,7 @@ Main.main = function()
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g);
-    __haxe_Log.trace(e:get_message(), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=38,className="Main",methodName="main"}));
+    _G.print(Std.string(e:get_message()));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
@@ -614,7 +587,7 @@ Main.add = function(a,b)
   do return a + b end;
 end
 Main.sayHello = function(name) 
-  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Main.hx",lineNumber=47,className="Main",methodName="sayHello"}));
+  _G.print(Std.string(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!")));
 end
 
 Math.new = {}
@@ -650,7 +623,7 @@ end
 Person.__name__ = true
 Person.prototype = _hx_e();
 Person.prototype.sayHello = function(self) 
-  __haxe_Log.trace(Std.string(Std.string("Hello, ") .. Std.string(self.name)) .. Std.string("!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="src/Person.hx",lineNumber=15,className="Person",methodName="sayHello"}));
+  _G.print(Std.string(Std.string(Std.string("Hello, ") .. Std.string(self.name)) .. Std.string("!")));
 end
 Person.prototype.getAge = function(self) 
   do return self.age end
@@ -933,31 +906,6 @@ __haxe_Exception.prototype.get_native = function(self)
 end
 
 __haxe_Exception.prototype.__class__ =  __haxe_Exception
-
-__haxe_Log.new = {}
-__haxe_Log.__name__ = true
-__haxe_Log.formatOutput = function(v,infos) 
-  local str = Std.string(v);
-  if (infos == nil) then 
-    do return str end;
-  end;
-  local pstr = Std.string(Std.string(infos.fileName) .. Std.string(":")) .. Std.string(infos.lineNumber);
-  if (infos.customParams ~= nil) then 
-    local _g = 0;
-    local _g1 = infos.customParams;
-    while (_g < _g1.length) do _hx_do_first_1 = false;
-      
-      local v = _g1[_g];
-      _g = _g + 1;
-      str = Std.string(str) .. Std.string((Std.string(", ") .. Std.string(Std.string(v))));
-    end;
-  end;
-  do return Std.string(Std.string(pstr) .. Std.string(": ")) .. Std.string(str) end;
-end
-__haxe_Log.trace = function(v,infos) 
-  local str = __haxe_Log.formatOutput(v, infos);
-  _hx_print(str);
-end
 
 __haxe_NativeStackTrace.new = {}
 __haxe_NativeStackTrace.__name__ = true
@@ -1563,8 +1511,6 @@ local _hx_static_init = function()
   String.__name__ = true;
   Array.__name__ = true;
 end
-
-_hx_print = print or (function() end)
 
 _hx_table = {}
 _hx_table.pack = _G.table.pack or function(...)

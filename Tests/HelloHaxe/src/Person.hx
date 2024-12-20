@@ -12,7 +12,7 @@ class Person {
     }
 
     public function sayHello() {
-        trace("Hello, " + this.name + "!");
+        Sys.println("Hello, " + this.name + "!");
     }
 
     public function getAge() : Int {
