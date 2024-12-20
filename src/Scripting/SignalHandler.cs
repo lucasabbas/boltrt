@@ -5,19 +5,9 @@ using MoonSharp.Interpreter;
 public class SignalHandler : Reference {
 	public  Closure _closure;
 	
-	public void CallClosure() {
-		_closure.Call();
-	}
+	public void CallClosure() => _closure.Call();
 
-	public void CallClosure(object arg) {
-		_closure.Call(arg);
-	}
+	public void CallClosure(object arg) => _closure.Call(arg);
 
-	public void CallClosure(params object[] args) {
-		if (args.Length == 0) {
-			CallClosure();
-			return;
-		}
-		_closure.Call(args);
-	}
+	public void CallClosure(params object[] args) => _closure.Call(args);
 }
