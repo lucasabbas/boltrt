@@ -183,6 +183,7 @@ local Class = _hx_e();
 local Enum = _hx_e();
 
 local Array = _hx_e()
+__koneko_App = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Person = _hx_e()
@@ -552,9 +553,47 @@ end
 
 Array.prototype.__class__ =  Array
 
-Main.new = {}
+__koneko_App.new = function() 
+  local self = _hx_new(__koneko_App.prototype)
+  __koneko_App.super(self)
+  return self
+end
+__koneko_App.super = function(self) 
+  _G.process = function(delta) self:process(delta) end;
+  _G.physicsProcess = function(delta) self:physicsProcess(delta) end;
+  self:init();
+end
+__koneko_App.__name__ = true
+__koneko_App.prototype = _hx_e();
+__koneko_App.prototype.init = function(self) 
+end
+__koneko_App.prototype.process = function(self,delta) 
+end
+__koneko_App.prototype.physicsProcess = function(self,delta) 
+end
+
+__koneko_App.prototype.__class__ =  __koneko_App
+
+Main.new = function() 
+  local self = _hx_new(Main.prototype)
+  Main.super(self)
+  return self
+end
+Main.super = function(self) 
+  __koneko_App.super(self);
+end
 Main.__name__ = true
 Main.main = function() 
+  Main.new();
+end
+Main.add = function(a,b) 
+  do return a + b end;
+end
+Main.sayHello = function(name) 
+  _G.print(Std.string(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!")));
+end
+Main.prototype = _hx_e();
+Main.prototype.init = function(self) 
   _G.print("Hello, World!");
   _G.print(Std.string(Main.add(4, 6)));
   _G.print(Std.string(Std.string(Std.string(100) .. Std.string(" ")) .. Std.string(28)));
@@ -593,12 +632,13 @@ Main.main = function()
     return _hx_result
   end;
 end
-Main.add = function(a,b) 
-  do return a + b end;
+Main.prototype.process = function(self,delta) 
+  _G.print(Std.string(delta));
 end
-Main.sayHello = function(name) 
-  _G.print(Std.string(Std.string(Std.string("Hello, ") .. Std.string(name)) .. Std.string("!")));
-end
+
+Main.prototype.__class__ =  Main
+Main.__super__ = __koneko_App
+setmetatable(Main.prototype,{__index=__koneko_App.prototype})
 
 Math.new = {}
 Math.__name__ = true

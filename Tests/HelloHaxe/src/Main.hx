@@ -4,9 +4,14 @@ import koneko.core.Vector2;
 import koneko.core.Vector3;
 import haxe.ds.Vector;
 import koneko.godot.GodotObject;
+import koneko.App;
 
-class Main {
-    public static function main() {
+class Main extends App{
+    public static function main(){
+        new Main();
+    }
+
+    public override function init() {
         Sys.println("Hello, World!");
         Sys.println(add(4, 6));
         Sys.println(100 + " " + 28);
@@ -48,6 +53,10 @@ class Main {
         } catch(e) {
             Sys.println(e.message);
         }
+    }
+
+    public override function process(delta : Float) : Void {
+        //Sys.println(delta);
     }
 
     public static function add(a:Int, b:Int):Int {

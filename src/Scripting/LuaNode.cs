@@ -46,21 +46,21 @@ namespace Koneko.Scripting
 			return (float)d;
 		}
 
-		public void _Process(double delta)
+		public override void _Process(float delta)
 		{
-			if (_luaEnviroment.Script.Globals["update"] != null)
+			if (_luaEnviroment.Script.Globals["process"] != null)
 			{
-				var update = _luaEnviroment.Script.Globals["update"];
-				_luaEnviroment.Script.Call(update, DoubleToFloat(delta));
+				var update = _luaEnviroment.Script.Globals["process"];
+				_luaEnviroment.Script.Call(update, delta);
 			}
 		}
 
-		public void _PhysicsProcess(double delta)
+		public override void _PhysicsProcess(float delta)
 		{
-			if (_luaEnviroment.Script.Globals["physicsUpdate"] != null)
+			if (_luaEnviroment.Script.Globals["physicsProcess"] != null)
 			{
-				var physicsUpdate = _luaEnviroment.Script.Globals["physicsUpdate"];
-				_luaEnviroment.Script.Call(physicsUpdate, DoubleToFloat(delta));
+				var physicsUpdate = _luaEnviroment.Script.Globals["physicsProcess"];
+				_luaEnviroment.Script.Call(physicsUpdate, delta);
 			}
 		}
 
