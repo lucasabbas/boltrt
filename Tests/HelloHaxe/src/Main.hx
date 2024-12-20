@@ -1,5 +1,3 @@
-//import haxe.display.JsonModuleTypes.JsonTypeParameters;
-
 package;
 
 import haxe.ds.Vector;
