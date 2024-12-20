@@ -568,8 +568,16 @@ Main.main = function()
   helper:sayHello("mintkat");
   local vec3 = __koneko_core__Vector3_Vector3_Impl_._new(3, 2, 3);
   _G.print(Std.string((__koneko_core__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
+  local vec3_2 = __koneko_core__Vector3_Vector3_Impl_._new(2, 3, 2);
+  _G.print(Std.string((__koneko_core__Vector3_Vector3_Impl_.fieldRead(vec3_2, "toString"))()));
+  local vec3_3 = __koneko_core__Vector3_Vector3_Impl_.add(vec3, vec3_2);
+  _G.print(Std.string((__koneko_core__Vector3_Vector3_Impl_.fieldRead(vec3_3, "toString"))()));
   local vec2 = __koneko_core__Vector2_Vector2_Impl_._new(6, 1);
   _G.print(Std.string((__koneko_core__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
+  local vec2_2 = __koneko_core__Vector2_Vector2_Impl_._new(4, 9);
+  _G.print(Std.string((__koneko_core__Vector2_Vector2_Impl_.fieldRead(vec2_2, "toString"))()));
+  local vec2_3 = __koneko_core__Vector2_Vector2_Impl_.add(vec2, vec2_2);
+  _G.print(Std.string((__koneko_core__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
     return _hx_pcall_default

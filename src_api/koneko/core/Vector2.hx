@@ -181,31 +181,31 @@ abstract Vector2(Vector2Native) from Vector2Native to Vector2Native {
     }
     
     @:op(A + B)
-    public function add(rhs: Any) : Vector2Native {
+    public function add(rhs: Any) : Vector2 {
         var lhs = this;
         return untyped __lua__("lhs + rhs");
     }
     
     @:op(A - B)
-    public function sub(rhs: Any) : Vector2Native {
+    public function sub(rhs: Any) : Vector2 {
         var lhs = this;
         return untyped __lua__("lhs - rhs");
     }
     
     @:op(A * B)
-    public function mul(rhs: Any) : Vector2Native {
+    public function mul(rhs: Any) : Vector2 {
         var lhs = this;
         return untyped __lua__("lhs * rhs");
     }
     
     @:op(A / B)
-    public function div(rhs: Any) : Vector2Native {
+    public function div(rhs: Any) : Vector2 {
         var lhs = this;
         return untyped __lua__("lhs / rhs");
     }
     
     @:op(A % B)
-    public function mod(rhs: Any) : Vector2Native {
+    public function mod(rhs: Any) : Vector2 {
         var lhs = this;
         return untyped __lua__("lhs % rhs");
     }

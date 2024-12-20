@@ -1,5 +1,7 @@
 package;
 
+import koneko.core.Vector2;
+import koneko.core.Vector3;
 import haxe.ds.Vector;
 import koneko.core.Vector3;
 import koneko.core.Vector2;
@@ -26,8 +28,20 @@ class Main {
         var vec3 = new Vector3(3, 2, 3);
         Sys.println(vec3.toString());
 
+        var vec3_2 = new Vector3(2, 3, 2);
+        Sys.println(vec3_2.toString());
+
+        var vec3_3 = vec3 + vec3_2;
+        Sys.println(vec3_3.toString());
+
         var vec2 = new Vector2(6, 1);
         Sys.println(vec2.toString());
+
+        var vec2_2 = new Vector2(4, 9);
+        Sys.println(vec2_2.toString());
+
+        var vec2_3 = vec2 + vec2_2;
+        Sys.println(vec2_3.toString());
 
         try {
             //var godotObject = new GodotObject();
