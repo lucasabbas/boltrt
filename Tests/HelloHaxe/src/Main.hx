@@ -2,11 +2,11 @@ package;
 
 import sys.io.File;
 import sys.FileSystem;
-import koneko.core.Vector2;
-import koneko.core.Vector3;
+import lucidKit.core.Vector2;
+import lucidKit.core.Vector3;
 import haxe.ds.Vector;
-import koneko.godot.GodotObject;
-import koneko.App;
+import lucidKit.godot.GodotObject;
+import lucidKit.App;
 
 class Main extends App{
     public static function main(){
@@ -24,12 +24,6 @@ class Main extends App{
         var lucas = new Person("Lucas", 20, "2004-10-04");
         Sys.println(lucas.toString());
         lucas.sayHello();
-
-        //var testObject = new TestClass();
-        //testObject.hello();
-
-        var helper = new HelloHelper();
-        helper.sayHello("mintkat");
 
         var vec3 = new Vector3(3, 2, 3);
         Sys.println(vec3.toString());
@@ -56,7 +50,7 @@ class Main extends App{
             Sys.println(e.message);
         }
 
-        if (lua.)
+        //if (lua.)
         var file = File.getContent("data://textFile.txt");
         Sys.println(file);
     }

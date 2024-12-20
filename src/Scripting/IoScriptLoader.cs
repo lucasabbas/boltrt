@@ -1,8 +1,8 @@
-using Koneko.IO;
+using LucidKit.IO;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Loaders;
 
-namespace Koneko.Scripting
+namespace LucidKit.Scripting
 {
 
     public class IoScriptLoader : ScriptLoaderBase

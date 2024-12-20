@@ -1,4 +1,4 @@
-namespace Koneko.Scripting
+namespace LucidKit.Scripting
 {
 
     public abstract class Plugin

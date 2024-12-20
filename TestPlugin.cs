@@ -1,8 +1,8 @@
 using MoonSharp.Interpreter;
 
-namespace Koneko.Tests.HelloHaxe
+namespace LucidKit.Tests.HelloHaxe
 {
-    public class TestPlugin : Koneko.Scripting.Plugin
+    public class TestPlugin : LucidKit.Scripting.Plugin
     {
         public override void Init()
         {

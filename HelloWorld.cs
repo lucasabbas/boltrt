@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Koneko.Scripting;
+using LucidKit.Scripting;
 
 public class HelloWorld : LuaNode
 {

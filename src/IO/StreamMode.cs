@@ -1,4 +1,4 @@
-namespace Koneko.IO
+namespace LucidKit.IO
 {
 
     public enum StreamMode

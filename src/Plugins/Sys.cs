@@ -1,7 +1,7 @@
-using Koneko.Scripting;
+using LucidKit.Scripting;
 using MoonSharp.Interpreter;
 
-namespace Koneko.Plugins
+namespace LucidKit.Plugins
 {
 
     public class Sys : Plugin

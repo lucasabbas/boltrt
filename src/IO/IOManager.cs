@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Koneko.IO
+namespace LucidKit.IO
 {
 
     public class IOManager : IOCore

@@ -1,5 +1,5 @@
 using Godot;
-using Koneko.Scripting;
+using LucidKit.Scripting;
 
 
 public partial class TestNode : LuaNode

@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using Godot;
-using Koneko.IO;
+using LucidKit.IO;
+using LucidKit.Plugins;
 using MoonSharp.Interpreter;
 using MoonSharp.VsCodeDebugger;
 using Script = MoonSharp.Interpreter.Script;
 
-namespace Koneko.Scripting
+namespace LucidKit.Scripting
 {
 
     public class LuaEnviroment
@@ -53,7 +54,7 @@ namespace Koneko.Scripting
             Script = new Script();
             server = new MoonSharpVsCodeDebugServer();
             IoCore = new IOManager();
-            Script.GlobalOptions.Platform = new KonekoPlatformAccessor(this);
+            Script.GlobalOptions.Platform = new LucidKitPlatformAccessor(this);
             Script.Options.ScriptLoader = new IoScriptLoader(IoCore, this);
             Script.Globals["doubleToFloat"] = (Func<double, float>)DoubleToFloat;
 
@@ -91,6 +92,8 @@ namespace Koneko.Scripting
 
         public void Start(string entryPoint)
         {
+            if (!_isInitNoSandbox && !Sandboxed)
+                InitNoSandbox();
             try
             {
                 string fullPath = IoCore.GetFullPath(entryPoint);
@@ -113,6 +116,15 @@ namespace Koneko.Scripting
                     GD.Print("Error: ");
                 }
             }
+        }
+
+        private bool _isInitNoSandbox = false;
+
+        public void InitNoSandbox()
+        {
+            _isInitNoSandbox = true;
+
+            AddPlugin(typeof(SocketPlugin));
         }
 
         public void LoadScript(string path)

@@ -1,7 +1,7 @@
 ﻿using Godot;
 using System;
 
-namespace Koneko
+namespace LucidKit
 {
 
     public partial class FreeLookCamera2D : Camera2D

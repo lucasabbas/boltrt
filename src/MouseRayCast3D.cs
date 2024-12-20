@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Koneko
+namespace LucidKit
 {
 
 	public partial class MouseRayCast3D : RayCast

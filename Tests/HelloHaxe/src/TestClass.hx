@@ -1,6 +1,6 @@
 package;
 
-import koneko.core.NativeObject;
+import lucidKit.core.NativeObject;
 
 @:luaRequire("data://test.lua")
 @:native("_TestClass")

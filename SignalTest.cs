@@ -1,7 +1,7 @@
 using Godot;
-using Koneko.Scripting;
+using LucidKit.Scripting;
 
-namespace Koneko.Tests.HelloHaxe
+namespace LucidKit.Tests.HelloHaxe
 {
 	public class SignalTest : LuaNode
 	{

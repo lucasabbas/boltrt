@@ -1,10 +1,10 @@
 using System;
 using Godot;
-using Koneko.IO;
-using Koneko.Plugins;
+using LucidKit.IO;
+using LucidKit.Plugins;
 using MoonSharp.Interpreter;
 
-namespace Koneko.Scripting
+namespace LucidKit.Scripting
 {
 
 	public partial class LuaNode : Node

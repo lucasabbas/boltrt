@@ -5,16 +5,16 @@ using Godot;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Platforms;
 using Script = MoonSharp.Interpreter.Script;
-using Koneko.IO;
+using LucidKit.IO;
 
-namespace Koneko.Scripting
+namespace LucidKit.Scripting
 {
 
-    public class KonekoPlatformAccessor : PlatformAccessorBase
+    public class LucidKitPlatformAccessor : PlatformAccessorBase
     {
         public LuaEnviroment Enviroment;
 
-        public KonekoPlatformAccessor(LuaEnviroment enviroment)
+        public LucidKitPlatformAccessor(LuaEnviroment enviroment)
         {
             Enviroment = enviroment;
         }

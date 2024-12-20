@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Koneko.Tests.HelloHaxe
+namespace LucidKit.Tests.HelloHaxe
 {
     public class HelloHelper
     {

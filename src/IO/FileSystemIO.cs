@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Koneko.IO
+namespace LucidKit.IO
 {
 
     public class FileSystemIO : IOCore

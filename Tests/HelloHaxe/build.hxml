@@ -1,5 +1,5 @@
---library koneko
+--library lucidKit
 --class-path src
 --main Main
---lua data/main.lua
+--lua main.lua
 -D lua-vanilla

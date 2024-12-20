@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Koneko.Scripting;
+using LucidKit.Scripting;
 
-namespace Koneko.IO
+namespace LucidKit.IO
 {
 
     public abstract class IOCore
