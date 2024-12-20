@@ -3,8 +3,8 @@
 package;
 
 import haxe.ds.Vector;
-import koneko.godot.Vector3;
-import koneko.godot.Vector2;
+import koneko.core.Vector3;
+import koneko.core.Vector2;
 
 class Main {
     public static function main() {

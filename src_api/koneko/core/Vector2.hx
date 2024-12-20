@@ -1,6 +1,4 @@
-package koneko.godot;
-
-import koneko.core.*;
+package koneko.core;
 
 @:native("godot.Vector2")
 extern class Vector2Native extends NativeObject {

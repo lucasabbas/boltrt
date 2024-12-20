@@ -196,8 +196,8 @@ __haxe_exceptions_PosException = _hx_e()
 __haxe_exceptions_NotImplementedException = _hx_e()
 __haxe_iterators_ArrayIterator = _hx_e()
 __haxe_iterators_ArrayKeyValueIterator = _hx_e()
-__koneko_godot__Vector2_Vector2_Impl_ = _hx_e()
-__koneko_godot__Vector3_Vector3_Impl_ = _hx_e()
+__koneko_core__Vector2_Vector2_Impl_ = _hx_e()
+__koneko_core__Vector3_Vector3_Impl_ = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
@@ -566,10 +566,10 @@ Main.main = function()
   lucas:sayHello();
   local helper = _HelloHelper.__new();
   helper:sayHello("mintkat");
-  local vec3 = __koneko_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
-  _G.print(Std.string((__koneko_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
-  local vec2 = __koneko_godot__Vector2_Vector2_Impl_._new(6, 1);
-  _G.print(Std.string((__koneko_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
+  local vec3 = __koneko_core__Vector3_Vector3_Impl_._new(3, 2, 3);
+  _G.print(Std.string((__koneko_core__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
+  local vec2 = __koneko_core__Vector2_Vector2_Impl_._new(6, 1);
+  _G.print(Std.string((__koneko_core__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
     return _hx_pcall_default
@@ -1026,9 +1026,9 @@ __haxe_iterators_ArrayKeyValueIterator.prototype = _hx_e();
 
 __haxe_iterators_ArrayKeyValueIterator.prototype.__class__ =  __haxe_iterators_ArrayKeyValueIterator
 
-__koneko_godot__Vector2_Vector2_Impl_.new = {}
-__koneko_godot__Vector2_Vector2_Impl_.__name__ = true
-__koneko_godot__Vector2_Vector2_Impl_._new = function(x,y) 
+__koneko_core__Vector2_Vector2_Impl_.new = {}
+__koneko_core__Vector2_Vector2_Impl_.__name__ = true
+__koneko_core__Vector2_Vector2_Impl_._new = function(x,y) 
   if (y == nil) then 
     y = 0;
   end;
@@ -1037,7 +1037,7 @@ __koneko_godot__Vector2_Vector2_Impl_._new = function(x,y)
   end;
   do return godot.Vector2.__new(x, y) end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+__koneko_core__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1072,7 +1072,7 @@ __koneko_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+__koneko_core__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1100,7 +1100,7 @@ __koneko_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
+__koneko_core__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1115,7 +1115,7 @@ __koneko_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__koneko_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
+__koneko_core__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1134,57 +1134,57 @@ __koneko_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
+__koneko_core__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__koneko_godot__Vector2_Vector2_Impl_.toString = function(v) 
+__koneko_core__Vector2_Vector2_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__koneko_godot__Vector3_Vector3_Impl_.new = {}
-__koneko_godot__Vector3_Vector3_Impl_.__name__ = true
-__koneko_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
+__koneko_core__Vector3_Vector3_Impl_.new = {}
+__koneko_core__Vector3_Vector3_Impl_.__name__ = true
+__koneko_core__Vector3_Vector3_Impl_._new = function(x,y,z) 
   if (z == nil) then 
     z = 0;
   end;
@@ -1196,7 +1196,7 @@ __koneko_godot__Vector3_Vector3_Impl_._new = function(x,y,z)
   end;
   do return godot.Vector3.__new(x, y, z) end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
+__koneko_core__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1231,7 +1231,7 @@ __koneko_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
+__koneko_core__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1259,7 +1259,7 @@ __koneko_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+__koneko_core__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1280,7 +1280,7 @@ __koneko_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__koneko_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+__koneko_core__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1307,51 +1307,51 @@ __koneko_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+__koneko_core__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__koneko_godot__Vector3_Vector3_Impl_.toString = function(v) 
+__koneko_core__Vector3_Vector3_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
