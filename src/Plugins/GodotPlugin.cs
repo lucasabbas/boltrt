@@ -29,6 +29,7 @@ namespace Koneko.Plugins
 			UserData.RegisterType(typeof(Time));
 			UserData.RegisterType(typeof(TranslationServer));
 			UserData.RegisterType(typeof(UndoRedo));
+			UserData.RegisterType(typeof(SignalToFunc));
 
 			GdCoreNamespace[nameof(VisualServer)] = UserData.CreateStatic(typeof(VisualServer));
 			GdCoreNamespace[nameof(PhysicsServer)] = UserData.CreateStatic(typeof(PhysicsServer));
@@ -37,6 +38,7 @@ namespace Koneko.Plugins
 			GdCoreNamespace[nameof(Time)] = UserData.CreateStatic(typeof(Time));
 			GdCoreNamespace[nameof(TranslationServer)] = UserData.CreateStatic(typeof(TranslationServer));
 			GdCoreNamespace[nameof(UndoRedo)] = UserData.CreateStatic(typeof(UndoRedo));
+			GdCoreNamespace[nameof(SignalToFunc)] = UserData.CreateStatic(typeof(SignalToFunc));
 
 
 			UserData.RegisterType<Color>();
@@ -61,8 +63,6 @@ namespace Koneko.Plugins
 			GdCoreNamespace["Node"] = typeof(Node);
 			GdCoreNamespace["Object"] = typeof(GodotObject);
 
-			
-			UserData.RegistrationPolicy = InteropRegistrationPolicy.Automatic;
 			Type[] nodeTypes = GetTypesInheritedFrom(typeof(Node));
 			foreach (var type in nodeTypes)
 			{
@@ -71,10 +71,10 @@ namespace Koneko.Plugins
 					// hack fix to stop the .NET debugger from bitching.
 					bool isNested = type.IsNested;
 
-					if (!isNested)
+					if (!isNested && type != typeof(PathFollow2D))
 					{
-						//UserData.RegisterType(type);
-						GdCoreNamespace[type.Name] = type;
+						UserData.RegisterType(type);
+						GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
 					}
 				}
 			}
@@ -89,8 +89,8 @@ namespace Koneko.Plugins
 
 					if (!isNested)
 					{
-						//UserData.RegisterType(type, InteropAccessMode.NoReflectionAllowed);
-						GdCoreNamespace[type.Name] = type;
+						UserData.RegisterType(type);
+						GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
 					}
 				}
 			}
@@ -103,8 +103,8 @@ namespace Koneko.Plugins
 
 				if (!isNested)
 				{
-					//UserData.RegisterType(type, InteropAccessMode.NoReflectionAllowed);
-					GdCoreNamespace[type.Name] = type;
+					UserData.RegisterType(type);
+					GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
 				}
 			}
 
@@ -118,8 +118,8 @@ namespace Koneko.Plugins
 
 					if (!isNested)
 					{
-						//UserData.RegisterType(type);
-						GdCoreNamespace[type.Name] = type;
+						UserData.RegisterType(type);
+						GdCoreNamespace[type.Name] = UserData.CreateStatic(type);
 					}
 				}
 			}
@@ -187,6 +187,7 @@ namespace Koneko.Plugins
 				typeof(JavaClassWrapper),
 				typeof(GDNative),
 				typeof(GDNativeLibrary),
+				typeof(PathFollow2D)
 			};
 		}
 
