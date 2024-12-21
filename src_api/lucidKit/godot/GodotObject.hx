@@ -3,7 +3,7 @@ package lucidKit.godot;
 import lucidKit.core.*;
 
 @:native("godot.Object")
-extern class GodotObject extends NativeObject {
+extern class GodotObject extends MonoObject {
     @:native("__new")
     public function new();
 

@@ -1,6 +1,8 @@
 using Godot;
 using LucidKit.Scripting;
 using System;
+using System.IO;
+using IoPath = System.IO.Path;
 
 public class App : LuaNode
 {
@@ -10,15 +12,17 @@ public class App : LuaNode
 
 		var path = "./";
 
-		for(var i = 0; i > args.Length; i++)
+		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg == "--datapath")
+			if (arg.StartsWith("--datapath"))
 			{
-				path = args[i + 1];
+				path = arg.Replace("--datapath=", "");
 				break;
 			}
 		}
+
+		path = IoPath.GetFullPath(path);
 
 		StartFromPath(path);
 	}

@@ -1,7 +1,7 @@
 package lucidKit.core;
 
 @:native("godot.Vector3")
-extern class Vector3Native extends NativeObject {
+extern class Vector3Native extends MonoObject {
     @:native("__new")
     public function new(x : Float, y : Float, z : Float);
 
