@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/lightBlue.tres" type="Theme" id=1]
+[ext_resource path="res://assets/fonts/FiraCode-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=25]
+size = 14
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="WindowDialog" type="WindowDialog" parent="Panel"]
+visible = true
+margin_left = 765.0
+margin_top = 427.0
+margin_right = 1008.0
+margin_bottom = 582.0
+window_title = "Hello, World!"
+
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+tab_align = 0
+drag_to_rearrange_enabled = true
+
+[node name="Control" type="Control" parent="Panel/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 30.0
+margin_right = -6.0
+margin_bottom = -6.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel/TabContainer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 25 )
+text = "package;
+
+class Person {
+    var name : String;
+    var age : Int;
+    var birthday : String;
+
+    public function new(name : String, age : Int, birthday : String) {
+        this.name = name;
+        this.age = age;
+        this.birthday = birthday;
+    }
+
+    public function sayHello() {
+        Sys.println(\"Hello, \" + this.name + \"!\");
+    }
+
+    public function getAge() : Int {
+        return this.age;
+    }
+
+    public function setAge(age : Int) {
+        this.age = age;
+    }
+
+    public function getBirthday() : String {
+        return this.birthday;
+    }
+
+    public function setBirthday(birthday : String) {
+        this.birthday = birthday;
+    }
+
+    public function toString() : String {
+        return \"Person { name = \" + this.name + \", age = \" + this.age + \", birthday = \" + this.birthday + \" } \";
+    }
+}"
+highlight_current_line = true
+syntax_highlighting = true
+show_line_numbers = true
+draw_tabs = true
+draw_spaces = true
+breakpoint_gutter = true
+fold_gutter = true
+highlight_all_occurrences = true
+smooth_scrolling = true
+minimap_draw = true
+
+[node name="Control2" type="Control" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 30.0
+margin_right = -6.0
+margin_bottom = -6.0
+
+[node name="Control3" type="Control" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 30.0
+margin_right = -6.0
+margin_bottom = -6.0
