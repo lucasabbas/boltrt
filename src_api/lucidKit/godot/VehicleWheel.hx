@@ -3,23 +3,23 @@ package lucidKit.godot;
 @:native("godot.VehicleWheel")
 extern class VehicleWheel extends Spatial {
     public var brake: Float;
-    public var damping_compression: Float;
-    public var damping_relaxation: Float;
-    public var engine_force: Float;
+    public var dampingCompression: Float;
+    public var dampingRelaxation: Float;
+    public var engineForce: Float;
     public var steering: Float;
-    public var suspension_max_force: Float;
-    public var suspension_stiffness: Float;
-    public var suspension_travel: Float;
-    public var use_as_steering: Bool;
-    public var use_as_traction: Bool;
-    public var wheel_friction_slip: Float;
-    public var wheel_radius: Float;
-    public var wheel_rest_length: Float;
-    public var wheel_roll_influence: Float;
-    public function get_contact_body(): Spatial;
-    public function get_rpm(): Float;
-    public function get_skidinfo(): Float;
-    public function is_in_contact(): Bool;
+    public var suspensionMaxForce: Float;
+    public var suspensionStiffness: Float;
+    public var suspensionTravel: Float;
+    public var useAsSteering: Bool;
+    public var useAsTraction: Bool;
+    public var wheelFrictionSlip: Float;
+    public var wheelRadius: Float;
+    public var wheelRestLength: Float;
+    public var wheelRollInfluence: Float;
+    public function getContactBody(): Spatial;
+    public function getRpm(): Float;
+    public function getSkidinfo(): Float;
+    public function isInContact(): Bool;
     @:native("__new")
     public function new();
 }

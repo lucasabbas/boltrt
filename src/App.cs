@@ -15,6 +15,11 @@ public class App : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
+			if (arg.Contains(".lkproj"))
+			{
+				path = arg;
+				break;
+			}
 			if (arg.StartsWith("--datapath"))
 			{
 				path = arg.Replace("--datapath=", "");
@@ -24,6 +29,9 @@ public class App : LuaNode
 
 		path = IoPath.GetFullPath(path);
 
-		StartFromPath(path);
+		if (path.EndsWith(".lkproj"))
+			StartFromLKProject(path);
+		else
+			StartFromPath(path);
 	}
 }

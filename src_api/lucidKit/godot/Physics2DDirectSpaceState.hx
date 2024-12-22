@@ -2,13 +2,13 @@ package lucidKit.godot;
 
 @:native("godot.Physics2DDirectSpaceState")
 extern class Physics2DDirectSpaceState extends Object {
-    public function cast_motion(shape: Physics2DShapeQueryParameters): Array<Dynamic>;
-    public function collide_shape(shape: Physics2DShapeQueryParameters, max_results: Int): Array<Dynamic>;
-    public function get_rest_info(shape: Physics2DShapeQueryParameters): Map<Dynamic, Dynamic>;
-    public function intersect_point(point: GdVector2, max_results: Int, exclude: Array<Dynamic>, collision_layer: Int, collide_with_bodies: Bool, collide_with_areas: Bool): Array<Dynamic>;
-    public function intersect_point_on_canvas(point: GdVector2, canvas_instance_id: Int, max_results: Int, exclude: Array<Dynamic>, collision_layer: Int, collide_with_bodies: Bool, collide_with_areas: Bool): Array<Dynamic>;
-    public function intersect_ray(from: GdVector2, to: GdVector2, exclude: Array<Dynamic>, collision_layer: Int, collide_with_bodies: Bool, collide_with_areas: Bool): Map<Dynamic, Dynamic>;
-    public function intersect_shape(shape: Physics2DShapeQueryParameters, max_results: Int): Array<Dynamic>;
+    public function castMotion(shape: Physics2DShapeQueryParameters): Array<Dynamic>;
+    public function collideShape(shape: Physics2DShapeQueryParameters, maxResults: Int = 32): Array<Dynamic>;
+    public function getRestInfo(shape: Physics2DShapeQueryParameters): Map<Dynamic, Dynamic>;
+    public function intersectPoint(point: GdVector2, maxResults: Int = 32, exclude: Array<Dynamic>, collisionLayer: Int = 2147483647, collideWithBodies: Bool = true, collideWithAreas: Bool = false): Array<Dynamic>;
+    public function intersectPointOnCanvas(point: GdVector2, canvasInstanceId: Int, maxResults: Int = 32, exclude: Array<Dynamic>, collisionLayer: Int = 2147483647, collideWithBodies: Bool = true, collideWithAreas: Bool = false): Array<Dynamic>;
+    public function intersectRay(from: GdVector2, to: GdVector2, exclude: Array<Dynamic>, collisionLayer: Int = 2147483647, collideWithBodies: Bool = true, collideWithAreas: Bool = false): Map<Dynamic, Dynamic>;
+    public function intersectShape(shape: Physics2DShapeQueryParameters, maxResults: Int = 32): Array<Dynamic>;
     @:native("__new")
     public function new();
 }

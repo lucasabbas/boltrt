@@ -56,7 +56,7 @@ ShowUnInstDetails show
 Section "LucidKit Runtime" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File "bin\win32\lucidKit.exe"
+  File "bin\win32\lucidkit.exe"
   SetOutPath "$INSTDIR\data_LucidKit\Assemblies"
   SetOverwrite try
   File "bin\win32\data_LucidKit\Assemblies\Accessibility.dll"

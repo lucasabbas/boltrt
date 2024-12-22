@@ -3,6 +3,8 @@ using Godot;
 using LucidKit.IO;
 using LucidKit.Plugins;
 using MoonSharp.Interpreter;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace LucidKit.Scripting
 {
@@ -39,6 +41,18 @@ namespace LucidKit.Scripting
 			FileSystemIO fileSys = new FileSystemIO(ProjectSettings.GlobalizePath(path), "data://");
 			_luaEnviroment.IoCore.Register(fileSys);
 			_luaEnviroment.Start(_mainScriptPath);
+		}
+
+		public void StartFromLKProject(string filepath)
+		{
+			var filestring = System.IO.File.ReadAllText(filepath);
+			var xml = XDocument.Parse(filestring);
+			var app = xml.Element("app");
+			var title = app.Element("title").Value;
+			var mainScript = app.Element("mainScript").Value;
+			_mainScriptPath = mainScript;
+			var baseDir = filepath.GetBaseDir();
+			StartFromPath(baseDir);
 		}
 
 		private float DoubleToFloat(double d)

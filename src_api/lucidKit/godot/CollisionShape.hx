@@ -4,8 +4,8 @@ package lucidKit.godot;
 extern class CollisionShape extends Spatial {
     public var disabled: Bool;
     public var shape: Shape;
-    public function make_convex_from_brothers(): Void;
-    public function resource_changed(resource: Resource): Void;
+    public function makeConvexFromBrothers(): Void;
+    public function resourceChanged(resource: Resource): Void;
     @:native("__new")
     public function new();
 }

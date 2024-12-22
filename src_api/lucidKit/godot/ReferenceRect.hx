@@ -2,9 +2,9 @@ package lucidKit.godot;
 
 @:native("godot.ReferenceRect")
 extern class ReferenceRect extends Control {
-    public var border_color: Color;
-    public var border_width: Float;
-    public var editor_only: Bool;
+    public var borderColor: Color;
+    public var borderWidth: Float;
+    public var editorOnly: Bool;
     @:native("__new")
     public function new();
 }

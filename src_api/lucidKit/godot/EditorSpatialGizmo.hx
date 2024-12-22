@@ -2,23 +2,23 @@ package lucidKit.godot;
 
 @:native("godot.EditorSpatialGizmo")
 extern class EditorSpatialGizmo extends SpatialGizmo {
-    public function add_collision_segments(segments: PoolVector3Array): Void;
-    public function add_collision_triangles(triangles: TriangleMesh): Void;
-    public function add_handles(handles: PoolVector3Array, material: Material, billboard: Bool, secondary: Bool): Void;
-    public function add_lines(lines: PoolVector3Array, material: Material, billboard: Bool, modulate: Color): Void;
-    public function add_mesh(mesh: Mesh, billboard: Bool, skeleton: SkinReference, material: Material): Void;
-    public function add_unscaled_billboard(material: Material, default_scale: Float, modulate: Color): Void;
+    public function addCollisionSegments(segments: PoolVector3Array): Void;
+    public function addCollisionTriangles(triangles: TriangleMesh): Void;
+    public function addHandles(handles: PoolVector3Array, material: Material, billboard: Bool = false, secondary: Bool = false): Void;
+    public function addLines(lines: PoolVector3Array, material: Material, billboard: Bool = false, modulate: Color): Void;
+    public function addMesh(mesh: Mesh, billboard: Bool = false, skeleton: SkinReference, material: Material): Void;
+    public function addUnscaledBillboard(material: Material, defaultScale: Float = 1, modulate: Color): Void;
     public function clear(): Void;
-    public function commit_handle(index: Int, restore: Variant, cancel: Bool): Void;
-    public function get_handle_name(index: Int): String;
-    public function get_handle_value(index: Int): Variant;
-    public function get_plugin(): EditorSpatialGizmoPlugin;
-    public function get_spatial_node(): Spatial;
-    public function is_handle_highlighted(index: Int): Bool;
+    public function commitHandle(index: Int, restore: Variant, cancel: Bool = false): Void;
+    public function getHandleName(index: Int): String;
+    public function getHandleValue(index: Int): Variant;
+    public function getPlugin(): EditorSpatialGizmoPlugin;
+    public function getSpatialNode(): Spatial;
+    public function isHandleHighlighted(index: Int): Bool;
     public function redraw(): Void;
-    public function set_handle(index: Int, camera: Camera, point: GdVector2): Void;
-    public function set_hidden(hidden: Bool): Void;
-    public function set_spatial_node(node: Node): Void;
+    public function setHandle(index: Int, camera: Camera, point: GdVector2): Void;
+    public function setHidden(hidden: Bool): Void;
+    public function setSpatialNode(node: Node): Void;
     @:native("__new")
     public function new();
 }

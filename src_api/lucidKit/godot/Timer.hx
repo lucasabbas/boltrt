@@ -3,13 +3,13 @@ package lucidKit.godot;
 @:native("godot.Timer")
 extern class Timer extends Node {
     public var autostart: Bool;
-    public var one_shot: Bool;
+    public var oneShot: Bool;
     public var paused: Bool;
-    public var process_mode: Int;
-    public var time_left: Float;
-    public var wait_time: Float;
-    public function is_stopped(): Bool;
-    public function start(time_sec: Float): Void;
+    public var processMode: Int;
+    public var timeLeft: Float;
+    public var waitTime: Float;
+    public function isStopped(): Bool;
+    public function start(timeSec: Float = -1): Void;
     public function stop(): Void;
     @:native("__new")
     public function new();

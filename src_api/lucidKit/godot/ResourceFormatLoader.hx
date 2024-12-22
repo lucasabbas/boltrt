@@ -2,12 +2,12 @@ package lucidKit.godot;
 
 @:native("godot.ResourceFormatLoader")
 extern class ResourceFormatLoader extends Reference {
-    public function get_dependencies(path: String, add_types: String): Void;
-    public function get_recognized_extensions(): PoolStringArray;
-    public function get_resource_type(path: String): String;
-    public function handles_type(typename: String): Bool;
-    public function load(path: String, original_path: String, no_subresource_cache: Bool): Variant;
-    public function rename_dependencies(path: String, renames: String): Int;
+    public function getDependencies(path: String, addTypes: String): Void;
+    public function getRecognizedExtensions(): PoolStringArray;
+    public function getResourceType(path: String): String;
+    public function handlesType(typename: String): Bool;
+    public function load(path: String, originalPath: String, noSubresourceCache: Bool): Variant;
+    public function renameDependencies(path: String, renames: String): Int;
     @:native("__new")
     public function new();
 }

@@ -2,18 +2,18 @@ package lucidKit.godot;
 
 @:native("godot.EditorImportPlugin")
 extern class EditorImportPlugin extends ResourceImporter {
-    public function get_import_options(preset: Int): Array<Dynamic>;
-    public function get_import_order(): Int;
-    public function get_importer_name(): String;
-    public function get_option_visibility(option: String, options: Map<Dynamic, Dynamic>): Bool;
-    public function get_preset_count(): Int;
-    public function get_preset_name(preset: Int): String;
-    public function get_priority(): Float;
-    public function get_recognized_extensions(): Array<Dynamic>;
-    public function get_resource_type(): String;
-    public function get_save_extension(): String;
-    public function get_visible_name(): String;
-    public function import(source_file: String, save_path: String, options: Map<Dynamic, Dynamic>, platform_variants: Array<Dynamic>, gen_files: Array<Dynamic>): Int;
+    public function getImportOptions(preset: Int): Array<Dynamic>;
+    public function getImportOrder(): Int;
+    public function getImporterName(): String;
+    public function getOptionVisibility(option: String, options: Map<Dynamic, Dynamic>): Bool;
+    public function getPresetCount(): Int;
+    public function getPresetName(preset: Int): String;
+    public function getPriority(): Float;
+    public function getRecognizedExtensions(): Array<Dynamic>;
+    public function getResourceType(): String;
+    public function getSaveExtension(): String;
+    public function getVisibleName(): String;
+    public function import(sourceFile: String, savePath: String, options: Map<Dynamic, Dynamic>, platformVariants: Array<Dynamic>, genFiles: Array<Dynamic>): Int;
     @:native("__new")
     public function new();
 }

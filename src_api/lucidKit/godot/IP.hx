@@ -2,16 +2,16 @@ package lucidKit.godot;
 
 @:native("godot.IP")
 extern class IP extends Object {
-    public function clear_cache(hostname: String): Void;
-    public function erase_resolve_item(id: Int): Void;
-    public function get_local_addresses(): Array<Dynamic>;
-    public function get_local_interfaces(): Array<Dynamic>;
-    public function get_resolve_item_address(id: Int): String;
-    public function get_resolve_item_addresses(id: Int): Array<Dynamic>;
-    public function get_resolve_item_status(id: Int): Int;
-    public function resolve_hostname(host: String, ip_type: Int): String;
-    public function resolve_hostname_addresses(host: String, ip_type: Int): Array<Dynamic>;
-    public function resolve_hostname_queue_item(host: String, ip_type: Int): Int;
+    public function clearCache(hostname: String): Void;
+    public function eraseResolveItem(id: Int): Void;
+    public function getLocalAddresses(): Array<Dynamic>;
+    public function getLocalInterfaces(): Array<Dynamic>;
+    public function getResolveItemAddress(id: Int): String;
+    public function getResolveItemAddresses(id: Int): Array<Dynamic>;
+    public function getResolveItemStatus(id: Int): Int;
+    public function resolveHostname(host: String, ipType: Int = 3): String;
+    public function resolveHostnameAddresses(host: String, ipType: Int = 3): Array<Dynamic>;
+    public function resolveHostnameQueueItem(host: String, ipType: Int = 3): Int;
     @:native("__new")
     public function new();
 }

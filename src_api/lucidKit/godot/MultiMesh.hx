@@ -2,25 +2,25 @@ package lucidKit.godot;
 
 @:native("godot.MultiMesh")
 extern class MultiMesh extends Resource {
-    public var color_format: Int;
-    public var custom_data_format: Int;
-    public var instance_count: Int;
+    public var colorFormat: Int;
+    public var customDataFormat: Int;
+    public var instanceCount: Int;
     public var mesh: Mesh;
-    public var physics_interpolation_quality: Int;
-    public var transform_format: Int;
-    public var visible_instance_count: Int;
-    public function get_aabb(): AABB;
-    public function get_instance_color(instance: Int): Color;
-    public function get_instance_custom_data(instance: Int): Color;
-    public function get_instance_transform(instance: Int): Transform;
-    public function get_instance_transform_2d(instance: Int): Transform2D;
-    public function reset_instance_physics_interpolation(instance: Int): Void;
-    public function set_as_bulk_array(array: PoolRealArray): Void;
-    public function set_as_bulk_array_interpolated(array_current: PoolRealArray, array_previous: PoolRealArray): Void;
-    public function set_instance_color(instance: Int, color: Color): Void;
-    public function set_instance_custom_data(instance: Int, custom_data: Color): Void;
-    public function set_instance_transform(instance: Int, transform: Transform): Void;
-    public function set_instance_transform_2d(instance: Int, transform: Transform2D): Void;
+    public var physicsInterpolationQuality: Int;
+    public var transformFormat: Int;
+    public var visibleInstanceCount: Int;
+    public function getAabb(): AABB;
+    public function getInstanceColor(instance: Int): Color;
+    public function getInstanceCustomData(instance: Int): Color;
+    public function getInstanceTransform(instance: Int): Transform;
+    public function getInstanceTransform2d(instance: Int): Transform2D;
+    public function resetInstancePhysicsInterpolation(instance: Int): Void;
+    public function setAsBulkArray(array: PoolRealArray): Void;
+    public function setAsBulkArrayInterpolated(arrayCurrent: PoolRealArray, arrayPrevious: PoolRealArray): Void;
+    public function setInstanceColor(instance: Int, color: Color): Void;
+    public function setInstanceCustomData(instance: Int, customData: Color): Void;
+    public function setInstanceTransform(instance: Int, transform: Transform): Void;
+    public function setInstanceTransform2d(instance: Int, transform: Transform2D): Void;
     @:native("__new")
     public function new();
 }

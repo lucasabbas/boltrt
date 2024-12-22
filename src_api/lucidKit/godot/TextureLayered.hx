@@ -4,13 +4,13 @@ package lucidKit.godot;
 extern class TextureLayered extends Resource {
     public var data: Map<Dynamic, Dynamic>;
     public var flags: Int;
-    public function get_depth(): Int;
-    public function get_format(): Int;
-    public function get_height(): Int;
-    public function get_layer_data(layer: Int): Image;
-    public function get_width(): Int;
-    public function set_data_partial(image: Image, x_offset: Int, y_offset: Int, layer: Int, mipmap: Int): Void;
-    public function set_layer_data(image: Image, layer: Int): Void;
+    public function getDepth(): Int;
+    public function getFormat(): Int;
+    public function getHeight(): Int;
+    public function getLayerData(layer: Int): Image;
+    public function getWidth(): Int;
+    public function setDataPartial(image: Image, xOffset: Int, yOffset: Int, layer: Int, mipmap: Int = 0): Void;
+    public function setLayerData(image: Image, layer: Int): Void;
     @:native("__new")
     public function new();
 }

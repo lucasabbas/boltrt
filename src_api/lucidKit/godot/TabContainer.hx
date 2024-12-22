@@ -2,31 +2,31 @@ package lucidKit.godot;
 
 @:native("godot.TabContainer")
 extern class TabContainer extends Container {
-    public var all_tabs_in_front: Bool;
-    public var current_tab: Int;
-    public var drag_to_rearrange_enabled: Bool;
-    public var tab_align: Int;
-    public var tabs_visible: Bool;
-    public var use_hidden_tabs_for_min_size: Bool;
-    public function get_current_tab_control(): Control;
-    public function get_popup(): Popup;
-    public function get_previous_tab(): Int;
-    public function get_tab_control(tab_idx: Int): Control;
-    public function get_tab_count(): Int;
-    public function get_tab_disabled(tab_idx: Int): Bool;
-    public function get_tab_hidden(tab_idx: Int): Bool;
-    public function get_tab_icon(tab_idx: Int): Texture;
-    public function get_tab_idx_at_point(point: GdVector2): Int;
-    public function get_tab_metadata(tab_idx: Int): Variant;
-    public function get_tab_title(tab_idx: Int): String;
-    public function get_tabs_rearrange_group(): Int;
-    public function set_popup(popup: Node): Void;
-    public function set_tab_disabled(tab_idx: Int, disabled: Bool): Void;
-    public function set_tab_hidden(tab_idx: Int, hidden: Bool): Void;
-    public function set_tab_icon(tab_idx: Int, icon: Texture): Void;
-    public function set_tab_metadata(tab_idx: Int, metadata: Variant): Void;
-    public function set_tab_title(tab_idx: Int, title: String): Void;
-    public function set_tabs_rearrange_group(group_id: Int): Void;
+    public var allTabsInFront: Bool;
+    public var currentTab: Int;
+    public var dragToRearrangeEnabled: Bool;
+    public var tabAlign: Int;
+    public var tabsVisible: Bool;
+    public var useHiddenTabsForMinSize: Bool;
+    public function getCurrentTabControl(): Control;
+    public function getPopup(): Popup;
+    public function getPreviousTab(): Int;
+    public function getTabControl(tabIdx: Int): Control;
+    public function getTabCount(): Int;
+    public function getTabDisabled(tabIdx: Int): Bool;
+    public function getTabHidden(tabIdx: Int): Bool;
+    public function getTabIcon(tabIdx: Int): Texture;
+    public function getTabIdxAtPoint(point: GdVector2): Int;
+    public function getTabMetadata(tabIdx: Int): Variant;
+    public function getTabTitle(tabIdx: Int): String;
+    public function getTabsRearrangeGroup(): Int;
+    public function setPopup(popup: Node): Void;
+    public function setTabDisabled(tabIdx: Int, disabled: Bool): Void;
+    public function setTabHidden(tabIdx: Int, hidden: Bool): Void;
+    public function setTabIcon(tabIdx: Int, icon: Texture): Void;
+    public function setTabMetadata(tabIdx: Int, metadata: Variant): Void;
+    public function setTabTitle(tabIdx: Int, title: String): Void;
+    public function setTabsRearrangeGroup(groupId: Int): Void;
     @:native("__new")
     public function new();
 }

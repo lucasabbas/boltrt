@@ -2,12 +2,12 @@ package lucidKit.godot;
 
 @:native("godot.AudioStreamGeneratorPlayback")
 extern class AudioStreamGeneratorPlayback extends AudioStreamPlaybackResampled {
-    public function can_push_buffer(amount: Int): Bool;
-    public function clear_buffer(): Void;
-    public function get_frames_available(): Int;
-    public function get_skips(): Int;
-    public function push_buffer(frames: PoolVector2Array): Bool;
-    public function push_frame(frame: GdVector2): Bool;
+    public function canPushBuffer(amount: Int): Bool;
+    public function clearBuffer(): Void;
+    public function getFramesAvailable(): Int;
+    public function getSkips(): Int;
+    public function pushBuffer(frames: PoolVector2Array): Bool;
+    public function pushFrame(frame: GdVector2): Bool;
     @:native("__new")
     public function new();
 }

@@ -2,11 +2,11 @@ package lucidKit.godot;
 
 @:native("godot.EditorSelection")
 extern class EditorSelection extends Object {
-    public function add_node(node: Node): Void;
+    public function addNode(node: Node): Void;
     public function clear(): Void;
-    public function get_selected_nodes(): Array<Dynamic>;
-    public function get_transformable_selected_nodes(): Array<Dynamic>;
-    public function remove_node(node: Node): Void;
+    public function getSelectedNodes(): Array<Dynamic>;
+    public function getTransformableSelectedNodes(): Array<Dynamic>;
+    public function removeNode(node: Node): Void;
     @:native("__new")
     public function new();
 }

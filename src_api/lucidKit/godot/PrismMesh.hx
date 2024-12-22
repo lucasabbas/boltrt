@@ -2,11 +2,11 @@ package lucidKit.godot;
 
 @:native("godot.PrismMesh")
 extern class PrismMesh extends PrimitiveMesh {
-    public var left_to_right: Float;
+    public var leftToRight: Float;
     public var size: Vector3;
-    public var subdivide_depth: Int;
-    public var subdivide_height: Int;
-    public var subdivide_width: Int;
+    public var subdivideDepth: Int;
+    public var subdivideHeight: Int;
+    public var subdivideWidth: Int;
     @:native("__new")
     public function new();
 }

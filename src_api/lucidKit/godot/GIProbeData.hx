@@ -4,15 +4,15 @@ package lucidKit.godot;
 extern class GIProbeData extends Resource {
     public var bias: Float;
     public var bounds: AABB;
-    public var cell_size: Float;
+    public var cellSize: Float;
     public var compress: Bool;
-    public var dynamic_data: PoolIntArray;
-    public var dynamic_range: Int;
+    public var dynamicData: PoolIntArray;
+    public var dynamicRange: Int;
     public var energy: Float;
     public var interior: Bool;
-    public var normal_bias: Float;
+    public var normalBias: Float;
     public var propagation: Float;
-    public var to_cell_xform: Transform;
+    public var toCellXform: Transform;
     @:native("__new")
     public function new();
 }

@@ -2,30 +2,30 @@ package lucidKit.godot;
 
 @:native("godot.SoftBody")
 extern class SoftBody extends MeshInstance {
-    public var areaAngular_stiffness: Float;
-    public var collision_layer: Int;
-    public var collision_mask: Int;
-    public var damping_coefficient: Float;
-    public var drag_coefficient: Float;
-    public var linear_stiffness: Float;
-    public var parent_collision_ignore: NodePath;
-    public var physics_enabled: Bool;
-    public var pose_matching_coefficient: Float;
-    public var pressure_coefficient: Float;
-    public var ray_pickable: Bool;
-    public var simulation_precision: Int;
-    public var total_mass: Float;
-    public var volume_stiffness: Float;
-    public function add_collision_exception_with(body: Node): Void;
-    public function get_collision_exceptions(): Array<Dynamic>;
-    public function get_collision_layer_bit(bit: Int): Bool;
-    public function get_collision_mask_bit(bit: Int): Bool;
-    public function get_point_transform(point_index: Int): Vector3;
-    public function is_point_pinned(point_index: Int): Bool;
-    public function remove_collision_exception_with(body: Node): Void;
-    public function set_collision_layer_bit(bit: Int, value: Bool): Void;
-    public function set_collision_mask_bit(bit: Int, value: Bool): Void;
-    public function set_point_pinned(point_index: Int, pinned: Bool, attachment_path: NodePath): Void;
+    public var areaAngularStiffness: Float;
+    public var collisionLayer: Int;
+    public var collisionMask: Int;
+    public var dampingCoefficient: Float;
+    public var dragCoefficient: Float;
+    public var linearStiffness: Float;
+    public var parentCollisionIgnore: NodePath;
+    public var physicsEnabled: Bool;
+    public var poseMatchingCoefficient: Float;
+    public var pressureCoefficient: Float;
+    public var rayPickable: Bool;
+    public var simulationPrecision: Int;
+    public var totalMass: Float;
+    public var volumeStiffness: Float;
+    public function addCollisionExceptionWith(body: Node): Void;
+    public function getCollisionExceptions(): Array<Dynamic>;
+    public function getCollisionLayerBit(bit: Int): Bool;
+    public function getCollisionMaskBit(bit: Int): Bool;
+    public function getPointTransform(pointIndex: Int): Vector3;
+    public function isPointPinned(pointIndex: Int): Bool;
+    public function removeCollisionExceptionWith(body: Node): Void;
+    public function setCollisionLayerBit(bit: Int, value: Bool): Void;
+    public function setCollisionMaskBit(bit: Int, value: Bool): Void;
+    public function setPointPinned(pointIndex: Int, pinned: Bool, attachmentPath: NodePath): Void;
     @:native("__new")
     public function new();
 }

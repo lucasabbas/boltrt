@@ -2,14 +2,14 @@ package lucidKit.godot;
 
 @:native("godot.JavaScript")
 extern class JavaScript extends Object {
-    public function create_callback(object: Object, method: String): JavaScriptObject;
-    public function create_object(object: String): Variant;
-    public function download_buffer(buffer: PoolByteArray, name: String, mime: String): Void;
-    public function eval(code: String, use_global_execution_context: Bool): Variant;
-    public function force_fs_sync(): Void;
-    public function get_interface(interface: String): JavaScriptObject;
-    public function pwa_needs_update(): Bool;
-    public function pwa_update(): Int;
+    public function createCallback(object: Object, method: String): JavaScriptObject;
+    public function createObject(object: String): Variant;
+    public function downloadBuffer(buffer: PoolByteArray, name: String, mime: String): Void;
+    public function eval(code: String, useGlobalExecutionContext: Bool = false): Variant;
+    public function forceFsSync(): Void;
+    public function getInterface(interface: String): JavaScriptObject;
+    public function pwaNeedsUpdate(): Bool;
+    public function pwaUpdate(): Int;
     @:native("__new")
     public function new();
 }

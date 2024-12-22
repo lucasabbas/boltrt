@@ -2,15 +2,15 @@ package lucidKit.godot;
 
 @:native("godot.EditorFileSystem")
 extern class EditorFileSystem extends Node {
-    public function get_file_type(path: String): String;
-    public function get_filesystem(): EditorFileSystemDirectory;
-    public function get_filesystem_path(path: String): EditorFileSystemDirectory;
-    public function get_scanning_progress(): Float;
-    public function is_scanning(): Bool;
+    public function getFileType(path: String): String;
+    public function getFilesystem(): EditorFileSystemDirectory;
+    public function getFilesystemPath(path: String): EditorFileSystemDirectory;
+    public function getScanningProgress(): Float;
+    public function isScanning(): Bool;
     public function scan(): Void;
-    public function scan_sources(): Void;
-    public function update_file(path: String): Void;
-    public function update_script_classes(): Void;
+    public function scanSources(): Void;
+    public function updateFile(path: String): Void;
+    public function updateScriptClasses(): Void;
     @:native("__new")
     public function new();
 }

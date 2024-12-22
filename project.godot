@@ -13,6 +13,7 @@ config_version=4
 config/name="LucidKit"
 run/main_scene="res://src/App.tscn"
 config/icon="res://assets/Icon-1024.png"
+config/windows_native_icon="res://icon.ico"
 
 [gui]
 

@@ -2,10 +2,10 @@ package lucidKit.godot;
 
 @:native("godot.ResourceInteractiveLoader")
 extern class ResourceInteractiveLoader extends Reference {
-    public var no_subresource_cache: Bool;
-    public function get_resource(): Resource;
-    public function get_stage(): Int;
-    public function get_stage_count(): Int;
+    public var noSubresourceCache: Bool;
+    public function getResource(): Resource;
+    public function getStage(): Int;
+    public function getStageCount(): Int;
     public function poll(): Int;
     public function wait(): Int;
     @:native("__new")

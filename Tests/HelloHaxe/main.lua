@@ -636,9 +636,9 @@ Main.prototype.init = function(self)
     return _hx_result
   end;
   local camera = godot.Camera.__new();
-  self:get_rootNode():add_child(camera, true);
+  self:get_rootNode():addChild(camera);
   local meshInstance = godot.MeshInstance.__new();
-  self:get_rootNode():add_child(meshInstance, true);
+  self:get_rootNode():addChild(meshInstance);
   meshInstance.position = __lucidKit_godot__Vector3_Vector3_Impl_._new(0, 0, -5);
   local mesh = godot.CubeMesh.__new();
   meshInstance.mesh = mesh;

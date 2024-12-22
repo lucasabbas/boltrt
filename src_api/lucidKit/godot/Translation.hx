@@ -3,12 +3,12 @@ package lucidKit.godot;
 @:native("godot.Translation")
 extern class Translation extends Resource {
     public var locale: String;
-    public function _get_message(src_message: String): String;
-    public function add_message(src_message: String, xlated_message: String): Void;
-    public function erase_message(src_message: String): Void;
-    public function get_message(src_message: String): String;
-    public function get_message_count(): Int;
-    public function get_message_list(): PoolStringArray;
+    public function GetMessage(srcMessage: String): String;
+    public function addMessage(srcMessage: String, xlatedMessage: String): Void;
+    public function eraseMessage(srcMessage: String): Void;
+    public function getMessage(srcMessage: String): String;
+    public function getMessageCount(): Int;
+    public function getMessageList(): PoolStringArray;
     @:native("__new")
     public function new();
 }

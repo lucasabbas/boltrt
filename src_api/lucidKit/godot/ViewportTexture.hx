@@ -2,7 +2,7 @@ package lucidKit.godot;
 
 @:native("godot.ViewportTexture")
 extern class ViewportTexture extends Texture {
-    public var viewport_path: NodePath;
+    public var viewportPath: NodePath;
     @:native("__new")
     public function new();
 }

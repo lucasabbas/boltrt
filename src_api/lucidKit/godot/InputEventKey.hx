@@ -3,12 +3,12 @@ package lucidKit.godot;
 @:native("godot.InputEventKey")
 extern class InputEventKey extends InputEventWithModifiers {
     public var echo: Bool;
-    public var physical_scancode: Int;
+    public var physicalScancode: Int;
     public var pressed: Bool;
     public var scancode: Int;
     public var unicode: Int;
-    public function get_physical_scancode_with_modifiers(): Int;
-    public function get_scancode_with_modifiers(): Int;
+    public function getPhysicalScancodeWithModifiers(): Int;
+    public function getScancodeWithModifiers(): Int;
     @:native("__new")
     public function new();
 }

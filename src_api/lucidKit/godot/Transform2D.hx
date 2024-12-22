@@ -8,23 +8,23 @@ extern class Transform2D extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(from: Transform);
     @:native("__new")
-    public static function x_axis_y_axis_origin(x_axis: GdVector2, y_axis: GdVector2, origin: GdVector2): Transform2D;
+    public static function xAxisYAxisOrigin(xAxis: GdVector2, yAxis: GdVector2, origin: GdVector2): Transform2D;
     @:native("__new")
-    public static function rotation_position(rotation: Float, position: GdVector2): Transform2D;
-    public function affine_inverse(): Transform2D;
-    public function basis_xform(v: GdVector2): Vector2;
-    public function basis_xform_inv(v: GdVector2): Vector2;
+    public static function rotationPosition(rotation: Float, position: GdVector2): Transform2D;
+    public function affineInverse(): Transform2D;
+    public function basisXform(v: GdVector2): Vector2;
+    public function basisXformInv(v: GdVector2): Vector2;
     public function determinant(): Float;
-    public function get_origin(): Vector2;
-    public function get_rotation(): Float;
-    public function get_scale(): Vector2;
-    public function interpolate_with(transform: Transform2D, weight: Float): Transform2D;
+    public function getOrigin(): Vector2;
+    public function getRotation(): Float;
+    public function getScale(): Vector2;
+    public function interpolateWith(transform: Transform2D, weight: Float): Transform2D;
     public function inverse(): Transform2D;
-    public function is_equal_approx(transform: Transform2D): Bool;
+    public function isEqualApprox(transform: Transform2D): Bool;
     public function orthonormalized(): Transform2D;
     public function rotated(angle: Float): Transform2D;
     public function scaled(scale: GdVector2): Transform2D;
     public function translated(offset: GdVector2): Transform2D;
     public function xform(v: Variant): Variant;
-    public function xform_inv(v: Variant): Variant;
+    public function xformInv(v: Variant): Variant;
 }

@@ -2,30 +2,30 @@ package lucidKit.godot;
 
 @:native("godot.KinematicBody")
 extern class KinematicBody extends PhysicsBody {
-    public var axis_lock_motion_x: Bool;
-    public var axis_lock_motion_y: Bool;
-    public var axis_lock_motion_z: Bool;
-    public var collision__safe_margin: Float;
-    public var motion__sync_to_physics: Bool;
-    public var move_lock_x: Bool;
-    public var move_lock_y: Bool;
-    public var move_lock_z: Bool;
-    public var moving_platform_apply_velocity_on_leave: Int;
-    public function get_axis_lock(axis: Int): Bool;
-    public function get_floor_angle(up_direction: GdVector3): Float;
-    public function get_floor_normal(): Vector3;
-    public function get_floor_velocity(): Vector3;
-    public function get_last_slide_collision(): KinematicCollision;
-    public function get_slide_collision(slide_idx: Int): KinematicCollision;
-    public function get_slide_count(): Int;
-    public function is_on_ceiling(): Bool;
-    public function is_on_floor(): Bool;
-    public function is_on_wall(): Bool;
-    public function move_and_collide(rel_vec: GdVector3, infinite_inertia: Bool, exclude_raycast_shapes: Bool, test_only: Bool): KinematicCollision;
-    public function move_and_slide(linear_velocity: GdVector3, up_direction: GdVector3, stop_on_slope: Bool, max_slides: Int, floor_max_angle: Float, infinite_inertia: Bool): Vector3;
-    public function move_and_slide_with_snap(linear_velocity: GdVector3, snap: GdVector3, up_direction: GdVector3, stop_on_slope: Bool, max_slides: Int, floor_max_angle: Float, infinite_inertia: Bool): Vector3;
-    public function set_axis_lock(axis: Int, lock: Bool): Void;
-    public function test_move(from: Transform, rel_vec: GdVector3, infinite_inertia: Bool): Bool;
+    public var axisLockMotionX: Bool;
+    public var axisLockMotionY: Bool;
+    public var axisLockMotionZ: Bool;
+    public var collisionSafeMargin: Float;
+    public var motionSyncToPhysics: Bool;
+    public var moveLockX: Bool;
+    public var moveLockY: Bool;
+    public var moveLockZ: Bool;
+    public var movingPlatformApplyVelocityOnLeave: Int;
+    public function getAxisLock(axis: Int): Bool;
+    public function getFloorAngle(upDirection: GdVector3): Float;
+    public function getFloorNormal(): Vector3;
+    public function getFloorVelocity(): Vector3;
+    public function getLastSlideCollision(): KinematicCollision;
+    public function getSlideCollision(slideIdx: Int): KinematicCollision;
+    public function getSlideCount(): Int;
+    public function isOnCeiling(): Bool;
+    public function isOnFloor(): Bool;
+    public function isOnWall(): Bool;
+    public function moveAndCollide(relVec: GdVector3, infiniteInertia: Bool = true, excludeRaycastShapes: Bool = true, testOnly: Bool = false): KinematicCollision;
+    public function moveAndSlide(linearVelocity: GdVector3, upDirection: GdVector3, stopOnSlope: Bool = false, maxSlides: Int = 4, floorMaxAngle: Float = 0.785398, infiniteInertia: Bool = true): Vector3;
+    public function moveAndSlideWithSnap(linearVelocity: GdVector3, snap: GdVector3, upDirection: GdVector3, stopOnSlope: Bool = false, maxSlides: Int = 4, floorMaxAngle: Float = 0.785398, infiniteInertia: Bool = true): Vector3;
+    public function setAxisLock(axis: Int, lock: Bool): Void;
+    public function testMove(from: Transform, relVec: GdVector3, infiniteInertia: Bool = true): Bool;
     @:native("__new")
     public function new();
 }

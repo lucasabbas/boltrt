@@ -10,18 +10,18 @@ extern class Plane extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(a: Float, b: Float, c: Float, d: Float);
     @:native("__new")
-    public static function v1_v2_v3(v1: GdVector3, v2: GdVector3, v3: GdVector3): Plane;
+    public static function v1V2V3(v1: GdVector3, v2: GdVector3, v3: GdVector3): Plane;
     @:native("__new")
-    public static function normal_d(normal: GdVector3, d: Float): Plane;
+    public static function normalD(normal: GdVector3, d: Float): Plane;
     public function center(): Vector3;
-    public function distance_to(point: GdVector3): Float;
-    public function get_any_point(): Vector3;
-    public function has_point(point: GdVector3, epsilon: Float): Bool;
-    public function intersect_3(b: Plane, c: Plane): Vector3;
-    public function intersects_ray(from: GdVector3, dir: GdVector3): Vector3;
-    public function intersects_segment(begin: GdVector3, end: GdVector3): Vector3;
-    public function is_equal_approx(plane: Plane): Bool;
-    public function is_point_over(point: GdVector3): Bool;
+    public function distanceTo(point: GdVector3): Float;
+    public function getAnyPoint(): Vector3;
+    public function hasPoint(point: GdVector3, epsilon: Float = 1e-05): Bool;
+    public function intersect3(b: Plane, c: Plane): Vector3;
+    public function intersectsRay(from: GdVector3, dir: GdVector3): Vector3;
+    public function intersectsSegment(begin: GdVector3, end: GdVector3): Vector3;
+    public function isEqualApprox(plane: Plane): Bool;
+    public function isPointOver(point: GdVector3): Bool;
     public function normalized(): Plane;
     public function project(point: GdVector3): Vector3;
 }

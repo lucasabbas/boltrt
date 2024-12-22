@@ -56,10 +56,10 @@ class Main extends App{
         }
 
         var camera = new Camera();
-        rootNode.add_child(camera, true);
+        rootNode.addChild(camera);
 
         var meshInstance = new MeshInstance();
-        rootNode.add_child(meshInstance, true);
+        rootNode.addChild(meshInstance);
         meshInstance.position = new Vector3(0, 0, -5);
 
         var mesh = new CubeMesh();

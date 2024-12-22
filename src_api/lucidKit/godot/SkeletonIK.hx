@@ -4,17 +4,17 @@ package lucidKit.godot;
 extern class SkeletonIK extends Node {
     public var interpolation: Float;
     public var magnet: Vector3;
-    public var max_iterations: Int;
-    public var min_distance: Float;
-    public var override_tip_basis: Bool;
-    public var root_bone: String;
+    public var maxIterations: Int;
+    public var minDistance: Float;
+    public var overrideTipBasis: Bool;
+    public var rootBone: String;
     public var target: Transform;
-    public var target_node: NodePath;
-    public var tip_bone: String;
-    public var use_magnet: Bool;
-    public function get_parent_skeleton(): Skeleton;
-    public function is_running(): Bool;
-    public function start(one_time: Bool): Void;
+    public var targetNode: NodePath;
+    public var tipBone: String;
+    public var useMagnet: Bool;
+    public function getParentSkeleton(): Skeleton;
+    public function isRunning(): Bool;
+    public function start(oneTime: Bool = false): Void;
     public function stop(): Void;
     @:native("__new")
     public function new();

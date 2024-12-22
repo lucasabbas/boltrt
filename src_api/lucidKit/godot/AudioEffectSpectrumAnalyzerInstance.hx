@@ -2,7 +2,7 @@ package lucidKit.godot;
 
 @:native("godot.AudioEffectSpectrumAnalyzerInstance")
 extern class AudioEffectSpectrumAnalyzerInstance extends AudioEffectInstance {
-    public function get_magnitude_for_frequency_range(from_hz: Float, to_hz: Float, mode: Int): Vector2;
+    public function getMagnitudeForFrequencyRange(fromHz: Float, toHz: Float, mode: Int = 1): Vector2;
     @:native("__new")
     public function new();
 }

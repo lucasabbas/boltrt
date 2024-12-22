@@ -2,14 +2,14 @@ package lucidKit.godot;
 
 @:native("godot.SpringArm")
 extern class SpringArm extends Spatial {
-    public var collision_mask: Int;
+    public var collisionMask: Int;
     public var margin: Float;
     public var shape: Shape;
-    public var spring_length: Float;
-    public function add_excluded_object(RID: RID): Void;
-    public function clear_excluded_objects(): Void;
-    public function get_hit_length(): Float;
-    public function remove_excluded_object(RID: RID): Bool;
+    public var springLength: Float;
+    public function addExcludedObject(RID: RID): Void;
+    public function clearExcludedObjects(): Void;
+    public function getHitLength(): Float;
+    public function removeExcludedObject(RID: RID): Bool;
     @:native("__new")
     public function new();
 }

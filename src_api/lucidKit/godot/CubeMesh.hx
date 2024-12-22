@@ -3,9 +3,9 @@ package lucidKit.godot;
 @:native("godot.CubeMesh")
 extern class CubeMesh extends PrimitiveMesh {
     public var size: Vector3;
-    public var subdivide_depth: Int;
-    public var subdivide_height: Int;
-    public var subdivide_width: Int;
+    public var subdivideDepth: Int;
+    public var subdivideHeight: Int;
+    public var subdivideWidth: Int;
     @:native("__new")
     public function new();
 }

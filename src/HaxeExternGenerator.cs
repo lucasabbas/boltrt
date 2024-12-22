@@ -7,6 +7,8 @@ using ProjectSettings = Godot.ProjectSettings;
 using GD = Godot.GD;
 using System.Collections.Generic;
 using System.Diagnostics;
+using LucidKit.Plugins;
+using System.Globalization;
 
 class HaxeExternGenerator
 {
@@ -630,9 +632,9 @@ abstract Quat(GdQuat) from GdQuat {
                     if (isOverride){
                     }
                     //else if (isStatic)
-                        //sb.AppendLine($"    public static var {fieldName}: {MapReturnType(fieldType)};");
+                        //sb.AppendLine($"    public static var {ToCamelCase(fieldName)}: {MapReturnType(fieldType)};");
                     else 
-                        sb.AppendLine($"    public var {fieldName}: {MapReturnType(fieldType)};");
+                        sb.AppendLine($"    public var {ToCamelCase(fieldName)}: {MapReturnType(fieldType)};");
                 }
             }
         }
@@ -678,9 +680,13 @@ abstract Quat(GdQuat) from GdQuat {
             {
                 var paramName = arg.Attribute("name")?.Value;
                 var paramType = arg.Attribute("type")?.Value ?? "Dynamic";
+                var paramDefault = arg.Attribute("default")?.Value;
                 if (paramName == "default" || paramName == "class" || paramName == "var")
                     paramName = "_" + paramName;
-                return $"{paramName}: {MapType(paramType)}";
+                if (paramType == "string" || paramType == "int" || paramType == "float" || paramType == "bool")
+                    if (paramDefault != null)
+                        return $"{ToCamelCase(paramName)}: {MapType(paramType)} = {paramDefault}";
+                return $"{ToCamelCase(paramName)}: {MapType(paramType)}";
             });
 
             if (!MethodExists(methodName, className))
@@ -712,7 +718,7 @@ abstract Quat(GdQuat) from GdQuat {
                                 });
                                 methodName = string.Join("_", paramNames);
                             }
-                            sb.AppendLine($"    public static function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                            sb.AppendLine($"    public static function {ToCamelCase(methodName)}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
                         }
                         methodNames.Add(methodName);
                     }
@@ -720,7 +726,7 @@ abstract Quat(GdQuat) from GdQuat {
                     {
                         if (methodName == "to_string")
                             methodName = "toString";
-                        sb.AppendLine($"    public function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        sb.AppendLine($"    public function {ToCamelCase(methodName)}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
                         methodNames.Add(methodName);
                     }
                 }
@@ -820,5 +826,22 @@ abstract Quat(GdQuat) from GdQuat {
         }
 
         return "Dynamic";
+    }
+
+    public static string ToCamelCase(string snakeCase)
+    {
+        if (string.IsNullOrEmpty(snakeCase))
+            return snakeCase;
+
+        var parts = snakeCase.Split('_');
+        for (int i = 1; i < parts.Length; i++) // Start at 1 to skip the first part
+        {
+            if (parts[i].Length > 0)
+            {
+                parts[i] = char.ToUpper(parts[i][0], CultureInfo.InvariantCulture) + parts[i].Substring(1);
+            }
+        }
+
+        return string.Join(string.Empty, parts);
     }
 }

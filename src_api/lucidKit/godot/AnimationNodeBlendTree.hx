@@ -2,16 +2,16 @@ package lucidKit.godot;
 
 @:native("godot.AnimationNodeBlendTree")
 extern class AnimationNodeBlendTree extends AnimationRootNode {
-    public var graph_offset: Vector2;
-    public function add_node(name: String, node: AnimationNode, position: GdVector2): Void;
-    public function connect_node(input_node: String, input_index: Int, output_node: String): Void;
-    public function disconnect_node(input_node: String, input_index: Int): Void;
-    public function get_node(name: String): AnimationNode;
-    public function get_node_position(name: String): Vector2;
-    public function has_node(name: String): Bool;
-    public function remove_node(name: String): Void;
-    public function rename_node(name: String, new_name: String): Void;
-    public function set_node_position(name: String, position: GdVector2): Void;
+    public var graphOffset: Vector2;
+    public function addNode(name: String, node: AnimationNode, position: GdVector2): Void;
+    public function connectNode(inputNode: String, inputIndex: Int, outputNode: String): Void;
+    public function disconnectNode(inputNode: String, inputIndex: Int): Void;
+    public function getNode(name: String): AnimationNode;
+    public function getNodePosition(name: String): Vector2;
+    public function hasNode(name: String): Bool;
+    public function removeNode(name: String): Void;
+    public function renameNode(name: String, newName: String): Void;
+    public function setNodePosition(name: String, position: GdVector2): Void;
     @:native("__new")
     public function new();
 }

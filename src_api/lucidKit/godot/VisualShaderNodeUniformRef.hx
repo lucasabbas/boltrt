@@ -2,7 +2,7 @@ package lucidKit.godot;
 
 @:native("godot.VisualShaderNodeUniformRef")
 extern class VisualShaderNodeUniformRef extends VisualShaderNode {
-    public var uniform_name: String;
+    public var uniformName: String;
     @:native("__new")
     public function new();
 }

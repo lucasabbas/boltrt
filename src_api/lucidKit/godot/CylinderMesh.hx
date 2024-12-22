@@ -2,11 +2,11 @@ package lucidKit.godot;
 
 @:native("godot.CylinderMesh")
 extern class CylinderMesh extends PrimitiveMesh {
-    public var bottom_radius: Float;
+    public var bottomRadius: Float;
     public var height: Float;
-    public var radial_segments: Int;
+    public var radialSegments: Int;
     public var rings: Int;
-    public var top_radius: Float;
+    public var topRadius: Float;
     @:native("__new")
     public function new();
 }

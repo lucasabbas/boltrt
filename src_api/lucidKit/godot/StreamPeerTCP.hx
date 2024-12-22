@@ -2,13 +2,13 @@ package lucidKit.godot;
 
 @:native("godot.StreamPeerTCP")
 extern class StreamPeerTCP extends StreamPeer {
-    public function connect_to_host(host: String, port: Int): Int;
-    public function disconnect_from_host(): Void;
-    public function get_connected_host(): String;
-    public function get_connected_port(): Int;
-    public function get_status(): Int;
-    public function is_connected_to_host(): Bool;
-    public function set_no_delay(enabled: Bool): Void;
+    public function connectToHost(host: String, port: Int): Int;
+    public function disconnectFromHost(): Void;
+    public function getConnectedHost(): String;
+    public function getConnectedPort(): Int;
+    public function getStatus(): Int;
+    public function isConnectedToHost(): Bool;
+    public function setNoDelay(enabled: Bool): Void;
     @:native("__new")
     public function new();
 }

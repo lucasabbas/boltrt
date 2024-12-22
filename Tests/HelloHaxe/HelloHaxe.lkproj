@@ -1,0 +1,4 @@
+<app>
+    <title>HelloHaxe</title>
+    <mainScript>data://main.lua</mainScript>
+</app>

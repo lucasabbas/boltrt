@@ -3,14 +3,14 @@ package lucidKit.godot;
 @:native("godot.Texture")
 extern class Texture extends Resource {
     public var flags: Int;
-    public function draw(canvas_item: RID, position: GdVector2, modulate: Color, transpose: Bool, normal_map: Texture): Void;
-    public function draw_rect(canvas_item: RID, rect: Rect2, tile: Bool, modulate: Color, transpose: Bool, normal_map: Texture): Void;
-    public function draw_rect_region(canvas_item: RID, rect: Rect2, src_rect: Rect2, modulate: Color, transpose: Bool, normal_map: Texture, clip_uv: Bool): Void;
-    public function get_data(): Image;
-    public function get_height(): Int;
-    public function get_size(): Vector2;
-    public function get_width(): Int;
-    public function has_alpha(): Bool;
+    public function draw(canvasItem: RID, position: GdVector2, modulate: Color, transpose: Bool = false, normalMap: Texture): Void;
+    public function drawRect(canvasItem: RID, rect: Rect2, tile: Bool, modulate: Color, transpose: Bool = false, normalMap: Texture): Void;
+    public function drawRectRegion(canvasItem: RID, rect: Rect2, srcRect: Rect2, modulate: Color, transpose: Bool = false, normalMap: Texture, clipUv: Bool = true): Void;
+    public function getData(): Image;
+    public function getHeight(): Int;
+    public function getSize(): Vector2;
+    public function getWidth(): Int;
+    public function hasAlpha(): Bool;
     @:native("__new")
     public function new();
 }

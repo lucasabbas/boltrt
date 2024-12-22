@@ -2,10 +2,10 @@ package lucidKit.godot;
 
 @:native("godot.VisibilityEnabler")
 extern class VisibilityEnabler extends VisibilityNotifier {
-    public var freeze_bodies: Bool;
-    public var pause_animations: Bool;
-    public function is_enabler_enabled(enabler: Int): Bool;
-    public function set_enabler(enabler: Int, enabled: Bool): Void;
+    public var freezeBodies: Bool;
+    public var pauseAnimations: Bool;
+    public function isEnablerEnabled(enabler: Int): Bool;
+    public function setEnabler(enabler: Int, enabled: Bool): Void;
     @:native("__new")
     public function new();
 }

@@ -2,19 +2,19 @@ package lucidKit.godot;
 
 @:native("godot.StyleBox")
 extern class StyleBox extends Resource {
-    public var content_margin_bottom: Float;
-    public var content_margin_left: Float;
-    public var content_margin_right: Float;
-    public var content_margin_top: Float;
-    public function draw(canvas_item: RID, rect: Rect2): Void;
-    public function get_center_size(): Vector2;
-    public function get_current_item_drawn(): CanvasItem;
-    public function get_default_margin(margin: Int): Float;
-    public function get_margin(margin: Int): Float;
-    public function get_minimum_size(): Vector2;
-    public function get_offset(): Vector2;
-    public function set_default_margin(margin: Int, offset: Float): Void;
-    public function test_mask(point: GdVector2, rect: Rect2): Bool;
+    public var contentMarginBottom: Float;
+    public var contentMarginLeft: Float;
+    public var contentMarginRight: Float;
+    public var contentMarginTop: Float;
+    public function draw(canvasItem: RID, rect: Rect2): Void;
+    public function getCenterSize(): Vector2;
+    public function getCurrentItemDrawn(): CanvasItem;
+    public function getDefaultMargin(margin: Int): Float;
+    public function getMargin(margin: Int): Float;
+    public function getMinimumSize(): Vector2;
+    public function getOffset(): Vector2;
+    public function setDefaultMargin(margin: Int, offset: Float): Void;
+    public function testMask(point: GdVector2, rect: Rect2): Bool;
     @:native("__new")
     public function new();
 }

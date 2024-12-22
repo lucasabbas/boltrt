@@ -2,7 +2,7 @@ package lucidKit.godot;
 
 @:native("godot.AudioEffectAmplify")
 extern class AudioEffectAmplify extends AudioEffect {
-    public var volume_db: Float;
+    public var volumeDb: Float;
     @:native("__new")
     public function new();
 }

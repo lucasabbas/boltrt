@@ -2,8 +2,8 @@ package lucidKit.godot;
 
 @:native("godot.VisualShaderNodeTransformUniform")
 extern class VisualShaderNodeTransformUniform extends VisualShaderNodeUniform {
-    public var default_value: Transform;
-    public var default_value_enabled: Bool;
+    public var defaultValue: Transform;
+    public var defaultValueEnabled: Bool;
     @:native("__new")
     public function new();
 }

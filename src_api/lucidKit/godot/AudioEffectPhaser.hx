@@ -4,9 +4,9 @@ package lucidKit.godot;
 extern class AudioEffectPhaser extends AudioEffect {
     public var depth: Float;
     public var feedback: Float;
-    public var range_max_hz: Float;
-    public var range_min_hz: Float;
-    public var rate_hz: Float;
+    public var rangeMaxHz: Float;
+    public var rangeMinHz: Float;
+    public var rateHz: Float;
     @:native("__new")
     public function new();
 }

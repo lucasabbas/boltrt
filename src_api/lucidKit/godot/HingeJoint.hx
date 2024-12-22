@@ -2,20 +2,20 @@ package lucidKit.godot;
 
 @:native("godot.HingeJoint")
 extern class HingeJoint extends Joint {
-    public var angular_limit__bias: Float;
-    public var angular_limit__enable: Bool;
-    public var angular_limit__lower: Float;
-    public var angular_limit__relaxation: Float;
-    public var angular_limit__softness: Float;
-    public var angular_limit__upper: Float;
-    public var motor__enable: Bool;
-    public var motor__max_impulse: Float;
-    public var motor__target_velocity: Float;
-    public var params__bias: Float;
-    public function get_flag(flag: Int): Bool;
-    public function get_param(param: Int): Float;
-    public function set_flag(flag: Int, enabled: Bool): Void;
-    public function set_param(param: Int, value: Float): Void;
+    public var angularLimitBias: Float;
+    public var angularLimitEnable: Bool;
+    public var angularLimitLower: Float;
+    public var angularLimitRelaxation: Float;
+    public var angularLimitSoftness: Float;
+    public var angularLimitUpper: Float;
+    public var motorEnable: Bool;
+    public var motorMaxImpulse: Float;
+    public var motorTargetVelocity: Float;
+    public var paramsBias: Float;
+    public function getFlag(flag: Int): Bool;
+    public function getParam(param: Int): Float;
+    public function setFlag(flag: Int, enabled: Bool): Void;
+    public function setParam(param: Int, value: Float): Void;
     @:native("__new")
     public function new();
 }

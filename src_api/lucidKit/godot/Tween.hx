@@ -2,30 +2,30 @@ package lucidKit.godot;
 
 @:native("godot.Tween")
 extern class Tween extends Node {
-    public var playback_process_mode: Int;
-    public var playback_speed: Float;
+    public var playbackProcessMode: Int;
+    public var playbackSpeed: Float;
     public var repeat: Bool;
-    public function follow_method(object: Object, method: String, initial_val: Variant, target: Object, target_method: String, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
-    public function follow_property(object: Object, property: NodePath, initial_val: Variant, target: Object, target_property: NodePath, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
-    public function get_runtime(): Float;
-    public function interpolate_callback(object: Object, duration: Float, callback: String, arg1: Variant, arg2: Variant, arg3: Variant, arg4: Variant, arg5: Variant, arg6: Variant, arg7: Variant, arg8: Variant): Bool;
-    public function interpolate_deferred_callback(object: Object, duration: Float, callback: String, arg1: Variant, arg2: Variant, arg3: Variant, arg4: Variant, arg5: Variant, arg6: Variant, arg7: Variant, arg8: Variant): Bool;
-    public function interpolate_method(object: Object, method: String, initial_val: Variant, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
-    public function interpolate_property(object: Object, property: NodePath, initial_val: Variant, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
-    public function is_active(): Bool;
+    public function followMethod(object: Object, method: String, initialVal: Variant, target: Object, targetMethod: String, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
+    public function followProperty(object: Object, property: NodePath, initialVal: Variant, target: Object, targetProperty: NodePath, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
+    public function getRuntime(): Float;
+    public function interpolateCallback(object: Object, duration: Float, callback: String, arg1: Variant, arg2: Variant, arg3: Variant, arg4: Variant, arg5: Variant, arg6: Variant, arg7: Variant, arg8: Variant): Bool;
+    public function interpolateDeferredCallback(object: Object, duration: Float, callback: String, arg1: Variant, arg2: Variant, arg3: Variant, arg4: Variant, arg5: Variant, arg6: Variant, arg7: Variant, arg8: Variant): Bool;
+    public function interpolateMethod(object: Object, method: String, initialVal: Variant, finalVal: Variant, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
+    public function interpolateProperty(object: Object, property: NodePath, initialVal: Variant, finalVal: Variant, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
+    public function isActive(): Bool;
     public function remove(object: Object, key: String): Bool;
-    public function remove_all(): Bool;
+    public function removeAll(): Bool;
     public function reset(object: Object, key: String): Bool;
-    public function reset_all(): Bool;
+    public function resetAll(): Bool;
     public function resume(object: Object, key: String): Bool;
-    public function resume_all(): Bool;
+    public function resumeAll(): Bool;
     public function seek(time: Float): Bool;
-    public function set_active(active: Bool): Void;
+    public function setActive(active: Bool): Void;
     public function start(): Bool;
     public function stop(object: Object, key: String): Bool;
-    public function stop_all(): Bool;
-    public function targeting_method(object: Object, method: String, initial: Object, initial_method: String, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
-    public function targeting_property(object: Object, property: NodePath, initial: Object, initial_val: NodePath, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
+    public function stopAll(): Bool;
+    public function targetingMethod(object: Object, method: String, initial: Object, initialMethod: String, finalVal: Variant, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
+    public function targetingProperty(object: Object, property: NodePath, initial: Object, initialVal: NodePath, finalVal: Variant, duration: Float, transType: Int = 0, easeType: Int = 2, delay: Float = 0): Bool;
     public function tell(): Float;
     @:native("__new")
     public function new();

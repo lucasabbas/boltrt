@@ -2,20 +2,20 @@ package lucidKit.godot;
 
 @:native("godot.HTTPRequest")
 extern class HTTPRequest extends Node {
-    public var body_size_limit: Int;
-    public var download_chunk_size: Int;
-    public var download_file: String;
-    public var max_redirects: Int;
+    public var bodySizeLimit: Int;
+    public var downloadChunkSize: Int;
+    public var downloadFile: String;
+    public var maxRedirects: Int;
     public var timeout: Float;
-    public var use_threads: Bool;
-    public function cancel_request(): Void;
-    public function get_body_size(): Int;
-    public function get_downloaded_bytes(): Int;
-    public function get_http_client_status(): Int;
-    public function request(url: String, custom_headers: PoolStringArray, ssl_validate_domain: Bool, method: Int, request_data: String): Int;
-    public function request_raw(url: String, custom_headers: PoolStringArray, ssl_validate_domain: Bool, method: Int, request_data_raw: PoolByteArray): Int;
-    public function set_http_proxy(host: String, port: Int): Void;
-    public function set_https_proxy(host: String, port: Int): Void;
+    public var useThreads: Bool;
+    public function cancelRequest(): Void;
+    public function getBodySize(): Int;
+    public function getDownloadedBytes(): Int;
+    public function getHttpClientStatus(): Int;
+    public function request(url: String, customHeaders: PoolStringArray, sslValidateDomain: Bool = true, method: Int = 0, requestData: String): Int;
+    public function requestRaw(url: String, customHeaders: PoolStringArray, sslValidateDomain: Bool = true, method: Int = 0, requestDataRaw: PoolByteArray): Int;
+    public function setHttpProxy(host: String, port: Int): Void;
+    public function setHttpsProxy(host: String, port: Int): Void;
     @:native("__new")
     public function new();
 }

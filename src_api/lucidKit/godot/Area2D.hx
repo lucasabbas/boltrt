@@ -2,22 +2,22 @@ package lucidKit.godot;
 
 @:native("godot.Area2D")
 extern class Area2D extends CollisionObject2D {
-    public var angular_damp: Float;
-    public var audio_bus_name: String;
-    public var audio_bus_override: Bool;
+    public var angularDamp: Float;
+    public var audioBusName: String;
+    public var audioBusOverride: Bool;
     public var gravity: Float;
-    public var gravity_distance_scale: Float;
-    public var gravity_point: Bool;
-    public var gravity_vec: Vector2;
-    public var linear_damp: Float;
+    public var gravityDistanceScale: Float;
+    public var gravityPoint: Bool;
+    public var gravityVec: Vector2;
+    public var linearDamp: Float;
     public var monitorable: Bool;
     public var monitoring: Bool;
     public var priority: Float;
-    public var space_override: Int;
-    public function get_overlapping_areas(): Array<Dynamic>;
-    public function get_overlapping_bodies(): Array<Dynamic>;
-    public function overlaps_area(area: Node): Bool;
-    public function overlaps_body(body: Node): Bool;
+    public var spaceOverride: Int;
+    public function getOverlappingAreas(): Array<Dynamic>;
+    public function getOverlappingBodies(): Array<Dynamic>;
+    public function overlapsArea(area: Node): Bool;
+    public function overlapsBody(body: Node): Bool;
     @:native("__new")
     public function new();
 }

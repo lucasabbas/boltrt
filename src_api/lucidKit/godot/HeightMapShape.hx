@@ -2,9 +2,9 @@ package lucidKit.godot;
 
 @:native("godot.HeightMapShape")
 extern class HeightMapShape extends Shape {
-    public var map_data: PoolRealArray;
-    public var map_depth: Int;
-    public var map_width: Int;
+    public var mapData: PoolRealArray;
+    public var mapDepth: Int;
+    public var mapWidth: Int;
     @:native("__new")
     public function new();
 }

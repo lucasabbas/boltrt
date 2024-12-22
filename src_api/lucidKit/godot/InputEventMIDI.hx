@@ -3,8 +3,8 @@ package lucidKit.godot;
 @:native("godot.InputEventMIDI")
 extern class InputEventMIDI extends InputEvent {
     public var channel: Int;
-    public var controller_number: Int;
-    public var controller_value: Int;
+    public var controllerNumber: Int;
+    public var controllerValue: Int;
     public var instrument: Int;
     public var message: Int;
     public var pitch: Int;

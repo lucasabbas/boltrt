@@ -3,17 +3,17 @@ package lucidKit.godot;
 @:native("godot.BakedLightmapData")
 extern class BakedLightmapData extends Resource {
     public var bounds: AABB;
-    public var cell_space_transform: Transform;
-    public var cell_subdiv: Int;
+    public var cellSpaceTransform: Transform;
+    public var cellSubdiv: Int;
     public var energy: Float;
     public var interior: Bool;
     public var octree: PoolByteArray;
-    public function add_user(path: NodePath, lightmap: Resource, lightmap_slice: Int, lightmap_uv_rect: Rect2, instance: Int): Void;
-    public function clear_data(): Void;
-    public function clear_users(): Void;
-    public function get_user_count(): Int;
-    public function get_user_lightmap(user_idx: Int): Resource;
-    public function get_user_path(user_idx: Int): NodePath;
+    public function addUser(path: NodePath, lightmap: Resource, lightmapSlice: Int, lightmapUvRect: Rect2, instance: Int): Void;
+    public function clearData(): Void;
+    public function clearUsers(): Void;
+    public function getUserCount(): Int;
+    public function getUserLightmap(userIdx: Int): Resource;
+    public function getUserPath(userIdx: Int): NodePath;
     @:native("__new")
     public function new();
 }

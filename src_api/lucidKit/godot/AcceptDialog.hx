@@ -2,15 +2,15 @@ package lucidKit.godot;
 
 @:native("godot.AcceptDialog")
 extern class AcceptDialog extends WindowDialog {
-    public var dialog_autowrap: Bool;
-    public var dialog_hide_on_ok: Bool;
-    public var dialog_text: String;
-    public function add_button(text: String, right: Bool, action: String): Button;
-    public function add_cancel(name: String): Button;
-    public function get_label(): Label;
-    public function get_ok(): Button;
-    public function register_text_enter(line_edit: Node): Void;
-    public function remove_button(button: Control): Void;
+    public var dialogAutowrap: Bool;
+    public var dialogHideOnOk: Bool;
+    public var dialogText: String;
+    public function addButton(text: String, right: Bool = false, action: String): Button;
+    public function addCancel(name: String): Button;
+    public function getLabel(): Label;
+    public function getOk(): Button;
+    public function registerTextEnter(lineEdit: Node): Void;
+    public function removeButton(button: Control): Void;
     @:native("__new")
     public function new();
 }

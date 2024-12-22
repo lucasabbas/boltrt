@@ -2,20 +2,20 @@ package lucidKit.godot;
 
 @:native("godot.VideoPlayer")
 extern class VideoPlayer extends Control {
-    public var audio_track: Int;
+    public var audioTrack: Int;
     public var autoplay: Bool;
-    public var buffering_msec: Int;
+    public var bufferingMsec: Int;
     public var bus: String;
     public var expand: Bool;
     public var loop: Bool;
     public var paused: Bool;
     public var stream: VideoStream;
-    public var stream_position: Float;
+    public var streamPosition: Float;
     public var volume: Float;
-    public var volume_db: Float;
-    public function get_stream_name(): String;
-    public function get_video_texture(): Texture;
-    public function is_playing(): Bool;
+    public var volumeDb: Float;
+    public function getStreamName(): String;
+    public function getVideoTexture(): Texture;
+    public function isPlaying(): Bool;
     public function play(): Void;
     public function stop(): Void;
     @:native("__new")

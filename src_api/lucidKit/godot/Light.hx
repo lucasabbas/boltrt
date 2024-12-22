@@ -2,22 +2,22 @@ package lucidKit.godot;
 
 @:native("godot.Light")
 extern class Light extends VisualInstance {
-    public var editor_only: Bool;
-    public var light_bake_mode: Int;
-    public var light_color: Color;
-    public var light_cull_mask: Int;
-    public var light_energy: Float;
-    public var light_indirect_energy: Float;
-    public var light_negative: Bool;
-    public var light_size: Float;
-    public var light_specular: Float;
-    public var shadow_bias: Float;
-    public var shadow_color: Color;
-    public var shadow_contact: Float;
-    public var shadow_enabled: Bool;
-    public var shadow_reverse_cull_face: Bool;
-    public function get_param(param: Int): Float;
-    public function set_param(param: Int, value: Float): Void;
+    public var editorOnly: Bool;
+    public var lightBakeMode: Int;
+    public var lightColor: Color;
+    public var lightCullMask: Int;
+    public var lightEnergy: Float;
+    public var lightIndirectEnergy: Float;
+    public var lightNegative: Bool;
+    public var lightSize: Float;
+    public var lightSpecular: Float;
+    public var shadowBias: Float;
+    public var shadowColor: Color;
+    public var shadowContact: Float;
+    public var shadowEnabled: Bool;
+    public var shadowReverseCullFace: Bool;
+    public function getParam(param: Int): Float;
+    public function setParam(param: Int, value: Float): Void;
     @:native("__new")
     public function new();
 }

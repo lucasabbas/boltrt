@@ -2,24 +2,24 @@ package lucidKit.godot;
 
 @:native("godot.TextureProgress")
 extern class TextureProgress extends Range {
-    public var fill_mode: Int;
-    public var nine_patch_stretch: Bool;
-    public var radial_center_offset: Vector2;
-    public var radial_fill_degrees: Float;
-    public var radial_initial_angle: Float;
-    public var stretch_margin_bottom: Int;
-    public var stretch_margin_left: Int;
-    public var stretch_margin_right: Int;
-    public var stretch_margin_top: Int;
-    public var texture_over: Texture;
-    public var texture_progress: Texture;
-    public var texture_progress_offset: Vector2;
-    public var texture_under: Texture;
-    public var tint_over: Color;
-    public var tint_progress: Color;
-    public var tint_under: Color;
-    public function get_stretch_margin(margin: Int): Int;
-    public function set_stretch_margin(margin: Int, value: Int): Void;
+    public var fillMode: Int;
+    public var ninePatchStretch: Bool;
+    public var radialCenterOffset: Vector2;
+    public var radialFillDegrees: Float;
+    public var radialInitialAngle: Float;
+    public var stretchMarginBottom: Int;
+    public var stretchMarginLeft: Int;
+    public var stretchMarginRight: Int;
+    public var stretchMarginTop: Int;
+    public var textureOver: Texture;
+    public var textureProgress: Texture;
+    public var textureProgressOffset: Vector2;
+    public var textureUnder: Texture;
+    public var tintOver: Color;
+    public var tintProgress: Color;
+    public var tintUnder: Color;
+    public function getStretchMargin(margin: Int): Int;
+    public function setStretchMargin(margin: Int, value: Int): Void;
     @:native("__new")
     public function new();
 }

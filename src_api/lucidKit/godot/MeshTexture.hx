@@ -2,8 +2,8 @@ package lucidKit.godot;
 
 @:native("godot.MeshTexture")
 extern class MeshTexture extends Texture {
-    public var base_texture: Texture;
-    public var image_size: Vector2;
+    public var baseTexture: Texture;
+    public var imageSize: Vector2;
     public var mesh: Mesh;
     @:native("__new")
     public function new();

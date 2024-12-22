@@ -4,7 +4,7 @@ package lucidKit.godot;
 extern class VisualShaderNodeTexture extends VisualShaderNode {
     public var source: Int;
     public var texture: Texture;
-    public var texture_type: Int;
+    public var textureType: Int;
     @:native("__new")
     public function new();
 }

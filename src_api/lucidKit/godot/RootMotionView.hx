@@ -2,11 +2,11 @@ package lucidKit.godot;
 
 @:native("godot.RootMotionView")
 extern class RootMotionView extends VisualInstance {
-    public var animation_path: NodePath;
-    public var cell_size: Float;
+    public var animationPath: NodePath;
+    public var cellSize: Float;
     public var color: Color;
     public var radius: Float;
-    public var zero_y: Bool;
+    public var zeroY: Bool;
     @:native("__new")
     public function new();
 }

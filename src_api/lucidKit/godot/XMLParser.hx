@@ -2,23 +2,23 @@ package lucidKit.godot;
 
 @:native("godot.XMLParser")
 extern class XMLParser extends Reference {
-    public function get_attribute_count(): Int;
-    public function get_attribute_name(idx: Int): String;
-    public function get_attribute_value(idx: Int): String;
-    public function get_current_line(): Int;
-    public function get_named_attribute_value(name: String): String;
-    public function get_named_attribute_value_safe(name: String): String;
-    public function get_node_data(): String;
-    public function get_node_name(): String;
-    public function get_node_offset(): Int;
-    public function get_node_type(): Int;
-    public function has_attribute(name: String): Bool;
-    public function is_empty(): Bool;
+    public function getAttributeCount(): Int;
+    public function getAttributeName(idx: Int): String;
+    public function getAttributeValue(idx: Int): String;
+    public function getCurrentLine(): Int;
+    public function getNamedAttributeValue(name: String): String;
+    public function getNamedAttributeValueSafe(name: String): String;
+    public function getNodeData(): String;
+    public function getNodeName(): String;
+    public function getNodeOffset(): Int;
+    public function getNodeType(): Int;
+    public function hasAttribute(name: String): Bool;
+    public function isEmpty(): Bool;
     public function open(file: String): Int;
-    public function open_buffer(buffer: PoolByteArray): Int;
+    public function openBuffer(buffer: PoolByteArray): Int;
     public function read(): Int;
     public function seek(position: Int): Int;
-    public function skip_section(): Void;
+    public function skipSection(): Void;
     @:native("__new")
     public function new();
 }

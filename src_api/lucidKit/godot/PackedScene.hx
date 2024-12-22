@@ -2,10 +2,10 @@ package lucidKit.godot;
 
 @:native("godot.PackedScene")
 extern class PackedScene extends Resource {
-    public var _bundled: Map<Dynamic, Dynamic>;
-    public function can_instance(): Bool;
-    public function get_state(): SceneState;
-    public function instance(edit_state: Int): Node;
+    public var Bundled: Map<Dynamic, Dynamic>;
+    public function canInstance(): Bool;
+    public function getState(): SceneState;
+    public function instance(editState: Int = 0): Node;
     public function pack(path: Node): Int;
     @:native("__new")
     public function new();

@@ -6,7 +6,7 @@ extern class AnimatedSprite3D extends SpriteBase3D {
     public var frame: Int;
     public var frames: SpriteFrames;
     public var playing: Bool;
-    public function is_playing(): Bool;
+    public function isPlaying(): Bool;
     public function play(anim: String): Void;
     public function stop(): Void;
     @:native("__new")
