@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RemoteTransform2D")
 extern class RemoteTransform2D extends Node2D {
@@ -8,4 +8,6 @@ extern class RemoteTransform2D extends Node2D {
     public var update_scale: Bool;
     public var use_global_coordinates: Bool;
     public function force_update_cache(): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ScriptCreateDialog")
 extern class ScriptCreateDialog extends ConfirmationDialog {
@@ -8,4 +8,6 @@ extern class ScriptCreateDialog extends ConfirmationDialog {
     public var rect_size: Vector2;
     public var window_title: String;
     public function config(inherits: String, path: String, built_in_enabled: Bool, load_enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

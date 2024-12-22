@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationPlayer")
 extern class AnimationPlayer extends Node {
@@ -36,4 +36,6 @@ extern class AnimationPlayer extends Node {
     public function seek(seconds: Float, update: Bool): Void;
     public function set_blend_time(anim_from: String, anim_to: String, sec: Float): Void;
     public function stop(reset: Bool): Void;
+    @:native("__new")
+    public function new();
 }

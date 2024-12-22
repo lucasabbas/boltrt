@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Gradient")
 extern class Gradient extends Resource {
@@ -13,4 +13,6 @@ extern class Gradient extends Resource {
     public function remove_point(point: Int): Void;
     public function set_color(point: Int, color: Color): Void;
     public function set_offset(point: Int, offset: Float): Void;
+    @:native("__new")
+    public function new();
 }

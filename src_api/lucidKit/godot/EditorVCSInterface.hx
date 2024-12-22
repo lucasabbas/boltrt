@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorVCSInterface")
 extern class EditorVCSInterface extends Object {
@@ -33,4 +33,6 @@ extern class EditorVCSInterface extends Object {
     public function create_diff_line(new_line_no: Int, old_line_no: Int, content: String, status: String): Map<Dynamic, Dynamic>;
     public function create_status_file(file_path: String, change_type: Int, area: Int): Map<Dynamic, Dynamic>;
     public function popup_error(msg: String): Void;
+    @:native("__new")
+    public function new();
 }

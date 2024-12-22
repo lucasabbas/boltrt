@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorProperty")
 extern class EditorProperty extends Container {
@@ -14,4 +14,6 @@ extern class EditorProperty extends Container {
     public function get_edited_property(): String;
     public function set_bottom_editor(editor: Control): Void;
     public function update_property(): Void;
+    @:native("__new")
+    public function new();
 }

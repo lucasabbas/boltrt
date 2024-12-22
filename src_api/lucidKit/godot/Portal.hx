@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Portal")
 extern class Portal extends Spatial {
@@ -10,4 +10,6 @@ extern class Portal extends Spatial {
     public var two_way: Bool;
     public var use_default_margin: Bool;
     public function set_point(index: Int, position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MeshDataTool")
 extern class MeshDataTool extends Reference {
@@ -40,4 +40,6 @@ extern class MeshDataTool extends Reference {
     public function set_vertex_uv(idx: Int, uv: GdVector2): Void;
     public function set_vertex_uv2(idx: Int, uv2: GdVector2): Void;
     public function set_vertex_weights(idx: Int, weights: PoolRealArray): Void;
+    @:native("__new")
+    public function new();
 }

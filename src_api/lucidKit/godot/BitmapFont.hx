@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.BitmapFont")
 extern class BitmapFont extends Font {
@@ -14,4 +14,6 @@ extern class BitmapFont extends Font {
     public function get_kerning_pair(char_a: Int, char_b: Int): Int;
     public function get_texture(idx: Int): Texture;
     public function get_texture_count(): Int;
+    @:native("__new")
+    public function new();
 }

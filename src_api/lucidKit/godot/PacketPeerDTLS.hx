@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PacketPeerDTLS")
 extern class PacketPeerDTLS extends PacketPeer {
@@ -6,4 +6,6 @@ extern class PacketPeerDTLS extends PacketPeer {
     public function disconnect_from_peer(): Void;
     public function get_status(): Int;
     public function poll(): Void;
+    @:native("__new")
+    public function new();
 }

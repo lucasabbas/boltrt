@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationObstacle2D")
 extern class NavigationObstacle2D extends Node {
@@ -7,4 +7,6 @@ extern class NavigationObstacle2D extends Node {
     public function get_navigation(): Node;
     public function get_rid(): RID;
     public function set_navigation(navigation: Node): Void;
+    @:native("__new")
+    public function new();
 }

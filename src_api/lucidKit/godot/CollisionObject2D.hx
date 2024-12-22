@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CollisionObject2D")
 extern class CollisionObject2D extends Node2D {
@@ -30,4 +30,6 @@ extern class CollisionObject2D extends Node2D {
     public function shape_owner_set_one_way_collision(owner_id: Int, enable: Bool): Void;
     public function shape_owner_set_one_way_collision_margin(owner_id: Int, margin: Float): Void;
     public function shape_owner_set_transform(owner_id: Int, transform: Transform2D): Void;
+    @:native("__new")
+    public function new();
 }

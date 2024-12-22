@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorSpatialGizmo")
 extern class EditorSpatialGizmo extends SpatialGizmo {
@@ -19,4 +19,6 @@ extern class EditorSpatialGizmo extends SpatialGizmo {
     public function set_handle(index: Int, camera: Camera, point: GdVector2): Void;
     public function set_hidden(hidden: Bool): Void;
     public function set_spatial_node(node: Node): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Marshalls")
 extern class Marshalls extends Object {
@@ -8,4 +8,6 @@ extern class Marshalls extends Object {
     public function raw_to_base64(array: PoolByteArray): String;
     public function utf8_to_base64(utf8_str: String): String;
     public function variant_to_base64(variant: Variant, full_objects: Bool): String;
+    @:native("__new")
+    public function new();
 }

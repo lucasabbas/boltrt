@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Control")
 extern class Control extends CanvasItem {
@@ -116,4 +116,6 @@ extern class Control extends CanvasItem {
     public function set_size(size: GdVector2, keep_margins: Bool): Void;
     public function show_modal(exclusive: Bool): Void;
     public function warp_mouse(to_position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

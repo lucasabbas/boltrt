@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 abstract Basis(GdBasis) from GdBasis {
-    public function new(x : GdVector3 = 0, y : GdVector3 = 0, z : GdVector3 = 0) {
+    public function new(x : GdVector3, y : GdVector3, z : GdVector3) {
         this = new GdBasis(x, y, z);
     }
 
@@ -40,7 +40,7 @@ abstract Basis(GdBasis) from GdBasis {
     }
         
     @:op([]) 
-    public function arrayWrite(n:Dynamic, value:Float) {
+    public function arrayWrite(n:Dynamic, value:GdVector3) {
         if (n == 0) this.x = value;
         else if (n == 1) this.y = value;
         else if (n == 2) this.z = value;

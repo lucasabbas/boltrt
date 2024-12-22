@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ResourceInteractiveLoader")
 extern class ResourceInteractiveLoader extends Reference {
@@ -8,4 +8,6 @@ extern class ResourceInteractiveLoader extends Reference {
     public function get_stage_count(): Int;
     public function poll(): Int;
     public function wait(): Int;
+    @:native("__new")
+    public function new();
 }

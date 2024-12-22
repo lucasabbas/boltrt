@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SpringArm")
 extern class SpringArm extends Spatial {
@@ -10,4 +10,6 @@ extern class SpringArm extends Spatial {
     public function clear_excluded_objects(): Void;
     public function get_hit_length(): Float;
     public function remove_excluded_object(RID: RID): Bool;
+    @:native("__new")
+    public function new();
 }

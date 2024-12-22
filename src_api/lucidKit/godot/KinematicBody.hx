@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.KinematicBody")
 extern class KinematicBody extends PhysicsBody {
@@ -26,4 +26,6 @@ extern class KinematicBody extends PhysicsBody {
     public function move_and_slide_with_snap(linear_velocity: GdVector3, snap: GdVector3, up_direction: GdVector3, stop_on_slope: Bool, max_slides: Int, floor_max_angle: Float, infinite_inertia: Bool): Vector3;
     public function set_axis_lock(axis: Int, lock: Bool): Void;
     public function test_move(from: Transform, rel_vec: GdVector3, infinite_inertia: Bool): Bool;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SpatialVelocityTracker")
 extern class SpatialVelocityTracker extends Reference {
@@ -6,4 +6,6 @@ extern class SpatialVelocityTracker extends Reference {
     public function get_tracked_linear_velocity(): Vector3;
     public function reset(position: GdVector3): Void;
     public function update_position(position: GdVector3): Void;
+    @:native("__new")
+    public function new();
 }

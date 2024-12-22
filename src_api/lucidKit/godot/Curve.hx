@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Curve")
 extern class Curve extends Resource {
@@ -24,4 +24,6 @@ extern class Curve extends Resource {
     public function set_point_right_mode(index: Int, mode: Int): Void;
     public function set_point_right_tangent(index: Int, tangent: Float): Void;
     public function set_point_value(index: Int, y: Float): Void;
+    @:native("__new")
+    public function new();
 }

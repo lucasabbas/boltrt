@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualShaderNodeCustom")
 extern class VisualShaderNodeCustom extends VisualShaderNode {
@@ -15,4 +15,6 @@ extern class VisualShaderNodeCustom extends VisualShaderNode {
     public function _get_output_port_type(port: Int): Int;
     public function _get_return_icon_type(): Int;
     public function _get_subcategory(): String;
+    @:native("__new")
+    public function new();
 }

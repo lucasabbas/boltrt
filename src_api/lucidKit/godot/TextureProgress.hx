@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TextureProgress")
 extern class TextureProgress extends Range {
@@ -21,4 +21,6 @@ extern class TextureProgress extends Range {
     public var tint_under: Color;
     public function get_stretch_margin(margin: Int): Int;
     public function set_stretch_margin(margin: Int, value: Int): Void;
+    @:native("__new")
+    public function new();
 }

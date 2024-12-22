@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorFeatureProfile")
 extern class EditorFeatureProfile extends Reference {
@@ -13,4 +13,6 @@ extern class EditorFeatureProfile extends Reference {
     public function set_disable_class_editor(class_name: String, disable: Bool): Void;
     public function set_disable_class_property(class_name: String, property: String, disable: Bool): Void;
     public function set_disable_feature(feature: Int, disable: Bool): Void;
+    @:native("__new")
+    public function new();
 }

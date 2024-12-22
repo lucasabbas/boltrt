@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SliderJoint")
 extern class SliderJoint extends Joint {
@@ -26,4 +26,6 @@ extern class SliderJoint extends Joint {
     public var linear_ortho/softness: Float;
     public function get_param(param: Int): Float;
     public function set_param(param: Int, value: Float): Void;
+    @:native("__new")
+    public function new();
 }

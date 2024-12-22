@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TreeItem")
 extern class TreeItem extends Object {
@@ -69,4 +69,6 @@ extern class TreeItem extends Object {
     public function set_text(column: Int, text: String): Void;
     public function set_text_align(column: Int, text_align: Int): Void;
     public function set_tooltip(column: Int, tooltip: String): Void;
+    @:native("__new")
+    public function new();
 }

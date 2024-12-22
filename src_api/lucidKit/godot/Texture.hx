@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Texture")
 extern class Texture extends Resource {
@@ -11,4 +11,6 @@ extern class Texture extends Resource {
     public function get_size(): Vector2;
     public function get_width(): Int;
     public function has_alpha(): Bool;
+    @:native("__new")
+    public function new();
 }

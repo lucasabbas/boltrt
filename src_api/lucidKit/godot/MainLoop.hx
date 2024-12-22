@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MainLoop")
 extern class MainLoop extends Object {
@@ -16,4 +16,6 @@ extern class MainLoop extends Object {
     public function input_event(event: InputEvent): Void;
     public function input_text(text: String): Void;
     public function iteration(delta: Float): Bool;
+    @:native("__new")
+    public function new();
 }

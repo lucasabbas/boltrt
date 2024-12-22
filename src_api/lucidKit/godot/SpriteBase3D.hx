@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SpriteBase3D")
 extern class SpriteBase3D extends GeometryInstance {
@@ -22,4 +22,6 @@ extern class SpriteBase3D extends GeometryInstance {
     public function get_draw_flag(flag: Int): Bool;
     public function get_item_rect(): Rect2;
     public function set_draw_flag(flag: Int, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

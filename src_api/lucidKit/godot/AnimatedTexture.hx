@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimatedTexture")
 extern class AnimatedTexture extends Texture {
@@ -12,4 +12,6 @@ extern class AnimatedTexture extends Texture {
     public function get_frame_texture(frame: Int): Texture;
     public function set_frame_delay(frame: Int, delay: Float): Void;
     public function set_frame_texture(frame: Int, texture: Texture): Void;
+    @:native("__new")
+    public function new();
 }

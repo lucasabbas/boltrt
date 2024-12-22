@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.JSONRPC")
 extern class JSONRPC extends Object {
@@ -9,4 +9,6 @@ extern class JSONRPC extends Object {
     public function process_action(action: Variant, recurse: Bool): Variant;
     public function process_string(action: String): String;
     public function set_scope(scope: String, target: Object): Void;
+    @:native("__new")
+    public function new();
 }

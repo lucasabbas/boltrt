@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualShader")
 extern class VisualShader extends Shader {
@@ -17,4 +17,6 @@ extern class VisualShader extends Shader {
     public function remove_node(type: Int, id: Int): Void;
     public function set_mode(mode: Int): Void;
     public function set_node_position(type: Int, id: Int, position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

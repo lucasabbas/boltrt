@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventMouseButton")
 extern class InputEventMouseButton extends InputEventMouse {
@@ -7,4 +7,6 @@ extern class InputEventMouseButton extends InputEventMouse {
     public var doubleclick: Bool;
     public var factor: Float;
     public var pressed: Bool;
+    @:native("__new")
+    public function new();
 }

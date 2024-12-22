@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.BakedLightmap")
 extern class BakedLightmap extends VisualInstance {
@@ -26,4 +26,6 @@ extern class BakedLightmap extends VisualInstance {
     public var use_denoiser: Bool;
     public var use_hdr: Bool;
     public function bake(from_node: Node, data_save_path: String): Int;
+    @:native("__new")
+    public function new();
 }

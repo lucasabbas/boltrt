@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Range")
 extern class Range extends Control {
@@ -15,4 +15,6 @@ extern class Range extends Control {
     public function set_value_no_signal(value: Float): Void;
     public function share(with: Node): Void;
     public function unshare(): Void;
+    @:native("__new")
+    public function new();
 }

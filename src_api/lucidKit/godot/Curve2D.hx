@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Curve2D")
 extern class Curve2D extends Resource {
@@ -21,4 +21,6 @@ extern class Curve2D extends Resource {
     public function set_point_out(idx: Int, position: GdVector2): Void;
     public function set_point_position(idx: Int, position: GdVector2): Void;
     public function tessellate(max_stages: Int, tolerance_degrees: Float): PoolVector2Array;
+    @:native("__new")
+    public function new();
 }

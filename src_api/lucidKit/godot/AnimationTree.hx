@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationTree")
 extern class AnimationTree extends Node {
@@ -10,4 +10,6 @@ extern class AnimationTree extends Node {
     public function advance(delta: Float): Void;
     public function get_root_motion_transform(): Transform;
     public function rename_parameter(old_name: String, new_name: String): Void;
+    @:native("__new")
+    public function new();
 }

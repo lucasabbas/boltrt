@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StyleBox")
 extern class StyleBox extends Resource {
@@ -15,4 +15,6 @@ extern class StyleBox extends Resource {
     public function get_offset(): Vector2;
     public function set_default_margin(margin: Int, offset: Float): Void;
     public function test_mask(point: GdVector2, rect: Rect2): Bool;
+    @:native("__new")
+    public function new();
 }

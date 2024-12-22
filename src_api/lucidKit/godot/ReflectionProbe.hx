@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ReflectionProbe")
 extern class ReflectionProbe extends VisualInstance {
@@ -14,4 +14,6 @@ extern class ReflectionProbe extends VisualInstance {
     public var max_distance: Float;
     public var origin_offset: Vector3;
     public var update_mode: Int;
+    @:native("__new")
+    public function new();
 }

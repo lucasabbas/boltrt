@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationMeshInstance")
 extern class NavigationMeshInstance extends Spatial {
@@ -9,4 +9,6 @@ extern class NavigationMeshInstance extends Spatial {
     public var travel_cost: Float;
     public function bake_navigation_mesh(on_thread: Bool): Void;
     public function get_region_rid(): RID;
+    @:native("__new")
+    public function new();
 }

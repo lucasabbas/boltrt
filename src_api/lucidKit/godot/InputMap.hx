@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputMap")
 extern class InputMap extends Object {
@@ -15,4 +15,6 @@ extern class InputMap extends Object {
     public function get_actions(): Array<Dynamic>;
     public function has_action(action: String): Bool;
     public function load_from_globals(): Void;
+    @:native("__new")
+    public function new();
 }

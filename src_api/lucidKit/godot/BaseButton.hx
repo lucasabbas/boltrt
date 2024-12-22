@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.BaseButton")
 extern class BaseButton extends Control {
@@ -18,4 +18,6 @@ extern class BaseButton extends Control {
     public function get_draw_mode(): Int;
     public function is_hovered(): Bool;
     public function set_pressed_no_signal(pressed: Bool): Void;
+    @:native("__new")
+    public function new();
 }

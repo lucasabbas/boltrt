@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MeshInstance")
 extern class MeshInstance extends GeometryInstance {
@@ -16,4 +16,6 @@ extern class MeshInstance extends GeometryInstance {
     public function is_mergeable_with(other_mesh_instance: Node, shadows_only: Bool): Bool;
     public function merge_meshes(mesh_instances: Array<Dynamic>, use_global_space: Bool, check_compatibility: Bool, shadows_only: Bool): Bool;
     public function set_surface_material(surface: Int, material: Material): Void;
+    @:native("__new")
+    public function new();
 }

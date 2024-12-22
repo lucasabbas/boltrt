@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PhysicsTestMotionResult")
 extern class PhysicsTestMotionResult extends Reference {
@@ -14,4 +14,6 @@ extern class PhysicsTestMotionResult extends Reference {
     public var collision_unsafe_fraction: Float;
     public var motion: Vector3;
     public var motion_remainder: Vector3;
+    @:native("__new")
+    public function new();
 }

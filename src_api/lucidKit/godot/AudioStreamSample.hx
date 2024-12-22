@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioStreamSample")
 extern class AudioStreamSample extends AudioStream {
@@ -10,4 +10,6 @@ extern class AudioStreamSample extends AudioStream {
     public var mix_rate: Int;
     public var stereo: Bool;
     public function save_to_wav(path: String): Int;
+    @:native("__new")
+    public function new();
 }

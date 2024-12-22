@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GraphEdit")
 extern class GraphEdit extends Control {
@@ -31,4 +31,6 @@ extern class GraphEdit extends Control {
     public function remove_valid_right_disconnect_type(type: Int): Void;
     public function set_connection_activity(from: String, from_port: Int, to: String, to_port: Int, amount: Float): Void;
     public function set_selected(node: Node): Void;
+    @:native("__new")
+    public function new();
 }

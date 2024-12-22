@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNode")
 extern class AnimationNode extends Resource {
@@ -21,4 +21,6 @@ extern class AnimationNode extends Resource {
     public function remove_input(index: Int): Void;
     public function set_filter_path(path: NodePath, enable: Bool): Void;
     public function set_parameter(name: String, value: Variant): Void;
+    @:native("__new")
+    public function new();
 }

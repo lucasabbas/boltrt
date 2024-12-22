@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StyleBoxLine")
 extern class StyleBoxLine extends StyleBox {
@@ -7,4 +7,6 @@ extern class StyleBoxLine extends StyleBox {
     public var grow_end: Float;
     public var thickness: Int;
     public var vertical: Bool;
+    @:native("__new")
+    public function new();
 }

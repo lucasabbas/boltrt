@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Input")
 extern class Input extends Object {
@@ -51,4 +51,6 @@ extern class Input extends Object {
     public function stop_joy_vibration(device: Int): Void;
     public function vibrate_handheld(duration_ms: Int): Void;
     public function warp_mouse_position(to: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

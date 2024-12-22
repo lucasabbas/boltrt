@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CanvasItem")
 extern class CanvasItem extends Node {
@@ -56,4 +56,6 @@ extern class CanvasItem extends Node {
     public function set_notify_transform(enable: Bool): Void;
     public function show(): Void;
     public function update(): Void;
+    @:native("__new")
+    public function new();
 }

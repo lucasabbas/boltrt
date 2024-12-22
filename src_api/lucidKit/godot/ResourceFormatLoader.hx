@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ResourceFormatLoader")
 extern class ResourceFormatLoader extends Reference {
@@ -8,4 +8,6 @@ extern class ResourceFormatLoader extends Reference {
     public function handles_type(typename: String): Bool;
     public function load(path: String, original_path: String, no_subresource_cache: Bool): Variant;
     public function rename_dependencies(path: String, renames: String): Int;
+    @:native("__new")
+    public function new();
 }

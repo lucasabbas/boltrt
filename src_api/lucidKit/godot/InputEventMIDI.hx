@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventMIDI")
 extern class InputEventMIDI extends InputEvent {
@@ -10,4 +10,6 @@ extern class InputEventMIDI extends InputEvent {
     public var pitch: Int;
     public var pressure: Int;
     public var velocity: Int;
+    @:native("__new")
+    public function new();
 }

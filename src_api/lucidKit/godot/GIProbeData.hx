@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GIProbeData")
 extern class GIProbeData extends Resource {
@@ -13,4 +13,6 @@ extern class GIProbeData extends Resource {
     public var normal_bias: Float;
     public var propagation: Float;
     public var to_cell_xform: Transform;
+    @:native("__new")
+    public function new();
 }

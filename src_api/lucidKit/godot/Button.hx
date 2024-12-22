@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Button")
 extern class Button extends BaseButton {
@@ -9,4 +9,6 @@ extern class Button extends BaseButton {
     public var icon: Texture;
     public var icon_align: Int;
     public var text: String;
+    @:native("__new")
+    public function new();
 }

@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Object")
-extern class Object extends lucidkit.core.MonoObject {
+extern class Object extends lucidKit.core.MonoObject {
     public function _get(property: String): Variant;
     public function _get_property_list(): Array<Dynamic>;
     public function _init(): Void;
@@ -22,7 +22,7 @@ extern class Object extends lucidkit.core.MonoObject {
     public function get_incoming_connections(): Array<Dynamic>;
     public function get_indexed(property_path: NodePath): Variant;
     public function get_instance_id(): Int;
-    public function get_meta(name: String, default: Variant): Variant;
+    public function get_meta(name: String, _default: Variant): Variant;
     public function get_meta_list(): PoolStringArray;
     public function get_method_list(): Array<Dynamic>;
     public function get_property_list(): Array<Dynamic>;
@@ -34,7 +34,7 @@ extern class Object extends lucidkit.core.MonoObject {
     public function has_signal(signal: String): Bool;
     public function has_user_signal(signal: String): Bool;
     public function is_blocking_signals(): Bool;
-    public function is_class(class: String): Bool;
+    public function is_class(_class: String): Bool;
     public function is_connected(signal: String, target: Object, method: String): Bool;
     public function is_queued_for_deletion(): Bool;
     public function notification(what: Int, reversed: Bool): Void;
@@ -47,6 +47,8 @@ extern class Object extends lucidkit.core.MonoObject {
     public function set_message_translation(enable: Bool): Void;
     public function set_meta(name: String, value: Variant): Void;
     public function set_script(script: Reference): Void;
-    public function to_string(): String;
+    public function toString(): String;
     public function tr(message: String): String;
+    @:native("__new")
+    public function new();
 }

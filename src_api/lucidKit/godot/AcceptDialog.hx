@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AcceptDialog")
 extern class AcceptDialog extends WindowDialog {
@@ -12,4 +12,6 @@ extern class AcceptDialog extends WindowDialog {
     public function get_ok(): Button;
     public function register_text_enter(line_edit: Node): Void;
     public function remove_button(button: Control): Void;
+    @:native("__new")
+    public function new();
 }

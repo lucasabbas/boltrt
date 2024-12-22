@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SceneTree")
 extern class SceneTree extends MainLoop {
@@ -43,4 +43,6 @@ extern class SceneTree extends MainLoop {
     public function set_group_flags(call_flags: Int, group: String, property: String, value: Variant): Void;
     public function set_input_as_handled(): Void;
     public function set_screen_stretch(mode: Int, aspect: Int, minsize: GdVector2, scale: Float): Void;
+    @:native("__new")
+    public function new();
 }

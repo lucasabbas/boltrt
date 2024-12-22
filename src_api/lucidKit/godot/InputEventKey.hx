@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventKey")
 extern class InputEventKey extends InputEventWithModifiers {
@@ -9,4 +9,6 @@ extern class InputEventKey extends InputEventWithModifiers {
     public var unicode: Int;
     public function get_physical_scancode_with_modifiers(): Int;
     public function get_scancode_with_modifiers(): Int;
+    @:native("__new")
+    public function new();
 }

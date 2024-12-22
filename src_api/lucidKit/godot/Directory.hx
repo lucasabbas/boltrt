@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Directory")
 extern class Directory extends Reference {
@@ -20,4 +20,6 @@ extern class Directory extends Reference {
     public function open(path: String): Int;
     public function remove(path: String): Int;
     public function rename(from: String, to: String): Int;
+    @:native("__new")
+    public function new();
 }

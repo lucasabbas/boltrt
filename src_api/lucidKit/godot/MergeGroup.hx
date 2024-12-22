@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MergeGroup")
 extern class MergeGroup extends Spatial {
@@ -9,4 +9,6 @@ extern class MergeGroup extends Spatial {
     public function merge_meshes(): Void;
     public function set_param(param: Int, value: Int): Void;
     public function set_param_enabled(param: Int, value: Bool): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SceneState")
 extern class SceneState extends Reference {
@@ -22,4 +22,6 @@ extern class SceneState extends Reference {
     public function get_node_property_value(idx: Int, prop_idx: Int): Variant;
     public function get_node_type(idx: Int): String;
     public function is_node_instance_placeholder(idx: Int): Bool;
+    @:native("__new")
+    public function new();
 }

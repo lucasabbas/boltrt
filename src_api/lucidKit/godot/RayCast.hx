@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RayCast")
 extern class RayCast extends Spatial {
@@ -23,4 +23,6 @@ extern class RayCast extends Spatial {
     public function remove_exception(node: Object): Void;
     public function remove_exception_rid(rid: RID): Void;
     public function set_collision_mask_bit(bit: Int, value: Bool): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AStar2D")
 extern class AStar2D extends Reference {
@@ -27,4 +27,6 @@ extern class AStar2D extends Reference {
     public function set_point_disabled(id: Int, disabled: Bool): Void;
     public function set_point_position(id: Int, position: GdVector2): Void;
     public function set_point_weight_scale(id: Int, weight_scale: Float): Void;
+    @:native("__new")
+    public function new();
 }

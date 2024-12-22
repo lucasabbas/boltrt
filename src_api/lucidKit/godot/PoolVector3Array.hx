@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PoolVector3Array")
-extern class PoolVector3Array extends lucidkit.core.MonoObject {
+extern class PoolVector3Array extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(from: Array<Dynamic>);
     public function append(vector3: GdVector3): Dynamic;

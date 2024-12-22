@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Viewport")
 extern class Viewport extends Node {
@@ -63,4 +63,6 @@ extern class Viewport extends Node {
     public function unhandled_input(local_event: InputEvent): Void;
     public function update_worlds(): Void;
     public function warp_mouse(to_position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

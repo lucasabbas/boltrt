@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.OptionButton")
 extern class OptionButton extends Button {
@@ -29,4 +29,6 @@ extern class OptionButton extends Button {
     public function set_item_metadata(idx: Int, metadata: Variant): Void;
     public function set_item_text(idx: Int, text: String): Void;
     public function set_item_tooltip(idx: Int, tooltip: String): Void;
+    @:native("__new")
+    public function new();
 }

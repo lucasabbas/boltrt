@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ScriptEditor")
 extern class ScriptEditor extends PanelContainer {
@@ -11,4 +11,6 @@ extern class ScriptEditor extends PanelContainer {
     public function goto_line(line_number: Int): Void;
     public function open_script_create_dialog(base_name: String, base_path: String): Void;
     public function reload_scripts(): Void;
+    @:native("__new")
+    public function new();
 }

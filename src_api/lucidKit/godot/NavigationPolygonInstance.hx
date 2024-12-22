@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationPolygonInstance")
 extern class NavigationPolygonInstance extends Node2D {
@@ -8,4 +8,6 @@ extern class NavigationPolygonInstance extends Node2D {
     public var navpoly: NavigationPolygon;
     public var travel_cost: Float;
     public function get_region_rid(): RID;
+    @:native("__new")
+    public function new();
 }

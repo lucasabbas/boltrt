@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorSettings")
 extern class EditorSettings extends Resource {
@@ -223,7 +223,7 @@ extern class EditorSettings extends Resource {
     public function add_property_info(info: Map<Dynamic, Dynamic>): Void;
     public function erase(property: String): Void;
     public function get_favorites(): PoolStringArray;
-    public function get_project_metadata(section: String, key: String, default: Variant): Variant;
+    public function get_project_metadata(section: String, key: String, _default: Variant): Variant;
     public function get_project_settings_dir(): String;
     public function get_recent_dirs(): PoolStringArray;
     public function get_setting(name: String): Variant;
@@ -236,4 +236,6 @@ extern class EditorSettings extends Resource {
     public function set_project_metadata(section: String, key: String, data: Variant): Void;
     public function set_recent_dirs(dirs: PoolStringArray): Void;
     public function set_setting(name: String, value: Variant): Void;
+    @:native("__new")
+    public function new();
 }

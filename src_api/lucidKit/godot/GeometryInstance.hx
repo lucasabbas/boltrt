@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GeometryInstance")
 extern class GeometryInstance extends VisualInstance {
@@ -12,4 +12,6 @@ extern class GeometryInstance extends VisualInstance {
     public function get_flag(flag: Int): Bool;
     public function set_custom_aabb(aabb: AABB): Void;
     public function set_flag(flag: Int, value: Bool): Void;
+    @:native("__new")
+    public function new();
 }

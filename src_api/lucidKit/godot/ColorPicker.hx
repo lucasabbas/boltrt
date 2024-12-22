@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ColorPicker")
 extern class ColorPicker extends BoxContainer {
@@ -12,4 +12,6 @@ extern class ColorPicker extends BoxContainer {
     public function add_preset(color: Color): Void;
     public function erase_preset(color: Color): Void;
     public function get_presets(): PoolColorArray;
+    @:native("__new")
+    public function new();
 }

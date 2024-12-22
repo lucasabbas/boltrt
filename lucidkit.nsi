@@ -5,7 +5,7 @@
 !define PRODUCT_VERSION "0.1"
 !define PRODUCT_PUBLISHER "Lucas C. Abbas"
 !define PRODUCT_WEB_SITE "http://www.mycompany.com"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\lucidkit.exe"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\lucidKit.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define PRODUCT_STARTMENU_REGVAL "NSIS:StartMenuDir"
@@ -15,7 +15,7 @@
 
 ; MUI Settings
 !define MUI_ABORTWARNING
-!define MUI_ICON "assets\lucidkit_icon.ico"
+!define MUI_ICON "assets\lucidKit_icon.ico"
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
 
 ; Welcome page
@@ -35,7 +35,7 @@ var ICONS_GROUP
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page
-!define MUI_FINISHPAGE_RUN "$INSTDIR\lucidkit.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\lucidKit.exe"
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstaller pages
@@ -56,7 +56,7 @@ ShowUnInstDetails show
 Section "LucidKit Runtime" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
-  File "bin\win32\lucidkit.exe"
+  File "bin\win32\lucidKit.exe"
   SetOutPath "$INSTDIR\data_LucidKit\Assemblies"
   SetOverwrite try
   File "bin\win32\data_LucidKit\Assemblies\Accessibility.dll"
@@ -133,13 +133,13 @@ Section "LucidKit Runtime" SEC01
   File "bin\win32\data_LucidKit\Mono\etc\mono\browscap.ini"
   File "bin\win32\data_LucidKit\Mono\etc\mono\config"
   SetOutPath "$INSTDIR"
-  File "bin\win32\lucidkit.pck"
+  File "bin\win32\lucidKit.pck"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
   CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\LucidKit.lnk" "$INSTDIR\lucidkit.exe"
-  CreateShortCut "$DESKTOP\LucidKit.lnk" "$INSTDIR\lucidkit.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\LucidKit.lnk" "$INSTDIR\lucidKit.exe"
+  CreateShortCut "$DESKTOP\LucidKit.lnk" "$INSTDIR\lucidKit.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -153,10 +153,10 @@ SectionEnd
 
 Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
-  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\lucidkit.exe"
+  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\lucidKit.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\uninst.exe"
-  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\lucidkit.exe"
+  WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\lucidKit.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayVersion" "${PRODUCT_VERSION}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "URLInfoAbout" "${PRODUCT_WEB_SITE}"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "Publisher" "${PRODUCT_PUBLISHER}"
@@ -186,7 +186,7 @@ Section Uninstall
   !insertmacro MUI_STARTMENU_GETFOLDER "Application" $ICONS_GROUP
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\lucidkit.pck"
+  Delete "$INSTDIR\lucidKit.pck"
   Delete "$INSTDIR\data_LucidKit\Mono\etc\mono\config"
   Delete "$INSTDIR\data_LucidKit\Mono\etc\mono\browscap.ini"
   Delete "$INSTDIR\data_LucidKit\Mono\etc\mono\4.5\web.config"
@@ -252,7 +252,7 @@ Section Uninstall
   Delete "$INSTDIR\data_LucidKit\Assemblies\GodotSharp.pdb"
   Delete "$INSTDIR\data_LucidKit\Assemblies\GodotSharp.dll"
   Delete "$INSTDIR\data_LucidKit\Assemblies\Accessibility.dll"
-  Delete "$INSTDIR\lucidkit.exe"
+  Delete "$INSTDIR\lucidKit.exe"
 
   Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
   Delete "$SMPROGRAMS\$ICONS_GROUP\Website.lnk"

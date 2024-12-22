@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.OS")
 extern class OS extends Object {
@@ -162,4 +162,6 @@ extern class OS extends Object {
     public function tts_set_utterance_callback(event: Int, object: Object, callback: String): Void;
     public function tts_speak(text: String, voice: String, volume: Int, pitch: Float, rate: Float, utterance_id: Int, interrupt: Bool): Void;
     public function tts_stop(): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Area")
 extern class Area extends CollisionObject {
@@ -22,4 +22,6 @@ extern class Area extends CollisionObject {
     public function get_overlapping_bodies(): Array<Dynamic>;
     public function overlaps_area(area: Node): Bool;
     public function overlaps_body(body: Node): Bool;
+    @:native("__new")
+    public function new();
 }

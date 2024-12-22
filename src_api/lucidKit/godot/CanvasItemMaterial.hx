@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CanvasItemMaterial")
 extern class CanvasItemMaterial extends Material {
@@ -8,4 +8,6 @@ extern class CanvasItemMaterial extends Material {
     public var particles_anim_loop: Bool;
     public var particles_anim_v_frames: Int;
     public var particles_animation: Bool;
+    @:native("__new")
+    public function new();
 }

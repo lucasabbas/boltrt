@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Tabs")
 extern class Tabs extends Control {
@@ -30,4 +30,6 @@ extern class Tabs extends Control {
     public function set_tab_metadata(tab_idx: Int, metadata: Variant): Void;
     public function set_tab_title(tab_idx: Int, title: String): Void;
     public function set_tabs_rearrange_group(group_id: Int): Void;
+    @:native("__new")
+    public function new();
 }

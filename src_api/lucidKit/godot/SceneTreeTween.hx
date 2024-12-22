@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SceneTreeTween")
 extern class SceneTreeTween extends Reference {
@@ -25,4 +25,6 @@ extern class SceneTreeTween extends Reference {
     public function tween_interval(time: Float): IntervalTweener;
     public function tween_method(object: Object, method: String, from: Variant, to: Variant, duration: Float, binds: Array<Dynamic>): MethodTweener;
     public function tween_property(object: Object, property: NodePath, final_val: Variant, duration: Float): PropertyTweener;
+    @:native("__new")
+    public function new();
 }

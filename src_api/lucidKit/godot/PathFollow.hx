@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PathFollow")
 extern class PathFollow extends Spatial {
@@ -9,4 +9,6 @@ extern class PathFollow extends Spatial {
     public var rotation_mode: Int;
     public var unit_offset: Float;
     public var v_offset: Float;
+    @:native("__new")
+    public function new();
 }

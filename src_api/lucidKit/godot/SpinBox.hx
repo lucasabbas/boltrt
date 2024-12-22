@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SpinBox")
 extern class SpinBox extends Range {
@@ -9,4 +9,6 @@ extern class SpinBox extends Range {
     public var suffix: String;
     public function apply(): Void;
     public function get_line_edit(): LineEdit;
+    @:native("__new")
+    public function new();
 }

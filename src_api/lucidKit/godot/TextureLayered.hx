@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TextureLayered")
 extern class TextureLayered extends Resource {
@@ -11,4 +11,6 @@ extern class TextureLayered extends Resource {
     public function get_width(): Int;
     public function set_data_partial(image: Image, x_offset: Int, y_offset: Int, layer: Int, mipmap: Int): Void;
     public function set_layer_data(image: Image, layer: Int): Void;
+    @:native("__new")
+    public function new();
 }

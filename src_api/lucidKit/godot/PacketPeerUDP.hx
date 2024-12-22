@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PacketPeerUDP")
 extern class PacketPeerUDP extends PacketPeer {
@@ -14,4 +14,6 @@ extern class PacketPeerUDP extends PacketPeer {
     public function set_broadcast_enabled(enabled: Bool): Void;
     public function set_dest_address(host: String, port: Int): Int;
     public function wait(): Int;
+    @:native("__new")
+    public function new();
 }

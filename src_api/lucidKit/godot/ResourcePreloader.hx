@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ResourcePreloader")
 extern class ResourcePreloader extends Node {
@@ -8,4 +8,6 @@ extern class ResourcePreloader extends Node {
     public function has_resource(name: String): Bool;
     public function remove_resource(name: String): Void;
     public function rename_resource(name: String, newname: String): Void;
+    @:native("__new")
+    public function new();
 }

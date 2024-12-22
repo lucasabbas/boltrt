@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SphereMesh")
 extern class SphereMesh extends PrimitiveMesh {
@@ -7,4 +7,6 @@ extern class SphereMesh extends PrimitiveMesh {
     public var radial_segments: Int;
     public var radius: Float;
     public var rings: Int;
+    @:native("__new")
+    public function new();
 }

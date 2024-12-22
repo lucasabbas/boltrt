@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Rect2")
-extern class Rect2 extends lucidkit.core.MonoObject {
+extern class Rect2 extends lucidKit.core.MonoObject {
     public var end: Vector2;
     public var position: Vector2;
     public var size: Vector2;

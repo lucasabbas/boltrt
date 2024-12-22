@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CharFXTransform")
 extern class CharFXTransform extends Reference {
@@ -10,4 +10,6 @@ extern class CharFXTransform extends Reference {
     public var offset: Vector2;
     public var relative_index: Int;
     public var visible: Bool;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StaticBody")
 extern class StaticBody extends PhysicsBody {
@@ -7,4 +7,6 @@ extern class StaticBody extends PhysicsBody {
     public var constant_linear_velocity: Vector3;
     public var friction: Float;
     public var physics_material_override: PhysicsMaterial;
+    @:native("__new")
+    public function new();
 }

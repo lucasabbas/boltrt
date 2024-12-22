@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TranslationServer")
 extern class TranslationServer extends Object {
@@ -18,4 +18,6 @@ extern class TranslationServer extends Object {
     public function set_locale(locale: String): Void;
     public function standardize_locale(locale: String): String;
     public function translate(message: String): String;
+    @:native("__new")
+    public function new();
 }

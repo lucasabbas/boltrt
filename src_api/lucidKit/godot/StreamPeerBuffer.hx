@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StreamPeerBuffer")
 extern class StreamPeerBuffer extends StreamPeer {
@@ -9,4 +9,6 @@ extern class StreamPeerBuffer extends StreamPeer {
     public function get_size(): Int;
     public function resize(size: Int): Void;
     public function seek(position: Int): Void;
+    @:native("__new")
+    public function new();
 }

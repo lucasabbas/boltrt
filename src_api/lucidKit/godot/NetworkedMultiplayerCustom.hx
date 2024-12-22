@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NetworkedMultiplayerCustom")
 extern class NetworkedMultiplayerCustom extends NetworkedMultiplayerPeer {
@@ -6,4 +6,6 @@ extern class NetworkedMultiplayerCustom extends NetworkedMultiplayerPeer {
     public function initialize(self_peer_id: Int): Void;
     public function set_connection_status(connection_status: Int): Void;
     public function set_max_packet_size(max_packet_size: Int): Void;
+    @:native("__new")
+    public function new();
 }

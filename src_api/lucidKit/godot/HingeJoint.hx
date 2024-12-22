@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.HingeJoint")
 extern class HingeJoint extends Joint {
@@ -16,4 +16,6 @@ extern class HingeJoint extends Joint {
     public function get_param(param: Int): Float;
     public function set_flag(flag: Int, enabled: Bool): Void;
     public function set_param(param: Int, value: Float): Void;
+    @:native("__new")
+    public function new();
 }

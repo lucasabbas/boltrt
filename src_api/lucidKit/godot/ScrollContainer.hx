@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ScrollContainer")
 extern class ScrollContainer extends Container {
@@ -12,4 +12,6 @@ extern class ScrollContainer extends Container {
     public function ensure_control_visible(control: Control): Void;
     public function get_h_scrollbar(): HScrollBar;
     public function get_v_scrollbar(): VScrollBar;
+    @:native("__new")
+    public function new();
 }

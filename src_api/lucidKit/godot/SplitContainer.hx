@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SplitContainer")
 extern class SplitContainer extends Container {
@@ -6,4 +6,6 @@ extern class SplitContainer extends Container {
     public var dragger_visibility: Int;
     public var split_offset: Int;
     public function clamp_split_offset(): Void;
+    @:native("__new")
+    public function new();
 }

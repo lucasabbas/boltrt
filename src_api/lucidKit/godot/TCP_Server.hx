@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TCP_Server")
 extern class TCP_Server extends Reference {
@@ -7,4 +7,6 @@ extern class TCP_Server extends Reference {
     public function listen(port: Int, bind_address: String): Int;
     public function stop(): Void;
     public function take_connection(): StreamPeerTCP;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.HTTPClient")
 extern class HTTPClient extends Reference {
@@ -21,4 +21,6 @@ extern class HTTPClient extends Reference {
     public function request_raw(method: Int, url: String, headers: PoolStringArray, body: PoolByteArray): Int;
     public function set_http_proxy(host: String, port: Int): Void;
     public function set_https_proxy(host: String, port: Int): Void;
+    @:native("__new")
+    public function new();
 }

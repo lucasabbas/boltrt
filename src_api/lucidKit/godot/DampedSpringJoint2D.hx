@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.DampedSpringJoint2D")
 extern class DampedSpringJoint2D extends Joint2D {
@@ -6,4 +6,6 @@ extern class DampedSpringJoint2D extends Joint2D {
     public var length: Float;
     public var rest_length: Float;
     public var stiffness: Float;
+    @:native("__new")
+    public function new();
 }

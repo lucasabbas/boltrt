@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.DynamicFont")
 extern class DynamicFont extends Font {
@@ -20,4 +20,6 @@ extern class DynamicFont extends Font {
     public function remove_fallback(idx: Int): Void;
     public function set_fallback(idx: Int, data: DynamicFontData): Void;
     public function set_spacing(type: Int, value: Int): Void;
+    @:native("__new")
+    public function new();
 }

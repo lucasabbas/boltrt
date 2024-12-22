@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.JavaScript")
 extern class JavaScript extends Object {
@@ -10,4 +10,6 @@ extern class JavaScript extends Object {
     public function get_interface(interface: String): JavaScriptObject;
     public function pwa_needs_update(): Bool;
     public function pwa_update(): Int;
+    @:native("__new")
+    public function new();
 }

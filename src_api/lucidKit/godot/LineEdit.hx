@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.LineEdit")
 extern class LineEdit extends Control {
@@ -38,4 +38,6 @@ extern class LineEdit extends Control {
     public function menu_option(option: Int): Void;
     public function select(from: Int, to: Int): Void;
     public function select_all(): Void;
+    @:native("__new")
+    public function new();
 }

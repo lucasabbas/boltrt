@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Time")
 extern class Time extends Object {
@@ -23,4 +23,6 @@ extern class Time extends Object {
     public function get_unix_time_from_datetime_dict(datetime: Map<Dynamic, Dynamic>): Int;
     public function get_unix_time_from_datetime_string(datetime: String): Int;
     public function get_unix_time_from_system(): Float;
+    @:native("__new")
+    public function new();
 }

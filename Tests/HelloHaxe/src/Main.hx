@@ -5,7 +5,7 @@ import sys.FileSystem;
 import lucidKit.godot.Vector2;
 import lucidKit.godot.Vector3;
 import haxe.ds.Vector;
-import lucidKit.godot.GodotObject;
+import lucidKit.godot.Object;
 import lucidKit.App;
 
 class Main extends App{
@@ -44,7 +44,7 @@ class Main extends App{
         Sys.println(vec2_3.toString());
 
         try {
-            var godotObject = new GodotObject();
+            var godotObject = new Object();
             Sys.println(godotObject.toString());
         } catch(e) {
             Sys.println(e.message);

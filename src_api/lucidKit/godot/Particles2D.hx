@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Particles2D")
 extern class Particles2D extends Node2D {
@@ -20,4 +20,6 @@ extern class Particles2D extends Node2D {
     public var visibility_rect: Rect2;
     public function capture_rect(): Rect2;
     public function restart(): Void;
+    @:native("__new")
+    public function new();
 }

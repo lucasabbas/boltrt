@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Font")
 extern class Font extends Resource {
@@ -19,4 +19,6 @@ extern class Font extends Resource {
     public function has_outline(): Bool;
     public function is_distance_field_hint(): Bool;
     public function update_changes(): Void;
+    @:native("__new")
+    public function new();
 }

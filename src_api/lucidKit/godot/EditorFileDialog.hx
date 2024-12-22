@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorFileDialog")
 extern class EditorFileDialog extends ConfirmationDialog {
@@ -17,4 +17,6 @@ extern class EditorFileDialog extends ConfirmationDialog {
     public function clear_filters(): Void;
     public function get_vbox(): VBoxContainer;
     public function invalidate(): Void;
+    @:native("__new")
+    public function new();
 }

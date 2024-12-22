@@ -1,6 +1,8 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PackedDataContainerRef")
 extern class PackedDataContainerRef extends Reference {
     public function size(): Int;
+    @:native("__new")
+    public function new();
 }

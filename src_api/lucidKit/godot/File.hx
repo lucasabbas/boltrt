@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.File")
 extern class File extends Reference {
@@ -48,4 +48,6 @@ extern class File extends Reference {
     public function store_real(value: Float): Void;
     public function store_string(string: String): Void;
     public function store_var(value: Variant, full_objects: Bool): Void;
+    @:native("__new")
+    public function new();
 }

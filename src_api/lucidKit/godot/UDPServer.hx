@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.UDPServer")
 extern class UDPServer extends Reference {
@@ -9,4 +9,6 @@ extern class UDPServer extends Reference {
     public function poll(): Int;
     public function stop(): Void;
     public function take_connection(): PacketPeerUDP;
+    @:native("__new")
+    public function new();
 }

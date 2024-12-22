@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Polygon2D")
 extern class Polygon2D extends Node2D {
@@ -27,4 +27,6 @@ extern class Polygon2D extends Node2D {
     public function get_bone_weights(index: Int): PoolRealArray;
     public function set_bone_path(index: Int, path: NodePath): Void;
     public function set_bone_weights(index: Int, weights: PoolRealArray): Void;
+    @:native("__new")
+    public function new();
 }

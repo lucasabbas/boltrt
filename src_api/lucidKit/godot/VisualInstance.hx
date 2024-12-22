@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualInstance")
 extern class VisualInstance extends CullInstance {
@@ -12,4 +12,6 @@ extern class VisualInstance extends CullInstance {
     public function get_transformed_aabb(): AABB;
     public function set_base(base: RID): Void;
     public function set_layer_mask_bit(layer: Int, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

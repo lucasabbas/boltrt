@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PhysicsServer")
 extern class PhysicsServer extends Object {
@@ -117,4 +117,6 @@ extern class PhysicsServer extends Object {
     public function space_is_active(space: RID): Bool;
     public function space_set_active(space: RID, active: Bool): Void;
     public function space_set_param(space: RID, param: Int, value: Float): Void;
+    @:native("__new")
+    public function new();
 }

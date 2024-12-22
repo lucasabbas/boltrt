@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TextEdit")
 extern class TextEdit extends Control {
@@ -99,4 +99,6 @@ extern class TextEdit extends Control {
     public function undo(): Void;
     public function unfold_line(line: Int): Void;
     public function unhide_all_lines(): Void;
+    @:native("__new")
+    public function new();
 }

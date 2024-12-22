@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ArrayMesh")
 extern class ArrayMesh extends Mesh {
@@ -22,4 +22,6 @@ extern class ArrayMesh extends Mesh {
     public function surface_remove(surf_idx: Int): Void;
     public function surface_set_name(surf_idx: Int, name: String): Void;
     public function surface_update_region(surf_idx: Int, offset: Int, data: PoolByteArray): Void;
+    @:native("__new")
+    public function new();
 }

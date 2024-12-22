@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Animation")
 extern class Animation extends Resource {
@@ -64,4 +64,6 @@ extern class Animation extends Resource {
     public function value_track_get_update_mode(track_idx: Int): Int;
     public function value_track_interpolate(track_idx: Int, time_sec: Float): Variant;
     public function value_track_set_update_mode(track_idx: Int, mode: Int): Void;
+    @:native("__new")
+    public function new();
 }

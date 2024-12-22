@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ImageTexture")
 extern class ImageTexture extends Texture {
@@ -11,4 +11,6 @@ extern class ImageTexture extends Texture {
     public function load(path: String): Int;
     public function set_data(image: Image): Void;
     public function set_size_override(size: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

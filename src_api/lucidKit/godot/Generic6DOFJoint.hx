@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Generic6DOFJoint")
 extern class Generic6DOFJoint extends Joint {
@@ -98,4 +98,6 @@ extern class Generic6DOFJoint extends Joint {
     public function set_param_x(param: Int, value: Float): Void;
     public function set_param_y(param: Int, value: Float): Void;
     public function set_param_z(param: Int, value: Float): Void;
+    @:native("__new")
+    public function new();
 }

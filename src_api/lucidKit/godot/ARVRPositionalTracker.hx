@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ARVRPositionalTracker")
 extern class ARVRPositionalTracker extends Reference {
@@ -14,4 +14,6 @@ extern class ARVRPositionalTracker extends Reference {
     public function get_tracks_position(): Bool;
     public function get_transform(adjust_by_reference_frame: Bool): Transform;
     public function get_type(): Int;
+    @:native("__new")
+    public function new();
 }

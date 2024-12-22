@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RigidBody")
 extern class RigidBody extends PhysicsBody {
@@ -37,4 +37,6 @@ extern class RigidBody extends PhysicsBody {
     public function get_inverse_inertia_tensor(): Basis;
     public function set_axis_lock(axis: Int, lock: Bool): Void;
     public function set_axis_velocity(axis_velocity: GdVector3): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CubeMap")
 extern class CubeMap extends Resource {
@@ -9,4 +9,6 @@ extern class CubeMap extends Resource {
     public function get_side(side: Int): Image;
     public function get_width(): Int;
     public function set_side(side: Int, image: Image): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Tree")
 extern class Tree extends Control {
@@ -38,4 +38,6 @@ extern class Tree extends Control {
     public function set_column_min_width(column: Int, min_width: Int): Void;
     public function set_column_title(column: Int, title: String): Void;
     public function set_selected(item: Object, column: Int): Void;
+    @:native("__new")
+    public function new();
 }

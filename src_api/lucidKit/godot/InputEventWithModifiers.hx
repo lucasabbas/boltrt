@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventWithModifiers")
 extern class InputEventWithModifiers extends InputEvent {
@@ -7,4 +7,6 @@ extern class InputEventWithModifiers extends InputEvent {
     public var control: Bool;
     public var meta: Bool;
     public var shift: Bool;
+    @:native("__new")
+    public function new();
 }

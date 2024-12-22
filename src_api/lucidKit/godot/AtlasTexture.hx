@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AtlasTexture")
 extern class AtlasTexture extends Texture {
@@ -7,4 +7,6 @@ extern class AtlasTexture extends Texture {
     public var flags: Int;
     public var margin: Rect2;
     public var region: Rect2;
+    @:native("__new")
+    public function new();
 }

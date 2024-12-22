@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CameraServer")
 extern class CameraServer extends Object {
@@ -7,4 +7,6 @@ extern class CameraServer extends Object {
     public function get_feed(index: Int): CameraFeed;
     public function get_feed_count(): Int;
     public function remove_feed(feed: CameraFeed): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Timer")
 extern class Timer extends Node {
@@ -11,4 +11,6 @@ extern class Timer extends Node {
     public function is_stopped(): Bool;
     public function start(time_sec: Float): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

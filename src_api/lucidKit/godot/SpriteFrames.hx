@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SpriteFrames")
 extern class SpriteFrames extends Resource {
@@ -19,4 +19,6 @@ extern class SpriteFrames extends Resource {
     public function set_animation_loop(anim: String, loop: Bool): Void;
     public function set_animation_speed(anim: String, speed: Float): Void;
     public function set_frame(anim: String, idx: Int, txt: Texture): Void;
+    @:native("__new")
+    public function new();
 }

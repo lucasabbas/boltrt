@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorResourcePicker")
 extern class EditorResourcePicker extends HBoxContainer {
@@ -13,4 +13,6 @@ extern class EditorResourcePicker extends HBoxContainer {
     public function handle_menu_selected(id: Int): Bool;
     public function set_create_options(menu_node: Object): Void;
     public function set_toggle_pressed(pressed: Bool): Void;
+    @:native("__new")
+    public function new();
 }

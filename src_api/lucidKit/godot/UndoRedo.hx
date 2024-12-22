@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.UndoRedo")
 extern class UndoRedo extends Object {
@@ -18,4 +18,6 @@ extern class UndoRedo extends Object {
     public function is_commiting_action(): Bool;
     public function redo(): Bool;
     public function undo(): Bool;
+    @:native("__new")
+    public function new();
 }

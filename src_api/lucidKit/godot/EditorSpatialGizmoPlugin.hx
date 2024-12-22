@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorSpatialGizmoPlugin")
 extern class EditorSpatialGizmoPlugin extends Resource {
@@ -19,4 +19,6 @@ extern class EditorSpatialGizmoPlugin extends Resource {
     public function is_selectable_when_hidden(): Bool;
     public function redraw(gizmo: EditorSpatialGizmo): Void;
     public function set_handle(gizmo: EditorSpatialGizmo, index: Int, camera: Camera, point: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorPlugin")
 extern class EditorPlugin extends Node {
@@ -57,4 +57,6 @@ extern class EditorPlugin extends Node {
     public function set_state(state: Map<Dynamic, Dynamic>): Void;
     public function set_window_layout(layout: ConfigFile): Void;
     public function update_overlays(): Int;
+    @:native("__new")
+    public function new();
 }

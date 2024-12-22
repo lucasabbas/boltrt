@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 abstract Vector2(GdVector2) from GdVector2 to GdVector2 {
     public function new(x : Float = 0, y : Float = 0) {

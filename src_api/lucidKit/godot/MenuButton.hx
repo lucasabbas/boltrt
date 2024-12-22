@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MenuButton")
 extern class MenuButton extends Button {
@@ -9,4 +9,6 @@ extern class MenuButton extends Button {
     public var toggle_mode: Bool;
     public function get_popup(): PopupMenu;
     public function set_disable_shortcuts(disabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

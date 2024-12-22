@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Quat")
-extern class GdQuat extends lucidkit.core.MonoObject {
+extern class GdQuat extends lucidKit.core.MonoObject {
     public var w: Float;
     public var x: Float;
     public var y: Float;

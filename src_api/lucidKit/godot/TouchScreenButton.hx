@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TouchScreenButton")
 extern class TouchScreenButton extends Node2D {
@@ -12,4 +12,6 @@ extern class TouchScreenButton extends Node2D {
     public var shape_visible: Bool;
     public var visibility_mode: Int;
     public function is_pressed(): Bool;
+    @:native("__new")
+    public function new();
 }

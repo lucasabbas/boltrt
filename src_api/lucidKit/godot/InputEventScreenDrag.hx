@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventScreenDrag")
 extern class InputEventScreenDrag extends InputEvent {
@@ -6,4 +6,6 @@ extern class InputEventScreenDrag extends InputEvent {
     public var position: Vector2;
     public var relative: Vector2;
     public var speed: Vector2;
+    @:native("__new")
+    public function new();
 }

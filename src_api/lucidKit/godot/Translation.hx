@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Translation")
 extern class Translation extends Resource {
@@ -9,4 +9,6 @@ extern class Translation extends Resource {
     public function get_message(src_message: String): String;
     public function get_message_count(): Int;
     public function get_message_list(): PoolStringArray;
+    @:native("__new")
+    public function new();
 }

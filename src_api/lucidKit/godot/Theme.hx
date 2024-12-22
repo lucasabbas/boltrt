@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Theme")
 extern class Theme extends Resource {
@@ -58,4 +58,6 @@ extern class Theme extends Resource {
     public function set_stylebox(name: String, theme_type: String, texture: StyleBox): Void;
     public function set_theme_item(data_type: Int, name: String, theme_type: String, value: Variant): Void;
     public function set_type_variation(theme_type: String, base_type: String): Void;
+    @:native("__new")
+    public function new();
 }

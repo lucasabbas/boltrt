@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationAgent2D")
 extern class NavigationAgent2D extends Node {
@@ -27,4 +27,6 @@ extern class NavigationAgent2D extends Node {
     public function set_navigation(navigation: Node): Void;
     public function set_navigation_map(navigation_map: RID): Void;
     public function set_velocity(velocity: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

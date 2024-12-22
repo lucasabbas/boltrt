@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualShaderNode")
 extern class VisualShaderNode extends Resource {
@@ -7,4 +7,6 @@ extern class VisualShaderNode extends Resource {
     public function get_input_port_default_value(port: Int): Variant;
     public function set_default_input_values(values: Array<Dynamic>): Void;
     public function set_input_port_default_value(port: Int, value: Variant): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorImportPlugin")
 extern class EditorImportPlugin extends ResourceImporter {
@@ -14,4 +14,6 @@ extern class EditorImportPlugin extends ResourceImporter {
     public function get_save_extension(): String;
     public function get_visible_name(): String;
     public function import(source_file: String, save_path: String, options: Map<Dynamic, Dynamic>, platform_variants: Array<Dynamic>, gen_files: Array<Dynamic>): Int;
+    @:native("__new")
+    public function new();
 }

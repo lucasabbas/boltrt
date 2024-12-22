@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.XMLParser")
 extern class XMLParser extends Reference {
@@ -19,4 +19,6 @@ extern class XMLParser extends Reference {
     public function read(): Int;
     public function seek(position: Int): Int;
     public function skip_section(): Void;
+    @:native("__new")
+    public function new();
 }

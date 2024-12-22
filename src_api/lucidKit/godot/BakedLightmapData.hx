@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.BakedLightmapData")
 extern class BakedLightmapData extends Resource {
@@ -14,4 +14,6 @@ extern class BakedLightmapData extends Resource {
     public function get_user_count(): Int;
     public function get_user_lightmap(user_idx: Int): Resource;
     public function get_user_path(user_idx: Int): NodePath;
+    @:native("__new")
+    public function new();
 }

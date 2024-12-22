@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CPUParticles2D")
 extern class CPUParticles2D extends Node2D {
@@ -76,4 +76,6 @@ extern class CPUParticles2D extends Node2D {
     public function set_param_curve(param: Int, curve: Curve): Void;
     public function set_param_randomness(param: Int, randomness: Float): Void;
     public function set_particle_flag(flag: Int, enable: Bool): Void;
+    @:native("__new")
+    public function new();
 }

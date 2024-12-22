@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ARVRController")
 extern class ARVRController extends Spatial {
@@ -11,4 +11,6 @@ extern class ARVRController extends Spatial {
     public function get_joystick_id(): Int;
     public function get_mesh(): Mesh;
     public function is_button_pressed(button: Int): Int;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Mesh")
 extern class Mesh extends Resource {
@@ -14,4 +14,6 @@ extern class Mesh extends Resource {
     public function surface_get_blend_shape_arrays(surf_idx: Int): Array<Dynamic>;
     public function surface_get_material(surf_idx: Int): Material;
     public function surface_set_material(surf_idx: Int, material: Material): Void;
+    @:native("__new")
+    public function new();
 }

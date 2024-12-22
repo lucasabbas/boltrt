@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GraphNode")
 extern class GraphNode extends Container {
@@ -32,4 +32,6 @@ extern class GraphNode extends Container {
     public function set_slot_enabled_right(idx: Int, enable_right: Bool): Void;
     public function set_slot_type_left(idx: Int, type_left: Int): Void;
     public function set_slot_type_right(idx: Int, type_right: Int): Void;
+    @:native("__new")
+    public function new();
 }

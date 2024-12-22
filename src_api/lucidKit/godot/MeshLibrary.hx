@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MeshLibrary")
 extern class MeshLibrary extends Resource {
@@ -22,4 +22,6 @@ extern class MeshLibrary extends Resource {
     public function set_item_navmesh_transform(id: Int, navmesh: Transform): Void;
     public function set_item_preview(id: Int, texture: Texture): Void;
     public function set_item_shapes(id: Int, shapes: Array<Dynamic>): Void;
+    @:native("__new")
+    public function new();
 }

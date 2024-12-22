@@ -14,7 +14,7 @@ class HaxeExternGenerator
     public static void GenerateExterns()
     {
         string xmlDirectory = ProjectSettings.GlobalizePath("res://godotapi/doc/classes/");
-        string outputDir = ProjectSettings.GlobalizePath("res://src_api/lucidkit/godot/");
+        string outputDir = ProjectSettings.GlobalizePath("res://src_api/lucidKit/godot/");
 
         // Ensure the output directory exists
         Directory.CreateDirectory(outputDir);
@@ -49,7 +49,7 @@ class HaxeExternGenerator
                         className = "Gd" + className;
                     File.WriteAllText(Path.Combine(outputDir, $"{className}.hx"), haxeExtern);
                     if (className == "GdVector3"){
-            var abstr = @"package lucidkit.godot;
+            var abstr = @"package lucidKit.godot;
 
 abstract Vector3(GdVector3) from GdVector3 {
     public function new(x : Float = 0, y : Float = 0, z : Float = 0) {
@@ -174,10 +174,10 @@ abstract Vector3(GdVector3) from GdVector3 {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdBasis"){
-            var abstr = @"package lucidkit.godot;
+            var abstr = @"package lucidKit.godot;
 
 abstract Basis(GdBasis) from GdBasis {
-    public function new(x : GdVector3 = 0, y : GdVector3 = 0, z : GdVector3 = 0) {
+    public function new(x : GdVector3, y : GdVector3, z : GdVector3) {
         this = new GdBasis(x, y, z);
     }
 
@@ -216,7 +216,7 @@ abstract Basis(GdBasis) from GdBasis {
     }
         
     @:op([]) 
-    public function arrayWrite(n:Dynamic, value:Float) {
+    public function arrayWrite(n:Dynamic, value:GdVector3) {
         if (n == 0) this.x = value;
         else if (n == 1) this.y = value;
         else if (n == 2) this.z = value;
@@ -299,7 +299,7 @@ abstract Basis(GdBasis) from GdBasis {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdVector2"){
-            var abstr = @"package lucidkit.godot;
+            var abstr = @"package lucidKit.godot;
 
 abstract Vector2(GdVector2) from GdVector2 to GdVector2 {
     public function new(x : Float = 0, y : Float = 0) {
@@ -422,11 +422,11 @@ abstract Vector2(GdVector2) from GdVector2 to GdVector2 {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdQuat"){
-            var abstr = @"package lucidkit.godot;
+            var abstr = @"package lucidKit.godot;
 
-abstract Quat(GdVector3) from GdQuat {
-    public function new(x : Float = 0, y : Float = 0, z : Float = 0) {
-        this = new GdQuat(x, y, z);
+abstract Quat(GdQuat) from GdQuat {
+    public function new(x : Float = 0, y : Float = 0, z : Float = 0, w : Float = 0) {
+        this = new GdQuat(x, y, z, w);
     }
 
     @:op(a.b) 
@@ -564,13 +564,13 @@ abstract Quat(GdVector3) from GdQuat {
         var sb = new StringBuilder();
 
         // Package declaration
-        sb.AppendLine("package lucidkit.godot;");
+        sb.AppendLine("package lucidKit.godot;");
         sb.AppendLine();
 
         var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
 
         if (string.IsNullOrEmpty(inheritedClassName))
-            inheritedClassName = "lucidkit.core.MonoObject";
+            inheritedClassName = "lucidKit.core.MonoObject";
 
         var ogClassName = className;
         if (className == "Vector3" || className == "Vector2" || className == "Quat" || className == "Basis")
@@ -611,10 +611,10 @@ abstract Quat(GdVector3) from GdQuat {
     {
         var methods = doc.Descendants("method");
         var methodNames = new List<string>();
+        var className = doc.Root?.Attribute("name")?.Value;
         foreach (var method in methods)
         {
             var methodName = method.Attribute("name")?.Value;
-            var className = doc.Root?.Attribute("name")?.Value;
             var returnType = method.Element("return")?.Attribute("type")?.Value ?? "Void";
             bool firstConstructor = true;
 
@@ -647,6 +647,8 @@ abstract Quat(GdVector3) from GdQuat {
             {
                 var paramName = arg.Attribute("name")?.Value;
                 var paramType = arg.Attribute("type")?.Value ?? "Dynamic";
+                if (paramName == "default" || paramName == "class")
+                    paramName = "_" + paramName;
                 return $"{paramName}: {MapType(paramType)}";
             });
 
@@ -679,10 +681,17 @@ abstract Quat(GdVector3) from GdQuat {
                     methodNames.Add(methodName);
                 }
                 else {
+                    if (methodName == "to_string")
+                        methodName = "toString";
                     sb.AppendLine($"    public function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
                     methodNames.Add(methodName);
                 }
             }
+        }
+
+        if (!methodNames.Contains("new") && !methodNames.Contains(className)){
+            sb.AppendLine($"    @:native(\"__new\")");
+            sb.AppendLine($"    public function new();");
         }
     }
 

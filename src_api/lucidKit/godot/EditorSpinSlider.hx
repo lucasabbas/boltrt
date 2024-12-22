@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorSpinSlider")
 extern class EditorSpinSlider extends Range {
@@ -7,4 +7,6 @@ extern class EditorSpinSlider extends Range {
     public var hide_slider: Bool;
     public var label: String;
     public var read_only: Bool;
+    @:native("__new")
+    public function new();
 }

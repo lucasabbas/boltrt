@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisibilityEnabler2D")
 extern class VisibilityEnabler2D extends VisibilityNotifier2D {
@@ -10,4 +10,6 @@ extern class VisibilityEnabler2D extends VisibilityNotifier2D {
     public var process_parent: Bool;
     public function is_enabler_enabled(enabler: Int): Bool;
     public function set_enabler(enabler: Int, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

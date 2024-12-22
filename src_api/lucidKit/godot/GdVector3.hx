@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Vector3")
-extern class GdVector3 extends lucidkit.core.MonoObject {
+extern class GdVector3 extends lucidKit.core.MonoObject {
     public var x: Float;
     public var y: Float;
     public var z: Float;

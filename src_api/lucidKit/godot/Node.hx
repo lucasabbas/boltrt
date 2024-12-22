@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Node")
 extern class Node extends Object {
@@ -101,4 +101,6 @@ extern class Node extends Object {
     public function set_process_unhandled_key_input(enable: Bool): Void;
     public function set_scene_instance_load_placeholder(load_placeholder: Bool): Void;
     public function update_configuration_warning(): Void;
+    @:native("__new")
+    public function new();
 }

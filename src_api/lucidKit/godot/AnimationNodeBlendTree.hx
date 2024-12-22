@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNodeBlendTree")
 extern class AnimationNodeBlendTree extends AnimationRootNode {
@@ -12,4 +12,6 @@ extern class AnimationNodeBlendTree extends AnimationRootNode {
     public function remove_node(name: String): Void;
     public function rename_node(name: String, new_name: String): Void;
     public function set_node_position(name: String, position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

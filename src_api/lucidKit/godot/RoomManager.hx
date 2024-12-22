@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RoomManager")
 extern class RoomManager extends Spatial {
@@ -19,4 +19,6 @@ extern class RoomManager extends Spatial {
     public var use_secondary_pvs: Bool;
     public function rooms_clear(): Void;
     public function rooms_convert(): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioStreamPlayer2D")
 extern class AudioStreamPlayer2D extends Node2D {
@@ -18,4 +18,6 @@ extern class AudioStreamPlayer2D extends Node2D {
     public function play(from_position: Float): Void;
     public function seek(to_position: Float): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

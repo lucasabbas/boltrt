@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Image")
 extern class Image extends Resource {
@@ -58,4 +58,6 @@ extern class Image extends Resource {
     public function shrink_x2(): Void;
     public function srgb_to_linear(): Void;
     public function unlock(): Void;
+    @:native("__new")
+    public function new();
 }

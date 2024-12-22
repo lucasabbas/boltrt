@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ARVRInterface")
 extern class ARVRInterface extends Reference {
@@ -14,4 +14,6 @@ extern class ARVRInterface extends Reference {
     public function initialize(): Bool;
     public function is_stereo(): Bool;
     public function uninitialize(): Void;
+    @:native("__new")
+    public function new();
 }

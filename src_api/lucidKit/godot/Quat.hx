@@ -1,8 +1,8 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
-abstract Quat(GdVector3) from GdQuat {
-    public function new(x : Float = 0, y : Float = 0, z : Float = 0) {
-        this = new GdQuat(x, y, z);
+abstract Quat(GdQuat) from GdQuat {
+    public function new(x : Float = 0, y : Float = 0, z : Float = 0, w : Float = 0) {
+        this = new GdQuat(x, y, z, w);
     }
 
     @:op(a.b) 

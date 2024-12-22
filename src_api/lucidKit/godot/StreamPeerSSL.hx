@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StreamPeerSSL")
 extern class StreamPeerSSL extends StreamPeer {
@@ -8,4 +8,6 @@ extern class StreamPeerSSL extends StreamPeer {
     public function disconnect_from_stream(): Void;
     public function get_status(): Int;
     public function poll(): Void;
+    @:native("__new")
+    public function new();
 }

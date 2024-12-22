@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Label3D")
 extern class Label3D extends GeometryInstance {
@@ -26,4 +26,6 @@ extern class Label3D extends GeometryInstance {
     public function generate_triangle_mesh(): TriangleMesh;
     public function get_draw_flag(flag: Int): Bool;
     public function set_draw_flag(flag: Int, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

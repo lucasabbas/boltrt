@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NodePath")
-extern class NodePath extends lucidkit.core.MonoObject {
+extern class NodePath extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(from: String);
     public function get_as_property_path(): NodePath;

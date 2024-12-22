@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualServer")
 extern class VisualServer extends Object {
@@ -395,4 +395,6 @@ extern class VisualServer extends Object {
     public function viewport_set_use_debanding(viewport: RID, debanding: Bool): Void;
     public function viewport_set_use_fxaa(viewport: RID, fxaa: Bool): Void;
     public function viewport_set_vflip(viewport: RID, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

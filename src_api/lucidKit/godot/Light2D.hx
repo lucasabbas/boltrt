@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Light2D")
 extern class Light2D extends Node2D {
@@ -23,4 +23,6 @@ extern class Light2D extends Node2D {
     public var shadow_item_cull_mask: Int;
     public var texture: Texture;
     public var texture_scale: Float;
+    @:native("__new")
+    public function new();
 }

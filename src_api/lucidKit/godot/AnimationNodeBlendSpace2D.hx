@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNodeBlendSpace2D")
 extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
@@ -20,4 +20,6 @@ extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
     public function remove_triangle(triangle: Int): Void;
     public function set_blend_point_node(point: Int, node: AnimationRootNode): Void;
     public function set_blend_point_position(point: Int, pos: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

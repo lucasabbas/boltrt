@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.LargeTexture")
 extern class LargeTexture extends Texture {
@@ -11,4 +11,6 @@ extern class LargeTexture extends Texture {
     public function set_piece_offset(idx: Int, ofs: GdVector2): Void;
     public function set_piece_texture(idx: Int, texture: Texture): Void;
     public function set_size(size: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

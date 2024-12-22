@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEvent")
 extern class InputEvent extends Resource {
@@ -16,4 +16,6 @@ extern class InputEvent extends Resource {
     public function is_released(): Bool;
     public function shortcut_match(event: InputEvent, exact_match: Bool): Bool;
     public function xformed_by(xform: Transform2D, local_ofs: GdVector2): InputEvent;
+    @:native("__new")
+    public function new();
 }

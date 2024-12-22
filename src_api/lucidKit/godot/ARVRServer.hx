@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ARVRServer")
 extern class ARVRServer extends Object {
@@ -21,4 +21,6 @@ extern class ARVRServer extends Object {
     public function get_tracker_count(): Int;
     public function remove_interface(interface: ARVRInterface): Void;
     public function remove_tracker(tracker: ARVRPositionalTracker): Void;
+    @:native("__new")
+    public function new();
 }

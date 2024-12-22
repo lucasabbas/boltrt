@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SkeletonIK")
 extern class SkeletonIK extends Node {
@@ -16,4 +16,6 @@ extern class SkeletonIK extends Node {
     public function is_running(): Bool;
     public function start(one_time: Bool): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

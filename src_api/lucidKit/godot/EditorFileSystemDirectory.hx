@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorFileSystemDirectory")
 extern class EditorFileSystemDirectory extends Object {
@@ -16,4 +16,6 @@ extern class EditorFileSystemDirectory extends Object {
     public function get_path(): String;
     public function get_subdir(idx: Int): EditorFileSystemDirectory;
     public function get_subdir_count(): Int;
+    @:native("__new")
+    public function new();
 }

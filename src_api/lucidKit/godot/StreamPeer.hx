@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StreamPeer")
 extern class StreamPeer extends Reference {
@@ -34,4 +34,6 @@ extern class StreamPeer extends Reference {
     public function put_u8(value: Int): Void;
     public function put_utf8_string(value: String): Void;
     public function put_var(value: Variant, full_objects: Bool): Void;
+    @:native("__new")
+    public function new();
 }

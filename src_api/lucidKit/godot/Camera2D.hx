@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Camera2D")
 extern class Camera2D extends Node2D {
@@ -38,4 +38,6 @@ extern class Camera2D extends Node2D {
     public function reset_smoothing(): Void;
     public function set_drag_margin(margin: Int, drag_margin: Float): Void;
     public function set_limit(margin: Int, limit: Int): Void;
+    @:native("__new")
+    public function new();
 }

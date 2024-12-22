@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TextMesh")
 extern class TextMesh extends PrimitiveMesh {
@@ -9,4 +9,6 @@ extern class TextMesh extends PrimitiveMesh {
     public var pixel_size: Float;
     public var text: String;
     public var uppercase: Bool;
+    @:native("__new")
+    public function new();
 }

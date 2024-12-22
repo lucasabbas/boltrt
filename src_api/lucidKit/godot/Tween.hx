@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Tween")
 extern class Tween extends Node {
@@ -27,4 +27,6 @@ extern class Tween extends Node {
     public function targeting_method(object: Object, method: String, initial: Object, initial_method: String, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
     public function targeting_property(object: Object, property: NodePath, initial: Object, initial_val: NodePath, final_val: Variant, duration: Float, trans_type: Int, ease_type: Int, delay: Float): Bool;
     public function tell(): Float;
+    @:native("__new")
+    public function new();
 }

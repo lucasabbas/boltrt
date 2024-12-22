@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ShapeCast")
 extern class ShapeCast extends Spatial {
@@ -31,4 +31,6 @@ extern class ShapeCast extends Spatial {
     public function remove_exception_rid(rid: RID): Void;
     public function resource_changed(resource: Resource): Void;
     public function set_collision_mask_value(layer_number: Int, value: Bool): Void;
+    @:native("__new")
+    public function new();
 }

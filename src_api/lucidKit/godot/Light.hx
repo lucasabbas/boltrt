@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Light")
 extern class Light extends VisualInstance {
@@ -18,4 +18,6 @@ extern class Light extends VisualInstance {
     public var shadow_reverse_cull_face: Bool;
     public function get_param(param: Int): Float;
     public function set_param(param: Int, value: Float): Void;
+    @:native("__new")
+    public function new();
 }

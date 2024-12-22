@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectCapture")
 extern class AudioEffectCapture extends AudioEffect {
@@ -10,4 +10,6 @@ extern class AudioEffectCapture extends AudioEffect {
     public function get_discarded_frames(): Int;
     public function get_frames_available(): Int;
     public function get_pushed_frames(): Int;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ProceduralSky")
 extern class ProceduralSky extends Sky {
@@ -18,4 +18,6 @@ extern class ProceduralSky extends Sky {
     public var sun_latitude: Float;
     public var sun_longitude: Float;
     public var texture_size: Int;
+    @:native("__new")
+    public function new();
 }

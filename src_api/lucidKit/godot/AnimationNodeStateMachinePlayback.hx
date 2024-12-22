@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNodeStateMachinePlayback")
 extern class AnimationNodeStateMachinePlayback extends Resource {
@@ -11,4 +11,6 @@ extern class AnimationNodeStateMachinePlayback extends Resource {
     public function start(node: String): Void;
     public function stop(): Void;
     public function travel(to_node: String): Void;
+    @:native("__new")
+    public function new();
 }

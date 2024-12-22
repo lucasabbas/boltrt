@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TextureButton")
 extern class TextureButton extends BaseButton {
@@ -12,4 +12,6 @@ extern class TextureButton extends BaseButton {
     public var texture_hover: Texture;
     public var texture_normal: Texture;
     public var texture_pressed: Texture;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationPolygon")
 extern class NavigationPolygon extends Resource {
@@ -17,4 +17,6 @@ extern class NavigationPolygon extends Resource {
     public function remove_outline(idx: Int): Void;
     public function set_outline(idx: Int, outline: PoolVector2Array): Void;
     public function set_vertices(vertices: PoolVector2Array): Void;
+    @:native("__new")
+    public function new();
 }

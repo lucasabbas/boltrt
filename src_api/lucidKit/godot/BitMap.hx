@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.BitMap")
 extern class BitMap extends Resource {
@@ -13,4 +13,6 @@ extern class BitMap extends Resource {
     public function resize(new_size: GdVector2): Void;
     public function set_bit(position: GdVector2, bit: Bool): Void;
     public function set_bit_rect(rect: Rect2, bit: Bool): Void;
+    @:native("__new")
+    public function new();
 }

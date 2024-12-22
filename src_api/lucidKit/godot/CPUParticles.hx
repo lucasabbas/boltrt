@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CPUParticles")
 extern class CPUParticles extends GeometryInstance {
@@ -81,4 +81,6 @@ extern class CPUParticles extends GeometryInstance {
     public function set_param_curve(param: Int, curve: Curve): Void;
     public function set_param_randomness(param: Int, randomness: Float): Void;
     public function set_particle_flag(flag: Int, enable: Bool): Void;
+    @:native("__new")
+    public function new();
 }

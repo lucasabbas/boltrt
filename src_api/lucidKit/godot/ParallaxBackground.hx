@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ParallaxBackground")
 extern class ParallaxBackground extends CanvasLayer {
@@ -9,4 +9,6 @@ extern class ParallaxBackground extends CanvasLayer {
     public var scroll_limit_begin: Vector2;
     public var scroll_limit_end: Vector2;
     public var scroll_offset: Vector2;
+    @:native("__new")
+    public function new();
 }

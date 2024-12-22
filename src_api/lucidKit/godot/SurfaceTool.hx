@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SurfaceTool")
 extern class SurfaceTool extends Reference {
@@ -25,4 +25,6 @@ extern class SurfaceTool extends Reference {
     public function generate_tangents(): Void;
     public function index(): Void;
     public function set_material(material: Material): Void;
+    @:native("__new")
+    public function new();
 }

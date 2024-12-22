@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Navigation")
 extern class Navigation extends Spatial {
@@ -13,4 +13,6 @@ extern class Navigation extends Spatial {
     public function get_closest_point_to_segment(start: GdVector3, end: GdVector3, use_collision: Bool): Vector3;
     public function get_rid(): RID;
     public function get_simple_path(start: GdVector3, end: GdVector3, optimize: Bool): PoolVector3Array;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ConfigFile")
 extern class ConfigFile extends Reference {
@@ -7,7 +7,7 @@ extern class ConfigFile extends Reference {
     public function erase_section_key(section: String, key: String): Void;
     public function get_section_keys(section: String): PoolStringArray;
     public function get_sections(): PoolStringArray;
-    public function get_value(section: String, key: String, default: Variant): Variant;
+    public function get_value(section: String, key: String, _default: Variant): Variant;
     public function has_section(section: String): Bool;
     public function has_section_key(section: String, key: String): Bool;
     public function load(path: String): Int;
@@ -18,4 +18,6 @@ extern class ConfigFile extends Reference {
     public function save_encrypted(path: String, key: PoolByteArray): Int;
     public function save_encrypted_pass(path: String, password: String): Int;
     public function set_value(section: String, key: String, value: Variant): Void;
+    @:native("__new")
+    public function new();
 }

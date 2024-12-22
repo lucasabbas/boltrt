@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RichTextLabel")
 extern class RichTextLabel extends Control {
@@ -51,4 +51,6 @@ extern class RichTextLabel extends Control {
     public function remove_line(line: Int): Bool;
     public function scroll_to_line(line: Int): Void;
     public function set_table_column_expand(column: Int, expand: Bool, ratio: Int): Void;
+    @:native("__new")
+    public function new();
 }

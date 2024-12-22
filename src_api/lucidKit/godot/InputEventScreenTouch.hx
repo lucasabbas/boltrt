@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InputEventScreenTouch")
 extern class InputEventScreenTouch extends InputEvent {
@@ -7,4 +7,6 @@ extern class InputEventScreenTouch extends InputEvent {
     public var index: Int;
     public var position: Vector2;
     public var pressed: Bool;
+    @:native("__new")
+    public function new();
 }

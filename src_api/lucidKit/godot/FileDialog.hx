@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.FileDialog")
 extern class FileDialog extends ConfirmationDialog {
@@ -19,4 +19,6 @@ extern class FileDialog extends ConfirmationDialog {
     public function get_line_edit(): LineEdit;
     public function get_vbox(): VBoxContainer;
     public function invalidate(): Void;
+    @:native("__new")
+    public function new();
 }

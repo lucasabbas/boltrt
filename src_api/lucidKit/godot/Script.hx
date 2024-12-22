@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Script")
 extern class Script extends Resource {
@@ -16,4 +16,6 @@ extern class Script extends Resource {
     public function instance_has(base_object: Object): Bool;
     public function is_tool(): Bool;
     public function reload(keep_state: Bool): Int;
+    @:native("__new")
+    public function new();
 }

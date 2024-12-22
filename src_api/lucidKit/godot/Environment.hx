@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Environment")
 extern class Environment extends Resource {
@@ -89,4 +89,6 @@ extern class Environment extends Resource {
     public var tonemap_white: Float;
     public function is_glow_level_enabled(idx: Int): Bool;
     public function set_glow_level(idx: Int, enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

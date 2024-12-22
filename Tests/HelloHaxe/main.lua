@@ -200,8 +200,10 @@ __haxe_iterators_ArrayKeyValueIterator = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
-__lucidKit_core__Vector2_Vector2_Impl_ = _hx_e()
-__lucidKit_core__Vector3_Vector3_Impl_ = _hx_e()
+__lucidKit_godot__Basis_Basis_Impl_ = _hx_e()
+__lucidKit_godot__Quat_Quat_Impl_ = _hx_e()
+__lucidKit_godot__Vector2_Vector2_Impl_ = _hx_e()
+__lucidKit_godot__Vector3_Vector3_Impl_ = _hx_e()
 __sys_io_File = _hx_e()
 
 local _hx_bind, _hx_bit, _hx_staticToInstance, _hx_funcToField, _hx_maxn, _hx_print, _hx_apply_self, _hx_box_mr, _hx_bit_clamp, _hx_table, _hx_bit_raw
@@ -604,18 +606,18 @@ Main.prototype.init = function(self)
   local lucas = Person.new("Lucas", 20, "2004-10-04");
   _G.print(Std.string(lucas:toString()));
   lucas:sayHello();
-  local vec3 = __lucidKit_core__Vector3_Vector3_Impl_._new(3, 2, 3);
-  _G.print(Std.string((__lucidKit_core__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
-  local vec3_2 = __lucidKit_core__Vector3_Vector3_Impl_._new(2, 3, 2);
-  _G.print(Std.string((__lucidKit_core__Vector3_Vector3_Impl_.fieldRead(vec3_2, "toString"))()));
-  local vec3_3 = __lucidKit_core__Vector3_Vector3_Impl_.add(vec3, vec3_2);
-  _G.print(Std.string((__lucidKit_core__Vector3_Vector3_Impl_.fieldRead(vec3_3, "toString"))()));
-  local vec2 = __lucidKit_core__Vector2_Vector2_Impl_._new(6, 1);
-  _G.print(Std.string((__lucidKit_core__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
-  local vec2_2 = __lucidKit_core__Vector2_Vector2_Impl_._new(4, 9);
-  _G.print(Std.string((__lucidKit_core__Vector2_Vector2_Impl_.fieldRead(vec2_2, "toString"))()));
-  local vec2_3 = __lucidKit_core__Vector2_Vector2_Impl_.add(vec2, vec2_2);
-  _G.print(Std.string((__lucidKit_core__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
+  local vec3 = __lucidKit_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
+  _G.print(Std.string((__lucidKit_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
+  local vec3_2 = __lucidKit_godot__Vector3_Vector3_Impl_._new(2, 3, 2);
+  _G.print(Std.string((__lucidKit_godot__Vector3_Vector3_Impl_.fieldRead(vec3_2, "toString"))()));
+  local vec3_3 = __lucidKit_godot__Vector3_Vector3_Impl_.add(vec3, vec3_2);
+  _G.print(Std.string((__lucidKit_godot__Vector3_Vector3_Impl_.fieldRead(vec3_3, "toString"))()));
+  local vec2 = __lucidKit_godot__Vector2_Vector2_Impl_._new(6, 1);
+  _G.print(Std.string((__lucidKit_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
+  local vec2_2 = __lucidKit_godot__Vector2_Vector2_Impl_._new(4, 9);
+  _G.print(Std.string((__lucidKit_godot__Vector2_Vector2_Impl_.fieldRead(vec2_2, "toString"))()));
+  local vec2_3 = __lucidKit_godot__Vector2_Vector2_Impl_.add(vec2, vec2_2);
+  _G.print(Std.string((__lucidKit_godot__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
       local godotObject = godot.Object.__new();
@@ -1191,18 +1193,12 @@ __lua_UserData.__name__ = true
 __lua_Thread.new = {}
 __lua_Thread.__name__ = true
 
-__lucidKit_core__Vector2_Vector2_Impl_.new = {}
-__lucidKit_core__Vector2_Vector2_Impl_.__name__ = true
-__lucidKit_core__Vector2_Vector2_Impl_._new = function(x,y) 
-  if (y == nil) then 
-    y = 0;
-  end;
-  if (x == nil) then 
-    x = 0;
-  end;
-  do return godot.Vector2.__new(x, y) end;
+__lucidKit_godot__Basis_Basis_Impl_.new = {}
+__lucidKit_godot__Basis_Basis_Impl_.__name__ = true
+__lucidKit_godot__Basis_Basis_Impl_._new = function(x,y,z) 
+  do return godot.Basis.__new(x, y, z) end;
 end
-__lucidKit_core__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+__lucidKit_godot__Basis_Basis_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1237,7 +1233,7 @@ __lucidKit_core__Vector2_Vector2_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__lucidKit_core__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+__lucidKit_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1265,166 +1261,7 @@ __lucidKit_core__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__lucidKit_core__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
-  if (n == 0) then 
-    do return this1.x end;
-  end;
-  if (n == 1) then 
-    do return this1.y end;
-  end;
-  if (n == "x") then 
-    do return this1.x end;
-  end;
-  if (n == "y") then 
-    do return this1.y end;
-  end;
-  _G.error(__haxe_Exception.thrown("Invalid index"),0);
-end
-__lucidKit_core__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
-  if (n == 0) then 
-    this1.x = value;
-  else
-    if (n == 1) then 
-      this1.y = value;
-    else
-      if (n == "x") then 
-        this1.x = value;
-      else
-        if (n == "y") then 
-          this1.y = value;
-        else
-          _G.error(__haxe_Exception.thrown("Invalid index"),0);
-        end;
-      end;
-    end;
-  end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.add = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs + rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs - rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs * rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.div = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs / rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs % rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs == rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs ~= rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs < rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs <= rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs > rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
-  local lhs = this1;
-  do return lhs >= rhs end;
-end
-__lucidKit_core__Vector2_Vector2_Impl_.toString = function(v) 
-  do return v.toString() end;
-end
-
-__lucidKit_core__Vector3_Vector3_Impl_.new = {}
-__lucidKit_core__Vector3_Vector3_Impl_.__name__ = true
-__lucidKit_core__Vector3_Vector3_Impl_._new = function(x,y,z) 
-  if (z == nil) then 
-    z = 0;
-  end;
-  if (y == nil) then 
-    y = 0;
-  end;
-  if (x == nil) then 
-    x = 0;
-  end;
-  do return godot.Vector3.__new(x, y, z) end;
-end
-__lucidKit_core__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
-  if (name == "toString") then 
-    do return function() 
-      local v = this1;
-      do return v.toString() end;
-    end end;
-  else
-    local o = this1;
-    if ((function() 
-      local _hx_1
-      if ((_G.type(o) == "function") and not ((function() 
-        local _hx_2
-        if (_G.type(o) ~= "table") then 
-        _hx_2 = false; else 
-        _hx_2 = o.__name__; end
-        return _hx_2
-      end )() or (function() 
-        local _hx_3
-        if (_G.type(o) ~= "table") then 
-        _hx_3 = false; else 
-        _hx_3 = o.__ename__; end
-        return _hx_3
-      end )())) then 
-      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
-      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
-      _hx_1 = o.__fields__[name] ~= nil; else 
-      _hx_1 = o[name] ~= nil; end
-      return _hx_1
-    end )()) then 
-      do return Reflect.field(this1, name) end;
-    else
-      _G.error(__haxe_Exception.thrown("Invalid field"),0);
-    end;
-  end;
-end
-__lucidKit_core__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
-  local o = this1;
-  if ((function() 
-    local _hx_1
-    if ((_G.type(o) == "function") and not ((function() 
-      local _hx_2
-      if (_G.type(o) ~= "table") then 
-      _hx_2 = false; else 
-      _hx_2 = o.__name__; end
-      return _hx_2
-    end )() or (function() 
-      local _hx_3
-      if (_G.type(o) ~= "table") then 
-      _hx_3 = false; else 
-      _hx_3 = o.__ename__; end
-      return _hx_3
-    end )())) then 
-    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
-    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
-    _hx_1 = o.__fields__[name] ~= nil; else 
-    _hx_1 = o[name] ~= nil; end
-    return _hx_1
-  end )()) then 
-    this1[name] = value;
-  else
-    _G.error(__haxe_Exception.thrown("Invalid field"),0);
-  end;
-end
-__lucidKit_core__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+__lucidKit_godot__Basis_Basis_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1445,7 +1282,7 @@ __lucidKit_core__Vector3_Vector3_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__lucidKit_core__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+__lucidKit_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1472,51 +1309,563 @@ __lucidKit_core__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+__lucidKit_godot__Basis_Basis_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__lucidKit_core__Vector3_Vector3_Impl_.toString = function(v) 
+__lucidKit_godot__Basis_Basis_Impl_.toString = function(v) 
+  do return v.toString() end;
+end
+
+__lucidKit_godot__Quat_Quat_Impl_.new = {}
+__lucidKit_godot__Quat_Quat_Impl_.__name__ = true
+__lucidKit_godot__Quat_Quat_Impl_._new = function(x,y,z,w) 
+  if (w == nil) then 
+    w = 0;
+  end;
+  if (z == nil) then 
+    z = 0;
+  end;
+  if (y == nil) then 
+    y = 0;
+  end;
+  if (x == nil) then 
+    x = 0;
+  end;
+  do return godot.Quat.__new(x, y, z, w) end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.fieldRead = function(this1,name) 
+  if (name == "toString") then 
+    do return function() 
+      local v = this1;
+      do return v.toString() end;
+    end end;
+  else
+    local o = this1;
+    if ((function() 
+      local _hx_1
+      if ((_G.type(o) == "function") and not ((function() 
+        local _hx_2
+        if (_G.type(o) ~= "table") then 
+        _hx_2 = false; else 
+        _hx_2 = o.__name__; end
+        return _hx_2
+      end )() or (function() 
+        local _hx_3
+        if (_G.type(o) ~= "table") then 
+        _hx_3 = false; else 
+        _hx_3 = o.__ename__; end
+        return _hx_3
+      end )())) then 
+      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+      _hx_1 = o.__fields__[name] ~= nil; else 
+      _hx_1 = o[name] ~= nil; end
+      return _hx_1
+    end )()) then 
+      do return Reflect.field(this1, name) end;
+    else
+      _G.error(__haxe_Exception.thrown("Invalid field"),0);
+    end;
+  end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value) 
+  local o = this1;
+  if ((function() 
+    local _hx_1
+    if ((_G.type(o) == "function") and not ((function() 
+      local _hx_2
+      if (_G.type(o) ~= "table") then 
+      _hx_2 = false; else 
+      _hx_2 = o.__name__; end
+      return _hx_2
+    end )() or (function() 
+      local _hx_3
+      if (_G.type(o) ~= "table") then 
+      _hx_3 = false; else 
+      _hx_3 = o.__ename__; end
+      return _hx_3
+    end )())) then 
+    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+    _hx_1 = o.__fields__[name] ~= nil; else 
+    _hx_1 = o[name] ~= nil; end
+    return _hx_1
+  end )()) then 
+    this1[name] = value;
+  else
+    _G.error(__haxe_Exception.thrown("Invalid field"),0);
+  end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.arrayRead = function(this1,n) 
+  if (n == 0) then 
+    do return this1.x end;
+  end;
+  if (n == 1) then 
+    do return this1.y end;
+  end;
+  if (n == 2) then 
+    do return this1.z end;
+  end;
+  if (n == "x") then 
+    do return this1.x end;
+  end;
+  if (n == "y") then 
+    do return this1.y end;
+  end;
+  if (n == "z") then 
+    do return this1.z end;
+  end;
+  if (n == "w") then 
+    do return this1.w end;
+  end;
+  _G.error(__haxe_Exception.thrown("Invalid index"),0);
+end
+__lucidKit_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value) 
+  if (n == 0) then 
+    this1.x = value;
+  else
+    if (n == 1) then 
+      this1.y = value;
+    else
+      if (n == 2) then 
+        this1.z = value;
+      else
+        if (n == "x") then 
+          this1.x = value;
+        else
+          if (n == "y") then 
+            this1.y = value;
+          else
+            if (n == "z") then 
+              this1.z = value;
+            else
+              if (n == "w") then 
+                this1.w = value;
+              else
+                _G.error(__haxe_Exception.thrown("Invalid index"),0);
+              end;
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.add = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs + rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.sub = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs - rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.mul = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs * rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.div = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs / rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.mod = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs % rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.eq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs == rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.neq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs ~= rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.lt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs < rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.lte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs <= rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.gt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs > rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.gte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs >= rhs end;
+end
+__lucidKit_godot__Quat_Quat_Impl_.toString = function(v) 
+  do return v.toString() end;
+end
+
+__lucidKit_godot__Vector2_Vector2_Impl_.new = {}
+__lucidKit_godot__Vector2_Vector2_Impl_.__name__ = true
+__lucidKit_godot__Vector2_Vector2_Impl_._new = function(x,y) 
+  if (y == nil) then 
+    y = 0;
+  end;
+  if (x == nil) then 
+    x = 0;
+  end;
+  do return godot.Vector2.__new(x, y) end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+  if (name == "toString") then 
+    do return function() 
+      local v = this1;
+      do return v.toString() end;
+    end end;
+  else
+    local o = this1;
+    if ((function() 
+      local _hx_1
+      if ((_G.type(o) == "function") and not ((function() 
+        local _hx_2
+        if (_G.type(o) ~= "table") then 
+        _hx_2 = false; else 
+        _hx_2 = o.__name__; end
+        return _hx_2
+      end )() or (function() 
+        local _hx_3
+        if (_G.type(o) ~= "table") then 
+        _hx_3 = false; else 
+        _hx_3 = o.__ename__; end
+        return _hx_3
+      end )())) then 
+      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+      _hx_1 = o.__fields__[name] ~= nil; else 
+      _hx_1 = o[name] ~= nil; end
+      return _hx_1
+    end )()) then 
+      do return Reflect.field(this1, name) end;
+    else
+      _G.error(__haxe_Exception.thrown("Invalid field"),0);
+    end;
+  end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+  local o = this1;
+  if ((function() 
+    local _hx_1
+    if ((_G.type(o) == "function") and not ((function() 
+      local _hx_2
+      if (_G.type(o) ~= "table") then 
+      _hx_2 = false; else 
+      _hx_2 = o.__name__; end
+      return _hx_2
+    end )() or (function() 
+      local _hx_3
+      if (_G.type(o) ~= "table") then 
+      _hx_3 = false; else 
+      _hx_3 = o.__ename__; end
+      return _hx_3
+    end )())) then 
+    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+    _hx_1 = o.__fields__[name] ~= nil; else 
+    _hx_1 = o[name] ~= nil; end
+    return _hx_1
+  end )()) then 
+    this1[name] = value;
+  else
+    _G.error(__haxe_Exception.thrown("Invalid field"),0);
+  end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
+  if (n == 0) then 
+    do return this1.x end;
+  end;
+  if (n == 1) then 
+    do return this1.y end;
+  end;
+  if (n == "x") then 
+    do return this1.x end;
+  end;
+  if (n == "y") then 
+    do return this1.y end;
+  end;
+  _G.error(__haxe_Exception.thrown("Invalid index"),0);
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
+  if (n == 0) then 
+    this1.x = value;
+  else
+    if (n == 1) then 
+      this1.y = value;
+    else
+      if (n == "x") then 
+        this1.x = value;
+      else
+        if (n == "y") then 
+          this1.y = value;
+        else
+          _G.error(__haxe_Exception.thrown("Invalid index"),0);
+        end;
+      end;
+    end;
+  end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs + rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs - rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs * rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs / rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs % rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs == rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs ~= rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs < rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs <= rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs > rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs >= rhs end;
+end
+__lucidKit_godot__Vector2_Vector2_Impl_.toString = function(v) 
+  do return v.toString() end;
+end
+
+__lucidKit_godot__Vector3_Vector3_Impl_.new = {}
+__lucidKit_godot__Vector3_Vector3_Impl_.__name__ = true
+__lucidKit_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
+  if (z == nil) then 
+    z = 0;
+  end;
+  if (y == nil) then 
+    y = 0;
+  end;
+  if (x == nil) then 
+    x = 0;
+  end;
+  do return godot.Vector3.__new(x, y, z) end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
+  if (name == "toString") then 
+    do return function() 
+      local v = this1;
+      do return v.toString() end;
+    end end;
+  else
+    local o = this1;
+    if ((function() 
+      local _hx_1
+      if ((_G.type(o) == "function") and not ((function() 
+        local _hx_2
+        if (_G.type(o) ~= "table") then 
+        _hx_2 = false; else 
+        _hx_2 = o.__name__; end
+        return _hx_2
+      end )() or (function() 
+        local _hx_3
+        if (_G.type(o) ~= "table") then 
+        _hx_3 = false; else 
+        _hx_3 = o.__ename__; end
+        return _hx_3
+      end )())) then 
+      _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+      _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+      _hx_1 = o.__fields__[name] ~= nil; else 
+      _hx_1 = o[name] ~= nil; end
+      return _hx_1
+    end )()) then 
+      do return Reflect.field(this1, name) end;
+    else
+      _G.error(__haxe_Exception.thrown("Invalid field"),0);
+    end;
+  end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
+  local o = this1;
+  if ((function() 
+    local _hx_1
+    if ((_G.type(o) == "function") and not ((function() 
+      local _hx_2
+      if (_G.type(o) ~= "table") then 
+      _hx_2 = false; else 
+      _hx_2 = o.__name__; end
+      return _hx_2
+    end )() or (function() 
+      local _hx_3
+      if (_G.type(o) ~= "table") then 
+      _hx_3 = false; else 
+      _hx_3 = o.__ename__; end
+      return _hx_3
+    end )())) then 
+    _hx_1 = false; elseif ((_G.type(o) == "string") and ((String.prototype[name] ~= nil) or (name == "length"))) then 
+    _hx_1 = true; elseif (o.__fields__ ~= nil) then 
+    _hx_1 = o.__fields__[name] ~= nil; else 
+    _hx_1 = o[name] ~= nil; end
+    return _hx_1
+  end )()) then 
+    this1[name] = value;
+  else
+    _G.error(__haxe_Exception.thrown("Invalid field"),0);
+  end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+  if (n == 0) then 
+    do return this1.x end;
+  end;
+  if (n == 1) then 
+    do return this1.y end;
+  end;
+  if (n == 2) then 
+    do return this1.z end;
+  end;
+  if (n == "x") then 
+    do return this1.x end;
+  end;
+  if (n == "y") then 
+    do return this1.y end;
+  end;
+  if (n == "z") then 
+    do return this1.z end;
+  end;
+  _G.error(__haxe_Exception.thrown("Invalid index"),0);
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+  if (n == 0) then 
+    this1.x = value;
+  else
+    if (n == 1) then 
+      this1.y = value;
+    else
+      if (n == 2) then 
+        this1.z = value;
+      else
+        if (n == "x") then 
+          this1.x = value;
+        else
+          if (n == "y") then 
+            this1.y = value;
+          else
+            if (n == "z") then 
+              this1.z = value;
+            else
+              _G.error(__haxe_Exception.thrown("Invalid index"),0);
+            end;
+          end;
+        end;
+      end;
+    end;
+  end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs + rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs - rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs * rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs / rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs % rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs == rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs ~= rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs < rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs <= rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs > rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+  local lhs = this1;
+  do return lhs >= rhs end;
+end
+__lucidKit_godot__Vector3_Vector3_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 

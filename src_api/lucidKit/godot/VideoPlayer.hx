@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VideoPlayer")
 extern class VideoPlayer extends Control {
@@ -18,4 +18,6 @@ extern class VideoPlayer extends Control {
     public function is_playing(): Bool;
     public function play(): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

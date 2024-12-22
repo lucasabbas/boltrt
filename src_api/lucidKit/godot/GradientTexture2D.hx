@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GradientTexture2D")
 extern class GradientTexture2D extends Texture {
@@ -11,4 +11,6 @@ extern class GradientTexture2D extends Texture {
     public var repeat: Int;
     public var use_hdr: Bool;
     public var width: Int;
+    @:native("__new")
+    public function new();
 }

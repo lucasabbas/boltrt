@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 abstract Vector3(GdVector3) from GdVector3 {
     public function new(x : Float = 0, y : Float = 0, z : Float = 0) {

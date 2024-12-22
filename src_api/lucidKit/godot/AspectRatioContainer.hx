@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AspectRatioContainer")
 extern class AspectRatioContainer extends Container {
@@ -6,4 +6,6 @@ extern class AspectRatioContainer extends Container {
     public var alignment_vertical: Int;
     public var ratio: Float;
     public var stretch_mode: Int;
+    @:native("__new")
+    public function new();
 }

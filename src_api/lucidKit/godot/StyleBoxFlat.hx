@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StyleBoxFlat")
 extern class StyleBoxFlat extends StyleBox {
@@ -37,4 +37,6 @@ extern class StyleBoxFlat extends StyleBox {
     public function set_expand_margin(margin: Int, size: Float): Void;
     public function set_expand_margin_all(size: Float): Void;
     public function set_expand_margin_individual(size_left: Float, size_top: Float, size_right: Float, size_bottom: Float): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CylinderMesh")
 extern class CylinderMesh extends PrimitiveMesh {
@@ -7,4 +7,6 @@ extern class CylinderMesh extends PrimitiveMesh {
     public var radial_segments: Int;
     public var rings: Int;
     public var top_radius: Float;
+    @:native("__new")
+    public function new();
 }

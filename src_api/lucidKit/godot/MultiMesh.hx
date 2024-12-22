@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MultiMesh")
 extern class MultiMesh extends Resource {
@@ -21,4 +21,6 @@ extern class MultiMesh extends Resource {
     public function set_instance_custom_data(instance: Int, custom_data: Color): Void;
     public function set_instance_transform(instance: Int, transform: Transform): Void;
     public function set_instance_transform_2d(instance: Int, transform: Transform2D): Void;
+    @:native("__new")
+    public function new();
 }

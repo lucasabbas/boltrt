@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualShaderNodeGroupBase")
 extern class VisualShaderNodeGroupBase extends VisualShaderNode {
@@ -24,4 +24,6 @@ extern class VisualShaderNodeGroupBase extends VisualShaderNode {
     public function set_output_port_name(id: Int, name: String): Void;
     public function set_output_port_type(id: Int, type: Int): Void;
     public function set_outputs(outputs: String): Void;
+    @:native("__new")
+    public function new();
 }

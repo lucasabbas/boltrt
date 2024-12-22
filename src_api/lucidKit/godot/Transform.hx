@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Transform")
-extern class Transform extends lucidkit.core.MonoObject {
+extern class Transform extends lucidKit.core.MonoObject {
     public var basis: Basis;
     public var origin: Vector3;
     @:native("__new")

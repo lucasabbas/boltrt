@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.GIProbe")
 extern class GIProbe extends VisualInstance {
@@ -14,4 +14,6 @@ extern class GIProbe extends VisualInstance {
     public var subdiv: Int;
     public function bake(from_node: Node, create_visual_debug: Bool): Void;
     public function debug_bake(): Void;
+    @:native("__new")
+    public function new();
 }

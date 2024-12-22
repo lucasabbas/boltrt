@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Engine")
 extern class Engine extends Object {
@@ -23,4 +23,6 @@ extern class Engine extends Object {
     public function get_version_info(): Map<Dynamic, Dynamic>;
     public function has_singleton(name: String): Bool;
     public function is_in_physics_frame(): Bool;
+    @:native("__new")
+    public function new();
 }

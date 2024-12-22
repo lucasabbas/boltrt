@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectDistortion")
 extern class AudioEffectDistortion extends AudioEffect {
@@ -7,4 +7,6 @@ extern class AudioEffectDistortion extends AudioEffect {
     public var mode: Int;
     public var post_gain: Float;
     public var pre_gain: Float;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectReverb")
 extern class AudioEffectReverb extends AudioEffect {
@@ -10,4 +10,6 @@ extern class AudioEffectReverb extends AudioEffect {
     public var room_size: Float;
     public var spread: Float;
     public var wet: Float;
+    @:native("__new")
+    public function new();
 }

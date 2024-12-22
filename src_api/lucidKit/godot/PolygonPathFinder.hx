@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PolygonPathFinder")
 extern class PolygonPathFinder extends Resource {
@@ -10,4 +10,6 @@ extern class PolygonPathFinder extends Resource {
     public function is_point_inside(point: GdVector2): Bool;
     public function set_point_penalty(idx: Int, penalty: Float): Void;
     public function setup(points: PoolVector2Array, connections: PoolIntArray): Void;
+    @:native("__new")
+    public function new();
 }

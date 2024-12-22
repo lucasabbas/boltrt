@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Sprite")
 extern class Sprite extends Node2D {
@@ -17,4 +17,6 @@ extern class Sprite extends Node2D {
     public var vframes: Int;
     public function get_rect(): Rect2;
     public function is_pixel_opaque(pos: GdVector2): Bool;
+    @:native("__new")
+    public function new();
 }

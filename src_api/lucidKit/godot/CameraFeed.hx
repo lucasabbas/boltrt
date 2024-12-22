@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CameraFeed")
 extern class CameraFeed extends Reference {
@@ -7,4 +7,6 @@ extern class CameraFeed extends Reference {
     public function get_id(): Int;
     public function get_name(): String;
     public function get_position(): Int;
+    @:native("__new")
+    public function new();
 }

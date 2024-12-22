@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectDelay")
 extern class AudioEffectDelay extends AudioEffect {
@@ -15,4 +15,6 @@ extern class AudioEffectDelay extends AudioEffect {
     public var tap2/delay_ms: Float;
     public var tap2/level_db: Float;
     public var tap2/pan: Float;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PhysicsDirectBodyState")
 extern class PhysicsDirectBodyState extends Object {
@@ -34,4 +34,6 @@ extern class PhysicsDirectBodyState extends Object {
     public function get_space_state(): PhysicsDirectSpaceState;
     public function get_velocity_at_local_position(local_position: GdVector3): Vector3;
     public function integrate_forces(): Void;
+    @:native("__new")
+    public function new();
 }

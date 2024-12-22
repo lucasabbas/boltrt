@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PathFollow2D")
 extern class PathFollow2D extends Node2D {
@@ -10,4 +10,6 @@ extern class PathFollow2D extends Node2D {
     public var rotate: Bool;
     public var unit_offset: Float;
     public var v_offset: Float;
+    @:native("__new")
+    public function new();
 }

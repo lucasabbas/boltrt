@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.MultiplayerAPI")
 extern class MultiplayerAPI extends Reference {
@@ -14,4 +14,6 @@ extern class MultiplayerAPI extends Reference {
     public function is_network_server(): Bool;
     public function poll(): Void;
     public function send_bytes(bytes: PoolByteArray, id: Int, mode: Int): Int;
+    @:native("__new")
+    public function new();
 }

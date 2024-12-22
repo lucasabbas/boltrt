@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Popup")
 extern class Popup extends Control {
@@ -10,4 +10,6 @@ extern class Popup extends Control {
     public function popup_centered_minsize(minsize: GdVector2): Void;
     public function popup_centered_ratio(ratio: Float): Void;
     public function set_as_minsize(): Void;
+    @:native("__new")
+    public function new();
 }

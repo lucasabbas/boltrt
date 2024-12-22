@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.InterpolatedCamera")
 extern class InterpolatedCamera extends Camera {
@@ -7,4 +7,6 @@ extern class InterpolatedCamera extends Camera {
     public var speed: Float;
     public var target: NodePath;
     public function set_target(target: Object): Void;
+    @:native("__new")
+    public function new();
 }

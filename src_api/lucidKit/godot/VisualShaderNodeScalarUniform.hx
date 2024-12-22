@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VisualShaderNodeScalarUniform")
 extern class VisualShaderNodeScalarUniform extends VisualShaderNodeUniform {
@@ -8,4 +8,6 @@ extern class VisualShaderNodeScalarUniform extends VisualShaderNodeUniform {
     public var max: Float;
     public var min: Float;
     public var step: Float;
+    @:native("__new")
+    public function new();
 }

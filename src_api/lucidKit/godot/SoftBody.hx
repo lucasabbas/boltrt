@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.SoftBody")
 extern class SoftBody extends MeshInstance {
@@ -26,4 +26,6 @@ extern class SoftBody extends MeshInstance {
     public function set_collision_layer_bit(bit: Int, value: Bool): Void;
     public function set_collision_mask_bit(bit: Int, value: Bool): Void;
     public function set_point_pinned(point_index: Int, pinned: Bool, attachment_path: NodePath): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.IP")
 extern class IP extends Object {
@@ -12,4 +12,6 @@ extern class IP extends Object {
     public function resolve_hostname(host: String, ip_type: Int): String;
     public function resolve_hostname_addresses(host: String, ip_type: Int): Array<Dynamic>;
     public function resolve_hostname_queue_item(host: String, ip_type: Int): Int;
+    @:native("__new")
+    public function new();
 }

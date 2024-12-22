@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NinePatchRect")
 extern class NinePatchRect extends Control {
@@ -14,4 +14,6 @@ extern class NinePatchRect extends Control {
     public var texture: Texture;
     public function get_patch_margin(margin: Int): Int;
     public function set_patch_margin(margin: Int, value: Int): Void;
+    @:native("__new")
+    public function new();
 }

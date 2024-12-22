@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Navigation2DServer")
 extern class Navigation2DServer extends Object {
@@ -47,4 +47,6 @@ extern class Navigation2DServer extends Object {
     public function region_set_navpoly(region: RID, nav_poly: NavigationPolygon): Void;
     public function region_set_transform(region: RID, transform: Transform2D): Void;
     public function region_set_travel_cost(region: RID, travel_cost: Float): Void;
+    @:native("__new")
+    public function new();
 }

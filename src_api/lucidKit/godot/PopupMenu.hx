@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PopupMenu")
 extern class PopupMenu extends Popup {
@@ -63,4 +63,6 @@ extern class PopupMenu extends Popup {
     public function set_item_tooltip(idx: Int, tooltip: String): Void;
     public function toggle_item_checked(idx: Int): Void;
     public function toggle_item_multistate(idx: Int): Void;
+    @:native("__new")
+    public function new();
 }

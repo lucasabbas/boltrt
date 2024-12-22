@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorFileSystem")
 extern class EditorFileSystem extends Node {
@@ -11,4 +11,6 @@ extern class EditorFileSystem extends Node {
     public function scan_sources(): Void;
     public function update_file(path: String): Void;
     public function update_script_classes(): Void;
+    @:native("__new")
+    public function new();
 }

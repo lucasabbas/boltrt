@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RigidBody2D")
 extern class RigidBody2D extends PhysicsBody2D {
@@ -32,4 +32,6 @@ extern class RigidBody2D extends PhysicsBody2D {
     public function get_colliding_bodies(): Array<Dynamic>;
     public function set_axis_velocity(axis_velocity: GdVector2): Void;
     public function test_motion(motion: GdVector2, infinite_inertia: Bool, margin: Float, result: Physics2DTestMotionResult): Bool;
+    @:native("__new")
+    public function new();
 }

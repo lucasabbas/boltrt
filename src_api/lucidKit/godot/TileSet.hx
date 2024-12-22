@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TileSet")
 extern class TileSet extends Resource {
@@ -72,4 +72,6 @@ extern class TileSet extends Resource {
     public function tile_set_texture_offset(id: Int, texture_offset: GdVector2): Void;
     public function tile_set_tile_mode(id: Int, tilemode: Int): Void;
     public function tile_set_z_index(id: Int, z_index: Int): Void;
+    @:native("__new")
+    public function new();
 }

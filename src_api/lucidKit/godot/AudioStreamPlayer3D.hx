@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioStreamPlayer3D")
 extern class AudioStreamPlayer3D extends Spatial {
@@ -27,4 +27,6 @@ extern class AudioStreamPlayer3D extends Spatial {
     public function play(from_position: Float): Void;
     public function seek(to_position: Float): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

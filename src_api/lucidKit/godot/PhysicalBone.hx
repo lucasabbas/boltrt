@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PhysicalBone")
 extern class PhysicalBone extends PhysicsBody {
@@ -16,4 +16,6 @@ extern class PhysicalBone extends PhysicsBody {
     public function get_simulate_physics(): Bool;
     public function is_simulating_physics(): Bool;
     public function is_static_body(): Bool;
+    @:native("__new")
+    public function new();
 }

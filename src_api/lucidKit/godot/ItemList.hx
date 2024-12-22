@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ItemList")
 extern class ItemList extends Control {
@@ -56,4 +56,6 @@ extern class ItemList extends Control {
     public function sort_items_by_text(): Void;
     public function unselect(idx: Int): Void;
     public function unselect_all(): Void;
+    @:native("__new")
+    public function new();
 }

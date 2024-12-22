@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Geometry")
 extern class Geometry extends Object {
@@ -37,4 +37,6 @@ extern class Geometry extends Object {
     public function segment_intersects_triangle(from: GdVector3, to: GdVector3, a: GdVector3, b: GdVector3, c: GdVector3): Variant;
     public function triangulate_delaunay_2d(points: PoolVector2Array): PoolIntArray;
     public function triangulate_polygon(polygon: PoolVector2Array): PoolIntArray;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TorusMesh")
 extern class TorusMesh extends PrimitiveMesh {
@@ -6,4 +6,6 @@ extern class TorusMesh extends PrimitiveMesh {
     public var outer_radius: Float;
     public var ring_segments: Int;
     public var rings: Int;
+    @:native("__new")
+    public function new();
 }

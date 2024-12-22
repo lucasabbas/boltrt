@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectCompressor")
 extern class AudioEffectCompressor extends AudioEffect {
@@ -9,4 +9,6 @@ extern class AudioEffectCompressor extends AudioEffect {
     public var release_ms: Float;
     public var sidechain: String;
     public var threshold: Float;
+    @:native("__new")
+    public function new();
 }

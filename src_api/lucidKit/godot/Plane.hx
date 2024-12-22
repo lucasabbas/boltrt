@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Plane")
-extern class Plane extends lucidkit.core.MonoObject {
+extern class Plane extends lucidKit.core.MonoObject {
     public var d: Float;
     public var normal: Vector3;
     public var x: Float;

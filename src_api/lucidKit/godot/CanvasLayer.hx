@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CanvasLayer")
 extern class CanvasLayer extends Node {
@@ -16,4 +16,6 @@ extern class CanvasLayer extends Node {
     public function get_final_transform(): Transform2D;
     public function hide(): Void;
     public function show(): Void;
+    @:native("__new")
+    public function new();
 }

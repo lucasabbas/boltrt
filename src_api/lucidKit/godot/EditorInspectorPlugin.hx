@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorInspectorPlugin")
 extern class EditorInspectorPlugin extends Reference {
@@ -10,4 +10,6 @@ extern class EditorInspectorPlugin extends Reference {
     public function parse_category(object: Object, category: String): Void;
     public function parse_end(): Void;
     public function parse_property(object: Object, type: Int, path: String, hint: Int, hint_text: String, usage: Int): Bool;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.StreamPeerTCP")
 extern class StreamPeerTCP extends StreamPeer {
@@ -9,4 +9,6 @@ extern class StreamPeerTCP extends StreamPeer {
     public function get_status(): Int;
     public function is_connected_to_host(): Bool;
     public function set_no_delay(enabled: Bool): Void;
+    @:native("__new")
+    public function new();
 }

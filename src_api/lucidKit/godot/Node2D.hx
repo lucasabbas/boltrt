@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Node2D")
 extern class Node2D extends CanvasItem {
@@ -25,4 +25,6 @@ extern class Node2D extends CanvasItem {
     public function to_global(local_point: GdVector2): Vector2;
     public function to_local(global_point: GdVector2): Vector2;
     public function translate(offset: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

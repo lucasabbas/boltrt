@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioServer")
 extern class AudioServer extends Object {
@@ -44,4 +44,6 @@ extern class AudioServer extends Object {
     public function set_bus_volume_db(bus_idx: Int, volume_db: Float): Void;
     public function swap_bus_effects(bus_idx: Int, effect_idx: Int, by_effect_idx: Int): Void;
     public function unlock(): Void;
+    @:native("__new")
+    public function new();
 }

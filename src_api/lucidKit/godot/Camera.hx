@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Camera")
 extern class Camera extends Spatial {
@@ -32,4 +32,6 @@ extern class Camera extends Spatial {
     public function set_orthogonal(size: Float, z_near: Float, z_far: Float): Void;
     public function set_perspective(fov: Float, z_near: Float, z_far: Float): Void;
     public function unproject_position(world_point: GdVector3): Vector2;
+    @:native("__new")
+    public function new();
 }

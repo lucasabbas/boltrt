@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Particles")
 extern class Particles extends GeometryInstance {
@@ -25,4 +25,6 @@ extern class Particles extends GeometryInstance {
     public function get_draw_pass_mesh(pass: Int): Mesh;
     public function restart(): Void;
     public function set_draw_pass_mesh(pass: Int, mesh: Mesh): Void;
+    @:native("__new")
+    public function new();
 }

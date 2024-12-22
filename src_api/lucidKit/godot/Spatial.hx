@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Spatial")
 extern class Spatial extends Node {
@@ -50,4 +50,6 @@ extern class Spatial extends Node {
     public function translate(offset: GdVector3): Void;
     public function translate_object_local(offset: GdVector3): Void;
     public function update_gizmo(): Void;
+    @:native("__new")
+    public function new();
 }

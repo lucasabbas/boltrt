@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AABB")
-extern class AABB extends lucidkit.core.MonoObject {
+extern class AABB extends lucidKit.core.MonoObject {
     public var end: Vector3;
     public var position: Vector3;
     public var size: Vector3;

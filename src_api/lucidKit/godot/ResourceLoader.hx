@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ResourceLoader")
 extern class ResourceLoader extends Object {
@@ -10,4 +10,6 @@ extern class ResourceLoader extends Object {
     public function load(path: String, type_hint: String, no_cache: Bool): Resource;
     public function load_interactive(path: String, type_hint: String, no_cache: Bool): ResourceInteractiveLoader;
     public function set_abort_on_missing_resources(abort: Bool): Void;
+    @:native("__new")
+    public function new();
 }

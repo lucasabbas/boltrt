@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Crypto")
 extern class Crypto extends Reference {
@@ -11,4 +11,6 @@ extern class Crypto extends Reference {
     public function hmac_digest(hash_type: Int, key: PoolByteArray, msg: PoolByteArray): PoolByteArray;
     public function sign(hash_type: Int, hash: PoolByteArray, key: CryptoKey): PoolByteArray;
     public function verify(hash_type: Int, hash: PoolByteArray, signature: PoolByteArray, key: CryptoKey): Bool;
+    @:native("__new")
+    public function new();
 }

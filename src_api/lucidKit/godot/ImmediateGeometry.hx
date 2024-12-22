@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ImmediateGeometry")
 extern class ImmediateGeometry extends GeometryInstance {
@@ -12,4 +12,6 @@ extern class ImmediateGeometry extends GeometryInstance {
     public function set_tangent(tangent: Plane): Void;
     public function set_uv(uv: GdVector2): Void;
     public function set_uv2(uv: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

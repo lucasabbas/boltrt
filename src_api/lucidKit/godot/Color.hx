@@ -1,7 +1,7 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Color")
-extern class Color extends lucidkit.core.MonoObject {
+extern class Color extends lucidKit.core.MonoObject {
     public var a: Float;
     public var a8: Int;
     public var b: Float;

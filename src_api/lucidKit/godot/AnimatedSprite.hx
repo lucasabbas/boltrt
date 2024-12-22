@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimatedSprite")
 extern class AnimatedSprite extends Node2D {
@@ -13,4 +13,6 @@ extern class AnimatedSprite extends Node2D {
     public var speed_scale: Float;
     public function play(anim: String, backwards: Bool): Void;
     public function stop(): Void;
+    @:native("__new")
+    public function new();
 }

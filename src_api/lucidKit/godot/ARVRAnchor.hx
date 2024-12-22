@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ARVRAnchor")
 extern class ARVRAnchor extends Spatial {
@@ -8,4 +8,6 @@ extern class ARVRAnchor extends Spatial {
     public function get_mesh(): Mesh;
     public function get_plane(): Plane;
     public function get_size(): Vector3;
+    @:native("__new")
+    public function new();
 }

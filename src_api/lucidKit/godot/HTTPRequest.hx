@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.HTTPRequest")
 extern class HTTPRequest extends Node {
@@ -16,4 +16,6 @@ extern class HTTPRequest extends Node {
     public function request_raw(url: String, custom_headers: PoolStringArray, ssl_validate_domain: Bool, method: Int, request_data_raw: PoolByteArray): Int;
     public function set_http_proxy(host: String, port: Int): Void;
     public function set_https_proxy(host: String, port: Int): Void;
+    @:native("__new")
+    public function new();
 }

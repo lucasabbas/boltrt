@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.NavigationMesh")
 extern class NavigationMesh extends Resource {
@@ -34,4 +34,6 @@ extern class NavigationMesh extends Resource {
     public function get_vertices(): PoolVector3Array;
     public function set_collision_mask_bit(bit: Int, value: Bool): Void;
     public function set_vertices(vertices: PoolVector3Array): Void;
+    @:native("__new")
+    public function new();
 }

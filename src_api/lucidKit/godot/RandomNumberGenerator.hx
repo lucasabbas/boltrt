@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.RandomNumberGenerator")
 extern class RandomNumberGenerator extends Reference {
@@ -10,4 +10,6 @@ extern class RandomNumberGenerator extends Reference {
     public function randi(): Int;
     public function randi_range(from: Int, to: Int): Int;
     public function randomize(): Void;
+    @:native("__new")
+    public function new();
 }

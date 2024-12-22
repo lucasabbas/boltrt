@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Skeleton")
 extern class Skeleton extends Spatial {
@@ -32,4 +32,6 @@ extern class Skeleton extends Spatial {
     public function set_bone_rest(bone_idx: Int, rest: Transform): Void;
     public function unbind_child_node_from_bone(bone_idx: Int, node: Node): Void;
     public function unparent_bone_and_rest(bone_idx: Int): Void;
+    @:native("__new")
+    public function new();
 }

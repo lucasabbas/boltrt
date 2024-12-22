@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationTreePlayer")
 extern class AnimationTreePlayer extends Node {
@@ -63,4 +63,6 @@ extern class AnimationTreePlayer extends Node {
     public function transition_node_set_input_auto_advance(id: String, input_idx: Int, enable: Bool): Void;
     public function transition_node_set_input_count(id: String, count: Int): Void;
     public function transition_node_set_xfade_time(id: String, time_sec: Float): Void;
+    @:native("__new")
+    public function new();
 }

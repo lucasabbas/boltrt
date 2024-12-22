@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.VehicleWheel")
 extern class VehicleWheel extends Spatial {
@@ -20,4 +20,6 @@ extern class VehicleWheel extends Spatial {
     public function get_rpm(): Float;
     public function get_skidinfo(): Float;
     public function is_in_contact(): Bool;
+    @:native("__new")
+    public function new();
 }

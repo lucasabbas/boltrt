@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNodeStateMachineTransition")
 extern class AnimationNodeStateMachineTransition extends Resource {
@@ -8,4 +8,6 @@ extern class AnimationNodeStateMachineTransition extends Resource {
     public var priority: Int;
     public var switch_mode: Int;
     public var xfade_time: Float;
+    @:native("__new")
+    public function new();
 }

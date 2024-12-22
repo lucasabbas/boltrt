@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Resource")
 extern class Resource extends Reference {
@@ -12,4 +12,6 @@ extern class Resource extends Reference {
     public function get_rid(): RID;
     public function setup_local_to_scene(): Void;
     public function take_over_path(path: String): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PhysicsShapeQueryParameters")
 extern class PhysicsShapeQueryParameters extends Reference {
@@ -10,4 +10,6 @@ extern class PhysicsShapeQueryParameters extends Reference {
     public var shape_rid: RID;
     public var transform: Transform;
     public function set_shape(shape: Resource): Void;
+    @:native("__new")
+    public function new();
 }

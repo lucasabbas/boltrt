@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.World")
 extern class World extends Resource {
@@ -8,4 +8,6 @@ extern class World extends Resource {
     public var navigation_map: RID;
     public var scenario: RID;
     public var space: RID;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.KinematicCollision2D")
 extern class KinematicCollision2D extends Reference {
@@ -15,4 +15,6 @@ extern class KinematicCollision2D extends Reference {
     public var remainder: Vector2;
     public var travel: Vector2;
     public function get_angle(up_direction: GdVector2): Float;
+    @:native("__new")
+    public function new();
 }

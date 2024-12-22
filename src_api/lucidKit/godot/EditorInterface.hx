@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorInterface")
 extern class EditorInterface extends Node {
@@ -36,4 +36,6 @@ extern class EditorInterface extends Node {
     public function set_main_screen_editor(name: String): Void;
     public function set_plugin_enabled(plugin: String, enabled: Bool): Void;
     public function stop_playing_scene(): Void;
+    @:native("__new")
+    public function new();
 }

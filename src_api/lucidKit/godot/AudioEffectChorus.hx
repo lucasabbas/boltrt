@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AudioEffectChorus")
 extern class AudioEffectChorus extends AudioEffect {
@@ -41,4 +41,6 @@ extern class AudioEffectChorus extends AudioEffect {
     public function set_voice_level_db(voice_idx: Int, level_db: Float): Void;
     public function set_voice_pan(voice_idx: Int, pan: Float): Void;
     public function set_voice_rate_hz(voice_idx: Int, rate_hz: Float): Void;
+    @:native("__new")
+    public function new();
 }

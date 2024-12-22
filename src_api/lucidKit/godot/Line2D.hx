@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Line2D")
 extern class Line2D extends Node2D {
@@ -21,4 +21,6 @@ extern class Line2D extends Node2D {
     public function get_point_position(index: Int): Vector2;
     public function remove_point(index: Int): Void;
     public function set_point_position(index: Int, position: GdVector2): Void;
+    @:native("__new")
+    public function new();
 }

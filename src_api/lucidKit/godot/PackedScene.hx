@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.PackedScene")
 extern class PackedScene extends Resource {
@@ -7,4 +7,6 @@ extern class PackedScene extends Resource {
     public function get_state(): SceneState;
     public function instance(edit_state: Int): Node;
     public function pack(path: Node): Int;
+    @:native("__new")
+    public function new();
 }

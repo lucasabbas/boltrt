@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.AnimationNodeStateMachine")
 extern class AnimationNodeStateMachine extends AnimationRootNode {
@@ -25,4 +25,6 @@ extern class AnimationNodeStateMachine extends AnimationRootNode {
     public function set_graph_offset(offset: GdVector2): Void;
     public function set_node_position(name: String, position: GdVector2): Void;
     public function set_start_node(name: String): Void;
+    @:native("__new")
+    public function new();
 }

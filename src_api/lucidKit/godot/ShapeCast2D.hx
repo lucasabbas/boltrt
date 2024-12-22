@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ShapeCast2D")
 extern class ShapeCast2D extends Node2D {
@@ -29,4 +29,6 @@ extern class ShapeCast2D extends Node2D {
     public function remove_exception(node: Object): Void;
     public function remove_exception_rid(rid: RID): Void;
     public function set_collision_mask_value(layer_number: Int, value: Bool): Void;
+    @:native("__new")
+    public function new();
 }

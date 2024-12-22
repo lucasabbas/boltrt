@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.CollisionObject")
 extern class CollisionObject extends Spatial {
@@ -27,4 +27,6 @@ extern class CollisionObject extends Spatial {
     public function shape_owner_remove_shape(owner_id: Int, shape_id: Int): Void;
     public function shape_owner_set_disabled(owner_id: Int, disabled: Bool): Void;
     public function shape_owner_set_transform(owner_id: Int, transform: Transform): Void;
+    @:native("__new")
+    public function new();
 }

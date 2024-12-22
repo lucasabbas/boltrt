@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Label")
 extern class Label extends Control {
@@ -18,4 +18,6 @@ extern class Label extends Control {
     public function get_line_height(): Int;
     public function get_total_character_count(): Int;
     public function get_visible_line_count(): Int;
+    @:native("__new")
+    public function new();
 }

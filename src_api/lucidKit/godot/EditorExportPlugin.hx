@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.EditorExportPlugin")
 extern class EditorExportPlugin extends Reference {
@@ -16,4 +16,6 @@ extern class EditorExportPlugin extends Reference {
     public function add_osx_plugin_file(path: String): Void;
     public function add_shared_object(path: String, tags: PoolStringArray): Void;
     public function skip(): Void;
+    @:native("__new")
+    public function new();
 }

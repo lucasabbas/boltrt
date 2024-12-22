@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ColorPickerButton")
 extern class ColorPickerButton extends Button {
@@ -7,4 +7,6 @@ extern class ColorPickerButton extends Button {
     public var toggle_mode: Bool;
     public function get_picker(): ColorPicker;
     public function get_popup(): PopupPanel;
+    @:native("__new")
+    public function new();
 }

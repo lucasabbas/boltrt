@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ParticlesMaterial")
 extern class ParticlesMaterial extends Material {
@@ -70,4 +70,6 @@ extern class ParticlesMaterial extends Material {
     public function set_param(param: Int, value: Float): Void;
     public function set_param_randomness(param: Int, randomness: Float): Void;
     public function set_param_texture(param: Int, texture: Texture): Void;
+    @:native("__new")
+    public function new();
 }

@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.TileMap")
 extern class TileMap extends Node2D {
@@ -45,4 +45,6 @@ extern class TileMap extends Node2D {
     public function update_bitmask_region(start: GdVector2, end: GdVector2): Void;
     public function update_dirty_quadrants(): Void;
     public function world_to_map(world_position: GdVector2): Vector2;
+    @:native("__new")
+    public function new();
 }

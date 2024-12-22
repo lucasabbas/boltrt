@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.Material3D")
 extern class Material3D extends Material {
@@ -112,4 +112,6 @@ extern class Material3D extends Material {
     public function set_feature(feature: Int, enable: Bool): Void;
     public function set_flag(flag: Int, enable: Bool): Void;
     public function set_texture(param: Int, texture: Texture): Void;
+    @:native("__new")
+    public function new();
 }

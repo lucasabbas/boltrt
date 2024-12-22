@@ -1,4 +1,4 @@
-package lucidkit.godot;
+package lucidKit.godot;
 
 @:native("godot.ProjectSettings")
 extern class ProjectSettings extends Object {
@@ -525,4 +525,6 @@ extern class ProjectSettings extends Object {
     public function set_initial_value(name: String, value: Variant): Void;
     public function set_order(name: String, position: Int): Void;
     public function set_setting(name: String, value: Variant): Void;
+    @:native("__new")
+    public function new();
 }
