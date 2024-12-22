@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Occluder" inherits="Spatial" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="resource_changed">
+			<return type="void" />
+			<argument index="0" name="resource" type="Resource" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="shape" type="OccluderShape" setter="set_shape" getter="get_shape">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

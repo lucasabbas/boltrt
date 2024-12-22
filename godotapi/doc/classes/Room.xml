@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Room" inherits="Spatial" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="set_point">
+			<return type="void" />
+			<argument index="0" name="index" type="int" />
+			<argument index="1" name="position" type="Vector3" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="points" type="PoolVector3Array" setter="set_points" getter="get_points" default="PoolVector3Array(  )">
+		</member>
+		<member name="room_simplify" type="float" setter="set_room_simplify" getter="get_room_simplify" default="0.5">
+		</member>
+		<member name="use_default_simplify" type="bool" setter="set_use_default_simplify" getter="get_use_default_simplify" default="true">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="RegExMatch" inherits="Reference" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="get_end" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="name" type="Variant" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="get_group_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_start" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="name" type="Variant" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="get_string" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="name" type="Variant" default="0" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="names" type="Dictionary" setter="" getter="get_names" default="{}">
+		</member>
+		<member name="strings" type="Array" setter="" getter="get_strings" default="[  ]">
+		</member>
+		<member name="subject" type="String" setter="" getter="get_subject" default="&quot;&quot;">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

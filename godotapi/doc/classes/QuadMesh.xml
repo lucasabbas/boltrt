@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="QuadMesh" inherits="PrimitiveMesh" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="center_offset" type="Vector3" setter="set_center_offset" getter="get_center_offset" default="Vector3( 0, 0, 0 )">
+		</member>
+		<member name="size" type="Vector2" setter="set_size" getter="get_size" default="Vector2( 1, 1 )">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

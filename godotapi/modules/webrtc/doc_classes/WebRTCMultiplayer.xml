@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="WebRTCMultiplayer" inherits="NetworkedMultiplayerPeer" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_peer">
+			<return type="int" enum="Error" />
+			<argument index="0" name="peer" type="WebRTCPeerConnection" />
+			<argument index="1" name="peer_id" type="int" />
+			<argument index="2" name="unreliable_lifetime" type="int" default="1" />
+			<description>
+			</description>
+		</method>
+		<method name="close">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="get_peer">
+			<return type="Dictionary" />
+			<argument index="0" name="peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_peers">
+			<return type="Dictionary" />
+			<description>
+			</description>
+		</method>
+		<method name="has_peer">
+			<return type="bool" />
+			<argument index="0" name="peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="initialize">
+			<return type="int" enum="Error" />
+			<argument index="0" name="peer_id" type="int" />
+			<argument index="1" name="server_compatibility" type="bool" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_peer">
+			<return type="void" />
+			<argument index="0" name="peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+	</constants>
+</class>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="ResourceInteractiveLoader" inherits="Reference" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="get_resource">
+			<return type="Resource" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stage" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stage_count" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="poll">
+			<return type="int" enum="Error" />
+			<description>
+			</description>
+		</method>
+		<method name="wait">
+			<return type="int" enum="Error" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="no_subresource_cache" type="bool" setter="set_no_subresource_cache" getter="get_no_subresource_cache">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

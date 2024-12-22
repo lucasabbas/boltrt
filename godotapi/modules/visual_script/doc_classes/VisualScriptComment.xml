@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScriptComment" inherits="VisualScriptNode" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="description" type="String" setter="set_description" getter="get_description" default="&quot;&quot;">
+		</member>
+		<member name="size" type="Vector2" setter="set_size" getter="get_size" default="Vector2( 150, 150 )">
+		</member>
+		<member name="title" type="String" setter="set_title" getter="get_title" default="&quot;Comment&quot;">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

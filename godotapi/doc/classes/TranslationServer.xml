@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="TranslationServer" inherits="Object" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_translation">
+			<return type="void" />
+			<argument index="0" name="translation" type="Translation" />
+			<description>
+			</description>
+		</method>
+		<method name="clear">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="compare_locales" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="locale_a" type="String" />
+			<argument index="1" name="locale_b" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_all_countries" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_all_languages" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_all_scripts" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_country_name" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="country" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_language_name" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="language" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_loaded_locales" qualifiers="const">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="get_locale" qualifiers="const">
+			<return type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_locale_name" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="locale" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_script_name" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="script" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_translation">
+			<return type="void" />
+			<argument index="0" name="translation" type="Translation" />
+			<description>
+			</description>
+		</method>
+		<method name="set_locale">
+			<return type="void" />
+			<argument index="0" name="locale" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="standardize_locale" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="locale" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="translate" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="message" type="String" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+	</constants>
+</class>

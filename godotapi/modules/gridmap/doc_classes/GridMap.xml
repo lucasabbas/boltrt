@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="GridMap" inherits="Spatial" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="clear">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_baked_meshes">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="get_bake_mesh_instance">
+			<return type="RID" />
+			<argument index="0" name="idx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_bake_meshes">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="get_cell_item" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="x" type="int" />
+			<argument index="1" name="y" type="int" />
+			<argument index="2" name="z" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_cell_item_orientation" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="x" type="int" />
+			<argument index="1" name="y" type="int" />
+			<argument index="2" name="z" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_collision_layer_bit" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="bit" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_collision_mask_bit" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="bit" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_meshes" qualifiers="const">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="get_used_cells" qualifiers="const">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="get_used_cells_by_item" qualifiers="const">
+			<return type="Array" />
+			<argument index="0" name="item" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="make_baked_meshes">
+			<return type="void" />
+			<argument index="0" name="gen_lightmap_uv" type="bool" default="false" />
+			<argument index="1" name="lightmap_uv_texel_size" type="float" default="0.1" />
+			<description>
+			</description>
+		</method>
+		<method name="map_to_world" qualifiers="const">
+			<return type="Vector3" />
+			<argument index="0" name="x" type="int" />
+			<argument index="1" name="y" type="int" />
+			<argument index="2" name="z" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="resource_changed">
+			<return type="void" />
+			<argument index="0" name="resource" type="Resource" />
+			<description>
+			</description>
+		</method>
+		<method name="set_cell_item">
+			<return type="void" />
+			<argument index="0" name="x" type="int" />
+			<argument index="1" name="y" type="int" />
+			<argument index="2" name="z" type="int" />
+			<argument index="3" name="item" type="int" />
+			<argument index="4" name="orientation" type="int" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="set_clip">
+			<return type="void" />
+			<argument index="0" name="enabled" type="bool" />
+			<argument index="1" name="clipabove" type="bool" default="true" />
+			<argument index="2" name="floor" type="int" default="0" />
+			<argument index="3" name="axis" type="int" enum="Vector3.Axis" default="0" />
+			<description>
+			</description>
+		</method>
+		<method name="set_collision_layer_bit">
+			<return type="void" />
+			<argument index="0" name="bit" type="int" />
+			<argument index="1" name="value" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="set_collision_mask_bit">
+			<return type="void" />
+			<argument index="0" name="bit" type="int" />
+			<argument index="1" name="value" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="world_to_map" qualifiers="const">
+			<return type="Vector3" />
+			<argument index="0" name="pos" type="Vector3" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="bake_navigation" type="bool" setter="set_bake_navigation" getter="is_baking_navigation" default="false">
+		</member>
+		<member name="cell_center_x" type="bool" setter="set_center_x" getter="get_center_x" default="true">
+		</member>
+		<member name="cell_center_y" type="bool" setter="set_center_y" getter="get_center_y" default="true">
+		</member>
+		<member name="cell_center_z" type="bool" setter="set_center_z" getter="get_center_z" default="true">
+		</member>
+		<member name="cell_octant_size" type="int" setter="set_octant_size" getter="get_octant_size" default="8">
+		</member>
+		<member name="cell_scale" type="float" setter="set_cell_scale" getter="get_cell_scale" default="1.0">
+		</member>
+		<member name="cell_size" type="Vector3" setter="set_cell_size" getter="get_cell_size" default="Vector3( 2, 2, 2 )">
+		</member>
+		<member name="collision_layer" type="int" setter="set_collision_layer" getter="get_collision_layer" default="1">
+		</member>
+		<member name="collision_mask" type="int" setter="set_collision_mask" getter="get_collision_mask" default="1">
+		</member>
+		<member name="mesh_library" type="MeshLibrary" setter="set_mesh_library" getter="get_mesh_library">
+		</member>
+		<member name="navigation_layers" type="int" setter="set_navigation_layers" getter="get_navigation_layers" default="1">
+		</member>
+		<member name="physics_material" type="PhysicsMaterial" setter="set_physics_material" getter="get_physics_material">
+		</member>
+		<member name="use_in_baked_light" type="bool" setter="set_use_in_baked_light" getter="get_use_in_baked_light" default="false">
+		</member>
+	</members>
+	<signals>
+		<signal name="cell_size_changed">
+			<argument index="0" name="cell_size" type="Vector3" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+		<constant name="INVALID_CELL_ITEM" value="-1">
+		</constant>
+	</constants>
+</class>

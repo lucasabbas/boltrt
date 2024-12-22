@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="CSGPrimitive" inherits="CSGShape" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="invert_faces" type="bool" setter="set_invert_faces" getter="is_inverting_faces" default="false">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

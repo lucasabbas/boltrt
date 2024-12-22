@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="PhysicsBody2D" inherits="CollisionObject2D" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_collision_exception_with">
+			<return type="void" />
+			<argument index="0" name="body" type="Node" />
+			<description>
+			</description>
+		</method>
+		<method name="get_collision_exceptions">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_collision_exception_with">
+			<return type="void" />
+			<argument index="0" name="body" type="Node" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="input_pickable" type="bool" setter="set_pickable" getter="is_pickable" overrides="CollisionObject2D" default="false" />
+		<member name="layers" type="int" setter="_set_layers" getter="_get_layers">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

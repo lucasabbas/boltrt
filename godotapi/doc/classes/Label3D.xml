@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Label3D" inherits="GeometryInstance" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="generate_triangle_mesh" qualifiers="const">
+			<return type="TriangleMesh" />
+			<description>
+			</description>
+		</method>
+		<method name="get_draw_flag" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="flag" type="int" enum="Label3D.DrawFlags" />
+			<description>
+			</description>
+		</method>
+		<method name="set_draw_flag">
+			<return type="void" />
+			<argument index="0" name="flag" type="int" enum="Label3D.DrawFlags" />
+			<argument index="1" name="enabled" type="bool" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="alpha_cut" type="int" setter="set_alpha_cut_mode" getter="get_alpha_cut_mode" enum="Label3D.AlphaCutMode" default="0">
+		</member>
+		<member name="alpha_scissor_threshold" type="float" setter="set_alpha_scissor_threshold" getter="get_alpha_scissor_threshold" default="0.5">
+		</member>
+		<member name="autowrap" type="bool" setter="set_autowrap" getter="get_autowrap" default="false">
+		</member>
+		<member name="billboard" type="int" setter="set_billboard_mode" getter="get_billboard_mode" enum="Material3D.BillboardMode" default="0">
+		</member>
+		<member name="double_sided" type="bool" setter="set_draw_flag" getter="get_draw_flag" default="true">
+		</member>
+		<member name="fixed_size" type="bool" setter="set_draw_flag" getter="get_draw_flag" default="false">
+		</member>
+		<member name="font" type="Font" setter="set_font" getter="get_font">
+		</member>
+		<member name="horizontal_alignment" type="int" setter="set_horizontal_alignment" getter="get_horizontal_alignment" enum="Label3D.Align" default="1">
+		</member>
+		<member name="line_spacing" type="float" setter="set_line_spacing" getter="get_line_spacing" default="0.0">
+		</member>
+		<member name="modulate" type="Color" setter="set_modulate" getter="get_modulate" default="Color( 1, 1, 1, 1 )">
+		</member>
+		<member name="no_depth_test" type="bool" setter="set_draw_flag" getter="get_draw_flag" default="false">
+		</member>
+		<member name="offset" type="Vector2" setter="set_offset" getter="get_offset" default="Vector2( 0, 0 )">
+		</member>
+		<member name="outline_modulate" type="Color" setter="set_outline_modulate" getter="get_outline_modulate" default="Color( 0, 0, 0, 1 )">
+		</member>
+		<member name="outline_render_priority" type="int" setter="set_outline_render_priority" getter="get_outline_render_priority" default="-1">
+		</member>
+		<member name="pixel_size" type="float" setter="set_pixel_size" getter="get_pixel_size" default="0.01">
+		</member>
+		<member name="render_priority" type="int" setter="set_render_priority" getter="get_render_priority" default="0">
+		</member>
+		<member name="shaded" type="bool" setter="set_draw_flag" getter="get_draw_flag" default="false">
+		</member>
+		<member name="text" type="String" setter="set_text" getter="get_text" default="&quot;&quot;">
+		</member>
+		<member name="uppercase" type="bool" setter="set_uppercase" getter="is_uppercase" default="false">
+		</member>
+		<member name="vertical_alignment" type="int" setter="set_vertical_alignment" getter="get_vertical_alignment" enum="Label3D.VAlign" default="1">
+		</member>
+		<member name="width" type="float" setter="set_width" getter="get_width" default="500.0">
+		</member>
+	</members>
+	<constants>
+		<constant name="FLAG_SHADED" value="0" enum="DrawFlags">
+		</constant>
+		<constant name="FLAG_DOUBLE_SIDED" value="1" enum="DrawFlags">
+		</constant>
+		<constant name="FLAG_DISABLE_DEPTH_TEST" value="2" enum="DrawFlags">
+		</constant>
+		<constant name="FLAG_FIXED_SIZE" value="3" enum="DrawFlags">
+		</constant>
+		<constant name="FLAG_MAX" value="4" enum="DrawFlags">
+		</constant>
+		<constant name="ALPHA_CUT_DISABLED" value="0" enum="AlphaCutMode">
+		</constant>
+		<constant name="ALPHA_CUT_DISCARD" value="1" enum="AlphaCutMode">
+		</constant>
+		<constant name="ALPHA_CUT_OPAQUE_PREPASS" value="2" enum="AlphaCutMode">
+		</constant>
+		<constant name="ALIGN_LEFT" value="0" enum="Align">
+		</constant>
+		<constant name="ALIGN_CENTER" value="1" enum="Align">
+		</constant>
+		<constant name="ALIGN_RIGHT" value="2" enum="Align">
+		</constant>
+		<constant name="ALIGN_FILL" value="3" enum="Align">
+		</constant>
+		<constant name="VALIGN_TOP" value="0" enum="VAlign">
+		</constant>
+		<constant name="VALIGN_CENTER" value="1" enum="VAlign">
+		</constant>
+		<constant name="VALIGN_BOTTOM" value="2" enum="VAlign">
+		</constant>
+		<constant name="VALIGN_FILL" value="3" enum="VAlign">
+		</constant>
+	</constants>
+</class>

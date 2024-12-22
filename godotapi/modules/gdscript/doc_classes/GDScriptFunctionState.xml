@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="GDScriptFunctionState" inherits="Reference" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="is_valid" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="extended_check" type="bool" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="resume">
+			<return type="Variant" />
+			<argument index="0" name="arg" type="Variant" default="null" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<signals>
+		<signal name="completed">
+			<argument index="0" name="result" type="Variant" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+	</constants>
+</class>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="CSGBox" inherits="CSGPrimitive" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="depth" type="float" setter="set_depth" getter="get_depth" default="2.0">
+		</member>
+		<member name="height" type="float" setter="set_height" getter="get_height" default="2.0">
+		</member>
+		<member name="material" type="Material" setter="set_material" getter="get_material">
+		</member>
+		<member name="width" type="float" setter="set_width" getter="get_width" default="2.0">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

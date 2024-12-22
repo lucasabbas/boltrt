@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="NavigationPolygonInstance" inherits="Node2D" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="get_region_rid" qualifiers="const">
+			<return type="RID" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="enabled" type="bool" setter="set_enabled" getter="is_enabled" default="true">
+		</member>
+		<member name="enter_cost" type="float" setter="set_enter_cost" getter="get_enter_cost" default="0.0">
+		</member>
+		<member name="navigation_layers" type="int" setter="set_navigation_layers" getter="get_navigation_layers" default="1">
+		</member>
+		<member name="navpoly" type="NavigationPolygon" setter="set_navigation_polygon" getter="get_navigation_polygon">
+		</member>
+		<member name="travel_cost" type="float" setter="set_travel_cost" getter="get_travel_cost" default="1.0">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

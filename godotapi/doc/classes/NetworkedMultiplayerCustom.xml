@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="NetworkedMultiplayerCustom" inherits="NetworkedMultiplayerPeer" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="deliver_packet">
+			<return type="void" />
+			<argument index="0" name="buffer" type="PoolByteArray" />
+			<argument index="1" name="from_peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="initialize">
+			<return type="void" />
+			<argument index="0" name="self_peer_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="set_connection_status">
+			<return type="void" />
+			<argument index="0" name="connection_status" type="int" enum="NetworkedMultiplayerPeer.ConnectionStatus" />
+			<description>
+			</description>
+		</method>
+		<method name="set_max_packet_size">
+			<return type="void" />
+			<argument index="0" name="max_packet_size" type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<signals>
+		<signal name="packet_generated">
+			<argument index="0" name="peer_id" type="int" />
+			<argument index="1" name="buffer" type="PoolByteArray" />
+			<argument index="2" name="transfer_mode" type="int" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+	</constants>
+</class>

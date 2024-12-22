@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="NoiseTexture" inherits="Texture" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="as_normalmap" type="bool" setter="set_as_normalmap" getter="is_normalmap" default="false">
+		</member>
+		<member name="bump_strength" type="float" setter="set_bump_strength" getter="get_bump_strength" default="8.0">
+		</member>
+		<member name="flags" type="int" setter="set_flags" getter="get_flags" overrides="Texture" default="7" />
+		<member name="height" type="int" setter="set_height" getter="get_height" default="512">
+		</member>
+		<member name="noise" type="OpenSimplexNoise" setter="set_noise" getter="get_noise">
+		</member>
+		<member name="noise_offset" type="Vector2" setter="set_noise_offset" getter="get_noise_offset" default="Vector2( 0, 0 )">
+		</member>
+		<member name="seamless" type="bool" setter="set_seamless" getter="get_seamless" default="false">
+		</member>
+		<member name="width" type="int" setter="set_width" getter="get_width" default="512">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

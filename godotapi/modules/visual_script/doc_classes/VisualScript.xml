@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScript" inherits="Script" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_custom_signal">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="add_function">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="add_node">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<argument index="2" name="node" type="VisualScriptNode" />
+			<argument index="3" name="position" type="Vector2" default="Vector2( 0, 0 )" />
+			<description>
+			</description>
+		</method>
+		<method name="add_variable">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="default_value" type="Variant" default="null" />
+			<argument index="2" name="export" type="bool" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_add_argument">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="type" type="int" enum="Variant.Type" />
+			<argument index="2" name="argname" type="String" />
+			<argument index="3" name="index" type="int" default="-1" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_get_argument_count" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_get_argument_name" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_get_argument_type" qualifiers="const">
+			<return type="int" enum="Variant.Type" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_remove_argument">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_set_argument_name">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<argument index="2" name="argname" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_set_argument_type">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<argument index="2" name="type" type="int" enum="Variant.Type" />
+			<description>
+			</description>
+		</method>
+		<method name="custom_signal_swap_argument">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="argidx" type="int" />
+			<argument index="2" name="withidx" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="data_connect">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_port" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<argument index="4" name="to_port" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="data_disconnect">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_port" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<argument index="4" name="to_port" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_function_node_id" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_function_scroll" qualifiers="const">
+			<return type="Vector2" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_node" qualifiers="const">
+			<return type="VisualScriptNode" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_node_position" qualifiers="const">
+			<return type="Vector2" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="get_variable_default_value" qualifiers="const">
+			<return type="Variant" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_variable_export" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_variable_info" qualifiers="const">
+			<return type="Dictionary" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_custom_signal" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_data_connection" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_port" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<argument index="4" name="to_port" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="has_function" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_node" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="has_sequence_connection" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_output" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="has_variable" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_custom_signal">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_function">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_node">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_variable">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_custom_signal">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="new_name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_function">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="new_name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_variable">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="new_name" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="sequence_connect">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_output" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="sequence_disconnect">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="from_node" type="int" />
+			<argument index="2" name="from_output" type="int" />
+			<argument index="3" name="to_node" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="set_function_scroll">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="ofs" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="set_instance_base_type">
+			<return type="void" />
+			<argument index="0" name="type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="set_node_position">
+			<return type="void" />
+			<argument index="0" name="func" type="String" />
+			<argument index="1" name="id" type="int" />
+			<argument index="2" name="position" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="set_variable_default_value">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="value" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="set_variable_export">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="enable" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="set_variable_info">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="value" type="Dictionary" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<signals>
+		<signal name="node_ports_changed">
+			<argument index="0" name="function" type="String" />
+			<argument index="1" name="id" type="int" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+	</constants>
+</class>

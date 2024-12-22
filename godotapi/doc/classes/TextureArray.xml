@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="TextureArray" inherits="TextureLayered" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="create">
+			<return type="void" />
+			<argument index="0" name="width" type="int" />
+			<argument index="1" name="height" type="int" />
+			<argument index="2" name="depth" type="int" />
+			<argument index="3" name="format" type="int" enum="Image.Format" />
+			<argument index="4" name="flags" type="int" default="7" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+	</constants>
+</class>

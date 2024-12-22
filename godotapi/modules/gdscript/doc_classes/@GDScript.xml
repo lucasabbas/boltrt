@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="@GDScript" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="Color8">
+			<return type="Color" />
+			<argument index="0" name="r8" type="int" />
+			<argument index="1" name="g8" type="int" />
+			<argument index="2" name="b8" type="int" />
+			<argument index="3" name="a8" type="int" default="255" />
+			<description>
+			</description>
+		</method>
+		<method name="ColorN">
+			<return type="Color" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="alpha" type="float" default="1.0" />
+			<description>
+			</description>
+		</method>
+		<method name="abs">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="acos">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="asin">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="assert">
+			<return type="void" />
+			<argument index="0" name="condition" type="bool" />
+			<argument index="1" name="message" type="String" default="&quot;&quot;" />
+			<description>
+			</description>
+		</method>
+		<method name="atan">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="atan2">
+			<return type="float" />
+			<argument index="0" name="y" type="float" />
+			<argument index="1" name="x" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="bytes2var">
+			<return type="Variant" />
+			<argument index="0" name="bytes" type="PoolByteArray" />
+			<argument index="1" name="allow_objects" type="bool" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="cartesian2polar">
+			<return type="Vector2" />
+			<argument index="0" name="x" type="float" />
+			<argument index="1" name="y" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="ceil">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="char">
+			<return type="String" />
+			<argument index="0" name="code" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="clamp">
+			<return type="float" />
+			<argument index="0" name="value" type="float" />
+			<argument index="1" name="min" type="float" />
+			<argument index="2" name="max" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="convert">
+			<return type="Variant" />
+			<argument index="0" name="what" type="Variant" />
+			<argument index="1" name="type" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="cos">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="cosh">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="db2linear">
+			<return type="float" />
+			<argument index="0" name="db" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="decimals">
+			<return type="int" />
+			<argument index="0" name="step" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="dectime">
+			<return type="float" />
+			<argument index="0" name="value" type="float" />
+			<argument index="1" name="amount" type="float" />
+			<argument index="2" name="step" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="deep_equal">
+			<return type="bool" />
+			<argument index="0" name="a" type="Variant" />
+			<argument index="1" name="b" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="deg2rad">
+			<return type="float" />
+			<argument index="0" name="deg" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="dict2inst">
+			<return type="Object" />
+			<argument index="0" name="dict" type="Dictionary" />
+			<description>
+			</description>
+		</method>
+		<method name="ease">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<argument index="1" name="curve" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="exp">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="floor">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="fmod">
+			<return type="float" />
+			<argument index="0" name="a" type="float" />
+			<argument index="1" name="b" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="fposmod">
+			<return type="float" />
+			<argument index="0" name="a" type="float" />
+			<argument index="1" name="b" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="funcref">
+			<return type="FuncRef" />
+			<argument index="0" name="instance" type="Object" />
+			<argument index="1" name="funcname" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stack">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="hash">
+			<return type="int" />
+			<argument index="0" name="var" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="inst2dict">
+			<return type="Dictionary" />
+			<argument index="0" name="inst" type="Object" />
+			<description>
+			</description>
+		</method>
+		<method name="instance_from_id">
+			<return type="Object" />
+			<argument index="0" name="instance_id" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="inverse_lerp">
+			<return type="float" />
+			<argument index="0" name="from" type="float" />
+			<argument index="1" name="to" type="float" />
+			<argument index="2" name="weight" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="is_equal_approx">
+			<return type="bool" />
+			<argument index="0" name="a" type="float" />
+			<argument index="1" name="b" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="is_inf">
+			<return type="bool" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="is_instance_valid">
+			<return type="bool" />
+			<argument index="0" name="instance" type="Object" />
+			<description>
+			</description>
+		</method>
+		<method name="is_nan">
+			<return type="bool" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="is_zero_approx">
+			<return type="bool" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="len">
+			<return type="int" />
+			<argument index="0" name="var" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="lerp">
+			<return type="Variant" />
+			<argument index="0" name="from" type="Variant" />
+			<argument index="1" name="to" type="Variant" />
+			<argument index="2" name="weight" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="lerp_angle">
+			<return type="float" />
+			<argument index="0" name="from" type="float" />
+			<argument index="1" name="to" type="float" />
+			<argument index="2" name="weight" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="linear2db">
+			<return type="float" />
+			<argument index="0" name="nrg" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="load">
+			<return type="Resource" />
+			<argument index="0" name="path" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="log">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="max">
+			<return type="float" />
+			<argument index="0" name="a" type="float" />
+			<argument index="1" name="b" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="min">
+			<return type="float" />
+			<argument index="0" name="a" type="float" />
+			<argument index="1" name="b" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="move_toward">
+			<return type="float" />
+			<argument index="0" name="from" type="float" />
+			<argument index="1" name="to" type="float" />
+			<argument index="2" name="delta" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="nearest_po2">
+			<return type="int" />
+			<argument index="0" name="value" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="ord">
+			<return type="int" />
+			<argument index="0" name="char" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="parse_json">
+			<return type="Variant" />
+			<argument index="0" name="json" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="polar2cartesian">
+			<return type="Vector2" />
+			<argument index="0" name="r" type="float" />
+			<argument index="1" name="th" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="posmod">
+			<return type="int" />
+			<argument index="0" name="a" type="int" />
+			<argument index="1" name="b" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="pow">
+			<return type="float" />
+			<argument index="0" name="base" type="float" />
+			<argument index="1" name="exp" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="preload">
+			<return type="Resource" />
+			<argument index="0" name="path" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="print" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="print_debug" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="print_stack">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="printerr" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="printraw" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="prints" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="printt" qualifiers="vararg">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="push_error">
+			<return type="void" />
+			<argument index="0" name="message" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="push_warning">
+			<return type="void" />
+			<argument index="0" name="message" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rad2deg">
+			<return type="float" />
+			<argument index="0" name="rad" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="rand_range">
+			<return type="float" />
+			<argument index="0" name="from" type="float" />
+			<argument index="1" name="to" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="rand_seed">
+			<return type="Array" />
+			<argument index="0" name="seed" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="randf">
+			<return type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="randi">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="randomize">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="range" qualifiers="vararg">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="range_lerp">
+			<return type="float" />
+			<argument index="0" name="value" type="float" />
+			<argument index="1" name="istart" type="float" />
+			<argument index="2" name="istop" type="float" />
+			<argument index="3" name="ostart" type="float" />
+			<argument index="4" name="ostop" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="round">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="seed">
+			<return type="void" />
+			<argument index="0" name="seed" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="sign">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="sin">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="sinh">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="smoothstep">
+			<return type="float" />
+			<argument index="0" name="from" type="float" />
+			<argument index="1" name="to" type="float" />
+			<argument index="2" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="sqrt">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="step_decimals">
+			<return type="int" />
+			<argument index="0" name="step" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="stepify">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<argument index="1" name="step" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="str" qualifiers="vararg">
+			<return type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="str2var">
+			<return type="Variant" />
+			<argument index="0" name="string" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="tan">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="tanh">
+			<return type="float" />
+			<argument index="0" name="s" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="to_json">
+			<return type="String" />
+			<argument index="0" name="var" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="type_exists">
+			<return type="bool" />
+			<argument index="0" name="type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="typeof">
+			<return type="int" />
+			<argument index="0" name="what" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="validate_json">
+			<return type="String" />
+			<argument index="0" name="json" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="var2bytes">
+			<return type="PoolByteArray" />
+			<argument index="0" name="var" type="Variant" />
+			<argument index="1" name="full_objects" type="bool" default="false" />
+			<description>
+			</description>
+		</method>
+		<method name="var2str">
+			<return type="String" />
+			<argument index="0" name="var" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="weakref">
+			<return type="WeakRef" />
+			<argument index="0" name="obj" type="Object" />
+			<description>
+			</description>
+		</method>
+		<method name="wrapf">
+			<return type="float" />
+			<argument index="0" name="value" type="float" />
+			<argument index="1" name="min" type="float" />
+			<argument index="2" name="max" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="wrapi">
+			<return type="int" />
+			<argument index="0" name="value" type="int" />
+			<argument index="1" name="min" type="int" />
+			<argument index="2" name="max" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="yield">
+			<return type="GDScriptFunctionState" />
+			<argument index="0" name="object" type="Object" default="null" />
+			<argument index="1" name="signal" type="String" default="&quot;&quot;" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<constants>
+		<constant name="PI" value="3.141593">
+		</constant>
+		<constant name="TAU" value="6.283185">
+		</constant>
+		<constant name="INF" value="1.#INF">
+		</constant>
+		<constant name="NAN" value="nan">
+		</constant>
+	</constants>
+</class>

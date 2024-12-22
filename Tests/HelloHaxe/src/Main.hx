@@ -2,8 +2,8 @@ package;
 
 import sys.io.File;
 import sys.FileSystem;
-import lucidKit.core.Vector2;
-import lucidKit.core.Vector3;
+import lucidKit.godot.Vector2;
+import lucidKit.godot.Vector3;
 import haxe.ds.Vector;
 import lucidKit.godot.GodotObject;
 import lucidKit.App;

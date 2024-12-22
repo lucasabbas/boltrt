@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScriptBuiltinFunc" inherits="VisualScriptNode" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="function" type="int" setter="set_func" getter="get_func" enum="VisualScriptBuiltinFunc.BuiltinFunc" default="0">
+		</member>
+	</members>
+	<constants>
+		<constant name="MATH_SIN" value="0" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_COS" value="1" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_TAN" value="2" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_SINH" value="3" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_COSH" value="4" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_TANH" value="5" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ASIN" value="6" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ACOS" value="7" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ATAN" value="8" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ATAN2" value="9" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_SQRT" value="10" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_FMOD" value="11" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_FPOSMOD" value="12" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_FLOOR" value="13" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_CEIL" value="14" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ROUND" value="15" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ABS" value="16" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_SIGN" value="17" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_POW" value="18" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_LOG" value="19" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_EXP" value="20" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ISNAN" value="21" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_ISINF" value="22" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_EASE" value="23" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_DECIMALS" value="24" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_STEPIFY" value="25" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_LERP" value="26" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_INVERSE_LERP" value="27" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RANGE_LERP" value="28" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_MOVE_TOWARD" value="29" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_DECTIME" value="30" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RANDOMIZE" value="31" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RAND" value="32" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RANDF" value="33" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RANDOM" value="34" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_SEED" value="35" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RANDSEED" value="36" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_DEG2RAD" value="37" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_RAD2DEG" value="38" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_LINEAR2DB" value="39" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_DB2LINEAR" value="40" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_POLAR2CARTESIAN" value="41" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_CARTESIAN2POLAR" value="42" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_WRAP" value="43" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_WRAPF" value="44" enum="BuiltinFunc">
+		</constant>
+		<constant name="LOGIC_MAX" value="45" enum="BuiltinFunc">
+		</constant>
+		<constant name="LOGIC_MIN" value="46" enum="BuiltinFunc">
+		</constant>
+		<constant name="LOGIC_CLAMP" value="47" enum="BuiltinFunc">
+		</constant>
+		<constant name="LOGIC_NEAREST_PO2" value="48" enum="BuiltinFunc">
+		</constant>
+		<constant name="OBJ_WEAKREF" value="49" enum="BuiltinFunc">
+		</constant>
+		<constant name="FUNC_FUNCREF" value="50" enum="BuiltinFunc">
+		</constant>
+		<constant name="TYPE_CONVERT" value="51" enum="BuiltinFunc">
+		</constant>
+		<constant name="TYPE_OF" value="52" enum="BuiltinFunc">
+		</constant>
+		<constant name="TYPE_EXISTS" value="53" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_CHAR" value="54" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_STR" value="55" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_PRINT" value="56" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_PRINTERR" value="57" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_PRINTRAW" value="58" enum="BuiltinFunc">
+		</constant>
+		<constant name="VAR_TO_STR" value="59" enum="BuiltinFunc">
+		</constant>
+		<constant name="STR_TO_VAR" value="60" enum="BuiltinFunc">
+		</constant>
+		<constant name="VAR_TO_BYTES" value="61" enum="BuiltinFunc">
+		</constant>
+		<constant name="BYTES_TO_VAR" value="62" enum="BuiltinFunc">
+		</constant>
+		<constant name="COLORN" value="63" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_SMOOTHSTEP" value="64" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_POSMOD" value="65" enum="BuiltinFunc">
+		</constant>
+		<constant name="MATH_LERP_ANGLE" value="66" enum="BuiltinFunc">
+		</constant>
+		<constant name="TEXT_ORD" value="67" enum="BuiltinFunc">
+		</constant>
+		<constant name="FUNC_MAX" value="68" enum="BuiltinFunc">
+		</constant>
+	</constants>
+</class>

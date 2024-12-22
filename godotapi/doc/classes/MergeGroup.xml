@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="MergeGroup" inherits="Spatial" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="get_param">
+			<return type="int" />
+			<argument index="0" name="param" type="int" enum="MergeGroup.Param" />
+			<description>
+			</description>
+		</method>
+		<method name="get_param_enabled">
+			<return type="bool" />
+			<argument index="0" name="param" type="int" enum="MergeGroup.ParamEnabled" />
+			<description>
+			</description>
+		</method>
+		<method name="merge_meshes">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="set_param">
+			<return type="void" />
+			<argument index="0" name="param" type="int" enum="MergeGroup.Param" />
+			<argument index="1" name="value" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="set_param_enabled">
+			<return type="void" />
+			<argument index="0" name="param" type="int" enum="MergeGroup.ParamEnabled" />
+			<argument index="1" name="value" type="bool" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="auto_merge" type="bool" setter="set_param_enabled" getter="get_param_enabled" default="true">
+		</member>
+		<member name="shadow_proxy" type="bool" setter="set_param_enabled" getter="get_param_enabled" default="true">
+		</member>
+	</members>
+	<constants>
+		<constant name="PARAM_ENABLED_AUTO_MERGE" value="0" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_ENABLED_SHADOW_PROXY" value="1" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_ENABLED_CONVERT_CSGS" value="2" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_ENABLED_CONVERT_GRIDMAPS" value="3" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_ENABLED_COMBINE_SURFACES" value="4" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_ENABLED_CLEAN_MESHES" value="5" enum="ParamEnabled">
+		</constant>
+		<constant name="PARAM_GROUP_SIZE" value="0" enum="Param">
+		</constant>
+		<constant name="PARAM_SPLITS_HORIZONTAL" value="1" enum="Param">
+		</constant>
+		<constant name="PARAM_SPLITS_VERTICAL" value="2" enum="Param">
+		</constant>
+		<constant name="PARAM_MIN_SPLIT_POLY_COUNT" value="3" enum="Param">
+		</constant>
+	</constants>
+</class>

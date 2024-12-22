@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScriptConstant" inherits="VisualScriptNode" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="type" type="int" setter="set_constant_type" getter="get_constant_type" enum="Variant.Type" default="0">
+		</member>
+		<member name="value" type="Variant" setter="set_constant_value" getter="get_constant_value">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

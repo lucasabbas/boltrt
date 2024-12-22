@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="RoomManager" inherits="Spatial" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="rooms_clear">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="rooms_convert">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="active" type="bool" setter="rooms_set_active" getter="rooms_get_active" default="true">
+		</member>
+		<member name="debug_sprawl" type="bool" setter="set_debug_sprawl" getter="get_debug_sprawl" default="false">
+		</member>
+		<member name="default_portal_margin" type="float" setter="set_default_portal_margin" getter="get_default_portal_margin" default="1.0">
+		</member>
+		<member name="gameplay_monitor" type="bool" setter="set_gameplay_monitor_enabled" getter="get_gameplay_monitor_enabled" default="false">
+		</member>
+		<member name="merge_meshes" type="bool" setter="set_merge_meshes" getter="get_merge_meshes" default="false">
+		</member>
+		<member name="overlap_warning_threshold" type="int" setter="set_overlap_warning_threshold" getter="get_overlap_warning_threshold" default="1">
+		</member>
+		<member name="portal_depth_limit" type="int" setter="set_portal_depth_limit" getter="get_portal_depth_limit" default="16">
+		</member>
+		<member name="preview_camera" type="NodePath" setter="set_preview_camera_path" getter="get_preview_camera_path" default="NodePath(&quot;&quot;)">
+		</member>
+		<member name="process_priority" type="int" setter="set_process_priority" getter="get_process_priority" overrides="Node" default="10000" />
+		<member name="pvs_mode" type="int" setter="set_pvs_mode" getter="get_pvs_mode" enum="RoomManager.PVSMode" default="1">
+		</member>
+		<member name="roaming_expansion_margin" type="float" setter="set_roaming_expansion_margin" getter="get_roaming_expansion_margin" default="1.0">
+		</member>
+		<member name="room_simplify" type="float" setter="set_room_simplify" getter="get_room_simplify" default="0.5">
+		</member>
+		<member name="roomlist" type="NodePath" setter="set_roomlist_path" getter="get_roomlist_path" default="NodePath(&quot;&quot;)">
+		</member>
+		<member name="show_margins" type="bool" setter="set_show_margins" getter="get_show_margins" default="true">
+		</member>
+		<member name="use_secondary_pvs" type="bool" setter="set_use_secondary_pvs" getter="get_use_secondary_pvs" default="false">
+		</member>
+	</members>
+	<constants>
+		<constant name="PVS_MODE_DISABLED" value="0" enum="PVSMode">
+		</constant>
+		<constant name="PVS_MODE_PARTIAL" value="1" enum="PVSMode">
+		</constant>
+		<constant name="PVS_MODE_FULL" value="2" enum="PVSMode">
+		</constant>
+	</constants>
+</class>

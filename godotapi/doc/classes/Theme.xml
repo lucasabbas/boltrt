@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Theme" inherits="Resource" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="add_type">
+			<return type="void" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_color">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_constant">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_font">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_icon">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_stylebox">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_theme_item">
+			<return type="void" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="clear_type_variation">
+			<return type="void" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="copy_default_theme">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="copy_theme">
+			<return type="void" />
+			<argument index="0" name="other" type="Theme" />
+			<description>
+			</description>
+		</method>
+		<method name="get_color" qualifiers="const">
+			<return type="Color" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_color_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_color_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_constant" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_constant_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_constant_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_font" qualifiers="const">
+			<return type="Font" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_font_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_font_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_icon" qualifiers="const">
+			<return type="Texture" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_icon_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_icon_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stylebox" qualifiers="const">
+			<return type="StyleBox" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stylebox_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_stylebox_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<description>
+			</description>
+		</method>
+		<method name="get_theme_item" qualifiers="const">
+			<return type="Variant" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_theme_item_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_theme_item_types" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<description>
+			</description>
+		</method>
+		<method name="get_type_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_type_variation_base" qualifiers="const">
+			<return type="String" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_type_variation_list" qualifiers="const">
+			<return type="PoolStringArray" />
+			<argument index="0" name="base_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_color" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_constant" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_default_font" qualifiers="const">
+			<return type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="has_font" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_icon" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_stylebox" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="has_theme_item" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="is_type_variation" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="theme_type" type="String" />
+			<argument index="1" name="base_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="merge_with">
+			<return type="void" />
+			<argument index="0" name="other" type="Theme" />
+			<description>
+			</description>
+		</method>
+		<method name="remove_type">
+			<return type="void" />
+			<argument index="0" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_color">
+			<return type="void" />
+			<argument index="0" name="old_name" type="String" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_constant">
+			<return type="void" />
+			<argument index="0" name="old_name" type="String" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_font">
+			<return type="void" />
+			<argument index="0" name="old_name" type="String" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_icon">
+			<return type="void" />
+			<argument index="0" name="old_name" type="String" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_stylebox">
+			<return type="void" />
+			<argument index="0" name="old_name" type="String" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="rename_theme_item">
+			<return type="void" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="old_name" type="String" />
+			<argument index="2" name="name" type="String" />
+			<argument index="3" name="theme_type" type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="set_color">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<argument index="2" name="color" type="Color" />
+			<description>
+			</description>
+		</method>
+		<method name="set_constant">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<argument index="2" name="constant" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="set_font">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<argument index="2" name="font" type="Font" />
+			<description>
+			</description>
+		</method>
+		<method name="set_icon">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<argument index="2" name="texture" type="Texture" />
+			<description>
+			</description>
+		</method>
+		<method name="set_stylebox">
+			<return type="void" />
+			<argument index="0" name="name" type="String" />
+			<argument index="1" name="theme_type" type="String" />
+			<argument index="2" name="texture" type="StyleBox" />
+			<description>
+			</description>
+		</method>
+		<method name="set_theme_item">
+			<return type="void" />
+			<argument index="0" name="data_type" type="int" enum="Theme.DataType" />
+			<argument index="1" name="name" type="String" />
+			<argument index="2" name="theme_type" type="String" />
+			<argument index="3" name="value" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="set_type_variation">
+			<return type="void" />
+			<argument index="0" name="theme_type" type="String" />
+			<argument index="1" name="base_type" type="String" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="default_font" type="Font" setter="set_default_font" getter="get_default_font">
+		</member>
+	</members>
+	<constants>
+		<constant name="DATA_TYPE_COLOR" value="0" enum="DataType">
+		</constant>
+		<constant name="DATA_TYPE_CONSTANT" value="1" enum="DataType">
+		</constant>
+		<constant name="DATA_TYPE_FONT" value="2" enum="DataType">
+		</constant>
+		<constant name="DATA_TYPE_ICON" value="3" enum="DataType">
+		</constant>
+		<constant name="DATA_TYPE_STYLEBOX" value="4" enum="DataType">
+		</constant>
+		<constant name="DATA_TYPE_MAX" value="5" enum="DataType">
+		</constant>
+	</constants>
+</class>

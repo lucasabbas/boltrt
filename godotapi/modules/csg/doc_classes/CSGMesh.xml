@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="CSGMesh" inherits="CSGPrimitive" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="material" type="Material" setter="set_material" getter="get_material">
+		</member>
+		<member name="mesh" type="Mesh" setter="set_mesh" getter="get_mesh">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

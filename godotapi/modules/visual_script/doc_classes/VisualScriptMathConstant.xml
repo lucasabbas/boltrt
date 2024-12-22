@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScriptMathConstant" inherits="VisualScriptNode" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="constant" type="int" setter="set_math_constant" getter="get_math_constant" enum="VisualScriptMathConstant.MathConstant" default="0">
+		</member>
+	</members>
+	<constants>
+		<constant name="MATH_CONSTANT_ONE" value="0" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_PI" value="1" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_HALF_PI" value="2" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_TAU" value="3" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_E" value="4" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_SQRT2" value="5" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_INF" value="6" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_NAN" value="7" enum="MathConstant">
+		</constant>
+		<constant name="MATH_CONSTANT_MAX" value="8" enum="MathConstant">
+		</constant>
+	</constants>
+</class>

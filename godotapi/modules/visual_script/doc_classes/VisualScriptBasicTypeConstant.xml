@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="VisualScriptBasicTypeConstant" inherits="VisualScriptNode" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<members>
+		<member name="basic_type" type="int" setter="set_basic_type" getter="get_basic_type" enum="Variant.Type" default="0">
+		</member>
+		<member name="constant" type="String" setter="set_basic_type_constant" getter="get_basic_type_constant">
+		</member>
+	</members>
+	<constants>
+	</constants>
+</class>

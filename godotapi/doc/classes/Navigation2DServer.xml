@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Navigation2DServer" inherits="Object" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="agent_create" qualifiers="const">
+			<return type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_get_map" qualifiers="const">
+			<return type="RID" />
+			<argument index="0" name="agent" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_is_map_changed" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="agent" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_callback" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="object_id" type="int" />
+			<argument index="2" name="method" type="String" />
+			<argument index="3" name="userdata" type="Variant" default="null" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_map" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_max_neighbors" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="count" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_max_speed" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="max_speed" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_neighbor_dist" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="dist" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_position" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="position" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_radius" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="radius" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_target_velocity" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="target_velocity" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_time_horizon" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="time" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="agent_set_velocity" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="agent" type="RID" />
+			<argument index="1" name="velocity" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="free_rid" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="rid" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="get_maps" qualifiers="const">
+			<return type="Array" />
+			<description>
+			</description>
+		</method>
+		<method name="map_create" qualifiers="const">
+			<return type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_force_update">
+			<return type="void" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_agents" qualifiers="const">
+			<return type="Array" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_cell_height" qualifiers="const">
+			<return type="float" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_cell_size" qualifiers="const">
+			<return type="float" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_closest_point" qualifiers="const">
+			<return type="Vector2" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="to_point" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_closest_point_owner" qualifiers="const">
+			<return type="RID" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="to_point" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_edge_connection_margin" qualifiers="const">
+			<return type="float" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_path" qualifiers="const">
+			<return type="PoolVector2Array" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="origin" type="Vector2" />
+			<argument index="2" name="destination" type="Vector2" />
+			<argument index="3" name="optimize" type="bool" />
+			<argument index="4" name="navigation_layers" type="int" default="1" />
+			<description>
+			</description>
+		</method>
+		<method name="map_get_regions" qualifiers="const">
+			<return type="Array" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_is_active" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="map_set_active" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="active" type="bool" />
+			<description>
+			</description>
+		</method>
+		<method name="map_set_cell_height" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="cell_height" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="map_set_cell_size" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="cell_size" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="map_set_edge_connection_margin" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="map" type="RID" />
+			<argument index="1" name="margin" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="region_create" qualifiers="const">
+			<return type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_connection_pathway_end" qualifiers="const">
+			<return type="Vector2" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="connection" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_connection_pathway_start" qualifiers="const">
+			<return type="Vector2" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="connection" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_connections_count" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="region" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_enter_cost" qualifiers="const">
+			<return type="float" />
+			<argument index="0" name="region" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_map" qualifiers="const">
+			<return type="RID" />
+			<argument index="0" name="region" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_navigation_layers" qualifiers="const">
+			<return type="int" />
+			<argument index="0" name="region" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_get_travel_cost" qualifiers="const">
+			<return type="float" />
+			<argument index="0" name="region" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_owns_point" qualifiers="const">
+			<return type="bool" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="point" type="Vector2" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_enter_cost" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="enter_cost" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_map" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="map" type="RID" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_navigation_layers" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="navigation_layers" type="int" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_navpoly" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="nav_poly" type="NavigationPolygon" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_transform" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="transform" type="Transform2D" />
+			<description>
+			</description>
+		</method>
+		<method name="region_set_travel_cost" qualifiers="const">
+			<return type="void" />
+			<argument index="0" name="region" type="RID" />
+			<argument index="1" name="travel_cost" type="float" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<signals>
+		<signal name="map_changed">
+			<argument index="0" name="map" type="RID" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+	</constants>
+</class>

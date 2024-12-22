@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="ResourceImporter" inherits="Reference" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+	</methods>
+	<constants>
+		<constant name="IMPORT_ORDER_DEFAULT" value="0" enum="ImportOrder">
+		</constant>
+		<constant name="IMPORT_ORDER_SCENE" value="100" enum="ImportOrder">
+		</constant>
+	</constants>
+</class>

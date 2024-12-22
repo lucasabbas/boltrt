@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="WebSocketClient" inherits="WebSocketMultiplayerPeer" version="3.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../doc/class.xsd">
+	<brief_description>
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="connect_to_url">
+			<return type="int" enum="Error" />
+			<argument index="0" name="url" type="String" />
+			<argument index="1" name="protocols" type="PoolStringArray" default="PoolStringArray(  )" />
+			<argument index="2" name="gd_mp_api" type="bool" default="false" />
+			<argument index="3" name="custom_headers" type="PoolStringArray" default="PoolStringArray(  )" />
+			<description>
+			</description>
+		</method>
+		<method name="disconnect_from_host">
+			<return type="void" />
+			<argument index="0" name="code" type="int" default="1000" />
+			<argument index="1" name="reason" type="String" default="&quot;&quot;" />
+			<description>
+			</description>
+		</method>
+		<method name="get_connected_host" qualifiers="const">
+			<return type="String" />
+			<description>
+			</description>
+		</method>
+		<method name="get_connected_port" qualifiers="const">
+			<return type="int" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="trusted_ssl_certificate" type="X509Certificate" setter="set_trusted_ssl_certificate" getter="get_trusted_ssl_certificate">
+		</member>
+		<member name="verify_ssl" type="bool" setter="set_verify_ssl_enabled" getter="is_verify_ssl_enabled">
+		</member>
+	</members>
+	<signals>
+		<signal name="connection_closed">
+			<argument index="0" name="was_clean_close" type="bool" />
+			<description>
+			</description>
+		</signal>
+		<signal name="connection_error">
+			<description>
+			</description>
+		</signal>
+		<signal name="connection_established">
+			<argument index="0" name="protocol" type="String" />
+			<description>
+			</description>
+		</signal>
+		<signal name="data_received">
+			<description>
+			</description>
+		</signal>
+		<signal name="server_close_request">
+			<argument index="0" name="code" type="int" />
+			<argument index="1" name="reason" type="String" />
+			<description>
+			</description>
+		</signal>
+	</signals>
+	<constants>
+	</constants>
+</class>
