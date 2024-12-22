@@ -2,11 +2,9 @@ package lucidKit.godot;
 
 @:native("godot.GraphEdit")
 extern class GraphEdit extends Control {
-    public var focus_mode: Int;
     public var minimap_enabled: Bool;
     public var minimap_opacity: Float;
     public var minimap_size: Vector2;
-    public var rect_clip_content: Bool;
     public var right_disconnects: Bool;
     public var scroll_offset: Vector2;
     public var show_zoom_label: Bool;

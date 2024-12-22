@@ -8,7 +8,7 @@ extern class Rect2 extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(position: GdVector2, size: GdVector2);
     @:native("__new")
-    public function new(x: Float, y: Float, width: Float, height: Float);
+    public static function x_y_width_height(x: Float, y: Float, width: Float, height: Float): Rect2;
     public function abs(): Rect2;
     public function clip(b: Rect2): Rect2;
     public function encloses(b: Rect2): Bool;

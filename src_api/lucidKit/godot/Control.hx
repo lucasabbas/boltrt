@@ -23,7 +23,6 @@ extern class Control extends CanvasItem {
     public var margin_top: Float;
     public var mouse_default_cursor_shape: Int;
     public var mouse_filter: Int;
-    public var physics_interpolation_mode: Int;
     public var rect_clip_content: Bool;
     public var rect_global_position: Vector2;
     public var rect_min_size: Vector2;

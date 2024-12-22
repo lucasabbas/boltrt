@@ -16,13 +16,13 @@ extern class Color extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(from: String);
     @:native("__new")
-    public function new(from: Int);
+    public static function from(from: Int): Color;
     @:native("__new")
-    public function new(from: Color, alpha: Float);
+    public static function from_alpha(from: Color, alpha: Float): Color;
     @:native("__new")
-    public function new(r: Float, g: Float, b: Float);
+    public static function r_g_b(r: Float, g: Float, b: Float): Color;
     @:native("__new")
-    public function new(r: Float, g: Float, b: Float, a: Float);
+    public static function r_g_b_a(r: Float, g: Float, b: Float, a: Float): Color;
     public function blend(over: Color): Color;
     public function contrasted(): Color;
     public function darkened(amount: Float): Color;

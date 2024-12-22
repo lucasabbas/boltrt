@@ -3,7 +3,6 @@ package lucidKit.godot;
 @:native("godot.PopupMenu")
 extern class PopupMenu extends Popup {
     public var allow_search: Bool;
-    public var focus_mode: Int;
     public var hide_on_checkable_item_selection: Bool;
     public var hide_on_item_selection: Bool;
     public var hide_on_state_item_selection: Bool;

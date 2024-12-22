@@ -3,7 +3,6 @@ package lucidKit.godot;
 @:native("godot.AnimatedTexture")
 extern class AnimatedTexture extends Texture {
     public var current_frame: Int;
-    public var flags: Int;
     public var fps: Float;
     public var frames: Int;
     public var oneshot: Bool;

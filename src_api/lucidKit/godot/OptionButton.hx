@@ -2,10 +2,7 @@ package lucidKit.godot;
 
 @:native("godot.OptionButton")
 extern class OptionButton extends Button {
-    public var action_mode: Int;
-    public var align: Int;
     public var selected: Int;
-    public var toggle_mode: Bool;
     public function add_icon_item(texture: Texture, label: String, id: Int): Void;
     public function add_item(label: String, id: Int): Void;
     public function add_separator(): Void;

@@ -10,7 +10,6 @@ extern class RichTextLabel extends Control {
     public var meta_underlined: Bool;
     public var override_selected_font_color: Bool;
     public var percent_visible: Float;
-    public var rect_clip_content: Bool;
     public var scroll_active: Bool;
     public var scroll_following: Bool;
     public var selection_enabled: Bool;

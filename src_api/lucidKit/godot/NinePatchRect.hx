@@ -5,7 +5,6 @@ extern class NinePatchRect extends Control {
     public var axis_stretch_horizontal: Int;
     public var axis_stretch_vertical: Int;
     public var draw_center: Bool;
-    public var mouse_filter: Int;
     public var patch_margin_bottom: Int;
     public var patch_margin_left: Int;
     public var patch_margin_right: Int;

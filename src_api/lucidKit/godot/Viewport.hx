@@ -18,7 +18,6 @@ extern class Viewport extends Node {
     public var keep_3d_linear: Bool;
     public var msaa: Int;
     public var own_world: Bool;
-    public var physics_interpolation_mode: Int;
     public var physics_object_picking: Bool;
     public var render_direct_to_screen: Bool;
     public var render_target_clear_mode: Int;

@@ -3,7 +3,6 @@ package lucidKit.godot;
 @:native("godot.ScrollContainer")
 extern class ScrollContainer extends Container {
     public var follow_focus: Bool;
-    public var rect_clip_content: Bool;
     public var scroll_deadzone: Int;
     public var scroll_horizontal: Int;
     public var scroll_horizontal_enabled: Bool;

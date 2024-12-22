@@ -8,10 +8,8 @@ extern class Tree extends Control {
     public var column_titles_visible: Bool;
     public var columns: Int;
     public var drop_mode_flags: Int;
-    public var focus_mode: Int;
     public var hide_folding: Bool;
     public var hide_root: Bool;
-    public var rect_clip_content: Bool;
     public var select_mode: Int;
     public function clear(): Void;
     public function create_item(parent: Object, idx: Int): TreeItem;

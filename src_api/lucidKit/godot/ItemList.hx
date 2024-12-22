@@ -8,12 +8,10 @@ extern class ItemList extends Control {
     public var auto_height: Bool;
     public var fixed_column_width: Int;
     public var fixed_icon_size: Vector2;
-    public var focus_mode: Int;
     public var icon_mode: Int;
     public var icon_scale: Float;
     public var max_columns: Int;
     public var max_text_lines: Int;
-    public var rect_clip_content: Bool;
     public var same_column_width: Bool;
     public var select_mode: Int;
     public function add_icon_item(icon: Texture, selectable: Bool): Void;

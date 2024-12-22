@@ -1,11 +1,16 @@
 package;
 
+import lucidKit.godot.CubeMesh;
+import lucidKit.godot.Vector3;
+import lucidKit.godot.Node;
 import sys.io.File;
 import sys.FileSystem;
 import lucidKit.godot.Vector2;
 import lucidKit.godot.Vector3;
 import haxe.ds.Vector;
 import lucidKit.godot.Object;
+import lucidKit.godot.Camera;
+import lucidKit.godot.MeshInstance;
 import lucidKit.App;
 
 class Main extends App{
@@ -49,6 +54,16 @@ class Main extends App{
         } catch(e) {
             Sys.println(e.message);
         }
+
+        var camera = new Camera();
+        rootNode.add_child(camera, true);
+
+        var meshInstance = new MeshInstance();
+        rootNode.add_child(meshInstance, true);
+        meshInstance.position = new Vector3(0, 0, -5);
+
+        var mesh = new CubeMesh();
+        meshInstance.mesh = mesh;
 
         //if (lua.)
         var file = File.getContent("data://textFile.txt");

@@ -2,7 +2,6 @@ package lucidKit.godot;
 
 @:native("godot.ImageTexture")
 extern class ImageTexture extends Texture {
-    public var flags: Int;
     public var lossy_quality: Float;
     public var storage: Int;
     public function create(width: Int, height: Int, format: Int, flags: Int): Void;

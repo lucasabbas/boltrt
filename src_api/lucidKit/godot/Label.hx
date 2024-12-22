@@ -7,9 +7,7 @@ extern class Label extends Control {
     public var clip_text: Bool;
     public var lines_skipped: Int;
     public var max_lines_visible: Int;
-    public var mouse_filter: Int;
     public var percent_visible: Float;
-    public var size_flags_vertical: Int;
     public var text: String;
     public var uppercase: Bool;
     public var valign: Int;

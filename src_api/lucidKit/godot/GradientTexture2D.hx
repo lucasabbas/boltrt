@@ -5,7 +5,6 @@ extern class GradientTexture2D extends Texture {
     public var fill: Int;
     public var fill_from: Vector2;
     public var fill_to: Vector2;
-    public var flags: Int;
     public var gradient: Gradient;
     public var height: Int;
     public var repeat: Int;

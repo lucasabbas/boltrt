@@ -13,7 +13,6 @@ extern class TextEdit extends Control {
     public var drag_and_drop_selection_enabled: Bool;
     public var draw_spaces: Bool;
     public var draw_tabs: Bool;
-    public var focus_mode: Int;
     public var fold_gutter: Bool;
     public var hiding_enabled: Bool;
     public var highlight_all_occurrences: Bool;
@@ -21,7 +20,6 @@ extern class TextEdit extends Control {
     public var middle_mouse_paste_enabled: Bool;
     public var minimap_draw: Bool;
     public var minimap_width: Int;
-    public var mouse_default_cursor_shape: Int;
     public var override_selected_font_color: Bool;
     public var readonly: Bool;
     public var scroll_horizontal: Int;

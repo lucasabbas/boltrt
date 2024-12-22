@@ -51,7 +51,6 @@ extern class CPUParticles2D extends Node2D {
     public var orbit_velocity: Float;
     public var orbit_velocity_curve: Curve;
     public var orbit_velocity_random: Float;
-    public var physics_interpolation_mode: Int;
     public var preprocess: Float;
     public var radial_accel: Float;
     public var radial_accel_curve: Curve;

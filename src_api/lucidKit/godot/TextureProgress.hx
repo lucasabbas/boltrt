@@ -3,7 +3,6 @@ package lucidKit.godot;
 @:native("godot.TextureProgress")
 extern class TextureProgress extends Range {
     public var fill_mode: Int;
-    public var mouse_filter: Int;
     public var nine_patch_stretch: Bool;
     public var radial_center_offset: Vector2;
     public var radial_fill_degrees: Float;

@@ -11,10 +11,8 @@ extern class LineEdit extends Control {
     public var deselect_on_focus_loss_enabled: Bool;
     public var editable: Bool;
     public var expand_to_text_length: Bool;
-    public var focus_mode: Int;
     public var max_length: Int;
     public var middle_mouse_paste_enabled: Bool;
-    public var mouse_default_cursor_shape: Int;
     public var placeholder_alpha: Float;
     public var placeholder_text: String;
     public var right_icon: Texture;

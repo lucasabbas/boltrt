@@ -10,9 +10,9 @@ extern class Plane extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(a: Float, b: Float, c: Float, d: Float);
     @:native("__new")
-    public function new(v1: GdVector3, v2: GdVector3, v3: GdVector3);
+    public static function v1_v2_v3(v1: GdVector3, v2: GdVector3, v3: GdVector3): Plane;
     @:native("__new")
-    public function new(normal: GdVector3, d: Float);
+    public static function normal_d(normal: GdVector3, d: Float): Plane;
     public function center(): Vector3;
     public function distance_to(point: GdVector3): Float;
     public function get_any_point(): Vector3;

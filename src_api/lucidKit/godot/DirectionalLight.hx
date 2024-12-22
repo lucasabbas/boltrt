@@ -12,7 +12,6 @@ extern class DirectionalLight extends Light {
     public var directional_shadow_split_1: Float;
     public var directional_shadow_split_2: Float;
     public var directional_shadow_split_3: Float;
-    public var shadow_bias: Float;
     @:native("__new")
     public function new();
 }

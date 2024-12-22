@@ -568,6 +568,9 @@ __lucidKit_App.super = function(self)
 end
 __lucidKit_App.__name__ = true
 __lucidKit_App.prototype = _hx_e();
+__lucidKit_App.prototype.get_rootNode = function(self) 
+  do return rootNode end
+end
 __lucidKit_App.prototype.init = function(self) 
 end
 __lucidKit_App.prototype.process = function(self,delta) 
@@ -632,6 +635,13 @@ Main.prototype.init = function(self)
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
+  local camera = godot.Camera.__new();
+  self:get_rootNode():add_child(camera, true);
+  local meshInstance = godot.MeshInstance.__new();
+  self:get_rootNode():add_child(meshInstance, true);
+  meshInstance.position = __lucidKit_godot__Vector3_Vector3_Impl_._new(0, 0, -5);
+  local mesh = godot.CubeMesh.__new();
+  meshInstance.mesh = mesh;
   local file = __sys_io_File.getContent("data://textFile.txt");
   _G.print(Std.string(file));
 end

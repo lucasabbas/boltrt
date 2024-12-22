@@ -8,9 +8,9 @@ extern class Transform2D extends lucidKit.core.MonoObject {
     @:native("__new")
     public function new(from: Transform);
     @:native("__new")
-    public function new(x_axis: GdVector2, y_axis: GdVector2, origin: GdVector2);
+    public static function x_axis_y_axis_origin(x_axis: GdVector2, y_axis: GdVector2, origin: GdVector2): Transform2D;
     @:native("__new")
-    public function new(rotation: Float, position: GdVector2);
+    public static function rotation_position(rotation: Float, position: GdVector2): Transform2D;
     public function affine_inverse(): Transform2D;
     public function basis_xform(v: GdVector2): Vector2;
     public function basis_xform_inv(v: GdVector2): Vector2;

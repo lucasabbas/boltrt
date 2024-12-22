@@ -10,7 +10,6 @@ extern class RoomManager extends Spatial {
     public var overlap_warning_threshold: Int;
     public var portal_depth_limit: Int;
     public var preview_camera: NodePath;
-    public var process_priority: Int;
     public var pvs_mode: Int;
     public var roaming_expansion_margin: Float;
     public var room_simplify: Float;

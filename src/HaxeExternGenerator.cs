@@ -6,10 +6,16 @@ using System.Xml.Linq;
 using ProjectSettings = Godot.ProjectSettings;
 using GD = Godot.GD;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 class HaxeExternGenerator
 {
     public static List<String> ClassNames;
+
+    public static Dictionary<string, string> BaseClasses;
+
+    public static List<string> ClassMethods;
+    public static List<string> ClassMembers;
     
     public static void GenerateExterns()
     {
@@ -20,6 +26,9 @@ class HaxeExternGenerator
         Directory.CreateDirectory(outputDir);
 
         ClassNames = new List<string>();
+        BaseClasses = new Dictionary<string, string>();
+        ClassMethods = new List<string>();
+        ClassMembers = new List<string>();
 
         // Read all XML files in the directory
         var xmlFiles = Directory.GetFiles(xmlDirectory, "*.xml");
@@ -30,6 +39,10 @@ class HaxeExternGenerator
             if (!string.IsNullOrEmpty(className) && className != "float" && className != "String" && className != "int" && className != "@GlobalScope" && className != "bool" && className != "Array" && className != "Dictionary" && className != "Vector3" && className != "Vector2" && className != "Quat")
             {
                     ClassNames.Add(className);
+                    var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
+                    if (string.IsNullOrEmpty(inheritedClassName))
+                        inheritedClassName = "lucidKit.core.MonoObject";
+                    BaseClasses.Add(className, inheritedClassName);
             }
         }
         foreach (var xmlFile in xmlFiles)
@@ -600,9 +613,27 @@ abstract Quat(GdQuat) from GdQuat {
         {
             var fieldName = field.Attribute("name")?.Value;
             var fieldType = field.Attribute("type")?.Value ?? "Dynamic";
-            if (!string.IsNullOrEmpty(fieldName))
+
+            if (fieldName.Contains("/"))
+                fieldName = fieldName.Replace("/", "__");
+
+            var className = doc.Root?.Attribute("name")?.Value;
+
+            if (!MemberExists(fieldName, className)) 
             {
-                sb.AppendLine($"    public var {fieldName}: {MapReturnType(fieldType)};");
+                ClassMembers.Add(className + ":"  + fieldName);
+
+                if (!string.IsNullOrEmpty(fieldName))
+                {
+                    //bool isStatic = field.Attribute("static") != null;
+                    bool isOverride = field.Attribute("overrides") != null;
+                    if (isOverride){
+                    }
+                    //else if (isStatic)
+                        //sb.AppendLine($"    public static var {fieldName}: {MapReturnType(fieldType)};");
+                    else 
+                        sb.AppendLine($"    public var {fieldName}: {MapReturnType(fieldType)};");
+                }
             }
         }
     }
@@ -612,11 +643,11 @@ abstract Quat(GdQuat) from GdQuat {
         var methods = doc.Descendants("method");
         var methodNames = new List<string>();
         var className = doc.Root?.Attribute("name")?.Value;
+        bool firstConstructor = true;
         foreach (var method in methods)
         {
             var methodName = method.Attribute("name")?.Value;
             var returnType = method.Element("return")?.Attribute("type")?.Value ?? "Void";
-            bool firstConstructor = true;
 
             if (className == "Vector2" || className == "Vector3"){
                 if (methodName == className && !method.Descendants("argument").Any(arg => arg.Attribute("name")?.Value == "x")) {
@@ -647,51 +678,97 @@ abstract Quat(GdQuat) from GdQuat {
             {
                 var paramName = arg.Attribute("name")?.Value;
                 var paramType = arg.Attribute("type")?.Value ?? "Dynamic";
-                if (paramName == "default" || paramName == "class")
+                if (paramName == "default" || paramName == "class" || paramName == "var")
                     paramName = "_" + paramName;
                 return $"{paramName}: {MapType(paramType)}";
             });
 
-            if (!string.IsNullOrEmpty(methodName))
+            if (!MethodExists(methodName, className))
             {
-                if (methodName == className)
+                ClassMethods.Add(className + ":"  + methodName);
+
+                if (!string.IsNullOrEmpty(methodName))
                 {
-                    sb.AppendLine($"    @:native(\"__new\")");
-                    if (firstConstructor){
-                        sb.AppendLine($"    public function new({string.Join(", ", parameters)});");
-                    }
-                    else {
-                        var paramNames = method.Descendants("argument").Select(arg =>
-                        {
-                            var paramName = arg.Attribute("name")?.Value;
-                            return $"{paramName}";
-                        });
-                        methodName = string.Join("_", paramNames);
-                        if (methodNames.Contains(methodName)){
-                            paramNames = method.Descendants("argument").Select(arg =>
+                    if (methodName == className)
+                    {
+                        sb.AppendLine($"    @:native(\"__new\")");
+                        if (firstConstructor){
+                            sb.AppendLine($"    public function new({string.Join(", ", parameters)});");
+                            firstConstructor = false;
+                        }
+                        else {
+                            var paramNames = method.Descendants("argument").Select(arg =>
                             {
                                 var paramName = arg.Attribute("name")?.Value;
-                                var paramType = arg.Attribute("type")?.Value ?? "Dynamic";
-                                return $"{paramName}_{MapType(paramType)}";
+                                return $"{paramName}";
                             });
                             methodName = string.Join("_", paramNames);
+                            if (methodNames.Contains(methodName)){
+                                paramNames = method.Descendants("argument").Select(arg =>
+                                {
+                                    var paramName = arg.Attribute("name")?.Value;
+                                    var paramType = arg.Attribute("type")?.Value ?? "Dynamic";
+                                    return $"{paramName}_{MapType(paramType)}";
+                                });
+                                methodName = string.Join("_", paramNames);
+                            }
+                            sb.AppendLine($"    public static function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
                         }
-                        sb.AppendLine($"    public static function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        methodNames.Add(methodName);
                     }
-                    methodNames.Add(methodName);
-                }
-                else {
-                    if (methodName == "to_string")
-                        methodName = "toString";
-                    sb.AppendLine($"    public function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
-                    methodNames.Add(methodName);
+                    else 
+                    {
+                        if (methodName == "to_string")
+                            methodName = "toString";
+                        sb.AppendLine($"    public function {methodName}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        methodNames.Add(methodName);
+                    }
                 }
             }
         }
-
         if (!methodNames.Contains("new") && !methodNames.Contains(className)){
             sb.AppendLine($"    @:native(\"__new\")");
             sb.AppendLine($"    public function new();");
+        }
+    }
+
+    public static bool MemberExists(string memberName, string className){
+        if (ClassMembers.Contains(className + ":" + memberName)){
+            return true;
+        }
+        else {
+            if (BaseClasses.ContainsKey(className)) {
+                var baseClass = BaseClasses[className];
+                if (MemberExists(memberName, baseClass)){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+    }
+
+    public static bool MethodExists(string methodName, string className){
+        if (ClassMembers.Contains(className + ":" + methodName)){
+            return true;
+        }
+        else {
+            if (BaseClasses.ContainsKey(className)){
+                var baseClass = BaseClasses[className];
+                if (MethodExists(methodName, baseClass)){
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
         }
     }
 
@@ -726,7 +803,7 @@ abstract Quat(GdQuat) from GdQuat {
             case "Quat":
                 return "Quat";
             case "RID":
-            case "Object": // Replace with a specific class if available
+            case "Variant": // Replace with a specific class if available
                 return "Dynamic"; // Replace with an appropriate type if needed
             case "Color":
                 return "Color";

@@ -6,7 +6,6 @@ extern class BaseButton extends Control {
     public var button_mask: Int;
     public var disabled: Bool;
     public var enabled_focus_mode: Int;
-    public var focus_mode: Int;
     public var group: ButtonGroup;
     public var keep_pressed_outside: Bool;
     public var pressed: Bool;

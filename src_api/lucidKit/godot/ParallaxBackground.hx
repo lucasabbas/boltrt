@@ -2,7 +2,6 @@ package lucidKit.godot;
 
 @:native("godot.ParallaxBackground")
 extern class ParallaxBackground extends CanvasLayer {
-    public var layer: Int;
     public var scroll_base_offset: Vector2;
     public var scroll_base_scale: Vector2;
     public var scroll_ignore_camera_zoom: Bool;

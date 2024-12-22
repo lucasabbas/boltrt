@@ -5,8 +5,8 @@ extern class KinematicBody extends PhysicsBody {
     public var axis_lock_motion_x: Bool;
     public var axis_lock_motion_y: Bool;
     public var axis_lock_motion_z: Bool;
-    public var collision/safe_margin: Float;
-    public var motion/sync_to_physics: Bool;
+    public var collision__safe_margin: Float;
+    public var motion__sync_to_physics: Bool;
     public var move_lock_x: Bool;
     public var move_lock_y: Bool;
     public var move_lock_z: Bool;

@@ -2,7 +2,6 @@ package lucidKit.godot;
 
 @:native("godot.LargeTexture")
 extern class LargeTexture extends Texture {
-    public var flags: Int;
     public function add_piece(ofs: GdVector2, texture: Texture): Int;
     public function clear(): Void;
     public function get_piece_count(): Int;

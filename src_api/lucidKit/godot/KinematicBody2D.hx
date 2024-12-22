@@ -2,8 +2,8 @@ package lucidKit.godot;
 
 @:native("godot.KinematicBody2D")
 extern class KinematicBody2D extends PhysicsBody2D {
-    public var collision/safe_margin: Float;
-    public var motion/sync_to_physics: Bool;
+    public var collision__safe_margin: Float;
+    public var motion__sync_to_physics: Bool;
     public var moving_platform_apply_velocity_on_leave: Int;
     public function get_floor_angle(up_direction: GdVector2): Float;
     public function get_floor_normal(): Vector2;
