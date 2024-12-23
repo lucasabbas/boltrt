@@ -11,6 +11,7 @@ import haxe.ds.Vector;
 import lucidKit.godot.Object;
 import lucidKit.godot.Camera;
 import lucidKit.godot.MeshInstance;
+import lucidKit.godot.extensions.FreeLookCamera; 
 import lucidKit.App;
 
 class Main extends App{
@@ -55,7 +56,7 @@ class Main extends App{
             Sys.println(e.message);
         }
 
-        var camera = new Camera();
+        var camera = new FreeLookCamera();
         rootNode.addChild(camera);
 
         var meshInstance = new MeshInstance();

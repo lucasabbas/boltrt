@@ -635,7 +635,7 @@ Main.prototype.init = function(self)
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
-  local camera = godot.Camera.__new();
+  local camera = gdx.FreeLookCamera.__new();
   self:get_rootNode():addChild(camera);
   local meshInstance = godot.MeshInstance.__new();
   self:get_rootNode():addChild(meshInstance);
