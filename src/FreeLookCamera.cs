@@ -3,7 +3,7 @@ using System;
 
 namespace LucidKit
 {
-    public partial class FreeLookCamera3D : Camera
+    public partial class FreeLookCamera : Camera
     {
         public float Sensitivity = 3f;
         public float ControllerSensitivity = 20f;
@@ -26,7 +26,7 @@ namespace LucidKit
 
         bool speedToggle = false;
 
-        public FreeLookCamera3D()
+        public FreeLookCamera()
         {
             TransformNode = this;
         }
