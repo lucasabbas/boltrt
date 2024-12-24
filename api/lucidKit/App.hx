@@ -1,12 +1,19 @@
 package lucidKit;
 
 import lucidKit.godot.Node;
+import lucidKit.io.IoManager;
 
 class App {
     public var rootNode(get, default) : Node;
 
     public function get_rootNode() : Node {
         return untyped __lua__("rootNode");
+    }
+
+    public var ioManager(get, default) : IoManager;
+
+    public function get_ioManager() : IoManager {
+        return untyped __lua__("ioManager");
     }
 
     public function new() {

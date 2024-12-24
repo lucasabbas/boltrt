@@ -14,9 +14,17 @@ namespace LucidKit {
         }
 
         public void LoadFromPath(string path, IOCore ioCore) {
-            IOCore = ioCore;
-            string data = IOCore.LoadText(path);
-            LoadFromString(data);
+            try 
+            {
+                IOCore = ioCore;
+                string data = IOCore.LoadText(path);
+                LoadFromString(data);
+            }
+            catch (Exception e) 
+            {
+                OS.Alert("Error loading UI Document: " + e.ToString(), "XML Parse Error");
+                throw e;
+            }
         }
 
         public void LoadFromString(string data)
@@ -25,6 +33,11 @@ namespace LucidKit {
             doc.LoadXml(data);
             Instantiate(doc);
             //LoadFromXml(doc);
+        }
+
+        public Node GetObject(string path)
+        {
+            return GetNode(new NodePath(path));
         }
 
         private void Instantiate(XmlDocument document) 
@@ -37,7 +50,7 @@ namespace LucidKit {
                 }
             }
 
-            XmlNode firstNode = document.FirstChild;
+            XmlNode firstNode = document.GetElementsByTagName("lkui")[0];
             string version = "1.0";
             XmlAttribute versionAttribute = firstNode.Attributes["version"];
             if (versionAttribute != null)
@@ -181,6 +194,7 @@ namespace LucidKit {
                             }
 
                             SetObjectValues(xmlNode, gdNode);
+                            ConstructChildern(xmlNode, gdNode);
                             return gdNode;
                         }
                     }
@@ -230,51 +244,156 @@ namespace LucidKit {
                 {
                     if (property.PropertyType == typeof(float))
                     {
-                        property.SetValue(obj, float.Parse(attr.Value));
+                        try {
+                            float f = float.Parse(attr.Value);
+                            property.SetValue(obj, f);
+                            if ((float)property.GetValue(obj) != f)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(int))
                     {
-                        property.SetValue(obj, int.Parse(attr.Value));
+                        try {
+                            int i = int.Parse(attr.Value);
+                            property.SetValue(obj, i);
+                            if ((int)property.GetValue(obj) != i)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(bool))
                     {
-                        property.SetValue(obj, bool.Parse(attr.Value));
+                        try {
+                            bool b = bool.Parse(attr.Value);
+                            property.SetValue(obj, b);
+                            if ((bool)property.GetValue(obj) != b)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(string))
                     {
-                        property.SetValue(obj, attr.Value);
+                        try {
+                            property.SetValue(obj, attr.Value);
+                            if ((string)property.GetValue(obj) != attr.Value)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(Vector2))
                     {
-                        property.SetValue(obj, ToVector2(attr.Value));
+                        try {
+                            Vector2 vec2 = ToVector2(attr.Value);
+                            property.SetValue(obj, vec2);
+                            if ((Vector2)property.GetValue(obj) != vec2)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(Vector3))
                     {
-                        property.SetValue(obj, ToVector3(attr.Value));
+                        try {
+                            Vector3 vec3 = ToVector3(attr.Value);
+                            property.SetValue(obj, vec3);
+                            if ((Vector3)property.GetValue(obj) != vec3)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(Color))
                     {
-                        property.SetValue(obj, ToColor(attr.Value));
+                        try {
+                            Color color = ToColor(attr.Value);
+                            property.SetValue(obj, color);
+                            if ((Color)property.GetValue(obj) != color)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType.IsEnum)
                     {
-                        property.SetValue(obj, ToEnum(attr.Value, property.PropertyType));
+                        try {
+                            var e = ToEnum(attr.Value, property.PropertyType);
+                            property.SetValue(obj, e);
+                            if ((int)property.GetValue(obj) != e)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(NodePath))
                     {
-                        property.SetValue(obj, ToNodePath(attr.Value));
+                        try {
+                            NodePath path = ToNodePath(attr.Value);
+                            property.SetValue(obj, path);
+                            if ((NodePath)property.GetValue(obj) != path)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(ImageTexture))
                     {
-                        property.SetValue(obj, LoadImageTexture(IOCore, attr.Value));
+                        try {
+                            ImageTexture imgtxt = LoadImageTexture(IOCore, attr.Value);
+                            property.SetValue(obj, imgtxt);
+                            if ((ImageTexture)property.GetValue(obj) != imgtxt)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                     else if (property.PropertyType == typeof(Texture))
                     {
-                        property.SetValue(obj, LoadImageTexture(IOCore, attr.Value));
-                    }
-                    else if (property.PropertyType.IsEnum)
-                    {
-                        property.SetValue(obj, ToEnum(attr.Value, property.PropertyType));
+                        try {
+                            ImageTexture txt = LoadImageTexture(IOCore, attr.Value);
+                            property.SetValue(obj, txt);
+                            if ((Texture)property.GetValue(obj) != txt)
+                            {
+                                throw new UiDocumentException(attr, obj, "Value not set");
+                            }
+                        }
+                        catch (Exception e) {
+                            throw new UiDocumentException(attr, obj, e.Message);
+                        }
                     }
                 }
             }
@@ -415,5 +534,16 @@ namespace LucidKit {
             texture.CreateFromImage(image);
             return texture;
         } 
+    }
+
+    public class UiDocumentException : Exception {
+        public XmlNode XmlNode;
+
+        public object Obj;
+
+        public UiDocumentException(XmlNode xmlNode, object obj, string message) : base(message + " : " + xmlNode.ToString() + " - " + obj.ToString()){
+            XmlNode = xmlNode;
+            Obj = obj;
+        }
     }
 }

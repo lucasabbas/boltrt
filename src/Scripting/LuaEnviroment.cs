@@ -59,7 +59,7 @@ namespace LucidKit.Scripting
             Script.Globals["doubleToFloat"] = (Func<double, float>)DoubleToFloat;
 
             UserData.RegisterType<IOManager>(); // Register the IoCoreMulti type
-            Script.Globals["ioCore"] = IoCore;
+            Script.Globals["ioManager"] = IoCore;
             Script.Globals["__lua__"] = (Func<string, DynValue>)eval;
             Script.Globals["eval"] = (Func<string, DynValue>)eval;
             Modules = new Table(Script);

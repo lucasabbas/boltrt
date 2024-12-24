@@ -15,14 +15,14 @@ namespace LucidKit.Plugins
             UserData.RegisterType<FreeLookCamera2D>();
             UserData.RegisterType<FreeLookCamera>();
             UserData.RegisterType<MouseRayCast3D>();
-            //UserData.RegisterType<UiDocument>();
+            UserData.RegisterType<UiDocument>();
             //UserData.RegisterType<UiStyleSheet>();
             //UserData.RegisterType<TabManager>();
 
-            GdExtNamespace["FreeLookCamera2D"] = typeof(FreeLookCamera2D);
-            GdExtNamespace["FreeLookCamera"] = typeof(FreeLookCamera);
-            GdExtNamespace["MouseRayCast"] = typeof(MouseRayCast3D);
-            //GdExtNamespace["UiDocument"] = typeof(UiDocument);
+            GdExtNamespace["FreeLookCamera2D"] = UserData.CreateStatic(typeof(FreeLookCamera2D));
+            GdExtNamespace["FreeLookCamera"] = UserData.CreateStatic(typeof(FreeLookCamera));
+            GdExtNamespace["MouseRayCast"] = UserData.CreateStatic(typeof(MouseRayCast3D));
+            GdExtNamespace["UiDocument"] = UserData.CreateStatic(typeof(UiDocument));
             //GdExtNamespace["UiStyleSheet"] = typeof(UiStyleSheet);
             //GdExtNamespace["TabManager"] = typeof(TabManager);
         }

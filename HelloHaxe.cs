@@ -13,7 +13,7 @@ namespace LucidKit.Tests.HelloHaxe
 			{
 				basePath = OS.GetExecutablePath().GetBaseDir() + "/";
 			}
-			StartFromPath(basePath + "Tests/HelloHaxe//");
+			StartFromPath(basePath + "Tests/UiTest//");
 		}
 	}
 }

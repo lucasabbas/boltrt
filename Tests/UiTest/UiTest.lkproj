@@ -1,0 +1,4 @@
+<app>
+    <title>UiTest</title>
+    <mainScript>data://main.lua</mainScript>
+</app>
