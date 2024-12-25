@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="409da43e-b916-4642-a96a-671d6206f23d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UiTest/Main.hx" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UiTest/Main.hx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UiTest/gui.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UiTest/gui.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UiTest/main.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UiTest/main.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/haxelib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/haxelib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucidkit.nsi" beforeDir="false" afterPath="$PROJECT_DIR$/lucidkit.nsi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripting/LuaNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripting/LuaNode.cs" afterDir="false" />
-    </list>
+    <list default="true" id="409da43e-b916-4642-a96a-671d6206f23d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
