@@ -25,6 +25,8 @@ namespace LucidKit.Scripting
 		[Signal] public delegate void UnhandledKeyInputEventHandler(InputEvent @event);
 		[Signal] public delegate void StopEventHandler();
 		 */
+		 
+		 private string title;
 
 		public LuaNode()
 		{
@@ -34,9 +36,15 @@ namespace LucidKit.Scripting
 			//_luaEnviroment.AddPlugin(typeof(UiModule));
 			UserData.RegisterType<LuaNode>();
 			_luaEnviroment.Script.Globals["rootNode"] = this;
+			title = "LucidKit";
 		}
 
-		public void StartFromPath(string path)
+		public override void _Ready()
+		{
+			OS.SetWindowTitle(title);
+		}
+
+        public void StartFromPath(string path)
 		{
 			FileSystemIO fileSys = new FileSystemIO(ProjectSettings.GlobalizePath(path), "data://");
 			_luaEnviroment.IoCore.Register(fileSys);
@@ -49,10 +57,12 @@ namespace LucidKit.Scripting
 			var xml = XDocument.Parse(filestring);
 			var app = xml.Element("app");
 			var title = app.Element("title").Value;
+			this.title = title;
 			var mainScript = app.Element("mainScript").Value;
 			_mainScriptPath = mainScript;
 			var baseDir = filepath.GetBaseDir();
 			StartFromPath(baseDir);
+			OS.SetWindowTitle(title);
 		}
 
 		private float DoubleToFloat(double d)
@@ -61,7 +71,7 @@ namespace LucidKit.Scripting
 		}
 
 		public override void _Process(float delta)
-		{
+		{	
 			if (_luaEnviroment.Script.Globals["process"] != null)
 			{
 				var update = _luaEnviroment.Script.Globals["process"];

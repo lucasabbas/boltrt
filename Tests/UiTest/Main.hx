@@ -11,6 +11,8 @@ class Main extends App {
         new Main();
     }
 
+    var counter : Int = 0;
+
     override function init() {
         trace("Hello, World!");
 
@@ -21,7 +23,6 @@ class Main extends App {
         var label : Label = cast uiDocument.getObject("Panel/VBoxContainer/Control/Label");
         var button : Button = cast uiDocument.getObject("Panel/VBoxContainer/Control/Button");
 
-        var counter : Int = 0;
         SignalToFunc.connect(button, "pressed", function() {
             counter++;
             trace("You clicked me " + counter + " times!");

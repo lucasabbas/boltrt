@@ -21,7 +21,7 @@
                         AnchorBottom="0"
                         MarginTop="0"
                         MarginBottom="60"
-                        CustomMinimumSize="0f,60">
+                        RectMinSize="0,60">
                 </Panel>
                 <Control
                         Name="Control"

@@ -588,6 +588,7 @@ Main.new = function()
   return self
 end
 Main.super = function(self) 
+  self.counter = 0;
   __lucidKit_App.super(self);
 end
 Main.__name__ = true
@@ -596,17 +597,17 @@ Main.main = function()
 end
 Main.prototype = _hx_e();
 Main.prototype.init = function(self) 
-  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=15,className="Main",methodName="init"}));
+  local _gthis = self;
+  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=17,className="Main",methodName="init"}));
   local uiDocument = gdx.UiDocument.__new();
   self:get_rootNode():addChild(uiDocument);
   uiDocument:loadFromPath("data://gui.xml", self:get_ioManager());
   local label = uiDocument:getObject("Panel/VBoxContainer/Control/Label");
   local button = uiDocument:getObject("Panel/VBoxContainer/Control/Button");
-  local counter = 0;
   godot.SignalToFunc.connect(button, "pressed", function() 
-    counter = counter + 1;
-    __haxe_Log.trace(Std.string(Std.string("You clicked me ") .. Std.string(counter)) .. Std.string(" times!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=27,className="Main",methodName="init"}));
-    label.text = Std.string(Std.string("You clicked me ") .. Std.string(counter)) .. Std.string(" times!");
+    _gthis.counter = _gthis.counter + 1;
+    __haxe_Log.trace(Std.string(Std.string("You clicked me ") .. Std.string(_gthis.counter)) .. Std.string(" times!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=28,className="Main",methodName="init"}));
+    label.text = Std.string(Std.string("You clicked me ") .. Std.string(_gthis.counter)) .. Std.string(" times!");
   end);
 end
 
