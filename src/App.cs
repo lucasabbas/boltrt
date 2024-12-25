@@ -3,6 +3,7 @@ using LucidKit.Scripting;
 using System;
 using System.IO;
 using IoPath = System.IO.Path;
+using IoDir = System.IO.Directory;
 
 public class App : LuaNode
 {
@@ -26,13 +27,27 @@ public class App : LuaNode
 				break;
 			}
 		}
+		
 
 
 		if (string.IsNullOrEmpty(path))
 		{
-			OS.Alert("directory or 'lkproj' file not provided", "ERROR");
-			GetTree().Quit();
-			return;
+			var files = IoDir.GetFiles(IoPath.GetFullPath("./"));
+			foreach (var file in files)
+			{
+				if (file.Contains(".lkproj"))
+				{
+					path = file;
+					break;
+				}
+			}
+			if (string.IsNullOrEmpty(path))
+			{
+				OS.Alert("directory or 'lkproj' file not provided", "ERROR");
+				GetTree().Quit();
+				return;
+			}
+			
 		}
 
 		path = IoPath.GetFullPath(path);
