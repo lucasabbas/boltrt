@@ -22,6 +22,18 @@
                         MarginTop="0"
                         MarginBottom="60"
                         RectMinSize="0,60">
+                    <Label
+                            Name="DTLabel"
+                            AnchorTop="0"
+                            AnchorBottom="1"
+                            AnchorLeft="0"
+                            AnchorRight="1"
+                            MarginRight="-20"
+                            MarginTop="25"
+                            Align="Right"
+                            VAlign="Top"
+                            Text="DeltaTime : 0">
+                    </Label>
                 </Panel>
                 <Control
                         Name="Control"
@@ -50,6 +62,8 @@
                             MarginBottom="-40"
                             MarginLeft="-40"
                             MarginRight="0"
+                            Align="Center"
+                            VAlign="Center"
                             Text="Click me!">
                     </Button>
                 </Control>

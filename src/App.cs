@@ -10,7 +10,7 @@ public class App : LuaNode
 	{
 		var args = OS.GetCmdlineArgs();
 
-		var path = "./";
+		string path = "";
 
 		for(var i = 0; i < args.Length; i++)
 		{
@@ -27,11 +27,25 @@ public class App : LuaNode
 			}
 		}
 
+
+		if (string.IsNullOrEmpty(path))
+		{
+			OS.Alert("directory or 'lkproj' file not provided", "ERROR");
+			GetTree().Quit();
+			return;
+		}
+
 		path = IoPath.GetFullPath(path);
 
 		if (path.EndsWith(".lkproj"))
 			StartFromLKProject(path);
 		else
 			StartFromPath(path);
+
+
+		OS.WindowBorderless = false;
+		OS.WindowResizable = true;
+		OS.WindowSize = new Vector2(1024, 600);
+		OS.CenterWindow();
 	}
 }

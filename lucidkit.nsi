@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "LucidKit"
-!define PRODUCT_VERSION "0.0.5"
+!define PRODUCT_VERSION "0.0.6"
 !define PRODUCT_PUBLISHER "Lucas C. Abbas"
 !define PRODUCT_WEB_SITE "http://www.mycompany.com"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\lucidKit.exe"

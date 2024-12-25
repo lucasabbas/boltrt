@@ -598,17 +598,22 @@ end
 Main.prototype = _hx_e();
 Main.prototype.init = function(self) 
   local _gthis = self;
-  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=17,className="Main",methodName="init"}));
+  __haxe_Log.trace("Hello, World!", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=19,className="Main",methodName="init"}));
   local uiDocument = gdx.UiDocument.__new();
   self:get_rootNode():addChild(uiDocument);
   uiDocument:loadFromPath("data://gui.xml", self:get_ioManager());
   local label = uiDocument:getObject("Panel/VBoxContainer/Control/Label");
   local button = uiDocument:getObject("Panel/VBoxContainer/Control/Button");
+  self.deltaTimeLabel = uiDocument:getObject("Panel/VBoxContainer/Topbar/DTLabel");
   godot.SignalToFunc.connect(button, "pressed", function() 
     _gthis.counter = _gthis.counter + 1;
-    __haxe_Log.trace(Std.string(Std.string("You clicked me ") .. Std.string(_gthis.counter)) .. Std.string(" times!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=28,className="Main",methodName="init"}));
+    __haxe_Log.trace(Std.string(Std.string("You clicked me ") .. Std.string(_gthis.counter)) .. Std.string(" times!"), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="Main.hx",lineNumber=31,className="Main",methodName="init"}));
     label.text = Std.string(Std.string("You clicked me ") .. Std.string(_gthis.counter)) .. Std.string(" times!");
   end);
+end
+Main.prototype.process = function(self,delta) 
+  local tmp = Std.string(delta);
+  self.deltaTimeLabel.text = Std.string("DeltaTime: ") .. Std.string(tmp);
 end
 
 Main.prototype.__class__ =  Main
