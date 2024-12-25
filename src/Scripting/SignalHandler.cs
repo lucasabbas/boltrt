@@ -2,7 +2,7 @@ using Godot;
 using MoonSharp.Interpreter;
 
 
-public class SignalHandler : Reference {
+public class SignalHandler : Object {
 	public  Closure _closure;
 	
 	public void CallClosure() => _closure.Call();
