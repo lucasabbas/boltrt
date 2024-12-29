@@ -5,7 +5,7 @@ using System.IO;
 using IoPath = System.IO.Path;
 using IoDir = System.IO.Directory;
 
-public class App : LuaNode
+public class Runtime : LuaNode
 {
 	public override void _Ready()
 	{
