@@ -12,7 +12,7 @@ public class Editor : LuaNode
         if (!basePath.EndsWith("/"))
             basePath += "/";
 
-        var editorPath = basePath + "data/editor/editor.lkproj";
+        var editorPath = basePath + "data_editor/editor.lkproj";
         StartFromLKProject(editorPath);
 
         OS.WindowBorderless = false;

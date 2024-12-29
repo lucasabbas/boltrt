@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 using System.Reflection;
+using System.IO;
 
 namespace LucidKit {
     public class UiDocument : Control {
@@ -191,6 +192,8 @@ namespace LucidKit {
                                 {
                                     ConstructMenu(xmlNode, menu);
                                 }
+                                else if (gdNode is MenuButton menuButton)
+                                    ConstructMenu(xmlNode, menuButton.GetPopup());
                             }
 
                             SetObjectValues(xmlNode, gdNode);
@@ -414,29 +417,29 @@ namespace LucidKit {
                         var icon = LoadImageTexture(IOCore, childNode.Attributes["icon"].Value);
                         menu.SetItemIcon(id, icon);
                     }
-                    if (childNode.Attributes["Checkable"] != null)
+                    if (childNode.Attributes["checkable"] != null)
                     {
-                        var checkable = bool.Parse(childNode.Attributes["Checkable"].Value);
+                        var checkable = bool.Parse(childNode.Attributes["checkable"].Value);
                         menu.SetItemAsCheckable(id, checkable);
                     }
-                    else if (childNode.Attributes["RadioCheckable"] != null)
+                    else if (childNode.Attributes["radioCheckable"] != null)
                     {
-                        var checkable = bool.Parse(childNode.Attributes["RadioCheckable"].Value);
+                        var checkable = bool.Parse(childNode.Attributes["radioCheckable"].Value);
                         menu.SetItemAsRadioCheckable(id, checkable);
                     }
-                    else if (childNode.Attributes["Separator"] != null)
+                    else if (childNode.Attributes["separator"] != null)
                     {
-                        var separator = bool.Parse(childNode.Attributes["Separator"].Value);
+                        var separator = bool.Parse(childNode.Attributes["separator"].Value);
                         menu.SetItemAsSeparator(id, separator);
                     }
-                    if (childNode.Attributes["Checked"] != null)
+                    if (childNode.Attributes["checked"] != null)
                     {
-                        var disabled = bool.Parse(childNode.Attributes["Checked"].Value);
+                        var disabled = bool.Parse(childNode.Attributes["checked"].Value);
                         menu.SetItemChecked(id, disabled);
                     }
-                    if (childNode.Attributes["Disabled"] != null)
+                    if (childNode.Attributes["disabled"] != null)
                     {
-                        var disabled = bool.Parse(childNode.Attributes["Disabled"].Value);
+                        var disabled = bool.Parse(childNode.Attributes["disabled"].Value);
                         menu.SetItemDisabled(id, disabled);
                     }
                 }
@@ -512,7 +515,15 @@ namespace LucidKit {
 
         private ImageTexture LoadImageTexture(IOCore assetIo, string path)
         {
-            var buffer = assetIo.LoadBuffer(path);
+            byte[] buffer;
+            if (path.Contains("res://"))
+            {
+                var file = new Godot.File();
+                file.Open(path, Godot.File.ModeFlags.Read);
+                buffer = file.GetBuffer((long)file.GetLen());
+            }
+            else 
+                buffer = assetIo.LoadBuffer(path);
             var image = new Image();
             if (path.EndsWith(".png"))
             {

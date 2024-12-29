@@ -1,5 +1,5 @@
 --library lucidKit
 --class-path lucidEd
 --main lucidEd.Main
---lua data/editor/main.lua
+--lua data_editor/main.lua
 -D lua-vanilla

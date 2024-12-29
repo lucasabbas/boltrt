@@ -1,4 +1,0 @@
-<app>
-    <title>LucidEd</title>
-    <mainScript>data://main.lua</mainScript>
-</app>
