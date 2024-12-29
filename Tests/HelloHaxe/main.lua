@@ -564,6 +564,9 @@ end
 __lucidKit_App.super = function(self) 
   _G.process = function(delta) self:process(delta) end;
   _G.physicsProcess = function(delta) self:physicsProcess(delta) end;
+  _G.input = function(event) self:input(event) end;
+  _G.unhandledInput = function(event) self:unhandledInput(event) end;
+  _G.unhandledKeyInput = function(event) self:unhandledKeyInput(event) end;
   self:init();
 end
 __lucidKit_App.__name__ = true
@@ -571,11 +574,20 @@ __lucidKit_App.prototype = _hx_e();
 __lucidKit_App.prototype.get_rootNode = function(self) 
   do return rootNode end
 end
+__lucidKit_App.prototype.get_ioManager = function(self) 
+  do return ioManager end
+end
 __lucidKit_App.prototype.init = function(self) 
 end
 __lucidKit_App.prototype.process = function(self,delta) 
 end
 __lucidKit_App.prototype.physicsProcess = function(self,delta) 
+end
+__lucidKit_App.prototype.input = function(self,event) 
+end
+__lucidKit_App.prototype.unhandledInput = function(self,event) 
+end
+__lucidKit_App.prototype.unhandledKeyInput = function(self,event) 
 end
 
 __lucidKit_App.prototype.__class__ =  __lucidKit_App
