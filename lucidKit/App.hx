@@ -52,4 +52,8 @@ class App {
 
     }
 
+    public function loadEnginePlugin(dllPath : String) : Void {
+        untyped __lua__("loadEnginePlugin(dllPath)");
+    }
+
 }

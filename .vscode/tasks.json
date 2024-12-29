@@ -13,6 +13,22 @@
                 "-q"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-editor-haxe",
+            "command": "haxe",
+            "type": "process",
+            "args": [
+                "editor.hxml"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-editor",
+            "dependsOn": [
+                "build",
+                "build-editor-haxe"
+            ]
         }
     ]
 }

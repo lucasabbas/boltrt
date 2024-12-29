@@ -1142,6 +1142,9 @@ __lucidKit_App.prototype.unhandledInput = function(self,event)
 end
 __lucidKit_App.prototype.unhandledKeyInput = function(self,event) 
 end
+__lucidKit_App.prototype.loadEnginePlugin = function(self,dllPath) 
+  loadEnginePlugin(dllPath);
+end
 
 __lucidKit_App.prototype.__class__ =  __lucidKit_App
 
@@ -1159,6 +1162,7 @@ __lucidEd_Main.main = function()
 end
 __lucidEd_Main.prototype = _hx_e();
 __lucidEd_Main.prototype.init = function(self) 
+  _G.print("Hello, World!");
   self.editorWindow = __lucidEd_EditorWindow.new(self:get_ioManager(), self:get_rootNode());
 end
 

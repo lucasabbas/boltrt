@@ -24,6 +24,7 @@ class Main extends App{
     }
 
     public override function init() {
+        Sys.println("Hello, World!");
         editorWindow = new EditorWindow(ioManager, rootNode);
     }
 }

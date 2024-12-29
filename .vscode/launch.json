@@ -40,7 +40,7 @@
             "type": "godot-mono",
             "request": "launch",
             "mode": "executable",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build-editor",
             "executable": "C:/Users/mintkat/Desktop/Godot_v3.6-stable_mono_win64/Godot_v3.6-stable_mono_win64.exe",
             "executableArguments": [
                 "--path",

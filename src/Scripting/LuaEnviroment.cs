@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Godot;
 using LucidKit.IO;
 using LucidKit.Plugins;
@@ -125,6 +126,8 @@ namespace LucidKit.Scripting
             _isInitNoSandbox = true;
 
             AddPlugin(typeof(SocketPlugin));
+
+            Script.Globals["loadEnginePlugin"] = (Action<string>)LoadPluginDll;
         }
 
         public void LoadScript(string path)
@@ -145,6 +148,18 @@ namespace LucidKit.Scripting
         public float DoubleToFloat(double d)
         {
             return (float)d;
+        }
+
+        private void LoadPluginDll(string path)
+        {
+            Assembly assembly = Assembly.LoadFile(path);
+            foreach (Type type in assembly.GetTypes())
+            {
+                if (type.BaseType == typeof(Plugin))
+                {
+                    AddPlugin(type);
+                }
+            }
         }
     }
 }
