@@ -11,7 +11,8 @@ import haxe.ds.Vector;
 import lucidKit.godot.Object;
 import lucidKit.godot.Camera;
 import lucidKit.godot.MeshInstance;
-import lucidKit.godot.extensions.FreeLookCamera; 
+import lucidKit.godot.DirectionalLight; 
+import lucidKit.godot.extensions.FreeLookCamera;
 import lucidKit.App;
 
 class Main extends App{
@@ -65,6 +66,9 @@ class Main extends App{
 
         var mesh = new CubeMesh();
         meshInstance.mesh = mesh;
+
+        var directionalLight = new DirectionalLight();
+        rootNode.addChild(directionalLight);
 
         //if (lua.)
         var file = File.getContent("data://textFile.txt");

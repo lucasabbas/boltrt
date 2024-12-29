@@ -654,6 +654,8 @@ Main.prototype.init = function(self)
   meshInstance.position = __lucidKit_godot__Vector3_Vector3_Impl_._new(0, 0, -5);
   local mesh = godot.CubeMesh.__new();
   meshInstance.mesh = mesh;
+  local directionalLight = godot.DirectionalLight.__new();
+  self:get_rootNode():addChild(directionalLight);
   local file = __sys_io_File.getContent("data://textFile.txt");
   _G.print(Std.string(file));
 end
