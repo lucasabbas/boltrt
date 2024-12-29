@@ -1,21 +1,24 @@
 using Godot;
+using LucidKit.Scripting;
 using System;
 
-public class Editor : Node
+public class Editor : LuaNode
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-
-    // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        
+        string basePath = ProjectSettings.GlobalizePath("res://");
+        if (!OS.HasFeature("editor"))
+            basePath = OS.GetExecutablePath().GetBaseDir();
+        if (!basePath.EndsWith("/"))
+            basePath += "/";
+
+        var editorPath = basePath + "data/editor/editor.lkproj";
+        StartFromLKProject(editorPath);
+
+        OS.WindowBorderless = false;
+		OS.WindowResizable = true;
+		OS.WindowSize = new Vector2(1024, 600);
+		OS.CenterWindow();
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
 }

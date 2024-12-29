@@ -36,6 +36,19 @@
             ]
         },
         {
+            "name": "Launch (Editor Mode)",
+            "type": "godot-mono",
+            "request": "launch",
+            "mode": "executable",
+            "preLaunchTask": "build",
+            "executable": "C:/Users/mintkat/Desktop/Godot_v3.6-stable_mono_win64/Godot_v3.6-stable_mono_win64.exe",
+            "executableArguments": [
+                "--path",
+                "${workspaceRoot}",
+                "--dev"
+            ]
+        },
+        {
             "name": "Launch (Hello Haxe)",
             "type": "godot-mono",
             "request": "launch",
