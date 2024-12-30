@@ -6,9 +6,13 @@
 #define MyAppPublisher "Lucas Abbas"
 #define MyAppURL "https://www.example.com/"
 #define MyAppExeName "lucided.exe"
+#define LkAppExeName "lucidkit.exe"
 #define MyAppAssocName "LucidKit Project File"
+#define LkAppAssocName "LucidKit Application"
 #define MyAppAssocExt ".lkproj"
+#define LkAppAssocExt ".lkapp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
+#define LkAppAssocKey StringChange(LkAppAssocName, " ", "") + LkAppAssocExt
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -22,24 +26,16 @@ AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\lksdk
-; "ArchitecturesAllowed=x64compatible" specifies that Setup cannot run
-; on anything but x64 and Windows 11 on Arm.
-ArchitecturesAllowed=x64compatible
-; "ArchitecturesInstallIn64BitMode=x64compatible" requests that the
-; install be done in "64-bit mode" on x64 or Windows 11 on Arm,
-; meaning it should use the native 64-bit Program Files directory and
-; the 64-bit view of the registry.
-ArchitecturesInstallIn64BitMode=x64compatible
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=C:\Users\mintkat\lucidkit\LICENSE
+LicenseFile=LICENSE
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-PrivilegesRequiredOverridesAllowed=dialog
-OutputDir=C:\Users\mintkat\lucidkit\bin
+;PrivilegesRequiredOverridesAllowed=dialog
+OutputDir=bin
 OutputBaseFilename=lksdksetup
-SetupIconFile=C:\Users\mintkat\lucidkit\icon.ico
+SetupIconFile=icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -51,8 +47,9 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\mintkat\lucidkit\bin\win32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\mintkat\lucidkit\bin\win32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "bin\win32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bin\win32\{#LkAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bin\win32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Registry]
@@ -60,7 +57,13 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueTyp
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#MyAppAssocName}"; Flags: uninsdeletekey
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
-Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".myp"; ValueData: ""
+Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".lkproj"; ValueData: ""
+Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
+Root: HKA; Subkey: "Software\Classes\{#LkAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#LkAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
+Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#LkAppAssocName}"; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#LkAppExeName},0"
+Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#LkAppExeName}"" ""%1"""
+Root: HKA; Subkey: "Software\Classes\Applications\{#LkAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".lkapp"; ValueData: ""
 Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
   
 [Icons]

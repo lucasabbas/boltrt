@@ -13,6 +13,10 @@ public class Standalone : LuaNode
 
 		string path = "";
 
+		//string argstr = string.Join(" ", args);
+        //GD.Print(argstr);
+        //GD.Print(System.IO.Path.GetFullPath("./"));
+
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
@@ -43,7 +47,7 @@ public class Standalone : LuaNode
 			}
 			if (string.IsNullOrEmpty(path))
 			{
-				OS.Alert("directory or 'lkproj' file not provided", "ERROR");
+				OS.Alert("directory or 'lkapp' file not provided", "ERROR");
 				GetTree().Quit();
 				return;
 			}

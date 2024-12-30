@@ -8,7 +8,11 @@ namespace LucidKit.Tests.HelloHaxe
         {
             HaxeExternGenerator.GenerateExterns();
 
-            Finish();
+        }
+
+        public override bool _Idle(float delta)
+        {
+            return false;
         }
     }
 }
