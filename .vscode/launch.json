@@ -71,7 +71,7 @@
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}",
-                "./Tests/UiTest/UiTest.lkproj"
+                "./Tests/UiTest/UiTest.lkapp"
             ]
         },
         {

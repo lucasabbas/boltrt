@@ -16,7 +16,7 @@ public class Standalone : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg.Contains(".lkproj"))
+			if (arg.Contains(".lkapp"))
 			{
 				path = arg;
 				break;
@@ -35,7 +35,7 @@ public class Standalone : LuaNode
 			var files = IoDir.GetFiles(IoPath.GetFullPath("./"));
 			foreach (var file in files)
 			{
-				if (file.Contains(".lkproj"))
+				if (file.Contains(".lkapp"))
 				{
 					path = file;
 					break;
@@ -52,7 +52,7 @@ public class Standalone : LuaNode
 
 		path = IoPath.GetFullPath(path);
 
-		if (path.EndsWith(".lkproj"))
+		if (path.EndsWith(".lkapp"))
 			StartFromLKProject(path);
 		else
 			StartFromPath(path);

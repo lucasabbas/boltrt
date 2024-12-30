@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "LucidKit"
-!define PRODUCT_VERSION "0.0.6"
+!define PRODUCT_VERSION "0.0.7"
 !define PRODUCT_PUBLISHER "Lucas C. Abbas"
 !define PRODUCT_WEB_SITE "http://www.mycompany.com"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\lucidKit.exe"
@@ -134,11 +134,15 @@ Section "LucidKit Runtime" SEC01
   File "bin\win32\data_LucidKit\Mono\etc\mono\config"
   SetOutPath "$INSTDIR"
   File "bin\win32\lucidKit.pck"
+  File "bin\win32\lucided.exe"
+  
 
-  WriteRegStr HKCR ".lkproj" ""  "$INSTDIR\lucidKit.exe"
-  WriteRegStr HKCR ".lkproj" ""  "LucidKit Project"
-  WriteRegStr HKCR ".lkproj\DefaultIcon" ""  "$INSTDIR\lucidKit.exe"
-  WriteRegStr HKCR ".lkproj\shell\open\command" "" "$INSTDIR\lucidKit.exe"
+  
+
+  WriteRegStr HKCR ".lkapp" ""  "$INSTDIR\lucidKit.exe"
+  WriteRegStr HKCR ".lkapp" ""  "LucidKit Project"
+  WriteRegStr HKCR ".lkapp\DefaultIcon" ""  "$INSTDIR\lucidKit.exe"
+  WriteRegStr HKCR ".lkapp\shell\open\command" "" "$INSTDIR\lucidKit.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
@@ -281,11 +285,11 @@ Section Uninstall
   SetAutoClose true
 
   ; Remove File Association
-  DeleteRegKey HKCR ".lkproj"
-  DeleteRegKey HKCR ".lkproj\shell\open\command"
-  DeleteRegKey HKCR ".lkproj\shell\open"
-  DeleteRegKey HKCR ".lkproj\shell"
-  DeleteRegKey HKCR ".lkproj\DefaultIcon"
-  DeleteRegKey HKCR ".lkproj"
+  DeleteRegKey HKCR ".lkapp"
+  DeleteRegKey HKCR ".lkapp\shell\open\command"
+  DeleteRegKey HKCR ".lkapp\shell\open"
+  DeleteRegKey HKCR ".lkapp\shell"
+  DeleteRegKey HKCR ".lkapp\DefaultIcon"
+  DeleteRegKey HKCR ".lkapp"
 
 SectionEnd
