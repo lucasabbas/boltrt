@@ -10,6 +10,11 @@ namespace LucidKit.IO
     {
         public String PathUrl = "files://";
 
+        public virtual string GetFilePath(string path)
+        {
+            return path;
+        }
+
         public virtual String LoadText(string assetPath)
         {
             return null;

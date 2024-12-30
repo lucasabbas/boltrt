@@ -2,7 +2,8 @@ package lucidKit.io;
 
 import lucidKit.io.IoCore;
 
-extern class FileSystemIo extends IoCore {
+@:native("FileSystemIo")
+extern class FileSystemIo extends BaseSystemIo {
     public var path : String;
 
     public var altPath : String;

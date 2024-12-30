@@ -3,8 +3,11 @@ package lucidKit.io;
 import lucidKit.core.MonoObject;
 import haxe.io.Bytes;
 
+@:native("IoCore")
 extern class IoCore extends MonoObject {
     public var pathUrl : String;
+
+    public function getFilePath(path : String) : String;
 
     public function loadText(path : String) : String;
 

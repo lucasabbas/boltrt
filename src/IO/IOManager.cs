@@ -13,6 +13,38 @@ namespace LucidKit.IO
             PathUrl = "ioCoreMulti://";
         }
 
+        public override string GetFilePath(string path)
+        {
+            for (int i = 0; i < IoCores.Count; i++)
+            {
+                var ioCore = IoCores[i];
+                var file = ioCore.GetFilePath(path);
+                if (file != null)
+                {
+                    return file;
+                }
+            }
+
+            return null;
+        }
+
+        public string GetFileUrl(string path, string pathUrl)
+        {
+            for (int i = 0; i < IoCores.Count; i++)
+            {
+                var ioCore = IoCores[i];
+                if (ioCore.PathUrl == pathUrl)
+                {
+                    if (ioCore is SystemIOBase fileSys)
+                    {
+                        return fileSys.GetFilePath(path);
+                    }
+                }
+            }
+
+            return pathUrl + path;
+        }
+
         public void Register(IOCore ioCore)
         {
             if (ioCore is IOManager)

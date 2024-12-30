@@ -2,6 +2,7 @@ package lucidKit.io;
 
 import lucidKit.io.IoCore;
 
+@:native("IoManager")
 extern class IoManager extends IoCore {
     public var ioCores : Array<IoCore>;
 

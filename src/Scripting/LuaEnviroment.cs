@@ -61,6 +61,8 @@ namespace LucidKit.Scripting
 
             UserData.RegisterType<IOManager>(); // Register the IoCoreMulti type
             Script.Globals["ioManager"] = IoCore;
+            Script.Globals["_IoManager"] = typeof(IOManager);
+            Script.Globals["IoCore"] = typeof(IOCore);
             Script.Globals["__lua__"] = (Func<string, DynValue>)eval;
             Script.Globals["eval"] = (Func<string, DynValue>)eval;
             Modules = new Table(Script);
@@ -128,6 +130,21 @@ namespace LucidKit.Scripting
             AddPlugin(typeof(SocketPlugin));
 
             Script.Globals["loadEnginePlugin"] = (Action<string>)LoadPluginDll;
+
+            IOCore ioCore = new UnixSysIO();
+            if (OS.GetName() == "Windows")
+            {
+                ioCore = new WindowsSysIO();
+                Script.Globals["WindowsSystemIo"] = typeof(WindowsSysIO);
+            }
+            else {
+                Script.Globals["UnixSystemIo"] = typeof(UnixSysIO);
+            }
+            Script.Globals["BaseSystemIo"] = typeof(SystemIOBase);
+            Script.Globals["FileSystemIo"] = typeof(FileSystemIO);
+
+            IoCore.Register(ioCore);
+            
         }
 
         public void LoadScript(string path)
