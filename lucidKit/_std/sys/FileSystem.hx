@@ -58,8 +58,11 @@
      }
  
      public inline static function deleteFile(path:String):Void {
-        ioManager.deleteFile(path);
-     }
+		var ret = lua.Os.remove(path);
+		if (!ret.success) {
+			throw ret.message;
+		}
+	}
  
      public inline static function readDirectory(path:String):Array<String> {
          throw "not implemented";
