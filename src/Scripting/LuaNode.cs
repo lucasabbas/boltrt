@@ -90,6 +90,10 @@ namespace LucidKit.Scripting
 
 		public override void _Input(InputEvent @event)
 		{
+			if (Input.IsActionJustPressed("fullscreen"))
+			{
+				OS.WindowFullscreen = !OS.WindowFullscreen;
+			}
 			if (_luaEnviroment.Script.Globals["input"] != null)
 			{
 				var input = _luaEnviroment.Script.Globals["input"];

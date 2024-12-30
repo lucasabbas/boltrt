@@ -181,6 +181,17 @@ namespace LucidKit.IO
             }
         }
 
+        public override void DeleteDirectory(string path)
+        {
+            path = GetFilePath(path);
+            if (path == null)
+            {
+                return;
+            }            
+
+            Directory.Delete(path, true);
+        }
+
         public override void DeleteFile(string path)
         {
             path = GetFilePath(path);
@@ -190,6 +201,12 @@ namespace LucidKit.IO
             }
 
             File.Delete(path);
+        }
+
+        public override bool DirectoryExists(string path)
+        {
+            path = GetFilePath(path);
+            return Directory.Exists(path);
         }
         
         public override Stream GetStream(string path, StreamMode mode)

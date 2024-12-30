@@ -18,6 +18,10 @@ extern class IoCore extends MonoObject {
 
     public function getFileList(path : String, extension : String, recursive : Bool = true) : Array<String>;
 
+    public function directoryExists(path : String) : Bool;
+
+    public function deleteDirectory(path : String) : Void;
+    
     public function fileExists(path : String) : Bool;
 
     public function deleteFile(path : String) : Void;

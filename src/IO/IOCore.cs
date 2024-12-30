@@ -61,6 +61,16 @@ namespace LucidKit.IO
         {
             return 1;
         }
+
+        public virtual void DeleteDirectory(string path)
+        {
+            
+        }
+
+        public virtual bool DirectoryExists(string path)
+        {
+            return false;
+        }
         
         public virtual Stream GetStream(String path, StreamMode mode)
         {

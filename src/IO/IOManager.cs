@@ -171,5 +171,32 @@ namespace LucidKit.IO
 
             return null;
         }
+
+        public override bool DirectoryExists(string path)
+        {
+            for (int i = 0; i < IoCores.Count; i++)
+            {
+                var ioCore = IoCores[i];
+                if (path.StartsWith(ioCore.PathUrl))
+                {
+                    return ioCore.DirectoryExists(path);
+                }
+            }
+
+            return false;
+        }
+
+        public override void DeleteDirectory(string path)
+        {
+            for (int i = 0; i < IoCores.Count; i++)
+            {
+                var ioCore = IoCores[i];
+                if (path.StartsWith(ioCore.PathUrl))
+                {
+                    ioCore.DeleteDirectory(path);
+                    return;
+                }
+            }
+        }
     }
 }
