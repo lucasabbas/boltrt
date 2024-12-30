@@ -589,6 +589,9 @@ __lucidKit_App.prototype.unhandledInput = function(self,event)
 end
 __lucidKit_App.prototype.unhandledKeyInput = function(self,event) 
 end
+__lucidKit_App.prototype.loadEnginePlugin = function(self,dllPath) 
+  loadEnginePlugin(dllPath);
+end
 
 __lucidKit_App.prototype.__class__ =  __lucidKit_App
 
@@ -658,6 +661,11 @@ Main.prototype.init = function(self)
   self:get_rootNode():addChild(directionalLight);
   local file = __sys_io_File.getContent("data://textFile.txt");
   _G.print(Std.string(file));
+  local file2 = __sys_io_File.getContent("win://c/Users/mintkat/Documents/newtxt.txt");
+  _G.print(Std.string(file2));
+  local windowsSysIo = WindowsSystemIo.__new();
+  local file3 = windowsSysIo:loadText(windowsSysIo:getFileUrl("C://Users/mintkat/Documents/newtxt.txt"));
+  _G.print(Std.string(file3));
 end
 Main.prototype.process = function(self,delta) 
 end

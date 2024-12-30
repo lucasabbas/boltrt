@@ -27,10 +27,6 @@ namespace LucidKit.IO
         }
 
         public override string GetFileUrl(string path) {
-            path = GetFilePath(path);
-            if (path == null) {
-                return null;
-            }
             var driveLetter = path.Substring(0, 1);
             var filePathArray = path.Split(':');
             var filePath = filePathArray[1];

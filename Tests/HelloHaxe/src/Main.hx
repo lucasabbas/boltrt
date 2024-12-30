@@ -14,6 +14,7 @@ import lucidKit.godot.MeshInstance;
 import lucidKit.godot.DirectionalLight; 
 import lucidKit.godot.extensions.FreeLookCamera;
 import lucidKit.App;
+import lucidKit.io.WindowsSystemIo;
 
 class Main extends App{
     public static function main(){
@@ -73,6 +74,13 @@ class Main extends App{
         //if (lua.)
         var file = File.getContent("data://textFile.txt");
         Sys.println(file);
+
+        var file2 = File.getContent("win://c/Users/mintkat/Documents/newtxt.txt");
+        Sys.println(file2);
+
+        var windowsSysIo = new WindowsSystemIo();
+        var file3 = windowsSysIo.loadText(windowsSysIo.getFileUrl("C://Users/mintkat/Documents/newtxt.txt"));
+        Sys.println(file3);
     }
 
     public override function process(delta : Float) : Void {

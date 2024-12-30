@@ -5,9 +5,9 @@ using System.IO;
 using IoPath = System.IO.Path;
 using IoDir = System.IO.Directory;
 
-public class Runtime : LuaNode
+public class Standalone : LuaNode
 {
-	public override void _Ready()
+    public override void _Ready()
 	{
 		var args = OS.GetCmdlineArgs();
 

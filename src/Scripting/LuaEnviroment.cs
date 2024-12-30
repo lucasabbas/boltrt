@@ -62,6 +62,7 @@ namespace LucidKit.Scripting
             UserData.RegisterType<IOManager>(); // Register the IoCoreMulti type
             Script.Globals["ioManager"] = IoCore;
             Script.Globals["_IoManager"] = typeof(IOManager);
+            UserData.RegisterType<IOCore>(); // Register the IoCore type
             Script.Globals["IoCore"] = typeof(IOCore);
             Script.Globals["__lua__"] = (Func<string, DynValue>)eval;
             Script.Globals["eval"] = (Func<string, DynValue>)eval;
@@ -135,12 +136,16 @@ namespace LucidKit.Scripting
             if (OS.GetName() == "Windows")
             {
                 ioCore = new WindowsSysIO();
+                UserData.RegisterType<WindowsSysIO>();
                 Script.Globals["WindowsSystemIo"] = typeof(WindowsSysIO);
             }
             else {
+                UserData.RegisterType<UnixSysIO>();
                 Script.Globals["UnixSystemIo"] = typeof(UnixSysIO);
             }
+            UserData.RegisterType<SystemIOBase>();
             Script.Globals["BaseSystemIo"] = typeof(SystemIOBase);
+            UserData.RegisterType<FileSystemIO>();
             Script.Globals["FileSystemIo"] = typeof(FileSystemIO);
 
             IoCore.Register(ioCore);
