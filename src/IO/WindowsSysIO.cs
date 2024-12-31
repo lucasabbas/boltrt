@@ -29,8 +29,9 @@ namespace LucidKit.IO
         public override string GetFileUrl(string path) {
             var driveLetter = path.Substring(0, 1);
             var filePathArray = path.Split(':');
-            var filePath = filePathArray[1];
-            return PathUrl + driveLetter + "/" + filePath;
+            var filePath = filePathArray[1].Replace("\\", "/").Replace("//", "/");
+            var newPath = PathUrl + driveLetter.ToLower() + filePath;
+            return newPath;
         }
     }
 }
