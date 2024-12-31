@@ -5,6 +5,8 @@ import lucidKit.godot.SignalToFunc;
 import lucidKit.godot.Button;
 import lucidKit.ui.Widget;
 import lucidKit.godot.MenuButton;
+import lucidKit.godot.Vector2;
+import lucidKit.io.IoManager;
 
 class EditorWindow extends Widget {
     public var fileMenuButton: MenuButton;
@@ -14,8 +16,14 @@ class EditorWindow extends Widget {
     public var newProjectButton : Button;
     public var openProjectButton : Button;
 
+    public var openFolderDialog : FileDialog;
+
+    public var explorer : Explorer;
+
     public override function init() {
+        explorer = new Explorer(this);
         document.loadFromPath("data://editorWindow.xml", ioCore);
+        explorer.init();
 
         fileMenuButton = cast document.getObject("Control/VBoxContainer/MenuBar/HBoxContainer/FileButton");
         editMenuButton = cast document.getObject("Control/VBoxContainer/MenuBar/HBoxContainer/EditButton");
@@ -32,7 +40,16 @@ class EditorWindow extends Widget {
         //trace(openProjectButton != null);
 
         SignalToFunc.connect(newProjectButton, "pressed", () -> onNewProject());
-        SignalToFunc.connect(openProjectButton, "pressed", () -> onOpenProject());
+        SignalToFunc.connect(openProjectButton, "pressed", () -> openProjectDialog());
+
+        openFolderDialog = new FileDialog();
+        openFolderDialog.mode = FileDialogMode.OpenDir;
+        openFolderDialog.access = FileDialogAccess.Filesystem;
+        openFolderDialog.windowTitle = "Open Project";
+
+        SignalToFunc.connect(openFolderDialog, FileDialogSignalNames.dirSelected, (dirPath : String) -> openProject(dirPath));
+
+        document.addChild(openFolderDialog);
     }
 
     public function onNewProject() {
@@ -40,12 +57,25 @@ class EditorWindow extends Widget {
         trace(untyped __lua__("self ~= nil"));
     }
 
-    public function onOpenProject() {
-        trace("Open Project");
+    public function openProject(dirPath : String) {   
+        trace("Open Project: " + dirPath);
 
-        var fileDialog = new FileDialog();
-        fileDialog.mode = FileDialogMode.OpenFile;
-        fileDialog.access = FileDialogAccess.Userdata;
+        var ioManager : IoManager = cast ioCore;
+        ioManager.registerPath(dirPath, "project://");
+    }
+
+    public function openProjectDialog() {
+        trace("Open Project");
+        var fileDialogSize = new Vector2(550, 350);
+        openFolderDialog.popupCentered(fileDialogSize);
         //fileDialog.currentDir = "res://";
+    }
+
+    public function buildDirTree() {
+
+    }
+
+    public function refreshFile() {
+        
     }
 }
