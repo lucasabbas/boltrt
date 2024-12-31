@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderSignalNames {
+}
 @:native("godot.VisualShader")
 extern class VisualShader extends Shader {
     public var graphOffset: Vector2;

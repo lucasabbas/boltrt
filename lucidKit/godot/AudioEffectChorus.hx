@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectChorusSignalNames {
+}
 @:native("godot.AudioEffectChorus")
 extern class AudioEffectChorus extends AudioEffect {
     public var dry: Float;

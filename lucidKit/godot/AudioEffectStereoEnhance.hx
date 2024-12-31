@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectStereoEnhanceSignalNames {
+}
 @:native("godot.AudioEffectStereoEnhance")
 extern class AudioEffectStereoEnhance extends AudioEffect {
     public var panPullout: Float;

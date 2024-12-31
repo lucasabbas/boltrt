@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Curve3DSignalNames {
+}
 @:native("godot.Curve3D")
 extern class Curve3D extends Resource {
     public var bakeInterval: Float;

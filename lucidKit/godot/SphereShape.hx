@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SphereShapeSignalNames {
+}
 @:native("godot.SphereShape")
 extern class SphereShape extends Shape {
     public var radius: Float;

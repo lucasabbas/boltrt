@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class RandomNumberGeneratorSignalNames {
+}
 @:native("godot.RandomNumberGenerator")
 extern class RandomNumberGenerator extends Reference {
     public var seed: Int;

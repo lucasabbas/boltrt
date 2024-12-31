@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PrismMeshSignalNames {
+}
 @:native("godot.PrismMesh")
 extern class PrismMesh extends PrimitiveMesh {
     public var leftToRight: Float;

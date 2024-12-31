@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputMapSignalNames {
+}
 @:native("godot.InputMap")
 extern class InputMap extends Object {
     public function actionAddEvent(action: String, event: InputEvent): Void;

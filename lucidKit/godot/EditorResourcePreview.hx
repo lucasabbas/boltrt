@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class EditorResourcePreviewSignalNames {
+    public static var previewInvalidated: String = "preview_invalidated";
+}
 @:native("godot.EditorResourcePreview")
 extern class EditorResourcePreview extends Node {
     public function addPreviewGenerator(generator: EditorResourcePreviewGenerator): Void;

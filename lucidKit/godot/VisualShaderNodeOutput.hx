@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeOutputSignalNames {
+}
 @:native("godot.VisualShaderNodeOutput")
 extern class VisualShaderNodeOutput extends VisualShaderNode {
     @:native("__new")

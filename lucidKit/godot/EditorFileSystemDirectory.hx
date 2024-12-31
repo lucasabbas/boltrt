@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorFileSystemDirectorySignalNames {
+}
 @:native("godot.EditorFileSystemDirectory")
 extern class EditorFileSystemDirectory extends Object {
     public function findDirIndex(name: String): Int;

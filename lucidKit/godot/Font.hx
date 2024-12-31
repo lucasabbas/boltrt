@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class FontSignalNames {
+}
 @:native("godot.Font")
 extern class Font extends Resource {
     public function draw(canvasItem: RID, position: GdVector2, string: String, modulate: Color, clipW: Int = -1, outlineModulate: Color): Void;

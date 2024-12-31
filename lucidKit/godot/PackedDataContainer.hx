@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PackedDataContainerSignalNames {
+}
 @:native("godot.PackedDataContainer")
 extern class PackedDataContainer extends Resource {
     public var Data: PoolByteArray;

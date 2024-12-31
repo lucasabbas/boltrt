@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectCompressorSignalNames {
+}
 @:native("godot.AudioEffectCompressor")
 extern class AudioEffectCompressor extends AudioEffect {
     public var attackUs: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class XMLParserSignalNames {
+}
 @:native("godot.XMLParser")
 extern class XMLParser extends Reference {
     public function getAttributeCount(): Int;

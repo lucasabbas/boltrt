@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TranslationSignalNames {
+}
 @:native("godot.Translation")
 extern class Translation extends Resource {
     public var locale: String;

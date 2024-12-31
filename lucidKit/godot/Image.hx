@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ImageSignalNames {
+}
 @:native("godot.Image")
 extern class Image extends Resource {
     public var data: Map<Dynamic, Dynamic>;

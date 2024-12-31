@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class TweenPlaybackProcessMode {
+    public static var Physics: Int = 0;
+    public static var Idle: Int = 1;
+}
+class TweenPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class TweenPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class TweenSignalNames {
+    public static var tweenAllCompleted: String = "tween_all_completed";
+    public static var tweenCompleted: String = "tween_completed";
+    public static var tweenStarted: String = "tween_started";
+    public static var tweenStep: String = "tween_step";
+}
 @:native("godot.Tween")
 extern class Tween extends Node {
     public var playbackProcessMode: Int;

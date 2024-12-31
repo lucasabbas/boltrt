@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorScenePostImportSignalNames {
+}
 @:native("godot.EditorScenePostImport")
 extern class EditorScenePostImport extends Reference {
     public function getSourceFile(): String;

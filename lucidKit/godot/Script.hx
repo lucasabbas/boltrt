@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ScriptSignalNames {
+}
 @:native("godot.Script")
 extern class Script extends Resource {
     public var sourceCode: String;

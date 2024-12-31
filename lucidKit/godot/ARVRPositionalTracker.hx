@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ARVRPositionalTrackerSignalNames {
+}
 @:native("godot.ARVRPositionalTracker")
 extern class ARVRPositionalTracker extends Reference {
     public var rumble: Float;

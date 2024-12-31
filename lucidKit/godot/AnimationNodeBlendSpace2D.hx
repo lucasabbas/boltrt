@@ -1,5 +1,13 @@
 package lucidKit.godot;
 
+class AnimationNodeBlendSpace2DBlendMode {
+    public static var Interpolated: Int = 0;
+    public static var Discrete: Int = 1;
+    public static var DiscreteCarry: Int = 2;
+}
+class AnimationNodeBlendSpace2DSignalNames {
+    public static var trianglesUpdated: String = "triangles_updated";
+}
 @:native("godot.AnimationNodeBlendSpace2D")
 extern class AnimationNodeBlendSpace2D extends AnimationRootNode {
     public var autoTriangles: Bool;

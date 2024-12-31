@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class GeometrySignalNames {
+}
 @:native("godot.Geometry")
 extern class Geometry extends Object {
     public function buildBoxPlanes(extents: GdVector3): Array<Dynamic>;

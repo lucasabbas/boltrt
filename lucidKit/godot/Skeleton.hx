@@ -1,5 +1,23 @@
 package lucidKit.godot;
 
+class SkeletonMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SkeletonPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class SkeletonPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SkeletonSignalNames {
+    public static var skeletonUpdated: String = "skeleton_updated";
+}
 @:native("godot.Skeleton")
 extern class Skeleton extends Spatial {
     public function addBone(name: String): Void;

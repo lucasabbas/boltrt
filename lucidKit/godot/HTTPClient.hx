@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class HTTPClientSignalNames {
+}
 @:native("godot.HTTPClient")
 extern class HTTPClient extends Reference {
     public var blockingModeEnabled: Bool;

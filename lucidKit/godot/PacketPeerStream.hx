@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PacketPeerStreamSignalNames {
+}
 @:native("godot.PacketPeerStream")
 extern class PacketPeerStream extends PacketPeer {
     public var inputBufferMaxSize: Int;

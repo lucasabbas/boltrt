@@ -583,6 +583,7 @@ abstract Quat(GdQuat) from GdQuat {
         sb.AppendLine();
 
         AppendEnums(sb, doc);
+        AppendSignals(sb, doc);
 
         var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
 
@@ -615,23 +616,34 @@ abstract Quat(GdQuat) from GdQuat {
         var godotAssembly = typeof(Godot.Node).Assembly;
         var className = doc.Root?.Attribute("name")?.Value;
 
-        Type type = godotAssembly.GetType(className);
+        Type[] types = godotAssembly.GetTypes();
+
+        Type type = null;
+
+        foreach (Type t in types)
+        {
+            if (t.Name == className)
+            {
+                type = t;
+                break;
+            }
+        }
 
         if (type != null)
         {
-            var enumNames = type.GetFields();
+            var enumNames = type.GetProperties();
 
-            foreach (var fieldInfo in enumNames)
+            foreach (var propertyInfo in enumNames)
             {
-                if (fieldInfo.FieldType.IsEnum)
+                if (propertyInfo.PropertyType.IsEnum)
                 {
-                    var enumName = className + fieldInfo.Name;
-                    var enumValue = (int)fieldInfo.GetValue(null);
-                    sb.AppendLine($"enum {enumName} {{");
+                    var enumName = className + propertyInfo.Name;
+                    var enumValue = (int)propertyInfo.GetValue(null);
+                    sb.AppendLine($"class {enumName} {{");
 
-                    foreach (var value in Enum.GetValues(fieldInfo.FieldType))
+                    foreach (var value in Enum.GetValues(propertyInfo.PropertyType))
                     {
-                        var valName = Enum.GetName(fieldInfo.FieldType, value);
+                        var valName = Enum.GetName(propertyInfo.PropertyType, value);
                         var valValue = (int)value;
                         sb.AppendLine($"    public static var {valName}: Int = {valValue};");
                     }
@@ -677,11 +689,14 @@ abstract Quat(GdQuat) from GdQuat {
     static void AppendSignals(StringBuilder sb, XDocument doc)
     {
         var signals = doc.Descendants("signal");
+        var className = doc.Root?.Attribute("name")?.Value;
+        sb.AppendLine($"class {className}SignalNames {{");
         foreach (var signal in signals)
         {
             var signalName = signal.Attribute("name")?.Value;
             sb.AppendLine($"    public static var {ToCamelCase(signalName)}: String = \"{signalName}\";");
         }
+        sb.AppendLine("}");
     }
 
     static void AppendMethods(StringBuilder sb, XDocument doc)

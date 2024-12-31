@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class IPSignalNames {
+}
 @:native("godot.IP")
 extern class IP extends Object {
     public function clearCache(hostname: String): Void;

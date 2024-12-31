@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class NavigationPolygonInstancePauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class NavigationPolygonInstancePhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class NavigationPolygonInstanceSignalNames {
+}
 @:native("godot.NavigationPolygonInstance")
 extern class NavigationPolygonInstance extends Node2D {
     public var enabled: Bool;

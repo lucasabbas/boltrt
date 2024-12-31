@@ -1,5 +1,16 @@
 package lucidKit.godot;
 
+class OSScreenOrientation {
+    public static var Landscape: Int = 0;
+    public static var Portrait: Int = 1;
+    public static var ReverseLandscape: Int = 2;
+    public static var ReversePortrait: Int = 3;
+    public static var SensorLandscape: Int = 4;
+    public static var SensorPortrait: Int = 5;
+    public static var Sensor: Int = 6;
+}
+class OSSignalNames {
+}
 @:native("godot.OS")
 extern class OS extends Object {
     public var clipboard: String;

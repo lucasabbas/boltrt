@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StreamTextureSignalNames {
+}
 @:native("godot.StreamTexture")
 extern class StreamTexture extends Texture {
     public var loadPath: String;

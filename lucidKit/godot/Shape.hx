@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ShapeSignalNames {
+}
 @:native("godot.Shape")
 extern class Shape extends Resource {
     public var margin: Float;

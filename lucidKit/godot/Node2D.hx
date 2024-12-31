@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class Node2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Node2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Node2DSignalNames {
+}
 @:native("godot.Node2D")
 extern class Node2D extends CanvasItem {
     public var globalPosition: Vector2;

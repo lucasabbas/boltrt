@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class FileSignalNames {
+}
 @:native("godot.File")
 extern class File extends Reference {
     public var endianSwap: Bool;

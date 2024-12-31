@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CryptoSignalNames {
+}
 @:native("godot.Crypto")
 extern class Crypto extends Reference {
     public function constantTimeCompare(trusted: PoolByteArray, received: PoolByteArray): Bool;

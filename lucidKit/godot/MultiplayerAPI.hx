@@ -1,5 +1,13 @@
 package lucidKit.godot;
 
+class MultiplayerAPISignalNames {
+    public static var connectedToServer: String = "connected_to_server";
+    public static var connectionFailed: String = "connection_failed";
+    public static var networkPeerConnected: String = "network_peer_connected";
+    public static var networkPeerDisconnected: String = "network_peer_disconnected";
+    public static var networkPeerPacket: String = "network_peer_packet";
+    public static var serverDisconnected: String = "server_disconnected";
+}
 @:native("godot.MultiplayerAPI")
 extern class MultiplayerAPI extends Reference {
     public var allowObjectDecoding: Bool;

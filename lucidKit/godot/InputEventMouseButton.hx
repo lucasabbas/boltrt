@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventMouseButtonSignalNames {
+}
 @:native("godot.InputEventMouseButton")
 extern class InputEventMouseButton extends InputEventMouse {
     public var buttonIndex: Int;

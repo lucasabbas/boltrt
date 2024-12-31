@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class HashingContextSignalNames {
+}
 @:native("godot.HashingContext")
 extern class HashingContext extends Reference {
     public function finish(): PoolByteArray;

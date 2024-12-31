@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TextureLayeredSignalNames {
+}
 @:native("godot.TextureLayered")
 extern class TextureLayered extends Resource {
     public var data: Map<Dynamic, Dynamic>;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationNodeBlendTreeSignalNames {
+}
 @:native("godot.AnimationNodeBlendTree")
 extern class AnimationNodeBlendTree extends AnimationRootNode {
     public var graphOffset: Vector2;

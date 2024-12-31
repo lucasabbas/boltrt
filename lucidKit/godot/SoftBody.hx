@@ -1,5 +1,42 @@
 package lucidKit.godot;
 
+class SoftBodyCastShadow {
+    public static var Off: Int = 0;
+    public static var On: Int = 1;
+    public static var DoubleSided: Int = 2;
+    public static var ShadowsOnly: Int = 3;
+}
+class SoftBodyLightmapScale {
+    public static var Scale1x: Int = 0;
+    public static var Scale2x: Int = 1;
+    public static var Scale4x: Int = 2;
+    public static var Scale8x: Int = 3;
+    public static var Max: Int = 4;
+}
+class SoftBodyPortalMode {
+    public static var Static: Int = 0;
+    public static var Dynamic: Int = 1;
+    public static var Roaming: Int = 2;
+    public static var Global: Int = 3;
+    public static var Ignore: Int = 4;
+}
+class SoftBodyMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SoftBodyPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class SoftBodyPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SoftBodySignalNames {
+}
 @:native("godot.SoftBody")
 extern class SoftBody extends MeshInstance {
     public var areaAngularStiffness: Float;

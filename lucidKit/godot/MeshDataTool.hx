@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MeshDataToolSignalNames {
+}
 @:native("godot.MeshDataTool")
 extern class MeshDataTool extends Reference {
     public function clear(): Void;

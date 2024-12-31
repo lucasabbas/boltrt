@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StyleBoxFlatSignalNames {
+}
 @:native("godot.StyleBoxFlat")
 extern class StyleBoxFlat extends StyleBox {
     public var antiAliasing: Bool;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class DirectorySignalNames {
+}
 @:native("godot.Directory")
 extern class Directory extends Reference {
     public function changeDir(todir: String): Int;

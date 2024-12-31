@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorInspectorPluginSignalNames {
+}
 @:native("godot.EditorInspectorPlugin")
 extern class EditorInspectorPlugin extends Reference {
     public function addCustomControl(control: Control): Void;

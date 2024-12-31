@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventScreenTouchSignalNames {
+}
 @:native("godot.InputEventScreenTouch")
 extern class InputEventScreenTouch extends InputEvent {
     public var canceled: Bool;

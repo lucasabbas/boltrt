@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PropertyTweenerSignalNames {
+}
 @:native("godot.PropertyTweener")
 extern class PropertyTweener extends Tweener {
     public function asRelative(): PropertyTweener;

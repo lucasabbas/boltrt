@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AESContextSignalNames {
+}
 @:native("godot.AESContext")
 extern class AESContext extends Reference {
     public function finish(): Void;

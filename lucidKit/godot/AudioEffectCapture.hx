@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectCaptureSignalNames {
+}
 @:native("godot.AudioEffectCapture")
 extern class AudioEffectCapture extends AudioEffect {
     public var bufferLength: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventKeySignalNames {
+}
 @:native("godot.InputEventKey")
 extern class InputEventKey extends InputEventWithModifiers {
     public var echo: Bool;

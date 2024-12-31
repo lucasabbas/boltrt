@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SpatialVelocityTrackerSignalNames {
+}
 @:native("godot.SpatialVelocityTracker")
 extern class SpatialVelocityTracker extends Reference {
     public var trackPhysicsStep: Bool;

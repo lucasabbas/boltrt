@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class EditorSettingsSignalNames {
+    public static var settingsChanged: String = "settings_changed";
+}
 @:native("godot.EditorSettings")
 extern class EditorSettings extends Resource {
     public var docksFilesystemAlwaysShowFolders: Bool;

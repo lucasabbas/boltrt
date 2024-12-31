@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventActionSignalNames {
+}
 @:native("godot.InputEventAction")
 extern class InputEventAction extends InputEvent {
     public var action: String;

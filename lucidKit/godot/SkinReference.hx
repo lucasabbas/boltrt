@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SkinReferenceSignalNames {
+}
 @:native("godot.SkinReference")
 extern class SkinReference extends Reference {
     public function getSkeleton(): RID;

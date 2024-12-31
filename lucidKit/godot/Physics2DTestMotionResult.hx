@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Physics2DTestMotionResultSignalNames {
+}
 @:native("godot.Physics2DTestMotionResult")
 extern class Physics2DTestMotionResult extends Reference {
     public var collider: Object;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CylinderShapeSignalNames {
+}
 @:native("godot.CylinderShape")
 extern class CylinderShape extends Shape {
     public var height: Float;

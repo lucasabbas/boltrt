@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CurveTextureSignalNames {
+}
 @:native("godot.CurveTexture")
 extern class CurveTexture extends Texture {
     public var curve: Curve;

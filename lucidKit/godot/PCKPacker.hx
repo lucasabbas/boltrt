@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PCKPackerSignalNames {
+}
 @:native("godot.PCKPacker")
 extern class PCKPacker extends Reference {
     public function addFile(pckPath: String, sourcePath: String): Int;

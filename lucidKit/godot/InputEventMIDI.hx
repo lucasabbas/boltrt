@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventMIDISignalNames {
+}
 @:native("godot.InputEventMIDI")
 extern class InputEventMIDI extends InputEvent {
     public var channel: Int;

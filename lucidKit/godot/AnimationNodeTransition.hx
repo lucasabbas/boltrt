@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationNodeTransitionSignalNames {
+}
 @:native("godot.AnimationNodeTransition")
 extern class AnimationNodeTransition extends AnimationNode {
     public var inputCount: Int;

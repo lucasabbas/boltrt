@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorExportPluginSignalNames {
+}
 @:native("godot.EditorExportPlugin")
 extern class EditorExportPlugin extends Reference {
     public function ExportBegin(features: PoolStringArray, isDebug: Bool, path: String, flags: Int): Void;

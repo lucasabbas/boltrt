@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StreamPeerTCPSignalNames {
+}
 @:native("godot.StreamPeerTCP")
 extern class StreamPeerTCP extends StreamPeer {
     public function connectToHost(host: String, port: Int): Int;

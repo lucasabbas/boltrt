@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ViewportTextureSignalNames {
+}
 @:native("godot.ViewportTexture")
 extern class ViewportTexture extends Texture {
     public var viewportPath: NodePath;

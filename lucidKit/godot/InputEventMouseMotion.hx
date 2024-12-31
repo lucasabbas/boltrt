@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventMouseMotionSignalNames {
+}
 @:native("godot.InputEventMouseMotion")
 extern class InputEventMouseMotion extends InputEventMouse {
     public var penInverted: Bool;

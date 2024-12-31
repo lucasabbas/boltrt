@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorImportPluginSignalNames {
+}
 @:native("godot.EditorImportPlugin")
 extern class EditorImportPlugin extends ResourceImporter {
     public function getImportOptions(preset: Int): Array<Dynamic>;

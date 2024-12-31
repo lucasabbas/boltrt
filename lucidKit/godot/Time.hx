@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TimeSignalNames {
+}
 @:native("godot.Time")
 extern class Time extends Object {
     public function getDateDictFromSystem(utc: Bool = false): Map<Dynamic, Dynamic>;

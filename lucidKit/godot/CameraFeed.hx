@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CameraFeedSignalNames {
+}
 @:native("godot.CameraFeed")
 extern class CameraFeed extends Reference {
     public var feedIsActive: Bool;

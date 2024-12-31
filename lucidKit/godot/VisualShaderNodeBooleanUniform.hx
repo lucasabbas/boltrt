@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeBooleanUniformSignalNames {
+}
 @:native("godot.VisualShaderNodeBooleanUniform")
 extern class VisualShaderNodeBooleanUniform extends VisualShaderNodeUniform {
     public var defaultValue: Bool;

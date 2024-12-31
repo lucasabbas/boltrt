@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventJoypadMotionSignalNames {
+}
 @:native("godot.InputEventJoypadMotion")
 extern class InputEventJoypadMotion extends InputEvent {
     public var axis: Int;

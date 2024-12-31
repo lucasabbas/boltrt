@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ExternalTextureSignalNames {
+}
 @:native("godot.ExternalTexture")
 extern class ExternalTexture extends Texture {
     public var size: Vector2;

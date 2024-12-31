@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StreamPeerSSLSignalNames {
+}
 @:native("godot.StreamPeerSSL")
 extern class StreamPeerSSL extends StreamPeer {
     public var blockingHandshake: Bool;

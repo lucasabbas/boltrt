@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AStarSignalNames {
+}
 @:native("godot.AStar")
 extern class AStar extends Reference {
     public function ComputeCost(fromId: Int, toId: Int): Float;

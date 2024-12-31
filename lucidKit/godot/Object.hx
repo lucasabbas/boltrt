@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class ObjectSignalNames {
+    public static var scriptChanged: String = "script_changed";
+}
 @:native("godot.Object")
 extern class Object extends lucidKit.core.MonoObject {
     public function Get(property: String): Variant;

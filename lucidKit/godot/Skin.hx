@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SkinSignalNames {
+}
 @:native("godot.Skin")
 extern class Skin extends Resource {
     public function addBind(bone: Int, pose: Transform): Void;

@@ -1,5 +1,10 @@
 package lucidKit.godot;
 
+class SceneTreeTweenSignalNames {
+    public static var finished: String = "finished";
+    public static var loopFinished: String = "loop_finished";
+    public static var stepFinished: String = "step_finished";
+}
 @:native("godot.SceneTreeTween")
 extern class SceneTreeTween extends Reference {
     public function bindNode(node: Node): SceneTreeTween;

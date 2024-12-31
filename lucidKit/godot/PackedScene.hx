@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PackedSceneSignalNames {
+}
 @:native("godot.PackedScene")
 extern class PackedScene extends Resource {
     public var Bundled: Map<Dynamic, Dynamic>;

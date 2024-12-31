@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class JavaScriptSignalNames {
+    public static var pwaUpdateAvailable: String = "pwa_update_available";
+}
 @:native("godot.JavaScript")
 extern class JavaScript extends Object {
     public function createCallback(object: Object, method: String): JavaScriptObject;

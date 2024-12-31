@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorResourcePreviewGeneratorSignalNames {
+}
 @:native("godot.EditorResourcePreviewGenerator")
 extern class EditorResourcePreviewGenerator extends Reference {
     public function canGenerateSmallPreview(): Bool;

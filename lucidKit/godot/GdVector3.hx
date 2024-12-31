@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Vector3SignalNames {
+}
 @:native("godot.Vector3")
 extern class GdVector3 extends lucidKit.core.MonoObject {
     public var x: Float;

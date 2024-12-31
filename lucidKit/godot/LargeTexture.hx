@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class LargeTextureSignalNames {
+}
 @:native("godot.LargeTexture")
 extern class LargeTexture extends Texture {
     public function addPiece(ofs: GdVector2, texture: Texture): Int;

@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class Bone2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Bone2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Bone2DSignalNames {
+}
 @:native("godot.Bone2D")
 extern class Bone2D extends Node2D {
     public var defaultLength: Float;

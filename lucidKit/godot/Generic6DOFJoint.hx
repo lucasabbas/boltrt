@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class Generic6DOFJointMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Generic6DOFJointPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Generic6DOFJointPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Generic6DOFJointSignalNames {
+}
 @:native("godot.Generic6DOFJoint")
 extern class Generic6DOFJoint extends Joint {
     public var angularLimitXDamping: Float;

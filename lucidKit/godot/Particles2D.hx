@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class Particles2DDrawOrder {
+    public static var Index: Int = 0;
+    public static var Lifetime: Int = 1;
+}
+class Particles2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Particles2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Particles2DSignalNames {
+    public static var finished: String = "finished";
+}
 @:native("godot.Particles2D")
 extern class Particles2D extends Node2D {
     public var amount: Int;

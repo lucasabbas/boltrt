@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class OccluderShapePolygonSignalNames {
+}
 @:native("godot.OccluderShapePolygon")
 extern class OccluderShapePolygon extends OccluderShape {
     public var holePoints: PoolVector2Array;

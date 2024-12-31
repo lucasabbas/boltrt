@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SpriteFramesSignalNames {
+}
 @:native("godot.SpriteFrames")
 extern class SpriteFrames extends Resource {
     public var frames: Array<Dynamic>;

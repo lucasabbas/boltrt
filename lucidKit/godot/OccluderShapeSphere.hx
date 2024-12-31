@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class OccluderShapeSphereSignalNames {
+}
 @:native("godot.OccluderShapeSphere")
 extern class OccluderShapeSphere extends OccluderShape {
     public var spheres: Array<Dynamic>;

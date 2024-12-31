@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class DTLSServerSignalNames {
+}
 @:native("godot.DTLSServer")
 extern class DTLSServer extends Reference {
     public function setup(key: CryptoKey, certificate: X509Certificate, chain: X509Certificate): Int;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectLimiterSignalNames {
+}
 @:native("godot.AudioEffectLimiter")
 extern class AudioEffectLimiter extends AudioEffect {
     public var ceilingDb: Float;

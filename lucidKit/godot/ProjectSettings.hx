@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class ProjectSettingsSignalNames {
+    public static var projectSettingsChanged: String = "project_settings_changed";
+}
 @:native("godot.ProjectSettings")
 extern class ProjectSettings extends Object {
     public var androidModules: String;

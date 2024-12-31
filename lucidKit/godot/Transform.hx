@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TransformSignalNames {
+}
 @:native("godot.Transform")
 extern class Transform extends lucidKit.core.MonoObject {
     public var basis: Basis;

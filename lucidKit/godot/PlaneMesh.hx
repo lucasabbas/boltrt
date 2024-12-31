@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PlaneMeshSignalNames {
+}
 @:native("godot.PlaneMesh")
 extern class PlaneMesh extends PrimitiveMesh {
     public var centerOffset: Vector3;

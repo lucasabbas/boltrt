@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ShaderMaterialSignalNames {
+}
 @:native("godot.ShaderMaterial")
 extern class ShaderMaterial extends Material {
     public var shader: Shader;

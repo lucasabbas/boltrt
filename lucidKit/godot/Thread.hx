@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ThreadSignalNames {
+}
 @:native("godot.Thread")
 extern class Thread extends Reference {
     public function getId(): String;

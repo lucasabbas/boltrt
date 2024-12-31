@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class WorldSignalNames {
+}
 @:native("godot.World")
 extern class World extends Resource {
     public var directSpaceState: PhysicsDirectSpaceState;

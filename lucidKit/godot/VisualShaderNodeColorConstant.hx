@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeColorConstantSignalNames {
+}
 @:native("godot.VisualShaderNodeColorConstant")
 extern class VisualShaderNodeColorConstant extends VisualShaderNode {
     public var constant: Color;

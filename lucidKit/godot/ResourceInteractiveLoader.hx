@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ResourceInteractiveLoaderSignalNames {
+}
 @:native("godot.ResourceInteractiveLoader")
 extern class ResourceInteractiveLoader extends Reference {
     public var noSubresourceCache: Bool;

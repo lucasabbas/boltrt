@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class ShapeCast2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class ShapeCast2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class ShapeCast2DSignalNames {
+}
 @:native("godot.ShapeCast2D")
 extern class ShapeCast2D extends Node2D {
     public var collideWithAreas: Bool;

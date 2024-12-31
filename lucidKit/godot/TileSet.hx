@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TileSetSignalNames {
+}
 @:native("godot.TileSet")
 extern class TileSet extends Resource {
     public function ForwardAtlasSubtileSelection(atlastileId: Int, tilemap: Object, tileLocation: GdVector2): Vector2;

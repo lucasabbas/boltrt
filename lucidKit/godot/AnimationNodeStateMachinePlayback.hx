@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationNodeStateMachinePlaybackSignalNames {
+}
 @:native("godot.AnimationNodeStateMachinePlayback")
 extern class AnimationNodeStateMachinePlayback extends Resource {
     public function getCurrentLength(): Float;

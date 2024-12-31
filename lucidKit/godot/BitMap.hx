@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class BitMapSignalNames {
+}
 @:native("godot.BitMap")
 extern class BitMap extends Resource {
     public function convertToImage(): Image;

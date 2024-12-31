@@ -1,5 +1,11 @@
 package lucidKit.godot;
 
+class EditorPluginSignalNames {
+    public static var mainScreenChanged: String = "main_screen_changed";
+    public static var resourceSaved: String = "resource_saved";
+    public static var sceneChanged: String = "scene_changed";
+    public static var sceneClosed: String = "scene_closed";
+}
 @:native("godot.EditorPlugin")
 extern class EditorPlugin extends Node {
     public function addAutoloadSingleton(name: String, path: String): Void;

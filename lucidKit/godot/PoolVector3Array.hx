@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PoolVector3ArraySignalNames {
+}
 @:native("godot.PoolVector3Array")
 extern class PoolVector3Array extends lucidKit.core.MonoObject {
     @:native("__new")

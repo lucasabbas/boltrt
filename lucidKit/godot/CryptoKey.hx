@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CryptoKeySignalNames {
+}
 @:native("godot.CryptoKey")
 extern class CryptoKey extends Resource {
     public function isPublicOnly(): Bool;

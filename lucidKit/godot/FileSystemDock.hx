@@ -1,5 +1,14 @@
 package lucidKit.godot;
 
+class FileSystemDockSignalNames {
+    public static var displayModeChanged: String = "display_mode_changed";
+    public static var fileRemoved: String = "file_removed";
+    public static var filesMoved: String = "files_moved";
+    public static var folderMoved: String = "folder_moved";
+    public static var folderRemoved: String = "folder_removed";
+    public static var inherit: String = "inherit";
+    public static var instance: String = "instance";
+}
 @:native("godot.FileSystemDock")
 extern class FileSystemDock extends VBoxContainer {
     public function canDropDataFw(point: GdVector2, data: Variant, from: Control): Bool;

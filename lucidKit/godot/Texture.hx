@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TextureSignalNames {
+}
 @:native("godot.Texture")
 extern class Texture extends Resource {
     public var flags: Int;

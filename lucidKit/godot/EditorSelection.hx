@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class EditorSelectionSignalNames {
+    public static var selectionChanged: String = "selection_changed";
+}
 @:native("godot.EditorSelection")
 extern class EditorSelection extends Object {
     public function addNode(node: Node): Void;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MutexSignalNames {
+}
 @:native("godot.Mutex")
 extern class Mutex extends Reference {
     public function lock(): Void;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PointMeshSignalNames {
+}
 @:native("godot.PointMesh")
 extern class PointMesh extends PrimitiveMesh {
     @:native("__new")

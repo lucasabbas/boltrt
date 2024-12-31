@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class UndoRedoSignalNames {
+    public static var versionChanged: String = "version_changed";
+}
 @:native("godot.UndoRedo")
 extern class UndoRedo extends Object {
     public function addDoMethod(object: Object, method: String): Void;

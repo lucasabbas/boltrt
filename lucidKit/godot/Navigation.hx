@@ -1,5 +1,23 @@
 package lucidKit.godot;
 
+class NavigationMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class NavigationPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class NavigationPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class NavigationSignalNames {
+    public static var mapChanged: String = "map_changed";
+}
 @:native("godot.Navigation")
 extern class Navigation extends Spatial {
     public var cellHeight: Float;

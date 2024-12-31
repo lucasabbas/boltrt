@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ConfigFileSignalNames {
+}
 @:native("godot.ConfigFile")
 extern class ConfigFile extends Reference {
     public function clear(): Void;

@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class ResourceSignalNames {
+    public static var changed: String = "changed";
+}
 @:native("godot.Resource")
 extern class Resource extends Reference {
     public var resourceLocalToScene: Bool;

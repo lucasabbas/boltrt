@@ -1,5 +1,89 @@
 package lucidKit.godot;
 
+class ViewportMsaa {
+    public static var Disabled: Int = 0;
+    public static var Msaa2x: Int = 1;
+    public static var Msaa4x: Int = 2;
+    public static var Msaa8x: Int = 3;
+    public static var Msaa16x: Int = 4;
+}
+class ViewportUsage {
+    public static var Usage2d: Int = 0;
+    public static var Usage2dNoSampling: Int = 1;
+    public static var Usage3d: Int = 2;
+    public static var Usage3dNoEffects: Int = 3;
+}
+class ViewportDebugDraw {
+    public static var Disabled: Int = 0;
+    public static var Unshaded: Int = 1;
+    public static var Overdraw: Int = 2;
+    public static var Wireframe: Int = 3;
+}
+class ViewportRenderTargetClearMode {
+    public static var Always: Int = 0;
+    public static var Never: Int = 1;
+    public static var OnlyNextFrame: Int = 2;
+}
+class ViewportRenderTargetUpdateMode {
+    public static var Disabled: Int = 0;
+    public static var Once: Int = 1;
+    public static var WhenVisible: Int = 2;
+    public static var Always: Int = 3;
+}
+class ViewportShadowAtlasQuad0 {
+    public static var Disabled: Int = 0;
+    public static var Subdiv1: Int = 1;
+    public static var Subdiv4: Int = 2;
+    public static var Subdiv16: Int = 3;
+    public static var Subdiv64: Int = 4;
+    public static var Subdiv256: Int = 5;
+    public static var Subdiv1024: Int = 6;
+    public static var Max: Int = 7;
+}
+class ViewportShadowAtlasQuad1 {
+    public static var Disabled: Int = 0;
+    public static var Subdiv1: Int = 1;
+    public static var Subdiv4: Int = 2;
+    public static var Subdiv16: Int = 3;
+    public static var Subdiv64: Int = 4;
+    public static var Subdiv256: Int = 5;
+    public static var Subdiv1024: Int = 6;
+    public static var Max: Int = 7;
+}
+class ViewportShadowAtlasQuad2 {
+    public static var Disabled: Int = 0;
+    public static var Subdiv1: Int = 1;
+    public static var Subdiv4: Int = 2;
+    public static var Subdiv16: Int = 3;
+    public static var Subdiv64: Int = 4;
+    public static var Subdiv256: Int = 5;
+    public static var Subdiv1024: Int = 6;
+    public static var Max: Int = 7;
+}
+class ViewportShadowAtlasQuad3 {
+    public static var Disabled: Int = 0;
+    public static var Subdiv1: Int = 1;
+    public static var Subdiv4: Int = 2;
+    public static var Subdiv16: Int = 3;
+    public static var Subdiv64: Int = 4;
+    public static var Subdiv256: Int = 5;
+    public static var Subdiv1024: Int = 6;
+    public static var Max: Int = 7;
+}
+class ViewportPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class ViewportPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class ViewportSignalNames {
+    public static var guiFocusChanged: String = "gui_focus_changed";
+    public static var sizeChanged: String = "size_changed";
+}
 @:native("godot.Viewport")
 extern class Viewport extends Node {
     public var arvr: Bool;

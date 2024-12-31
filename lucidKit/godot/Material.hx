@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MaterialSignalNames {
+}
 @:native("godot.Material")
 extern class Material extends Resource {
     public var nextPass: Material;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PolygonPathFinderSignalNames {
+}
 @:native("godot.PolygonPathFinder")
 extern class PolygonPathFinder extends Resource {
     public function findPath(from: GdVector2, to: GdVector2): PoolVector2Array;

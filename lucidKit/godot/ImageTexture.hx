@@ -1,5 +1,12 @@
 package lucidKit.godot;
 
+class ImageTextureStorage {
+    public static var Raw: Int = 0;
+    public static var CompressLossy: Int = 1;
+    public static var CompressLossless: Int = 2;
+}
+class ImageTextureSignalNames {
+}
 @:native("godot.ImageTexture")
 extern class ImageTexture extends Texture {
     public var lossyQuality: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PacketPeerUDPSignalNames {
+}
 @:native("godot.PacketPeerUDP")
 extern class PacketPeerUDP extends PacketPeer {
     public function close(): Void;

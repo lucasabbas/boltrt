@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioStreamSignalNames {
+}
 @:native("godot.AudioStream")
 extern class AudioStream extends Resource {
     public function getLength(): Float;

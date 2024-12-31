@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PacketPeerDTLSSignalNames {
+}
 @:native("godot.PacketPeerDTLS")
 extern class PacketPeerDTLS extends PacketPeer {
     public function connectToPeer(packetPeer: PacketPeerUDP, validateCerts: Bool = true, forHostname: String, validCertificate: X509Certificate): Int;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Rect2SignalNames {
+}
 @:native("godot.Rect2")
 extern class Rect2 extends lucidKit.core.MonoObject {
     public var end: Vector2;

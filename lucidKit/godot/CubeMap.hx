@@ -1,5 +1,12 @@
 package lucidKit.godot;
 
+class CubeMapStorageMode {
+    public static var Raw: Int = 0;
+    public static var CompressLossy: Int = 1;
+    public static var CompressLossless: Int = 2;
+}
+class CubeMapSignalNames {
+}
 @:native("godot.CubeMap")
 extern class CubeMap extends Resource {
     public var flags: Int;

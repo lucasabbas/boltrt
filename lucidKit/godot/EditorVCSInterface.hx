@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorVCSInterfaceSignalNames {
+}
 @:native("godot.EditorVCSInterface")
 extern class EditorVCSInterface extends Object {
     public function CheckoutBranch(branchName: String): Bool;

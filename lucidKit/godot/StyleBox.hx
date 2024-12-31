@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StyleBoxSignalNames {
+}
 @:native("godot.StyleBox")
 extern class StyleBox extends Resource {
     public var contentMarginBottom: Float;

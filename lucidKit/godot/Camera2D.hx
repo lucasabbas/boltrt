@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class Camera2DAnchorMode {
+    public static var FixedTopLeft: Int = 0;
+    public static var DragCenter: Int = 1;
+}
+class Camera2DProcessMode {
+    public static var Physics: Int = 0;
+    public static var Idle: Int = 1;
+}
+class Camera2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Camera2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Camera2DSignalNames {
+}
 @:native("godot.Camera2D")
 extern class Camera2D extends Node2D {
     public var anchorMode: Int;

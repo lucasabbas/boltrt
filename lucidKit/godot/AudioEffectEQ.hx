@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectEQSignalNames {
+}
 @:native("godot.AudioEffectEQ")
 extern class AudioEffectEQ extends AudioEffect {
     public function getBandCount(): Int;

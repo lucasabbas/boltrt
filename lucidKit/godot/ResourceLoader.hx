@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ResourceLoaderSignalNames {
+}
 @:native("godot.ResourceLoader")
 extern class ResourceLoader extends Object {
     public function exists(path: String, typeHint: String): Bool;

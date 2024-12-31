@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Physics2DShapeQueryParametersSignalNames {
+}
 @:native("godot.Physics2DShapeQueryParameters")
 extern class Physics2DShapeQueryParameters extends Reference {
     public var collideWithAreas: Bool;

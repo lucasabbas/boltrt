@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorSceneImporterSignalNames {
+}
 @:native("godot.EditorSceneImporter")
 extern class EditorSceneImporter extends Reference {
     public function GetExtensions(): Array<Dynamic>;

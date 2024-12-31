@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ThemeSignalNames {
+}
 @:native("godot.Theme")
 extern class Theme extends Resource {
     public var defaultFont: Font;

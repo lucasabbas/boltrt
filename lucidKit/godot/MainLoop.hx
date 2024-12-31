@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class MainLoopSignalNames {
+    public static var onRequestPermissionsResult: String = "on_request_permissions_result";
+}
 @:native("godot.MainLoop")
 extern class MainLoop extends Object {
     public function DropFiles(files: PoolStringArray, fromScreen: Int): Void;

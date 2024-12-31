@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ReferenceSignalNames {
+}
 @:native("godot.Reference")
 extern class Reference extends Object {
     public function initRef(): Bool;

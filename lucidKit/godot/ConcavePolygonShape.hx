@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ConcavePolygonShapeSignalNames {
+}
 @:native("godot.ConcavePolygonShape")
 extern class ConcavePolygonShape extends Shape {
     public function getFaces(): PoolVector3Array;

@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class ButtonGroupSignalNames {
+    public static var pressed: String = "pressed";
+}
 @:native("godot.ButtonGroup")
 extern class ButtonGroup extends Resource {
     public function getButtons(): Array<Dynamic>;

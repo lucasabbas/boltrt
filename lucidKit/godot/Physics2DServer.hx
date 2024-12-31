@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Physics2DServerSignalNames {
+}
 @:native("godot.Physics2DServer")
 extern class Physics2DServer extends Object {
     public function areaAddShape(area: RID, shape: RID, transform: Transform2D, disabled: Bool = false): Void;

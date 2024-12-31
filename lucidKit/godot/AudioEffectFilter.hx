@@ -1,5 +1,13 @@
 package lucidKit.godot;
 
+class AudioEffectFilterDb {
+    public static var Filter6db: Int = 0;
+    public static var Filter12db: Int = 1;
+    public static var Filter18db: Int = 2;
+    public static var Filter24db: Int = 3;
+}
+class AudioEffectFilterSignalNames {
+}
 @:native("godot.AudioEffectFilter")
 extern class AudioEffectFilter extends AudioEffect {
     public var cutoffHz: Float;

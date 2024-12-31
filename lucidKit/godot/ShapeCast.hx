@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class ShapeCastMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class ShapeCastPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class ShapeCastPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class ShapeCastSignalNames {
+}
 @:native("godot.ShapeCast")
 extern class ShapeCast extends Spatial {
     public var collideWithAreas: Bool;

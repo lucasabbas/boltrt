@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class UDPServerSignalNames {
+}
 @:native("godot.UDPServer")
 extern class UDPServer extends Reference {
     public var maxPendingConnections: Int;

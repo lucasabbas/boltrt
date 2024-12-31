@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class BakedLightmapDataSignalNames {
+}
 @:native("godot.BakedLightmapData")
 extern class BakedLightmapData extends Resource {
     public var bounds: AABB;

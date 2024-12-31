@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PhysicsMaterialSignalNames {
+}
 @:native("godot.PhysicsMaterial")
 extern class PhysicsMaterial extends Resource {
     public var absorbent: Bool;

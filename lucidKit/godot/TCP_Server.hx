@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TCP_ServerSignalNames {
+}
 @:native("godot.TCP_Server")
 extern class TCP_Server extends Reference {
     public function isConnectionAvailable(): Bool;

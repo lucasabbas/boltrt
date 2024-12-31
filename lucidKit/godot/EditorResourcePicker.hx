@@ -1,5 +1,9 @@
 package lucidKit.godot;
 
+class EditorResourcePickerSignalNames {
+    public static var resourceChanged: String = "resource_changed";
+    public static var resourceSelected: String = "resource_selected";
+}
 @:native("godot.EditorResourcePicker")
 extern class EditorResourcePicker extends HBoxContainer {
     public var baseType: String;

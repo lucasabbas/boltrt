@@ -1,5 +1,11 @@
 package lucidKit.godot;
 
+class ArrayMeshBlendShapeMode {
+    public static var Normalized: Int = 0;
+    public static var Relative: Int = 1;
+}
+class ArrayMeshSignalNames {
+}
 @:native("godot.ArrayMesh")
 extern class ArrayMesh extends Mesh {
     public var blendShapeMode: Int;

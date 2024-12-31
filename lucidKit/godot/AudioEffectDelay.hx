@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectDelaySignalNames {
+}
 @:native("godot.AudioEffectDelay")
 extern class AudioEffectDelay extends AudioEffect {
     public var dry: Float;

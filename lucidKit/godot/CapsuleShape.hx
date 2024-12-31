@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CapsuleShapeSignalNames {
+}
 @:native("godot.CapsuleShape")
 extern class CapsuleShape extends Shape {
     public var height: Float;

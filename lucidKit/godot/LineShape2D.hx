@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class LineShape2DSignalNames {
+}
 @:native("godot.LineShape2D")
 extern class LineShape2D extends Shape2D {
     public var d: Float;

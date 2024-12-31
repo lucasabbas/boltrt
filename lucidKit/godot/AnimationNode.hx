@@ -1,5 +1,9 @@
 package lucidKit.godot;
 
+class AnimationNodeSignalNames {
+    public static var removedFromGraph: String = "removed_from_graph";
+    public static var treeChanged: String = "tree_changed";
+}
 @:native("godot.AnimationNode")
 extern class AnimationNode extends Resource {
     public var filterEnabled: Bool;

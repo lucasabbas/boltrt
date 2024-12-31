@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class KinematicCollisionSignalNames {
+}
 @:native("godot.KinematicCollision")
 extern class KinematicCollision extends Reference {
     public var collider: Object;

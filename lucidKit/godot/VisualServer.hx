@@ -1,5 +1,9 @@
 package lucidKit.godot;
 
+class VisualServerSignalNames {
+    public static var framePostDraw: String = "frame_post_draw";
+    public static var framePreDraw: String = "frame_pre_draw";
+}
 @:native("godot.VisualServer")
 extern class VisualServer extends Object {
     public var renderLoopEnabled: Bool;

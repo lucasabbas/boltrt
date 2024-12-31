@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Transform2DSignalNames {
+}
 @:native("godot.Transform2D")
 extern class Transform2D extends lucidKit.core.MonoObject {
     public var origin: Vector2;

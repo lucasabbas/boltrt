@@ -1,5 +1,27 @@
 package lucidKit.godot;
 
+class KinematicBodyMovingPlatformApplyVelocityOnLeave {
+    public static var Always: Int = 0;
+    public static var UpwardOnly: Int = 1;
+    public static var Never: Int = 2;
+}
+class KinematicBodyMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class KinematicBodyPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class KinematicBodyPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class KinematicBodySignalNames {
+}
 @:native("godot.KinematicBody")
 extern class KinematicBody extends PhysicsBody {
     public var axisLockMotionX: Bool;

@@ -1,5 +1,56 @@
 package lucidKit.godot;
 
+class CPUParticlesDrawOrder {
+    public static var Index: Int = 0;
+    public static var Lifetime: Int = 1;
+    public static var ViewDepth: Int = 2;
+}
+class CPUParticlesEmissionShape {
+    public static var Point: Int = 0;
+    public static var Sphere: Int = 1;
+    public static var Box: Int = 2;
+    public static var Points: Int = 3;
+    public static var DirectedPoints: Int = 4;
+    public static var Ring: Int = 5;
+    public static var Max: Int = 6;
+}
+class CPUParticlesCastShadow {
+    public static var Off: Int = 0;
+    public static var On: Int = 1;
+    public static var DoubleSided: Int = 2;
+    public static var ShadowsOnly: Int = 3;
+}
+class CPUParticlesLightmapScale {
+    public static var Scale1x: Int = 0;
+    public static var Scale2x: Int = 1;
+    public static var Scale4x: Int = 2;
+    public static var Scale8x: Int = 3;
+    public static var Max: Int = 4;
+}
+class CPUParticlesPortalMode {
+    public static var Static: Int = 0;
+    public static var Dynamic: Int = 1;
+    public static var Roaming: Int = 2;
+    public static var Global: Int = 3;
+    public static var Ignore: Int = 4;
+}
+class CPUParticlesMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CPUParticlesPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CPUParticlesPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CPUParticlesSignalNames {
+}
 @:native("godot.CPUParticles")
 extern class CPUParticles extends GeometryInstance {
     public var amount: Int;

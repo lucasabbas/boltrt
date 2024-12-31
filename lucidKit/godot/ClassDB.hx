@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ClassDBSignalNames {
+}
 @:native("godot.ClassDB")
 extern class ClassDB extends Object {
     public function canInstance(Class: String): Bool;

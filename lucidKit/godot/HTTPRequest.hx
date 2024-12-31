@@ -1,5 +1,18 @@
 package lucidKit.godot;
 
+class HTTPRequestPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class HTTPRequestPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class HTTPRequestSignalNames {
+    public static var requestCompleted: String = "request_completed";
+}
 @:native("godot.HTTPRequest")
 extern class HTTPRequest extends Node {
     public var bodySizeLimit: Int;

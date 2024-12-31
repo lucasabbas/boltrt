@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class JSONRPCSignalNames {
+}
 @:native("godot.JSONRPC")
 extern class JSONRPC extends Object {
     public function makeNotification(method: String, params: Variant): Map<Dynamic, Dynamic>;

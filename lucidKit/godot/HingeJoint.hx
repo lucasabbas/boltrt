@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class HingeJointMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class HingeJointPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class HingeJointPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class HingeJointSignalNames {
+}
 @:native("godot.HingeJoint")
 extern class HingeJoint extends Joint {
     public var angularLimitBias: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AtlasTextureSignalNames {
+}
 @:native("godot.AtlasTexture")
 extern class AtlasTexture extends Texture {
     public var atlas: Texture;

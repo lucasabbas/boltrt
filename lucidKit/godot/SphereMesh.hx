@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SphereMeshSignalNames {
+}
 @:native("godot.SphereMesh")
 extern class SphereMesh extends PrimitiveMesh {
     public var height: Float;

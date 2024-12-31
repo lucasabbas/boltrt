@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class SpatialMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SpatialPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class SpatialPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class SpatialSignalNames {
+    public static var gameplayEntered: String = "gameplay_entered";
+    public static var gameplayExited: String = "gameplay_exited";
+    public static var visibilityChanged: String = "visibility_changed";
+}
 @:native("godot.Spatial")
 extern class Spatial extends Node {
     public var gizmo: SpatialGizmo;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ARVRInterfaceSignalNames {
+}
 @:native("godot.ARVRInterface")
 extern class ARVRInterface extends Reference {
     public var arIsAnchorDetectionEnabled: Bool;

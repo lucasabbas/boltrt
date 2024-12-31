@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventWithModifiersSignalNames {
+}
 @:native("godot.InputEventWithModifiers")
 extern class InputEventWithModifiers extends InputEvent {
     public var alt: Bool;

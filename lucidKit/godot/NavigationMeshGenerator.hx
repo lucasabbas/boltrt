@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class NavigationMeshGeneratorSignalNames {
+}
 @:native("godot.NavigationMeshGenerator")
 extern class NavigationMeshGenerator extends Object {
     public function bake(navMesh: NavigationMesh, rootNode: Node): Void;

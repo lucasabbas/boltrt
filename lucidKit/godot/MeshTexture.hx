@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MeshTextureSignalNames {
+}
 @:native("godot.MeshTexture")
 extern class MeshTexture extends Texture {
     public var baseTexture: Texture;

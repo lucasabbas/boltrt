@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AABBSignalNames {
+}
 @:native("godot.AABB")
 extern class AABB extends lucidKit.core.MonoObject {
     public var end: Vector3;

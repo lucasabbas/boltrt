@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorInterfaceSignalNames {
+}
 @:native("godot.EditorInterface")
 extern class EditorInterface extends Node {
     public var distractionFreeMode: Bool;

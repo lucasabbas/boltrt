@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StreamPeerSignalNames {
+}
 @:native("godot.StreamPeer")
 extern class StreamPeer extends Reference {
     public var bigEndian: Bool;

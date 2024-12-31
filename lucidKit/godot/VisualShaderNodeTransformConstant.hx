@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeTransformConstantSignalNames {
+}
 @:native("godot.VisualShaderNodeTransformConstant")
 extern class VisualShaderNodeTransformConstant extends VisualShaderNode {
     public var constant: Transform;

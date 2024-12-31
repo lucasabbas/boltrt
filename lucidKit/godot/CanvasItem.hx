@@ -1,5 +1,21 @@
 package lucidKit.godot;
 
+class CanvasItemPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CanvasItemPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CanvasItemSignalNames {
+    public static var draw: String = "draw";
+    public static var hide: String = "hide";
+    public static var itemRectChanged: String = "item_rect_changed";
+    public static var visibilityChanged: String = "visibility_changed";
+}
 @:native("godot.CanvasItem")
 extern class CanvasItem extends Node {
     public var lightMask: Int;

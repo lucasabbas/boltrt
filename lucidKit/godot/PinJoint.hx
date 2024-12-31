@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class PinJointMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class PinJointPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class PinJointPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class PinJointSignalNames {
+}
 @:native("godot.PinJoint")
 extern class PinJoint extends Joint {
     public var paramsBias: Float;

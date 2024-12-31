@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class Navigation2DServerSignalNames {
+    public static var mapChanged: String = "map_changed";
+}
 @:native("godot.Navigation2DServer")
 extern class Navigation2DServer extends Object {
     public function agentCreate(): RID;

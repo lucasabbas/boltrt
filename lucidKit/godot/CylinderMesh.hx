@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CylinderMeshSignalNames {
+}
 @:native("godot.CylinderMesh")
 extern class CylinderMesh extends PrimitiveMesh {
     public var bottomRadius: Float;

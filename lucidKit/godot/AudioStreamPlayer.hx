@@ -1,5 +1,23 @@
 package lucidKit.godot;
 
+class AudioStreamPlayerMixTarget {
+    public static var Stereo: Int = 0;
+    public static var Surround: Int = 1;
+    public static var Center: Int = 2;
+}
+class AudioStreamPlayerPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class AudioStreamPlayerPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class AudioStreamPlayerSignalNames {
+    public static var finished: String = "finished";
+}
 @:native("godot.AudioStreamPlayer")
 extern class AudioStreamPlayer extends Node {
     public var autoplay: Bool;

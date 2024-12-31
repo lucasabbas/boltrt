@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class NodePathSignalNames {
+}
 @:native("godot.NodePath")
 extern class NodePath extends lucidKit.core.MonoObject {
     @:native("__new")

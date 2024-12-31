@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ResourceFormatLoaderSignalNames {
+}
 @:native("godot.ResourceFormatLoader")
 extern class ResourceFormatLoader extends Reference {
     public function getDependencies(path: String, addTypes: String): Void;

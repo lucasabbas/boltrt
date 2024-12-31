@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ShaderSignalNames {
+}
 @:native("godot.Shader")
 extern class Shader extends Resource {
     public var code: String;

@@ -1,5 +1,18 @@
 package lucidKit.godot;
 
+class CanvasLayerPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CanvasLayerPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CanvasLayerSignalNames {
+    public static var visibilityChanged: String = "visibility_changed";
+}
 @:native("godot.CanvasLayer")
 extern class CanvasLayer extends Node {
     public var customViewport: Node;

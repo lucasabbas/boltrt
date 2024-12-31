@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class RayCast2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class RayCast2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RayCast2DSignalNames {
+}
 @:native("godot.RayCast2D")
 extern class RayCast2D extends Node2D {
     public var castTo: Vector2;

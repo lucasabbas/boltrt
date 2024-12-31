@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MarshallsSignalNames {
+}
 @:native("godot.Marshalls")
 extern class Marshalls extends Object {
     public function base64ToRaw(base64Str: String): PoolByteArray;

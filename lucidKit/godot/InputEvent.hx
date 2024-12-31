@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventSignalNames {
+}
 @:native("godot.InputEvent")
 extern class InputEvent extends Resource {
     public var device: Int;

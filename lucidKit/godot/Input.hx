@@ -1,5 +1,15 @@
 package lucidKit.godot;
 
+class InputMouseMode {
+    public static var Visible: Int = 0;
+    public static var Hidden: Int = 1;
+    public static var Captured: Int = 2;
+    public static var Confined: Int = 3;
+    public static var ConfinedHidden: Int = 4;
+}
+class InputSignalNames {
+    public static var joyConnectionChanged: String = "joy_connection_changed";
+}
 @:native("godot.Input")
 extern class Input extends Object {
     public var mouseMode: Int;

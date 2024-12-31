@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectPhaserSignalNames {
+}
 @:native("godot.AudioEffectPhaser")
 extern class AudioEffectPhaser extends AudioEffect {
     public var depth: Float;

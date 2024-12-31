@@ -1,5 +1,17 @@
 package lucidKit.godot;
 
+class Polygon2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Polygon2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Polygon2DSignalNames {
+}
 @:native("godot.Polygon2D")
 extern class Polygon2D extends Node2D {
     public var antialiased: Bool;

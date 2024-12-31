@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorFeatureProfileSignalNames {
+}
 @:native("godot.EditorFeatureProfile")
 extern class EditorFeatureProfile extends Reference {
     public function getFeatureName(feature: Int): String;

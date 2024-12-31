@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorSpatialGizmoPluginSignalNames {
+}
 @:native("godot.EditorSpatialGizmoPlugin")
 extern class EditorSpatialGizmoPlugin extends Resource {
     public function addMaterial(name: String, material: Material3D): Void;

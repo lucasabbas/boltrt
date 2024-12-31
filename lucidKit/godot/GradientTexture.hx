@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class GradientTextureSignalNames {
+}
 @:native("godot.GradientTexture")
 extern class GradientTexture extends Texture {
     public var gradient: Gradient;

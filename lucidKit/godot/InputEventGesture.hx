@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventGestureSignalNames {
+}
 @:native("godot.InputEventGesture")
 extern class InputEventGesture extends InputEventWithModifiers {
     public var position: Vector2;

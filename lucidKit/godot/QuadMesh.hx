@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class QuadMeshSignalNames {
+}
 @:native("godot.QuadMesh")
 extern class QuadMesh extends PrimitiveMesh {
     public var centerOffset: Vector3;

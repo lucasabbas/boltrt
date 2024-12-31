@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class VisualShaderNodeSignalNames {
+    public static var editorRefreshRequest: String = "editor_refresh_request";
+}
 @:native("godot.VisualShaderNode")
 extern class VisualShaderNode extends Resource {
     public var outputPortForPreview: Int;

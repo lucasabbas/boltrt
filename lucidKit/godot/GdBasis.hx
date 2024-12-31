@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class BasisSignalNames {
+}
 @:native("godot.Basis")
 extern class GdBasis extends lucidKit.core.MonoObject {
     public var x: Vector3;

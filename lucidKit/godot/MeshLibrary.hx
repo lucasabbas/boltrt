@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MeshLibrarySignalNames {
+}
 @:native("godot.MeshLibrary")
 extern class MeshLibrary extends Resource {
     public function clear(): Void;

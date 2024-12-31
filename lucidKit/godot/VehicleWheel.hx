@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class VehicleWheelMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class VehicleWheelPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class VehicleWheelPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class VehicleWheelSignalNames {
+}
 @:native("godot.VehicleWheel")
 extern class VehicleWheel extends Spatial {
     public var brake: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PacketPeerSignalNames {
+}
 @:native("godot.PacketPeer")
 extern class PacketPeer extends Reference {
     public var allowObjectDecoding: Bool;

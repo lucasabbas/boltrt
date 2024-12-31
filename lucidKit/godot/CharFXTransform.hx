@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CharFXTransformSignalNames {
+}
 @:native("godot.CharFXTransform")
 extern class CharFXTransform extends Reference {
     public var absoluteIndex: Int;

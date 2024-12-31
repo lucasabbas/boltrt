@@ -1,5 +1,21 @@
 package lucidKit.godot;
 
+class NavigationAgent2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class NavigationAgent2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class NavigationAgent2DSignalNames {
+    public static var navigationFinished: String = "navigation_finished";
+    public static var pathChanged: String = "path_changed";
+    public static var targetReached: String = "target_reached";
+    public static var velocityComputed: String = "velocity_computed";
+}
 @:native("godot.NavigationAgent2D")
 extern class NavigationAgent2D extends Node {
     public var avoidanceEnabled: Bool;

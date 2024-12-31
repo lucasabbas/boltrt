@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioStreamPlaybackSignalNames {
+}
 @:native("godot.AudioStreamPlayback")
 extern class AudioStreamPlayback extends Reference {
     @:native("__new")

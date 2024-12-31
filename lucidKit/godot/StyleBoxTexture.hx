@@ -1,5 +1,18 @@
 package lucidKit.godot;
 
+class StyleBoxTextureAxisStretchHorizontal {
+    public static var Stretch: Int = 0;
+    public static var Tile: Int = 1;
+    public static var TileFit: Int = 2;
+}
+class StyleBoxTextureAxisStretchVertical {
+    public static var Stretch: Int = 0;
+    public static var Tile: Int = 1;
+    public static var TileFit: Int = 2;
+}
+class StyleBoxTextureSignalNames {
+    public static var textureChanged: String = "texture_changed";
+}
 @:native("godot.StyleBoxTexture")
 extern class StyleBoxTexture extends StyleBox {
     public var axisStretchHorizontal: Int;

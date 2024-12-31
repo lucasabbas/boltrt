@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class BitmapFontSignalNames {
+}
 @:native("godot.BitmapFont")
 extern class BitmapFont extends Font {
     public var ascent: Float;

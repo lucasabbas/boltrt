@@ -1,5 +1,27 @@
 package lucidKit.godot;
 
+class RoomManagerPvsMode {
+    public static var Disabled: Int = 0;
+    public static var Partial: Int = 1;
+    public static var Full: Int = 2;
+}
+class RoomManagerMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RoomManagerPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class RoomManagerPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RoomManagerSignalNames {
+}
 @:native("godot.RoomManager")
 extern class RoomManager extends Spatial {
     public var active: Bool;

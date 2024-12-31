@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SegmentShape2DSignalNames {
+}
 @:native("godot.SegmentShape2D")
 extern class SegmentShape2D extends Shape2D {
     public var a: Vector2;

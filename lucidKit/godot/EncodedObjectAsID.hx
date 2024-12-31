@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EncodedObjectAsIDSignalNames {
+}
 @:native("godot.EncodedObjectAsID")
 extern class EncodedObjectAsID extends Reference {
     public var objectId: Int;

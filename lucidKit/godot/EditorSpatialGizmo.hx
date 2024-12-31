@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorSpatialGizmoSignalNames {
+}
 @:native("godot.EditorSpatialGizmo")
 extern class EditorSpatialGizmo extends SpatialGizmo {
     public function addCollisionSegments(segments: PoolVector3Array): Void;

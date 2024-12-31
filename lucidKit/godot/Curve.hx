@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class CurveSignalNames {
+    public static var rangeChanged: String = "range_changed";
+}
 @:native("godot.Curve")
 extern class Curve extends Resource {
     public var bakeResolution: Int;

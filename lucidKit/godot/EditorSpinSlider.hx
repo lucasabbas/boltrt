@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorSpinSliderSignalNames {
+}
 @:native("godot.EditorSpinSlider")
 extern class EditorSpinSlider extends Range {
     public var flat: Bool;

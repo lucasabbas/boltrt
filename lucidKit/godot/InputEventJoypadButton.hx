@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventJoypadButtonSignalNames {
+}
 @:native("godot.InputEventJoypadButton")
 extern class InputEventJoypadButton extends InputEvent {
     public var buttonIndex: Int;

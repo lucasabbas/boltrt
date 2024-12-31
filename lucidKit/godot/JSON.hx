@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class JSONSignalNames {
+}
 @:native("godot.JSON")
 extern class JSON extends Object {
     public function parse(json: String): JSONParseResult;

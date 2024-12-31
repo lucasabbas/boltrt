@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ExpressionSignalNames {
+}
 @:native("godot.Expression")
 extern class Expression extends Reference {
     public function execute(inputs: Array<Dynamic>, baseInstance: Object, showError: Bool = true): Variant;

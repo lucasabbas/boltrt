@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeCustomSignalNames {
+}
 @:native("godot.VisualShaderNodeCustom")
 extern class VisualShaderNodeCustom extends VisualShaderNode {
     public function GetCategory(): String;

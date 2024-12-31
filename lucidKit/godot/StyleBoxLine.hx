@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StyleBoxLineSignalNames {
+}
 @:native("godot.StyleBoxLine")
 extern class StyleBoxLine extends StyleBox {
     public var color: Color;

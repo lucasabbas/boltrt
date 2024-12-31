@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimatedTextureSignalNames {
+}
 @:native("godot.AnimatedTexture")
 extern class AnimatedTexture extends Texture {
     public var currentFrame: Int;

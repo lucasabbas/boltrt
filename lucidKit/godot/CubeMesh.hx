@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CubeMeshSignalNames {
+}
 @:native("godot.CubeMesh")
 extern class CubeMesh extends PrimitiveMesh {
     public var size: Vector3;

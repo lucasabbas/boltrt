@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationNodeStateMachineSignalNames {
+}
 @:native("godot.AnimationNodeStateMachine")
 extern class AnimationNodeStateMachine extends AnimationRootNode {
     public function addNode(name: String, node: AnimationNode, position: GdVector2): Void;

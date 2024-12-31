@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class RichTextEffectSignalNames {
+}
 @:native("godot.RichTextEffect")
 extern class RichTextEffect extends Resource {
     public function ProcessCustomFx(charFx: CharFXTransform): Bool;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class RootMotionViewSignalNames {
+}
 @:native("godot.RootMotionView")
 extern class RootMotionView extends VisualInstance {
     public var animationPath: NodePath;

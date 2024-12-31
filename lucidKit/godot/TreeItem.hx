@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TreeItemSignalNames {
+}
 @:native("godot.TreeItem")
 extern class TreeItem extends Object {
     public var collapsed: Bool;

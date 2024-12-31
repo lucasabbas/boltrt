@@ -44,6 +44,8 @@ class EditorWindow extends Widget {
         trace("Open Project");
 
         var fileDialog = new FileDialog();
-        fileDialog.mode = FileDialog.MODE_OPEN_FILE;
+        fileDialog.mode = FileDialogMode.OpenFile;
+        fileDialog.access = FileDialogAccess.Userdata;
+        //fileDialog.currentDir = "res://";
     }
 }

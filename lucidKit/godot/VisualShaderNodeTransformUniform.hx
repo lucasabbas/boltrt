@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeTransformUniformSignalNames {
+}
 @:native("godot.VisualShaderNodeTransformUniform")
 extern class VisualShaderNodeTransformUniform extends VisualShaderNodeUniform {
     public var defaultValue: Transform;

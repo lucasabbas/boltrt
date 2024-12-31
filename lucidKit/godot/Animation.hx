@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class AnimationSignalNames {
+    public static var tracksChanged: String = "tracks_changed";
+}
 @:native("godot.Animation")
 extern class Animation extends Resource {
     public var length: Float;

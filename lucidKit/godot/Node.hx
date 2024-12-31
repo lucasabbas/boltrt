@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class NodePauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class NodePhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class NodeSignalNames {
+    public static var childEnteredTree: String = "child_entered_tree";
+    public static var childExitingTree: String = "child_exiting_tree";
+    public static var childOrderChanged: String = "child_order_changed";
+    public static var ready: String = "ready";
+    public static var renamed: String = "renamed";
+    public static var treeEntered: String = "tree_entered";
+    public static var treeExited: String = "tree_exited";
+    public static var treeExiting: String = "tree_exiting";
+}
 @:native("godot.Node")
 extern class Node extends Object {
     public var customMultiplayer: MultiplayerAPI;

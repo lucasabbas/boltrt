@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class SceneTreeSignalNames {
+    public static var connectedToServer: String = "connected_to_server";
+    public static var connectionFailed: String = "connection_failed";
+    public static var filesDropped: String = "files_dropped";
+    public static var globalMenuAction: String = "global_menu_action";
+    public static var idleFrame: String = "idle_frame";
+    public static var networkPeerConnected: String = "network_peer_connected";
+    public static var networkPeerDisconnected: String = "network_peer_disconnected";
+    public static var nodeAdded: String = "node_added";
+    public static var nodeConfigurationWarningChanged: String = "node_configuration_warning_changed";
+    public static var nodeRemoved: String = "node_removed";
+    public static var nodeRenamed: String = "node_renamed";
+    public static var physicsFrame: String = "physics_frame";
+    public static var screenResized: String = "screen_resized";
+    public static var serverDisconnected: String = "server_disconnected";
+    public static var treeChanged: String = "tree_changed";
+}
 @:native("godot.SceneTree")
 extern class SceneTree extends MainLoop {
     public var autoAcceptQuit: Bool;

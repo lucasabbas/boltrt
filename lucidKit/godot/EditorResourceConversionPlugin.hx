@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorResourceConversionPluginSignalNames {
+}
 @:native("godot.EditorResourceConversionPlugin")
 extern class EditorResourceConversionPlugin extends Reference {
     public function Convert(resource: Resource): Resource;

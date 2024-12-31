@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Shape2DSignalNames {
+}
 @:native("godot.Shape2D")
 extern class Shape2D extends Resource {
     public var customSolverBias: Float;

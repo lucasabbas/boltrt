@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class GIProbeDataSignalNames {
+}
 @:native("godot.GIProbeData")
 extern class GIProbeData extends Resource {
     public var bias: Float;

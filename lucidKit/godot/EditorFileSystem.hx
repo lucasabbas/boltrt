@@ -1,5 +1,11 @@
 package lucidKit.godot;
 
+class EditorFileSystemSignalNames {
+    public static var filesystemChanged: String = "filesystem_changed";
+    public static var resourcesReimported: String = "resources_reimported";
+    public static var resourcesReload: String = "resources_reload";
+    public static var sourcesChanged: String = "sources_changed";
+}
 @:native("godot.EditorFileSystem")
 extern class EditorFileSystem extends Node {
     public function getFileType(path: String): String;

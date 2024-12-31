@@ -1,5 +1,29 @@
 package lucidKit.godot;
 
+class CPUParticles2DDrawOrder {
+    public static var Index: Int = 0;
+    public static var Lifetime: Int = 1;
+}
+class CPUParticles2DEmissionShape {
+    public static var Point: Int = 0;
+    public static var Sphere: Int = 1;
+    public static var Rectangle: Int = 2;
+    public static var Points: Int = 3;
+    public static var DirectedPoints: Int = 4;
+    public static var Max: Int = 5;
+}
+class CPUParticles2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CPUParticles2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CPUParticles2DSignalNames {
+}
 @:native("godot.CPUParticles2D")
 extern class CPUParticles2D extends Node2D {
     public var amount: Int;

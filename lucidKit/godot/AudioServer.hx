@@ -1,5 +1,8 @@
 package lucidKit.godot;
 
+class AudioServerSignalNames {
+    public static var busLayoutChanged: String = "bus_layout_changed";
+}
 @:native("godot.AudioServer")
 extern class AudioServer extends Object {
     public var busCount: Int;

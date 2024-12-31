@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeGroupBaseSignalNames {
+}
 @:native("godot.VisualShaderNodeGroupBase")
 extern class VisualShaderNodeGroupBase extends VisualShaderNode {
     public var size: Vector2;

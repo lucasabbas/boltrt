@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EngineSignalNames {
+}
 @:native("godot.Engine")
 extern class Engine extends Object {
     public var editorHint: Bool;

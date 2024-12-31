@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MethodTweenerSignalNames {
+}
 @:native("godot.MethodTweener")
 extern class MethodTweener extends Tweener {
     public function setDelay(delay: Float): MethodTweener;

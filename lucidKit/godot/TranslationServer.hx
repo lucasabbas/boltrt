@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TranslationServerSignalNames {
+}
 @:native("godot.TranslationServer")
 extern class TranslationServer extends Object {
     public function addTranslation(translation: Translation): Void;

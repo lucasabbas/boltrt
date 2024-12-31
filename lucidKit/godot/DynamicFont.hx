@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class DynamicFontSignalNames {
+}
 @:native("godot.DynamicFont")
 extern class DynamicFont extends Font {
     public var extraSpacingBottom: Int;

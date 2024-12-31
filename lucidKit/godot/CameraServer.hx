@@ -1,5 +1,9 @@
 package lucidKit.godot;
 
+class CameraServerSignalNames {
+    public static var cameraFeedAdded: String = "camera_feed_added";
+    public static var cameraFeedRemoved: String = "camera_feed_removed";
+}
 @:native("godot.CameraServer")
 extern class CameraServer extends Object {
     public function addFeed(feed: CameraFeed): Void;

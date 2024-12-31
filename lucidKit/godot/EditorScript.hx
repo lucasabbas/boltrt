@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class EditorScriptSignalNames {
+}
 @:native("godot.EditorScript")
 extern class EditorScript extends Reference {
     public function Run(): Void;

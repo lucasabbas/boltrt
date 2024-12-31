@@ -1,5 +1,33 @@
 package lucidKit.godot;
 
+class RigidBody2DMode {
+    public static var Rigid: Int = 0;
+    public static var Static: Int = 1;
+    public static var Character: Int = 2;
+    public static var Kinematic: Int = 3;
+}
+class RigidBody2DContinuousCd {
+    public static var Disabled: Int = 0;
+    public static var CastRay: Int = 1;
+    public static var CastShape: Int = 2;
+}
+class RigidBody2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class RigidBody2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RigidBody2DSignalNames {
+    public static var bodyEntered: String = "body_entered";
+    public static var bodyExited: String = "body_exited";
+    public static var bodyShapeEntered: String = "body_shape_entered";
+    public static var bodyShapeExited: String = "body_shape_exited";
+    public static var sleepingStateChanged: String = "sleeping_state_changed";
+}
 @:native("godot.RigidBody2D")
 extern class RigidBody2D extends PhysicsBody2D {
     public var angularDamp: Float;

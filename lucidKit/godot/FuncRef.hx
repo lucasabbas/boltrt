@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class FuncRefSignalNames {
+}
 @:native("godot.FuncRef")
 extern class FuncRef extends Reference {
     public var function: String;

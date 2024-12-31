@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class CollisionObjectMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CollisionObjectPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CollisionObjectPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CollisionObjectSignalNames {
+    public static var inputEvent: String = "input_event";
+    public static var mouseEntered: String = "mouse_entered";
+    public static var mouseExited: String = "mouse_exited";
+}
 @:native("godot.CollisionObject")
 extern class CollisionObject extends Spatial {
     public var collisionLayer: Int;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VideoStreamSignalNames {
+}
 @:native("godot.VideoStream")
 extern class VideoStream extends Resource {
     @:native("__new")

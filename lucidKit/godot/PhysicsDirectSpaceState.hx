@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PhysicsDirectSpaceStateSignalNames {
+}
 @:native("godot.PhysicsDirectSpaceState")
 extern class PhysicsDirectSpaceState extends Object {
     public function castMotion(shape: PhysicsShapeQueryParameters, motion: GdVector3): Array<Dynamic>;

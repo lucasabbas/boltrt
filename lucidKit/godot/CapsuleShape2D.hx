@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CapsuleShape2DSignalNames {
+}
 @:native("godot.CapsuleShape2D")
 extern class CapsuleShape2D extends Shape2D {
     public var height: Float;

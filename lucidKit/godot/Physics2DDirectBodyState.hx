@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class Physics2DDirectBodyStateSignalNames {
+}
 @:native("godot.Physics2DDirectBodyState")
 extern class Physics2DDirectBodyState extends Object {
     public var angularVelocity: Float;

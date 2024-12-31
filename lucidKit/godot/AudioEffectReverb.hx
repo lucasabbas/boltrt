@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioEffectReverbSignalNames {
+}
 @:native("godot.AudioEffectReverb")
 extern class AudioEffectReverb extends AudioEffect {
     public var damping: Float;

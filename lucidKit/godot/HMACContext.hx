@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class HMACContextSignalNames {
+}
 @:native("godot.HMACContext")
 extern class HMACContext extends Reference {
     public function finish(): PoolByteArray;

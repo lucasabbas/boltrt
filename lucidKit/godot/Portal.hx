@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class PortalMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class PortalPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class PortalPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class PortalSignalNames {
+}
 @:native("godot.Portal")
 extern class Portal extends Spatial {
     public var includeInBound: Bool;

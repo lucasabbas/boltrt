@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ColorSignalNames {
+}
 @:native("godot.Color")
 extern class Color extends lucidKit.core.MonoObject {
     public var a: Float;

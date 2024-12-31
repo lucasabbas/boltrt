@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class MultiMeshColorFormat {
+    public static var None: Int = 0;
+    public static var Color8bit: Int = 1;
+    public static var Float: Int = 2;
+}
+class MultiMeshTransformFormat {
+    public static var Transform2d: Int = 0;
+    public static var Transform3d: Int = 1;
+}
+class MultiMeshCustomDataFormat {
+    public static var None: Int = 0;
+    public static var Data8bit: Int = 1;
+    public static var Float: Int = 2;
+}
+class MultiMeshPhysicsInterpolationQuality {
+    public static var Fast: Int = 0;
+    public static var High: Int = 1;
+}
+class MultiMeshSignalNames {
+}
 @:native("godot.MultiMesh")
 extern class MultiMesh extends Resource {
     public var colorFormat: Int;

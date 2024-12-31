@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ShortCutSignalNames {
+}
 @:native("godot.ShortCut")
 extern class ShortCut extends Resource {
     public var shortcut: InputEvent;

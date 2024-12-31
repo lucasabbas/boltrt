@@ -1,5 +1,10 @@
 package lucidKit.godot;
 
+class EditorFileDialogSignalNames {
+    public static var dirSelected: String = "dir_selected";
+    public static var fileSelected: String = "file_selected";
+    public static var filesSelected: String = "files_selected";
+}
 @:native("godot.EditorFileDialog")
 extern class EditorFileDialog extends ConfirmationDialog {
     public var access: Int;

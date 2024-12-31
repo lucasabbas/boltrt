@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventMouseSignalNames {
+}
 @:native("godot.InputEventMouse")
 extern class InputEventMouse extends InputEventWithModifiers {
     public var buttonMask: Int;

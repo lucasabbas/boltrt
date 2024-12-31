@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class World2DSignalNames {
+}
 @:native("godot.World2D")
 extern class World2D extends Resource {
     public var canvas: RID;

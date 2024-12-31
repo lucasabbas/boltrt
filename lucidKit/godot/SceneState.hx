@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SceneStateSignalNames {
+}
 @:native("godot.SceneState")
 extern class SceneState extends Reference {
     public function getConnectionBinds(idx: Int): Array<Dynamic>;

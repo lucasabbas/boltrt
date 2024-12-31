@@ -1,5 +1,36 @@
 package lucidKit.godot;
 
+class CameraKeepAspect {
+    public static var Width: Int = 0;
+    public static var Height: Int = 1;
+}
+class CameraDopplerTracking {
+    public static var Disabled: Int = 0;
+    public static var IdleStep: Int = 1;
+    public static var PhysicsStep: Int = 2;
+}
+class CameraProjection {
+    public static var Perspective: Int = 0;
+    public static var Orthogonal: Int = 1;
+    public static var Frustum: Int = 2;
+}
+class CameraMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CameraPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CameraPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CameraSignalNames {
+}
 @:native("godot.Camera")
 extern class Camera extends Spatial {
     public var affectLod: Bool;

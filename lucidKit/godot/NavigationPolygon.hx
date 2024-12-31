@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class NavigationPolygonSignalNames {
+}
 @:native("godot.NavigationPolygon")
 extern class NavigationPolygon extends Resource {
     public function addOutline(outline: PoolVector2Array): Void;

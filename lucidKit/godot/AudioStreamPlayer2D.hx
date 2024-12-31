@@ -1,5 +1,18 @@
 package lucidKit.godot;
 
+class AudioStreamPlayer2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class AudioStreamPlayer2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class AudioStreamPlayer2DSignalNames {
+    public static var finished: String = "finished";
+}
 @:native("godot.AudioStreamPlayer2D")
 extern class AudioStreamPlayer2D extends Node2D {
     public var areaMask: Int;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioStreamGeneratorSignalNames {
+}
 @:native("godot.AudioStreamGenerator")
 extern class AudioStreamGenerator extends AudioStream {
     public var bufferLength: Float;

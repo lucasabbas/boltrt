@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PrimitiveMeshSignalNames {
+}
 @:native("godot.PrimitiveMesh")
 extern class PrimitiveMesh extends Mesh {
     public var customAabb: AABB;

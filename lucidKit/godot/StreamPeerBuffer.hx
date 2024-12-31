@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class StreamPeerBufferSignalNames {
+}
 @:native("godot.StreamPeerBuffer")
 extern class StreamPeerBuffer extends StreamPeer {
     public var dataArray: PoolByteArray;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationNodeBlendSpace1DSignalNames {
+}
 @:native("godot.AnimationNodeBlendSpace1D")
 extern class AnimationNodeBlendSpace1D extends AnimationRootNode {
     public var maxSpace: Float;

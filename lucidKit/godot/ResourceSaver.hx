@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class ResourceSaverSignalNames {
+}
 @:native("godot.ResourceSaver")
 extern class ResourceSaver extends Object {
     public function getRecognizedExtensions(type: Resource): PoolStringArray;

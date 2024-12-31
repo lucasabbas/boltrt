@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class KinematicBody2DMovingPlatformApplyVelocityOnLeave {
+    public static var Always: Int = 0;
+    public static var UpwardOnly: Int = 1;
+    public static var Never: Int = 2;
+}
+class KinematicBody2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class KinematicBody2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class KinematicBody2DSignalNames {
+}
 @:native("godot.KinematicBody2D")
 extern class KinematicBody2D extends PhysicsBody2D {
     public var collisionSafeMargin: Float;

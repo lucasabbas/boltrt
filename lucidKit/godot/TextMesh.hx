@@ -1,5 +1,12 @@
 package lucidKit.godot;
 
+class TextMeshHorizontalAlignment {
+    public static var Left: Int = 0;
+    public static var Center: Int = 1;
+    public static var Right: Int = 2;
+}
+class TextMeshSignalNames {
+}
 @:native("godot.TextMesh")
 extern class TextMesh extends PrimitiveMesh {
     public var curveStep: Float;

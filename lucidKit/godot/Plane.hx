@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PlaneSignalNames {
+}
 @:native("godot.Plane")
 extern class Plane extends lucidKit.core.MonoObject {
     public var d: Float;

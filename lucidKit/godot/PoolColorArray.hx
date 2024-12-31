@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class PoolColorArraySignalNames {
+}
 @:native("godot.PoolColorArray")
 extern class PoolColorArray extends lucidKit.core.MonoObject {
     @:native("__new")

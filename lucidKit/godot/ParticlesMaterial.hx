@@ -1,5 +1,16 @@
 package lucidKit.godot;
 
+class ParticlesMaterialEmissionShape {
+    public static var Point: Int = 0;
+    public static var Sphere: Int = 1;
+    public static var Box: Int = 2;
+    public static var Points: Int = 3;
+    public static var DirectedPoints: Int = 4;
+    public static var Ring: Int = 5;
+    public static var Max: Int = 6;
+}
+class ParticlesMaterialSignalNames {
+}
 @:native("godot.ParticlesMaterial")
 extern class ParticlesMaterial extends Material {
     public var angle: Float;

@@ -1,5 +1,30 @@
 package lucidKit.godot;
 
+class AnimationPlayerPlaybackProcessMode {
+    public static var Physics: Int = 0;
+    public static var Idle: Int = 1;
+    public static var Manual: Int = 2;
+}
+class AnimationPlayerMethodCallMode {
+    public static var Deferred: Int = 0;
+    public static var Immediate: Int = 1;
+}
+class AnimationPlayerPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class AnimationPlayerPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class AnimationPlayerSignalNames {
+    public static var animationChanged: String = "animation_changed";
+    public static var animationFinished: String = "animation_finished";
+    public static var animationStarted: String = "animation_started";
+    public static var cachesCleared: String = "caches_cleared";
+}
 @:native("godot.AnimationPlayer")
 extern class AnimationPlayer extends Node {
     public var assignedAnimation: String;

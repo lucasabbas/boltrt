@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventMagnifyGestureSignalNames {
+}
 @:native("godot.InputEventMagnifyGesture")
 extern class InputEventMagnifyGesture extends InputEventGesture {
     public var factor: Float;

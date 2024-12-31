@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class InputEventScreenDragSignalNames {
+}
 @:native("godot.InputEventScreenDrag")
 extern class InputEventScreenDrag extends InputEvent {
     public var index: Int;

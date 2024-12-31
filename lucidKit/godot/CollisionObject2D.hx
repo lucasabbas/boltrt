@@ -1,5 +1,20 @@
 package lucidKit.godot;
 
+class CollisionObject2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class CollisionObject2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class CollisionObject2DSignalNames {
+    public static var inputEvent: String = "input_event";
+    public static var mouseEntered: String = "mouse_entered";
+    public static var mouseExited: String = "mouse_exited";
+}
 @:native("godot.CollisionObject2D")
 extern class CollisionObject2D extends Node2D {
     public var collisionLayer: Int;

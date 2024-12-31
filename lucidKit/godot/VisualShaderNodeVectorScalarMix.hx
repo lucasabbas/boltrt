@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeVectorScalarMixSignalNames {
+}
 @:native("godot.VisualShaderNodeVectorScalarMix")
 extern class VisualShaderNodeVectorScalarMix extends VisualShaderNode {
     @:native("__new")

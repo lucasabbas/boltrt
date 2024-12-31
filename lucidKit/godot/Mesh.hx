@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class MeshSignalNames {
+}
 @:native("godot.Mesh")
 extern class Mesh extends Resource {
     public var lightmapSizeHint: Vector2;

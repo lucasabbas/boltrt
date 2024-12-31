@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class AnimationTreeProcessMode {
+    public static var Physics: Int = 0;
+    public static var Idle: Int = 1;
+    public static var Manual: Int = 2;
+}
+class AnimationTreePauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class AnimationTreePhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class AnimationTreeSignalNames {
+}
 @:native("godot.AnimationTree")
 extern class AnimationTree extends Node {
     public var active: Bool;

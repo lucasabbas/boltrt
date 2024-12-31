@@ -1,5 +1,51 @@
 package lucidKit.godot;
 
+class EnvironmentBackgroundMode {
+    public static var ClearColor: Int = 0;
+    public static var Color: Int = 1;
+    public static var Sky: Int = 2;
+    public static var ColorSky: Int = 3;
+    public static var Canvas: Int = 4;
+    public static var Keep: Int = 5;
+    public static var CameraFeed: Int = 6;
+    public static var Max: Int = 7;
+}
+class EnvironmentTonemapMode {
+    public static var Linear: Int = 0;
+    public static var Reinhardt: Int = 1;
+    public static var Filmic: Int = 2;
+    public static var Aces: Int = 3;
+    public static var AcesFitted: Int = 4;
+}
+class EnvironmentSsaoQuality {
+    public static var Low: Int = 0;
+    public static var Medium: Int = 1;
+    public static var High: Int = 2;
+}
+class EnvironmentSsaoBlur {
+    public static var Disabled: Int = 0;
+    public static var Blur1x1: Int = 1;
+    public static var Blur2x2: Int = 2;
+    public static var Blur3x3: Int = 3;
+}
+class EnvironmentDofBlurFarQuality {
+    public static var Low: Int = 0;
+    public static var Medium: Int = 1;
+    public static var High: Int = 2;
+}
+class EnvironmentDofBlurNearQuality {
+    public static var Low: Int = 0;
+    public static var Medium: Int = 1;
+    public static var High: Int = 2;
+}
+class EnvironmentGlowBlendMode {
+    public static var Additive: Int = 0;
+    public static var Screen: Int = 1;
+    public static var Softlight: Int = 2;
+    public static var Replace: Int = 3;
+}
+class EnvironmentSignalNames {
+}
 @:native("godot.Environment")
 extern class Environment extends Resource {
     public var adjustmentBrightness: Float;

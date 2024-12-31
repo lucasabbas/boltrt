@@ -1,5 +1,21 @@
 package lucidKit.godot;
 
+class AnimationTreePlayerPlaybackProcessMode {
+    public static var Physics: Int = 0;
+    public static var Idle: Int = 1;
+}
+class AnimationTreePlayerPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class AnimationTreePlayerPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class AnimationTreePlayerSignalNames {
+}
 @:native("godot.AnimationTreePlayer")
 extern class AnimationTreePlayer extends Node {
     public var active: Bool;

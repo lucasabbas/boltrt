@@ -1,5 +1,11 @@
 package lucidKit.godot;
 
+class ARVRServerSignalNames {
+    public static var interfaceAdded: String = "interface_added";
+    public static var interfaceRemoved: String = "interface_removed";
+    public static var trackerAdded: String = "tracker_added";
+    public static var trackerRemoved: String = "tracker_removed";
+}
 @:native("godot.ARVRServer")
 extern class ARVRServer extends Object {
     public var primaryInterface: ARVRInterface;

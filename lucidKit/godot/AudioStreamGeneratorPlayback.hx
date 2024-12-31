@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AudioStreamGeneratorPlaybackSignalNames {
+}
 @:native("godot.AudioStreamGeneratorPlayback")
 extern class AudioStreamGeneratorPlayback extends AudioStreamPlaybackResampled {
     public function canPushBuffer(amount: Int): Bool;

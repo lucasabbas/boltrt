@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class AnimationTrackEditPluginSignalNames {
+}
 @:native("godot.AnimationTrackEditPlugin")
 extern class AnimationTrackEditPlugin extends Reference {
     @:native("__new")

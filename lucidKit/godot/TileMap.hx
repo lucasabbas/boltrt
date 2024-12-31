@@ -1,5 +1,35 @@
 package lucidKit.godot;
 
+class TileMapMode {
+    public static var Square: Int = 0;
+    public static var Isometric: Int = 1;
+    public static var Custom: Int = 2;
+}
+class TileMapCellHalfOffset {
+    public static var X: Int = 0;
+    public static var Y: Int = 1;
+    public static var Disabled: Int = 2;
+    public static var NegativeX: Int = 3;
+    public static var NegativeY: Int = 4;
+}
+class TileMapCellTileOrigin {
+    public static var TopLeft: Int = 0;
+    public static var Center: Int = 1;
+    public static var BottomLeft: Int = 2;
+}
+class TileMapPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class TileMapPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class TileMapSignalNames {
+    public static var settingsChanged: String = "settings_changed";
+}
 @:native("godot.TileMap")
 extern class TileMap extends Node2D {
     public var bakeNavigation: Bool;

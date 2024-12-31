@@ -1,5 +1,25 @@
 package lucidKit.godot;
 
+class NavigationMeshSamplePartitionType {
+    public static var Watershed: Int = 0;
+    public static var Monotone: Int = 1;
+    public static var Layers: Int = 2;
+    public static var Max: Int = 3;
+}
+class NavigationMeshGeometryParsedGeometryType {
+    public static var MeshInstances: Int = 0;
+    public static var StaticColliders: Int = 1;
+    public static var Both: Int = 2;
+    public static var Max: Int = 3;
+}
+class NavigationMeshGeometrySourceGeometryMode {
+    public static var NavmeshChildren: Int = 0;
+    public static var GroupsWithChildren: Int = 1;
+    public static var GroupsExplicit: Int = 2;
+    public static var Max: Int = 3;
+}
+class NavigationMeshSignalNames {
+}
 @:native("godot.NavigationMesh")
 extern class NavigationMesh extends Resource {
     public var agentHeight: Float;

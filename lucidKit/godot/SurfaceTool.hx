@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class SurfaceToolSignalNames {
+}
 @:native("godot.SurfaceTool")
 extern class SurfaceTool extends Reference {
     public function addBones(bones: PoolIntArray): Void;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class QuatSignalNames {
+}
 @:native("godot.Quat")
 extern class GdQuat extends lucidKit.core.MonoObject {
     public var w: Float;

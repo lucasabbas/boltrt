@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class CapsuleMeshSignalNames {
+}
 @:native("godot.CapsuleMesh")
 extern class CapsuleMesh extends PrimitiveMesh {
     public var midHeight: Float;

@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class TorusMeshSignalNames {
+}
 @:native("godot.TorusMesh")
 extern class TorusMesh extends PrimitiveMesh {
     public var innerRadius: Float;

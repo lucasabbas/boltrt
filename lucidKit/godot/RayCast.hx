@@ -1,5 +1,22 @@
 package lucidKit.godot;
 
+class RayCastMergingMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RayCastPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class RayCastPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class RayCastSignalNames {
+}
 @:native("godot.RayCast")
 extern class RayCast extends Spatial {
     public var castTo: Vector3;

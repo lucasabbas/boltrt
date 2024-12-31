@@ -1,5 +1,9 @@
 package lucidKit.godot;
 
+class ScriptEditorSignalNames {
+    public static var editorScriptChanged: String = "editor_script_changed";
+    public static var scriptClose: String = "script_close";
+}
 @:native("godot.ScriptEditor")
 extern class ScriptEditor extends PanelContainer {
     public function canDropDataFw(point: GdVector2, data: Variant, from: Control): Bool;

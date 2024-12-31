@@ -1,5 +1,7 @@
 package lucidKit.godot;
 
+class VisualShaderNodeVectorLenSignalNames {
+}
 @:native("godot.VisualShaderNodeVectorLen")
 extern class VisualShaderNodeVectorLen extends VisualShaderNode {
     @:native("__new")

@@ -1,5 +1,31 @@
 package lucidKit.godot;
 
+class Light2DMode {
+    public static var Add: Int = 0;
+    public static var Sub: Int = 1;
+    public static var Mix: Int = 2;
+    public static var Mask: Int = 3;
+}
+class Light2DShadowFilter {
+    public static var None: Int = 0;
+    public static var Pcf3: Int = 1;
+    public static var Pcf5: Int = 2;
+    public static var Pcf7: Int = 3;
+    public static var Pcf9: Int = 4;
+    public static var Pcf13: Int = 5;
+}
+class Light2DPauseMode {
+    public static var Inherit: Int = 0;
+    public static var Stop: Int = 1;
+    public static var Process: Int = 2;
+}
+class Light2DPhysicsInterpolationMode {
+    public static var Inherit: Int = 0;
+    public static var Off: Int = 1;
+    public static var On: Int = 2;
+}
+class Light2DSignalNames {
+}
 @:native("godot.Light2D")
 extern class Light2D extends Node2D {
     public var color: Color;
