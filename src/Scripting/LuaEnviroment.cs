@@ -132,16 +132,16 @@ namespace LucidKit.Scripting
 
             Script.Globals["loadEnginePlugin"] = (Action<string>)LoadPluginDll;
 
-            IOCore ioCore = new UnixSysIO();
+            IOCore ioCore = new UnixSystemIO();
             if (OS.GetName() == "Windows")
             {
-                ioCore = new WindowsSysIO();
-                UserData.RegisterType<WindowsSysIO>();
-                Script.Globals["WindowsSystemIo"] = typeof(WindowsSysIO);
+                ioCore = new WindowsSystemIO();
+                UserData.RegisterType<WindowsSystemIO>();
+                Script.Globals["WindowsSystemIo"] = typeof(WindowsSystemIO);
             }
             else {
-                UserData.RegisterType<UnixSysIO>();
-                Script.Globals["UnixSystemIo"] = typeof(UnixSysIO);
+                UserData.RegisterType<UnixSystemIO>();
+                Script.Globals["UnixSystemIo"] = typeof(UnixSystemIO);
             }
             UserData.RegisterType<SystemIOBase>();
             Script.Globals["BaseSystemIo"] = typeof(SystemIOBase);

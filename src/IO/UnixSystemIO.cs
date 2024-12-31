@@ -3,9 +3,9 @@ using System.IO;
 
 namespace LucidKit.IO
 {
-    public class UnixSysIO : SystemIOBase
+    public class UnixSystemIO : SystemIOBase
     {
-        public UnixSysIO() {
+        public UnixSystemIO() {
             PathUrl = "unix://";
         }
 

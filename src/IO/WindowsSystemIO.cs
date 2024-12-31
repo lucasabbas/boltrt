@@ -3,9 +3,9 @@ using System.IO;
 
 namespace LucidKit.IO
 {
-    public class WindowsSysIO : SystemIOBase
+    public class WindowsSystemIO : SystemIOBase
     {
-        public WindowsSysIO() {
+        public WindowsSystemIO() {
             PathUrl = "win://";
         }
 
