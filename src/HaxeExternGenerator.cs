@@ -22,7 +22,7 @@ class HaxeExternGenerator
     public static void GenerateExterns()
     {
         string xmlDirectory = ProjectSettings.GlobalizePath("res://godotapi/doc/classes/");
-        string outputDir = ProjectSettings.GlobalizePath("res://src_api/lucidKit/godot/");
+        string outputDir = ProjectSettings.GlobalizePath("res://lucidKit/godot/");
 
         // Ensure the output directory exists
         Directory.CreateDirectory(outputDir);
@@ -582,6 +582,8 @@ abstract Quat(GdQuat) from GdQuat {
         sb.AppendLine("package lucidKit.godot;");
         sb.AppendLine();
 
+        AppendEnums(sb, doc);
+
         var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
 
         if (string.IsNullOrEmpty(inheritedClassName))
@@ -606,6 +608,38 @@ abstract Quat(GdQuat) from GdQuat {
         
 
         return str;
+    }
+
+    public static void AppendEnums(StringBuilder sb, XDocument doc)
+    {
+        var godotAssembly = typeof(Godot.Node).Assembly;
+        var className = doc.Root?.Attribute("name")?.Value;
+
+        Type type = godotAssembly.GetType(className);
+
+        if (type != null)
+        {
+            var enumNames = type.GetFields();
+
+            foreach (var fieldInfo in enumNames)
+            {
+                if (fieldInfo.FieldType.IsEnum)
+                {
+                    var enumName = className + fieldInfo.Name;
+                    var enumValue = (int)fieldInfo.GetValue(null);
+                    sb.AppendLine($"enum {enumName} {{");
+
+                    foreach (var value in Enum.GetValues(fieldInfo.FieldType))
+                    {
+                        var valName = Enum.GetName(fieldInfo.FieldType, value);
+                        var valValue = (int)value;
+                        sb.AppendLine($"    public static var {valName}: Int = {valValue};");
+                    }
+
+                    sb.AppendLine("}");
+                }
+            }
+        }
     }
 
     static void AppendFields(StringBuilder sb, XDocument doc)
@@ -637,6 +671,16 @@ abstract Quat(GdQuat) from GdQuat {
                         sb.AppendLine($"    public var {ToCamelCase(fieldName)}: {MapReturnType(fieldType)};");
                 }
             }
+        }
+    }
+
+    static void AppendSignals(StringBuilder sb, XDocument doc)
+    {
+        var signals = doc.Descendants("signal");
+        foreach (var signal in signals)
+        {
+            var signalName = signal.Attribute("name")?.Value;
+            sb.AppendLine($"    public static var {ToCamelCase(signalName)}: String = \"{signalName}\";");
         }
     }
 
