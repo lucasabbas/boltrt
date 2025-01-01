@@ -46,7 +46,8 @@ class EditorWindow extends Widget {
         openFolderDialog.mode = FileDialogMode.OpenDir;
         openFolderDialog.access = FileDialogAccess.Filesystem;
         openFolderDialog.windowTitle = "Open Project";
-
+        openFolderDialog.resizable = true;
+        
         SignalToFunc.connect(openFolderDialog, FileDialogSignalNames.dirSelected, (dirPath : String) -> openProject(dirPath));
 
         document.addChild(openFolderDialog);
