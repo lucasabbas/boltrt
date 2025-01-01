@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace LucidKit.IO
+namespace Bolt.IO
 {
     public class WindowsSystemIO : SystemIOBase
     {

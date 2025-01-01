@@ -1,4 +1,4 @@
-namespace LucidKit.Scripting
+namespace Bolt.Scripting
 {
 
     public abstract class Plugin

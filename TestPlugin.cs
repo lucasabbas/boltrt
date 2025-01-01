@@ -1,8 +1,8 @@
 using MoonSharp.Interpreter;
 
-namespace LucidKit.Tests.HelloHaxe
+namespace Bolt.Tests.HelloHaxe
 {
-    public class TestPlugin : LucidKit.Scripting.Plugin
+    public class TestPlugin : Bolt.Scripting.Plugin
     {
         public override void Init()
         {

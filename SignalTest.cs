@@ -1,7 +1,7 @@
 using Godot;
-using LucidKit.Scripting;
+using Bolt.Scripting;
 
-namespace LucidKit.Tests.HelloHaxe
+namespace Bolt.Tests.HelloHaxe
 {
 	public class SignalTest : LuaNode
 	{

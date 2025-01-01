@@ -1,12 +1,12 @@
 using System;
 using Godot;
-using LucidKit.IO;
-using LucidKit.Plugins;
+using Bolt.IO;
+using Bolt.Plugins;
 using MoonSharp.Interpreter;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace LucidKit.Scripting
+namespace Bolt.Scripting
 {
 
 	public partial class LuaNode : Node
@@ -36,7 +36,7 @@ namespace LucidKit.Scripting
 			//_luaEnviroment.AddPlugin(typeof(UiModule));
 			UserData.RegisterType<LuaNode>();
 			_luaEnviroment.Script.Globals["rootNode"] = this;
-			title = "LucidKit";
+			title = "Bolt";
 		}
 
 		public override void _Ready()
@@ -68,21 +68,21 @@ namespace LucidKit.Scripting
 		public void StartFromZip(byte[] bytes)
 		{
 			ZipIO zip = new ZipIO(bytes, "data://");
-			string lkappPath = null;
+			string boltPath = null;
 			foreach (var file in zip.GetFileList("data://"))
 			{
 				GD.Print(file);
-				if (file.EndsWith(".lkapp"))
+				if (file.EndsWith(".bolt"))
 				{
-					lkappPath = file;
+					boltPath = file;
 					break;
 				}
 			}
-			if (lkappPath == null)
+			if (boltPath == null)
 			{
 				throw new Exception("No lkproj file found in zip");
 			}
-			var filestring = zip.LoadText(lkappPath);
+			var filestring = zip.LoadText(boltPath);
 			var xml = XDocument.Parse(filestring);
 			var app = xml.Element("app");
 			var title = app.Element("title").Value;

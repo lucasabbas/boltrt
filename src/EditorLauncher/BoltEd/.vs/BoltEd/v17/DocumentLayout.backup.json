@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|BoltEd||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}|BoltEd.csproj|C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}|BoltEd.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}|BoltEd.csproj|c:\\users\\mintkat\\bolt\\src\\editorlauncher\\bolted\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BoltEd",
+              "DocumentMoniker": "C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\BoltEd.csproj",
+              "RelativeDocumentMoniker": "BoltEd.csproj",
+              "ToolTip": "C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\BoltEd.csproj",
+              "RelativeToolTip": "BoltEd.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-01T20:06:19.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mintkat\\bolt\\src\\EditorLauncher\\BoltEd\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-01T20:01:57.872Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

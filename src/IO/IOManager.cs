@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace LucidKit.IO
+namespace Bolt.IO
 {
 
     public class IOManager : IOCore

@@ -1,5 +1,5 @@
---library lucidKit
---class-path lucidEd
---main lucidEd.Main
+--library bolt
+--class-path boltEd
+--main boltEd.Main
 --lua data_editor/main.lua
 -D lua-vanilla

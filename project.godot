@@ -10,11 +10,12 @@ config_version=4
 
 [application]
 
-config/name="LucidKit"
+config/name="Bolt"
 run/main_scene="res://src/Main.tscn"
 boot_splash/image="res://assets/splashscreen.png"
 boot_splash/fullsize=false
-config/icon="res://assets/Icon-1024.png"
+boot_splash/bg_color=Color( 0.14902, 0.14902, 0.14902, 1 )
+config/icon="res://assets/bolticon.png"
 config/windows_native_icon="res://icon.ico"
 
 [display]
@@ -40,7 +41,7 @@ fullscreen={
 [mono]
 
 runtime/unhandled_exception_policy=1
-project/assembly_name="LucidKit"
+project/assembly_name="Bolt"
 export/export_assemblies_inside_pck=false
 export/aot/use_interpreter.pc=false
 

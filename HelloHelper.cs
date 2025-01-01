@@ -1,6 +1,6 @@
 using Godot;
 
-namespace LucidKit.Tests.HelloHaxe
+namespace Bolt.Tests.HelloHaxe
 {
     public class HelloHelper
     {

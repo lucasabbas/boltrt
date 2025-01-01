@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Godot;
 using ICSharpCode.SharpZipLib.Zip;
 
-namespace LucidKit.IO
+namespace Bolt.IO
 {
     public class ZipIO : IOCore
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using LucidKit.Scripting;
+using Bolt.Scripting;
 
-namespace LucidKit.IO
+namespace Bolt.IO
 {
 
     public abstract class IOCore

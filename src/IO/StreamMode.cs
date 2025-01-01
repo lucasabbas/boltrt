@@ -1,4 +1,4 @@
-namespace LucidKit.IO
+namespace Bolt.IO
 {
 
     public enum StreamMode

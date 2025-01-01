@@ -1,8 +1,8 @@
-using LucidKit.IO;
+using Bolt.IO;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Loaders;
 
-namespace LucidKit.Scripting
+namespace Bolt.Scripting
 {
 
     public class IoScriptLoader : ScriptLoaderBase

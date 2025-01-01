@@ -1,7 +1,7 @@
-using LucidKit.Scripting;
+using Bolt.Scripting;
 using MoonSharp.Interpreter;
 
-namespace LucidKit.Plugins
+namespace Bolt.Plugins
 {
 
     public class Sys : Plugin

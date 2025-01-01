@@ -1,5 +1,5 @@
 using Godot;
-using LucidKit.Scripting;
+using Bolt.Scripting;
 using System;
 
 public class Editor : LuaNode
@@ -12,7 +12,7 @@ public class Editor : LuaNode
         if (!basePath.EndsWith("/"))
             basePath += "/";
 
-        var editorPath = basePath + "data_editor/editor.lkapp";
+        var editorPath = basePath + "data_editor/editor.bolt";
         StartFromLKProject(editorPath);
 
         OS.WindowBorderless = false;

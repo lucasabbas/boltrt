@@ -1,6 +1,6 @@
 package;
 
-import lucidKit.core.NativeObject;
+import bolt.core.NativeObject;
 
 @:luaRequire("data://test.lua")
 @:native("_TestClass")
