@@ -35,7 +35,7 @@ var ICONS_GROUP
 ; Instfiles page
 !insertmacro MUI_PAGE_INSTFILES
 ; Finish page
-!define MUI_FINISHPAGE_RUN "$INSTDIR\lucided.exe"
+!define MUI_FINISHPAGE_RUN "$INSTDIR\BoltEd.exe"
 !insertmacro MUI_PAGE_FINISH
 
 ; Uninstaller pages
@@ -57,7 +57,7 @@ Section "Bolt Runtime" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
   File "bin\win32\bolt.exe"
-  File "bin\win32\lucided.exe"
+  File "bin\win32\BoltEd.exe"
   File "bin\win32\bolt.exe"
   File "bin\win32\bolt.pck"
   SetOutPath "$INSTDIR\data_Bolt\Assemblies"
@@ -8603,6 +8603,8 @@ Section "Bolt Runtime" SEC01
   File "bin\win32\data_Bolt\Assemblies\System.Windows.Forms.dll"
   File "bin\win32\data_Bolt\Assemblies\System.Xml.dll"
   File "bin\win32\data_Bolt\Assemblies\System.Xml.Linq.dll"
+  File "bin\win32\data_Bolt\Assemblies\ICSharpCode.SharpZipLib.dll"
+  
   SetOutPath "$INSTDIR\data_Bolt\Mono\"
   SetOutPath "$INSTDIR\data_Bolt\Mono\bin\"
   File "bin\win32\data_Bolt\Mono\bin\libmono-btls-shared.dll"
@@ -11546,8 +11548,8 @@ Section "Bolt Runtime" SEC01
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
   CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Bolt SDK.lnk" "$INSTDIR\lucided.exe"
-  CreateShortCut "$DESKTOP\Bolt SDK.lnk" "$INSTDIR\lucided.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Bolt SDK.lnk" "$INSTDIR\BoltEd.exe"
+  CreateShortCut "$DESKTOP\Bolt SDK.lnk" "$INSTDIR\BoltEd.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -11561,7 +11563,7 @@ SectionEnd
 
 Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
-  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\lucided.exe"
+  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\BoltEd.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\uninst.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\bolt.exe"
@@ -11595,7 +11597,7 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
   Delete "$INSTDIR\bolt.pck"  
-  Delete "$INSTDIR\lucided.exe"
+  Delete "$INSTDIR\BoltEd.exe"
   Delete "$INSTDIR\bolt.exe"
   Delete "$INSTDIR\bolt.pck"
   Delete "$INSTDIR\api\haxelib.json"

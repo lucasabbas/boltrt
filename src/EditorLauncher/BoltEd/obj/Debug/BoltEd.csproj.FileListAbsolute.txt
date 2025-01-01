@@ -1,0 +1,6 @@
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\bin\Debug\BoltEd.exe
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\bin\Debug\BoltEd.pdb
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Debug\BoltEd.csproj.AssemblyReference.cache
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Debug\BoltEd.csproj.CoreCompileInputs.cache
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Debug\BoltEd.exe
+C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Debug\BoltEd.pdb

@@ -5,7 +5,7 @@
 #define MyAppVersion "0.0.6"
 #define MyAppPublisher "Lucas Abbas"
 #define MyAppURL "https://www.example.com/"
-#define MyAppExeName "lucided.exe"
+#define MyAppExeName "BoltEd.exe"
 #define BoltExeName "bolt.exe"
 #define MyAppAssocName "Bolt Project File"
 #define BoltAssocName "Bolt Application"

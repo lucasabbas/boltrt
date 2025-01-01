@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-print('LucidEd')
+print('Bolt Editor Launcher')
 print('(C) 2024-2025 m1ntkat')
 print("")
 
