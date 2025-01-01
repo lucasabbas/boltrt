@@ -103,8 +103,11 @@ namespace LucidKit.Scripting
                 string fullPath = IoCore.GetFullPath(entryPoint);
                 GD.Print($"Loading script from path: {fullPath}");
 
-                server.AttachToScript(Script, fullPath, code => fullPath);
-                server.Start();
+                if (OS.GetName() != "HTML5")
+                {
+                    server.AttachToScript(Script, fullPath, code => fullPath);
+                    server.Start();
+                } 
 
                 Script.DoFile(entryPoint);
             }

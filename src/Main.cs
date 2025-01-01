@@ -20,6 +20,12 @@ public class Main : Node
             }
         }
 
+        if (OS.GetName() == "HTML5")
+        {
+            GetTree().ChangeScene("res://src/WebPlayer.tscn");
+            return;
+        }
+
         if (editorMode)
         {
             GetTree().ChangeScene("res://src/Editor.tscn");

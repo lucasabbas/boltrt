@@ -65,6 +65,34 @@ namespace LucidKit.Scripting
 			OS.SetWindowTitle(title);
 		}
 
+		public void StartFromZip(byte[] bytes)
+		{
+			ZipIO zip = new ZipIO(bytes, "data://");
+			string lkappPath = null;
+			foreach (var file in zip.GetFileList("data://"))
+			{
+				GD.Print(file);
+				if (file.EndsWith(".lkapp"))
+				{
+					lkappPath = file;
+					break;
+				}
+			}
+			if (lkappPath == null)
+			{
+				throw new Exception("No lkproj file found in zip");
+			}
+			var filestring = zip.LoadText(lkappPath);
+			var xml = XDocument.Parse(filestring);
+			var app = xml.Element("app");
+			var title = app.Element("title").Value;
+			this.title = title;
+			var mainScript = app.Element("mainScript").Value;
+			_mainScriptPath = mainScript;
+			_luaEnviroment.IoCore.Register(zip);
+			_luaEnviroment.Start(_mainScriptPath);
+		}
+
 		private float DoubleToFloat(double d)
 		{
 			return (float)d;
