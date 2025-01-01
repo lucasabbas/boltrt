@@ -20,7 +20,7 @@ public class Standalone : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg.Contains(".lkapp"))
+			if (arg.Contains(".bolt"))
 			{
 				path = arg;
 				break;
@@ -39,7 +39,7 @@ public class Standalone : LuaNode
 			var files = IoDir.GetFiles(IoPath.GetFullPath("./"));
 			foreach (var file in files)
 			{
-				if (file.Contains(".lkapp"))
+				if (file.Contains(".bolt"))
 				{
 					path = file;
 					break;
@@ -47,7 +47,7 @@ public class Standalone : LuaNode
 			}
 			if (string.IsNullOrEmpty(path))
 			{
-				OS.Alert("directory or 'lkapp' file not provided", "ERROR");
+				OS.Alert("directory or '.bolt' file not provided", "ERROR");
 				GetTree().Quit();
 				return;
 			}
@@ -56,7 +56,7 @@ public class Standalone : LuaNode
 
 		path = IoPath.GetFullPath(path);
 
-		if (path.EndsWith(".lkapp"))
+		if (path.EndsWith(".bolt"))
 			StartFromLKProject(path);
 		else
 			StartFromPath(path);

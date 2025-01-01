@@ -689,7 +689,7 @@ Section "Bolt Runtime" SEC01
   SetOutPath "$INSTDIR\api\bolt\_std\sys\io\"
   SetOutPath "$INSTDIR\data_editor\"
   File "bin\win32\data_editor\.gdignore"
-  File "bin\win32\data_editor\editor.lkapp"
+  File "bin\win32\data_editor\editor.bolt"
   File "bin\win32\data_editor\editorWindow.xml"
   File "bin\win32\data_editor\main.lua"
   SetOutPath "$INSTDIR\data_editor\FugueIcons\"
@@ -11538,10 +11538,10 @@ Section "Bolt Runtime" SEC01
 
   
 
-  WriteRegStr HKCR ".lkapp" ""  "$INSTDIR\bolt.exe"
-  WriteRegStr HKCR ".lkapp" ""  "Bolt Project"
-  WriteRegStr HKCR ".lkapp\DefaultIcon" ""  "$INSTDIR\bolt.exe"
-  WriteRegStr HKCR ".lkapp\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt" ""  "Bolt Project"
+  WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
@@ -12214,7 +12214,7 @@ Section Uninstall
   Delete "$INSTDIR\api\bolt\_std\Sys.hx"
   Delete "$INSTDIR\api\bolt\_std\sys\FileSystem.hx"
   Delete "$INSTDIR\data_editor\.gdignore"
-  Delete "$INSTDIR\data_editor\editor.lkapp"
+  Delete "$INSTDIR\data_editor\editor.bolt"
   Delete "$INSTDIR\data_editor\editorWindow.xml"
   Delete "$INSTDIR\data_editor\main.lua"
   Delete "$INSTDIR\data_editor\FugueIcons\CHANGELOG.txt"
@@ -23080,11 +23080,11 @@ DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
   SetAutoClose true
 
   ; Remove File Association
-  DeleteRegKey HKCR ".lkapp"
-  DeleteRegKey HKCR ".lkapp\shell\open\command"
-  DeleteRegKey HKCR ".lkapp\shell\open"
-  DeleteRegKey HKCR ".lkapp\shell"
-  DeleteRegKey HKCR ".lkapp\DefaultIcon"
-  DeleteRegKey HKCR ".lkapp"
+  DeleteRegKey HKCR ".bolt"
+  DeleteRegKey HKCR ".bolt\shell\open\command"
+  DeleteRegKey HKCR ".bolt\shell\open"
+  DeleteRegKey HKCR ".bolt\shell"
+  DeleteRegKey HKCR ".bolt\DefaultIcon"
+  DeleteRegKey HKCR ".bolt"
 
 SectionEnd

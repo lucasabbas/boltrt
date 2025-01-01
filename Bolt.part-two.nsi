@@ -2,10 +2,10 @@
 
   
 
-  WriteRegStr HKCR ".lkapp" ""  "$INSTDIR\bolt.exe"
-  WriteRegStr HKCR ".lkapp" ""  "Bolt Project"
-  WriteRegStr HKCR ".lkapp\DefaultIcon" ""  "$INSTDIR\bolt.exe"
-  WriteRegStr HKCR ".lkapp\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt" ""  "Bolt Project"
+  WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application

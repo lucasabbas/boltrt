@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="409da43e-b916-4642-a96a-671d6206f23d" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/build.hxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_editor/editor.lkapp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_editor/editor.bolt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Editor/Main.hx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -68,21 +68,21 @@ namespace Bolt.Scripting
 		public void StartFromZip(byte[] bytes)
 		{
 			ZipIO zip = new ZipIO(bytes, "data://");
-			string lkappPath = null;
+			string boltPath = null;
 			foreach (var file in zip.GetFileList("data://"))
 			{
 				GD.Print(file);
-				if (file.EndsWith(".lkapp"))
+				if (file.EndsWith(".bolt"))
 				{
-					lkappPath = file;
+					boltPath = file;
 					break;
 				}
 			}
-			if (lkappPath == null)
+			if (boltPath == null)
 			{
 				throw new Exception("No lkproj file found in zip");
 			}
-			var filestring = zip.LoadText(lkappPath);
+			var filestring = zip.LoadText(boltPath);
 			var xml = XDocument.Parse(filestring);
 			var app = xml.Element("app");
 			var title = app.Element("title").Value;

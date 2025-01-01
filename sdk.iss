@@ -6,13 +6,13 @@
 #define MyAppPublisher "Lucas Abbas"
 #define MyAppURL "https://www.example.com/"
 #define MyAppExeName "lucided.exe"
-#define LkAppExeName "bolt.exe"
+#define BoltExeName "bolt.exe"
 #define MyAppAssocName "Bolt Project File"
-#define LkAppAssocName "Bolt Application"
+#define BoltAssocName "Bolt Application"
 #define MyAppAssocExt ".lkproj"
-#define LkAppAssocExt ".lkapp"
+#define BoltAssocExt ".bolt"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
-#define LkAppAssocKey StringChange(LkAppAssocName, " ", "") + LkAppAssocExt
+#define BoltAssocKey StringChange(BoltAssocName, " ", "") + BoltAssocExt
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -48,7 +48,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 Source: "bin\win32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "bin\win32\{#LkAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bin\win32\{#BoltExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "bin\win32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
@@ -59,11 +59,11 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: s
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".lkproj"; ValueData: ""
 Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
-Root: HKA; Subkey: "Software\Classes\{#LkAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#LkAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
-Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#LkAppAssocName}"; Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#LkAppExeName},0"
-Root: HKA; Subkey: "Software\Classes\{#LkAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#LkAppExeName}"" ""%1"""
-Root: HKA; Subkey: "Software\Classes\Applications\{#LkAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".lkapp"; ValueData: ""
+Root: HKA; Subkey: "Software\Classes\{#BoltAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#BoltAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
+Root: HKA; Subkey: "Software\Classes\{#BoltAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#BoltAssocName}"; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\{#BoltAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#BoltExeName},0"
+Root: HKA; Subkey: "Software\Classes\{#BoltAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#BoltExeName}"" ""%1"""
+Root: HKA; Subkey: "Software\Classes\Applications\{#BoltExeName}\SupportedTypes"; ValueType: string; ValueName: ".bolt"; ValueData: ""
 Root: HKLM; Subkey: "SYSTEM\CurrentControlSet\Control\Session Manager\Environment"; ValueType: expandsz; ValueName: "Path"; ValueData: "{olddata};{app}"; Flags: preservestringtype
   
 [Icons]
