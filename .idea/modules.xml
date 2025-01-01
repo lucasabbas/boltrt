@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/LucidKit.iml" filepath="$PROJECT_DIR$/.idea/LucidKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Bolt.iml" filepath="$PROJECT_DIR$/.idea/Bolt.iml" />
     </modules>
   </component>
 </project>

@@ -22,7 +22,7 @@ for arg in sys.argv:
 exit_code = subprocess.run(
     '"' 
     +  application_path
-    + '/lucidkit.exe" --dev ' 
+    + '/bolt.exe" --dev ' 
     + args,
     shell=False
 )

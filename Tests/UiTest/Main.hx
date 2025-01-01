@@ -1,10 +1,10 @@
 package;
 
-import lucidKit.App;
-import lucidKit.godot.extensions.UiDocument;
-import lucidKit.godot.Label;
-import lucidKit.godot.Button;
-import lucidKit.godot.SignalToFunc;
+import bolt.App;
+import bolt.godot.extensions.UiDocument;
+import bolt.godot.Label;
+import bolt.godot.Button;
+import bolt.godot.SignalToFunc;
 
 class Main extends App {
     static function main() {

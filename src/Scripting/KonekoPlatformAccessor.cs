@@ -5,16 +5,16 @@ using Godot;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Platforms;
 using Script = MoonSharp.Interpreter.Script;
-using LucidKit.IO;
+using Bolt.IO;
 
-namespace LucidKit.Scripting
+namespace Bolt.Scripting
 {
 
-    public class LucidKitPlatformAccessor : PlatformAccessorBase
+    public class BoltPlatformAccessor : PlatformAccessorBase
     {
         public LuaEnviroment Enviroment;
 
-        public LucidKitPlatformAccessor(LuaEnviroment enviroment)
+        public BoltPlatformAccessor(LuaEnviroment enviroment)
         {
             Enviroment = enviroment;
         }

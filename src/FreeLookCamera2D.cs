@@ -1,7 +1,7 @@
 ﻿using Godot;
 using System;
 
-namespace LucidKit
+namespace Bolt
 {
 
     public partial class FreeLookCamera2D : Camera2D

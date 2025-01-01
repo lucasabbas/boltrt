@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="LucidKit"
+config/name="Bolt"
 run/main_scene="res://src/Main.tscn"
 boot_splash/image="res://assets/splashscreen.png"
 boot_splash/fullsize=false
@@ -40,7 +40,7 @@ fullscreen={
 [mono]
 
 runtime/unhandled_exception_policy=1
-project/assembly_name="LucidKit"
+project/assembly_name="Bolt"
 export/export_assemblies_inside_pck=false
 export/aot/use_interpreter.pc=false
 

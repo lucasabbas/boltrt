@@ -1,6 +1,6 @@
 using Godot;
 
-namespace LucidKit
+namespace Bolt
 {
 
 	public partial class MouseRayCast3D : RayCast

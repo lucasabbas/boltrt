@@ -2,7 +2,7 @@
 
 [sub_resource type="CSharpScript" id=1]
 script/source = "using Godot;
-using LucidKit.Scripting;
+using Bolt.Scripting;
 using System;
 using System.IO;
 using IoPath = System.IO.Path;

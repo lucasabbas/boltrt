@@ -1,5 +1,5 @@
 using Godot;
-using LucidKit.Scripting;
+using Bolt.Scripting;
 using System;
 
 public class Editor : LuaNode

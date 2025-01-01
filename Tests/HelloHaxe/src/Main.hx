@@ -1,20 +1,20 @@
 package;
 
-import lucidKit.godot.CubeMesh;
-import lucidKit.godot.Vector3;
-import lucidKit.godot.Node;
+import bolt.godot.CubeMesh;
+import bolt.godot.Vector3;
+import bolt.godot.Node;
 import sys.io.File;
 import sys.FileSystem;
-import lucidKit.godot.Vector2;
-import lucidKit.godot.Vector3;
+import bolt.godot.Vector2;
+import bolt.godot.Vector3;
 import haxe.ds.Vector;
-import lucidKit.godot.Object;
-import lucidKit.godot.Camera;
-import lucidKit.godot.MeshInstance;
-import lucidKit.godot.DirectionalLight; 
-import lucidKit.godot.extensions.FreeLookCamera;
-import lucidKit.App;
-import lucidKit.io.WindowsSystemIo;
+import bolt.godot.Object;
+import bolt.godot.Camera;
+import bolt.godot.MeshInstance;
+import bolt.godot.DirectionalLight; 
+import bolt.godot.extensions.FreeLookCamera;
+import bolt.App;
+import bolt.io.WindowsSystemIo;
 
 class Main extends App{
     public static function main(){

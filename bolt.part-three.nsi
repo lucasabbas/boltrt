@@ -1,0 +1,5 @@
+
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Website.lnk"
+  Delete "$DESKTOP\Bolt.lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Bolt.lnk"

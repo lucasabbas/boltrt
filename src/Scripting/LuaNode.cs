@@ -1,12 +1,12 @@
 using System;
 using Godot;
-using LucidKit.IO;
-using LucidKit.Plugins;
+using Bolt.IO;
+using Bolt.Plugins;
 using MoonSharp.Interpreter;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace LucidKit.Scripting
+namespace Bolt.Scripting
 {
 
 	public partial class LuaNode : Node
@@ -36,7 +36,7 @@ namespace LucidKit.Scripting
 			//_luaEnviroment.AddPlugin(typeof(UiModule));
 			UserData.RegisterType<LuaNode>();
 			_luaEnviroment.Script.Globals["rootNode"] = this;
-			title = "LucidKit";
+			title = "Bolt";
 		}
 
 		public override void _Ready()
