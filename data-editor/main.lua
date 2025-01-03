@@ -2811,9 +2811,10 @@ __boltEd_EditorWindow.prototype.openProject = function(self,dirPath)
   __haxe_Log.trace(Std.string("Open Project: ") .. Std.string(dirPath), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=62,className="boltEd.EditorWindow",methodName="openProject"}));
   local ioManager = self.ioCore;
   ioManager:registerPath(dirPath, "project://");
+  _G.print(Std.string(ioManager:fileExists("project://main.lua")));
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=69,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=70,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFolderDialog:popupCentered(fileDialogSize);
 end
