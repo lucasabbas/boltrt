@@ -3,6 +3,7 @@
     <TargetFramework>net472</TargetFramework>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MoonSharp" Version="2.0.0" />

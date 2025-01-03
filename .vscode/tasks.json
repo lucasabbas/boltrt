@@ -2,8 +2,8 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
-            "command": "C:/Users/mintkat/Desktop/Godot_v3.6-stable_mono_win64/Godot_v3.6-stable_mono_win64.exe",
+            "label": "build-legacy",
+            "command": "godot3-mono",
             "type": "process",
             "args": [
                 "--build-solutions",
@@ -14,6 +14,23 @@
             ],
             "problemMatcher": "$msCompile"
         },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build"
+            ],
+            "problemMatcher": "$msCompile",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        }
         {
             "label": "build-editor-haxe",
             "command": "haxe",
