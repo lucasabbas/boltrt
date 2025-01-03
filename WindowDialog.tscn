@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="WindowDialog" type="WindowDialog"]
+visible = true
+margin_right = 175.0
+margin_bottom = 125.0
+window_title = "Hello, World!"

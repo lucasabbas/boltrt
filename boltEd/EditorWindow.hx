@@ -8,6 +8,7 @@ import bolt.godot.MenuButton;
 import bolt.godot.Vector2;
 import bolt.io.IoManager;
 
+
 class EditorWindow extends Widget {
     public var fileMenuButton: MenuButton;
     public var editMenuButton: MenuButton;
@@ -17,6 +18,8 @@ class EditorWindow extends Widget {
     public var openProjectButton : Button;
 
     public var openFolderDialog : FileDialog;
+
+    public var projectPath : String;
 
     public var explorer : Explorer;
 
@@ -60,6 +63,7 @@ class EditorWindow extends Widget {
 
     public function openProject(dirPath : String) {   
         trace("Open Project: " + dirPath);
+        projectPath = dirPath;
 
         var ioManager : IoManager = cast ioCore;
         ioManager.registerPath(dirPath, "project://");

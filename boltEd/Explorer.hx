@@ -23,9 +23,9 @@ class Explorer {
     }
 
     public function init() {
-        reloadButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/ToolBar/HBoxContainer/ReloadButton");
-        newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/ToolBar/HBoxContainer/NewButton");
-        tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/Tree");
+        reloadButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/ToolBar/HBoxContainer/ReloadButton");
+        newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/ToolBar/HBoxContainer/NewButton");
+        tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/Tree");
     }
 
     public function buildTree(parent : DirIndex = null, path : String = "project://") {
