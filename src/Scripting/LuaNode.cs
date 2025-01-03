@@ -80,7 +80,7 @@ namespace Bolt.Scripting
 			}
 			if (boltPath == null)
 			{
-				throw new Exception("No lkproj file found in zip");
+				throw new Exception("No .bolt file found in zip");
 			}
 			var filestring = zip.LoadText(boltPath);
 			var xml = XDocument.Parse(filestring);

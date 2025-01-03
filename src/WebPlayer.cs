@@ -33,7 +33,7 @@ loadZipBase64().then((base64) => {
             _luaEnviroment.Sandboxed = true;
             
             Godot.File file = new Godot.File();
-            var error = file.Open("res://HelloHaxe.lkzip", Godot.File.ModeFlags.Read);
+            var error = file.Open("res://HelloHaxe.btz", Godot.File.ModeFlags.Read);
             if (error != Error.Ok)
             {
                 GD.Print("Failed to open file: ", error);
