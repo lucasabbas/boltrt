@@ -1,5 +1,5 @@
 --library bolt
 --class-path boltEd
 --main boltEd.Main
---lua data_editor/main.lua
+--lua data-editor/main.lua
 -D lua-vanilla
