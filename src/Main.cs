@@ -20,6 +20,9 @@ public class Main : Node
 			}
 		}
 
+		if (OS.HasFeature("bolt-ed"))
+			editorMode = true;
+
 		if (OS.GetName() == "HTML5")
 		{
 			GetTree().ChangeScene("res://src/WebPlayer.tscn");
