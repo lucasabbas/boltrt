@@ -58,12 +58,12 @@ class EditorWindow extends Widget {
     }
 
     public function onNewProject() {
-        trace("New Project");
-        trace(untyped __lua__("self ~= nil"));
+        //trace("New Project");
+        //trace(untyped __lua__("self ~= nil"));
     }
 
     public function openProject(dirPath : String) {   
-        trace("Open Project: " + dirPath);
+        //trace("Open Project: " + dirPath);
         projectPath = dirPath;
 
         var ioManager : IoManager = cast ioCore;

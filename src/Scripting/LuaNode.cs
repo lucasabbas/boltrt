@@ -93,6 +93,12 @@ namespace Bolt.Scripting
 			_luaEnviroment.Start(_mainScriptPath);
 		}
 
+		public void StartFromZipFilePath(string filepath)
+		{
+			var bytes = System.IO.File.ReadAllBytes(filepath);
+			StartFromZip(bytes);
+		}
+
 		private float DoubleToFloat(double d)
 		{
 			return (float)d;

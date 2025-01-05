@@ -2806,11 +2806,8 @@ __boltEd_EditorWindow.prototype.init = function(self)
   self.document:addChild(self.openFolderDialog);
 end
 __boltEd_EditorWindow.prototype.onNewProject = function(self) 
-  __haxe_Log.trace("New Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=61,className="boltEd.EditorWindow",methodName="onNewProject"}));
-  __haxe_Log.trace(self ~= nil, _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=62,className="boltEd.EditorWindow",methodName="onNewProject"}));
 end
 __boltEd_EditorWindow.prototype.openProject = function(self,dirPath) 
-  __haxe_Log.trace(Std.string("Open Project: ") .. Std.string(dirPath), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=66,className="boltEd.EditorWindow",methodName="openProject"}));
   self.projectPath = dirPath;
   local ioManager = self.ioCore;
   ioManager:registerPath(dirPath, "project://");
