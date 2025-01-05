@@ -5,27 +5,27 @@ class ObjectSignalNames {
 }
 @:native("godot.Object")
 extern class Object extends bolt.core.MonoObject {
-    public function Get(property: String): Variant;
+    public function Get(property: String): Dynamic;
     public function GetPropertyList(): Array<Dynamic>;
     public function Init(): Void;
     public function Notification(what: Int): Void;
-    public function Set(property: String, value: Variant): Bool;
+    public function Set(property: String, value: Dynamic): Bool;
     public function ToString(): String;
     public function addUserSignal(signal: String, arguments: Array<Dynamic>): Void;
-    public function call(method: String): Variant;
+    public function call(method: String): Dynamic;
     public function callDeferred(method: String): Void;
-    public function callv(method: String, argArray: Array<Dynamic>): Variant;
+    public function callv(method: String, argArray: Array<Dynamic>): Dynamic;
     public function canTranslateMessages(): Bool;
     public function connect(signal: String, target: Object, method: String, binds: Array<Dynamic>, flags: Int = 0): Int;
     public function disconnect(signal: String, target: Object, method: String): Void;
     public function emitSignal(signal: String): Void;
     public function free(): Void;
-    public function get(property: String): Variant;
+    public function get(property: String): Dynamic;
     public function getClass(): String;
     public function getIncomingConnections(): Array<Dynamic>;
-    public function getIndexed(propertyPath: NodePath): Variant;
+    public function getIndexed(propertyPath: NodePath): Dynamic;
     public function getInstanceId(): Int;
-    public function getMeta(name: String, Default: Variant): Variant;
+    public function getMeta(name: String, Default: Dynamic): Dynamic;
     public function getMetaList(): PoolStringArray;
     public function getMethodList(): Array<Dynamic>;
     public function getPropertyList(): Array<Dynamic>;
@@ -43,12 +43,12 @@ extern class Object extends bolt.core.MonoObject {
     public function notification(what: Int, reversed: Bool = false): Void;
     public function propertyListChangedNotify(): Void;
     public function removeMeta(name: String): Void;
-    public function set(property: String, value: Variant): Void;
+    public function set(property: String, value: Dynamic): Void;
     public function setBlockSignals(enable: Bool): Void;
-    public function setDeferred(property: String, value: Variant): Void;
-    public function setIndexed(propertyPath: NodePath, value: Variant): Void;
+    public function setDeferred(property: String, value: Dynamic): Void;
+    public function setIndexed(propertyPath: NodePath, value: Dynamic): Void;
     public function setMessageTranslation(enable: Bool): Void;
-    public function setMeta(name: String, value: Variant): Void;
+    public function setMeta(name: String, value: Dynamic): Void;
     public function setScript(script: Reference): Void;
     public function toString(): String;
     public function tr(message: String): String;

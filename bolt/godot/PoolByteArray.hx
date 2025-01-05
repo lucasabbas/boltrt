@@ -7,12 +7,12 @@ extern class PoolByteArray extends bolt.core.MonoObject {
     @:native("__new")
     public function new(from: Array<Dynamic>);
     public function append(byte: Int): Dynamic;
-    public function appendArray(array: PoolByteArray): Dynamic;
+    public function appendArray(array: Dynamic): Dynamic;
     public function clear(): Dynamic;
-    public function compress(compressionMode: Int = 0): PoolByteArray;
+    public function compress(compressionMode: Int = 0): Dynamic;
     public function count(value: Int): Int;
-    public function decompress(bufferSize: Int, compressionMode: Int = 0): PoolByteArray;
-    public function decompressDynamic(maxOutputSize: Int, compressionMode: Int = 0): PoolByteArray;
+    public function decompress(bufferSize: Int, compressionMode: Int = 0): Dynamic;
+    public function decompressDynamic(maxOutputSize: Int, compressionMode: Int = 0): Dynamic;
     public function empty(): Bool;
     public function fill(byte: Int): Dynamic;
     public function find(value: Int, from: Int = 0): Int;
@@ -29,5 +29,5 @@ extern class PoolByteArray extends bolt.core.MonoObject {
     public function set(idx: Int, byte: Int): Dynamic;
     public function size(): Int;
     public function sort(): Dynamic;
-    public function subarray(from: Int, to: Int): PoolByteArray;
+    public function subarray(from: Int, to: Int): Dynamic;
 }

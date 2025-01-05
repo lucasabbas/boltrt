@@ -84,7 +84,7 @@ extern class PopupMenu extends Popup {
     public function getItemIcon(idx: Int): Texture;
     public function getItemId(idx: Int): Int;
     public function getItemIndex(id: Int): Int;
-    public function getItemMetadata(idx: Int): Variant;
+    public function getItemMetadata(idx: Int): Dynamic;
     public function getItemShortcut(idx: Int): ShortCut;
     public function getItemSubmenu(idx: Int): String;
     public function getItemText(idx: Int): String;
@@ -107,7 +107,7 @@ extern class PopupMenu extends Popup {
     public function setItemDisabled(idx: Int, disabled: Bool): Void;
     public function setItemIcon(idx: Int, icon: Texture): Void;
     public function setItemId(idx: Int, id: Int): Void;
-    public function setItemMetadata(idx: Int, metadata: Variant): Void;
+    public function setItemMetadata(idx: Int, metadata: Dynamic): Void;
     public function setItemMultistate(idx: Int, state: Int): Void;
     public function setItemShortcut(idx: Int, shortcut: ShortCut, global: Bool = false): Void;
     public function setItemShortcutDisabled(idx: Int, disabled: Bool): Void;

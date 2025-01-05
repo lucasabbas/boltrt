@@ -41,10 +41,10 @@ extern class Animation extends Resource {
     public function trackGetKeyCount(trackIdx: Int): Int;
     public function trackGetKeyTime(trackIdx: Int, keyIdx: Int): Float;
     public function trackGetKeyTransition(trackIdx: Int, keyIdx: Int): Float;
-    public function trackGetKeyValue(trackIdx: Int, keyIdx: Int): Variant;
+    public function trackGetKeyValue(trackIdx: Int, keyIdx: Int): Dynamic;
     public function trackGetPath(trackIdx: Int): NodePath;
     public function trackGetType(trackIdx: Int): Int;
-    public function trackInsertKey(trackIdx: Int, time: Float, key: Variant, transition: Float = 1): Void;
+    public function trackInsertKey(trackIdx: Int, time: Float, key: Dynamic, transition: Float = 1): Void;
     public function trackIsEnabled(trackIdx: Int): Bool;
     public function trackIsImported(trackIdx: Int): Bool;
     public function trackMoveDown(trackIdx: Int): Void;
@@ -58,14 +58,14 @@ extern class Animation extends Resource {
     public function trackSetInterpolationType(trackIdx: Int, interpolation: Int): Void;
     public function trackSetKeyTime(trackIdx: Int, keyIdx: Int, time: Float): Void;
     public function trackSetKeyTransition(trackIdx: Int, keyIdx: Int, transition: Float): Void;
-    public function trackSetKeyValue(trackIdx: Int, key: Int, value: Variant): Void;
+    public function trackSetKeyValue(trackIdx: Int, key: Int, value: Dynamic): Void;
     public function trackSetPath(trackIdx: Int, path: NodePath): Void;
     public function trackSwap(trackIdx: Int, withIdx: Int): Void;
     public function transformTrackInsertKey(trackIdx: Int, time: Float, location: GdVector3, rotation: Quat, scale: GdVector3): Int;
     public function transformTrackInterpolate(trackIdx: Int, timeSec: Float): Array<Dynamic>;
     public function valueTrackGetKeyIndices(trackIdx: Int, timeSec: Float, delta: Float): PoolIntArray;
     public function valueTrackGetUpdateMode(trackIdx: Int): Int;
-    public function valueTrackInterpolate(trackIdx: Int, timeSec: Float): Variant;
+    public function valueTrackInterpolate(trackIdx: Int, timeSec: Float): Dynamic;
     public function valueTrackSetUpdateMode(trackIdx: Int, mode: Int): Void;
     @:native("__new")
     public function new();

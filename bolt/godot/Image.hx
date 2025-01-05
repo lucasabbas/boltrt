@@ -15,7 +15,7 @@ extern class Image extends Resource {
     public function convert(format: Int): Void;
     public function copyFrom(src: Image): Void;
     public function create(width: Int, height: Int, useMipmaps: Bool, format: Int): Void;
-    public function createFromData(width: Int, height: Int, useMipmaps: Bool, format: Int, data: PoolByteArray): Void;
+    public function createFromData(width: Int, height: Int, useMipmaps: Bool, format: Int, data: Dynamic): Void;
     public function crop(width: Int, height: Int): Void;
     public function decompress(): Int;
     public function detectAlpha(): Int;
@@ -26,7 +26,7 @@ extern class Image extends Resource {
     public function flipX(): Void;
     public function flipY(): Void;
     public function generateMipmaps(renormalize: Bool = false): Int;
-    public function getData(): PoolByteArray;
+    public function getData(): Dynamic;
     public function getFormat(): Int;
     public function getHeight(): Int;
     public function getMipmapOffset(mipmap: Int): Int;
@@ -41,11 +41,11 @@ extern class Image extends Resource {
     public function isEmpty(): Bool;
     public function isInvisible(): Bool;
     public function load(path: String): Int;
-    public function loadBmpFromBuffer(buffer: PoolByteArray): Int;
-    public function loadJpgFromBuffer(buffer: PoolByteArray): Int;
-    public function loadPngFromBuffer(buffer: PoolByteArray): Int;
-    public function loadTgaFromBuffer(buffer: PoolByteArray): Int;
-    public function loadWebpFromBuffer(buffer: PoolByteArray): Int;
+    public function loadBmpFromBuffer(buffer: Dynamic): Int;
+    public function loadJpgFromBuffer(buffer: Dynamic): Int;
+    public function loadPngFromBuffer(buffer: Dynamic): Int;
+    public function loadTgaFromBuffer(buffer: Dynamic): Int;
+    public function loadWebpFromBuffer(buffer: Dynamic): Int;
     public function lock(): Void;
     public function normalmapToXy(): Void;
     public function premultiplyAlpha(): Void;
@@ -54,7 +54,7 @@ extern class Image extends Resource {
     public function rgbeToSrgb(): Image;
     public function saveExr(path: String, grayscale: Bool = false): Int;
     public function savePng(path: String): Int;
-    public function savePngToBuffer(): PoolByteArray;
+    public function savePngToBuffer(): Dynamic;
     public function setPixel(x: Int, y: Int, color: Color): Void;
     public function setPixelv(dst: GdVector2, color: Color): Void;
     public function shrinkX2(): Void;

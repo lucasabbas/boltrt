@@ -50,6 +50,7 @@ namespace Bolt.Plugins
 			UserData.RegisterType<Quat>();
 			UserData.RegisterType<Node>();
 			UserData.RegisterType<GodotObject>();
+			UserData.RegisterType<TreeItem>();
 
 			GdCoreNamespace["Color"] = typeof(Color);
 			GdCoreNamespace["Vector3"] = typeof(Vector3);
@@ -61,6 +62,7 @@ namespace Bolt.Plugins
 			GdCoreNamespace["Quaternion"] = typeof(Quat);
 			GdCoreNamespace["Node"] = typeof(Node);
 			GdCoreNamespace["Object"] = typeof(GodotObject);
+			GdCoreNamespace["TreeItem"] = typeof(TreeItem);
 
 			Type[] nodeTypes = GetTypesInheritedFrom(typeof(Node));
 			foreach (var type in nodeTypes)

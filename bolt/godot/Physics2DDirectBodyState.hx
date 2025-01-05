@@ -25,7 +25,7 @@ extern class Physics2DDirectBodyState extends Object {
     public function getContactColliderObject(contactIdx: Int): Object;
     public function getContactColliderPosition(contactIdx: Int): Vector2;
     public function getContactColliderShape(contactIdx: Int): Int;
-    public function getContactColliderShapeMetadata(contactIdx: Int): Variant;
+    public function getContactColliderShapeMetadata(contactIdx: Int): Dynamic;
     public function getContactColliderVelocityAtPosition(contactIdx: Int): Vector2;
     public function getContactCount(): Int;
     public function getContactLocalNormal(contactIdx: Int): Vector2;

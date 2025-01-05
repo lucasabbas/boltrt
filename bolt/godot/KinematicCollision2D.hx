@@ -6,7 +6,7 @@ class KinematicCollision2DSignalNames {
 extern class KinematicCollision2D extends Reference {
     public var collider: Object;
     public var colliderId: Int;
-    public var colliderMetadata: Variant;
+    public var colliderMetadata: Dynamic;
     public var colliderRid: RID;
     public var colliderShape: Object;
     public var colliderShapeIndex: Int;

@@ -25,6 +25,6 @@ extern class Transform extends bolt.core.MonoObject {
     public function rotated(axis: GdVector3, angle: Float): Transform;
     public function scaled(scale: GdVector3): Transform;
     public function translated(offset: GdVector3): Transform;
-    public function xform(v: Variant): Variant;
-    public function xformInv(v: Variant): Variant;
+    public function xform(v: Dynamic): Dynamic;
+    public function xformInv(v: Dynamic): Dynamic;
 }

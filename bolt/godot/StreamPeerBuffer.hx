@@ -4,7 +4,7 @@ class StreamPeerBufferSignalNames {
 }
 @:native("godot.StreamPeerBuffer")
 extern class StreamPeerBuffer extends StreamPeer {
-    public var dataArray: PoolByteArray;
+    public var dataArray: Dynamic;
     public function clear(): Void;
     public function duplicate(): StreamPeerBuffer;
     public function getPosition(): Int;

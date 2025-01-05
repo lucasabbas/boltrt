@@ -11,9 +11,9 @@ extern class EditorSpatialGizmo extends SpatialGizmo {
     public function addMesh(mesh: Mesh, billboard: Bool = false, skeleton: SkinReference, material: Material): Void;
     public function addUnscaledBillboard(material: Material, defaultScale: Float = 1, modulate: Color): Void;
     public function clear(): Void;
-    public function commitHandle(index: Int, restore: Variant, cancel: Bool = false): Void;
+    public function commitHandle(index: Int, restore: Dynamic, cancel: Bool = false): Void;
     public function getHandleName(index: Int): String;
-    public function getHandleValue(index: Int): Variant;
+    public function getHandleValue(index: Int): Dynamic;
     public function getPlugin(): EditorSpatialGizmoPlugin;
     public function getSpatialNode(): Spatial;
     public function isHandleHighlighted(index: Int): Bool;

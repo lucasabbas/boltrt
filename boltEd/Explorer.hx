@@ -2,6 +2,9 @@ package boltEd;
 
 import bolt.godot.Button;
 import bolt.godot.Tree;
+import bolt.godot.TreeItem;
+import bolt.godot.ImageTexture;
+import bolt.godot.Image;
 import boltEd.explorer.DirIndex;
 import boltEd.explorer.FileIndex;
 import bolt.godot.AcceptDialog;
@@ -35,6 +38,7 @@ class Explorer {
 
     public function buildRoot() : DirIndex {
         var root = new DirIndex("project://");
+        root.dirName = "Project";
 
         if (root == null) {
             var acceptDialog = new AcceptDialog();
@@ -52,7 +56,8 @@ class Explorer {
     public function start() {
         rootDirIndex = buildRoot();
 
-        printTree(rootDirIndex);
+        //printTree(rootDirIndex);
+        createTreeItemFromDirTree(rootDirIndex);
     }
 
     public function buildTree(parent : DirIndex = null, path : String = "project://") {
@@ -142,6 +147,59 @@ class Explorer {
         if (dirIndex.files != null) {
             for (file in dirIndex.files) {
                 Sys.println(indentStr + "  " + file.fileName);
+            }
+        }
+        
+    }
+
+    public function createTreeItemFromDirTree(dirIndex : DirIndex, parentItem : TreeItem = null) : Void {
+        var treeItem : TreeItem;
+
+        if (dirIndex == null){
+            return;
+        }
+
+        var projectIconFile = ioCore.loadBuffer("data://FugueIcons/icons/application-blue-bolt.png");
+        var projectImage = new Image();
+        projectImage.loadPngFromBuffer(projectIconFile);
+        var projectTexture = new ImageTexture();
+        projectTexture.createFromImage(projectImage);
+
+        var folderIconFile = ioCore.loadBuffer("data://FugueIcons/icons/folder.png");
+        var folderImage = new Image();
+        folderImage.loadPngFromBuffer(folderIconFile);
+        var folderTexture = new ImageTexture();
+        folderTexture.createFromImage(folderImage);
+
+        if (parentItem == null) {
+            treeItem = tree.createItem(null);
+            treeItem.setText(0, dirIndex.dirName);
+            treeItem.setIcon(0, projectTexture);
+        }
+        else {
+            treeItem = tree.createItem(parentItem);
+            treeItem.setText(0, dirIndex.dirName);
+            treeItem.setIcon(0, folderTexture);
+        }
+
+        treeItem.setMetadata(0, dirIndex.path);
+        
+        if (dirIndex.directories != null) {
+            for (dir in dirIndex.directories) {
+                createTreeItemFromDirTree(dir, treeItem);
+            }
+        }
+        if (dirIndex.files != null) {
+            for (file in dirIndex.files) {
+                var fileIconFile = ioCore.loadBuffer("data://FugueIcons/icons/document.png");
+                var fileImage = new Image();
+                fileImage.loadPngFromBuffer(fileIconFile);
+                var fileTexture = new ImageTexture();
+                fileTexture.createFromImage(fileImage);
+                var fileItem = tree.createItem(treeItem);
+                fileItem.setText(0, file.fileName);
+                fileItem.setIcon(0, fileTexture);
+                fileItem.setMetadata(0, file.path);
             }
         }
         

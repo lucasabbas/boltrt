@@ -9,7 +9,7 @@ extern class PhysicsServer extends Object {
     public function areaClearShapes(area: RID): Void;
     public function areaCreate(): RID;
     public function areaGetObjectInstanceId(area: RID): Int;
-    public function areaGetParam(area: RID, param: Int): Variant;
+    public function areaGetParam(area: RID, param: Int): Dynamic;
     public function areaGetShape(area: RID, shapeIdx: Int): RID;
     public function areaGetShapeCount(area: RID): Int;
     public function areaGetShapeTransform(area: RID, shapeIdx: Int): Transform;
@@ -23,7 +23,7 @@ extern class PhysicsServer extends Object {
     public function areaSetCollisionMask(area: RID, mask: Int): Void;
     public function areaSetMonitorCallback(area: RID, receiver: Object, method: String): Void;
     public function areaSetMonitorable(area: RID, monitorable: Bool): Void;
-    public function areaSetParam(area: RID, param: Int, value: Variant): Void;
+    public function areaSetParam(area: RID, param: Int, value: Dynamic): Void;
     public function areaSetRayPickable(area: RID, enable: Bool): Void;
     public function areaSetShape(area: RID, shapeIdx: Int, shape: RID): Void;
     public function areaSetShapeDisabled(area: RID, shapeIdx: Int, disabled: Bool): Void;
@@ -54,7 +54,7 @@ extern class PhysicsServer extends Object {
     public function bodyGetShapeCount(body: RID): Int;
     public function bodyGetShapeTransform(body: RID, shapeIdx: Int): Transform;
     public function bodyGetSpace(body: RID): RID;
-    public function bodyGetState(body: RID, state: Int): Variant;
+    public function bodyGetState(body: RID, state: Int): Dynamic;
     public function bodyIsAxisLocked(body: RID, axis: Int): Bool;
     public function bodyIsContinuousCollisionDetectionEnabled(body: RID): Bool;
     public function bodyIsOmittingForceIntegration(body: RID): Bool;
@@ -66,7 +66,7 @@ extern class PhysicsServer extends Object {
     public function bodySetCollisionLayer(body: RID, layer: Int): Void;
     public function bodySetCollisionMask(body: RID, mask: Int): Void;
     public function bodySetEnableContinuousCollisionDetection(body: RID, enable: Bool): Void;
-    public function bodySetForceIntegrationCallback(body: RID, receiver: Object, method: String, userdata: Variant): Void;
+    public function bodySetForceIntegrationCallback(body: RID, receiver: Object, method: String, userdata: Dynamic): Void;
     public function bodySetKinematicSafeMargin(body: RID, margin: Float): Void;
     public function bodySetMaxContactsReported(body: RID, amount: Int): Void;
     public function bodySetMode(body: RID, mode: Int): Void;
@@ -77,7 +77,7 @@ extern class PhysicsServer extends Object {
     public function bodySetShapeDisabled(body: RID, shapeIdx: Int, disabled: Bool): Void;
     public function bodySetShapeTransform(body: RID, shapeIdx: Int, transform: Transform): Void;
     public function bodySetSpace(body: RID, space: RID): Void;
-    public function bodySetState(body: RID, state: Int, value: Variant): Void;
+    public function bodySetState(body: RID, state: Int, value: Dynamic): Void;
     public function bodyTestMotion(body: RID, from: Transform, motion: GdVector3, infiniteInertia: Bool, result: PhysicsTestMotionResult, excludeRaycastShapes: Bool = true, exclude: Array<Dynamic>): Bool;
     public function coneTwistJointGetParam(joint: RID, param: Int): Float;
     public function coneTwistJointSetParam(joint: RID, param: Int, value: Float): Void;
@@ -108,9 +108,9 @@ extern class PhysicsServer extends Object {
     public function setActive(active: Bool): Void;
     public function setCollisionIterations(iterations: Int): Void;
     public function shapeCreate(type: Int): RID;
-    public function shapeGetData(shape: RID): Variant;
+    public function shapeGetData(shape: RID): Dynamic;
     public function shapeGetType(shape: RID): Int;
-    public function shapeSetData(shape: RID, data: Variant): Void;
+    public function shapeSetData(shape: RID, data: Dynamic): Void;
     public function sliderJointGetParam(joint: RID, param: Int): Float;
     public function sliderJointSetParam(joint: RID, param: Int, value: Float): Void;
     public function spaceCreate(): RID;

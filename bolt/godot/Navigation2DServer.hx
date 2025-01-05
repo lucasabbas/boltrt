@@ -8,7 +8,7 @@ extern class Navigation2DServer extends Object {
     public function agentCreate(): RID;
     public function agentGetMap(agent: RID): RID;
     public function agentIsMapChanged(agent: RID): Bool;
-    public function agentSetCallback(agent: RID, objectId: Int, method: String, userdata: Variant): Void;
+    public function agentSetCallback(agent: RID, objectId: Int, method: String, userdata: Dynamic): Void;
     public function agentSetMap(agent: RID, map: RID): Void;
     public function agentSetMaxNeighbors(agent: RID, count: Int): Void;
     public function agentSetMaxSpeed(agent: RID, maxSpeed: Float): Void;

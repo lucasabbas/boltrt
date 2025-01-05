@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "Bolt SDK"
-!define PRODUCT_VERSION "0.0.7"
+!define PRODUCT_VERSION "0.0.8"
 !define PRODUCT_PUBLISHER "Lucas C. Abbas"
 !define PRODUCT_WEB_SITE "http://www.mycompany.com"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\bolt.exe"
@@ -11545,6 +11545,18 @@ Section "Bolt Runtime" SEC01
   WriteRegStr HKCR ".bolt" ""  "Bolt Project"
   WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
   WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta" ""  "Bolt Application"
+  WriteRegStr HKCR ".bta\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz" ""  "Bolt Application"
+  WriteRegStr HKCR ".btz\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip" ""  "Bolt Application"
+  WriteRegStr HKCR ".btzip\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip\shell\open\command" "" "$INSTDIR\bolt.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application

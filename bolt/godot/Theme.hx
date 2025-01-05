@@ -31,7 +31,7 @@ extern class Theme extends Resource {
     public function getStylebox(name: String, themeType: String): StyleBox;
     public function getStyleboxList(themeType: String): PoolStringArray;
     public function getStyleboxTypes(): PoolStringArray;
-    public function getThemeItem(dataType: Int, name: String, themeType: String): Variant;
+    public function getThemeItem(dataType: Int, name: String, themeType: String): Dynamic;
     public function getThemeItemList(dataType: Int, themeType: String): PoolStringArray;
     public function getThemeItemTypes(dataType: Int): PoolStringArray;
     public function getTypeList(themeType: String): PoolStringArray;
@@ -58,7 +58,7 @@ extern class Theme extends Resource {
     public function setFont(name: String, themeType: String, font: Font): Void;
     public function setIcon(name: String, themeType: String, texture: Texture): Void;
     public function setStylebox(name: String, themeType: String, texture: StyleBox): Void;
-    public function setThemeItem(dataType: Int, name: String, themeType: String, value: Variant): Void;
+    public function setThemeItem(dataType: Int, name: String, themeType: String, value: Dynamic): Void;
     public function setTypeVariation(themeType: String, baseType: String): Void;
     @:native("__new")
     public function new();

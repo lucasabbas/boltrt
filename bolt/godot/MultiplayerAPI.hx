@@ -21,7 +21,7 @@ extern class MultiplayerAPI extends Reference {
     public function hasNetworkPeer(): Bool;
     public function isNetworkServer(): Bool;
     public function poll(): Void;
-    public function sendBytes(bytes: PoolByteArray, id: Int = 0, mode: Int = 2): Int;
+    public function sendBytes(bytes: Dynamic, id: Int = 0, mode: Int = 2): Int;
     @:native("__new")
     public function new();
 }

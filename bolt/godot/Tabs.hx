@@ -85,7 +85,7 @@ extern class Tabs extends Control {
     public function getTabCount(): Int;
     public function getTabDisabled(tabIdx: Int): Bool;
     public function getTabIcon(tabIdx: Int): Texture;
-    public function getTabMetadata(tabIdx: Int): Variant;
+    public function getTabMetadata(tabIdx: Int): Dynamic;
     public function getTabOffset(): Int;
     public function getTabRect(tabIdx: Int): Rect2;
     public function getTabTitle(tabIdx: Int): String;
@@ -96,7 +96,7 @@ extern class Tabs extends Control {
     public function setTabButtonIcon(tabIdx: Int, icon: Texture): Void;
     public function setTabDisabled(tabIdx: Int, disabled: Bool): Void;
     public function setTabIcon(tabIdx: Int, icon: Texture): Void;
-    public function setTabMetadata(tabIdx: Int, metadata: Variant): Void;
+    public function setTabMetadata(tabIdx: Int, metadata: Dynamic): Void;
     public function setTabTitle(tabIdx: Int, title: String): Void;
     public function setTabsRearrangeGroup(groupId: Int): Void;
     @:native("__new")

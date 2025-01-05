@@ -27,7 +27,7 @@ extern class ArrayMesh extends Mesh {
     public function surfaceGetPrimitiveType(surfIdx: Int): Int;
     public function surfaceRemove(surfIdx: Int): Void;
     public function surfaceSetName(surfIdx: Int, name: String): Void;
-    public function surfaceUpdateRegion(surfIdx: Int, offset: Int, data: PoolByteArray): Void;
+    public function surfaceUpdateRegion(surfIdx: Int, offset: Int, data: Dynamic): Void;
     @:native("__new")
     public function new();
 }

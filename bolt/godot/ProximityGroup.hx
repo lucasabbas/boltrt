@@ -27,7 +27,7 @@ extern class ProximityGroup extends Spatial {
     public var dispatchMode: Int;
     public var gridRadius: Vector3;
     public var groupName: String;
-    public function broadcast(method: String, parameters: Variant): Void;
+    public function broadcast(method: String, parameters: Dynamic): Void;
     @:native("__new")
     public function new();
 }

@@ -58,7 +58,7 @@ extern class JSONParseResult extends Reference {
     public var error: Int;
     public var errorLine: Int;
     public var errorString: String;
-    public var result: Variant;
+    public var result: Dynamic;
     @:native("__new")
     public function new();
 }

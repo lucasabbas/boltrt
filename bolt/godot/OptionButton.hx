@@ -83,19 +83,19 @@ extern class OptionButton extends Button {
     public function getItemIcon(idx: Int): Texture;
     public function getItemId(idx: Int): Int;
     public function getItemIndex(id: Int): Int;
-    public function getItemMetadata(idx: Int): Variant;
+    public function getItemMetadata(idx: Int): Dynamic;
     public function getItemText(idx: Int): String;
     public function getItemTooltip(idx: Int): String;
     public function getPopup(): PopupMenu;
     public function getSelectedId(): Int;
-    public function getSelectedMetadata(): Variant;
+    public function getSelectedMetadata(): Dynamic;
     public function isItemDisabled(idx: Int): Bool;
     public function removeItem(idx: Int): Void;
     public function select(idx: Int): Void;
     public function setItemDisabled(idx: Int, disabled: Bool): Void;
     public function setItemIcon(idx: Int, texture: Texture): Void;
     public function setItemId(idx: Int, id: Int): Void;
-    public function setItemMetadata(idx: Int, metadata: Variant): Void;
+    public function setItemMetadata(idx: Int, metadata: Dynamic): Void;
     public function setItemText(idx: Int, text: String): Void;
     public function setItemTooltip(idx: Int, tooltip: String): Void;
     @:native("__new")

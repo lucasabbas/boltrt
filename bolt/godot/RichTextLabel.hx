@@ -81,7 +81,7 @@ extern class RichTextLabel extends Control {
     public function getTotalCharacterCount(): Int;
     public function getVScroll(): VScrollBar;
     public function getVisibleLineCount(): Int;
-    public function installEffect(effect: Variant): Void;
+    public function installEffect(effect: Dynamic): Void;
     public function newline(): Void;
     public function parseBbcode(bbcode: String): Int;
     public function parseExpressionsForValues(expressions: PoolStringArray): Map<Dynamic, Dynamic>;
@@ -95,7 +95,7 @@ extern class RichTextLabel extends Control {
     public function pushIndent(level: Int): Void;
     public function pushItalics(): Void;
     public function pushList(type: Int): Void;
-    public function pushMeta(data: Variant): Void;
+    public function pushMeta(data: Dynamic): Void;
     public function pushMono(): Void;
     public function pushNormal(): Void;
     public function pushStrikethrough(): Void;

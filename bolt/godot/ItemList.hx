@@ -90,7 +90,7 @@ extern class ItemList extends Control {
     public function getItemIcon(idx: Int): Texture;
     public function getItemIconModulate(idx: Int): Color;
     public function getItemIconRegion(idx: Int): Rect2;
-    public function getItemMetadata(idx: Int): Variant;
+    public function getItemMetadata(idx: Int): Dynamic;
     public function getItemText(idx: Int): String;
     public function getItemTooltip(idx: Int): String;
     public function getSelectedItems(): PoolIntArray;
@@ -111,7 +111,7 @@ extern class ItemList extends Control {
     public function setItemIconModulate(idx: Int, modulate: Color): Void;
     public function setItemIconRegion(idx: Int, rect: Rect2): Void;
     public function setItemIconTransposed(idx: Int, transposed: Bool): Void;
-    public function setItemMetadata(idx: Int, metadata: Variant): Void;
+    public function setItemMetadata(idx: Int, metadata: Dynamic): Void;
     public function setItemSelectable(idx: Int, selectable: Bool): Void;
     public function setItemText(idx: Int, text: String): Void;
     public function setItemTooltip(idx: Int, tooltip: String): Void;

@@ -7,7 +7,7 @@ class MainLoopSignalNames {
 extern class MainLoop extends Object {
     public function DropFiles(files: PoolStringArray, fromScreen: Int): Void;
     public function Finalize(): Void;
-    public function GlobalMenuAction(id: Variant, meta: Variant): Void;
+    public function GlobalMenuAction(id: Dynamic, meta: Dynamic): Void;
     public function Idle(delta: Float): Bool;
     public function Initialize(): Void;
     public function InputEvent(event: InputEvent): Void;

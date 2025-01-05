@@ -226,19 +226,19 @@ extern class EditorSettings extends Resource {
     public function addPropertyInfo(info: Map<Dynamic, Dynamic>): Void;
     public function erase(property: String): Void;
     public function getFavorites(): PoolStringArray;
-    public function getProjectMetadata(section: String, key: String, Default: Variant): Variant;
+    public function getProjectMetadata(section: String, key: String, Default: Dynamic): Dynamic;
     public function getProjectSettingsDir(): String;
     public function getRecentDirs(): PoolStringArray;
-    public function getSetting(name: String): Variant;
+    public function getSetting(name: String): Dynamic;
     public function getSettingsDir(): String;
     public function hasSetting(name: String): Bool;
     public function propertyCanRevert(name: String): Bool;
-    public function propertyGetRevert(name: String): Variant;
+    public function propertyGetRevert(name: String): Dynamic;
     public function setFavorites(dirs: PoolStringArray): Void;
-    public function setInitialValue(name: String, value: Variant, updateCurrent: Bool): Void;
-    public function setProjectMetadata(section: String, key: String, data: Variant): Void;
+    public function setInitialValue(name: String, value: Dynamic, updateCurrent: Bool): Void;
+    public function setProjectMetadata(section: String, key: String, data: Dynamic): Void;
     public function setRecentDirs(dirs: PoolStringArray): Void;
-    public function setSetting(name: String, value: Variant): Void;
+    public function setSetting(name: String, value: Dynamic): Void;
     @:native("__new")
     public function new();
 }

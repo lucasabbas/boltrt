@@ -15,7 +15,7 @@ class AudioStreamSampleSignalNames {
 }
 @:native("godot.AudioStreamSample")
 extern class AudioStreamSample extends AudioStream {
-    public var data: PoolByteArray;
+    public var data: Dynamic;
     public var format: Int;
     public var loopBegin: Int;
     public var loopEnd: Int;

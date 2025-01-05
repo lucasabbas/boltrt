@@ -6,11 +6,11 @@ class ScriptEditorSignalNames {
 }
 @:native("godot.ScriptEditor")
 extern class ScriptEditor extends PanelContainer {
-    public function canDropDataFw(point: GdVector2, data: Variant, from: Control): Bool;
-    public function dropDataFw(point: GdVector2, data: Variant, from: Control): Void;
+    public function canDropDataFw(point: GdVector2, data: Dynamic, from: Control): Bool;
+    public function dropDataFw(point: GdVector2, data: Dynamic, from: Control): Void;
     public function getBaseEditor(): Control;
     public function getCurrentScript(): Script;
-    public function getDragDataFw(point: GdVector2, from: Control): Variant;
+    public function getDragDataFw(point: GdVector2, from: Control): Dynamic;
     public function getOpenScripts(): Array<Dynamic>;
     public function gotoLine(lineNumber: Int): Void;
     public function openScriptCreateDialog(baseName: String, basePath: String): Void;

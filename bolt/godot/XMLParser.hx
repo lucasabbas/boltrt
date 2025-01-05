@@ -17,7 +17,7 @@ extern class XMLParser extends Reference {
     public function hasAttribute(name: String): Bool;
     public function isEmpty(): Bool;
     public function open(file: String): Int;
-    public function openBuffer(buffer: PoolByteArray): Int;
+    public function openBuffer(buffer: Dynamic): Int;
     public function read(): Int;
     public function seek(position: Int): Int;
     public function skipSection(): Void;

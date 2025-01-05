@@ -18,9 +18,9 @@ extern class HTTPClient extends Reference {
     public function isResponseChunked(): Bool;
     public function poll(): Int;
     public function queryStringFromDict(fields: Map<Dynamic, Dynamic>): String;
-    public function readResponseBodyChunk(): PoolByteArray;
+    public function readResponseBodyChunk(): Dynamic;
     public function request(method: Int, url: String, headers: PoolStringArray, body: String): Int;
-    public function requestRaw(method: Int, url: String, headers: PoolStringArray, body: PoolByteArray): Int;
+    public function requestRaw(method: Int, url: String, headers: PoolStringArray, body: Dynamic): Int;
     public function setHttpProxy(host: String, port: Int): Void;
     public function setHttpsProxy(host: String, port: Int): Void;
     @:native("__new")

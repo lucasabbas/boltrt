@@ -8,7 +8,7 @@ extern class ResourceFormatLoader extends Reference {
     public function getRecognizedExtensions(): PoolStringArray;
     public function getResourceType(path: String): String;
     public function handlesType(typename: String): Bool;
-    public function load(path: String, originalPath: String, noSubresourceCache: Bool): Variant;
+    public function load(path: String, originalPath: String, noSubresourceCache: Bool): Dynamic;
     public function renameDependencies(path: String, renames: String): Int;
     @:native("__new")
     public function new();

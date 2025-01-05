@@ -11,7 +11,7 @@ extern class SceneTreeTween extends Reference {
     public function chain(): SceneTreeTween;
     public function customStep(delta: Float): Bool;
     public function getTotalElapsedTime(): Float;
-    public function interpolateValue(initialValue: Variant, deltaValue: Variant, elapsedTime: Float, duration: Float, transType: Int, easeType: Int): Variant;
+    public function interpolateValue(initialValue: Dynamic, deltaValue: Dynamic, elapsedTime: Float, duration: Float, transType: Int, easeType: Int): Dynamic;
     public function isRunning(): Bool;
     public function isValid(): Bool;
     public function kill(): Void;
@@ -28,8 +28,8 @@ extern class SceneTreeTween extends Reference {
     public function stop(): Void;
     public function tweenCallback(object: Object, method: String, binds: Array<Dynamic>): CallbackTweener;
     public function tweenInterval(time: Float): IntervalTweener;
-    public function tweenMethod(object: Object, method: String, from: Variant, to: Variant, duration: Float, binds: Array<Dynamic>): MethodTweener;
-    public function tweenProperty(object: Object, property: NodePath, finalVal: Variant, duration: Float): PropertyTweener;
+    public function tweenMethod(object: Object, method: String, from: Dynamic, to: Dynamic, duration: Float, binds: Array<Dynamic>): MethodTweener;
+    public function tweenProperty(object: Object, property: NodePath, finalVal: Dynamic, duration: Float): PropertyTweener;
     @:native("__new")
     public function new();
 }

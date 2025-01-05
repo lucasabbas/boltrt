@@ -8,7 +8,7 @@ extern class Script extends Resource {
     public function canInstance(): Bool;
     public function getBaseScript(): Script;
     public function getInstanceBaseType(): String;
-    public function getPropertyDefaultValue(property: String): Variant;
+    public function getPropertyDefaultValue(property: String): Dynamic;
     public function getScriptConstantMap(): Map<Dynamic, Dynamic>;
     public function getScriptMethodList(): Array<Dynamic>;
     public function getScriptPropertyList(): Array<Dynamic>;

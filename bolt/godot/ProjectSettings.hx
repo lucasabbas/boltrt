@@ -516,18 +516,18 @@ extern class ProjectSettings extends Object {
     public function addPropertyInfo(hint: Map<Dynamic, Dynamic>): Void;
     public function clear(name: String): Void;
     public function getOrder(name: String): Int;
-    public function getSetting(name: String): Variant;
+    public function getSetting(name: String): Dynamic;
     public function globalizePath(path: String): String;
     public function hasSetting(name: String): Bool;
     public function loadResourcePack(pack: String, replaceFiles: Bool = true, offset: Int = 0): Bool;
     public function localizePath(path: String): String;
     public function propertyCanRevert(name: String): Bool;
-    public function propertyGetRevert(name: String): Variant;
+    public function propertyGetRevert(name: String): Dynamic;
     public function save(): Int;
     public function saveCustom(file: String): Int;
-    public function setInitialValue(name: String, value: Variant): Void;
+    public function setInitialValue(name: String, value: Dynamic): Void;
     public function setOrder(name: String, position: Int): Void;
-    public function setSetting(name: String, value: Variant): Void;
+    public function setSetting(name: String, value: Dynamic): Void;
     @:native("__new")
     public function new();
 }

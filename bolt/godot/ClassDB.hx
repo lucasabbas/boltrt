@@ -13,7 +13,7 @@ extern class ClassDB extends Object {
     public function classGetIntegerConstantEnum(Class: String, name: String, noInheritance: Bool = false): String;
     public function classGetIntegerConstantList(Class: String, noInheritance: Bool = false): PoolStringArray;
     public function classGetMethodList(Class: String, noInheritance: Bool = false): Array<Dynamic>;
-    public function classGetProperty(object: Object, property: String): Variant;
+    public function classGetProperty(object: Object, property: String): Dynamic;
     public function classGetPropertyList(Class: String, noInheritance: Bool = false): Array<Dynamic>;
     public function classGetSignal(Class: String, signal: String): Map<Dynamic, Dynamic>;
     public function classGetSignalList(Class: String, noInheritance: Bool = false): Array<Dynamic>;
@@ -21,11 +21,11 @@ extern class ClassDB extends Object {
     public function classHasIntegerConstant(Class: String, name: String): Bool;
     public function classHasMethod(Class: String, method: String, noInheritance: Bool = false): Bool;
     public function classHasSignal(Class: String, signal: String): Bool;
-    public function classSetProperty(object: Object, property: String, value: Variant): Int;
+    public function classSetProperty(object: Object, property: String, value: Dynamic): Int;
     public function getClassList(): PoolStringArray;
     public function getInheritersFromClass(Class: String): PoolStringArray;
     public function getParentClass(Class: String): String;
-    public function instance(Class: String): Variant;
+    public function instance(Class: String): Dynamic;
     public function isClassEnabled(Class: String): Bool;
     public function isParentClass(Class: String, inherits: String): Bool;
     @:native("__new")

@@ -11,7 +11,7 @@ extern class Physics2DServer extends Object {
     public function areaCreate(): RID;
     public function areaGetCanvasInstanceId(area: RID): Int;
     public function areaGetObjectInstanceId(area: RID): Int;
-    public function areaGetParam(area: RID, param: Int): Variant;
+    public function areaGetParam(area: RID, param: Int): Dynamic;
     public function areaGetShape(area: RID, shapeIdx: Int): RID;
     public function areaGetShapeCount(area: RID): Int;
     public function areaGetShapeTransform(area: RID, shapeIdx: Int): Transform2D;
@@ -24,7 +24,7 @@ extern class Physics2DServer extends Object {
     public function areaSetCollisionMask(area: RID, mask: Int): Void;
     public function areaSetMonitorCallback(area: RID, receiver: Object, method: String): Void;
     public function areaSetMonitorable(area: RID, monitorable: Bool): Void;
-    public function areaSetParam(area: RID, param: Int, value: Variant): Void;
+    public function areaSetParam(area: RID, param: Int, value: Dynamic): Void;
     public function areaSetShape(area: RID, shapeIdx: Int, shape: RID): Void;
     public function areaSetShapeDisabled(area: RID, shapeIdx: Int, disabled: Bool): Void;
     public function areaSetShapeTransform(area: RID, shapeIdx: Int, transform: Transform2D): Void;
@@ -54,10 +54,10 @@ extern class Physics2DServer extends Object {
     public function bodyGetParam(body: RID, param: Int): Float;
     public function bodyGetShape(body: RID, shapeIdx: Int): RID;
     public function bodyGetShapeCount(body: RID): Int;
-    public function bodyGetShapeMetadata(body: RID, shapeIdx: Int): Variant;
+    public function bodyGetShapeMetadata(body: RID, shapeIdx: Int): Dynamic;
     public function bodyGetShapeTransform(body: RID, shapeIdx: Int): Transform2D;
     public function bodyGetSpace(body: RID): RID;
-    public function bodyGetState(body: RID, state: Int): Variant;
+    public function bodyGetState(body: RID, state: Int): Dynamic;
     public function bodyIsOmittingForceIntegration(body: RID): Bool;
     public function bodyRemoveCollisionException(body: RID, exceptedBody: RID): Void;
     public function bodyRemoveShape(body: RID, shapeIdx: Int): Void;
@@ -65,7 +65,7 @@ extern class Physics2DServer extends Object {
     public function bodySetCollisionLayer(body: RID, layer: Int): Void;
     public function bodySetCollisionMask(body: RID, mask: Int): Void;
     public function bodySetContinuousCollisionDetectionMode(body: RID, mode: Int): Void;
-    public function bodySetForceIntegrationCallback(body: RID, receiver: Object, method: String, userdata: Variant): Void;
+    public function bodySetForceIntegrationCallback(body: RID, receiver: Object, method: String, userdata: Dynamic): Void;
     public function bodySetMaxContactsReported(body: RID, amount: Int): Void;
     public function bodySetMode(body: RID, mode: Int): Void;
     public function bodySetOmitForceIntegration(body: RID, enable: Bool): Void;
@@ -73,10 +73,10 @@ extern class Physics2DServer extends Object {
     public function bodySetShape(body: RID, shapeIdx: Int, shape: RID): Void;
     public function bodySetShapeAsOneWayCollision(body: RID, shapeIdx: Int, enable: Bool, margin: Float): Void;
     public function bodySetShapeDisabled(body: RID, shapeIdx: Int, disabled: Bool): Void;
-    public function bodySetShapeMetadata(body: RID, shapeIdx: Int, metadata: Variant): Void;
+    public function bodySetShapeMetadata(body: RID, shapeIdx: Int, metadata: Dynamic): Void;
     public function bodySetShapeTransform(body: RID, shapeIdx: Int, transform: Transform2D): Void;
     public function bodySetSpace(body: RID, space: RID): Void;
-    public function bodySetState(body: RID, state: Int, value: Variant): Void;
+    public function bodySetState(body: RID, state: Int, value: Dynamic): Void;
     public function bodyTestMotion(body: RID, from: Transform2D, motion: GdVector2, infiniteInertia: Bool, margin: Float = 0.08, result: Physics2DTestMotionResult, excludeRaycastShapes: Bool = true, exclude: Array<Dynamic>): Bool;
     public function capsuleShapeCreate(): RID;
     public function circleShapeCreate(): RID;
@@ -98,9 +98,9 @@ extern class Physics2DServer extends Object {
     public function segmentShapeCreate(): RID;
     public function setActive(active: Bool): Void;
     public function setCollisionIterations(iterations: Int): Void;
-    public function shapeGetData(shape: RID): Variant;
+    public function shapeGetData(shape: RID): Dynamic;
     public function shapeGetType(shape: RID): Int;
-    public function shapeSetData(shape: RID, data: Variant): Void;
+    public function shapeSetData(shape: RID, data: Dynamic): Void;
     public function spaceCreate(): RID;
     public function spaceGetDirectState(space: RID): Physics2DDirectSpaceState;
     public function spaceGetParam(space: RID, param: Int): Float;

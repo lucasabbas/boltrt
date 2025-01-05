@@ -76,14 +76,14 @@ extern class TabContainer extends Container {
     public function getTabHidden(tabIdx: Int): Bool;
     public function getTabIcon(tabIdx: Int): Texture;
     public function getTabIdxAtPoint(point: GdVector2): Int;
-    public function getTabMetadata(tabIdx: Int): Variant;
+    public function getTabMetadata(tabIdx: Int): Dynamic;
     public function getTabTitle(tabIdx: Int): String;
     public function getTabsRearrangeGroup(): Int;
     public function setPopup(popup: Node): Void;
     public function setTabDisabled(tabIdx: Int, disabled: Bool): Void;
     public function setTabHidden(tabIdx: Int, hidden: Bool): Void;
     public function setTabIcon(tabIdx: Int, icon: Texture): Void;
-    public function setTabMetadata(tabIdx: Int, metadata: Variant): Void;
+    public function setTabMetadata(tabIdx: Int, metadata: Dynamic): Void;
     public function setTabTitle(tabIdx: Int, title: String): Void;
     public function setTabsRearrangeGroup(groupId: Int): Void;
     @:native("__new")

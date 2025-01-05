@@ -24,19 +24,19 @@ extern class Geometry extends Object {
     public function isPointInCircle(point: GdVector2, circlePosition: GdVector2, circleRadius: Float): Bool;
     public function isPointInPolygon(point: GdVector2, polygon: PoolVector2Array): Bool;
     public function isPolygonClockwise(polygon: PoolVector2Array): Bool;
-    public function lineIntersectsLine2d(fromA: GdVector2, dirA: GdVector2, fromB: GdVector2, dirB: GdVector2): Variant;
+    public function lineIntersectsLine2d(fromA: GdVector2, dirA: GdVector2, fromB: GdVector2, dirB: GdVector2): Dynamic;
     public function makeAtlas(sizes: PoolVector2Array): Map<Dynamic, Dynamic>;
     public function mergePolygons2d(polygonA: PoolVector2Array, polygonB: PoolVector2Array): Array<Dynamic>;
     public function offsetPolygon2d(polygon: PoolVector2Array, delta: Float, joinType: Int = 0): Array<Dynamic>;
     public function offsetPolyline2d(polyline: PoolVector2Array, delta: Float, joinType: Int = 0, endType: Int = 3): Array<Dynamic>;
     public function pointIsInsideTriangle(point: GdVector2, a: GdVector2, b: GdVector2, c: GdVector2): Bool;
-    public function rayIntersectsTriangle(from: GdVector3, dir: GdVector3, a: GdVector3, b: GdVector3, c: GdVector3): Variant;
+    public function rayIntersectsTriangle(from: GdVector3, dir: GdVector3, a: GdVector3, b: GdVector3, c: GdVector3): Dynamic;
     public function segmentIntersectsCircle(segmentFrom: GdVector2, segmentTo: GdVector2, circlePosition: GdVector2, circleRadius: Float): Float;
     public function segmentIntersectsConvex(from: GdVector3, to: GdVector3, planes: Array<Dynamic>): PoolVector3Array;
     public function segmentIntersectsCylinder(from: GdVector3, to: GdVector3, height: Float, radius: Float): PoolVector3Array;
-    public function segmentIntersectsSegment2d(fromA: GdVector2, toA: GdVector2, fromB: GdVector2, toB: GdVector2): Variant;
+    public function segmentIntersectsSegment2d(fromA: GdVector2, toA: GdVector2, fromB: GdVector2, toB: GdVector2): Dynamic;
     public function segmentIntersectsSphere(from: GdVector3, to: GdVector3, spherePosition: GdVector3, sphereRadius: Float): PoolVector3Array;
-    public function segmentIntersectsTriangle(from: GdVector3, to: GdVector3, a: GdVector3, b: GdVector3, c: GdVector3): Variant;
+    public function segmentIntersectsTriangle(from: GdVector3, to: GdVector3, a: GdVector3, b: GdVector3, c: GdVector3): Dynamic;
     public function triangulateDelaunay2d(points: PoolVector2Array): PoolIntArray;
     public function triangulatePolygon(polygon: PoolVector2Array): PoolIntArray;
     @:native("__new")

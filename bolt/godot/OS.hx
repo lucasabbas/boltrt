@@ -108,7 +108,7 @@ extern class OS extends Object {
     public function getVideoDriverName(driver: Int): String;
     public function getVirtualKeyboardHeight(): Int;
     public function getWindowSafeArea(): Rect2;
-    public function globalMenuAddItem(menu: String, label: String, id: Variant, meta: Variant): Void;
+    public function globalMenuAddItem(menu: String, label: String, id: Dynamic, meta: Dynamic): Void;
     public function globalMenuAddSeparator(menu: String): Void;
     public function globalMenuClear(menu: String): Void;
     public function globalMenuRemoveItem(menu: String, idx: Int): Void;

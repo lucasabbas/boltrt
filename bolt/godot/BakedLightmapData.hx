@@ -9,7 +9,7 @@ extern class BakedLightmapData extends Resource {
     public var cellSubdiv: Int;
     public var energy: Float;
     public var interior: Bool;
-    public var octree: PoolByteArray;
+    public var octree: Dynamic;
     public function addUser(path: NodePath, lightmap: Resource, lightmapSlice: Int, lightmapUvRect: Rect2, instance: Int): Void;
     public function clearData(): Void;
     public function clearUsers(): Void;

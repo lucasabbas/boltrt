@@ -314,6 +314,8 @@ __bolt_godot_GeometryInstancePauseMode = _hx_e()
 __bolt_godot_GeometryInstancePhysicsInterpolationMode = _hx_e()
 __bolt_godot_GeometryInstanceSignalNames = _hx_e()
 __bolt_godot_ImageSignalNames = _hx_e()
+__bolt_godot_ImageTextureStorage = _hx_e()
+__bolt_godot_ImageTextureSignalNames = _hx_e()
 __bolt_godot_InputEventSignalNames = _hx_e()
 __bolt_godot_InputEventKeySignalNames = _hx_e()
 __bolt_godot_InputEventWithModifiersSignalNames = _hx_e()
@@ -387,7 +389,6 @@ __bolt_godot_Physics2DShapeQueryParametersSignalNames = _hx_e()
 __bolt_godot_PhysicsDirectSpaceStateSignalNames = _hx_e()
 __bolt_godot_PhysicsShapeQueryParametersSignalNames = _hx_e()
 __bolt_godot_PlaneSignalNames = _hx_e()
-__bolt_godot_PoolByteArraySignalNames = _hx_e()
 __bolt_godot_PoolColorArraySignalNames = _hx_e()
 __bolt_godot_PoolIntArraySignalNames = _hx_e()
 __bolt_godot_PoolRealArraySignalNames = _hx_e()
@@ -469,7 +470,6 @@ __bolt_godot_VBoxContainerMouseDefaultCursorShape = _hx_e()
 __bolt_godot_VBoxContainerPauseMode = _hx_e()
 __bolt_godot_VBoxContainerPhysicsInterpolationMode = _hx_e()
 __bolt_godot_VBoxContainerSignalNames = _hx_e()
-__bolt_godot_VariantSignalNames = _hx_e()
 __bolt_godot__Vector2_Vector2_Impl_ = _hx_e()
 __bolt_godot__Vector3_Vector3_Impl_ = _hx_e()
 __bolt_godot_ViewportMsaa = _hx_e()
@@ -1684,6 +1684,12 @@ __bolt_godot_GeometryInstanceSignalNames.__name__ = true
 __bolt_godot_ImageSignalNames.new = {}
 __bolt_godot_ImageSignalNames.__name__ = true
 
+__bolt_godot_ImageTextureStorage.new = {}
+__bolt_godot_ImageTextureStorage.__name__ = true
+
+__bolt_godot_ImageTextureSignalNames.new = {}
+__bolt_godot_ImageTextureSignalNames.__name__ = true
+
 __bolt_godot_InputEventSignalNames.new = {}
 __bolt_godot_InputEventSignalNames.__name__ = true
 
@@ -1902,9 +1908,6 @@ __bolt_godot_PhysicsShapeQueryParametersSignalNames.__name__ = true
 
 __bolt_godot_PlaneSignalNames.new = {}
 __bolt_godot_PlaneSignalNames.__name__ = true
-
-__bolt_godot_PoolByteArraySignalNames.new = {}
-__bolt_godot_PoolByteArraySignalNames.__name__ = true
 
 __bolt_godot_PoolColorArraySignalNames.new = {}
 __bolt_godot_PoolColorArraySignalNames.__name__ = true
@@ -2328,9 +2331,6 @@ __bolt_godot_VBoxContainerPhysicsInterpolationMode.__name__ = true
 
 __bolt_godot_VBoxContainerSignalNames.new = {}
 __bolt_godot_VBoxContainerSignalNames.__name__ = true
-
-__bolt_godot_VariantSignalNames.new = {}
-__bolt_godot_VariantSignalNames.__name__ = true
 
 __bolt_godot__Vector2_Vector2_Impl_.new = {}
 __bolt_godot__Vector2_Vector2_Impl_.__name__ = true
@@ -2853,6 +2853,7 @@ __boltEd_Explorer.prototype.init = function(self)
 end
 __boltEd_Explorer.prototype.buildRoot = function(self) 
   local root = __boltEd_explorer_DirIndex.new("project://");
+  root.dirName = "Project";
   if (root == nil) then 
     local acceptDialog = godot.AcceptDialog.__new();
     acceptDialog.windowTitle = "Error";
@@ -2866,7 +2867,7 @@ __boltEd_Explorer.prototype.buildRoot = function(self)
 end
 __boltEd_Explorer.prototype.start = function(self) 
   self.rootDirIndex = self:buildRoot();
-  self:printTree(self.rootDirIndex);
+  self:createTreeItemFromDirTree(self.rootDirIndex);
 end
 __boltEd_Explorer.prototype.buildTree = function(self,parent,path) 
   if (path == nil) then 
@@ -2907,7 +2908,7 @@ __boltEd_Explorer.prototype.buildTree = function(self,parent,path)
       
       _g = _g + 1;
       local i = _g - 1;
-      __haxe_Log.trace(Std.string("i: ") .. Std.string(i), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/Explorer.hx",lineNumber=80,className="boltEd.Explorer",methodName="buildTree"}));
+      __haxe_Log.trace(Std.string("i: ") .. Std.string(i), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/Explorer.hx",lineNumber=85,className="boltEd.Explorer",methodName="buildTree"}));
       local dirPath = directories[i];
       local dirIndex = __boltEd_explorer_DirIndex.new(dirPath, parent);
       local dirWithoutUrl = String.prototype.substring(dirPath, 9);
@@ -3002,6 +3003,60 @@ __boltEd_Explorer.prototype.printTree = function(self,dirIndex,indent)
       local file = _g1[_g];
       _g = _g + 1;
       _G.print(Std.string(Std.string(Std.string(indentStr) .. Std.string("  ")) .. Std.string(file.fileName)));
+    end;
+  end;
+end
+__boltEd_Explorer.prototype.createTreeItemFromDirTree = function(self,dirIndex,parentItem) 
+  local treeItem;
+  if (dirIndex == nil) then 
+    do return end;
+  end;
+  local projectIconFile = self.ioCore:loadBuffer("data://FugueIcons/icons/application-blue-bolt.png");
+  local projectImage = godot.Image.__new();
+  projectImage:loadPngFromBuffer(projectIconFile);
+  local projectTexture = godot.ImageTexture.__new();
+  projectTexture:createFromImage(projectImage);
+  local folderIconFile = self.ioCore:loadBuffer("data://FugueIcons/icons/folder.png");
+  local folderImage = godot.Image.__new();
+  folderImage:loadPngFromBuffer(folderIconFile);
+  local folderTexture = godot.ImageTexture.__new();
+  folderTexture:createFromImage(folderImage);
+  if (parentItem == nil) then 
+    treeItem = self.tree:createItem(nil);
+    treeItem:setText(0, dirIndex.dirName);
+    treeItem:setIcon(0, projectTexture);
+  else
+    treeItem = self.tree:createItem(parentItem);
+    treeItem:setText(0, dirIndex.dirName);
+    treeItem:setIcon(0, folderTexture);
+  end;
+  treeItem:setMetadata(0, dirIndex.path);
+  if (dirIndex.directories ~= nil) then 
+    local _g = 0;
+    local _g1 = dirIndex.directories;
+    while (_g < _g1.length) do _hx_do_first_1 = false;
+      
+      local dir = _g1[_g];
+      _g = _g + 1;
+      self:createTreeItemFromDirTree(dir, treeItem);
+    end;
+  end;
+  if (dirIndex.files ~= nil) then 
+    local _g = 0;
+    local _g1 = dirIndex.files;
+    while (_g < _g1.length) do _hx_do_first_1 = false;
+      
+      local file = _g1[_g];
+      _g = _g + 1;
+      local fileIconFile = self.ioCore:loadBuffer("data://FugueIcons/icons/document.png");
+      local fileImage = godot.Image.__new();
+      fileImage:loadPngFromBuffer(fileIconFile);
+      local fileTexture = godot.ImageTexture.__new();
+      fileTexture:createFromImage(fileImage);
+      local fileItem = self.tree:createItem(treeItem);
+      fileItem:setText(0, file.fileName);
+      fileItem:setIcon(0, fileTexture);
+      fileItem:setMetadata(0, file.path);
     end;
   end;
 end
@@ -4334,6 +4389,12 @@ local _hx_static_init = function()
   __bolt_godot_GeometryInstancePhysicsInterpolationMode.Off = 1;
   
   __bolt_godot_GeometryInstancePhysicsInterpolationMode.On = 2;
+  
+  __bolt_godot_ImageTextureStorage.Raw = 0;
+  
+  __bolt_godot_ImageTextureStorage.CompressLossy = 1;
+  
+  __bolt_godot_ImageTextureStorage.CompressLossless = 2;
   
   __bolt_godot_LabelAlign.Left = 0;
   

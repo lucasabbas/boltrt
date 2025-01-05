@@ -26,7 +26,7 @@ extern class HTTPRequest extends Node {
     public function getDownloadedBytes(): Int;
     public function getHttpClientStatus(): Int;
     public function request(url: String, customHeaders: PoolStringArray, sslValidateDomain: Bool = true, method: Int = 0, requestData: String): Int;
-    public function requestRaw(url: String, customHeaders: PoolStringArray, sslValidateDomain: Bool = true, method: Int = 0, requestDataRaw: PoolByteArray): Int;
+    public function requestRaw(url: String, customHeaders: PoolStringArray, sslValidateDomain: Bool = true, method: Int = 0, requestDataRaw: Dynamic): Int;
     public function setHttpProxy(host: String, port: Int): Void;
     public function setHttpsProxy(host: String, port: Int): Void;
     @:native("__new")

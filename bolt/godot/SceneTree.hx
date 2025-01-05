@@ -33,8 +33,8 @@ extern class SceneTree extends MainLoop {
     public var refuseNewNetworkConnections: Bool;
     public var root: Viewport;
     public var useFontOversampling: Bool;
-    public function callGroup(group: String, method: String): Variant;
-    public function callGroupFlags(flags: Int, group: String, method: String): Variant;
+    public function callGroup(group: String, method: String): Dynamic;
+    public function callGroupFlags(flags: Int, group: String, method: String): Dynamic;
     public function changeScene(path: String): Int;
     public function changeSceneTo(packedScene: PackedScene): Int;
     public function createTimer(timeSec: Float, pauseModeProcess: Bool = true): SceneTreeTimer;
@@ -56,8 +56,8 @@ extern class SceneTree extends MainLoop {
     public function queueDelete(obj: Object): Void;
     public function quit(exitCode: Int = -1): Void;
     public function reloadCurrentScene(): Int;
-    public function setGroup(group: String, property: String, value: Variant): Void;
-    public function setGroupFlags(callFlags: Int, group: String, property: String, value: Variant): Void;
+    public function setGroup(group: String, property: String, value: Dynamic): Void;
+    public function setGroupFlags(callFlags: Int, group: String, property: String, value: Dynamic): Void;
     public function setInputAsHandled(): Void;
     public function setScreenStretch(mode: Int, aspect: Int, minsize: GdVector2, scale: Float = 1): Void;
     @:native("__new")

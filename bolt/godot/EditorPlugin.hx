@@ -18,7 +18,7 @@ extern class EditorPlugin extends Node {
     public function addInspectorPlugin(plugin: EditorInspectorPlugin): Void;
     public function addSceneImportPlugin(sceneImporter: EditorSceneImporter): Void;
     public function addSpatialGizmoPlugin(plugin: EditorSpatialGizmoPlugin): Void;
-    public function addToolMenuItem(name: String, handler: Object, callback: String, ud: Variant): Void;
+    public function addToolMenuItem(name: String, handler: Object, callback: String, ud: Dynamic): Void;
     public function addToolSubmenuItem(name: String, submenu: Object): Void;
     public function applyChanges(): Void;
     public function build(): Bool;

@@ -8,7 +8,7 @@ extern class TreeItem extends Object {
     public var customMinimumHeight: Int;
     public var disableFolding: Bool;
     public function addButton(column: Int, button: Texture, id: Int = -1, disabled: Bool = false, tooltip: String): Void;
-    public function callRecursive(method: String): Variant;
+    public function callRecursive(method: String): Dynamic;
     public function clearCustomBgColor(column: Int): Void;
     public function clearCustomColor(column: Int): Void;
     public function deselect(column: Int): Void;
@@ -27,7 +27,7 @@ extern class TreeItem extends Object {
     public function getIconMaxWidth(column: Int): Int;
     public function getIconModulate(column: Int): Color;
     public function getIconRegion(column: Int): Rect2;
-    public function getMetadata(column: Int): Variant;
+    public function getMetadata(column: Int): Dynamic;
     public function getNext(): TreeItem;
     public function getNextVisible(wrap: Bool = false): TreeItem;
     public function getParent(): TreeItem;
@@ -63,7 +63,7 @@ extern class TreeItem extends Object {
     public function setIconMaxWidth(column: Int, width: Int): Void;
     public function setIconModulate(column: Int, modulate: Color): Void;
     public function setIconRegion(column: Int, region: Rect2): Void;
-    public function setMetadata(column: Int, meta: Variant): Void;
+    public function setMetadata(column: Int, meta: Dynamic): Void;
     public function setRange(column: Int, value: Float): Void;
     public function setRangeConfig(column: Int, min: Float, max: Float, step: Float, expr: Bool = false): Void;
     public function setSelectable(column: Int, selectable: Bool): Void;

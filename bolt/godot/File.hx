@@ -14,7 +14,7 @@ extern class File extends Reference {
     public function get64(): Int;
     public function get8(): Int;
     public function getAsText(skipCr: Bool = true): String;
-    public function getBuffer(len: Int): PoolByteArray;
+    public function getBuffer(len: Int): Dynamic;
     public function getCsvLine(delim: String): PoolStringArray;
     public function getDouble(): Float;
     public function getError(): Int;
@@ -29,11 +29,11 @@ extern class File extends Reference {
     public function getPosition(): Int;
     public function getReal(): Float;
     public function getSha256(path: String): String;
-    public function getVar(allowObjects: Bool = false): Variant;
+    public function getVar(allowObjects: Bool = false): Dynamic;
     public function isOpen(): Bool;
     public function open(path: String, flags: Int): Int;
     public function openCompressed(path: String, modeFlags: Int, compressionMode: Int = 0): Int;
-    public function openEncrypted(path: String, modeFlags: Int, key: PoolByteArray): Int;
+    public function openEncrypted(path: String, modeFlags: Int, key: Dynamic): Int;
     public function openEncryptedWithPass(path: String, modeFlags: Int, pass: String): Int;
     public function seek(position: Int): Void;
     public function seekEnd(position: Int = 0): Void;
@@ -41,7 +41,7 @@ extern class File extends Reference {
     public function store32(value: Int): Void;
     public function store64(value: Int): Void;
     public function store8(value: Int): Void;
-    public function storeBuffer(buffer: PoolByteArray): Void;
+    public function storeBuffer(buffer: Dynamic): Void;
     public function storeCsvLine(values: PoolStringArray, delim: String): Void;
     public function storeDouble(value: Float): Void;
     public function storeFloat(value: Float): Void;
@@ -49,7 +49,7 @@ extern class File extends Reference {
     public function storePascalString(string: String): Void;
     public function storeReal(value: Float): Void;
     public function storeString(string: String): Void;
-    public function storeVar(value: Variant, fullObjects: Bool = false): Void;
+    public function storeVar(value: Dynamic, fullObjects: Bool = false): Void;
     @:native("__new")
     public function new();
 }

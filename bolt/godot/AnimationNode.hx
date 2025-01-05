@@ -16,15 +16,15 @@ extern class AnimationNode extends Resource {
     public function getChildNodes(): Map<Dynamic, Dynamic>;
     public function getInputCount(): Int;
     public function getInputName(input: Int): String;
-    public function getParameter(name: String): Variant;
-    public function getParameterDefaultValue(name: String): Variant;
+    public function getParameter(name: String): Dynamic;
+    public function getParameterDefaultValue(name: String): Dynamic;
     public function getParameterList(): Array<Dynamic>;
     public function hasFilter(): Bool;
     public function isPathFiltered(path: NodePath): Bool;
     public function process(time: Float, seek: Bool): Void;
     public function removeInput(index: Int): Void;
     public function setFilterPath(path: NodePath, enable: Bool): Void;
-    public function setParameter(name: String, value: Variant): Void;
+    public function setParameter(name: String, value: Dynamic): Void;
     @:native("__new")
     public function new();
 }

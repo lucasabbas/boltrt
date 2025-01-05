@@ -21,7 +21,7 @@ extern class SceneState extends Reference {
     public function getNodePath(idx: Int, forParent: Bool = false): NodePath;
     public function getNodePropertyCount(idx: Int): Int;
     public function getNodePropertyName(idx: Int, propIdx: Int): String;
-    public function getNodePropertyValue(idx: Int, propIdx: Int): Variant;
+    public function getNodePropertyValue(idx: Int, propIdx: Int): Dynamic;
     public function getNodeType(idx: Int): String;
     public function isNodeInstancePlaceholder(idx: Int): Bool;
     @:native("__new")

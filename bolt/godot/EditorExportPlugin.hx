@@ -7,7 +7,7 @@ extern class EditorExportPlugin extends Reference {
     public function ExportBegin(features: PoolStringArray, isDebug: Bool, path: String, flags: Int): Void;
     public function ExportEnd(): Void;
     public function ExportFile(path: String, type: String, features: PoolStringArray): Void;
-    public function addFile(path: String, file: PoolByteArray, remap: Bool): Void;
+    public function addFile(path: String, file: Dynamic, remap: Bool): Void;
     public function addIosBundleFile(path: String): Void;
     public function addIosCppCode(code: String): Void;
     public function addIosEmbeddedFramework(path: String): Void;

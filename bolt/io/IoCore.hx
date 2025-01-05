@@ -14,9 +14,9 @@ extern class IoCore extends MonoObject {
 
     public function saveText(path : String, text : String) : Void;
 
-    public function loadBuffer(path : String) : Bytes;
+    public function loadBuffer(path : String) : Dynamic;
 
-    public function saveBuffer(path : String, buffer : Bytes) : Void;
+    public function saveBuffer(path : String, buffer : Dynamic) : Void;
 
     public function getFileListAll(extension : String, recursive : Bool = true) : Table<Int, String>;
 

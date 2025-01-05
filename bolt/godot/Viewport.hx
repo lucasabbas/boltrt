@@ -132,7 +132,7 @@ extern class Viewport extends Node {
     public function getTexture(): ViewportTexture;
     public function getViewportRid(): RID;
     public function getVisibleRect(): Rect2;
-    public function guiGetDragData(): Variant;
+    public function guiGetDragData(): Dynamic;
     public function guiHasModalStack(): Bool;
     public function guiIsDragSuccessful(): Bool;
     public function guiIsDragging(): Bool;

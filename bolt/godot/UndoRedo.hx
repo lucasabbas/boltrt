@@ -6,10 +6,10 @@ class UndoRedoSignalNames {
 @:native("godot.UndoRedo")
 extern class UndoRedo extends Object {
     public function addDoMethod(object: Object, method: String): Void;
-    public function addDoProperty(object: Object, property: String, value: Variant): Void;
+    public function addDoProperty(object: Object, property: String, value: Dynamic): Void;
     public function addDoReference(object: Object): Void;
     public function addUndoMethod(object: Object, method: String): Void;
-    public function addUndoProperty(object: Object, property: String, value: Variant): Void;
+    public function addUndoProperty(object: Object, property: String, value: Dynamic): Void;
     public function addUndoReference(object: Object): Void;
     public function clearHistory(increaseVersion: Bool = true): Void;
     public function commitAction(): Void;

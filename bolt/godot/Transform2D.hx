@@ -27,6 +27,6 @@ extern class Transform2D extends bolt.core.MonoObject {
     public function rotated(angle: Float): Transform2D;
     public function scaled(scale: GdVector2): Transform2D;
     public function translated(offset: GdVector2): Transform2D;
-    public function xform(v: Variant): Variant;
-    public function xformInv(v: Variant): Variant;
+    public function xform(v: Dynamic): Dynamic;
+    public function xformInv(v: Dynamic): Dynamic;
 }
