@@ -39,7 +39,7 @@ public class Standalone : LuaNode
 			var files = IoDir.GetFiles(IoPath.GetFullPath("./"));
 			foreach (var file in files)
 			{
-				if (file.Contains(".bolt") || file.Contains(".btz") || file.Contains(".btzip"))
+				if (file.Contains(".bolt") || file.Contains(".btz") || file.Contains(".btzip") || file.EndsWith(".bta"))
 				{
 					path = file;
 					break;
@@ -58,7 +58,7 @@ public class Standalone : LuaNode
 
 		if (path.EndsWith(".bolt"))
 			StartFromLKProject(path);
-		else if (path.EndsWith(".btz") || path.EndsWith(".btzip"))
+		else if (path.EndsWith(".btz") || path.EndsWith(".btzip") || path.EndsWith(".bta"))
 			StartFromZipFilePath(path);
 		else
 			StartFromPath(path);
