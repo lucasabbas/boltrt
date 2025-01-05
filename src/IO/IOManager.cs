@@ -138,21 +138,23 @@ namespace Bolt.IO
         {
             List<string> fileList = new List<string>();
 
-            for (int i = 0; i > IoCores.Count; i++)
+            for (int i = 0; i < IoCores.Count; i++)
             {
                 var ioCore = IoCores[i];
-                var ioCoreFileList = ioCore.GetFileList(path, extension, recursive);
-
-                for (int j = 0; i < ioCoreFileList.Count; i++)
+                if (path.StartsWith(ioCore.PathUrl))
                 {
-                    var filePath = ioCoreFileList[j];
-                    if (path == PathUrl)
+                    var ioCoreFileList = ioCore.GetFileList(path, extension, recursive);
+
+                    foreach(string filePath in ioCoreFileList)
                     {
-                        fileList.Add(filePath);
-                    }
-                    else if (filePath.StartsWith(path))
-                    {
-                        fileList.Add(filePath);
+                        if (path == PathUrl)
+                        {
+                            fileList.Add(filePath);
+                        }
+                        else if (filePath.StartsWith(path))
+                        {
+                            fileList.Add(filePath);
+                        }
                     }
                 }
             }

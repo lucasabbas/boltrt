@@ -2,6 +2,7 @@ package bolt.io;
 
 import bolt.core.MonoObject;
 import haxe.io.Bytes;
+import lua.Table;
 
 @:native("IoCore")
 extern class IoCore extends MonoObject {
@@ -17,9 +18,9 @@ extern class IoCore extends MonoObject {
 
     public function saveBuffer(path : String, buffer : Bytes) : Void;
 
-    public function getFileListAll(extension : String, recursive : Bool = true) : Array<String>;
+    public function getFileListAll(extension : String, recursive : Bool = true) : Table<Int, String>;
 
-    public function getFileList(path : String, extension : String, recursive : Bool = true) : Array<String>;
+    public function getFileList(path : String, extension : String, recursive : Bool = true) : Table<Int, String>;
 
     public function directoryExists(path : String) : Bool;
 

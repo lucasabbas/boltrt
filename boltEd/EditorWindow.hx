@@ -1,5 +1,6 @@
 package boltEd;
 
+import haxe.macro.Expr.Catch;
 import bolt.godot.FileDialog;
 import bolt.godot.SignalToFunc;
 import bolt.godot.Button;
@@ -67,6 +68,11 @@ class EditorWindow extends Widget {
 
         var ioManager : IoManager = cast ioCore;
         ioManager.registerPath(dirPath, "project://");
+        try {
+            explorer.start();
+        } catch (e : Dynamic) {
+            trace("Error: " + e);
+        }
     }
 
     public function openProjectDialog() {
@@ -74,13 +80,5 @@ class EditorWindow extends Widget {
         var fileDialogSize = new Vector2(550, 350);
         openFolderDialog.popupCentered(fileDialogSize);
         //fileDialog.currentDir = "res://";
-    }
-
-    public function buildDirTree() {
-
-    }
-
-    public function refreshFile() {
-        
     }
 }

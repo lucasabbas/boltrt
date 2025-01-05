@@ -81,8 +81,6 @@ namespace Bolt.IO
 
         public override List<String> GetFileList(string path = "", string extension = "", bool recursive = true)
         {
-            if (!path.Contains(PathUrl))
-                throw new Exception("Illegal Path: Path must start with " + PathUrl);
             
             path = GetFilePath(path);
 
@@ -102,6 +100,8 @@ namespace Bolt.IO
                 path += "/";
             }
 
+            var pathArry = path.Split('/');
+
             foreach (string file in Directory.GetFiles(path))
             {
                 if (extension != "")
@@ -119,10 +119,17 @@ namespace Bolt.IO
 
             foreach (string directory in Directory.GetDirectories(path))
             {
-                if (extension == "/")
+                var dirArry = directory.Split('/');
+                if (dirArry[dirArry.Length - 2] != pathArry[pathArry.Length - 2])
                 {
-                    assets.Add(GetFileUrl(directory));
+                    continue;
                 }
+                
+                if (extension == "/")
+                    if (!directory.EndsWith(extension))
+                        assets.Add(GetFileUrl(directory) + "/");
+                    else 
+                        assets.Add(GetFileUrl(directory));
 
                 if (recursive)
                 {
