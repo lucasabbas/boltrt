@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<lkui fullscreen="true">
-    <head>
-    </head>
-    <body>
+<BXML FullScreen="true">
+    <Head>
+    </Head>
+    <Body>
         <Panel
                 AnchorTop="0"
                 AnchorBottom="1"
@@ -37,25 +37,25 @@
                                 Name="FileButton"
                                 Text="File"
                                 SwitchOnHover="true">
-                            <MenuItem label="New project" icon="data://FugueIcons/icons/folder--plus.png"/>
-                            <MenuItem label="Open project" icon="data://FugueIcons/icons/folder-open-document.png"/>
-                            <MenuItem label="Quit" icon="data://FugueIcons/icons/door-open-out.png"/>
+                            <MenuItem Label="New project" Icon="data://FugueIcons/icons/folder--plus.png"/>
+                            <MenuItem Label="Open project" Icon="data://FugueIcons/icons/folder-open-document.png"/>
+                            <MenuItem Label="Quit" Icon="data://FugueIcons/icons/door-open-out.png"/>
                         </MenuButton>
                         <MenuButton
                                 Name="EditButton"
                                 Text="Edit"
                                 SwitchOnHover="true">
-                            <MenuItem label="Undo" icon="data://FugueIcons/icons/arrow-curve-180-left.png"/>
-                            <MenuItem label="Redo" icon="data://FugueIcons/icons/arrow-curve.png"/>
-                            <MenuItem label="Cut" icon="data://FugueIcons/icons/scissors.png"/>
-                            <MenuItem label="Copy" icon="data://FugueIcons/icons/document-copy.png"/>
-                            <MenuItem label="Paste" icon="data://FugueIcons/icons/clipboard.png"/>
+                            <MenuItem Label="Undo" Icon="data://FugueIcons/icons/arrow-curve-180-left.png"/>
+                            <MenuItem Label="Redo" Icon="data://FugueIcons/icons/arrow-curve.png"/>
+                            <MenuItem Label="Cut" Icon="data://FugueIcons/icons/scissors.png"/>
+                            <MenuItem Label="Copy" Icon="data://FugueIcons/icons/document-copy.png"/>
+                            <MenuItem Label="Paste" Icon="data://FugueIcons/icons/clipboard.png"/>
                         </MenuButton>
                         <MenuButton
                                 Name="HelpButton"
                                 Text="Help"
                                 SwitchOnHover="true">
-                            <MenuItem label="About BoltEd" icon="data://FugueIcons/icons/information-italic.png"/>
+                            <MenuItem Label="About BoltEd" Icon="data://FugueIcons/icons/information-italic.png"/>
                         </MenuButton>
                     </HBoxContainer>
                 </Control>
@@ -122,5 +122,5 @@
                 </HSplitContainer>
             </VBoxContainer>
         </Control>
-    </body>
-</lkui>
+    </Body>
+</BXML>

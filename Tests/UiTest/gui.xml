@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<lkui fullscreen="true">
-    <head>
-    </head>
-    <body>
+<BXML FullScreen="true">
+    <Head>
+    </Head>
+    <Body>
         <Panel
                 Name="Panel"
                 AnchorTop="0"
@@ -69,5 +69,5 @@
                 </Control>
             </VBoxContainer>
         </Panel>
-    </body>
-</lkui>
+    </Body>
+</BXML>

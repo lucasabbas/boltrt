@@ -51,7 +51,7 @@ namespace Bolt {
                 }
             }
 
-            XmlNode firstNode = document.GetElementsByTagName("lkui")[0];
+            XmlNode firstNode = document.GetElementsByTagName("BXML")[0];
             string version = "1.0";
             XmlAttribute versionAttribute = firstNode.Attributes["version"];
             if (versionAttribute != null)
@@ -59,80 +59,80 @@ namespace Bolt {
                 version = versionAttribute.Value;
             }
 
-            XmlAttribute fullscreenAttribute = firstNode.Attributes["fullscreen"];
-            if (fullscreenAttribute != null)
+            XmlAttribute FullScreenAttribute = firstNode.Attributes["FullScreen"];
+            if (FullScreenAttribute != null)
             {
-                bool fullscreen = bool.Parse(fullscreenAttribute.Value);
-                if (fullscreen){
+                bool FullScreen = bool.Parse(FullScreenAttribute.Value);
+                if (FullScreen){
                     SetAnchorsAndMarginsPreset(LayoutPreset.Wide, LayoutPresetMode.KeepSize);
                     SizeFlagsHorizontal = (int)SizeFlags.ExpandFill;
                     SizeFlagsVertical = (int)SizeFlags.ExpandFill;
                 }
             }
             else {
-                XmlAttribute anchorTopAttribute = firstNode.Attributes["anchorTop"];
-                if (anchorTopAttribute != null)
+                XmlAttribute AnchorTopAttribute = firstNode.Attributes["AnchorTop"];
+                if (AnchorTopAttribute != null)
                 {
-                    float anchorTop = float.Parse(anchorTopAttribute.Value);
-                    AnchorTop = anchorTop;
+                    float AnchorTop = float.Parse(AnchorTopAttribute.Value);
+                    AnchorTop = AnchorTop;
                 }
-                XmlAttribute anchorBottomAttribute = firstNode.Attributes["anchorBottom"];
-                if (anchorBottomAttribute != null)
+                XmlAttribute AnchorBottomAttribute = firstNode.Attributes["AnchorBottom"];
+                if (AnchorBottomAttribute != null)
                 {
-                    float anchorBottom = float.Parse(anchorBottomAttribute.Value);
-                    AnchorBottom = anchorBottom;
+                    float AnchorBottom = float.Parse(AnchorBottomAttribute.Value);
+                    AnchorBottom = AnchorBottom;
                 }
-                XmlAttribute anchorLeftAttribute = firstNode.Attributes["anchorLeft"];
-                if (anchorLeftAttribute != null)
+                XmlAttribute AnchorLeftAttribute = firstNode.Attributes["AnchorLeft"];
+                if (AnchorLeftAttribute != null)
                 {
-                    float anchorLeft = float.Parse(anchorLeftAttribute.Value);
-                    AnchorLeft = anchorLeft;
+                    float AnchorLeft = float.Parse(AnchorLeftAttribute.Value);
+                    AnchorLeft = AnchorLeft;
                 }
-                XmlAttribute anchorRightAttribute = firstNode.Attributes["anchorRight"];
-                if (anchorRightAttribute != null)
+                XmlAttribute AnchorRightAttribute = firstNode.Attributes["AnchorRight"];
+                if (AnchorRightAttribute != null)
                 {
-                    float anchorRight = float.Parse(anchorRightAttribute.Value);
-                    AnchorRight = anchorRight;
+                    float AnchorRight = float.Parse(AnchorRightAttribute.Value);
+                    AnchorRight = AnchorRight;
                 }
-                XmlAttribute marginTopAttribute = firstNode.Attributes["marginTop"];
-                if (marginTopAttribute != null)
+                XmlAttribute MarginTopAttribute = firstNode.Attributes["MarginTop"];
+                if (MarginTopAttribute != null)
                 {
-                    float marginTop = float.Parse(marginTopAttribute.Value);
-                    MarginTop = marginTop;
+                    float MarginTop = float.Parse(MarginTopAttribute.Value);
+                    MarginTop = MarginTop;
                 }
-                XmlAttribute marginBottomAttribute = firstNode.Attributes["marginBottom"];
-                if (marginBottomAttribute != null)
+                XmlAttribute MarginBottomAttribute = firstNode.Attributes["MarginBottom"];
+                if (MarginBottomAttribute != null)
                 {
-                    float marginBottom = float.Parse(marginBottomAttribute.Value);
-                    MarginBottom = marginBottom;
+                    float MarginBottom = float.Parse(MarginBottomAttribute.Value);
+                    MarginBottom = MarginBottom;
                 }
-                XmlAttribute marginLeftAttribute = firstNode.Attributes["marginLeft"];
-                if (marginLeftAttribute != null)
+                XmlAttribute MarginLeftAttribute = firstNode.Attributes["MarginLeft"];
+                if (MarginLeftAttribute != null)
                 {
-                    float marginLeft = float.Parse(marginLeftAttribute.Value);
-                    MarginLeft = marginLeft;
+                    float MarginLeft = float.Parse(MarginLeftAttribute.Value);
+                    MarginLeft = MarginLeft;
                 }
-                XmlAttribute marginRightAttribute = firstNode.Attributes["marginRight"];
-                if (marginRightAttribute != null)
+                XmlAttribute MarginRightAttribute = firstNode.Attributes["MarginRight"];
+                if (MarginRightAttribute != null)
                 {
-                    float marginRight = float.Parse(marginRightAttribute.Value);
-                    MarginRight = marginRight;
+                    float MarginRight = float.Parse(MarginRightAttribute.Value);
+                    MarginRight = MarginRight;
                 }
             }
 
             XmlNodeList childNodes = firstNode.ChildNodes;
             foreach (XmlNode childNode in childNodes)
             {
-                if (childNode.Name == "head"){
-                    foreach (XmlNode headNode in childNode.ChildNodes)
+                if (childNode.Name == "Head"){
+                    foreach (XmlNode HeadNode in childNode.ChildNodes)
                     {
-                        if (headNode.Name == "name")
+                        if (HeadNode.Name == "Name")
                         {
-                            Name = headNode.InnerText;
+                            Name = HeadNode.InnerText;
                         }
                     }
                 }
-                else if (childNode.Name == "body")
+                else if (childNode.Name == "Body")
                 {
                    ConstructNodes(version, childNode.ChildNodes);
                 }
@@ -409,35 +409,35 @@ namespace Bolt {
                 var childNode = (XmlNode)node;
                 if (childNode.Name == "MenuItem")
                 {
-                    var label = childNode.Attributes["label"].Value;
+                    var label = childNode.Attributes["Label"].Value;
                     var id = menu.GetItemCount();
                     menu.AddItem(label, id);
-                    if (childNode.Attributes["icon"] != null)
+                    if (childNode.Attributes["Icon"] != null)
                     {
                         var icon = LoadImageTexture(IOCore, childNode.Attributes["icon"].Value);
                         menu.SetItemIcon(id, icon);
                     }
-                    if (childNode.Attributes["checkable"] != null)
+                    if (childNode.Attributes["Checkable"] != null)
                     {
                         var checkable = bool.Parse(childNode.Attributes["checkable"].Value);
                         menu.SetItemAsCheckable(id, checkable);
                     }
-                    else if (childNode.Attributes["radioCheckable"] != null)
+                    else if (childNode.Attributes["RadioCheckable"] != null)
                     {
                         var checkable = bool.Parse(childNode.Attributes["radioCheckable"].Value);
                         menu.SetItemAsRadioCheckable(id, checkable);
                     }
-                    else if (childNode.Attributes["separator"] != null)
+                    else if (childNode.Attributes["Separator"] != null)
                     {
                         var separator = bool.Parse(childNode.Attributes["separator"].Value);
                         menu.SetItemAsSeparator(id, separator);
                     }
-                    if (childNode.Attributes["checked"] != null)
+                    if (childNode.Attributes["Checked"] != null)
                     {
                         var disabled = bool.Parse(childNode.Attributes["checked"].Value);
                         menu.SetItemChecked(id, disabled);
                     }
-                    if (childNode.Attributes["disabled"] != null)
+                    if (childNode.Attributes["Disabled"] != null)
                     {
                         var disabled = bool.Parse(childNode.Attributes["disabled"].Value);
                         menu.SetItemDisabled(id, disabled);
