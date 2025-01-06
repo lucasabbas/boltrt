@@ -1,0 +1,4 @@
+<app>
+    <title>MagicIDE</title>
+    <mainScript>data://main.lua</mainScript>
+</app>

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Interop;
 using Timer = Godot.Timer;
 using GodotScript = Godot.Script;
 using GodotObject = Godot.Object;
 
-namespace Bolt.Plugins
+namespace MagicRt.Plugins
 {
 
 	public class GodotPlugin : Plugin

@@ -25,7 +25,7 @@ public class NsisScriptGenerator : MainLoop
     public void GenerateNsisScript()
     {
         var sb = new System.Text.StringBuilder();
-        var partOne = System.IO.File.ReadAllText("./bolt.part-one.nsi.txt");
+        var partOne = System.IO.File.ReadAllText("./magicrt.part-one.nsi.txt");
         sb.Append(partOne);
 
         var binPath = "\\bin\\win32\\";
@@ -39,7 +39,7 @@ public class NsisScriptGenerator : MainLoop
                 sb.Append("  File \"" + file + "\"\n");
         }
 
-        var partTwo = System.IO.File.ReadAllText("./bolt.part-two.nsi.txt");
+        var partTwo = System.IO.File.ReadAllText("./magicrt.part-two.nsi.txt");
         sb.Append(partTwo);
 
         foreach (string file in FileList)
@@ -48,7 +48,7 @@ public class NsisScriptGenerator : MainLoop
                 sb.Append("  Delete \"" + file.Replace(binPath, "$INSTDIR\\") + "\"\n");
         }
 
-        var partThree = System.IO.File.ReadAllText("./bolt.part-three.nsi.txt");
+        var partThree = System.IO.File.ReadAllText("./magicrt.part-three.nsi.txt");
         sb.Append(partThree);
 
         foreach (string file in FileList)
@@ -57,10 +57,10 @@ public class NsisScriptGenerator : MainLoop
                 sb.Append("  RMDir \"" + file.Replace(binPath, "$INSTDIR\\") + "\"\n");
         }
 
-        var partFour = System.IO.File.ReadAllText("./bolt.part-four.nsi.txt");
+        var partFour = System.IO.File.ReadAllText("./magicrt.part-four.nsi.txt");
         sb.Append(partFour);
 
-        System.IO.File.WriteAllText(fullPath + "/bolt.nsi", sb.ToString());
+        System.IO.File.WriteAllText(fullPath + "/magicrt.nsi", sb.ToString());
     }
 
     public List<string> BuildListOfFiles(string dirPath) {

@@ -1,8 +1,8 @@
-using Bolt.IO;
+using MagicRt.IO;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Loaders;
 
-namespace Bolt.Scripting
+namespace MagicRt.Scripting
 {
 
     public class IoScriptLoader : ScriptLoaderBase

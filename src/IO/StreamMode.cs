@@ -1,4 +1,4 @@
-namespace Bolt.IO
+namespace MagicRt.IO
 {
 
     public enum StreamMode

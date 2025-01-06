@@ -1,10 +1,10 @@
 package;
 
-import bolt.App;
-import bolt.godot.extensions.UiDocument;
-import bolt.godot.Label;
-import bolt.godot.Button;
-import bolt.godot.SignalToFunc;
+import magicrt.App;
+import magicrt.godot.extensions.UiDocument;
+import magicrt.godot.Label;
+import magicrt.godot.Button;
+import magicrt.godot.SignalToFunc;
 
 class Main extends App {
     static function main() {

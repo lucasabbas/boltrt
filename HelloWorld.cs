@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 
 public class HelloWorld : LuaNode
 {

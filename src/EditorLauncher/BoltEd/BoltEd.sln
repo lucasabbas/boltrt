@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoltEd", "BoltEd.csproj", "{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicIDE", "MagicIDE.csproj", "{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

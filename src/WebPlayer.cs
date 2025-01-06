@@ -1,5 +1,5 @@
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using System;
 using System.IO;
 

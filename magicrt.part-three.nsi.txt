@@ -1,0 +1,5 @@
+
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\Website.lnk"
+  Delete "$DESKTOP\MagicRt.lnk"
+  Delete "$SMPROGRAMS\$ICONS_GROUP\MagicRt.lnk"

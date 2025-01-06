@@ -1,6 +1,6 @@
 package;
 
-import bolt.core.NativeObject;
+import magicrt.core.NativeObject;
 
 @:luaRequire("data://test.lua")
 @:native("_TestClass")

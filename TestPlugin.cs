@@ -1,8 +1,8 @@
 using MoonSharp.Interpreter;
 
-namespace Bolt.Tests.HelloHaxe
+namespace MagicRt.Tests.HelloHaxe
 {
-    public class TestPlugin : Bolt.Scripting.Plugin
+    public class TestPlugin : MagicRt.Scripting.Plugin
     {
         public override void Init()
         {

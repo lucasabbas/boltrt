@@ -71,7 +71,7 @@
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}",
-                "./Tests/UiTest/UiTest.bolt"
+                "./Tests/UiTest/UiTest.magicrt"
             ]
         },
         {

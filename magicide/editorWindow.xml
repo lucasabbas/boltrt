@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BXML FullScreen="true">
+    <Head>
+    </Head>
+    <Body>
+        <Panel
+                AnchorTop="0"
+                AnchorBottom="1"
+                AnchorLeft="0"
+                AnchorRight="1"
+                MarginTop="-10"
+                MarginBottom="10"
+                MarginLeft="-10"
+                MarginRight="10"/>
+        <Control
+                Name="Control"
+                AnchorTop="0"
+                AnchorBottom="1"
+                AnchorLeft="0"
+                AnchorRight="1">
+            <VBoxContainer
+                    Name="VBoxContainer"
+                    AnchorTop="0"
+                    AnchorBottom="1"
+                    AnchorLeft="0"
+                    AnchorRight="1">
+                <Control
+                        Name="MenuBar"
+                        RectMinSize="0,20">
+                    <HBoxContainer
+                            Name="HBoxContainer"
+                            AnchorTop="0"
+                            AnchorBottom="1"
+                            AnchorLeft="0"
+                            AnchorRight="0">
+                        <MenuButton
+                                Name="FileButton"
+                                Text="File"
+                                SwitchOnHover="true">
+                            <MenuItem Label="New project" Icon="data://FugueIcons/icons/folder--plus.png"/>
+                            <MenuItem Label="Open project" Icon="data://FugueIcons/icons/folder-open-document.png"/>
+                            <MenuItem Label="Quit" Icon="data://FugueIcons/icons/door-open-out.png"/>
+                        </MenuButton>
+                        <MenuButton
+                                Name="EditButton"
+                                Text="Edit"
+                                SwitchOnHover="true">
+                            <MenuItem Label="Undo" Icon="data://FugueIcons/icons/arrow-curve-180-left.png"/>
+                            <MenuItem Label="Redo" Icon="data://FugueIcons/icons/arrow-curve.png"/>
+                            <MenuItem Label="Cut" Icon="data://FugueIcons/icons/scissors.png"/>
+                            <MenuItem Label="Copy" Icon="data://FugueIcons/icons/document-copy.png"/>
+                            <MenuItem Label="Paste" Icon="data://FugueIcons/icons/clipboard.png"/>
+                        </MenuButton>
+                        <MenuButton
+                                Name="HelpButton"
+                                Text="Help"
+                                SwitchOnHover="true">
+                            <MenuItem Label="About MagicIDE" Icon="data://FugueIcons/icons/information-italic.png"/>
+                        </MenuButton>
+                    </HBoxContainer>
+                </Control>
+                <Control
+                        Name="ToolBar"
+                        RectMinSize="0,25">
+                    <HBoxContainer
+                            Name="HBoxContainer"
+                            AnchorTop="0"
+                            AnchorBottom="1"
+                            AnchorLeft="0"
+                            AnchorRight="0">
+                        <Button
+                                Name="NewProjectButton"
+                                Icon="data://FugueIcons/icons/folder--plus.png"
+                                Flat="true"/>
+                        <Button
+                                Name="OpenProjectButton"
+                                Icon="data://FugueIcons/icons/folder-open-document.png"
+                                Flat="true"/>
+                    </HBoxContainer>
+                </Control>
+                <HSplitContainer
+                        Name="HSplitContainer"
+                        SizeFlagsVertical="3"
+                        SplitOffset="125">
+                    <Control
+                            Name="Explorer"
+                            RectMinSize="125,0">
+                            <VBoxContainer Name="VBoxContainer">
+                                <Control
+                                        Name="ToolBar"
+                                        RectMinSize="0,25">
+                                    <HBoxContainer
+                                            Name="HBoxContainer"
+                                            AnchorTop="0"
+                                            AnchorBottom="1"
+                                            AnchorLeft="0"
+                                            AnchorRight="1">
+                                        <Control RectMinSize="2,2"/>
+                                        <Label
+                                                Name="ExplorerLabel"
+                                                Text="Explorer"/>
+                                        <Control SizeFlagsHorizontal="3"/>
+                                        <Button
+                                                Name="ReloadButton"
+                                                Icon="data://FugueIcons/icons/arrow-circle-315.png"
+                                                Flat="true"/>
+                                        <Button
+                                                Name="NewButton"
+                                                Icon="data://FugueIcons/icons/plus-button.png"
+                                                Flat="true"/>
+                                    </HBoxContainer>
+                                </Control>
+                                <Tree
+                                        Name="Tree"
+                                        SizeFlagsVertical="3"/>
+                            </VBoxContainer>
+                    </Control>
+                    <Control
+                            Name="ContentView">
+                        <TabContainer/>
+                    </Control>
+                </HSplitContainer>
+            </VBoxContainer>
+        </Control>
+    </Body>
+</BXML>

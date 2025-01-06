@@ -183,7 +183,7 @@ local Class = _hx_e();
 local Enum = _hx_e();
 
 local Array = _hx_e()
-__bolt_App = _hx_e()
+__magicrt_App = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Reflect = _hx_e()
@@ -200,10 +200,10 @@ __haxe_iterators_ArrayKeyValueIterator = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
-__bolt_godot__Basis_Basis_Impl_ = _hx_e()
-__bolt_godot__Quat_Quat_Impl_ = _hx_e()
-__bolt_godot__Vector2_Vector2_Impl_ = _hx_e()
-__bolt_godot__Vector3_Vector3_Impl_ = _hx_e()
+__magicrt_godot__Basis_Basis_Impl_ = _hx_e()
+__magicrt_godot__Quat_Quat_Impl_ = _hx_e()
+__magicrt_godot__Vector2_Vector2_Impl_ = _hx_e()
+__magicrt_godot__Vector3_Vector3_Impl_ = _hx_e()
 
 local _hx_bind, _hx_bit, _hx_staticToInstance, _hx_funcToField, _hx_maxn, _hx_print, _hx_apply_self, _hx_box_mr, _hx_bit_clamp, _hx_table, _hx_bit_raw
 local _hx_pcall_default = {};
@@ -555,32 +555,32 @@ end
 
 Array.prototype.__class__ =  Array
 
-__bolt_App.new = function() 
-  local self = _hx_new(__bolt_App.prototype)
-  __bolt_App.super(self)
+__magicrt_App.new = function() 
+  local self = _hx_new(__magicrt_App.prototype)
+  __magicrt_App.super(self)
   return self
 end
-__bolt_App.super = function(self) 
+__magicrt_App.super = function(self) 
   _G.process = function(delta) self:process(delta) end;
   _G.physicsProcess = function(delta) self:physicsProcess(delta) end;
   self:init();
 end
-__bolt_App.__name__ = true
-__bolt_App.prototype = _hx_e();
-__bolt_App.prototype.get_rootNode = function(self) 
+__magicrt_App.__name__ = true
+__magicrt_App.prototype = _hx_e();
+__magicrt_App.prototype.get_rootNode = function(self) 
   do return rootNode end
 end
-__bolt_App.prototype.get_ioManager = function(self) 
+__magicrt_App.prototype.get_ioManager = function(self) 
   do return ioManager end
 end
-__bolt_App.prototype.init = function(self) 
+__magicrt_App.prototype.init = function(self) 
 end
-__bolt_App.prototype.process = function(self,delta) 
+__magicrt_App.prototype.process = function(self,delta) 
 end
-__bolt_App.prototype.physicsProcess = function(self,delta) 
+__magicrt_App.prototype.physicsProcess = function(self,delta) 
 end
 
-__bolt_App.prototype.__class__ =  __bolt_App
+__magicrt_App.prototype.__class__ =  __magicrt_App
 
 Main.new = function() 
   local self = _hx_new(Main.prototype)
@@ -589,7 +589,7 @@ Main.new = function()
 end
 Main.super = function(self) 
   self.counter = 0;
-  __bolt_App.super(self);
+  __magicrt_App.super(self);
 end
 Main.__name__ = true
 Main.main = function() 
@@ -617,8 +617,8 @@ Main.prototype.process = function(self,delta)
 end
 
 Main.prototype.__class__ =  Main
-Main.__super__ = __bolt_App
-setmetatable(Main.prototype,{__index=__bolt_App.prototype})
+Main.__super__ = __magicrt_App
+setmetatable(Main.prototype,{__index=__magicrt_App.prototype})
 
 Math.new = {}
 Math.__name__ = true
@@ -1156,12 +1156,12 @@ __lua_UserData.__name__ = true
 __lua_Thread.new = {}
 __lua_Thread.__name__ = true
 
-__bolt_godot__Basis_Basis_Impl_.new = {}
-__bolt_godot__Basis_Basis_Impl_.__name__ = true
-__bolt_godot__Basis_Basis_Impl_._new = function(x,y,z) 
+__magicrt_godot__Basis_Basis_Impl_.new = {}
+__magicrt_godot__Basis_Basis_Impl_.__name__ = true
+__magicrt_godot__Basis_Basis_Impl_._new = function(x,y,z) 
   do return godot.Basis.__new(x, y, z) end;
 end
-__bolt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1196,7 +1196,7 @@ __bolt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1224,7 +1224,7 @@ __bolt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1245,7 +1245,7 @@ __bolt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1272,57 +1272,57 @@ __bolt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.toString = function(v) 
+__magicrt_godot__Basis_Basis_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot__Quat_Quat_Impl_.new = {}
-__bolt_godot__Quat_Quat_Impl_.__name__ = true
-__bolt_godot__Quat_Quat_Impl_._new = function(x,y,z,w) 
+__magicrt_godot__Quat_Quat_Impl_.new = {}
+__magicrt_godot__Quat_Quat_Impl_.__name__ = true
+__magicrt_godot__Quat_Quat_Impl_._new = function(x,y,z,w) 
   if (w == nil) then 
     w = 0;
   end;
@@ -1337,7 +1337,7 @@ __bolt_godot__Quat_Quat_Impl_._new = function(x,y,z,w)
   end;
   do return godot.Quat.__new(x, y, z, w) end;
 end
-__bolt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1372,7 +1372,7 @@ __bolt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1400,7 +1400,7 @@ __bolt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1424,7 +1424,7 @@ __bolt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1455,57 +1455,57 @@ __bolt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.toString = function(v) 
+__magicrt_godot__Quat_Quat_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot__Vector2_Vector2_Impl_.new = {}
-__bolt_godot__Vector2_Vector2_Impl_.__name__ = true
-__bolt_godot__Vector2_Vector2_Impl_._new = function(x,y) 
+__magicrt_godot__Vector2_Vector2_Impl_.new = {}
+__magicrt_godot__Vector2_Vector2_Impl_.__name__ = true
+__magicrt_godot__Vector2_Vector2_Impl_._new = function(x,y) 
   if (y == nil) then 
     y = 0;
   end;
@@ -1514,7 +1514,7 @@ __bolt_godot__Vector2_Vector2_Impl_._new = function(x,y)
   end;
   do return godot.Vector2.__new(x, y) end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1549,7 +1549,7 @@ __bolt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1577,7 +1577,7 @@ __bolt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1592,7 +1592,7 @@ __bolt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1611,57 +1611,57 @@ __bolt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.toString = function(v) 
+__magicrt_godot__Vector2_Vector2_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot__Vector3_Vector3_Impl_.new = {}
-__bolt_godot__Vector3_Vector3_Impl_.__name__ = true
-__bolt_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
+__magicrt_godot__Vector3_Vector3_Impl_.new = {}
+__magicrt_godot__Vector3_Vector3_Impl_.__name__ = true
+__magicrt_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
   if (z == nil) then 
     z = 0;
   end;
@@ -1673,7 +1673,7 @@ __bolt_godot__Vector3_Vector3_Impl_._new = function(x,y,z)
   end;
   do return godot.Vector3.__new(x, y, z) end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1708,7 +1708,7 @@ __bolt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1736,7 +1736,7 @@ __bolt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1757,7 +1757,7 @@ __bolt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1784,51 +1784,51 @@ __bolt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.toString = function(v) 
+__magicrt_godot__Vector3_Vector3_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 if _hx_bit_raw then

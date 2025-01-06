@@ -1,0 +1,13 @@
+DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
+  DeleteRegKey HKLM "${PRODUCT_DIR_REGKEY}"
+  SetAutoClose true
+
+  ; Remove File Association
+  DeleteRegKey HKCR ".magicrt"
+  DeleteRegKey HKCR ".magicrt\shell\open\command"
+  DeleteRegKey HKCR ".magicrt\shell\open"
+  DeleteRegKey HKCR ".magicrt\shell"
+  DeleteRegKey HKCR ".magicrt\DefaultIcon"
+  DeleteRegKey HKCR ".magicrt"
+
+SectionEnd

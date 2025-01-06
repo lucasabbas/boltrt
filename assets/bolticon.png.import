@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bolticon.png-bcbb0d61230b862522ddb7f3a6bbcca6.stex"
+path="res://.import/magicrticon.png-bcbb0d61230b862522ddb7f3a6bbcca6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bolticon.png"
-dest_files=[ "res://.import/bolticon.png-bcbb0d61230b862522ddb7f3a6bbcca6.stex" ]
+source_file="res://assets/magicrticon.png"
+dest_files=[ "res://.import/magicrticon.png-bcbb0d61230b862522ddb7f3a6bbcca6.stex" ]
 
 [params]
 

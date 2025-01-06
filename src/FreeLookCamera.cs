@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace Bolt
+namespace MagicRt
 {
     public partial class FreeLookCamera : Camera
     {

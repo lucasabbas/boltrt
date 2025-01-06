@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Bolt.Tests.HelloHaxe
+namespace MagicRt.Tests.HelloHaxe
 {
     public class HelloHelper
     {

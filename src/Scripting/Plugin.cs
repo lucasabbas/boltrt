@@ -1,4 +1,4 @@
-namespace Bolt.Scripting
+namespace MagicRt.Scripting
 {
 
     public abstract class Plugin

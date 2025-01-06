@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-print('Bolt Editor Launcher')
+print('MagicRt Editor Launcher')
 print('(C) 2024-2025 m1ntkat')
 print("")
 
@@ -22,7 +22,7 @@ for arg in sys.argv:
 exit_code = subprocess.run(
     '"' 
     +  application_path
-    + '/bolt.exe" --dev ' 
+    + '/magicrt.exe" --dev ' 
     + args,
     shell=False
 )

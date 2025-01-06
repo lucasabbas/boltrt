@@ -1,5 +1,5 @@
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using System;
 using System.IO;
 using IoPath = System.IO.Path;
@@ -20,7 +20,7 @@ public class Standalone : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg.Contains(".bolt"))
+			if (arg.Contains(".mgproj"))
 			{
 				path = arg;
 				break;
@@ -39,7 +39,7 @@ public class Standalone : LuaNode
 			var files = IoDir.GetFiles(IoPath.GetFullPath("./"));
 			foreach (var file in files)
 			{
-				if (file.Contains(".bolt") || file.Contains(".btz") || file.Contains(".btzip") || file.EndsWith(".bta"))
+				if (file.Contains(".mgproj") || path.EndsWith(".mgrt") || path.EndsWith(".mgzip") || path.EndsWith(".mgz"))
 				{
 					path = file;
 					break;
@@ -47,7 +47,7 @@ public class Standalone : LuaNode
 			}
 			if (string.IsNullOrEmpty(path))
 			{
-				OS.Alert("directory or '.bolt' file not provided", "ERROR");
+				OS.Alert("directory or '.magicrt' file not provided", "ERROR");
 				GetTree().Quit();
 				return;
 			}
@@ -56,9 +56,9 @@ public class Standalone : LuaNode
 
 		path = IoPath.GetFullPath(path);
 
-		if (path.EndsWith(".bolt"))
+		if (path.EndsWith(".mgproj"))
 			StartFromLKProject(path);
-		else if (path.EndsWith(".btz") || path.EndsWith(".btzip") || path.EndsWith(".bta"))
+		else if (path.EndsWith(".mgrt") || path.EndsWith(".mgzip") || path.EndsWith(".mgz"))
 			StartFromZipFilePath(path);
 		else
 			StartFromPath(path);

@@ -2,7 +2,7 @@
 
 [sub_resource type="CSharpScript" id=1]
 script/source = "using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using System;
 using System.IO;
 using IoPath = System.IO.Path;
@@ -19,7 +19,7 @@ public class RuntimeEnv : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg.Contains(\".bolt\"))
+			if (arg.Contains(\".magicrt\"))
 			{
 				path = arg;
 				break;
@@ -38,7 +38,7 @@ public class RuntimeEnv : LuaNode
 			var files = IoDir.GetFiles(IoPath.GetFullPath(\"./\"));
 			foreach (var file in files)
 			{
-				if (file.Contains(\".bolt\"))
+				if (file.Contains(\".magicrt\"))
 				{
 					path = file;
 					break;
@@ -55,7 +55,7 @@ public class RuntimeEnv : LuaNode
 
 		path = IoPath.GetFullPath(path);
 
-		if (path.EndsWith(\".bolt\"))
+		if (path.EndsWith(\".magicrt\"))
 			StartFromLKProject(path);
 		else
 			StartFromPath(path);

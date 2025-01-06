@@ -10,12 +10,12 @@ config_version=4
 
 [application]
 
-config/name="Bolt"
+config/name="MagicRt"
 run/main_scene="res://src/Main.tscn"
 boot_splash/image="res://assets/splashscreen.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.14902, 0.14902, 0.14902, 1 )
-config/icon="res://assets/bolticon.png"
+config/icon="res://assets/magicrticon.png"
 config/windows_native_icon="res://icon.ico"
 
 [display]
@@ -42,7 +42,7 @@ fullscreen={
 [mono]
 
 runtime/unhandled_exception_policy=1
-project/assembly_name="Bolt"
+project/assembly_name="MagicRt"
 export/export_assemblies_inside_pck=false
 export/aot/use_interpreter.pc=false
 

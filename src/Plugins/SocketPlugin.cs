@@ -1,10 +1,10 @@
 using System;
 using System.Net.Sockets;
 using System.Text;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using MoonSharp.Interpreter;
 
-namespace Bolt.Plugins
+namespace MagicRt.Plugins
 {
 
     public class SocketPlugin : Plugin

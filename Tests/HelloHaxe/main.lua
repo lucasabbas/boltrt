@@ -183,7 +183,7 @@ local Class = _hx_e();
 local Enum = _hx_e();
 
 local Array = _hx_e()
-__bolt_App = _hx_e()
+__magicrt_App = _hx_e()
 local Main = _hx_e()
 local Math = _hx_e()
 local Person = _hx_e()
@@ -200,164 +200,164 @@ __haxe_iterators_ArrayKeyValueIterator = _hx_e()
 __lua_Boot = _hx_e()
 __lua_UserData = _hx_e()
 __lua_Thread = _hx_e()
-__bolt_godot_AABBSignalNames = _hx_e()
-__bolt_godot_ArrayMeshBlendShapeMode = _hx_e()
-__bolt_godot_ArrayMeshSignalNames = _hx_e()
-__bolt_godot__Basis_Basis_Impl_ = _hx_e()
-__bolt_godot_CallbackTweenerSignalNames = _hx_e()
-__bolt_godot_CameraKeepAspect = _hx_e()
-__bolt_godot_CameraDopplerTracking = _hx_e()
-__bolt_godot_CameraProjection = _hx_e()
-__bolt_godot_CameraMergingMode = _hx_e()
-__bolt_godot_CameraPauseMode = _hx_e()
-__bolt_godot_CameraPhysicsInterpolationMode = _hx_e()
-__bolt_godot_CameraSignalNames = _hx_e()
-__bolt_godot_CanvasItemPauseMode = _hx_e()
-__bolt_godot_CanvasItemPhysicsInterpolationMode = _hx_e()
-__bolt_godot_CanvasItemSignalNames = _hx_e()
-__bolt_godot_ColorSignalNames = _hx_e()
-__bolt_godot_ControlGrowHorizontal = _hx_e()
-__bolt_godot_ControlGrowVertical = _hx_e()
-__bolt_godot_ControlFocusMode = _hx_e()
-__bolt_godot_ControlMouseFilter = _hx_e()
-__bolt_godot_ControlMouseDefaultCursorShape = _hx_e()
-__bolt_godot_ControlPauseMode = _hx_e()
-__bolt_godot_ControlPhysicsInterpolationMode = _hx_e()
-__bolt_godot_ControlSignalNames = _hx_e()
-__bolt_godot_CubeMeshSignalNames = _hx_e()
-__bolt_godot_CullInstancePortalMode = _hx_e()
-__bolt_godot_CullInstanceMergingMode = _hx_e()
-__bolt_godot_CullInstancePauseMode = _hx_e()
-__bolt_godot_CullInstancePhysicsInterpolationMode = _hx_e()
-__bolt_godot_CullInstanceSignalNames = _hx_e()
-__bolt_godot_DirectionalLightDirectionalShadowMode = _hx_e()
-__bolt_godot_DirectionalLightDirectionalShadowDepthRange = _hx_e()
-__bolt_godot_DirectionalLightLightBakeMode = _hx_e()
-__bolt_godot_DirectionalLightPortalMode = _hx_e()
-__bolt_godot_DirectionalLightMergingMode = _hx_e()
-__bolt_godot_DirectionalLightPauseMode = _hx_e()
-__bolt_godot_DirectionalLightPhysicsInterpolationMode = _hx_e()
-__bolt_godot_DirectionalLightSignalNames = _hx_e()
-__bolt_godot_EnvironmentBackgroundMode = _hx_e()
-__bolt_godot_EnvironmentTonemapMode = _hx_e()
-__bolt_godot_EnvironmentSsaoQuality = _hx_e()
-__bolt_godot_EnvironmentSsaoBlur = _hx_e()
-__bolt_godot_EnvironmentDofBlurFarQuality = _hx_e()
-__bolt_godot_EnvironmentDofBlurNearQuality = _hx_e()
-__bolt_godot_EnvironmentGlowBlendMode = _hx_e()
-__bolt_godot_EnvironmentSignalNames = _hx_e()
-__bolt_godot_FontSignalNames = _hx_e()
-__bolt_godot_BasisSignalNames = _hx_e()
-__bolt_godot_QuatSignalNames = _hx_e()
-__bolt_godot_Vector2SignalNames = _hx_e()
-__bolt_godot_Vector3SignalNames = _hx_e()
-__bolt_godot_GeometryInstanceCastShadow = _hx_e()
-__bolt_godot_GeometryInstanceLightmapScale = _hx_e()
-__bolt_godot_GeometryInstancePortalMode = _hx_e()
-__bolt_godot_GeometryInstanceMergingMode = _hx_e()
-__bolt_godot_GeometryInstancePauseMode = _hx_e()
-__bolt_godot_GeometryInstancePhysicsInterpolationMode = _hx_e()
-__bolt_godot_GeometryInstanceSignalNames = _hx_e()
-__bolt_godot_ImageSignalNames = _hx_e()
-__bolt_godot_InputEventSignalNames = _hx_e()
-__bolt_godot_InputEventKeySignalNames = _hx_e()
-__bolt_godot_InputEventWithModifiersSignalNames = _hx_e()
-__bolt_godot_IntervalTweenerSignalNames = _hx_e()
-__bolt_godot_LightLightBakeMode = _hx_e()
-__bolt_godot_LightPortalMode = _hx_e()
-__bolt_godot_LightMergingMode = _hx_e()
-__bolt_godot_LightPauseMode = _hx_e()
-__bolt_godot_LightPhysicsInterpolationMode = _hx_e()
-__bolt_godot_LightSignalNames = _hx_e()
-__bolt_godot_MainLoopSignalNames = _hx_e()
-__bolt_godot_MaterialSignalNames = _hx_e()
-__bolt_godot_MeshSignalNames = _hx_e()
-__bolt_godot_MeshInstanceCastShadow = _hx_e()
-__bolt_godot_MeshInstanceLightmapScale = _hx_e()
-__bolt_godot_MeshInstancePortalMode = _hx_e()
-__bolt_godot_MeshInstanceMergingMode = _hx_e()
-__bolt_godot_MeshInstancePauseMode = _hx_e()
-__bolt_godot_MeshInstancePhysicsInterpolationMode = _hx_e()
-__bolt_godot_MeshInstanceSignalNames = _hx_e()
-__bolt_godot_MethodTweenerSignalNames = _hx_e()
-__bolt_godot_MultiMeshColorFormat = _hx_e()
-__bolt_godot_MultiMeshTransformFormat = _hx_e()
-__bolt_godot_MultiMeshCustomDataFormat = _hx_e()
-__bolt_godot_MultiMeshPhysicsInterpolationQuality = _hx_e()
-__bolt_godot_MultiMeshSignalNames = _hx_e()
-__bolt_godot_MultiplayerAPISignalNames = _hx_e()
-__bolt_godot_NetworkedMultiplayerPeerTransferMode = _hx_e()
-__bolt_godot_NetworkedMultiplayerPeerSignalNames = _hx_e()
-__bolt_godot_NodePauseMode = _hx_e()
-__bolt_godot_NodePhysicsInterpolationMode = _hx_e()
-__bolt_godot_NodeSignalNames = _hx_e()
-__bolt_godot_NodePathSignalNames = _hx_e()
-__bolt_godot_ObjectSignalNames = _hx_e()
-__bolt_godot_PackedSceneSignalNames = _hx_e()
-__bolt_godot_PacketPeerSignalNames = _hx_e()
-__bolt_godot_Physics2DDirectSpaceStateSignalNames = _hx_e()
-__bolt_godot_Physics2DShapeQueryParametersSignalNames = _hx_e()
-__bolt_godot_PhysicsDirectSpaceStateSignalNames = _hx_e()
-__bolt_godot_PhysicsShapeQueryParametersSignalNames = _hx_e()
-__bolt_godot_PlaneSignalNames = _hx_e()
-__bolt_godot_PoolByteArraySignalNames = _hx_e()
-__bolt_godot_PoolColorArraySignalNames = _hx_e()
-__bolt_godot_PoolIntArraySignalNames = _hx_e()
-__bolt_godot_PoolRealArraySignalNames = _hx_e()
-__bolt_godot_PoolStringArraySignalNames = _hx_e()
-__bolt_godot_PoolVector2ArraySignalNames = _hx_e()
-__bolt_godot_PoolVector3ArraySignalNames = _hx_e()
-__bolt_godot_PrimitiveMeshSignalNames = _hx_e()
-__bolt_godot_PropertyTweenerSignalNames = _hx_e()
-__bolt_godot__Quat_Quat_Impl_ = _hx_e()
-__bolt_godot_RIDSignalNames = _hx_e()
-__bolt_godot_Rect2SignalNames = _hx_e()
-__bolt_godot_ReferenceSignalNames = _hx_e()
-__bolt_godot_ResourceSignalNames = _hx_e()
-__bolt_godot_SceneStateSignalNames = _hx_e()
-__bolt_godot_SceneTreeSignalNames = _hx_e()
-__bolt_godot_SceneTreeTimerSignalNames = _hx_e()
-__bolt_godot_SceneTreeTweenSignalNames = _hx_e()
-__bolt_godot_ShaderSignalNames = _hx_e()
-__bolt_godot_ShapeSignalNames = _hx_e()
-__bolt_godot_SkinSignalNames = _hx_e()
-__bolt_godot_SkyRadianceSize = _hx_e()
-__bolt_godot_SkySignalNames = _hx_e()
-__bolt_godot_SpatialMergingMode = _hx_e()
-__bolt_godot_SpatialPauseMode = _hx_e()
-__bolt_godot_SpatialPhysicsInterpolationMode = _hx_e()
-__bolt_godot_SpatialSignalNames = _hx_e()
-__bolt_godot_SpatialGizmoSignalNames = _hx_e()
-__bolt_godot_StyleBoxSignalNames = _hx_e()
-__bolt_godot_TextureSignalNames = _hx_e()
-__bolt_godot_ThemeSignalNames = _hx_e()
-__bolt_godot_TransformSignalNames = _hx_e()
-__bolt_godot_Transform2DSignalNames = _hx_e()
-__bolt_godot_TriangleMeshSignalNames = _hx_e()
-__bolt_godot_TweenerSignalNames = _hx_e()
-__bolt_godot_VariantSignalNames = _hx_e()
-__bolt_godot__Vector2_Vector2_Impl_ = _hx_e()
-__bolt_godot__Vector3_Vector3_Impl_ = _hx_e()
-__bolt_godot_ViewportMsaa = _hx_e()
-__bolt_godot_ViewportUsage = _hx_e()
-__bolt_godot_ViewportDebugDraw = _hx_e()
-__bolt_godot_ViewportRenderTargetClearMode = _hx_e()
-__bolt_godot_ViewportRenderTargetUpdateMode = _hx_e()
-__bolt_godot_ViewportShadowAtlasQuad0 = _hx_e()
-__bolt_godot_ViewportShadowAtlasQuad1 = _hx_e()
-__bolt_godot_ViewportShadowAtlasQuad2 = _hx_e()
-__bolt_godot_ViewportShadowAtlasQuad3 = _hx_e()
-__bolt_godot_ViewportPauseMode = _hx_e()
-__bolt_godot_ViewportPhysicsInterpolationMode = _hx_e()
-__bolt_godot_ViewportSignalNames = _hx_e()
-__bolt_godot_ViewportTextureSignalNames = _hx_e()
-__bolt_godot_VisualInstancePortalMode = _hx_e()
-__bolt_godot_VisualInstanceMergingMode = _hx_e()
-__bolt_godot_VisualInstancePauseMode = _hx_e()
-__bolt_godot_VisualInstancePhysicsInterpolationMode = _hx_e()
-__bolt_godot_VisualInstanceSignalNames = _hx_e()
-__bolt_godot_WorldSignalNames = _hx_e()
-__bolt_godot_World2DSignalNames = _hx_e()
+__magicrt_godot_AABBSignalNames = _hx_e()
+__magicrt_godot_ArrayMeshBlendShapeMode = _hx_e()
+__magicrt_godot_ArrayMeshSignalNames = _hx_e()
+__magicrt_godot__Basis_Basis_Impl_ = _hx_e()
+__magicrt_godot_CallbackTweenerSignalNames = _hx_e()
+__magicrt_godot_CameraKeepAspect = _hx_e()
+__magicrt_godot_CameraDopplerTracking = _hx_e()
+__magicrt_godot_CameraProjection = _hx_e()
+__magicrt_godot_CameraMergingMode = _hx_e()
+__magicrt_godot_CameraPauseMode = _hx_e()
+__magicrt_godot_CameraPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_CameraSignalNames = _hx_e()
+__magicrt_godot_CanvasItemPauseMode = _hx_e()
+__magicrt_godot_CanvasItemPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_CanvasItemSignalNames = _hx_e()
+__magicrt_godot_ColorSignalNames = _hx_e()
+__magicrt_godot_ControlGrowHorizontal = _hx_e()
+__magicrt_godot_ControlGrowVertical = _hx_e()
+__magicrt_godot_ControlFocusMode = _hx_e()
+__magicrt_godot_ControlMouseFilter = _hx_e()
+__magicrt_godot_ControlMouseDefaultCursorShape = _hx_e()
+__magicrt_godot_ControlPauseMode = _hx_e()
+__magicrt_godot_ControlPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_ControlSignalNames = _hx_e()
+__magicrt_godot_CubeMeshSignalNames = _hx_e()
+__magicrt_godot_CullInstancePortalMode = _hx_e()
+__magicrt_godot_CullInstanceMergingMode = _hx_e()
+__magicrt_godot_CullInstancePauseMode = _hx_e()
+__magicrt_godot_CullInstancePhysicsInterpolationMode = _hx_e()
+__magicrt_godot_CullInstanceSignalNames = _hx_e()
+__magicrt_godot_DirectionalLightDirectionalShadowMode = _hx_e()
+__magicrt_godot_DirectionalLightDirectionalShadowDepthRange = _hx_e()
+__magicrt_godot_DirectionalLightLightBakeMode = _hx_e()
+__magicrt_godot_DirectionalLightPortalMode = _hx_e()
+__magicrt_godot_DirectionalLightMergingMode = _hx_e()
+__magicrt_godot_DirectionalLightPauseMode = _hx_e()
+__magicrt_godot_DirectionalLightPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_DirectionalLightSignalNames = _hx_e()
+__magicrt_godot_EnvironmentBackgroundMode = _hx_e()
+__magicrt_godot_EnvironmentTonemapMode = _hx_e()
+__magicrt_godot_EnvironmentSsaoQuality = _hx_e()
+__magicrt_godot_EnvironmentSsaoBlur = _hx_e()
+__magicrt_godot_EnvironmentDofBlurFarQuality = _hx_e()
+__magicrt_godot_EnvironmentDofBlurNearQuality = _hx_e()
+__magicrt_godot_EnvironmentGlowBlendMode = _hx_e()
+__magicrt_godot_EnvironmentSignalNames = _hx_e()
+__magicrt_godot_FontSignalNames = _hx_e()
+__magicrt_godot_BasisSignalNames = _hx_e()
+__magicrt_godot_QuatSignalNames = _hx_e()
+__magicrt_godot_Vector2SignalNames = _hx_e()
+__magicrt_godot_Vector3SignalNames = _hx_e()
+__magicrt_godot_GeometryInstanceCastShadow = _hx_e()
+__magicrt_godot_GeometryInstanceLightmapScale = _hx_e()
+__magicrt_godot_GeometryInstancePortalMode = _hx_e()
+__magicrt_godot_GeometryInstanceMergingMode = _hx_e()
+__magicrt_godot_GeometryInstancePauseMode = _hx_e()
+__magicrt_godot_GeometryInstancePhysicsInterpolationMode = _hx_e()
+__magicrt_godot_GeometryInstanceSignalNames = _hx_e()
+__magicrt_godot_ImageSignalNames = _hx_e()
+__magicrt_godot_InputEventSignalNames = _hx_e()
+__magicrt_godot_InputEventKeySignalNames = _hx_e()
+__magicrt_godot_InputEventWithModifiersSignalNames = _hx_e()
+__magicrt_godot_IntervalTweenerSignalNames = _hx_e()
+__magicrt_godot_LightLightBakeMode = _hx_e()
+__magicrt_godot_LightPortalMode = _hx_e()
+__magicrt_godot_LightMergingMode = _hx_e()
+__magicrt_godot_LightPauseMode = _hx_e()
+__magicrt_godot_LightPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_LightSignalNames = _hx_e()
+__magicrt_godot_MainLoopSignalNames = _hx_e()
+__magicrt_godot_MaterialSignalNames = _hx_e()
+__magicrt_godot_MeshSignalNames = _hx_e()
+__magicrt_godot_MeshInstanceCastShadow = _hx_e()
+__magicrt_godot_MeshInstanceLightmapScale = _hx_e()
+__magicrt_godot_MeshInstancePortalMode = _hx_e()
+__magicrt_godot_MeshInstanceMergingMode = _hx_e()
+__magicrt_godot_MeshInstancePauseMode = _hx_e()
+__magicrt_godot_MeshInstancePhysicsInterpolationMode = _hx_e()
+__magicrt_godot_MeshInstanceSignalNames = _hx_e()
+__magicrt_godot_MethodTweenerSignalNames = _hx_e()
+__magicrt_godot_MultiMeshColorFormat = _hx_e()
+__magicrt_godot_MultiMeshTransformFormat = _hx_e()
+__magicrt_godot_MultiMeshCustomDataFormat = _hx_e()
+__magicrt_godot_MultiMeshPhysicsInterpolationQuality = _hx_e()
+__magicrt_godot_MultiMeshSignalNames = _hx_e()
+__magicrt_godot_MultiplayerAPISignalNames = _hx_e()
+__magicrt_godot_NetworkedMultiplayerPeerTransferMode = _hx_e()
+__magicrt_godot_NetworkedMultiplayerPeerSignalNames = _hx_e()
+__magicrt_godot_NodePauseMode = _hx_e()
+__magicrt_godot_NodePhysicsInterpolationMode = _hx_e()
+__magicrt_godot_NodeSignalNames = _hx_e()
+__magicrt_godot_NodePathSignalNames = _hx_e()
+__magicrt_godot_ObjectSignalNames = _hx_e()
+__magicrt_godot_PackedSceneSignalNames = _hx_e()
+__magicrt_godot_PacketPeerSignalNames = _hx_e()
+__magicrt_godot_Physics2DDirectSpaceStateSignalNames = _hx_e()
+__magicrt_godot_Physics2DShapeQueryParametersSignalNames = _hx_e()
+__magicrt_godot_PhysicsDirectSpaceStateSignalNames = _hx_e()
+__magicrt_godot_PhysicsShapeQueryParametersSignalNames = _hx_e()
+__magicrt_godot_PlaneSignalNames = _hx_e()
+__magicrt_godot_PoolByteArraySignalNames = _hx_e()
+__magicrt_godot_PoolColorArraySignalNames = _hx_e()
+__magicrt_godot_PoolIntArraySignalNames = _hx_e()
+__magicrt_godot_PoolRealArraySignalNames = _hx_e()
+__magicrt_godot_PoolStringArraySignalNames = _hx_e()
+__magicrt_godot_PoolVector2ArraySignalNames = _hx_e()
+__magicrt_godot_PoolVector3ArraySignalNames = _hx_e()
+__magicrt_godot_PrimitiveMeshSignalNames = _hx_e()
+__magicrt_godot_PropertyTweenerSignalNames = _hx_e()
+__magicrt_godot__Quat_Quat_Impl_ = _hx_e()
+__magicrt_godot_RIDSignalNames = _hx_e()
+__magicrt_godot_Rect2SignalNames = _hx_e()
+__magicrt_godot_ReferenceSignalNames = _hx_e()
+__magicrt_godot_ResourceSignalNames = _hx_e()
+__magicrt_godot_SceneStateSignalNames = _hx_e()
+__magicrt_godot_SceneTreeSignalNames = _hx_e()
+__magicrt_godot_SceneTreeTimerSignalNames = _hx_e()
+__magicrt_godot_SceneTreeTweenSignalNames = _hx_e()
+__magicrt_godot_ShaderSignalNames = _hx_e()
+__magicrt_godot_ShapeSignalNames = _hx_e()
+__magicrt_godot_SkinSignalNames = _hx_e()
+__magicrt_godot_SkyRadianceSize = _hx_e()
+__magicrt_godot_SkySignalNames = _hx_e()
+__magicrt_godot_SpatialMergingMode = _hx_e()
+__magicrt_godot_SpatialPauseMode = _hx_e()
+__magicrt_godot_SpatialPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_SpatialSignalNames = _hx_e()
+__magicrt_godot_SpatialGizmoSignalNames = _hx_e()
+__magicrt_godot_StyleBoxSignalNames = _hx_e()
+__magicrt_godot_TextureSignalNames = _hx_e()
+__magicrt_godot_ThemeSignalNames = _hx_e()
+__magicrt_godot_TransformSignalNames = _hx_e()
+__magicrt_godot_Transform2DSignalNames = _hx_e()
+__magicrt_godot_TriangleMeshSignalNames = _hx_e()
+__magicrt_godot_TweenerSignalNames = _hx_e()
+__magicrt_godot_VariantSignalNames = _hx_e()
+__magicrt_godot__Vector2_Vector2_Impl_ = _hx_e()
+__magicrt_godot__Vector3_Vector3_Impl_ = _hx_e()
+__magicrt_godot_ViewportMsaa = _hx_e()
+__magicrt_godot_ViewportUsage = _hx_e()
+__magicrt_godot_ViewportDebugDraw = _hx_e()
+__magicrt_godot_ViewportRenderTargetClearMode = _hx_e()
+__magicrt_godot_ViewportRenderTargetUpdateMode = _hx_e()
+__magicrt_godot_ViewportShadowAtlasQuad0 = _hx_e()
+__magicrt_godot_ViewportShadowAtlasQuad1 = _hx_e()
+__magicrt_godot_ViewportShadowAtlasQuad2 = _hx_e()
+__magicrt_godot_ViewportShadowAtlasQuad3 = _hx_e()
+__magicrt_godot_ViewportPauseMode = _hx_e()
+__magicrt_godot_ViewportPhysicsInterpolationMode = _hx_e()
+__magicrt_godot_ViewportSignalNames = _hx_e()
+__magicrt_godot_ViewportTextureSignalNames = _hx_e()
+__magicrt_godot_VisualInstancePortalMode = _hx_e()
+__magicrt_godot_VisualInstanceMergingMode = _hx_e()
+__magicrt_godot_VisualInstancePauseMode = _hx_e()
+__magicrt_godot_VisualInstancePhysicsInterpolationMode = _hx_e()
+__magicrt_godot_VisualInstanceSignalNames = _hx_e()
+__magicrt_godot_WorldSignalNames = _hx_e()
+__magicrt_godot_World2DSignalNames = _hx_e()
 __sys_io_File = _hx_e()
 
 local _hx_bind, _hx_bit, _hx_staticToInstance, _hx_funcToField, _hx_maxn, _hx_print, _hx_apply_self, _hx_box_mr, _hx_bit_clamp, _hx_table, _hx_bit_raw
@@ -710,12 +710,12 @@ end
 
 Array.prototype.__class__ =  Array
 
-__bolt_App.new = function() 
-  local self = _hx_new(__bolt_App.prototype)
-  __bolt_App.super(self)
+__magicrt_App.new = function() 
+  local self = _hx_new(__magicrt_App.prototype)
+  __magicrt_App.super(self)
   return self
 end
-__bolt_App.super = function(self) 
+__magicrt_App.super = function(self) 
   _G.process = function(delta) self:process(delta) end;
   _G.physicsProcess = function(delta) self:physicsProcess(delta) end;
   _G.input = function(event) self:input(event) end;
@@ -723,31 +723,31 @@ __bolt_App.super = function(self)
   _G.unhandledKeyInput = function(event) self:unhandledKeyInput(event) end;
   self:init();
 end
-__bolt_App.__name__ = true
-__bolt_App.prototype = _hx_e();
-__bolt_App.prototype.get_rootNode = function(self) 
+__magicrt_App.__name__ = true
+__magicrt_App.prototype = _hx_e();
+__magicrt_App.prototype.get_rootNode = function(self) 
   do return rootNode end
 end
-__bolt_App.prototype.get_ioManager = function(self) 
+__magicrt_App.prototype.get_ioManager = function(self) 
   do return ioManager end
 end
-__bolt_App.prototype.init = function(self) 
+__magicrt_App.prototype.init = function(self) 
 end
-__bolt_App.prototype.process = function(self,delta) 
+__magicrt_App.prototype.process = function(self,delta) 
 end
-__bolt_App.prototype.physicsProcess = function(self,delta) 
+__magicrt_App.prototype.physicsProcess = function(self,delta) 
 end
-__bolt_App.prototype.input = function(self,event) 
+__magicrt_App.prototype.input = function(self,event) 
 end
-__bolt_App.prototype.unhandledInput = function(self,event) 
+__magicrt_App.prototype.unhandledInput = function(self,event) 
 end
-__bolt_App.prototype.unhandledKeyInput = function(self,event) 
+__magicrt_App.prototype.unhandledKeyInput = function(self,event) 
 end
-__bolt_App.prototype.loadEnginePlugin = function(self,dllPath) 
+__magicrt_App.prototype.loadEnginePlugin = function(self,dllPath) 
   loadEnginePlugin(dllPath);
 end
 
-__bolt_App.prototype.__class__ =  __bolt_App
+__magicrt_App.prototype.__class__ =  __magicrt_App
 
 Main.new = function() 
   local self = _hx_new(Main.prototype)
@@ -755,7 +755,7 @@ Main.new = function()
   return self
 end
 Main.super = function(self) 
-  __bolt_App.super(self);
+  __magicrt_App.super(self);
 end
 Main.__name__ = true
 Main.main = function() 
@@ -778,18 +778,18 @@ Main.prototype.init = function(self)
   local lucas = Person.new("Lucas", 20, "2004-10-04");
   _G.print(Std.string(lucas:toString()));
   lucas:sayHello();
-  local vec3 = __bolt_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
-  _G.print(Std.string((__bolt_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
-  local vec3_2 = __bolt_godot__Vector3_Vector3_Impl_._new(2, 3, 2);
-  _G.print(Std.string((__bolt_godot__Vector3_Vector3_Impl_.fieldRead(vec3_2, "toString"))()));
-  local vec3_3 = __bolt_godot__Vector3_Vector3_Impl_.add(vec3, vec3_2);
-  _G.print(Std.string((__bolt_godot__Vector3_Vector3_Impl_.fieldRead(vec3_3, "toString"))()));
-  local vec2 = __bolt_godot__Vector2_Vector2_Impl_._new(6, 1);
-  _G.print(Std.string((__bolt_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
-  local vec2_2 = __bolt_godot__Vector2_Vector2_Impl_._new(4, 9);
-  _G.print(Std.string((__bolt_godot__Vector2_Vector2_Impl_.fieldRead(vec2_2, "toString"))()));
-  local vec2_3 = __bolt_godot__Vector2_Vector2_Impl_.add(vec2, vec2_2);
-  _G.print(Std.string((__bolt_godot__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
+  local vec3 = __magicrt_godot__Vector3_Vector3_Impl_._new(3, 2, 3);
+  _G.print(Std.string((__magicrt_godot__Vector3_Vector3_Impl_.fieldRead(vec3, "toString"))()));
+  local vec3_2 = __magicrt_godot__Vector3_Vector3_Impl_._new(2, 3, 2);
+  _G.print(Std.string((__magicrt_godot__Vector3_Vector3_Impl_.fieldRead(vec3_2, "toString"))()));
+  local vec3_3 = __magicrt_godot__Vector3_Vector3_Impl_.add(vec3, vec3_2);
+  _G.print(Std.string((__magicrt_godot__Vector3_Vector3_Impl_.fieldRead(vec3_3, "toString"))()));
+  local vec2 = __magicrt_godot__Vector2_Vector2_Impl_._new(6, 1);
+  _G.print(Std.string((__magicrt_godot__Vector2_Vector2_Impl_.fieldRead(vec2, "toString"))()));
+  local vec2_2 = __magicrt_godot__Vector2_Vector2_Impl_._new(4, 9);
+  _G.print(Std.string((__magicrt_godot__Vector2_Vector2_Impl_.fieldRead(vec2_2, "toString"))()));
+  local vec2_3 = __magicrt_godot__Vector2_Vector2_Impl_.add(vec2, vec2_2);
+  _G.print(Std.string((__magicrt_godot__Vector2_Vector2_Impl_.fieldRead(vec2_3, "toString"))()));
   local _hx_status, _hx_result = pcall(function() 
   
       local godotObject = godot.Object.__new();
@@ -808,7 +808,7 @@ Main.prototype.init = function(self)
   self:get_rootNode():addChild(camera);
   local meshInstance = godot.MeshInstance.__new();
   self:get_rootNode():addChild(meshInstance);
-  meshInstance.position = __bolt_godot__Vector3_Vector3_Impl_._new(0, 0, -5);
+  meshInstance.position = __magicrt_godot__Vector3_Vector3_Impl_._new(0, 0, -5);
   local mesh = godot.CubeMesh.__new();
   meshInstance.mesh = mesh;
   local directionalLight = godot.DirectionalLight.__new();
@@ -825,8 +825,8 @@ Main.prototype.process = function(self,delta)
 end
 
 Main.prototype.__class__ =  Main
-Main.__super__ = __bolt_App
-setmetatable(Main.prototype,{__index=__bolt_App.prototype})
+Main.__super__ = __magicrt_App
+setmetatable(Main.prototype,{__index=__magicrt_App.prototype})
 
 Math.new = {}
 Math.__name__ = true
@@ -1379,21 +1379,21 @@ __lua_UserData.__name__ = true
 __lua_Thread.new = {}
 __lua_Thread.__name__ = true
 
-__bolt_godot_AABBSignalNames.new = {}
-__bolt_godot_AABBSignalNames.__name__ = true
+__magicrt_godot_AABBSignalNames.new = {}
+__magicrt_godot_AABBSignalNames.__name__ = true
 
-__bolt_godot_ArrayMeshBlendShapeMode.new = {}
-__bolt_godot_ArrayMeshBlendShapeMode.__name__ = true
+__magicrt_godot_ArrayMeshBlendShapeMode.new = {}
+__magicrt_godot_ArrayMeshBlendShapeMode.__name__ = true
 
-__bolt_godot_ArrayMeshSignalNames.new = {}
-__bolt_godot_ArrayMeshSignalNames.__name__ = true
+__magicrt_godot_ArrayMeshSignalNames.new = {}
+__magicrt_godot_ArrayMeshSignalNames.__name__ = true
 
-__bolt_godot__Basis_Basis_Impl_.new = {}
-__bolt_godot__Basis_Basis_Impl_.__name__ = true
-__bolt_godot__Basis_Basis_Impl_._new = function(x,y,z) 
+__magicrt_godot__Basis_Basis_Impl_.new = {}
+__magicrt_godot__Basis_Basis_Impl_.__name__ = true
+__magicrt_godot__Basis_Basis_Impl_._new = function(x,y,z) 
   do return godot.Basis.__new(x, y, z) end;
 end
-__bolt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1428,7 +1428,7 @@ __bolt_godot__Basis_Basis_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1456,7 +1456,7 @@ __bolt_godot__Basis_Basis_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1477,7 +1477,7 @@ __bolt_godot__Basis_Basis_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -1504,372 +1504,372 @@ __bolt_godot__Basis_Basis_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Basis_Basis_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Basis_Basis_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Basis_Basis_Impl_.toString = function(v) 
+__magicrt_godot__Basis_Basis_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot_CallbackTweenerSignalNames.new = {}
-__bolt_godot_CallbackTweenerSignalNames.__name__ = true
+__magicrt_godot_CallbackTweenerSignalNames.new = {}
+__magicrt_godot_CallbackTweenerSignalNames.__name__ = true
 
-__bolt_godot_CameraKeepAspect.new = {}
-__bolt_godot_CameraKeepAspect.__name__ = true
+__magicrt_godot_CameraKeepAspect.new = {}
+__magicrt_godot_CameraKeepAspect.__name__ = true
 
-__bolt_godot_CameraDopplerTracking.new = {}
-__bolt_godot_CameraDopplerTracking.__name__ = true
+__magicrt_godot_CameraDopplerTracking.new = {}
+__magicrt_godot_CameraDopplerTracking.__name__ = true
 
-__bolt_godot_CameraProjection.new = {}
-__bolt_godot_CameraProjection.__name__ = true
+__magicrt_godot_CameraProjection.new = {}
+__magicrt_godot_CameraProjection.__name__ = true
 
-__bolt_godot_CameraMergingMode.new = {}
-__bolt_godot_CameraMergingMode.__name__ = true
+__magicrt_godot_CameraMergingMode.new = {}
+__magicrt_godot_CameraMergingMode.__name__ = true
 
-__bolt_godot_CameraPauseMode.new = {}
-__bolt_godot_CameraPauseMode.__name__ = true
+__magicrt_godot_CameraPauseMode.new = {}
+__magicrt_godot_CameraPauseMode.__name__ = true
 
-__bolt_godot_CameraPhysicsInterpolationMode.new = {}
-__bolt_godot_CameraPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_CameraPhysicsInterpolationMode.new = {}
+__magicrt_godot_CameraPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_CameraSignalNames.new = {}
-__bolt_godot_CameraSignalNames.__name__ = true
+__magicrt_godot_CameraSignalNames.new = {}
+__magicrt_godot_CameraSignalNames.__name__ = true
 
-__bolt_godot_CanvasItemPauseMode.new = {}
-__bolt_godot_CanvasItemPauseMode.__name__ = true
+__magicrt_godot_CanvasItemPauseMode.new = {}
+__magicrt_godot_CanvasItemPauseMode.__name__ = true
 
-__bolt_godot_CanvasItemPhysicsInterpolationMode.new = {}
-__bolt_godot_CanvasItemPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_CanvasItemPhysicsInterpolationMode.new = {}
+__magicrt_godot_CanvasItemPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_CanvasItemSignalNames.new = {}
-__bolt_godot_CanvasItemSignalNames.__name__ = true
+__magicrt_godot_CanvasItemSignalNames.new = {}
+__magicrt_godot_CanvasItemSignalNames.__name__ = true
 
-__bolt_godot_ColorSignalNames.new = {}
-__bolt_godot_ColorSignalNames.__name__ = true
+__magicrt_godot_ColorSignalNames.new = {}
+__magicrt_godot_ColorSignalNames.__name__ = true
 
-__bolt_godot_ControlGrowHorizontal.new = {}
-__bolt_godot_ControlGrowHorizontal.__name__ = true
+__magicrt_godot_ControlGrowHorizontal.new = {}
+__magicrt_godot_ControlGrowHorizontal.__name__ = true
 
-__bolt_godot_ControlGrowVertical.new = {}
-__bolt_godot_ControlGrowVertical.__name__ = true
+__magicrt_godot_ControlGrowVertical.new = {}
+__magicrt_godot_ControlGrowVertical.__name__ = true
 
-__bolt_godot_ControlFocusMode.new = {}
-__bolt_godot_ControlFocusMode.__name__ = true
+__magicrt_godot_ControlFocusMode.new = {}
+__magicrt_godot_ControlFocusMode.__name__ = true
 
-__bolt_godot_ControlMouseFilter.new = {}
-__bolt_godot_ControlMouseFilter.__name__ = true
+__magicrt_godot_ControlMouseFilter.new = {}
+__magicrt_godot_ControlMouseFilter.__name__ = true
 
-__bolt_godot_ControlMouseDefaultCursorShape.new = {}
-__bolt_godot_ControlMouseDefaultCursorShape.__name__ = true
+__magicrt_godot_ControlMouseDefaultCursorShape.new = {}
+__magicrt_godot_ControlMouseDefaultCursorShape.__name__ = true
 
-__bolt_godot_ControlPauseMode.new = {}
-__bolt_godot_ControlPauseMode.__name__ = true
+__magicrt_godot_ControlPauseMode.new = {}
+__magicrt_godot_ControlPauseMode.__name__ = true
 
-__bolt_godot_ControlPhysicsInterpolationMode.new = {}
-__bolt_godot_ControlPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_ControlPhysicsInterpolationMode.new = {}
+__magicrt_godot_ControlPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_ControlSignalNames.new = {}
-__bolt_godot_ControlSignalNames.__name__ = true
+__magicrt_godot_ControlSignalNames.new = {}
+__magicrt_godot_ControlSignalNames.__name__ = true
 
-__bolt_godot_CubeMeshSignalNames.new = {}
-__bolt_godot_CubeMeshSignalNames.__name__ = true
+__magicrt_godot_CubeMeshSignalNames.new = {}
+__magicrt_godot_CubeMeshSignalNames.__name__ = true
 
-__bolt_godot_CullInstancePortalMode.new = {}
-__bolt_godot_CullInstancePortalMode.__name__ = true
+__magicrt_godot_CullInstancePortalMode.new = {}
+__magicrt_godot_CullInstancePortalMode.__name__ = true
 
-__bolt_godot_CullInstanceMergingMode.new = {}
-__bolt_godot_CullInstanceMergingMode.__name__ = true
+__magicrt_godot_CullInstanceMergingMode.new = {}
+__magicrt_godot_CullInstanceMergingMode.__name__ = true
 
-__bolt_godot_CullInstancePauseMode.new = {}
-__bolt_godot_CullInstancePauseMode.__name__ = true
+__magicrt_godot_CullInstancePauseMode.new = {}
+__magicrt_godot_CullInstancePauseMode.__name__ = true
 
-__bolt_godot_CullInstancePhysicsInterpolationMode.new = {}
-__bolt_godot_CullInstancePhysicsInterpolationMode.__name__ = true
+__magicrt_godot_CullInstancePhysicsInterpolationMode.new = {}
+__magicrt_godot_CullInstancePhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_CullInstanceSignalNames.new = {}
-__bolt_godot_CullInstanceSignalNames.__name__ = true
+__magicrt_godot_CullInstanceSignalNames.new = {}
+__magicrt_godot_CullInstanceSignalNames.__name__ = true
 
-__bolt_godot_DirectionalLightDirectionalShadowMode.new = {}
-__bolt_godot_DirectionalLightDirectionalShadowMode.__name__ = true
+__magicrt_godot_DirectionalLightDirectionalShadowMode.new = {}
+__magicrt_godot_DirectionalLightDirectionalShadowMode.__name__ = true
 
-__bolt_godot_DirectionalLightDirectionalShadowDepthRange.new = {}
-__bolt_godot_DirectionalLightDirectionalShadowDepthRange.__name__ = true
+__magicrt_godot_DirectionalLightDirectionalShadowDepthRange.new = {}
+__magicrt_godot_DirectionalLightDirectionalShadowDepthRange.__name__ = true
 
-__bolt_godot_DirectionalLightLightBakeMode.new = {}
-__bolt_godot_DirectionalLightLightBakeMode.__name__ = true
+__magicrt_godot_DirectionalLightLightBakeMode.new = {}
+__magicrt_godot_DirectionalLightLightBakeMode.__name__ = true
 
-__bolt_godot_DirectionalLightPortalMode.new = {}
-__bolt_godot_DirectionalLightPortalMode.__name__ = true
+__magicrt_godot_DirectionalLightPortalMode.new = {}
+__magicrt_godot_DirectionalLightPortalMode.__name__ = true
 
-__bolt_godot_DirectionalLightMergingMode.new = {}
-__bolt_godot_DirectionalLightMergingMode.__name__ = true
+__magicrt_godot_DirectionalLightMergingMode.new = {}
+__magicrt_godot_DirectionalLightMergingMode.__name__ = true
 
-__bolt_godot_DirectionalLightPauseMode.new = {}
-__bolt_godot_DirectionalLightPauseMode.__name__ = true
+__magicrt_godot_DirectionalLightPauseMode.new = {}
+__magicrt_godot_DirectionalLightPauseMode.__name__ = true
 
-__bolt_godot_DirectionalLightPhysicsInterpolationMode.new = {}
-__bolt_godot_DirectionalLightPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_DirectionalLightPhysicsInterpolationMode.new = {}
+__magicrt_godot_DirectionalLightPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_DirectionalLightSignalNames.new = {}
-__bolt_godot_DirectionalLightSignalNames.__name__ = true
+__magicrt_godot_DirectionalLightSignalNames.new = {}
+__magicrt_godot_DirectionalLightSignalNames.__name__ = true
 
-__bolt_godot_EnvironmentBackgroundMode.new = {}
-__bolt_godot_EnvironmentBackgroundMode.__name__ = true
+__magicrt_godot_EnvironmentBackgroundMode.new = {}
+__magicrt_godot_EnvironmentBackgroundMode.__name__ = true
 
-__bolt_godot_EnvironmentTonemapMode.new = {}
-__bolt_godot_EnvironmentTonemapMode.__name__ = true
+__magicrt_godot_EnvironmentTonemapMode.new = {}
+__magicrt_godot_EnvironmentTonemapMode.__name__ = true
 
-__bolt_godot_EnvironmentSsaoQuality.new = {}
-__bolt_godot_EnvironmentSsaoQuality.__name__ = true
+__magicrt_godot_EnvironmentSsaoQuality.new = {}
+__magicrt_godot_EnvironmentSsaoQuality.__name__ = true
 
-__bolt_godot_EnvironmentSsaoBlur.new = {}
-__bolt_godot_EnvironmentSsaoBlur.__name__ = true
+__magicrt_godot_EnvironmentSsaoBlur.new = {}
+__magicrt_godot_EnvironmentSsaoBlur.__name__ = true
 
-__bolt_godot_EnvironmentDofBlurFarQuality.new = {}
-__bolt_godot_EnvironmentDofBlurFarQuality.__name__ = true
+__magicrt_godot_EnvironmentDofBlurFarQuality.new = {}
+__magicrt_godot_EnvironmentDofBlurFarQuality.__name__ = true
 
-__bolt_godot_EnvironmentDofBlurNearQuality.new = {}
-__bolt_godot_EnvironmentDofBlurNearQuality.__name__ = true
+__magicrt_godot_EnvironmentDofBlurNearQuality.new = {}
+__magicrt_godot_EnvironmentDofBlurNearQuality.__name__ = true
 
-__bolt_godot_EnvironmentGlowBlendMode.new = {}
-__bolt_godot_EnvironmentGlowBlendMode.__name__ = true
+__magicrt_godot_EnvironmentGlowBlendMode.new = {}
+__magicrt_godot_EnvironmentGlowBlendMode.__name__ = true
 
-__bolt_godot_EnvironmentSignalNames.new = {}
-__bolt_godot_EnvironmentSignalNames.__name__ = true
+__magicrt_godot_EnvironmentSignalNames.new = {}
+__magicrt_godot_EnvironmentSignalNames.__name__ = true
 
-__bolt_godot_FontSignalNames.new = {}
-__bolt_godot_FontSignalNames.__name__ = true
+__magicrt_godot_FontSignalNames.new = {}
+__magicrt_godot_FontSignalNames.__name__ = true
 
-__bolt_godot_BasisSignalNames.new = {}
-__bolt_godot_BasisSignalNames.__name__ = true
+__magicrt_godot_BasisSignalNames.new = {}
+__magicrt_godot_BasisSignalNames.__name__ = true
 
-__bolt_godot_QuatSignalNames.new = {}
-__bolt_godot_QuatSignalNames.__name__ = true
+__magicrt_godot_QuatSignalNames.new = {}
+__magicrt_godot_QuatSignalNames.__name__ = true
 
-__bolt_godot_Vector2SignalNames.new = {}
-__bolt_godot_Vector2SignalNames.__name__ = true
+__magicrt_godot_Vector2SignalNames.new = {}
+__magicrt_godot_Vector2SignalNames.__name__ = true
 
-__bolt_godot_Vector3SignalNames.new = {}
-__bolt_godot_Vector3SignalNames.__name__ = true
+__magicrt_godot_Vector3SignalNames.new = {}
+__magicrt_godot_Vector3SignalNames.__name__ = true
 
-__bolt_godot_GeometryInstanceCastShadow.new = {}
-__bolt_godot_GeometryInstanceCastShadow.__name__ = true
+__magicrt_godot_GeometryInstanceCastShadow.new = {}
+__magicrt_godot_GeometryInstanceCastShadow.__name__ = true
 
-__bolt_godot_GeometryInstanceLightmapScale.new = {}
-__bolt_godot_GeometryInstanceLightmapScale.__name__ = true
+__magicrt_godot_GeometryInstanceLightmapScale.new = {}
+__magicrt_godot_GeometryInstanceLightmapScale.__name__ = true
 
-__bolt_godot_GeometryInstancePortalMode.new = {}
-__bolt_godot_GeometryInstancePortalMode.__name__ = true
+__magicrt_godot_GeometryInstancePortalMode.new = {}
+__magicrt_godot_GeometryInstancePortalMode.__name__ = true
 
-__bolt_godot_GeometryInstanceMergingMode.new = {}
-__bolt_godot_GeometryInstanceMergingMode.__name__ = true
+__magicrt_godot_GeometryInstanceMergingMode.new = {}
+__magicrt_godot_GeometryInstanceMergingMode.__name__ = true
 
-__bolt_godot_GeometryInstancePauseMode.new = {}
-__bolt_godot_GeometryInstancePauseMode.__name__ = true
+__magicrt_godot_GeometryInstancePauseMode.new = {}
+__magicrt_godot_GeometryInstancePauseMode.__name__ = true
 
-__bolt_godot_GeometryInstancePhysicsInterpolationMode.new = {}
-__bolt_godot_GeometryInstancePhysicsInterpolationMode.__name__ = true
+__magicrt_godot_GeometryInstancePhysicsInterpolationMode.new = {}
+__magicrt_godot_GeometryInstancePhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_GeometryInstanceSignalNames.new = {}
-__bolt_godot_GeometryInstanceSignalNames.__name__ = true
+__magicrt_godot_GeometryInstanceSignalNames.new = {}
+__magicrt_godot_GeometryInstanceSignalNames.__name__ = true
 
-__bolt_godot_ImageSignalNames.new = {}
-__bolt_godot_ImageSignalNames.__name__ = true
+__magicrt_godot_ImageSignalNames.new = {}
+__magicrt_godot_ImageSignalNames.__name__ = true
 
-__bolt_godot_InputEventSignalNames.new = {}
-__bolt_godot_InputEventSignalNames.__name__ = true
+__magicrt_godot_InputEventSignalNames.new = {}
+__magicrt_godot_InputEventSignalNames.__name__ = true
 
-__bolt_godot_InputEventKeySignalNames.new = {}
-__bolt_godot_InputEventKeySignalNames.__name__ = true
+__magicrt_godot_InputEventKeySignalNames.new = {}
+__magicrt_godot_InputEventKeySignalNames.__name__ = true
 
-__bolt_godot_InputEventWithModifiersSignalNames.new = {}
-__bolt_godot_InputEventWithModifiersSignalNames.__name__ = true
+__magicrt_godot_InputEventWithModifiersSignalNames.new = {}
+__magicrt_godot_InputEventWithModifiersSignalNames.__name__ = true
 
-__bolt_godot_IntervalTweenerSignalNames.new = {}
-__bolt_godot_IntervalTweenerSignalNames.__name__ = true
+__magicrt_godot_IntervalTweenerSignalNames.new = {}
+__magicrt_godot_IntervalTweenerSignalNames.__name__ = true
 
-__bolt_godot_LightLightBakeMode.new = {}
-__bolt_godot_LightLightBakeMode.__name__ = true
+__magicrt_godot_LightLightBakeMode.new = {}
+__magicrt_godot_LightLightBakeMode.__name__ = true
 
-__bolt_godot_LightPortalMode.new = {}
-__bolt_godot_LightPortalMode.__name__ = true
+__magicrt_godot_LightPortalMode.new = {}
+__magicrt_godot_LightPortalMode.__name__ = true
 
-__bolt_godot_LightMergingMode.new = {}
-__bolt_godot_LightMergingMode.__name__ = true
+__magicrt_godot_LightMergingMode.new = {}
+__magicrt_godot_LightMergingMode.__name__ = true
 
-__bolt_godot_LightPauseMode.new = {}
-__bolt_godot_LightPauseMode.__name__ = true
+__magicrt_godot_LightPauseMode.new = {}
+__magicrt_godot_LightPauseMode.__name__ = true
 
-__bolt_godot_LightPhysicsInterpolationMode.new = {}
-__bolt_godot_LightPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_LightPhysicsInterpolationMode.new = {}
+__magicrt_godot_LightPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_LightSignalNames.new = {}
-__bolt_godot_LightSignalNames.__name__ = true
+__magicrt_godot_LightSignalNames.new = {}
+__magicrt_godot_LightSignalNames.__name__ = true
 
-__bolt_godot_MainLoopSignalNames.new = {}
-__bolt_godot_MainLoopSignalNames.__name__ = true
+__magicrt_godot_MainLoopSignalNames.new = {}
+__magicrt_godot_MainLoopSignalNames.__name__ = true
 
-__bolt_godot_MaterialSignalNames.new = {}
-__bolt_godot_MaterialSignalNames.__name__ = true
+__magicrt_godot_MaterialSignalNames.new = {}
+__magicrt_godot_MaterialSignalNames.__name__ = true
 
-__bolt_godot_MeshSignalNames.new = {}
-__bolt_godot_MeshSignalNames.__name__ = true
+__magicrt_godot_MeshSignalNames.new = {}
+__magicrt_godot_MeshSignalNames.__name__ = true
 
-__bolt_godot_MeshInstanceCastShadow.new = {}
-__bolt_godot_MeshInstanceCastShadow.__name__ = true
+__magicrt_godot_MeshInstanceCastShadow.new = {}
+__magicrt_godot_MeshInstanceCastShadow.__name__ = true
 
-__bolt_godot_MeshInstanceLightmapScale.new = {}
-__bolt_godot_MeshInstanceLightmapScale.__name__ = true
+__magicrt_godot_MeshInstanceLightmapScale.new = {}
+__magicrt_godot_MeshInstanceLightmapScale.__name__ = true
 
-__bolt_godot_MeshInstancePortalMode.new = {}
-__bolt_godot_MeshInstancePortalMode.__name__ = true
+__magicrt_godot_MeshInstancePortalMode.new = {}
+__magicrt_godot_MeshInstancePortalMode.__name__ = true
 
-__bolt_godot_MeshInstanceMergingMode.new = {}
-__bolt_godot_MeshInstanceMergingMode.__name__ = true
+__magicrt_godot_MeshInstanceMergingMode.new = {}
+__magicrt_godot_MeshInstanceMergingMode.__name__ = true
 
-__bolt_godot_MeshInstancePauseMode.new = {}
-__bolt_godot_MeshInstancePauseMode.__name__ = true
+__magicrt_godot_MeshInstancePauseMode.new = {}
+__magicrt_godot_MeshInstancePauseMode.__name__ = true
 
-__bolt_godot_MeshInstancePhysicsInterpolationMode.new = {}
-__bolt_godot_MeshInstancePhysicsInterpolationMode.__name__ = true
+__magicrt_godot_MeshInstancePhysicsInterpolationMode.new = {}
+__magicrt_godot_MeshInstancePhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_MeshInstanceSignalNames.new = {}
-__bolt_godot_MeshInstanceSignalNames.__name__ = true
+__magicrt_godot_MeshInstanceSignalNames.new = {}
+__magicrt_godot_MeshInstanceSignalNames.__name__ = true
 
-__bolt_godot_MethodTweenerSignalNames.new = {}
-__bolt_godot_MethodTweenerSignalNames.__name__ = true
+__magicrt_godot_MethodTweenerSignalNames.new = {}
+__magicrt_godot_MethodTweenerSignalNames.__name__ = true
 
-__bolt_godot_MultiMeshColorFormat.new = {}
-__bolt_godot_MultiMeshColorFormat.__name__ = true
+__magicrt_godot_MultiMeshColorFormat.new = {}
+__magicrt_godot_MultiMeshColorFormat.__name__ = true
 
-__bolt_godot_MultiMeshTransformFormat.new = {}
-__bolt_godot_MultiMeshTransformFormat.__name__ = true
+__magicrt_godot_MultiMeshTransformFormat.new = {}
+__magicrt_godot_MultiMeshTransformFormat.__name__ = true
 
-__bolt_godot_MultiMeshCustomDataFormat.new = {}
-__bolt_godot_MultiMeshCustomDataFormat.__name__ = true
+__magicrt_godot_MultiMeshCustomDataFormat.new = {}
+__magicrt_godot_MultiMeshCustomDataFormat.__name__ = true
 
-__bolt_godot_MultiMeshPhysicsInterpolationQuality.new = {}
-__bolt_godot_MultiMeshPhysicsInterpolationQuality.__name__ = true
+__magicrt_godot_MultiMeshPhysicsInterpolationQuality.new = {}
+__magicrt_godot_MultiMeshPhysicsInterpolationQuality.__name__ = true
 
-__bolt_godot_MultiMeshSignalNames.new = {}
-__bolt_godot_MultiMeshSignalNames.__name__ = true
+__magicrt_godot_MultiMeshSignalNames.new = {}
+__magicrt_godot_MultiMeshSignalNames.__name__ = true
 
-__bolt_godot_MultiplayerAPISignalNames.new = {}
-__bolt_godot_MultiplayerAPISignalNames.__name__ = true
+__magicrt_godot_MultiplayerAPISignalNames.new = {}
+__magicrt_godot_MultiplayerAPISignalNames.__name__ = true
 
-__bolt_godot_NetworkedMultiplayerPeerTransferMode.new = {}
-__bolt_godot_NetworkedMultiplayerPeerTransferMode.__name__ = true
+__magicrt_godot_NetworkedMultiplayerPeerTransferMode.new = {}
+__magicrt_godot_NetworkedMultiplayerPeerTransferMode.__name__ = true
 
-__bolt_godot_NetworkedMultiplayerPeerSignalNames.new = {}
-__bolt_godot_NetworkedMultiplayerPeerSignalNames.__name__ = true
+__magicrt_godot_NetworkedMultiplayerPeerSignalNames.new = {}
+__magicrt_godot_NetworkedMultiplayerPeerSignalNames.__name__ = true
 
-__bolt_godot_NodePauseMode.new = {}
-__bolt_godot_NodePauseMode.__name__ = true
+__magicrt_godot_NodePauseMode.new = {}
+__magicrt_godot_NodePauseMode.__name__ = true
 
-__bolt_godot_NodePhysicsInterpolationMode.new = {}
-__bolt_godot_NodePhysicsInterpolationMode.__name__ = true
+__magicrt_godot_NodePhysicsInterpolationMode.new = {}
+__magicrt_godot_NodePhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_NodeSignalNames.new = {}
-__bolt_godot_NodeSignalNames.__name__ = true
+__magicrt_godot_NodeSignalNames.new = {}
+__magicrt_godot_NodeSignalNames.__name__ = true
 
-__bolt_godot_NodePathSignalNames.new = {}
-__bolt_godot_NodePathSignalNames.__name__ = true
+__magicrt_godot_NodePathSignalNames.new = {}
+__magicrt_godot_NodePathSignalNames.__name__ = true
 
-__bolt_godot_ObjectSignalNames.new = {}
-__bolt_godot_ObjectSignalNames.__name__ = true
+__magicrt_godot_ObjectSignalNames.new = {}
+__magicrt_godot_ObjectSignalNames.__name__ = true
 
-__bolt_godot_PackedSceneSignalNames.new = {}
-__bolt_godot_PackedSceneSignalNames.__name__ = true
+__magicrt_godot_PackedSceneSignalNames.new = {}
+__magicrt_godot_PackedSceneSignalNames.__name__ = true
 
-__bolt_godot_PacketPeerSignalNames.new = {}
-__bolt_godot_PacketPeerSignalNames.__name__ = true
+__magicrt_godot_PacketPeerSignalNames.new = {}
+__magicrt_godot_PacketPeerSignalNames.__name__ = true
 
-__bolt_godot_Physics2DDirectSpaceStateSignalNames.new = {}
-__bolt_godot_Physics2DDirectSpaceStateSignalNames.__name__ = true
+__magicrt_godot_Physics2DDirectSpaceStateSignalNames.new = {}
+__magicrt_godot_Physics2DDirectSpaceStateSignalNames.__name__ = true
 
-__bolt_godot_Physics2DShapeQueryParametersSignalNames.new = {}
-__bolt_godot_Physics2DShapeQueryParametersSignalNames.__name__ = true
+__magicrt_godot_Physics2DShapeQueryParametersSignalNames.new = {}
+__magicrt_godot_Physics2DShapeQueryParametersSignalNames.__name__ = true
 
-__bolt_godot_PhysicsDirectSpaceStateSignalNames.new = {}
-__bolt_godot_PhysicsDirectSpaceStateSignalNames.__name__ = true
+__magicrt_godot_PhysicsDirectSpaceStateSignalNames.new = {}
+__magicrt_godot_PhysicsDirectSpaceStateSignalNames.__name__ = true
 
-__bolt_godot_PhysicsShapeQueryParametersSignalNames.new = {}
-__bolt_godot_PhysicsShapeQueryParametersSignalNames.__name__ = true
+__magicrt_godot_PhysicsShapeQueryParametersSignalNames.new = {}
+__magicrt_godot_PhysicsShapeQueryParametersSignalNames.__name__ = true
 
-__bolt_godot_PlaneSignalNames.new = {}
-__bolt_godot_PlaneSignalNames.__name__ = true
+__magicrt_godot_PlaneSignalNames.new = {}
+__magicrt_godot_PlaneSignalNames.__name__ = true
 
-__bolt_godot_PoolByteArraySignalNames.new = {}
-__bolt_godot_PoolByteArraySignalNames.__name__ = true
+__magicrt_godot_PoolByteArraySignalNames.new = {}
+__magicrt_godot_PoolByteArraySignalNames.__name__ = true
 
-__bolt_godot_PoolColorArraySignalNames.new = {}
-__bolt_godot_PoolColorArraySignalNames.__name__ = true
+__magicrt_godot_PoolColorArraySignalNames.new = {}
+__magicrt_godot_PoolColorArraySignalNames.__name__ = true
 
-__bolt_godot_PoolIntArraySignalNames.new = {}
-__bolt_godot_PoolIntArraySignalNames.__name__ = true
+__magicrt_godot_PoolIntArraySignalNames.new = {}
+__magicrt_godot_PoolIntArraySignalNames.__name__ = true
 
-__bolt_godot_PoolRealArraySignalNames.new = {}
-__bolt_godot_PoolRealArraySignalNames.__name__ = true
+__magicrt_godot_PoolRealArraySignalNames.new = {}
+__magicrt_godot_PoolRealArraySignalNames.__name__ = true
 
-__bolt_godot_PoolStringArraySignalNames.new = {}
-__bolt_godot_PoolStringArraySignalNames.__name__ = true
+__magicrt_godot_PoolStringArraySignalNames.new = {}
+__magicrt_godot_PoolStringArraySignalNames.__name__ = true
 
-__bolt_godot_PoolVector2ArraySignalNames.new = {}
-__bolt_godot_PoolVector2ArraySignalNames.__name__ = true
+__magicrt_godot_PoolVector2ArraySignalNames.new = {}
+__magicrt_godot_PoolVector2ArraySignalNames.__name__ = true
 
-__bolt_godot_PoolVector3ArraySignalNames.new = {}
-__bolt_godot_PoolVector3ArraySignalNames.__name__ = true
+__magicrt_godot_PoolVector3ArraySignalNames.new = {}
+__magicrt_godot_PoolVector3ArraySignalNames.__name__ = true
 
-__bolt_godot_PrimitiveMeshSignalNames.new = {}
-__bolt_godot_PrimitiveMeshSignalNames.__name__ = true
+__magicrt_godot_PrimitiveMeshSignalNames.new = {}
+__magicrt_godot_PrimitiveMeshSignalNames.__name__ = true
 
-__bolt_godot_PropertyTweenerSignalNames.new = {}
-__bolt_godot_PropertyTweenerSignalNames.__name__ = true
+__magicrt_godot_PropertyTweenerSignalNames.new = {}
+__magicrt_godot_PropertyTweenerSignalNames.__name__ = true
 
-__bolt_godot__Quat_Quat_Impl_.new = {}
-__bolt_godot__Quat_Quat_Impl_.__name__ = true
-__bolt_godot__Quat_Quat_Impl_._new = function(x,y,z,w) 
+__magicrt_godot__Quat_Quat_Impl_.new = {}
+__magicrt_godot__Quat_Quat_Impl_.__name__ = true
+__magicrt_godot__Quat_Quat_Impl_._new = function(x,y,z,w) 
   if (w == nil) then 
     w = 0;
   end;
@@ -1884,7 +1884,7 @@ __bolt_godot__Quat_Quat_Impl_._new = function(x,y,z,w)
   end;
   do return godot.Quat.__new(x, y, z, w) end;
 end
-__bolt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -1919,7 +1919,7 @@ __bolt_godot__Quat_Quat_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -1947,7 +1947,7 @@ __bolt_godot__Quat_Quat_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -1971,7 +1971,7 @@ __bolt_godot__Quat_Quat_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -2002,135 +2002,135 @@ __bolt_godot__Quat_Quat_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Quat_Quat_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Quat_Quat_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Quat_Quat_Impl_.toString = function(v) 
+__magicrt_godot__Quat_Quat_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot_RIDSignalNames.new = {}
-__bolt_godot_RIDSignalNames.__name__ = true
+__magicrt_godot_RIDSignalNames.new = {}
+__magicrt_godot_RIDSignalNames.__name__ = true
 
-__bolt_godot_Rect2SignalNames.new = {}
-__bolt_godot_Rect2SignalNames.__name__ = true
+__magicrt_godot_Rect2SignalNames.new = {}
+__magicrt_godot_Rect2SignalNames.__name__ = true
 
-__bolt_godot_ReferenceSignalNames.new = {}
-__bolt_godot_ReferenceSignalNames.__name__ = true
+__magicrt_godot_ReferenceSignalNames.new = {}
+__magicrt_godot_ReferenceSignalNames.__name__ = true
 
-__bolt_godot_ResourceSignalNames.new = {}
-__bolt_godot_ResourceSignalNames.__name__ = true
+__magicrt_godot_ResourceSignalNames.new = {}
+__magicrt_godot_ResourceSignalNames.__name__ = true
 
-__bolt_godot_SceneStateSignalNames.new = {}
-__bolt_godot_SceneStateSignalNames.__name__ = true
+__magicrt_godot_SceneStateSignalNames.new = {}
+__magicrt_godot_SceneStateSignalNames.__name__ = true
 
-__bolt_godot_SceneTreeSignalNames.new = {}
-__bolt_godot_SceneTreeSignalNames.__name__ = true
+__magicrt_godot_SceneTreeSignalNames.new = {}
+__magicrt_godot_SceneTreeSignalNames.__name__ = true
 
-__bolt_godot_SceneTreeTimerSignalNames.new = {}
-__bolt_godot_SceneTreeTimerSignalNames.__name__ = true
+__magicrt_godot_SceneTreeTimerSignalNames.new = {}
+__magicrt_godot_SceneTreeTimerSignalNames.__name__ = true
 
-__bolt_godot_SceneTreeTweenSignalNames.new = {}
-__bolt_godot_SceneTreeTweenSignalNames.__name__ = true
+__magicrt_godot_SceneTreeTweenSignalNames.new = {}
+__magicrt_godot_SceneTreeTweenSignalNames.__name__ = true
 
-__bolt_godot_ShaderSignalNames.new = {}
-__bolt_godot_ShaderSignalNames.__name__ = true
+__magicrt_godot_ShaderSignalNames.new = {}
+__magicrt_godot_ShaderSignalNames.__name__ = true
 
-__bolt_godot_ShapeSignalNames.new = {}
-__bolt_godot_ShapeSignalNames.__name__ = true
+__magicrt_godot_ShapeSignalNames.new = {}
+__magicrt_godot_ShapeSignalNames.__name__ = true
 
-__bolt_godot_SkinSignalNames.new = {}
-__bolt_godot_SkinSignalNames.__name__ = true
+__magicrt_godot_SkinSignalNames.new = {}
+__magicrt_godot_SkinSignalNames.__name__ = true
 
-__bolt_godot_SkyRadianceSize.new = {}
-__bolt_godot_SkyRadianceSize.__name__ = true
+__magicrt_godot_SkyRadianceSize.new = {}
+__magicrt_godot_SkyRadianceSize.__name__ = true
 
-__bolt_godot_SkySignalNames.new = {}
-__bolt_godot_SkySignalNames.__name__ = true
+__magicrt_godot_SkySignalNames.new = {}
+__magicrt_godot_SkySignalNames.__name__ = true
 
-__bolt_godot_SpatialMergingMode.new = {}
-__bolt_godot_SpatialMergingMode.__name__ = true
+__magicrt_godot_SpatialMergingMode.new = {}
+__magicrt_godot_SpatialMergingMode.__name__ = true
 
-__bolt_godot_SpatialPauseMode.new = {}
-__bolt_godot_SpatialPauseMode.__name__ = true
+__magicrt_godot_SpatialPauseMode.new = {}
+__magicrt_godot_SpatialPauseMode.__name__ = true
 
-__bolt_godot_SpatialPhysicsInterpolationMode.new = {}
-__bolt_godot_SpatialPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_SpatialPhysicsInterpolationMode.new = {}
+__magicrt_godot_SpatialPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_SpatialSignalNames.new = {}
-__bolt_godot_SpatialSignalNames.__name__ = true
+__magicrt_godot_SpatialSignalNames.new = {}
+__magicrt_godot_SpatialSignalNames.__name__ = true
 
-__bolt_godot_SpatialGizmoSignalNames.new = {}
-__bolt_godot_SpatialGizmoSignalNames.__name__ = true
+__magicrt_godot_SpatialGizmoSignalNames.new = {}
+__magicrt_godot_SpatialGizmoSignalNames.__name__ = true
 
-__bolt_godot_StyleBoxSignalNames.new = {}
-__bolt_godot_StyleBoxSignalNames.__name__ = true
+__magicrt_godot_StyleBoxSignalNames.new = {}
+__magicrt_godot_StyleBoxSignalNames.__name__ = true
 
-__bolt_godot_TextureSignalNames.new = {}
-__bolt_godot_TextureSignalNames.__name__ = true
+__magicrt_godot_TextureSignalNames.new = {}
+__magicrt_godot_TextureSignalNames.__name__ = true
 
-__bolt_godot_ThemeSignalNames.new = {}
-__bolt_godot_ThemeSignalNames.__name__ = true
+__magicrt_godot_ThemeSignalNames.new = {}
+__magicrt_godot_ThemeSignalNames.__name__ = true
 
-__bolt_godot_TransformSignalNames.new = {}
-__bolt_godot_TransformSignalNames.__name__ = true
+__magicrt_godot_TransformSignalNames.new = {}
+__magicrt_godot_TransformSignalNames.__name__ = true
 
-__bolt_godot_Transform2DSignalNames.new = {}
-__bolt_godot_Transform2DSignalNames.__name__ = true
+__magicrt_godot_Transform2DSignalNames.new = {}
+__magicrt_godot_Transform2DSignalNames.__name__ = true
 
-__bolt_godot_TriangleMeshSignalNames.new = {}
-__bolt_godot_TriangleMeshSignalNames.__name__ = true
+__magicrt_godot_TriangleMeshSignalNames.new = {}
+__magicrt_godot_TriangleMeshSignalNames.__name__ = true
 
-__bolt_godot_TweenerSignalNames.new = {}
-__bolt_godot_TweenerSignalNames.__name__ = true
+__magicrt_godot_TweenerSignalNames.new = {}
+__magicrt_godot_TweenerSignalNames.__name__ = true
 
-__bolt_godot_VariantSignalNames.new = {}
-__bolt_godot_VariantSignalNames.__name__ = true
+__magicrt_godot_VariantSignalNames.new = {}
+__magicrt_godot_VariantSignalNames.__name__ = true
 
-__bolt_godot__Vector2_Vector2_Impl_.new = {}
-__bolt_godot__Vector2_Vector2_Impl_.__name__ = true
-__bolt_godot__Vector2_Vector2_Impl_._new = function(x,y) 
+__magicrt_godot__Vector2_Vector2_Impl_.new = {}
+__magicrt_godot__Vector2_Vector2_Impl_.__name__ = true
+__magicrt_godot__Vector2_Vector2_Impl_._new = function(x,y) 
   if (y == nil) then 
     y = 0;
   end;
@@ -2139,7 +2139,7 @@ __bolt_godot__Vector2_Vector2_Impl_._new = function(x,y)
   end;
   do return godot.Vector2.__new(x, y) end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -2174,7 +2174,7 @@ __bolt_godot__Vector2_Vector2_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -2202,7 +2202,7 @@ __bolt_godot__Vector2_Vector2_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -2217,7 +2217,7 @@ __bolt_godot__Vector2_Vector2_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -2236,57 +2236,57 @@ __bolt_godot__Vector2_Vector2_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Vector2_Vector2_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Vector2_Vector2_Impl_.toString = function(v) 
+__magicrt_godot__Vector2_Vector2_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot__Vector3_Vector3_Impl_.new = {}
-__bolt_godot__Vector3_Vector3_Impl_.__name__ = true
-__bolt_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
+__magicrt_godot__Vector3_Vector3_Impl_.new = {}
+__magicrt_godot__Vector3_Vector3_Impl_.__name__ = true
+__magicrt_godot__Vector3_Vector3_Impl_._new = function(x,y,z) 
   if (z == nil) then 
     z = 0;
   end;
@@ -2298,7 +2298,7 @@ __bolt_godot__Vector3_Vector3_Impl_._new = function(x,y,z)
   end;
   do return godot.Vector3.__new(x, y, z) end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
+__magicrt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name) 
   if (name == "toString") then 
     do return function() 
       local v = this1;
@@ -2333,7 +2333,7 @@ __bolt_godot__Vector3_Vector3_Impl_.fieldRead = function(this1,name)
     end;
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
+__magicrt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value) 
   local o = this1;
   if ((function() 
     local _hx_1
@@ -2361,7 +2361,7 @@ __bolt_godot__Vector3_Vector3_Impl_.fieldWrite = function(this1,name,value)
     _G.error(__haxe_Exception.thrown("Invalid field"),0);
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
+__magicrt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n) 
   if (n == 0) then 
     do return this1.x end;
   end;
@@ -2382,7 +2382,7 @@ __bolt_godot__Vector3_Vector3_Impl_.arrayRead = function(this1,n)
   end;
   _G.error(__haxe_Exception.thrown("Invalid index"),0);
 end
-__bolt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
+__magicrt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value) 
   if (n == 0) then 
     this1.x = value;
   else
@@ -2409,113 +2409,113 @@ __bolt_godot__Vector3_Vector3_Impl_.arrayWrite = function(this1,n,value)
     end;
   end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.add = function(this1,rhs) 
   local lhs = this1;
   do return lhs + rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.sub = function(this1,rhs) 
   local lhs = this1;
   do return lhs - rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.mul = function(this1,rhs) 
   local lhs = this1;
   do return lhs * rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.div = function(this1,rhs) 
   local lhs = this1;
   do return lhs / rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.mod = function(this1,rhs) 
   local lhs = this1;
   do return lhs % rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.eq = function(this1,rhs) 
   local lhs = this1;
   do return lhs == rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.neq = function(this1,rhs) 
   local lhs = this1;
   do return lhs ~= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.lt = function(this1,rhs) 
   local lhs = this1;
   do return lhs < rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.lte = function(this1,rhs) 
   local lhs = this1;
   do return lhs <= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.gt = function(this1,rhs) 
   local lhs = this1;
   do return lhs > rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
+__magicrt_godot__Vector3_Vector3_Impl_.gte = function(this1,rhs) 
   local lhs = this1;
   do return lhs >= rhs end;
 end
-__bolt_godot__Vector3_Vector3_Impl_.toString = function(v) 
+__magicrt_godot__Vector3_Vector3_Impl_.toString = function(v) 
   do return v.toString() end;
 end
 
-__bolt_godot_ViewportMsaa.new = {}
-__bolt_godot_ViewportMsaa.__name__ = true
+__magicrt_godot_ViewportMsaa.new = {}
+__magicrt_godot_ViewportMsaa.__name__ = true
 
-__bolt_godot_ViewportUsage.new = {}
-__bolt_godot_ViewportUsage.__name__ = true
+__magicrt_godot_ViewportUsage.new = {}
+__magicrt_godot_ViewportUsage.__name__ = true
 
-__bolt_godot_ViewportDebugDraw.new = {}
-__bolt_godot_ViewportDebugDraw.__name__ = true
+__magicrt_godot_ViewportDebugDraw.new = {}
+__magicrt_godot_ViewportDebugDraw.__name__ = true
 
-__bolt_godot_ViewportRenderTargetClearMode.new = {}
-__bolt_godot_ViewportRenderTargetClearMode.__name__ = true
+__magicrt_godot_ViewportRenderTargetClearMode.new = {}
+__magicrt_godot_ViewportRenderTargetClearMode.__name__ = true
 
-__bolt_godot_ViewportRenderTargetUpdateMode.new = {}
-__bolt_godot_ViewportRenderTargetUpdateMode.__name__ = true
+__magicrt_godot_ViewportRenderTargetUpdateMode.new = {}
+__magicrt_godot_ViewportRenderTargetUpdateMode.__name__ = true
 
-__bolt_godot_ViewportShadowAtlasQuad0.new = {}
-__bolt_godot_ViewportShadowAtlasQuad0.__name__ = true
+__magicrt_godot_ViewportShadowAtlasQuad0.new = {}
+__magicrt_godot_ViewportShadowAtlasQuad0.__name__ = true
 
-__bolt_godot_ViewportShadowAtlasQuad1.new = {}
-__bolt_godot_ViewportShadowAtlasQuad1.__name__ = true
+__magicrt_godot_ViewportShadowAtlasQuad1.new = {}
+__magicrt_godot_ViewportShadowAtlasQuad1.__name__ = true
 
-__bolt_godot_ViewportShadowAtlasQuad2.new = {}
-__bolt_godot_ViewportShadowAtlasQuad2.__name__ = true
+__magicrt_godot_ViewportShadowAtlasQuad2.new = {}
+__magicrt_godot_ViewportShadowAtlasQuad2.__name__ = true
 
-__bolt_godot_ViewportShadowAtlasQuad3.new = {}
-__bolt_godot_ViewportShadowAtlasQuad3.__name__ = true
+__magicrt_godot_ViewportShadowAtlasQuad3.new = {}
+__magicrt_godot_ViewportShadowAtlasQuad3.__name__ = true
 
-__bolt_godot_ViewportPauseMode.new = {}
-__bolt_godot_ViewportPauseMode.__name__ = true
+__magicrt_godot_ViewportPauseMode.new = {}
+__magicrt_godot_ViewportPauseMode.__name__ = true
 
-__bolt_godot_ViewportPhysicsInterpolationMode.new = {}
-__bolt_godot_ViewportPhysicsInterpolationMode.__name__ = true
+__magicrt_godot_ViewportPhysicsInterpolationMode.new = {}
+__magicrt_godot_ViewportPhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_ViewportSignalNames.new = {}
-__bolt_godot_ViewportSignalNames.__name__ = true
+__magicrt_godot_ViewportSignalNames.new = {}
+__magicrt_godot_ViewportSignalNames.__name__ = true
 
-__bolt_godot_ViewportTextureSignalNames.new = {}
-__bolt_godot_ViewportTextureSignalNames.__name__ = true
+__magicrt_godot_ViewportTextureSignalNames.new = {}
+__magicrt_godot_ViewportTextureSignalNames.__name__ = true
 
-__bolt_godot_VisualInstancePortalMode.new = {}
-__bolt_godot_VisualInstancePortalMode.__name__ = true
+__magicrt_godot_VisualInstancePortalMode.new = {}
+__magicrt_godot_VisualInstancePortalMode.__name__ = true
 
-__bolt_godot_VisualInstanceMergingMode.new = {}
-__bolt_godot_VisualInstanceMergingMode.__name__ = true
+__magicrt_godot_VisualInstanceMergingMode.new = {}
+__magicrt_godot_VisualInstanceMergingMode.__name__ = true
 
-__bolt_godot_VisualInstancePauseMode.new = {}
-__bolt_godot_VisualInstancePauseMode.__name__ = true
+__magicrt_godot_VisualInstancePauseMode.new = {}
+__magicrt_godot_VisualInstancePauseMode.__name__ = true
 
-__bolt_godot_VisualInstancePhysicsInterpolationMode.new = {}
-__bolt_godot_VisualInstancePhysicsInterpolationMode.__name__ = true
+__magicrt_godot_VisualInstancePhysicsInterpolationMode.new = {}
+__magicrt_godot_VisualInstancePhysicsInterpolationMode.__name__ = true
 
-__bolt_godot_VisualInstanceSignalNames.new = {}
-__bolt_godot_VisualInstanceSignalNames.__name__ = true
+__magicrt_godot_VisualInstanceSignalNames.new = {}
+__magicrt_godot_VisualInstanceSignalNames.__name__ = true
 
-__bolt_godot_WorldSignalNames.new = {}
-__bolt_godot_WorldSignalNames.__name__ = true
+__magicrt_godot_WorldSignalNames.new = {}
+__magicrt_godot_WorldSignalNames.__name__ = true
 
-__bolt_godot_World2DSignalNames.new = {}
-__bolt_godot_World2DSignalNames.__name__ = true
+__magicrt_godot_World2DSignalNames.new = {}
+__magicrt_godot_World2DSignalNames.__name__ = true
 
 __sys_io_File.new = {}
 __sys_io_File.__name__ = true
@@ -2568,721 +2568,721 @@ end
 local _hx_static_init = function()
   
   String.__name__ = true;
-  Array.__name__ = true;__bolt_godot_ArrayMeshBlendShapeMode.Normalized = 0;
+  Array.__name__ = true;__magicrt_godot_ArrayMeshBlendShapeMode.Normalized = 0;
   
-  __bolt_godot_ArrayMeshBlendShapeMode.Relative = 1;
+  __magicrt_godot_ArrayMeshBlendShapeMode.Relative = 1;
   
-  __bolt_godot_CameraKeepAspect.Width = 0;
+  __magicrt_godot_CameraKeepAspect.Width = 0;
   
-  __bolt_godot_CameraKeepAspect.Height = 1;
+  __magicrt_godot_CameraKeepAspect.Height = 1;
   
-  __bolt_godot_CameraDopplerTracking.Disabled = 0;
+  __magicrt_godot_CameraDopplerTracking.Disabled = 0;
   
-  __bolt_godot_CameraDopplerTracking.IdleStep = 1;
+  __magicrt_godot_CameraDopplerTracking.IdleStep = 1;
   
-  __bolt_godot_CameraDopplerTracking.PhysicsStep = 2;
+  __magicrt_godot_CameraDopplerTracking.PhysicsStep = 2;
   
-  __bolt_godot_CameraProjection.Perspective = 0;
+  __magicrt_godot_CameraProjection.Perspective = 0;
   
-  __bolt_godot_CameraProjection.Orthogonal = 1;
+  __magicrt_godot_CameraProjection.Orthogonal = 1;
   
-  __bolt_godot_CameraProjection.Frustum = 2;
+  __magicrt_godot_CameraProjection.Frustum = 2;
   
-  __bolt_godot_CameraMergingMode.Inherit = 0;
+  __magicrt_godot_CameraMergingMode.Inherit = 0;
   
-  __bolt_godot_CameraMergingMode.Off = 1;
+  __magicrt_godot_CameraMergingMode.Off = 1;
   
-  __bolt_godot_CameraMergingMode.On = 2;
+  __magicrt_godot_CameraMergingMode.On = 2;
   
-  __bolt_godot_CameraPauseMode.Inherit = 0;
+  __magicrt_godot_CameraPauseMode.Inherit = 0;
   
-  __bolt_godot_CameraPauseMode.Stop = 1;
+  __magicrt_godot_CameraPauseMode.Stop = 1;
   
-  __bolt_godot_CameraPauseMode.Process = 2;
+  __magicrt_godot_CameraPauseMode.Process = 2;
   
-  __bolt_godot_CameraPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_CameraPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_CameraPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_CameraPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_CameraPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_CameraPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_CanvasItemPauseMode.Inherit = 0;
+  __magicrt_godot_CanvasItemPauseMode.Inherit = 0;
   
-  __bolt_godot_CanvasItemPauseMode.Stop = 1;
+  __magicrt_godot_CanvasItemPauseMode.Stop = 1;
   
-  __bolt_godot_CanvasItemPauseMode.Process = 2;
+  __magicrt_godot_CanvasItemPauseMode.Process = 2;
   
-  __bolt_godot_CanvasItemPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_CanvasItemPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_CanvasItemPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_CanvasItemPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_CanvasItemPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_CanvasItemPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_CanvasItemSignalNames.draw = "draw";
+  __magicrt_godot_CanvasItemSignalNames.draw = "draw";
   
-  __bolt_godot_CanvasItemSignalNames.hide = "hide";
+  __magicrt_godot_CanvasItemSignalNames.hide = "hide";
   
-  __bolt_godot_CanvasItemSignalNames.itemRectChanged = "item_rect_changed";
+  __magicrt_godot_CanvasItemSignalNames.itemRectChanged = "item_rect_changed";
   
-  __bolt_godot_CanvasItemSignalNames.visibilityChanged = "visibility_changed";
+  __magicrt_godot_CanvasItemSignalNames.visibilityChanged = "visibility_changed";
   
-  __bolt_godot_ControlGrowHorizontal.Begin = 0;
+  __magicrt_godot_ControlGrowHorizontal.Begin = 0;
   
-  __bolt_godot_ControlGrowHorizontal.End = 1;
+  __magicrt_godot_ControlGrowHorizontal.End = 1;
   
-  __bolt_godot_ControlGrowHorizontal.Both = 2;
+  __magicrt_godot_ControlGrowHorizontal.Both = 2;
   
-  __bolt_godot_ControlGrowVertical.Begin = 0;
+  __magicrt_godot_ControlGrowVertical.Begin = 0;
   
-  __bolt_godot_ControlGrowVertical.End = 1;
+  __magicrt_godot_ControlGrowVertical.End = 1;
   
-  __bolt_godot_ControlGrowVertical.Both = 2;
+  __magicrt_godot_ControlGrowVertical.Both = 2;
   
-  __bolt_godot_ControlFocusMode.None = 0;
+  __magicrt_godot_ControlFocusMode.None = 0;
   
-  __bolt_godot_ControlFocusMode.Click = 1;
+  __magicrt_godot_ControlFocusMode.Click = 1;
   
-  __bolt_godot_ControlFocusMode.All = 2;
+  __magicrt_godot_ControlFocusMode.All = 2;
   
-  __bolt_godot_ControlMouseFilter.Stop = 0;
+  __magicrt_godot_ControlMouseFilter.Stop = 0;
   
-  __bolt_godot_ControlMouseFilter.Pass = 1;
+  __magicrt_godot_ControlMouseFilter.Pass = 1;
   
-  __bolt_godot_ControlMouseFilter.Ignore = 2;
+  __magicrt_godot_ControlMouseFilter.Ignore = 2;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Arrow = 0;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Arrow = 0;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Ibeam = 1;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Ibeam = 1;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.PointingHand = 2;
+  __magicrt_godot_ControlMouseDefaultCursorShape.PointingHand = 2;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Cross = 3;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Cross = 3;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Wait = 4;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Wait = 4;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Busy = 5;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Busy = 5;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Drag = 6;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Drag = 6;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.CanDrop = 7;
+  __magicrt_godot_ControlMouseDefaultCursorShape.CanDrop = 7;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Forbidden = 8;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Forbidden = 8;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Vsize = 9;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Vsize = 9;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Hsize = 10;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Hsize = 10;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Bdiagsize = 11;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Bdiagsize = 11;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Fdiagsize = 12;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Fdiagsize = 12;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Move = 13;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Move = 13;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Vsplit = 14;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Vsplit = 14;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Hsplit = 15;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Hsplit = 15;
   
-  __bolt_godot_ControlMouseDefaultCursorShape.Help = 16;
+  __magicrt_godot_ControlMouseDefaultCursorShape.Help = 16;
   
-  __bolt_godot_ControlPauseMode.Inherit = 0;
+  __magicrt_godot_ControlPauseMode.Inherit = 0;
   
-  __bolt_godot_ControlPauseMode.Stop = 1;
+  __magicrt_godot_ControlPauseMode.Stop = 1;
   
-  __bolt_godot_ControlPauseMode.Process = 2;
+  __magicrt_godot_ControlPauseMode.Process = 2;
   
-  __bolt_godot_ControlPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_ControlPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_ControlPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_ControlPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_ControlPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_ControlPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_ControlSignalNames.focusEntered = "focus_entered";
+  __magicrt_godot_ControlSignalNames.focusEntered = "focus_entered";
   
-  __bolt_godot_ControlSignalNames.focusExited = "focus_exited";
+  __magicrt_godot_ControlSignalNames.focusExited = "focus_exited";
   
-  __bolt_godot_ControlSignalNames.guiInput = "gui_input";
+  __magicrt_godot_ControlSignalNames.guiInput = "gui_input";
   
-  __bolt_godot_ControlSignalNames.minimumSizeChanged = "minimum_size_changed";
+  __magicrt_godot_ControlSignalNames.minimumSizeChanged = "minimum_size_changed";
   
-  __bolt_godot_ControlSignalNames.modalClosed = "modal_closed";
+  __magicrt_godot_ControlSignalNames.modalClosed = "modal_closed";
   
-  __bolt_godot_ControlSignalNames.mouseEntered = "mouse_entered";
+  __magicrt_godot_ControlSignalNames.mouseEntered = "mouse_entered";
   
-  __bolt_godot_ControlSignalNames.mouseExited = "mouse_exited";
+  __magicrt_godot_ControlSignalNames.mouseExited = "mouse_exited";
   
-  __bolt_godot_ControlSignalNames.resized = "resized";
+  __magicrt_godot_ControlSignalNames.resized = "resized";
   
-  __bolt_godot_ControlSignalNames.sizeFlagsChanged = "size_flags_changed";
+  __magicrt_godot_ControlSignalNames.sizeFlagsChanged = "size_flags_changed";
   
-  __bolt_godot_CullInstancePortalMode.Static = 0;
+  __magicrt_godot_CullInstancePortalMode.Static = 0;
   
-  __bolt_godot_CullInstancePortalMode.Dynamic = 1;
+  __magicrt_godot_CullInstancePortalMode.Dynamic = 1;
   
-  __bolt_godot_CullInstancePortalMode.Roaming = 2;
+  __magicrt_godot_CullInstancePortalMode.Roaming = 2;
   
-  __bolt_godot_CullInstancePortalMode.Global = 3;
+  __magicrt_godot_CullInstancePortalMode.Global = 3;
   
-  __bolt_godot_CullInstancePortalMode.Ignore = 4;
+  __magicrt_godot_CullInstancePortalMode.Ignore = 4;
   
-  __bolt_godot_CullInstanceMergingMode.Inherit = 0;
+  __magicrt_godot_CullInstanceMergingMode.Inherit = 0;
   
-  __bolt_godot_CullInstanceMergingMode.Off = 1;
+  __magicrt_godot_CullInstanceMergingMode.Off = 1;
   
-  __bolt_godot_CullInstanceMergingMode.On = 2;
+  __magicrt_godot_CullInstanceMergingMode.On = 2;
   
-  __bolt_godot_CullInstancePauseMode.Inherit = 0;
+  __magicrt_godot_CullInstancePauseMode.Inherit = 0;
   
-  __bolt_godot_CullInstancePauseMode.Stop = 1;
+  __magicrt_godot_CullInstancePauseMode.Stop = 1;
   
-  __bolt_godot_CullInstancePauseMode.Process = 2;
+  __magicrt_godot_CullInstancePauseMode.Process = 2;
   
-  __bolt_godot_CullInstancePhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_CullInstancePhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_CullInstancePhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_CullInstancePhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_CullInstancePhysicsInterpolationMode.On = 2;
+  __magicrt_godot_CullInstancePhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_DirectionalLightDirectionalShadowMode.Orthogonal = 0;
+  __magicrt_godot_DirectionalLightDirectionalShadowMode.Orthogonal = 0;
   
-  __bolt_godot_DirectionalLightDirectionalShadowMode.Parallel2Splits = 1;
+  __magicrt_godot_DirectionalLightDirectionalShadowMode.Parallel2Splits = 1;
   
-  __bolt_godot_DirectionalLightDirectionalShadowMode.Parallel3Splits = 2;
+  __magicrt_godot_DirectionalLightDirectionalShadowMode.Parallel3Splits = 2;
   
-  __bolt_godot_DirectionalLightDirectionalShadowMode.Parallel4Splits = 3;
+  __magicrt_godot_DirectionalLightDirectionalShadowMode.Parallel4Splits = 3;
   
-  __bolt_godot_DirectionalLightDirectionalShadowDepthRange.Stable = 0;
+  __magicrt_godot_DirectionalLightDirectionalShadowDepthRange.Stable = 0;
   
-  __bolt_godot_DirectionalLightDirectionalShadowDepthRange.Optimized = 1;
+  __magicrt_godot_DirectionalLightDirectionalShadowDepthRange.Optimized = 1;
   
-  __bolt_godot_DirectionalLightLightBakeMode.Disabled = 0;
+  __magicrt_godot_DirectionalLightLightBakeMode.Disabled = 0;
   
-  __bolt_godot_DirectionalLightLightBakeMode.Indirect = 1;
+  __magicrt_godot_DirectionalLightLightBakeMode.Indirect = 1;
   
-  __bolt_godot_DirectionalLightLightBakeMode.All = 2;
+  __magicrt_godot_DirectionalLightLightBakeMode.All = 2;
   
-  __bolt_godot_DirectionalLightPortalMode.Static = 0;
+  __magicrt_godot_DirectionalLightPortalMode.Static = 0;
   
-  __bolt_godot_DirectionalLightPortalMode.Dynamic = 1;
+  __magicrt_godot_DirectionalLightPortalMode.Dynamic = 1;
   
-  __bolt_godot_DirectionalLightPortalMode.Roaming = 2;
+  __magicrt_godot_DirectionalLightPortalMode.Roaming = 2;
   
-  __bolt_godot_DirectionalLightPortalMode.Global = 3;
+  __magicrt_godot_DirectionalLightPortalMode.Global = 3;
   
-  __bolt_godot_DirectionalLightPortalMode.Ignore = 4;
+  __magicrt_godot_DirectionalLightPortalMode.Ignore = 4;
   
-  __bolt_godot_DirectionalLightMergingMode.Inherit = 0;
+  __magicrt_godot_DirectionalLightMergingMode.Inherit = 0;
   
-  __bolt_godot_DirectionalLightMergingMode.Off = 1;
+  __magicrt_godot_DirectionalLightMergingMode.Off = 1;
   
-  __bolt_godot_DirectionalLightMergingMode.On = 2;
+  __magicrt_godot_DirectionalLightMergingMode.On = 2;
   
-  __bolt_godot_DirectionalLightPauseMode.Inherit = 0;
+  __magicrt_godot_DirectionalLightPauseMode.Inherit = 0;
   
-  __bolt_godot_DirectionalLightPauseMode.Stop = 1;
+  __magicrt_godot_DirectionalLightPauseMode.Stop = 1;
   
-  __bolt_godot_DirectionalLightPauseMode.Process = 2;
+  __magicrt_godot_DirectionalLightPauseMode.Process = 2;
   
-  __bolt_godot_DirectionalLightPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_DirectionalLightPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_DirectionalLightPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_DirectionalLightPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_DirectionalLightPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_DirectionalLightPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_EnvironmentBackgroundMode.ClearColor = 0;
+  __magicrt_godot_EnvironmentBackgroundMode.ClearColor = 0;
   
-  __bolt_godot_EnvironmentBackgroundMode.Color = 1;
+  __magicrt_godot_EnvironmentBackgroundMode.Color = 1;
   
-  __bolt_godot_EnvironmentBackgroundMode.Sky = 2;
+  __magicrt_godot_EnvironmentBackgroundMode.Sky = 2;
   
-  __bolt_godot_EnvironmentBackgroundMode.ColorSky = 3;
+  __magicrt_godot_EnvironmentBackgroundMode.ColorSky = 3;
   
-  __bolt_godot_EnvironmentBackgroundMode.Canvas = 4;
+  __magicrt_godot_EnvironmentBackgroundMode.Canvas = 4;
   
-  __bolt_godot_EnvironmentBackgroundMode.Keep = 5;
+  __magicrt_godot_EnvironmentBackgroundMode.Keep = 5;
   
-  __bolt_godot_EnvironmentBackgroundMode.CameraFeed = 6;
+  __magicrt_godot_EnvironmentBackgroundMode.CameraFeed = 6;
   
-  __bolt_godot_EnvironmentBackgroundMode.Max = 7;
+  __magicrt_godot_EnvironmentBackgroundMode.Max = 7;
   
-  __bolt_godot_EnvironmentTonemapMode.Linear = 0;
+  __magicrt_godot_EnvironmentTonemapMode.Linear = 0;
   
-  __bolt_godot_EnvironmentTonemapMode.Reinhardt = 1;
+  __magicrt_godot_EnvironmentTonemapMode.Reinhardt = 1;
   
-  __bolt_godot_EnvironmentTonemapMode.Filmic = 2;
+  __magicrt_godot_EnvironmentTonemapMode.Filmic = 2;
   
-  __bolt_godot_EnvironmentTonemapMode.Aces = 3;
+  __magicrt_godot_EnvironmentTonemapMode.Aces = 3;
   
-  __bolt_godot_EnvironmentTonemapMode.AcesFitted = 4;
+  __magicrt_godot_EnvironmentTonemapMode.AcesFitted = 4;
   
-  __bolt_godot_EnvironmentSsaoQuality.Low = 0;
+  __magicrt_godot_EnvironmentSsaoQuality.Low = 0;
   
-  __bolt_godot_EnvironmentSsaoQuality.Medium = 1;
+  __magicrt_godot_EnvironmentSsaoQuality.Medium = 1;
   
-  __bolt_godot_EnvironmentSsaoQuality.High = 2;
+  __magicrt_godot_EnvironmentSsaoQuality.High = 2;
   
-  __bolt_godot_EnvironmentSsaoBlur.Disabled = 0;
+  __magicrt_godot_EnvironmentSsaoBlur.Disabled = 0;
   
-  __bolt_godot_EnvironmentSsaoBlur.Blur1x1 = 1;
+  __magicrt_godot_EnvironmentSsaoBlur.Blur1x1 = 1;
   
-  __bolt_godot_EnvironmentSsaoBlur.Blur2x2 = 2;
+  __magicrt_godot_EnvironmentSsaoBlur.Blur2x2 = 2;
   
-  __bolt_godot_EnvironmentSsaoBlur.Blur3x3 = 3;
+  __magicrt_godot_EnvironmentSsaoBlur.Blur3x3 = 3;
   
-  __bolt_godot_EnvironmentDofBlurFarQuality.Low = 0;
+  __magicrt_godot_EnvironmentDofBlurFarQuality.Low = 0;
   
-  __bolt_godot_EnvironmentDofBlurFarQuality.Medium = 1;
+  __magicrt_godot_EnvironmentDofBlurFarQuality.Medium = 1;
   
-  __bolt_godot_EnvironmentDofBlurFarQuality.High = 2;
+  __magicrt_godot_EnvironmentDofBlurFarQuality.High = 2;
   
-  __bolt_godot_EnvironmentDofBlurNearQuality.Low = 0;
+  __magicrt_godot_EnvironmentDofBlurNearQuality.Low = 0;
   
-  __bolt_godot_EnvironmentDofBlurNearQuality.Medium = 1;
+  __magicrt_godot_EnvironmentDofBlurNearQuality.Medium = 1;
   
-  __bolt_godot_EnvironmentDofBlurNearQuality.High = 2;
+  __magicrt_godot_EnvironmentDofBlurNearQuality.High = 2;
   
-  __bolt_godot_EnvironmentGlowBlendMode.Additive = 0;
+  __magicrt_godot_EnvironmentGlowBlendMode.Additive = 0;
   
-  __bolt_godot_EnvironmentGlowBlendMode.Screen = 1;
+  __magicrt_godot_EnvironmentGlowBlendMode.Screen = 1;
   
-  __bolt_godot_EnvironmentGlowBlendMode.Softlight = 2;
+  __magicrt_godot_EnvironmentGlowBlendMode.Softlight = 2;
   
-  __bolt_godot_EnvironmentGlowBlendMode.Replace = 3;
+  __magicrt_godot_EnvironmentGlowBlendMode.Replace = 3;
   
-  __bolt_godot_GeometryInstanceCastShadow.Off = 0;
+  __magicrt_godot_GeometryInstanceCastShadow.Off = 0;
   
-  __bolt_godot_GeometryInstanceCastShadow.On = 1;
+  __magicrt_godot_GeometryInstanceCastShadow.On = 1;
   
-  __bolt_godot_GeometryInstanceCastShadow.DoubleSided = 2;
+  __magicrt_godot_GeometryInstanceCastShadow.DoubleSided = 2;
   
-  __bolt_godot_GeometryInstanceCastShadow.ShadowsOnly = 3;
+  __magicrt_godot_GeometryInstanceCastShadow.ShadowsOnly = 3;
   
-  __bolt_godot_GeometryInstanceLightmapScale.Scale1x = 0;
+  __magicrt_godot_GeometryInstanceLightmapScale.Scale1x = 0;
   
-  __bolt_godot_GeometryInstanceLightmapScale.Scale2x = 1;
+  __magicrt_godot_GeometryInstanceLightmapScale.Scale2x = 1;
   
-  __bolt_godot_GeometryInstanceLightmapScale.Scale4x = 2;
+  __magicrt_godot_GeometryInstanceLightmapScale.Scale4x = 2;
   
-  __bolt_godot_GeometryInstanceLightmapScale.Scale8x = 3;
+  __magicrt_godot_GeometryInstanceLightmapScale.Scale8x = 3;
   
-  __bolt_godot_GeometryInstanceLightmapScale.Max = 4;
+  __magicrt_godot_GeometryInstanceLightmapScale.Max = 4;
   
-  __bolt_godot_GeometryInstancePortalMode.Static = 0;
+  __magicrt_godot_GeometryInstancePortalMode.Static = 0;
   
-  __bolt_godot_GeometryInstancePortalMode.Dynamic = 1;
+  __magicrt_godot_GeometryInstancePortalMode.Dynamic = 1;
   
-  __bolt_godot_GeometryInstancePortalMode.Roaming = 2;
+  __magicrt_godot_GeometryInstancePortalMode.Roaming = 2;
   
-  __bolt_godot_GeometryInstancePortalMode.Global = 3;
+  __magicrt_godot_GeometryInstancePortalMode.Global = 3;
   
-  __bolt_godot_GeometryInstancePortalMode.Ignore = 4;
+  __magicrt_godot_GeometryInstancePortalMode.Ignore = 4;
   
-  __bolt_godot_GeometryInstanceMergingMode.Inherit = 0;
+  __magicrt_godot_GeometryInstanceMergingMode.Inherit = 0;
   
-  __bolt_godot_GeometryInstanceMergingMode.Off = 1;
+  __magicrt_godot_GeometryInstanceMergingMode.Off = 1;
   
-  __bolt_godot_GeometryInstanceMergingMode.On = 2;
+  __magicrt_godot_GeometryInstanceMergingMode.On = 2;
   
-  __bolt_godot_GeometryInstancePauseMode.Inherit = 0;
+  __magicrt_godot_GeometryInstancePauseMode.Inherit = 0;
   
-  __bolt_godot_GeometryInstancePauseMode.Stop = 1;
+  __magicrt_godot_GeometryInstancePauseMode.Stop = 1;
   
-  __bolt_godot_GeometryInstancePauseMode.Process = 2;
+  __magicrt_godot_GeometryInstancePauseMode.Process = 2;
   
-  __bolt_godot_GeometryInstancePhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_GeometryInstancePhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_GeometryInstancePhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_GeometryInstancePhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_GeometryInstancePhysicsInterpolationMode.On = 2;
+  __magicrt_godot_GeometryInstancePhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_LightLightBakeMode.Disabled = 0;
+  __magicrt_godot_LightLightBakeMode.Disabled = 0;
   
-  __bolt_godot_LightLightBakeMode.Indirect = 1;
+  __magicrt_godot_LightLightBakeMode.Indirect = 1;
   
-  __bolt_godot_LightLightBakeMode.All = 2;
+  __magicrt_godot_LightLightBakeMode.All = 2;
   
-  __bolt_godot_LightPortalMode.Static = 0;
+  __magicrt_godot_LightPortalMode.Static = 0;
   
-  __bolt_godot_LightPortalMode.Dynamic = 1;
+  __magicrt_godot_LightPortalMode.Dynamic = 1;
   
-  __bolt_godot_LightPortalMode.Roaming = 2;
+  __magicrt_godot_LightPortalMode.Roaming = 2;
   
-  __bolt_godot_LightPortalMode.Global = 3;
+  __magicrt_godot_LightPortalMode.Global = 3;
   
-  __bolt_godot_LightPortalMode.Ignore = 4;
+  __magicrt_godot_LightPortalMode.Ignore = 4;
   
-  __bolt_godot_LightMergingMode.Inherit = 0;
+  __magicrt_godot_LightMergingMode.Inherit = 0;
   
-  __bolt_godot_LightMergingMode.Off = 1;
+  __magicrt_godot_LightMergingMode.Off = 1;
   
-  __bolt_godot_LightMergingMode.On = 2;
+  __magicrt_godot_LightMergingMode.On = 2;
   
-  __bolt_godot_LightPauseMode.Inherit = 0;
+  __magicrt_godot_LightPauseMode.Inherit = 0;
   
-  __bolt_godot_LightPauseMode.Stop = 1;
+  __magicrt_godot_LightPauseMode.Stop = 1;
   
-  __bolt_godot_LightPauseMode.Process = 2;
+  __magicrt_godot_LightPauseMode.Process = 2;
   
-  __bolt_godot_LightPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_LightPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_LightPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_LightPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_LightPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_LightPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_MainLoopSignalNames.onRequestPermissionsResult = "on_request_permissions_result";
+  __magicrt_godot_MainLoopSignalNames.onRequestPermissionsResult = "on_request_permissions_result";
   
-  __bolt_godot_MeshInstanceCastShadow.Off = 0;
+  __magicrt_godot_MeshInstanceCastShadow.Off = 0;
   
-  __bolt_godot_MeshInstanceCastShadow.On = 1;
+  __magicrt_godot_MeshInstanceCastShadow.On = 1;
   
-  __bolt_godot_MeshInstanceCastShadow.DoubleSided = 2;
+  __magicrt_godot_MeshInstanceCastShadow.DoubleSided = 2;
   
-  __bolt_godot_MeshInstanceCastShadow.ShadowsOnly = 3;
+  __magicrt_godot_MeshInstanceCastShadow.ShadowsOnly = 3;
   
-  __bolt_godot_MeshInstanceLightmapScale.Scale1x = 0;
+  __magicrt_godot_MeshInstanceLightmapScale.Scale1x = 0;
   
-  __bolt_godot_MeshInstanceLightmapScale.Scale2x = 1;
+  __magicrt_godot_MeshInstanceLightmapScale.Scale2x = 1;
   
-  __bolt_godot_MeshInstanceLightmapScale.Scale4x = 2;
+  __magicrt_godot_MeshInstanceLightmapScale.Scale4x = 2;
   
-  __bolt_godot_MeshInstanceLightmapScale.Scale8x = 3;
+  __magicrt_godot_MeshInstanceLightmapScale.Scale8x = 3;
   
-  __bolt_godot_MeshInstanceLightmapScale.Max = 4;
+  __magicrt_godot_MeshInstanceLightmapScale.Max = 4;
   
-  __bolt_godot_MeshInstancePortalMode.Static = 0;
+  __magicrt_godot_MeshInstancePortalMode.Static = 0;
   
-  __bolt_godot_MeshInstancePortalMode.Dynamic = 1;
+  __magicrt_godot_MeshInstancePortalMode.Dynamic = 1;
   
-  __bolt_godot_MeshInstancePortalMode.Roaming = 2;
+  __magicrt_godot_MeshInstancePortalMode.Roaming = 2;
   
-  __bolt_godot_MeshInstancePortalMode.Global = 3;
+  __magicrt_godot_MeshInstancePortalMode.Global = 3;
   
-  __bolt_godot_MeshInstancePortalMode.Ignore = 4;
+  __magicrt_godot_MeshInstancePortalMode.Ignore = 4;
   
-  __bolt_godot_MeshInstanceMergingMode.Inherit = 0;
+  __magicrt_godot_MeshInstanceMergingMode.Inherit = 0;
   
-  __bolt_godot_MeshInstanceMergingMode.Off = 1;
+  __magicrt_godot_MeshInstanceMergingMode.Off = 1;
   
-  __bolt_godot_MeshInstanceMergingMode.On = 2;
+  __magicrt_godot_MeshInstanceMergingMode.On = 2;
   
-  __bolt_godot_MeshInstancePauseMode.Inherit = 0;
+  __magicrt_godot_MeshInstancePauseMode.Inherit = 0;
   
-  __bolt_godot_MeshInstancePauseMode.Stop = 1;
+  __magicrt_godot_MeshInstancePauseMode.Stop = 1;
   
-  __bolt_godot_MeshInstancePauseMode.Process = 2;
+  __magicrt_godot_MeshInstancePauseMode.Process = 2;
   
-  __bolt_godot_MeshInstancePhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_MeshInstancePhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_MeshInstancePhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_MeshInstancePhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_MeshInstancePhysicsInterpolationMode.On = 2;
+  __magicrt_godot_MeshInstancePhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_MultiMeshColorFormat.None = 0;
+  __magicrt_godot_MultiMeshColorFormat.None = 0;
   
-  __bolt_godot_MultiMeshColorFormat.Color8bit = 1;
+  __magicrt_godot_MultiMeshColorFormat.Color8bit = 1;
   
-  __bolt_godot_MultiMeshColorFormat.Float = 2;
+  __magicrt_godot_MultiMeshColorFormat.Float = 2;
   
-  __bolt_godot_MultiMeshTransformFormat.Transform2d = 0;
+  __magicrt_godot_MultiMeshTransformFormat.Transform2d = 0;
   
-  __bolt_godot_MultiMeshTransformFormat.Transform3d = 1;
+  __magicrt_godot_MultiMeshTransformFormat.Transform3d = 1;
   
-  __bolt_godot_MultiMeshCustomDataFormat.None = 0;
+  __magicrt_godot_MultiMeshCustomDataFormat.None = 0;
   
-  __bolt_godot_MultiMeshCustomDataFormat.Data8bit = 1;
+  __magicrt_godot_MultiMeshCustomDataFormat.Data8bit = 1;
   
-  __bolt_godot_MultiMeshCustomDataFormat.Float = 2;
+  __magicrt_godot_MultiMeshCustomDataFormat.Float = 2;
   
-  __bolt_godot_MultiMeshPhysicsInterpolationQuality.Fast = 0;
+  __magicrt_godot_MultiMeshPhysicsInterpolationQuality.Fast = 0;
   
-  __bolt_godot_MultiMeshPhysicsInterpolationQuality.High = 1;
+  __magicrt_godot_MultiMeshPhysicsInterpolationQuality.High = 1;
   
-  __bolt_godot_MultiplayerAPISignalNames.connectedToServer = "connected_to_server";
+  __magicrt_godot_MultiplayerAPISignalNames.connectedToServer = "connected_to_server";
   
-  __bolt_godot_MultiplayerAPISignalNames.connectionFailed = "connection_failed";
+  __magicrt_godot_MultiplayerAPISignalNames.connectionFailed = "connection_failed";
   
-  __bolt_godot_MultiplayerAPISignalNames.networkPeerConnected = "network_peer_connected";
+  __magicrt_godot_MultiplayerAPISignalNames.networkPeerConnected = "network_peer_connected";
   
-  __bolt_godot_MultiplayerAPISignalNames.networkPeerDisconnected = "network_peer_disconnected";
+  __magicrt_godot_MultiplayerAPISignalNames.networkPeerDisconnected = "network_peer_disconnected";
   
-  __bolt_godot_MultiplayerAPISignalNames.networkPeerPacket = "network_peer_packet";
+  __magicrt_godot_MultiplayerAPISignalNames.networkPeerPacket = "network_peer_packet";
   
-  __bolt_godot_MultiplayerAPISignalNames.serverDisconnected = "server_disconnected";
+  __magicrt_godot_MultiplayerAPISignalNames.serverDisconnected = "server_disconnected";
   
-  __bolt_godot_NetworkedMultiplayerPeerTransferMode.Unreliable = 0;
+  __magicrt_godot_NetworkedMultiplayerPeerTransferMode.Unreliable = 0;
   
-  __bolt_godot_NetworkedMultiplayerPeerTransferMode.UnreliableOrdered = 1;
+  __magicrt_godot_NetworkedMultiplayerPeerTransferMode.UnreliableOrdered = 1;
   
-  __bolt_godot_NetworkedMultiplayerPeerTransferMode.Reliable = 2;
+  __magicrt_godot_NetworkedMultiplayerPeerTransferMode.Reliable = 2;
   
-  __bolt_godot_NetworkedMultiplayerPeerSignalNames.connectionFailed = "connection_failed";
+  __magicrt_godot_NetworkedMultiplayerPeerSignalNames.connectionFailed = "connection_failed";
   
-  __bolt_godot_NetworkedMultiplayerPeerSignalNames.connectionSucceeded = "connection_succeeded";
+  __magicrt_godot_NetworkedMultiplayerPeerSignalNames.connectionSucceeded = "connection_succeeded";
   
-  __bolt_godot_NetworkedMultiplayerPeerSignalNames.peerConnected = "peer_connected";
+  __magicrt_godot_NetworkedMultiplayerPeerSignalNames.peerConnected = "peer_connected";
   
-  __bolt_godot_NetworkedMultiplayerPeerSignalNames.peerDisconnected = "peer_disconnected";
+  __magicrt_godot_NetworkedMultiplayerPeerSignalNames.peerDisconnected = "peer_disconnected";
   
-  __bolt_godot_NetworkedMultiplayerPeerSignalNames.serverDisconnected = "server_disconnected";
+  __magicrt_godot_NetworkedMultiplayerPeerSignalNames.serverDisconnected = "server_disconnected";
   
-  __bolt_godot_NodePauseMode.Inherit = 0;
+  __magicrt_godot_NodePauseMode.Inherit = 0;
   
-  __bolt_godot_NodePauseMode.Stop = 1;
+  __magicrt_godot_NodePauseMode.Stop = 1;
   
-  __bolt_godot_NodePauseMode.Process = 2;
+  __magicrt_godot_NodePauseMode.Process = 2;
   
-  __bolt_godot_NodePhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_NodePhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_NodePhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_NodePhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_NodePhysicsInterpolationMode.On = 2;
+  __magicrt_godot_NodePhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_NodeSignalNames.childEnteredTree = "child_entered_tree";
+  __magicrt_godot_NodeSignalNames.childEnteredTree = "child_entered_tree";
   
-  __bolt_godot_NodeSignalNames.childExitingTree = "child_exiting_tree";
+  __magicrt_godot_NodeSignalNames.childExitingTree = "child_exiting_tree";
   
-  __bolt_godot_NodeSignalNames.childOrderChanged = "child_order_changed";
+  __magicrt_godot_NodeSignalNames.childOrderChanged = "child_order_changed";
   
-  __bolt_godot_NodeSignalNames.ready = "ready";
+  __magicrt_godot_NodeSignalNames.ready = "ready";
   
-  __bolt_godot_NodeSignalNames.renamed = "renamed";
+  __magicrt_godot_NodeSignalNames.renamed = "renamed";
   
-  __bolt_godot_NodeSignalNames.treeEntered = "tree_entered";
+  __magicrt_godot_NodeSignalNames.treeEntered = "tree_entered";
   
-  __bolt_godot_NodeSignalNames.treeExited = "tree_exited";
+  __magicrt_godot_NodeSignalNames.treeExited = "tree_exited";
   
-  __bolt_godot_NodeSignalNames.treeExiting = "tree_exiting";
+  __magicrt_godot_NodeSignalNames.treeExiting = "tree_exiting";
   
-  __bolt_godot_ObjectSignalNames.scriptChanged = "script_changed";
+  __magicrt_godot_ObjectSignalNames.scriptChanged = "script_changed";
   
-  __bolt_godot_ResourceSignalNames.changed = "changed";
+  __magicrt_godot_ResourceSignalNames.changed = "changed";
   
-  __bolt_godot_SceneTreeSignalNames.connectedToServer = "connected_to_server";
+  __magicrt_godot_SceneTreeSignalNames.connectedToServer = "connected_to_server";
   
-  __bolt_godot_SceneTreeSignalNames.connectionFailed = "connection_failed";
+  __magicrt_godot_SceneTreeSignalNames.connectionFailed = "connection_failed";
   
-  __bolt_godot_SceneTreeSignalNames.filesDropped = "files_dropped";
+  __magicrt_godot_SceneTreeSignalNames.filesDropped = "files_dropped";
   
-  __bolt_godot_SceneTreeSignalNames.globalMenuAction = "global_menu_action";
+  __magicrt_godot_SceneTreeSignalNames.globalMenuAction = "global_menu_action";
   
-  __bolt_godot_SceneTreeSignalNames.idleFrame = "idle_frame";
+  __magicrt_godot_SceneTreeSignalNames.idleFrame = "idle_frame";
   
-  __bolt_godot_SceneTreeSignalNames.networkPeerConnected = "network_peer_connected";
+  __magicrt_godot_SceneTreeSignalNames.networkPeerConnected = "network_peer_connected";
   
-  __bolt_godot_SceneTreeSignalNames.networkPeerDisconnected = "network_peer_disconnected";
+  __magicrt_godot_SceneTreeSignalNames.networkPeerDisconnected = "network_peer_disconnected";
   
-  __bolt_godot_SceneTreeSignalNames.nodeAdded = "node_added";
+  __magicrt_godot_SceneTreeSignalNames.nodeAdded = "node_added";
   
-  __bolt_godot_SceneTreeSignalNames.nodeConfigurationWarningChanged = "node_configuration_warning_changed";
+  __magicrt_godot_SceneTreeSignalNames.nodeConfigurationWarningChanged = "node_configuration_warning_changed";
   
-  __bolt_godot_SceneTreeSignalNames.nodeRemoved = "node_removed";
+  __magicrt_godot_SceneTreeSignalNames.nodeRemoved = "node_removed";
   
-  __bolt_godot_SceneTreeSignalNames.nodeRenamed = "node_renamed";
+  __magicrt_godot_SceneTreeSignalNames.nodeRenamed = "node_renamed";
   
-  __bolt_godot_SceneTreeSignalNames.physicsFrame = "physics_frame";
+  __magicrt_godot_SceneTreeSignalNames.physicsFrame = "physics_frame";
   
-  __bolt_godot_SceneTreeSignalNames.screenResized = "screen_resized";
+  __magicrt_godot_SceneTreeSignalNames.screenResized = "screen_resized";
   
-  __bolt_godot_SceneTreeSignalNames.serverDisconnected = "server_disconnected";
+  __magicrt_godot_SceneTreeSignalNames.serverDisconnected = "server_disconnected";
   
-  __bolt_godot_SceneTreeSignalNames.treeChanged = "tree_changed";
+  __magicrt_godot_SceneTreeSignalNames.treeChanged = "tree_changed";
   
-  __bolt_godot_SceneTreeTimerSignalNames.timeout = "timeout";
+  __magicrt_godot_SceneTreeTimerSignalNames.timeout = "timeout";
   
-  __bolt_godot_SceneTreeTweenSignalNames.finished = "finished";
+  __magicrt_godot_SceneTreeTweenSignalNames.finished = "finished";
   
-  __bolt_godot_SceneTreeTweenSignalNames.loopFinished = "loop_finished";
+  __magicrt_godot_SceneTreeTweenSignalNames.loopFinished = "loop_finished";
   
-  __bolt_godot_SceneTreeTweenSignalNames.stepFinished = "step_finished";
+  __magicrt_godot_SceneTreeTweenSignalNames.stepFinished = "step_finished";
   
-  __bolt_godot_SkyRadianceSize.Size32 = 0;
+  __magicrt_godot_SkyRadianceSize.Size32 = 0;
   
-  __bolt_godot_SkyRadianceSize.Size64 = 1;
+  __magicrt_godot_SkyRadianceSize.Size64 = 1;
   
-  __bolt_godot_SkyRadianceSize.Size128 = 2;
+  __magicrt_godot_SkyRadianceSize.Size128 = 2;
   
-  __bolt_godot_SkyRadianceSize.Size256 = 3;
+  __magicrt_godot_SkyRadianceSize.Size256 = 3;
   
-  __bolt_godot_SkyRadianceSize.Size512 = 4;
+  __magicrt_godot_SkyRadianceSize.Size512 = 4;
   
-  __bolt_godot_SkyRadianceSize.Size1024 = 5;
+  __magicrt_godot_SkyRadianceSize.Size1024 = 5;
   
-  __bolt_godot_SkyRadianceSize.Size2048 = 6;
+  __magicrt_godot_SkyRadianceSize.Size2048 = 6;
   
-  __bolt_godot_SkyRadianceSize.Max = 7;
+  __magicrt_godot_SkyRadianceSize.Max = 7;
   
-  __bolt_godot_SpatialMergingMode.Inherit = 0;
+  __magicrt_godot_SpatialMergingMode.Inherit = 0;
   
-  __bolt_godot_SpatialMergingMode.Off = 1;
+  __magicrt_godot_SpatialMergingMode.Off = 1;
   
-  __bolt_godot_SpatialMergingMode.On = 2;
+  __magicrt_godot_SpatialMergingMode.On = 2;
   
-  __bolt_godot_SpatialPauseMode.Inherit = 0;
+  __magicrt_godot_SpatialPauseMode.Inherit = 0;
   
-  __bolt_godot_SpatialPauseMode.Stop = 1;
+  __magicrt_godot_SpatialPauseMode.Stop = 1;
   
-  __bolt_godot_SpatialPauseMode.Process = 2;
+  __magicrt_godot_SpatialPauseMode.Process = 2;
   
-  __bolt_godot_SpatialPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_SpatialPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_SpatialPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_SpatialPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_SpatialPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_SpatialPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_SpatialSignalNames.gameplayEntered = "gameplay_entered";
+  __magicrt_godot_SpatialSignalNames.gameplayEntered = "gameplay_entered";
   
-  __bolt_godot_SpatialSignalNames.gameplayExited = "gameplay_exited";
+  __magicrt_godot_SpatialSignalNames.gameplayExited = "gameplay_exited";
   
-  __bolt_godot_SpatialSignalNames.visibilityChanged = "visibility_changed";
+  __magicrt_godot_SpatialSignalNames.visibilityChanged = "visibility_changed";
   
-  __bolt_godot_TweenerSignalNames.finished = "finished";
+  __magicrt_godot_TweenerSignalNames.finished = "finished";
   
-  __bolt_godot_ViewportMsaa.Disabled = 0;
+  __magicrt_godot_ViewportMsaa.Disabled = 0;
   
-  __bolt_godot_ViewportMsaa.Msaa2x = 1;
+  __magicrt_godot_ViewportMsaa.Msaa2x = 1;
   
-  __bolt_godot_ViewportMsaa.Msaa4x = 2;
+  __magicrt_godot_ViewportMsaa.Msaa4x = 2;
   
-  __bolt_godot_ViewportMsaa.Msaa8x = 3;
+  __magicrt_godot_ViewportMsaa.Msaa8x = 3;
   
-  __bolt_godot_ViewportMsaa.Msaa16x = 4;
+  __magicrt_godot_ViewportMsaa.Msaa16x = 4;
   
-  __bolt_godot_ViewportUsage.Usage2d = 0;
+  __magicrt_godot_ViewportUsage.Usage2d = 0;
   
-  __bolt_godot_ViewportUsage.Usage2dNoSampling = 1;
+  __magicrt_godot_ViewportUsage.Usage2dNoSampling = 1;
   
-  __bolt_godot_ViewportUsage.Usage3d = 2;
+  __magicrt_godot_ViewportUsage.Usage3d = 2;
   
-  __bolt_godot_ViewportUsage.Usage3dNoEffects = 3;
+  __magicrt_godot_ViewportUsage.Usage3dNoEffects = 3;
   
-  __bolt_godot_ViewportDebugDraw.Disabled = 0;
+  __magicrt_godot_ViewportDebugDraw.Disabled = 0;
   
-  __bolt_godot_ViewportDebugDraw.Unshaded = 1;
+  __magicrt_godot_ViewportDebugDraw.Unshaded = 1;
   
-  __bolt_godot_ViewportDebugDraw.Overdraw = 2;
+  __magicrt_godot_ViewportDebugDraw.Overdraw = 2;
   
-  __bolt_godot_ViewportDebugDraw.Wireframe = 3;
+  __magicrt_godot_ViewportDebugDraw.Wireframe = 3;
   
-  __bolt_godot_ViewportRenderTargetClearMode.Always = 0;
+  __magicrt_godot_ViewportRenderTargetClearMode.Always = 0;
   
-  __bolt_godot_ViewportRenderTargetClearMode.Never = 1;
+  __magicrt_godot_ViewportRenderTargetClearMode.Never = 1;
   
-  __bolt_godot_ViewportRenderTargetClearMode.OnlyNextFrame = 2;
+  __magicrt_godot_ViewportRenderTargetClearMode.OnlyNextFrame = 2;
   
-  __bolt_godot_ViewportRenderTargetUpdateMode.Disabled = 0;
+  __magicrt_godot_ViewportRenderTargetUpdateMode.Disabled = 0;
   
-  __bolt_godot_ViewportRenderTargetUpdateMode.Once = 1;
+  __magicrt_godot_ViewportRenderTargetUpdateMode.Once = 1;
   
-  __bolt_godot_ViewportRenderTargetUpdateMode.WhenVisible = 2;
+  __magicrt_godot_ViewportRenderTargetUpdateMode.WhenVisible = 2;
   
-  __bolt_godot_ViewportRenderTargetUpdateMode.Always = 3;
+  __magicrt_godot_ViewportRenderTargetUpdateMode.Always = 3;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Disabled = 0;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Disabled = 0;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv1 = 1;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv1 = 1;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv4 = 2;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv4 = 2;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv16 = 3;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv16 = 3;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv64 = 4;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv64 = 4;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv256 = 5;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv256 = 5;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Subdiv1024 = 6;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Subdiv1024 = 6;
   
-  __bolt_godot_ViewportShadowAtlasQuad0.Max = 7;
+  __magicrt_godot_ViewportShadowAtlasQuad0.Max = 7;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Disabled = 0;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Disabled = 0;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv1 = 1;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv1 = 1;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv4 = 2;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv4 = 2;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv16 = 3;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv16 = 3;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv64 = 4;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv64 = 4;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv256 = 5;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv256 = 5;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Subdiv1024 = 6;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Subdiv1024 = 6;
   
-  __bolt_godot_ViewportShadowAtlasQuad1.Max = 7;
+  __magicrt_godot_ViewportShadowAtlasQuad1.Max = 7;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Disabled = 0;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Disabled = 0;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv1 = 1;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv1 = 1;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv4 = 2;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv4 = 2;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv16 = 3;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv16 = 3;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv64 = 4;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv64 = 4;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv256 = 5;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv256 = 5;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Subdiv1024 = 6;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Subdiv1024 = 6;
   
-  __bolt_godot_ViewportShadowAtlasQuad2.Max = 7;
+  __magicrt_godot_ViewportShadowAtlasQuad2.Max = 7;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Disabled = 0;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Disabled = 0;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv1 = 1;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv1 = 1;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv4 = 2;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv4 = 2;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv16 = 3;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv16 = 3;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv64 = 4;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv64 = 4;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv256 = 5;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv256 = 5;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Subdiv1024 = 6;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Subdiv1024 = 6;
   
-  __bolt_godot_ViewportShadowAtlasQuad3.Max = 7;
+  __magicrt_godot_ViewportShadowAtlasQuad3.Max = 7;
   
-  __bolt_godot_ViewportPauseMode.Inherit = 0;
+  __magicrt_godot_ViewportPauseMode.Inherit = 0;
   
-  __bolt_godot_ViewportPauseMode.Stop = 1;
+  __magicrt_godot_ViewportPauseMode.Stop = 1;
   
-  __bolt_godot_ViewportPauseMode.Process = 2;
+  __magicrt_godot_ViewportPauseMode.Process = 2;
   
-  __bolt_godot_ViewportPhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_ViewportPhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_ViewportPhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_ViewportPhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_ViewportPhysicsInterpolationMode.On = 2;
+  __magicrt_godot_ViewportPhysicsInterpolationMode.On = 2;
   
-  __bolt_godot_ViewportSignalNames.guiFocusChanged = "gui_focus_changed";
+  __magicrt_godot_ViewportSignalNames.guiFocusChanged = "gui_focus_changed";
   
-  __bolt_godot_ViewportSignalNames.sizeChanged = "size_changed";
+  __magicrt_godot_ViewportSignalNames.sizeChanged = "size_changed";
   
-  __bolt_godot_VisualInstancePortalMode.Static = 0;
+  __magicrt_godot_VisualInstancePortalMode.Static = 0;
   
-  __bolt_godot_VisualInstancePortalMode.Dynamic = 1;
+  __magicrt_godot_VisualInstancePortalMode.Dynamic = 1;
   
-  __bolt_godot_VisualInstancePortalMode.Roaming = 2;
+  __magicrt_godot_VisualInstancePortalMode.Roaming = 2;
   
-  __bolt_godot_VisualInstancePortalMode.Global = 3;
+  __magicrt_godot_VisualInstancePortalMode.Global = 3;
   
-  __bolt_godot_VisualInstancePortalMode.Ignore = 4;
+  __magicrt_godot_VisualInstancePortalMode.Ignore = 4;
   
-  __bolt_godot_VisualInstanceMergingMode.Inherit = 0;
+  __magicrt_godot_VisualInstanceMergingMode.Inherit = 0;
   
-  __bolt_godot_VisualInstanceMergingMode.Off = 1;
+  __magicrt_godot_VisualInstanceMergingMode.Off = 1;
   
-  __bolt_godot_VisualInstanceMergingMode.On = 2;
+  __magicrt_godot_VisualInstanceMergingMode.On = 2;
   
-  __bolt_godot_VisualInstancePauseMode.Inherit = 0;
+  __magicrt_godot_VisualInstancePauseMode.Inherit = 0;
   
-  __bolt_godot_VisualInstancePauseMode.Stop = 1;
+  __magicrt_godot_VisualInstancePauseMode.Stop = 1;
   
-  __bolt_godot_VisualInstancePauseMode.Process = 2;
+  __magicrt_godot_VisualInstancePauseMode.Process = 2;
   
-  __bolt_godot_VisualInstancePhysicsInterpolationMode.Inherit = 0;
+  __magicrt_godot_VisualInstancePhysicsInterpolationMode.Inherit = 0;
   
-  __bolt_godot_VisualInstancePhysicsInterpolationMode.Off = 1;
+  __magicrt_godot_VisualInstancePhysicsInterpolationMode.Off = 1;
   
-  __bolt_godot_VisualInstancePhysicsInterpolationMode.On = 2;
+  __magicrt_godot_VisualInstancePhysicsInterpolationMode.On = 2;
   
   
 end

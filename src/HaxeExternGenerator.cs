@@ -7,7 +7,7 @@ using ProjectSettings = Godot.ProjectSettings;
 using GD = Godot.GD;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Bolt.Plugins;
+using MagicRt.Plugins;
 using System.Globalization;
 
 class HaxeExternGenerator
@@ -22,7 +22,7 @@ class HaxeExternGenerator
     public static void GenerateExterns()
     {
         string xmlDirectory = ProjectSettings.GlobalizePath("res://godotapi/doc/classes/");
-        string outputDir = ProjectSettings.GlobalizePath("res://bolt/godot/");
+        string outputDir = ProjectSettings.GlobalizePath("res://magicrt/godot/");
 
         // Ensure the output directory exists
         Directory.CreateDirectory(outputDir);
@@ -43,7 +43,7 @@ class HaxeExternGenerator
                     ClassNames.Add(className);
                     var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
                     if (string.IsNullOrEmpty(inheritedClassName))
-                        inheritedClassName = "bolt.core.MonoObject";
+                        inheritedClassName = "magicrt.core.MonoObject";
                     BaseClasses.Add(className, inheritedClassName);
             }
         }
@@ -64,7 +64,7 @@ class HaxeExternGenerator
                         className = "Gd" + className;
                     File.WriteAllText(Path.Combine(outputDir, $"{className}.hx"), haxeExtern);
                     if (className == "GdVector3"){
-            var abstr = @"package bolt.godot;
+            var abstr = @"package magicrt.godot;
 
 abstract Vector3(GdVector3) from GdVector3 {
     public function new(x : Float = 0, y : Float = 0, z : Float = 0) {
@@ -189,7 +189,7 @@ abstract Vector3(GdVector3) from GdVector3 {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdBasis"){
-            var abstr = @"package bolt.godot;
+            var abstr = @"package magicrt.godot;
 
 abstract Basis(GdBasis) from GdBasis {
     public function new(x : GdVector3, y : GdVector3, z : GdVector3) {
@@ -314,7 +314,7 @@ abstract Basis(GdBasis) from GdBasis {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdVector2"){
-            var abstr = @"package bolt.godot;
+            var abstr = @"package magicrt.godot;
 
 abstract Vector2(GdVector2) from GdVector2 to GdVector2 {
     public function new(x : Float = 0, y : Float = 0) {
@@ -437,7 +437,7 @@ abstract Vector2(GdVector2) from GdVector2 to GdVector2 {
             File.WriteAllText(Path.Combine(outputDir, $"{ogClassName}.hx"), abstr);
         }
         else if (className == "GdQuat"){
-            var abstr = @"package bolt.godot;
+            var abstr = @"package magicrt.godot;
 
 abstract Quat(GdQuat) from GdQuat {
     public function new(x : Float = 0, y : Float = 0, z : Float = 0, w : Float = 0) {
@@ -579,7 +579,7 @@ abstract Quat(GdQuat) from GdQuat {
         var sb = new StringBuilder();
 
         // Package declaration
-        sb.AppendLine("package bolt.godot;");
+        sb.AppendLine("package magicrt.godot;");
         sb.AppendLine();
 
         AppendEnums(sb, doc);
@@ -588,7 +588,7 @@ abstract Quat(GdQuat) from GdQuat {
         var inheritedClassName = doc.Root?.Attribute("inherits")?.Value;
 
         if (string.IsNullOrEmpty(inheritedClassName))
-            inheritedClassName = "bolt.core.MonoObject";
+            inheritedClassName = "magicrt.core.MonoObject";
 
         var ogClassName = className;
         if (className == "Vector3" || className == "Vector2" || className == "Quat" || className == "Basis")

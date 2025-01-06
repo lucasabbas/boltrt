@@ -1,5 +1,5 @@
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using System;
 
 public class Main : Node
@@ -20,7 +20,7 @@ public class Main : Node
 			}
 		}
 
-		if (OS.HasFeature("bolt-ed"))
+		if (OS.HasFeature("magicrt-ed"))
 			editorMode = true;
 
 		if (OS.GetName() == "HTML5")

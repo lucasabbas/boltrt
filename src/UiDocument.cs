@@ -1,5 +1,5 @@
 using Godot;
-using Bolt.IO;
+using MagicRt.IO;
 using System.Xml;
 using System.Collections.Generic;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.IO;
 
-namespace Bolt {
+namespace MagicRt {
     public class UiDocument : Control {
         public IOCore IOCore { get; private set; }
 

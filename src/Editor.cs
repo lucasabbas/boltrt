@@ -1,5 +1,5 @@
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 using System;
 
 public class Editor : LuaNode
@@ -12,7 +12,7 @@ public class Editor : LuaNode
         if (!basePath.EndsWith("/"))
             basePath += "/";
 
-        var editorPath = basePath + "boltEd/editor.bolt";
+        var editorPath = basePath + "magicIDE/editor.magicrt";
         StartFromLKProject(editorPath);
 
         OS.WindowBorderless = false;

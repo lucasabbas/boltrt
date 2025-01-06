@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{13DACF7B-1DF3-4AA2-AFD1-1576E5D571E4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>BoltEd</RootNamespace>
-    <AssemblyName>bolted</AssemblyName>
+    <RootNamespace>MagicIDE</RootNamespace>
+    <AssemblyName>magicide</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,7 +35,7 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>BoltEd.Program</StartupObject>
+    <StartupObject>MagicIDE.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

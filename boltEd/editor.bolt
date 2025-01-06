@@ -1,4 +1,0 @@
-<app>
-    <title>BoltEd</title>
-    <mainScript>data://main.lua</mainScript>
-</app>

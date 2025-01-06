@@ -1,12 +1,12 @@
 using System;
 using Godot;
-using Bolt.IO;
-using Bolt.Plugins;
+using MagicRt.IO;
+using MagicRt.Plugins;
 using MoonSharp.Interpreter;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Bolt.Scripting
+namespace MagicRt.Scripting
 {
 
 	public partial class LuaNode : Node
@@ -36,7 +36,7 @@ namespace Bolt.Scripting
 			//_luaEnviroment.AddPlugin(typeof(UiModule));
 			UserData.RegisterType<LuaNode>();
 			_luaEnviroment.Script.Globals["rootNode"] = this;
-			title = "Bolt";
+			title = "MagicRt";
 		}
 
 		public override void _Ready()
@@ -68,21 +68,21 @@ namespace Bolt.Scripting
 		public void StartFromZip(byte[] bytes)
 		{
 			ZipIO zip = new ZipIO(bytes, "data://");
-			string boltPath = null;
+			string magicrtPath = null;
 			foreach (var file in zip.GetFileList("data://"))
 			{
 				GD.Print(file);
-				if (file.EndsWith(".bolt"))
+				if (file.EndsWith(".magicrt"))
 				{
-					boltPath = file;
+					magicrtPath = file;
 					break;
 				}
 			}
-			if (boltPath == null)
+			if (magicrtPath == null)
 			{
-				throw new Exception("No .bolt file found in zip");
+				throw new Exception("No .mgproj file found in zip");
 			}
-			var filestring = zip.LoadText(boltPath);
+			var filestring = zip.LoadText(magicrtPath);
 			var xml = XDocument.Parse(filestring);
 			var app = xml.Element("app");
 			var title = app.Element("title").Value;

@@ -1,6 +1,6 @@
 using Godot;
 
-namespace Bolt
+namespace MagicRt
 {
 
 	public partial class MouseRayCast3D : RayCast

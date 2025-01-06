@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Godot;
-using Bolt.IO;
-using Bolt.Plugins;
+using MagicRt.IO;
+using MagicRt.Plugins;
 using MoonSharp.Interpreter;
 using MoonSharp.VsCodeDebugger;
 using Script = MoonSharp.Interpreter.Script;
 
-namespace Bolt.Scripting
+namespace MagicRt.Scripting
 {
 
     public class LuaEnviroment
@@ -55,7 +55,7 @@ namespace Bolt.Scripting
             Script = new Script();
             server = new MoonSharpVsCodeDebugServer();
             IoCore = new IOManager();
-            Script.GlobalOptions.Platform = new BoltPlatformAccessor(this);
+            Script.GlobalOptions.Platform = new MagicRtPlatformAccessor(this);
             Script.Options.ScriptLoader = new IoScriptLoader(IoCore, this);
             Script.Globals["doubleToFloat"] = (Func<double, float>)DoubleToFloat;
 

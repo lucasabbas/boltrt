@@ -1,7 +1,7 @@
-﻿using Bolt.Scripting;
+﻿using MagicRt.Scripting;
 using MoonSharp.Interpreter;
 
-namespace Bolt.Plugins
+namespace MagicRt.Plugins
 {
 
     public class GodotExtensions : Plugin

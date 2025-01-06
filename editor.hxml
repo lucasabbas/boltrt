@@ -1,5 +1,5 @@
---library bolt
---class-path boltEd
---main boltEd.Main
---lua boltEd/main.lua
+--library magicrt
+--class-path magicIDE
+--main magicide.Main
+--lua magicIDE/main.lua
 -D lua-vanilla

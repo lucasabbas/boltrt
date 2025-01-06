@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 
-namespace Bolt.IO
+namespace MagicRt.IO
 {
 
     public abstract class IOCore

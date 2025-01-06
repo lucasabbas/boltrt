@@ -1,7 +1,7 @@
 using Godot;
-using Bolt.Scripting;
+using MagicRt.Scripting;
 
-namespace Bolt.Tests.HelloHaxe
+namespace MagicRt.Tests.HelloHaxe
 {
 	public class HelloHaxe : LuaNode
 	{

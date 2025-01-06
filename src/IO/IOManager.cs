@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace Bolt.IO
+namespace MagicRt.IO
 {
 
     public class IOManager : IOCore

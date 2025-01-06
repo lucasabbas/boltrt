@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Bolt.IO
+namespace MagicRt.IO
 {
     public class UnixSystemIO : SystemIOBase
     {
