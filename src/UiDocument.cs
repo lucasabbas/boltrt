@@ -53,7 +53,7 @@ namespace Bolt {
 
             XmlNode firstNode = document.GetElementsByTagName("BXML")[0];
             string version = "1.0";
-            XmlAttribute versionAttribute = firstNode.Attributes["version"];
+            XmlAttribute versionAttribute = firstNode.Attributes["Version"];
             if (versionAttribute != null)
             {
                 version = versionAttribute.Value;
@@ -159,7 +159,7 @@ namespace Bolt {
             if (xmlNode.Name == "Template")
             {
                 var template = new UiDocument();
-                var templatePath = xmlNode.Attributes["path"].Value;
+                var templatePath = xmlNode.Attributes["Path"].Value;
                 template.LoadFromPath(templatePath, IOCore);
                 return template;
             }
@@ -414,32 +414,32 @@ namespace Bolt {
                     menu.AddItem(label, id);
                     if (childNode.Attributes["Icon"] != null)
                     {
-                        var icon = LoadImageTexture(IOCore, childNode.Attributes["icon"].Value);
+                        var icon = LoadImageTexture(IOCore, childNode.Attributes["Icon"].Value);
                         menu.SetItemIcon(id, icon);
                     }
                     if (childNode.Attributes["Checkable"] != null)
                     {
-                        var checkable = bool.Parse(childNode.Attributes["checkable"].Value);
+                        var checkable = bool.Parse(childNode.Attributes["Checkable"].Value);
                         menu.SetItemAsCheckable(id, checkable);
                     }
                     else if (childNode.Attributes["RadioCheckable"] != null)
                     {
-                        var checkable = bool.Parse(childNode.Attributes["radioCheckable"].Value);
+                        var checkable = bool.Parse(childNode.Attributes["RadioCheckable"].Value);
                         menu.SetItemAsRadioCheckable(id, checkable);
                     }
                     else if (childNode.Attributes["Separator"] != null)
                     {
-                        var separator = bool.Parse(childNode.Attributes["separator"].Value);
+                        var separator = bool.Parse(childNode.Attributes["Separator"].Value);
                         menu.SetItemAsSeparator(id, separator);
                     }
                     if (childNode.Attributes["Checked"] != null)
                     {
-                        var disabled = bool.Parse(childNode.Attributes["checked"].Value);
+                        var disabled = bool.Parse(childNode.Attributes["Checked"].Value);
                         menu.SetItemChecked(id, disabled);
                     }
                     if (childNode.Attributes["Disabled"] != null)
                     {
-                        var disabled = bool.Parse(childNode.Attributes["disabled"].Value);
+                        var disabled = bool.Parse(childNode.Attributes["Disabled"].Value);
                         menu.SetItemDisabled(id, disabled);
                     }
                 }
