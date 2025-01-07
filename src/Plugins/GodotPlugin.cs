@@ -52,6 +52,12 @@ namespace Bolt.Plugins
 			UserData.RegisterType<GodotObject>();
 			UserData.RegisterType<TreeItem>();
 
+			if (!Enviroment.Sandboxed)
+			{
+				UserData.RegisterType<OS>();
+				GdCoreNamespace["OS"] = UserData.CreateStatic(typeof(OS));
+			}
+
 			GdCoreNamespace["Color"] = typeof(Color);
 			GdCoreNamespace["Vector3"] = typeof(Vector3);
 			GdCoreNamespace["Vector2"] = typeof(Vector2);

@@ -2795,17 +2795,25 @@ __boltEd_EditorWindow.prototype.init = function(self)
   godot.SignalToFunc.connect(self.openProjectButton, "pressed", function() 
     _gthis:openProjectDialog();
   end);
-  self.openFolderDialog = godot.FileDialog.__new();
-  self.openFolderDialog.mode = __bolt_godot_FileDialogMode.OpenDir;
-  self.openFolderDialog.access = __bolt_godot_FileDialogAccess.Filesystem;
-  self.openFolderDialog.windowTitle = "Open Project";
-  self.openFolderDialog.resizable = true;
-  godot.SignalToFunc.connect(self.openFolderDialog, __bolt_godot_FileDialogSignalNames.dirSelected, function(dirPath) 
-    _gthis:openProject(dirPath);
+  self.openFileDialog = godot.FileDialog.__new();
+  self.openFileDialog.mode = __bolt_godot_FileDialogMode.OpenFile;
+  self.openFileDialog:addFilter("*.bolt");
+  self.openFileDialog.access = __bolt_godot_FileDialogAccess.Filesystem;
+  self.openFileDialog.windowTitle = "Open Project";
+  self.openFileDialog.resizable = true;
+  godot.SignalToFunc.connect(self.openFileDialog, __bolt_godot_FileDialogSignalNames.fileSelected, function(filePath) 
+    _gthis:openFile(filePath);
   end);
-  self.document:addChild(self.openFolderDialog);
+  self.document:addChild(self.openFileDialog);
 end
 __boltEd_EditorWindow.prototype.onNewProject = function(self) 
+end
+__boltEd_EditorWindow.prototype.openFile = function(self,filePath) 
+  local filePathArray = String.prototype.split(filePath, "/");
+  local fileName = filePathArray[filePathArray.length - 1];
+  filePathArray:remove(fileName);
+  local dirPath = filePathArray:join("/");
+  self:openProject(dirPath);
 end
 __boltEd_EditorWindow.prototype.openProject = function(self,dirPath) 
   self.projectPath = dirPath;
@@ -2820,15 +2828,15 @@ __boltEd_EditorWindow.prototype.openProject = function(self,dirPath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=74,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=83,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=79,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=88,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
-  self.openFolderDialog:popupCentered(fileDialogSize);
+  self.openFileDialog:popupCentered(fileDialogSize);
 end
 
 __boltEd_EditorWindow.prototype.__class__ =  __boltEd_EditorWindow
@@ -2908,7 +2916,6 @@ __boltEd_Explorer.prototype.buildTree = function(self,parent,path)
       
       _g = _g + 1;
       local i = _g - 1;
-      __haxe_Log.trace(Std.string("i: ") .. Std.string(i), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/Explorer.hx",lineNumber=85,className="boltEd.Explorer",methodName="buildTree"}));
       local dirPath = directories[i];
       local dirIndex = __boltEd_explorer_DirIndex.new(dirPath, parent);
       local dirWithoutUrl = String.prototype.substring(dirPath, 9);

@@ -31,12 +31,15 @@ namespace Bolt.Scripting
 		public LuaNode()
 		{
 			_luaEnviroment = new LuaEnviroment();
+			title = "Bolt";
+		}
+
+		public virtual void LoadPlugins() 
+		{
 			_luaEnviroment.AddPlugin(typeof(GodotPlugin));
 			_luaEnviroment.AddPlugin(typeof(GodotExtensions));
-			//_luaEnviroment.AddPlugin(typeof(UiModule));
 			UserData.RegisterType<LuaNode>();
 			_luaEnviroment.Script.Globals["rootNode"] = this;
-			title = "Bolt";
 		}
 
 		public override void _Ready()
@@ -48,6 +51,7 @@ namespace Bolt.Scripting
 		{
 			FileSystemIO fileSys = new FileSystemIO(ProjectSettings.GlobalizePath(path), "data://");
 			_luaEnviroment.IoCore.Register(fileSys);
+			LoadPlugins();
 			_luaEnviroment.Start(_mainScriptPath);
 		}
 
@@ -90,6 +94,7 @@ namespace Bolt.Scripting
 			var mainScript = app.Element("mainScript").Value;
 			_mainScriptPath = mainScript;
 			_luaEnviroment.IoCore.Register(zip);
+			LoadPlugins();
 			_luaEnviroment.Start(_mainScriptPath);
 		}
 

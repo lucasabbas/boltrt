@@ -18,7 +18,7 @@ class EditorWindow extends Widget {
     public var newProjectButton : Button;
     public var openProjectButton : Button;
 
-    public var openFolderDialog : FileDialog;
+    public var openFileDialog : FileDialog;
 
     public var projectPath : String;
 
@@ -46,20 +46,29 @@ class EditorWindow extends Widget {
         SignalToFunc.connect(newProjectButton, "pressed", () -> onNewProject());
         SignalToFunc.connect(openProjectButton, "pressed", () -> openProjectDialog());
 
-        openFolderDialog = new FileDialog();
-        openFolderDialog.mode = FileDialogMode.OpenDir;
-        openFolderDialog.access = FileDialogAccess.Filesystem;
-        openFolderDialog.windowTitle = "Open Project";
-        openFolderDialog.resizable = true;
+        openFileDialog = new FileDialog();
+        openFileDialog.mode = FileDialogMode.OpenFile;
+        openFileDialog.addFilter("*.bolt");
+        openFileDialog.access = FileDialogAccess.Filesystem;
+        openFileDialog.windowTitle = "Open Project";
+        openFileDialog.resizable = true;
         
-        SignalToFunc.connect(openFolderDialog, FileDialogSignalNames.dirSelected, (dirPath : String) -> openProject(dirPath));
+        SignalToFunc.connect(openFileDialog, FileDialogSignalNames.fileSelected, (filePath : String) -> openFile(filePath));
 
-        document.addChild(openFolderDialog);
+        document.addChild(openFileDialog);
     }
 
     public function onNewProject() {
         //trace("New Project");
         //trace(untyped __lua__("self ~= nil"));
+    }
+
+    public function openFile(filePath : String) {
+        var filePathArray = filePath.split("/");
+        var fileName = filePathArray[filePathArray.length - 1];
+        filePathArray.remove(fileName);
+        var dirPath = filePathArray.join("/");
+        openProject(dirPath);
     }
 
     public function openProject(dirPath : String) {   
@@ -78,7 +87,7 @@ class EditorWindow extends Widget {
     public function openProjectDialog() {
         trace("Open Project");
         var fileDialogSize = new Vector2(550, 350);
-        openFolderDialog.popupCentered(fileDialogSize);
+        openFileDialog.popupCentered(fileDialogSize);
         //fileDialog.currentDir = "res://";
     }
 }

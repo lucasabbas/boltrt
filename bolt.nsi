@@ -58,8 +58,8 @@ Section "Bolt Runtime" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
   File "bin\win32\bolt.exe"
-  File "bin\win32\BoltEd.exe"
-  File "bin\win32\bolt.exe"
+  File "bin\win32ed\boltEd.exe"
+  File "bin\win32ed\boltEd.pck"
   File "bin\win32\bolt.pck"
   SetOutPath "$INSTDIR\data_Bolt\Assemblies"
   SetOverwrite try  
@@ -11615,7 +11615,8 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
   Delete "$INSTDIR\bolt.pck"  
-  Delete "$INSTDIR\BoltEd.exe"
+  Delete "$INSTDIR\boltEd.exe"
+  Delete "$INSTDIR\boltEd.pck"
   Delete "$INSTDIR\bolt.exe"
   Delete "$INSTDIR\bolt.pck"
   Delete "$INSTDIR\api\haxelib.json"

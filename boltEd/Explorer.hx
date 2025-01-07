@@ -82,7 +82,7 @@ class Explorer {
             var start = 0;
             //trace("start != null: " + (start != null));
             for (i in start...len) {
-                trace("i: " + i);
+                //trace("i: " + i);
                 var dirPath = directories[i];
                 //trace("dirPath: " + dirPath);
                 var dirIndex = new DirIndex(dirPath, parent);
