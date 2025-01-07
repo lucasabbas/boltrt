@@ -49,6 +49,20 @@
             ]
         },
         {
+            "name": "Launch (Editor Mode 'editor.bolt')",
+            "type": "godot-mono",
+            "request": "launch",
+            "mode": "executable",
+            "preLaunchTask": "build-editor",
+            "executable": "godot3-mono",
+            "executableArguments": [
+                "--path",
+                "${workspaceRoot}",
+                "--dev",
+                "${workspaceRoot}/boltEd/editor.bolt"
+            ]
+        },
+        {
             "name": "Launch (Hello Haxe)",
             "type": "godot-mono",
             "request": "launch",

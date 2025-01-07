@@ -12,6 +12,16 @@ public class Editor : LuaNode
         if (!basePath.EndsWith("/"))
             basePath += "/";
 
+        var path = System.IO.Path.GetFullPath(".");
+        foreach (string file in System.IO.Directory.GetFiles(path))
+        {
+            if (file.EndsWith(".bolt"))
+            {
+                _luaEnviroment.Script.Globals["boltFile"] = file;
+                break;
+            }
+        }
+        
         var editorPath = basePath + "boltEd/editor.bolt";
         StartFromLKProject(editorPath);
 

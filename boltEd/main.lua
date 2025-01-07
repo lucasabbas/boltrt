@@ -382,6 +382,8 @@ __bolt_godot_NodePauseMode = _hx_e()
 __bolt_godot_NodePhysicsInterpolationMode = _hx_e()
 __bolt_godot_NodeSignalNames = _hx_e()
 __bolt_godot_NodePathSignalNames = _hx_e()
+__bolt_godot_OSScreenOrientation = _hx_e()
+__bolt_godot_OSSignalNames = _hx_e()
 __bolt_godot_ObjectSignalNames = _hx_e()
 __bolt_godot_PackedSceneSignalNames = _hx_e()
 __bolt_godot_PacketPeerSignalNames = _hx_e()
@@ -1919,6 +1921,12 @@ __bolt_godot_NodeSignalNames.__name__ = true
 __bolt_godot_NodePathSignalNames.new = {}
 __bolt_godot_NodePathSignalNames.__name__ = true
 
+__bolt_godot_OSScreenOrientation.new = {}
+__bolt_godot_OSScreenOrientation.__name__ = true
+
+__bolt_godot_OSSignalNames.new = {}
+__bolt_godot_OSSignalNames.__name__ = true
+
 __bolt_godot_ObjectSignalNames.new = {}
 __bolt_godot_ObjectSignalNames.__name__ = true
 
@@ -2833,20 +2841,52 @@ __boltEd_EditorWindow.prototype.init = function(self)
   self.openFileDialog.windowTitle = "Open Project";
   self.openFileDialog.resizable = true;
   godot.SignalToFunc.connect(self.openFileDialog, __bolt_godot_FileDialogSignalNames.fileSelected, function(filePath) 
-    _gthis:openFile(filePath);
+    _gthis:openProject(filePath);
   end);
   self.document:addChild(self.openFileDialog);
+  local args = godot.OS.getCmdlineArgs();
+  local length = nil;
+  local tab = __lua_PairTools.copy(args);
+  local length = length;
+  local argsArray;
+  if (length == nil) then 
+    length = _hx_table.maxn(tab);
+    if (length > 0) then 
+      local head = tab[1];
+      _G.table.remove(tab, 1);
+      tab[0] = head;
+      argsArray = _hx_tab_array(tab, length);
+    else
+      argsArray = _hx_tab_array({}, 0);
+    end;
+  else
+    argsArray = _hx_tab_array(tab, length);
+  end;
+  local boltProjPath = "";
+  local _g = 0;
+  local _g1 = argsArray.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local arg = argsArray[i];
+    if (String.prototype.indexOf(arg, ".bolt") ~= -1) then 
+      _G.print(Std.string(Std.string("Opening project: ") .. Std.string(arg)));
+      boltProjPath = arg;
+    end;
+  end;
+  if (String.prototype.indexOf(boltProjPath, ".bolt") ~= -1) then 
+    _G.print(Std.string(Std.string("Opening project: ") .. Std.string(boltProjPath)));
+    self:openProject(boltProjPath);
+  end;
 end
 __boltEd_EditorWindow.prototype.onNewProject = function(self) 
 end
-__boltEd_EditorWindow.prototype.openFile = function(self,filePath) 
+__boltEd_EditorWindow.prototype.openProject = function(self,filePath) 
   local filePathArray = String.prototype.split(filePath, "/");
   local fileName = filePathArray[filePathArray.length - 1];
   filePathArray:remove(fileName);
   local dirPath = filePathArray:join("/");
-  self:openProject(dirPath);
-end
-__boltEd_EditorWindow.prototype.openProject = function(self,dirPath) 
   self.projectPath = dirPath;
   local ioManager = self.ioCore;
   ioManager:registerPath(dirPath, "project://");
@@ -2859,13 +2899,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,dirPath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=83,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=94,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=88,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=99,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
@@ -5074,6 +5114,20 @@ local _hx_static_init = function()
   __bolt_godot_NodeSignalNames.treeExited = "tree_exited";
   
   __bolt_godot_NodeSignalNames.treeExiting = "tree_exiting";
+  
+  __bolt_godot_OSScreenOrientation.Landscape = 0;
+  
+  __bolt_godot_OSScreenOrientation.Portrait = 1;
+  
+  __bolt_godot_OSScreenOrientation.ReverseLandscape = 2;
+  
+  __bolt_godot_OSScreenOrientation.ReversePortrait = 3;
+  
+  __bolt_godot_OSScreenOrientation.SensorLandscape = 4;
+  
+  __bolt_godot_OSScreenOrientation.SensorPortrait = 5;
+  
+  __bolt_godot_OSScreenOrientation.Sensor = 6;
   
   __bolt_godot_ObjectSignalNames.scriptChanged = "script_changed";
   

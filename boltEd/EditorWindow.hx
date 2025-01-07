@@ -54,15 +54,25 @@ class EditorWindow extends Widget {
         openFileDialog.windowTitle = "Open Project";
         openFileDialog.resizable = true;
         
-        SignalToFunc.connect(openFileDialog, FileDialogSignalNames.fileSelected, (filePath : String) -> openFile(filePath));
+        SignalToFunc.connect(openFileDialog, FileDialogSignalNames.fileSelected, (filePath : String) -> openProject(filePath));
 
         document.addChild(openFileDialog);
 
         var args = OS.getCmdlineArgs();
         var argsArray = lua.Table.toArray(args);
+        var boltProjPath : String = "";
         for (i in 0...argsArray.length) {
             var arg = argsArray[i];
-            Sys.println(arg);
+            if (StringTools.contains(arg, ".bolt")) {
+                boltProjPath = arg;
+            }
+        }
+        if (boltProjPath == "") {
+            boltProjPath = untyped __lua__("_G.boltFile");
+        }
+        
+        if (StringTools.contains(boltProjPath, ".bolt")){
+            openProject(boltProjPath);
         }
     }
 
@@ -71,16 +81,11 @@ class EditorWindow extends Widget {
         //trace(untyped __lua__("self ~= nil"));
     }
 
-    public function openFile(filePath : String) {
+    public function openProject(filePath : String) {
         var filePathArray = filePath.split("/");
         var fileName = filePathArray[filePathArray.length - 1];
         filePathArray.remove(fileName);
         var dirPath = filePathArray.join("/");
-        openProject(dirPath);
-    }
-
-    public function openProject(dirPath : String) {   
-        //trace("Open Project: " + dirPath);
         projectPath = dirPath;
 
         var ioManager : IoManager = cast ioCore;
