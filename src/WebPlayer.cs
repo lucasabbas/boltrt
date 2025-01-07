@@ -32,23 +32,28 @@ loadZipBase64().then((base64) => {
         {
             _luaEnviroment.Sandboxed = true;
             
-            Godot.File file = new Godot.File();
-            var error = file.Open("res://HelloHaxe.btz", Godot.File.ModeFlags.Read);
-            if (error != Error.Ok)
-            {
-                GD.Print("Failed to open file: ", error);
-                return;
-            }
-
-            byte[] bytes = file.GetBuffer((long)file.GetLen());
-            GD.Print("bytes: ", bytes.Length);
-            StartFromZip(bytes);
+            var httpRequest = new HTTPRequest();
+            AddChild(httpRequest);
+            httpRequest.Connect("request_completed", this, nameof(OnRequestCompleted));
+            var webExportUrl = (string)JavaScript.Eval("window.location.href");
+            //GD.Print(webExportUrl);
+            httpRequest.Request(webExportUrl + "index.bta");
             
         }
         catch (Exception e)
         {
             GD.Print(e.Message, e.StackTrace);
         }
+    }
+    
+    public void OnRequestCompleted(int result, int responseCode, string responseHeaders, byte[] data)
+    {
+        if (result != 0)
+        {
+            GD.Print("Request failed. Result: " + result + ", Response Code: " + responseCode);
+            return;
+        }
+        StartFromZip(data);
     }
 
     public void startFromBase64(string base64)
