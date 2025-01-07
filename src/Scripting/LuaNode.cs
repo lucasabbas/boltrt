@@ -72,7 +72,7 @@ namespace MagicRt.Scripting
 			foreach (var file in zip.GetFileList("data://"))
 			{
 				GD.Print(file);
-				if (file.EndsWith(".magicrt"))
+				if (file.EndsWith(".mgproj"))
 				{
 					magicrtPath = file;
 					break;

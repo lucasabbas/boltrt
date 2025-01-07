@@ -12,7 +12,7 @@ public class Editor : LuaNode
         if (!basePath.EndsWith("/"))
             basePath += "/";
 
-        var editorPath = basePath + "magicIDE/editor.magicrt";
+        var editorPath = basePath + "magicide/editor.mgproj";
         StartFromLKProject(editorPath);
 
         OS.WindowBorderless = false;

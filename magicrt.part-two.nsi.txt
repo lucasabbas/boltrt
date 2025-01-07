@@ -2,10 +2,10 @@
 
   
 
-  WriteRegStr HKCR ".magicrt" ""  "$INSTDIR\magicrt.exe"
-  WriteRegStr HKCR ".magicrt" ""  "MagicRt Project"
-  WriteRegStr HKCR ".magicrt\DefaultIcon" ""  "$INSTDIR\magicrt.exe"
-  WriteRegStr HKCR ".magicrt\shell\open\command" "" "$INSTDIR\magicrt.exe"
+  WriteRegStr HKCR ".mgproj" ""  "$INSTDIR\magicrt.exe"
+  WriteRegStr HKCR ".mgproj" ""  "MagicRt Project"
+  WriteRegStr HKCR ".mgproj\DefaultIcon" ""  "$INSTDIR\magicrt.exe"
+  WriteRegStr HKCR ".mgproj\shell\open\command" "" "$INSTDIR\magicrt.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application

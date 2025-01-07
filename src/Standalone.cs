@@ -47,7 +47,7 @@ public class Standalone : LuaNode
 			}
 			if (string.IsNullOrEmpty(path))
 			{
-				OS.Alert("directory or '.magicrt' file not provided", "ERROR");
+				OS.Alert("directory or 'mgproj' file not provided", "ERROR");
 				GetTree().Quit();
 				return;
 			}

@@ -1,5 +1,5 @@
 --library magicrt
---class-path magicIDE
+--class-path magicide
 --main magicide.Main
---lua magicIDE/main.lua
+--lua magicide/main.lua
 -D lua-vanilla
