@@ -15,7 +15,7 @@ extern class File extends Reference {
     public function get8(): Int;
     public function getAsText(skipCr: Bool = true): String;
     public function getBuffer(len: Int): Dynamic;
-    public function getCsvLine(delim: String): lua.Table[Int, String];
+    public function getCsvLine(delim: String): lua.Table<Int, String>;
     public function getDouble(): Float;
     public function getError(): Int;
     public function getFloat(): Float;
@@ -42,7 +42,7 @@ extern class File extends Reference {
     public function store64(value: Int): Void;
     public function store8(value: Int): Void;
     public function storeBuffer(buffer: Dynamic): Void;
-    public function storeCsvLine(values: lua.Table[Int, String], delim: String): Void;
+    public function storeCsvLine(values: lua.Table<Int, String>, delim: String): Void;
     public function storeDouble(value: Float): Void;
     public function storeFloat(value: Float): Void;
     public function storeLine(line: String): Void;

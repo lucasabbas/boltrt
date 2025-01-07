@@ -6,7 +6,7 @@ class EditorInspectorPluginSignalNames {
 extern class EditorInspectorPlugin extends Reference {
     public function addCustomControl(control: Control): Void;
     public function addPropertyEditor(property: String, editor: Control): Void;
-    public function addPropertyEditorForMultipleProperties(label: String, properties: lua.Table[Int, String], editor: Control): Void;
+    public function addPropertyEditorForMultipleProperties(label: String, properties: lua.Table<Int, String>, editor: Control): Void;
     public function canHandle(object: Object): Bool;
     public function parseBegin(object: Object): Void;
     public function parseCategory(object: Object, category: String): Void;

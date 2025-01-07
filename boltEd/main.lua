@@ -393,7 +393,6 @@ __bolt_godot_PlaneSignalNames = _hx_e()
 __bolt_godot_PoolColorArraySignalNames = _hx_e()
 __bolt_godot_PoolIntArraySignalNames = _hx_e()
 __bolt_godot_PoolRealArraySignalNames = _hx_e()
-__bolt_godot_PoolStringArraySignalNames = _hx_e()
 __bolt_godot_PoolVector2ArraySignalNames = _hx_e()
 __bolt_godot_PoolVector3ArraySignalNames = _hx_e()
 __bolt_godot_PopupGrowHorizontal = _hx_e()
@@ -1952,9 +1951,6 @@ __bolt_godot_PoolIntArraySignalNames.__name__ = true
 
 __bolt_godot_PoolRealArraySignalNames.new = {}
 __bolt_godot_PoolRealArraySignalNames.__name__ = true
-
-__bolt_godot_PoolStringArraySignalNames.new = {}
-__bolt_godot_PoolStringArraySignalNames.__name__ = true
 
 __bolt_godot_PoolVector2ArraySignalNames.new = {}
 __bolt_godot_PoolVector2ArraySignalNames.__name__ = true

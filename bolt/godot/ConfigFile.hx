@@ -7,8 +7,8 @@ extern class ConfigFile extends Reference {
     public function clear(): Void;
     public function eraseSection(section: String): Void;
     public function eraseSectionKey(section: String, key: String): Void;
-    public function getSectionKeys(section: String): lua.Table[Int, String];
-    public function getSections(): lua.Table[Int, String];
+    public function getSectionKeys(section: String): lua.Table<Int, String>;
+    public function getSections(): lua.Table<Int, String>;
     public function getValue(section: String, key: String, Default: Dynamic): Dynamic;
     public function hasSection(section: String): Bool;
     public function hasSectionKey(section: String, key: String): Bool;

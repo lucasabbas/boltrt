@@ -32,7 +32,7 @@ extern class EditorPlugin extends Node {
     public function forwardSpatialDrawOverViewport(overlay: Control): Void;
     public function forwardSpatialForceDrawOverViewport(overlay: Control): Void;
     public function forwardSpatialGuiInput(camera: Camera, event: InputEvent): Bool;
-    public function getBreakpoints(): lua.Table[Int, String];
+    public function getBreakpoints(): lua.Table<Int, String>;
     public function getEditorInterface(): EditorInterface;
     public function getPluginIcon(): Texture;
     public function getPluginName(): String;

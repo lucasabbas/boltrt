@@ -7,9 +7,9 @@ extern class TranslationServer extends Object {
     public function addTranslation(translation: Translation): Void;
     public function clear(): Void;
     public function compareLocales(localeA: String, localeB: String): Int;
-    public function getAllCountries(): lua.Table[Int, String];
-    public function getAllLanguages(): lua.Table[Int, String];
-    public function getAllScripts(): lua.Table[Int, String];
+    public function getAllCountries(): lua.Table<Int, String>;
+    public function getAllLanguages(): lua.Table<Int, String>;
+    public function getAllScripts(): lua.Table<Int, String>;
     public function getCountryName(country: String): String;
     public function getLanguageName(language: String): String;
     public function getLoadedLocales(): Array<Dynamic>;

@@ -5,7 +5,7 @@ class MainLoopSignalNames {
 }
 @:native("godot.MainLoop")
 extern class MainLoop extends Object {
-    public function DropFiles(files: lua.Table[Int, String], fromScreen: Int): Void;
+    public function DropFiles(files: lua.Table<Int, String>, fromScreen: Int): Void;
     public function Finalize(): Void;
     public function GlobalMenuAction(id: Dynamic, meta: Dynamic): Void;
     public function Idle(delta: Float): Bool;

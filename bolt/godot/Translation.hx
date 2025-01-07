@@ -10,7 +10,7 @@ extern class Translation extends Resource {
     public function eraseMessage(srcMessage: String): Void;
     public function getMessage(srcMessage: String): String;
     public function getMessageCount(): Int;
-    public function getMessageList(): lua.Table[Int, String];
+    public function getMessageList(): lua.Table<Int, String>;
     @:native("__new")
     public function new();
 }

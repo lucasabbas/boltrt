@@ -124,7 +124,7 @@ extern class ProjectSettings extends Object {
     public var editorMainRunArgs: String;
     public var editorSceneNaming: Int;
     public var editorScriptTemplatesSearchPath: String;
-    public var editorSearchInFileExtensions: lua.Table[Int, String];
+    public var editorSearchInFileExtensions: lua.Table<Int, String>;
     public var editorVersionControlAutoloadOnStartup: Bool;
     public var editorVersionControlPluginName: String;
     public var guiCommonDefaultScrollDeadzone: Int;

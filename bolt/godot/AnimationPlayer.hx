@@ -47,10 +47,10 @@ extern class AnimationPlayer extends Node {
     public function clearQueue(): Void;
     public function findAnimation(animation: Animation): String;
     public function getAnimation(name: String): Animation;
-    public function getAnimationList(): lua.Table[Int, String];
+    public function getAnimationList(): lua.Table<Int, String>;
     public function getBlendTime(animFrom: String, animTo: String): Float;
     public function getPlayingSpeed(): Float;
-    public function getQueue(): lua.Table[Int, String];
+    public function getQueue(): lua.Table<Int, String>;
     public function hasAnimation(name: String): Bool;
     public function isPlaying(): Bool;
     public function play(name: String, customBlend: Float = -1, customSpeed: Float = 1.0, fromEnd: Bool = false): Void;

@@ -10,7 +10,7 @@ extern class SpriteFrames extends Resource {
     public function clear(anim: String): Void;
     public function clearAll(): Void;
     public function getAnimationLoop(anim: String): Bool;
-    public function getAnimationNames(): lua.Table[Int, String];
+    public function getAnimationNames(): lua.Table<Int, String>;
     public function getAnimationSpeed(anim: String): Float;
     public function getFrame(anim: String, idx: Int): Texture;
     public function getFrameCount(anim: String): Int;

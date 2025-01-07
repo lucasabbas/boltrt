@@ -1,5 +1,6 @@
 package boltEd;
 
+import bolt.godot.OS;
 import haxe.macro.Expr.Catch;
 import bolt.godot.FileDialog;
 import bolt.godot.SignalToFunc;
@@ -56,6 +57,13 @@ class EditorWindow extends Widget {
         SignalToFunc.connect(openFileDialog, FileDialogSignalNames.fileSelected, (filePath : String) -> openFile(filePath));
 
         document.addChild(openFileDialog);
+
+        var args = OS.getCmdlineArgs();
+        var argsArray = lua.Table.toArray(args);
+        for (i in 0...argsArray.length) {
+            var arg = argsArray[i];
+            Sys.println(arg);
+        }
     }
 
     public function onNewProject() {

@@ -7,11 +7,11 @@ extern class ClassDB extends Object {
     public function canInstance(Class: String): Bool;
     public function classExists(Class: String): Bool;
     public function classGetCategory(Class: String): String;
-    public function classGetEnumConstants(Class: String, enum: String, noInheritance: Bool = false): lua.Table[Int, String];
-    public function classGetEnumList(Class: String, noInheritance: Bool = false): lua.Table[Int, String];
+    public function classGetEnumConstants(Class: String, enum: String, noInheritance: Bool = false): lua.Table<Int, String>;
+    public function classGetEnumList(Class: String, noInheritance: Bool = false): lua.Table<Int, String>;
     public function classGetIntegerConstant(Class: String, name: String): Int;
     public function classGetIntegerConstantEnum(Class: String, name: String, noInheritance: Bool = false): String;
-    public function classGetIntegerConstantList(Class: String, noInheritance: Bool = false): lua.Table[Int, String];
+    public function classGetIntegerConstantList(Class: String, noInheritance: Bool = false): lua.Table<Int, String>;
     public function classGetMethodList(Class: String, noInheritance: Bool = false): Array<Dynamic>;
     public function classGetProperty(object: Object, property: String): Dynamic;
     public function classGetPropertyList(Class: String, noInheritance: Bool = false): Array<Dynamic>;
@@ -22,8 +22,8 @@ extern class ClassDB extends Object {
     public function classHasMethod(Class: String, method: String, noInheritance: Bool = false): Bool;
     public function classHasSignal(Class: String, signal: String): Bool;
     public function classSetProperty(object: Object, property: String, value: Dynamic): Int;
-    public function getClassList(): lua.Table[Int, String];
-    public function getInheritersFromClass(Class: String): lua.Table[Int, String];
+    public function getClassList(): lua.Table<Int, String>;
+    public function getInheritersFromClass(Class: String): lua.Table<Int, String>;
     public function getParentClass(Class: String): String;
     public function instance(Class: String): Dynamic;
     public function isClassEnabled(Class: String): Bool;
