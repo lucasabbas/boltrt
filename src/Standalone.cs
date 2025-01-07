@@ -20,7 +20,7 @@ public class Standalone : LuaNode
 		for(var i = 0; i < args.Length; i++)
 		{
 			var arg = args[i];
-			if (arg.Contains(".bolt"))
+			if (arg.Contains(".bolt") || arg.Contains(".btz") || arg.Contains(".btzip") || arg.EndsWith(".bta"))
 			{
 				path = arg;
 				break;
@@ -47,7 +47,7 @@ public class Standalone : LuaNode
 			}
 			if (string.IsNullOrEmpty(path))
 			{
-				OS.Alert("directory or '.bolt' file not provided", "ERROR");
+				OS.Alert("directory, '.bolt', '.btz', '.btzip', or '.bta' file not provided", "ERROR");
 				GetTree().Quit();
 				return;
 			}
