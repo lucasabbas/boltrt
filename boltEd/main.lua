@@ -1148,6 +1148,7 @@ __bolt_App.new = function()
   return self
 end
 __bolt_App.super = function(self) 
+  _G.state = self;
   _G.process = function(delta) self:process(delta) end;
   _G.physicsProcess = function(delta) self:physicsProcess(delta) end;
   _G.input = function(event) self:input(event) end;

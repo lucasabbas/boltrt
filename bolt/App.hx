@@ -19,6 +19,7 @@ class App {
     }
 
     public function new() {
+        untyped __lua__("_G.state = self");
         untyped __lua__("_G.process = function(delta) self:process(delta) end");
         untyped __lua__("_G.physicsProcess = function(delta) self:physicsProcess(delta) end");
         untyped __lua__("_G.input = function(event) self:input(event) end");
