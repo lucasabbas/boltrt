@@ -677,6 +677,8 @@ abstract Quat(GdQuat) from GdQuat {
                     bool isOverride = field.Attribute("overrides") != null;
                     if (isOverride){
                     }
+                    else if (className.EndsWith("Server") || className == "OS" || className == "Time" || className == "UndoRedo")
+                        sb.AppendLine($"    public static var {ToCamelCase(fieldName)}: {MapReturnType(fieldType)};");
                     //else if (isStatic)
                         //sb.AppendLine($"    public static var {ToCamelCase(fieldName)}: {MapReturnType(fieldType)};");
                     else 
