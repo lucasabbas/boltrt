@@ -11546,7 +11546,7 @@ Section "Bolt Runtime" SEC01
 
   
 
-  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\boltEd.exe"
   WriteRegStr HKCR ".bolt" ""  "Bolt Project"
   WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
   WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
