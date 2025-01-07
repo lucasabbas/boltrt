@@ -68,6 +68,8 @@ namespace Bolt.Scripting
             Script.Globals["eval"] = (Func<string, DynValue>)eval;
             Modules = new Table(Script);
             Script.Globals["_MD"] = Modules;
+            UserData.RegisterType<Mono>();
+            Script.Globals["__mono__"] = new Mono();
 
             EnviromentVariables["PLATFORM"] = "Lucidware";
             EnviromentVariables["PLATFORM_VERSION"] = "1.0.0";
@@ -98,6 +100,8 @@ namespace Bolt.Scripting
         {
             if (!_isInitNoSandbox && !Sandboxed)
                 InitNoSandbox();
+            AddPlugin(typeof(Sys));
+            
             try
             {
                 string fullPath = IoCore.GetFullPath(entryPoint);

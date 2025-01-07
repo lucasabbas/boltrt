@@ -9,9 +9,9 @@ namespace Bolt.Plugins
         public override void Init()
         {
             Table SysNamespace = new Table(Enviroment.Script);
-            Enviroment.Script.Globals["sys"] = SysNamespace;
-
-            SysNamespace["Mono"] = UserData.CreateStatic(typeof(Mono));
+            Enviroment.Script.Globals["__sys"] = SysNamespace;
+            
+            SysNamespace["Mono"] = new Bolt.Mono();
         }
     }
 }

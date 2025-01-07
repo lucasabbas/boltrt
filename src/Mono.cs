@@ -1,11 +1,11 @@
 using System;
-
+using System.Runtime.InteropServices;
 
 namespace Bolt
 {
-    public static class Mono
+    public class Mono
     {
-        public static string Version
+        public string Version
         {
             get { return getVersion(); }
             set
@@ -14,7 +14,7 @@ namespace Bolt
             }
         }
         
-        public static string Platform
+        public string Platform
         {
             get { return getPlatform(); }
             set
@@ -23,7 +23,7 @@ namespace Bolt
             }
         }
         
-        public static string RuntimeVersion
+        public string RuntimeVersion
         {
             get { return getRuntimeVersion(); }
             set
@@ -32,7 +32,7 @@ namespace Bolt
             }
         }
         
-        private static string getVersion()
+        private string getVersion()
         {
             Type monoRuntimeType = Type.GetType("Mono.Runtime");
             if (monoRuntimeType != null)
@@ -48,14 +48,84 @@ namespace Bolt
             return null;
         }
         
-        private static string getPlatform()
+        private string getPlatform()
         {
             return "mono";
         }
         
-        private static string getRuntimeVersion()
+        private string getRuntimeVersion()
         {
             return Environment.Version.ToString();
+        }
+
+        private string getFrameworkVersion()
+        {
+            return ".NET 4.7.2";
+        }
+        
+        public string FrameworkVersion
+        {
+            get { return getFrameworkVersion(); }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+        
+        private string getRuntimeIdentifier()
+        {
+            return "mono";
+        }
+        
+        public string RuntimeIdentifier
+        {
+            get { return getRuntimeIdentifier(); }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+        
+        private string getCpuArchitecture()
+        {
+            return RuntimeInformation.ProcessArchitecture.ToString();
+        }
+        
+        public string CpuArchitecture
+        {
+            get { return getCpuArchitecture(); }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+        
+        private string getOperatingSystem()
+        {
+            return RuntimeInformation.OSDescription;
+        }
+        
+        public string OperatingSystem
+        {
+            get { return getOperatingSystem(); }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+        
+        private string getRuntimeDirectory()
+        {
+            return RuntimeEnvironment.GetRuntimeDirectory();
+        }
+        
+        public string RuntimeDirectory
+        {
+            get { return getRuntimeDirectory(); }
+            set
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
