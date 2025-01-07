@@ -10,6 +10,8 @@ namespace Bolt.Plugins
         {
             Table SysNamespace = new Table(Enviroment.Script);
             Enviroment.Script.Globals["sys"] = SysNamespace;
+
+            SysNamespace["Mono"] = UserData.CreateStatic(typeof(Mono));
         }
     }
 }
