@@ -1,4 +1,4 @@
---library bolt
+--library boltrt
 --class-path src
 --main Main
 --lua main.lua

@@ -1,4 +1,4 @@
---library bolt
+--library boltrt
 --class-path boltEd
 --main boltEd.Main
 --lua boltEd/main.lua
