@@ -6,6 +6,7 @@
     <SourceRevisionId>build$([System.DateTime]::UtcNow.ToString("yyyyMMddHHmmss"))</SourceRevisionId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="LibBSP" Version="0.4.0" />
     <PackageReference Include="MoonSharp" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger" Version="2.0.0" />
     <PackageReference Include="MoonSharp.Debugger.VsCode" Version="2.0.0" />
@@ -14,6 +15,11 @@
     <PackageReference Include="SharpGLTF.Ext.3DTiles" Version="1.0.3" />
     <PackageReference Include="SharpGLTF.Runtime" Version="1.0.3" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="Sledge.Formats" Version="1.3.0" />
+    <PackageReference Include="Sledge.Formats.Bsp" Version="1.0.16" />
+    <PackageReference Include="Sledge.Formats.GameData" Version="1.1.4" />
+    <PackageReference Include="Sledge.Formats.Map" Version="1.2.5" />
+    <PackageReference Include="Sledge.Formats.Texture" Version="1.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\HelloHaxe\data\" />

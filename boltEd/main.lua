@@ -2871,12 +2871,13 @@ __boltEd_EditorWindow.prototype.init = function(self)
     local i = _g - 1;
     local arg = argsArray[i];
     if (String.prototype.indexOf(arg, ".bolt") ~= -1) then 
-      _G.print(Std.string(Std.string("Opening project: ") .. Std.string(arg)));
       boltProjPath = arg;
     end;
   end;
+  if (boltProjPath == "") then 
+    boltProjPath = _G.boltFile;
+  end;
   if (String.prototype.indexOf(boltProjPath, ".bolt") ~= -1) then 
-    _G.print(Std.string(Std.string("Opening project: ") .. Std.string(boltProjPath)));
     self:openProject(boltProjPath);
   end;
 end
@@ -2899,13 +2900,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=94,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=96,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=99,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=101,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
