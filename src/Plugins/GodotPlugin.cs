@@ -54,7 +54,7 @@ namespace Bolt.Plugins
 
 			if (!Enviroment.Sandboxed)
 			{
-				UserData.RegisterType<OS>();
+				UserData.RegisterType(typeof(OS));
 				GdCoreNamespace["OS"] = UserData.CreateStatic(typeof(OS));
 			}
 

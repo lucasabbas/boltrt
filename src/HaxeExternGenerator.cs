@@ -783,9 +783,17 @@ abstract Quat(GdQuat) from GdQuat {
                     }
                     else 
                     {
+                        
                         if (methodName == "to_string")
                             methodName = "toString";
-                        sb.AppendLine($"    public function {ToCamelCase(methodName)}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        if (className.EndsWith("Server") || className == "OS" || className == "Time" || className == "UndoRedo")
+                        {
+                            sb.AppendLine($"    public static function {ToCamelCase(methodName)}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        }
+                        else
+                        {
+                            sb.AppendLine($"    public function {ToCamelCase(methodName)}({string.Join(", ", parameters)}): {MapReturnType(returnType)};");
+                        }
                         methodNames.Add(methodName);
                     }
                 }
