@@ -26,7 +26,7 @@ extern class Object extends bolt.core.MonoObject {
     public function getIndexed(propertyPath: NodePath): Dynamic;
     public function getInstanceId(): Int;
     public function getMeta(name: String, Default: Dynamic): Dynamic;
-    public function getMetaList(): PoolStringArray;
+    public function getMetaList(): lua.Table[Int, String];
     public function getMethodList(): Array<Dynamic>;
     public function getPropertyList(): Array<Dynamic>;
     public function getScript(): Reference;

@@ -12,7 +12,7 @@ extern class SceneState extends Reference {
     public function getConnectionSource(idx: Int): NodePath;
     public function getConnectionTarget(idx: Int): NodePath;
     public function getNodeCount(): Int;
-    public function getNodeGroups(idx: Int): PoolStringArray;
+    public function getNodeGroups(idx: Int): lua.Table[Int, String];
     public function getNodeIndex(idx: Int): Int;
     public function getNodeInstance(idx: Int): PackedScene;
     public function getNodeInstancePlaceholder(idx: Int): String;

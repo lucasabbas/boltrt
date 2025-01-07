@@ -225,19 +225,19 @@ extern class EditorSettings extends Resource {
     public var textEditorToolsSortMembersOutlineAlphabetically: Bool;
     public function addPropertyInfo(info: Map<Dynamic, Dynamic>): Void;
     public function erase(property: String): Void;
-    public function getFavorites(): PoolStringArray;
+    public function getFavorites(): lua.Table[Int, String];
     public function getProjectMetadata(section: String, key: String, Default: Dynamic): Dynamic;
     public function getProjectSettingsDir(): String;
-    public function getRecentDirs(): PoolStringArray;
+    public function getRecentDirs(): lua.Table[Int, String];
     public function getSetting(name: String): Dynamic;
     public function getSettingsDir(): String;
     public function hasSetting(name: String): Bool;
     public function propertyCanRevert(name: String): Bool;
     public function propertyGetRevert(name: String): Dynamic;
-    public function setFavorites(dirs: PoolStringArray): Void;
+    public function setFavorites(dirs: lua.Table[Int, String]): Void;
     public function setInitialValue(name: String, value: Dynamic, updateCurrent: Bool): Void;
     public function setProjectMetadata(section: String, key: String, data: Dynamic): Void;
-    public function setRecentDirs(dirs: PoolStringArray): Void;
+    public function setRecentDirs(dirs: lua.Table[Int, String]): Void;
     public function setSetting(name: String, value: Dynamic): Void;
     @:native("__new")
     public function new();

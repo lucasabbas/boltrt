@@ -72,7 +72,7 @@ extern class FileDialog extends ConfirmationDialog {
     public var currentDir: String;
     public var currentFile: String;
     public var currentPath: String;
-    public var filters: PoolStringArray;
+    public var filters: lua.Table[Int, String];
     public var mode: Int;
     public var modeOverridesTitle: Bool;
     public var rootSubfolder: String;

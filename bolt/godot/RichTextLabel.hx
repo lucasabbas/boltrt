@@ -84,7 +84,7 @@ extern class RichTextLabel extends Control {
     public function installEffect(effect: Dynamic): Void;
     public function newline(): Void;
     public function parseBbcode(bbcode: String): Int;
-    public function parseExpressionsForValues(expressions: PoolStringArray): Map<Dynamic, Dynamic>;
+    public function parseExpressionsForValues(expressions: lua.Table[Int, String]): Map<Dynamic, Dynamic>;
     public function pop(): Void;
     public function pushAlign(align: Int): Void;
     public function pushBold(): Void;

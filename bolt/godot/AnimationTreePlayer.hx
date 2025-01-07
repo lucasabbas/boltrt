@@ -40,7 +40,7 @@ extern class AnimationTreePlayer extends Node {
     public function blend4NodeSetAmount(id: String, blend: GdVector2): Void;
     public function connectNodes(id: String, dstId: String, dstInputIdx: Int): Int;
     public function disconnectNodes(id: String, dstInputIdx: Int): Void;
-    public function getNodeList(): PoolStringArray;
+    public function getNodeList(): lua.Table[Int, String];
     public function mixNodeGetAmount(id: String): Float;
     public function mixNodeSetAmount(id: String, ratio: Float): Void;
     public function nodeExists(node: String): Bool;

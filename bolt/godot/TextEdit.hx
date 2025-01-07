@@ -113,7 +113,7 @@ extern class TextEdit extends Control {
     public function getLineHeight(): Int;
     public function getLineWidth(line: Int, wrapIndex: Int = -1): Int;
     public function getLineWrapCount(line: Int): Int;
-    public function getLineWrappedText(line: Int): PoolStringArray;
+    public function getLineWrappedText(line: Int): lua.Table[Int, String];
     public function getMenu(): PopupMenu;
     public function getPosAtLineColumn(line: Int, column: Int): Vector2;
     public function getRectAtLineColumn(line: Int, column: Int): Rect2;

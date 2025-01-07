@@ -44,14 +44,14 @@ extern class OS extends Object {
     public static function delayUsec(usec: Int): Void;
     public static function dumpMemoryToFile(file: String): Void;
     public static function dumpResourcesToFile(file: String): Void;
-    public static function execute(path: String, arguments: PoolStringArray, blocking: Bool = true, output: Array<Dynamic>, readStderr: Bool = false, openConsole: Bool = false): Int;
+    public static function execute(path: String, arguments: lua.Table[Int, String], blocking: Bool = true, output: Array<Dynamic>, readStderr: Bool = false, openConsole: Bool = false): Int;
     public static function findScancodeFromString(string: String): Int;
     public static function getAudioDriverCount(): Int;
     public static function getAudioDriverName(driver: Int): String;
     public static function getCacheDir(): String;
-    public static function getCmdlineArgs(): PoolStringArray;
+    public static function getCmdlineArgs(): lua.Table[Int, String];
     public static function getConfigDir(): String;
-    public static function getConnectedMidiInputs(): PoolStringArray;
+    public static function getConnectedMidiInputs(): lua.Table[Int, String];
     public static function getCurrentVideoDriver(): Int;
     public static function getDataDir(): String;
     public static function getDate(utc: Bool = false): Map<Dynamic, Dynamic>;
@@ -61,7 +61,7 @@ extern class OS extends Object {
     public static function getDynamicMemoryUsage(): Int;
     public static function getEnvironment(variable: String): String;
     public static function getExecutablePath(): String;
-    public static function getGrantedPermissions(): PoolStringArray;
+    public static function getGrantedPermissions(): lua.Table[Int, String];
     public static function getImeSelection(): Vector2;
     public static function getImeText(): String;
     public static function getLatinKeyboardVariant(): String;
@@ -78,7 +78,7 @@ extern class OS extends Object {
     public static function getProcessorCount(): Int;
     public static function getProcessorName(): String;
     public static function getRealWindowSize(): Vector2;
-    public static function getRestartOnExitArguments(): PoolStringArray;
+    public static function getRestartOnExitArguments(): lua.Table[Int, String];
     public static function getScancodeString(code: Int): String;
     public static function getScreenCount(): Int;
     public static function getScreenDpi(screen: Int = -1): Int;
@@ -144,7 +144,7 @@ extern class OS extends Object {
     public static function openMidiInputs(): Void;
     public static function printAllResources(tofile: String): Void;
     public static function printAllTexturesBySize(): Void;
-    public static function printResourcesByType(types: PoolStringArray): Void;
+    public static function printResourcesByType(types: lua.Table[Int, String]): Void;
     public static function printResourcesInUse(short: Bool = false): Void;
     public static function readStringFromStdin(): String;
     public static function requestAttention(): Void;
@@ -155,7 +155,7 @@ extern class OS extends Object {
     public static function setImeActive(active: Bool): Void;
     public static function setImePosition(position: GdVector2): Void;
     public static function setNativeIcon(filename: String): Void;
-    public static function setRestartOnExit(restart: Bool, arguments: PoolStringArray): Void;
+    public static function setRestartOnExit(restart: Bool, arguments: lua.Table[Int, String]): Void;
     public static function setThreadName(name: String): Int;
     public static function setUseFileAccessSaveAndSwap(enabled: Bool): Void;
     public static function setWindowAlwaysOnTop(enabled: Bool): Void;
@@ -165,7 +165,7 @@ extern class OS extends Object {
     public static function showVirtualKeyboard(existingText: String, multiline: Bool = false): Void;
     public static function showVirtualKeyboardType(existingText: String, type: Int = 0): Void;
     public static function ttsGetVoices(): Array<Dynamic>;
-    public static function ttsGetVoicesForLanguage(language: String): PoolStringArray;
+    public static function ttsGetVoicesForLanguage(language: String): lua.Table[Int, String];
     public static function ttsIsPaused(): Bool;
     public static function ttsIsSpeaking(): Bool;
     public static function ttsPause(): Void;

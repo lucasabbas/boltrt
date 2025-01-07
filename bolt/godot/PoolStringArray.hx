@@ -1,13 +1,13 @@
 package bolt.godot;
 
-class PoolStringArraySignalNames {
+class lua.Table[Int, String]SignalNames {
 }
-@:native("godot.PoolStringArray")
-extern class PoolStringArray extends bolt.core.MonoObject {
+@:native("godot.lua.Table[Int, String]")
+extern class lua.Table[Int, String] extends bolt.core.MonoObject {
     @:native("__new")
     public function new(from: Array<Dynamic>);
     public function append(string: String): Dynamic;
-    public function appendArray(array: PoolStringArray): Dynamic;
+    public function appendArray(array: lua.Table[Int, String]): Dynamic;
     public function clear(): Dynamic;
     public function count(value: String): Int;
     public function empty(): Bool;

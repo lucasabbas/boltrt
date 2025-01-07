@@ -12,7 +12,7 @@ extern class EditorResourcePicker extends HBoxContainer {
     public var toggleMode: Bool;
     public function canDropDataFw(position: GdVector2, data: Dynamic, from: Control): Bool;
     public function dropDataFw(position: GdVector2, data: Dynamic, from: Control): Void;
-    public function getAllowedTypes(): PoolStringArray;
+    public function getAllowedTypes(): lua.Table[Int, String];
     public function getDragDataFw(position: GdVector2, from: Control): Dynamic;
     public function handleMenuSelected(id: Int): Bool;
     public function setCreateOptions(menuNode: Object): Void;
