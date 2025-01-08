@@ -14,7 +14,6 @@ import bolt.godot.AcceptDialog;
 import bolt.godot.Vector2;
 import bolt.io.IoCore;
 import lua.Table;
-import lua.Coroutine;
 
 class Explorer {
     public var editorWindow : EditorWindow;
@@ -29,13 +28,31 @@ class Explorer {
 
     public var rootDirIndex : DirIndex;
 
+    public var selectedPath : String = "project://";
+    
+    public function getDirIndex(path : String = "project://",  dirIndex : DirIndex = null) : DirIndex {
+        if (dirIndex == null) {
+            dirIndex = rootDirIndex;
+        }
+        if (dirIndex.path == path) {
+            return dirIndex;
+        }
+        for (i in 0...dirIndex.directories.length) {
+            var dir = dirIndex.directories[i];
+            var dIndex = getDirIndex(path, dir);
+            if (dIndex != null) {
+                return dIndex;
+            }
+        }
+        return null;
+    }
+
+
     public function new(ew : EditorWindow) {
         editorWindow = ew;
         ioCore = editorWindow.ioCore;
     }
 
-    function onCorutine(){
-    }
 
     public function init() {
         try {
@@ -49,7 +66,7 @@ class Explorer {
 
     public function buildRoot() : DirIndex {
         var root = new DirIndex("project://");
-        root.dirName = "Project";
+        root.dirName = editorWindow.projectName;
 
         if (root == null) {
             var acceptDialog = new AcceptDialog();
@@ -113,7 +130,6 @@ class Explorer {
             }
         }
 
-        /*
         var filesTable : Table<Int, String> = cast ioCore.getFileList(path, "", false);
         var files = Table.toArray(filesTable);
         if (files != null) {
@@ -140,7 +156,7 @@ class Explorer {
                 parent.files.push(fileIndex);
             }
         }
-        */
+        
     }
 
     public function printTree(dirIndex : DirIndex, indent : Int = 0) {
@@ -198,19 +214,6 @@ class Explorer {
         if (dirIndex.directories != null) {
             for (dir in dirIndex.directories) {
                 createTreeItemFromDirTree(dir, treeItem);
-            }
-        }
-        if (dirIndex.files != null) {
-            for (file in dirIndex.files) {
-                var fileIconFile = ioCore.loadBuffer("data://FugueIcons/icons/document.png");
-                var fileImage = new Image();
-                fileImage.loadPngFromBuffer(fileIconFile);
-                var fileTexture = new ImageTexture();
-                fileTexture.createFromImage(fileImage);
-                var fileItem = tree.createItem(treeItem);
-                fileItem.setText(0, file.fileName);
-                fileItem.setIcon(0, fileTexture);
-                fileItem.setMetadata(0, file.path);
             }
         }
         

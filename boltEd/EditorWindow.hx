@@ -1,5 +1,6 @@
 package boltEd;
 
+import bolt.godot.PopupMenu.PopupMenuSignalNames;
 import bolt.godot.OS;
 import haxe.macro.Expr.Catch;
 import bolt.godot.FileDialog;
@@ -23,6 +24,8 @@ class EditorWindow extends Widget {
 
     public var projectPath : String;
 
+    public var projectName : String;
+
     public var explorer : Explorer;
 
     public override function init() {
@@ -34,6 +37,22 @@ class EditorWindow extends Widget {
         editMenuButton = cast document.getObject("Control/VBoxContainer/MenuBar/HBoxContainer/EditButton");
         helpMenuButton = cast document.getObject("Control/VBoxContainer/MenuBar/HBoxContainer/HelpButton");
 
+        var fileMenu = fileMenuButton.getPopup();
+        var editMenu = editMenuButton.getPopup();
+        var helpMenu = helpMenuButton.getPopup();
+
+        SignalToFunc.connect(fileMenu, PopupMenuSignalNames.idPressed, (id : Int) -> {
+            Sys.println("id: " + id);
+            if (id == 0) {
+                onNewProject();
+            }
+            else if (id == 1) {
+                openProjectDialog();
+            }
+            else if (id == 2) {
+                document.getTree().quit();
+            }
+        });
         //trace(fileMenuButton != null);
         //trace(editMenuButton != null);
         //trace(helpMenuButton != null);
@@ -87,6 +106,7 @@ class EditorWindow extends Widget {
     public function openProject(filePath : String) {
         var filePathArray = filePath.split("/");
         var fileName = filePathArray[filePathArray.length - 1];
+        projectName = fileName;
         filePathArray.remove(fileName);
         var dirPath = filePathArray.join("/");
         projectPath = dirPath;

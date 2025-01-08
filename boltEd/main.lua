@@ -520,9 +520,9 @@ __haxe_iterators_ArrayIterator = _hx_e()
 __haxe_iterators_ArrayKeyValueIterator = _hx_e()
 __haxe_macro_Error = _hx_e()
 __lua_Boot = _hx_e()
-__lua_Thread = _hx_e()
 __lua_UserData = _hx_e()
 __lua_PairTools = _hx_e()
+__lua_Thread = _hx_e()
 
 local _hx_bind, _hx_bit, _hx_staticToInstance, _hx_funcToField, _hx_maxn, _hx_print, _hx_apply_self, _hx_box_mr, _hx_bit_clamp, _hx_table, _hx_bit_raw
 local _hx_pcall_default = {};
@@ -2827,6 +2827,23 @@ __boltEd_EditorWindow.prototype.init = function(self)
   self.fileMenuButton = self.document:getObject("Control/VBoxContainer/MenuBar/HBoxContainer/FileButton");
   self.editMenuButton = self.document:getObject("Control/VBoxContainer/MenuBar/HBoxContainer/EditButton");
   self.helpMenuButton = self.document:getObject("Control/VBoxContainer/MenuBar/HBoxContainer/HelpButton");
+  local fileMenu = self.fileMenuButton:getPopup();
+  local editMenu = self.editMenuButton:getPopup();
+  local helpMenu = self.helpMenuButton:getPopup();
+  godot.SignalToFunc.connect(fileMenu, __bolt_godot_PopupMenuSignalNames.idPressed, function(id) 
+    _G.print(Std.string(Std.string("id: ") .. Std.string(id)));
+    if (id == 0) then 
+      _gthis:onNewProject();
+    else
+      if (id == 1) then 
+        _gthis:openProjectDialog();
+      else
+        if (id == 2) then 
+          _gthis.document:getTree():quit();
+        end;
+      end;
+    end;
+  end);
   self.newProjectButton = self.document:getObject("Control/VBoxContainer/ToolBar/HBoxContainer/NewProjectButton");
   self.openProjectButton = self.document:getObject("Control/VBoxContainer/ToolBar/HBoxContainer/OpenProjectButton");
   godot.SignalToFunc.connect(self.newProjectButton, "pressed", function() 
@@ -2890,6 +2907,7 @@ end
 __boltEd_EditorWindow.prototype.openProject = function(self,filePath) 
   local filePathArray = String.prototype.split(filePath, "/");
   local fileName = filePathArray[filePathArray.length - 1];
+  self.projectName = fileName;
   filePathArray:remove(fileName);
   local dirPath = filePathArray:join("/");
   self.projectPath = dirPath;
@@ -2904,13 +2922,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=99,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=119,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=104,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=124,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
@@ -2930,8 +2948,6 @@ __boltEd_Explorer.super = function(self,ew)
 end
 __boltEd_Explorer.__name__ = true
 __boltEd_Explorer.prototype = _hx_e();
-__boltEd_Explorer.prototype.onCorutine = function(self) 
-end
 __boltEd_Explorer.prototype.init = function(self) 
   local _hx_status, _hx_result = pcall(function() 
   
@@ -2951,7 +2967,7 @@ __boltEd_Explorer.prototype.init = function(self)
 end
 __boltEd_Explorer.prototype.buildRoot = function(self) 
   local root = __boltEd_explorer_DirIndex.new("project://");
-  root.dirName = "Project";
+  root.dirName = self.editorWindow.projectName;
   if (root == nil) then 
     local acceptDialog = godot.AcceptDialog.__new();
     acceptDialog.windowTitle = "Error";
@@ -3017,6 +3033,54 @@ __boltEd_Explorer.prototype.buildTree = function(self,parent,path)
       end;
       parent.directories:push(dirIndex);
       self:buildTree(dirIndex, dirPath);
+    end;
+  end;
+  local filesTable = self.ioCore:getFileList(path, "", false);
+  local length = nil;
+  local tab = __lua_PairTools.copy(filesTable);
+  local length = length;
+  local files;
+  if (length == nil) then 
+    length = _hx_table.maxn(tab);
+    if (length > 0) then 
+      local head = tab[1];
+      _G.table.remove(tab, 1);
+      tab[0] = head;
+      files = _hx_tab_array(tab, length);
+    else
+      files = _hx_tab_array({}, 0);
+    end;
+  else
+    files = _hx_tab_array(tab, length);
+  end;
+  if (files ~= nil) then 
+    local len = files.length;
+    local start = 0;
+    local _g = start;
+    local _g1 = len;
+    local _hx_continue_1 = false;
+    while (_g < _g1) do _hx_do_first_1 = false;
+      repeat 
+      _g = _g + 1;
+      local i = _g - 1;
+      local filePath = files[i];
+      if (String.prototype.substring(filePath, #filePath - 1) == "/") then 
+        break;
+      end;
+      local fileIndex = __boltEd_explorer_FileIndex.new(filePath, parent);
+      local fileWithoutUrl = String.prototype.substring(filePath, 9);
+      local filePathList = String.prototype.split(fileWithoutUrl, "/");
+      local fileName = filePathList[filePathList.length - 1];
+      fileIndex.fileName = fileName;
+      if (parent.files == nil) then 
+        parent.files = _hx_tab_array({}, 0);
+      end;
+      parent.files:push(fileIndex);until true
+      if _hx_continue_1 then 
+      _hx_continue_1 = false;
+      break;
+      end;
+      
     end;
   end;
 end
@@ -3088,24 +3152,6 @@ __boltEd_Explorer.prototype.createTreeItemFromDirTree = function(self,dirIndex,p
       local dir = _g1[_g];
       _g = _g + 1;
       self:createTreeItemFromDirTree(dir, treeItem);
-    end;
-  end;
-  if (dirIndex.files ~= nil) then 
-    local _g = 0;
-    local _g1 = dirIndex.files;
-    while (_g < _g1.length) do _hx_do_first_1 = false;
-      
-      local file = _g1[_g];
-      _g = _g + 1;
-      local fileIconFile = self.ioCore:loadBuffer("data://FugueIcons/icons/document.png");
-      local fileImage = godot.Image.__new();
-      fileImage:loadPngFromBuffer(fileIconFile);
-      local fileTexture = godot.ImageTexture.__new();
-      fileTexture:createFromImage(fileImage);
-      local fileItem = self.tree:createItem(treeItem);
-      fileItem:setText(0, file.fileName);
-      fileItem:setIcon(0, fileTexture);
-      fileItem:setMetadata(0, file.path);
     end;
   end;
 end
@@ -3697,9 +3743,6 @@ __lua_Boot.extendsOrImplements = function(cl1,cl2)
   do return __lua_Boot.extendsOrImplements(cl1.__super__, cl2) end;
 end
 
-__lua_Thread.new = {}
-__lua_Thread.__name__ = true
-
 __lua_UserData.new = {}
 __lua_UserData.__name__ = true
 
@@ -3710,6 +3753,9 @@ __lua_PairTools.copy = function(table1)
   for k,v in _G.pairs(table1) do ret[k] = v end;
   do return ret end;
 end
+
+__lua_Thread.new = {}
+__lua_Thread.__name__ = true
 if _hx_bit_raw then
     _hx_bit_clamp = function(v)
     if v <= 2147483647 and v >= -2147483648 then

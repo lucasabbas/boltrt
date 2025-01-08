@@ -82,7 +82,7 @@
                         Name="HSplitContainer"
                         SizeFlagsVertical="3"
                         SplitOffset="125">
-                    <Control
+                    <!--Control
                             Name="Explorer"
                             RectMinSize="125,0">
                             <VBoxContainer Name="VBoxContainer">
@@ -114,7 +114,7 @@
                                         Name="Tree"
                                         SizeFlagsVertical="3"/>
                             </VBoxContainer>
-                    </Control>
+                    </Control-->
                     <Control
                             Name="Control"
                             AnchorTop="0"

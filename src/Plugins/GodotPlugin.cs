@@ -56,6 +56,8 @@ namespace Bolt.Plugins
 			{
 				UserData.RegisterType(typeof(OS));
 				GdCoreNamespace["OS"] = UserData.CreateStatic(typeof(OS));
+				UserData.RegisterType(typeof(SceneTree));
+				GdCoreNamespace["SceneTree"] = UserData.CreateStatic(typeof(SceneTree));
 			}
 
 			GdCoreNamespace["Color"] = typeof(Color);
