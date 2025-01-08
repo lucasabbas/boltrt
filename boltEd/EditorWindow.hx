@@ -68,7 +68,10 @@ class EditorWindow extends Widget {
             }
         }
         if (boltProjPath == "") {
-            boltProjPath = untyped __lua__("_G.boltFile");
+            var boltFileExists = untyped __lua__("_G.boltFile ~= nil");
+            if (boltFileExists) {
+                boltProjPath = untyped __lua__("_G.boltFile");
+            }
         }
         
         if (StringTools.contains(boltProjPath, ".bolt")){

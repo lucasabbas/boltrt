@@ -69,6 +69,14 @@ thickness = 5
 color = Color( 0.85098, 0.85098, 0.85098, 1 )
 thickness = 5
 
+[sub_resource type="StyleBoxTexture" id=12]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 100, 100 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+
 [sub_resource type="StyleBoxTexture" id=9]
 texture = ExtResource( 4 )
 region_rect = Rect2( 0, 0, 49, 45 )
@@ -88,14 +96,6 @@ margin_bottom = 6.0
 [sub_resource type="StyleBoxTexture" id=11]
 texture = ExtResource( 7 )
 region_rect = Rect2( 0, 0, 49, 45 )
-margin_left = 6.0
-margin_right = 6.0
-margin_top = 6.0
-margin_bottom = 6.0
-
-[sub_resource type="StyleBoxTexture" id=12]
-texture = ExtResource( 5 )
-region_rect = Rect2( 0, 0, 100, 100 )
 margin_left = 6.0
 margin_right = 6.0
 margin_top = 6.0
@@ -216,6 +216,12 @@ HScrollBar/styles/scroll_focus = SubResource( 6 )
 HSlider/styles/grabber_area = SubResource( 7 )
 HSlider/styles/grabber_area_highlight = SubResource( 7 )
 HSlider/styles/slider = SubResource( 8 )
+ItemList/colors/font_color = Color( 0, 0, 0, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 1, 1, 1, 0.101961 )
+ItemList/styles/bg = SubResource( 12 )
+ItemList/styles/selected = SubResource( 2 )
+ItemList/styles/selected_focus = SubResource( 1 )
 Label/colors/font_color = Color( 0, 0, 0, 1 )
 LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
 LineEdit/colors/font_color_selected = Color( 1, 1, 1, 1 )

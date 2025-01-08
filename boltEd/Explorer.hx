@@ -1,6 +1,9 @@
 package boltEd;
 
+import lua.Boot;
+import haxe.Constraints.Function;
 import bolt.godot.Button;
+import bolt.godot.MenuButton;
 import bolt.godot.Tree;
 import bolt.godot.TreeItem;
 import bolt.godot.ImageTexture;
@@ -11,15 +14,16 @@ import bolt.godot.AcceptDialog;
 import bolt.godot.Vector2;
 import bolt.io.IoCore;
 import lua.Table;
+import lua.Coroutine;
 
 class Explorer {
     public var editorWindow : EditorWindow;
 
     public var ioCore : IoCore;
 
-    public var reloadButton : Button;
+    public var refreshButton : Button;
 
-    public var newButton : Button;
+    public var newButton : MenuButton;
 
     public var tree : Tree;
 
@@ -30,10 +34,17 @@ class Explorer {
         ioCore = editorWindow.ioCore;
     }
 
+    function onCorutine(){
+    }
+
     public function init() {
-        reloadButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/ToolBar/HBoxContainer/ReloadButton");
-        newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/ToolBar/HBoxContainer/NewButton");
-        tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Explorer/VBoxContainer/Tree");
+        try {
+            refreshButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/Refresh");
+            newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/New");
+            tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/DirTree");
+        }
+        catch (e) {
+            throw e;}
     }
 
     public function buildRoot() : DirIndex {
@@ -53,10 +64,8 @@ class Explorer {
         return root;
     }
 
-    public function start() {
+    public function start() : Void {
         rootDirIndex = buildRoot();
-
-        //printTree(rootDirIndex);
         createTreeItemFromDirTree(rootDirIndex);
     }
 
@@ -104,6 +113,7 @@ class Explorer {
             }
         }
 
+        /*
         var filesTable : Table<Int, String> = cast ioCore.getFileList(path, "", false);
         var files = Table.toArray(filesTable);
         if (files != null) {
@@ -130,6 +140,7 @@ class Explorer {
                 parent.files.push(fileIndex);
             }
         }
+        */
     }
 
     public function printTree(dirIndex : DirIndex, indent : Int = 0) {

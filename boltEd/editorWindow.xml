@@ -116,8 +116,48 @@
                             </VBoxContainer>
                     </Control>
                     <Control
-                            Name="ContentView">
-                        <TabContainer/>
+                            Name="Control"
+                            AnchorTop="0"
+                            AnchorBottom="1"
+                            AnchorLeft="0"
+                            AnchorRight="1">
+                        <VSplitContainer Name="VSplitContainer" SplitOffset="200">
+                            <TabContainer Name="ContentView" TabAlign="Left" RectMinSize="0,10" SizeFlagsVertical="3"></TabContainer>
+                            <TabContainer Name="Dock" TabAlign="Left" RectMinSize="0,200">
+                                <Control Name="Explorer">
+                                    <VBoxContainer 
+                                            Name="VBoxContainer"
+                                            AnchorTop="0"
+                                            AnchorBottom="1"
+                                            AnchorLeft="0"
+                                            AnchorRight="1">
+                                        <Control 
+                                            Name="Toolbar"
+                                            RectMinSize="0,25">
+                                            <HBoxContainer
+                                                    Name="HBoxContainer"
+                                                    AnchorTop="0"
+                                                    AnchorBottom="1"
+                                                    AnchorLeft="0"
+                                                    AnchorRight="1">
+                                                <Button Name="Back" IconAlignment="Center" Icon="data://FugueIcons/icons/arrow-180.png" Flat="true" RectMinSize="25,25"/>
+                                                <Button Name="Forward" IconAlignment="Center" Icon="data://FugueIcons/icons/arrow.png" Flat="true" RectMinSize="25,25"/>
+                                                <Button Name="Up" IconAlignment="Center" Icon="data://FugueIcons/icons/arrow-090.png" Flat="true" RectMinSize="25,25"/>
+                                                <Button Name="Refresh" IconAlignment="Center" Icon="data://FugueIcons/icons/arrow-circle-315.png" Flat="true" RectMinSize="25,25"/>
+                                                <MenuButton Name="New" IconAlignment="Center" Icon="data://FugueIcons/icons/plus-button.png" Flat="true" RectMinSize="25,25"/>
+                                                <LineEdit Name="AddressBar" PlaceholderText="path://to/folder/" SizeFlagsHorizontal="3"/>
+                                                <LineEdit Name="SearchBar" PlaceholderText="Search for files" RightIcon="data://FugueIcons/icons/magnifier.png" RectMinSize="200,0"/>
+                                            </HBoxContainer>
+                                        </Control>
+                                        <Control/>
+                                        <HSplitContainer Name="HSplitContainer" SizeFlagsVertical="3">
+                                            <Tree Name="DirTree" RectMinSize="200,0"/>
+                                            <ItemList Name="CurrentDirItemList" SizeFlagsHorizontal="3" FixedIconSize="32,32" FixedColumnWidth="96" IconMode="Top" SelectMode="Single" MaxColumns="0"/>
+                                        </HSplitContainer>
+                                    </VBoxContainer>
+                                </Control>
+                            </TabContainer>
+                        </VSplitContainer>
                     </Control>
                 </HSplitContainer>
             </VBoxContainer>
