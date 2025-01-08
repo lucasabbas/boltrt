@@ -5,27 +5,6 @@ using System.IO;
 
 public class WebPlayer : LuaNode
 {
-    public string loader = @"
-globalThis.isLkZipLoaded = false;
-async function loadZipBase64() {
-    const response = await fetch('/HelloHaxe.lkzip');
-    const arrayBuffer = await response.arrayBuffer();
-
-    // Convert ArrayBuffer to a binary string
-    const binaryString = String.fromCharCode(...new Uint8Array(arrayBuffer));
-
-    // Convert binary string to Base64
-    const base64 = btoa(binaryString);
-
-    return base64;
-};
-loadZipBase64().then((base64) => {
-    globalThis.lkzip = base64;
-    globalThis.isLkZipLoaded = true;
-})";
-
-    private Timer _timer;
-    private Reference getLkZip;
     public override void _Ready()
     {
         try 
@@ -54,11 +33,5 @@ loadZipBase64().then((base64) => {
             return;
         }
         StartFromZip(data);
-    }
-
-    public void startFromBase64(string base64)
-    {
-        byte[] bytes = Convert.FromBase64String(base64);
-        StartFromZip(bytes);
     }
 }
