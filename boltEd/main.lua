@@ -2943,11 +2943,36 @@ __boltEd_Explorer.new = function(ew)
   return self
 end
 __boltEd_Explorer.super = function(self,ew) 
+  self.selectedPath = "project://";
   self.editorWindow = ew;
   self.ioCore = self.editorWindow.ioCore;
 end
 __boltEd_Explorer.__name__ = true
 __boltEd_Explorer.prototype = _hx_e();
+__boltEd_Explorer.prototype.getDirIndex = function(self,path,dirIndex) 
+  if (path == nil) then 
+    path = "project://";
+  end;
+  if (dirIndex == nil) then 
+    dirIndex = self.rootDirIndex;
+  end;
+  if (dirIndex.path == path) then 
+    do return dirIndex end;
+  end;
+  local _g = 0;
+  local _g1 = dirIndex.directories.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local dir = dirIndex.directories[i];
+    local dIndex = self:getDirIndex(path, dir);
+    if (dIndex ~= nil) then 
+      do return dIndex end;
+    end;
+  end;
+  do return nil end
+end
 __boltEd_Explorer.prototype.init = function(self) 
   local _hx_status, _hx_result = pcall(function() 
   
