@@ -19,7 +19,8 @@
             "command": "dotnet",
             "type": "process",
             "args": [
-                "build"
+                "build",
+                "${workspaceRoot}/Bolt.sln"
             ],
             "problemMatcher": "$msCompile",
             "presentation": {

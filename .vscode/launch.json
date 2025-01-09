@@ -76,6 +76,19 @@
             ]
         },
         {
+            "name": "Launch (Scene Test)",
+            "type": "godot-mono",
+            "request": "launch",
+            "mode": "executable",
+            "preLaunchTask": "build",
+            "executable": "godot3-mono",
+            "executableArguments": [
+                "--path",
+                "${workspaceRoot}",
+                "--datapath=./Tests/SceneTest"
+            ]
+        },
+        {
             "name": "Launch (Ui Test)",
             "type": "godot-mono",
             "request": "launch",
