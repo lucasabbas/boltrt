@@ -6,6 +6,7 @@ import bolt.godot.Button;
 import bolt.godot.MenuButton;
 import bolt.godot.Tree;
 import bolt.godot.TreeItem;
+import bolt.godot.ItemList;
 import bolt.godot.ImageTexture;
 import bolt.godot.Image;
 import boltEd.explorer.DirIndex;
@@ -25,6 +26,8 @@ class Explorer {
     public var newButton : MenuButton;
 
     public var tree : Tree;
+
+    public var itemList : ItemList;
 
     public var rootDirIndex : DirIndex;
 
@@ -59,6 +62,7 @@ class Explorer {
             refreshButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/Refresh");
             newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/New");
             tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/DirTree");
+            itemList = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/CurrentDirItemList");
         }
         catch (e) {
             throw e;}
@@ -84,6 +88,12 @@ class Explorer {
     public function start() : Void {
         rootDirIndex = buildRoot();
         createTreeItemFromDirTree(rootDirIndex);
+
+        var currentDirIndex = getDirIndex(selectedPath);
+
+        if (currentDirIndex != null) {
+            createCurrentDirItemList(currentDirIndex);
+        }
     }
 
     public function buildTree(parent : DirIndex = null, path : String = "project://") {
@@ -199,6 +209,7 @@ class Explorer {
         folderTexture.createFromImage(folderImage);
 
         if (parentItem == null) {
+            tree.clear();
             treeItem = tree.createItem(null);
             treeItem.setText(0, dirIndex.dirName);
             treeItem.setIcon(0, projectTexture);
@@ -214,6 +225,65 @@ class Explorer {
         if (dirIndex.directories != null) {
             for (dir in dirIndex.directories) {
                 createTreeItemFromDirTree(dir, treeItem);
+            }
+        }
+        
+    }
+
+    public function loadIcon(path : String) : ImageTexture {
+        var iconFile = ioCore.loadBuffer(path);
+        var iconImage = new Image();
+        if (StringTools.endsWith(path, ".png")) {
+            iconImage.loadPngFromBuffer(iconFile);
+        }
+        else if (StringTools.endsWith(path, ".jpg") || StringTools.endsWith(path, ".jpeg")) {
+            iconImage.loadJpgFromBuffer (iconFile);
+        }
+        else if (StringTools.endsWith(path, ".bmp")) {
+            iconImage.loadBmpFromBuffer(iconFile);
+        }
+        else if (StringTools.endsWith(path, ".webp")) {
+            iconImage.loadWebpFromBuffer(iconFile);
+        }
+        var iconTexture = new ImageTexture();
+        iconTexture.createFromImage(iconImage);
+        return iconTexture;
+    }
+
+    public function createCurrentDirItemList(dirIndex : DirIndex) {
+        if (dirIndex == null) {
+            return;
+        }
+
+        if (dirIndex.directories != null) {
+            for (dir in dirIndex.directories) {
+                itemList.addItem(
+                    dir.dirName,
+                    loadIcon("data://FugueIcons/bonus/icons-32/folder.png"),
+                );
+                var itemIdxCount = itemList.getItemCount();
+                for (i in 0...itemIdxCount) {
+                    if (itemList.getItemText(i) == dir.dirName) {
+                        itemList.setItemMetadata(i, dir.path);
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (dirIndex.files != null) {
+            for (file in dirIndex.files) {
+                itemList.addItem(
+                    file.fileName,
+                    loadIcon("data://FugueIcons/bonus/icons-32/document.png"),
+                );
+                var itemIdxCount = itemList.getItemCount();
+                for (i in 0...itemIdxCount) {
+                    if (itemList.getItemText(i) == file.fileName) {
+                        itemList.setItemMetadata(i, file.path);
+                        break;
+                    }
+                }
             }
         }
         

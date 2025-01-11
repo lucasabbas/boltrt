@@ -188,6 +188,7 @@ local Reflect = _hx_e()
 local String = _hx_e()
 local Std = _hx_e()
 local StringBuf = _hx_e()
+local StringTools = _hx_e()
 __bolt_App = _hx_e()
 __bolt_godot_AABBSignalNames = _hx_e()
 __bolt_godot_AcceptDialogGrowHorizontal = _hx_e()
@@ -321,6 +322,16 @@ __bolt_godot_InputEventSignalNames = _hx_e()
 __bolt_godot_InputEventKeySignalNames = _hx_e()
 __bolt_godot_InputEventWithModifiersSignalNames = _hx_e()
 __bolt_godot_IntervalTweenerSignalNames = _hx_e()
+__bolt_godot_ItemListSelectMode = _hx_e()
+__bolt_godot_ItemListIconMode = _hx_e()
+__bolt_godot_ItemListGrowHorizontal = _hx_e()
+__bolt_godot_ItemListGrowVertical = _hx_e()
+__bolt_godot_ItemListFocusMode = _hx_e()
+__bolt_godot_ItemListMouseFilter = _hx_e()
+__bolt_godot_ItemListMouseDefaultCursorShape = _hx_e()
+__bolt_godot_ItemListPauseMode = _hx_e()
+__bolt_godot_ItemListPhysicsInterpolationMode = _hx_e()
+__bolt_godot_ItemListSignalNames = _hx_e()
 __bolt_godot_LabelAlign = _hx_e()
 __bolt_godot_LabelValign = _hx_e()
 __bolt_godot_LabelGrowHorizontal = _hx_e()
@@ -417,6 +428,14 @@ __bolt_godot_PrimitiveMeshSignalNames = _hx_e()
 __bolt_godot_PropertyTweenerSignalNames = _hx_e()
 __bolt_godot__Quat_Quat_Impl_ = _hx_e()
 __bolt_godot_RIDSignalNames = _hx_e()
+__bolt_godot_RangeGrowHorizontal = _hx_e()
+__bolt_godot_RangeGrowVertical = _hx_e()
+__bolt_godot_RangeFocusMode = _hx_e()
+__bolt_godot_RangeMouseFilter = _hx_e()
+__bolt_godot_RangeMouseDefaultCursorShape = _hx_e()
+__bolt_godot_RangePauseMode = _hx_e()
+__bolt_godot_RangePhysicsInterpolationMode = _hx_e()
+__bolt_godot_RangeSignalNames = _hx_e()
 __bolt_godot_Rect2SignalNames = _hx_e()
 __bolt_godot_ReferenceSignalNames = _hx_e()
 __bolt_godot_ResourceSignalNames = _hx_e()
@@ -424,6 +443,14 @@ __bolt_godot_SceneStateSignalNames = _hx_e()
 __bolt_godot_SceneTreeSignalNames = _hx_e()
 __bolt_godot_SceneTreeTimerSignalNames = _hx_e()
 __bolt_godot_SceneTreeTweenSignalNames = _hx_e()
+__bolt_godot_ScrollBarGrowHorizontal = _hx_e()
+__bolt_godot_ScrollBarGrowVertical = _hx_e()
+__bolt_godot_ScrollBarFocusMode = _hx_e()
+__bolt_godot_ScrollBarMouseFilter = _hx_e()
+__bolt_godot_ScrollBarMouseDefaultCursorShape = _hx_e()
+__bolt_godot_ScrollBarPauseMode = _hx_e()
+__bolt_godot_ScrollBarPhysicsInterpolationMode = _hx_e()
+__bolt_godot_ScrollBarSignalNames = _hx_e()
 __bolt_godot_ShaderSignalNames = _hx_e()
 __bolt_godot_ShapeSignalNames = _hx_e()
 __bolt_godot_ShortCutSignalNames = _hx_e()
@@ -472,6 +499,14 @@ __bolt_godot_VBoxContainerMouseDefaultCursorShape = _hx_e()
 __bolt_godot_VBoxContainerPauseMode = _hx_e()
 __bolt_godot_VBoxContainerPhysicsInterpolationMode = _hx_e()
 __bolt_godot_VBoxContainerSignalNames = _hx_e()
+__bolt_godot_VScrollBarGrowHorizontal = _hx_e()
+__bolt_godot_VScrollBarGrowVertical = _hx_e()
+__bolt_godot_VScrollBarFocusMode = _hx_e()
+__bolt_godot_VScrollBarMouseFilter = _hx_e()
+__bolt_godot_VScrollBarMouseDefaultCursorShape = _hx_e()
+__bolt_godot_VScrollBarPauseMode = _hx_e()
+__bolt_godot_VScrollBarPhysicsInterpolationMode = _hx_e()
+__bolt_godot_VScrollBarSignalNames = _hx_e()
 __bolt_godot__Vector2_Vector2_Impl_ = _hx_e()
 __bolt_godot__Vector3_Vector3_Impl_ = _hx_e()
 __bolt_godot_ViewportMsaa = _hx_e()
@@ -1142,6 +1177,16 @@ StringBuf.prototype = _hx_e();
 
 StringBuf.prototype.__class__ =  StringBuf
 
+StringTools.new = {}
+StringTools.__name__ = true
+StringTools.endsWith = function(s,_end) 
+  if (_end ~= "") then 
+    do return s:sub(-#_end) == _end end;
+  else
+    do return true end;
+  end;
+end
+
 __bolt_App.new = function() 
   local self = _hx_new(__bolt_App.prototype)
   __bolt_App.super(self)
@@ -1739,6 +1784,36 @@ __bolt_godot_InputEventWithModifiersSignalNames.__name__ = true
 __bolt_godot_IntervalTweenerSignalNames.new = {}
 __bolt_godot_IntervalTweenerSignalNames.__name__ = true
 
+__bolt_godot_ItemListSelectMode.new = {}
+__bolt_godot_ItemListSelectMode.__name__ = true
+
+__bolt_godot_ItemListIconMode.new = {}
+__bolt_godot_ItemListIconMode.__name__ = true
+
+__bolt_godot_ItemListGrowHorizontal.new = {}
+__bolt_godot_ItemListGrowHorizontal.__name__ = true
+
+__bolt_godot_ItemListGrowVertical.new = {}
+__bolt_godot_ItemListGrowVertical.__name__ = true
+
+__bolt_godot_ItemListFocusMode.new = {}
+__bolt_godot_ItemListFocusMode.__name__ = true
+
+__bolt_godot_ItemListMouseFilter.new = {}
+__bolt_godot_ItemListMouseFilter.__name__ = true
+
+__bolt_godot_ItemListMouseDefaultCursorShape.new = {}
+__bolt_godot_ItemListMouseDefaultCursorShape.__name__ = true
+
+__bolt_godot_ItemListPauseMode.new = {}
+__bolt_godot_ItemListPauseMode.__name__ = true
+
+__bolt_godot_ItemListPhysicsInterpolationMode.new = {}
+__bolt_godot_ItemListPhysicsInterpolationMode.__name__ = true
+
+__bolt_godot_ItemListSignalNames.new = {}
+__bolt_godot_ItemListSignalNames.__name__ = true
+
 __bolt_godot_LabelAlign.new = {}
 __bolt_godot_LabelAlign.__name__ = true
 
@@ -2207,6 +2282,30 @@ end
 __bolt_godot_RIDSignalNames.new = {}
 __bolt_godot_RIDSignalNames.__name__ = true
 
+__bolt_godot_RangeGrowHorizontal.new = {}
+__bolt_godot_RangeGrowHorizontal.__name__ = true
+
+__bolt_godot_RangeGrowVertical.new = {}
+__bolt_godot_RangeGrowVertical.__name__ = true
+
+__bolt_godot_RangeFocusMode.new = {}
+__bolt_godot_RangeFocusMode.__name__ = true
+
+__bolt_godot_RangeMouseFilter.new = {}
+__bolt_godot_RangeMouseFilter.__name__ = true
+
+__bolt_godot_RangeMouseDefaultCursorShape.new = {}
+__bolt_godot_RangeMouseDefaultCursorShape.__name__ = true
+
+__bolt_godot_RangePauseMode.new = {}
+__bolt_godot_RangePauseMode.__name__ = true
+
+__bolt_godot_RangePhysicsInterpolationMode.new = {}
+__bolt_godot_RangePhysicsInterpolationMode.__name__ = true
+
+__bolt_godot_RangeSignalNames.new = {}
+__bolt_godot_RangeSignalNames.__name__ = true
+
 __bolt_godot_Rect2SignalNames.new = {}
 __bolt_godot_Rect2SignalNames.__name__ = true
 
@@ -2227,6 +2326,30 @@ __bolt_godot_SceneTreeTimerSignalNames.__name__ = true
 
 __bolt_godot_SceneTreeTweenSignalNames.new = {}
 __bolt_godot_SceneTreeTweenSignalNames.__name__ = true
+
+__bolt_godot_ScrollBarGrowHorizontal.new = {}
+__bolt_godot_ScrollBarGrowHorizontal.__name__ = true
+
+__bolt_godot_ScrollBarGrowVertical.new = {}
+__bolt_godot_ScrollBarGrowVertical.__name__ = true
+
+__bolt_godot_ScrollBarFocusMode.new = {}
+__bolt_godot_ScrollBarFocusMode.__name__ = true
+
+__bolt_godot_ScrollBarMouseFilter.new = {}
+__bolt_godot_ScrollBarMouseFilter.__name__ = true
+
+__bolt_godot_ScrollBarMouseDefaultCursorShape.new = {}
+__bolt_godot_ScrollBarMouseDefaultCursorShape.__name__ = true
+
+__bolt_godot_ScrollBarPauseMode.new = {}
+__bolt_godot_ScrollBarPauseMode.__name__ = true
+
+__bolt_godot_ScrollBarPhysicsInterpolationMode.new = {}
+__bolt_godot_ScrollBarPhysicsInterpolationMode.__name__ = true
+
+__bolt_godot_ScrollBarSignalNames.new = {}
+__bolt_godot_ScrollBarSignalNames.__name__ = true
 
 __bolt_godot_ShaderSignalNames.new = {}
 __bolt_godot_ShaderSignalNames.__name__ = true
@@ -2371,6 +2494,30 @@ __bolt_godot_VBoxContainerPhysicsInterpolationMode.__name__ = true
 
 __bolt_godot_VBoxContainerSignalNames.new = {}
 __bolt_godot_VBoxContainerSignalNames.__name__ = true
+
+__bolt_godot_VScrollBarGrowHorizontal.new = {}
+__bolt_godot_VScrollBarGrowHorizontal.__name__ = true
+
+__bolt_godot_VScrollBarGrowVertical.new = {}
+__bolt_godot_VScrollBarGrowVertical.__name__ = true
+
+__bolt_godot_VScrollBarFocusMode.new = {}
+__bolt_godot_VScrollBarFocusMode.__name__ = true
+
+__bolt_godot_VScrollBarMouseFilter.new = {}
+__bolt_godot_VScrollBarMouseFilter.__name__ = true
+
+__bolt_godot_VScrollBarMouseDefaultCursorShape.new = {}
+__bolt_godot_VScrollBarMouseDefaultCursorShape.__name__ = true
+
+__bolt_godot_VScrollBarPauseMode.new = {}
+__bolt_godot_VScrollBarPauseMode.__name__ = true
+
+__bolt_godot_VScrollBarPhysicsInterpolationMode.new = {}
+__bolt_godot_VScrollBarPhysicsInterpolationMode.__name__ = true
+
+__bolt_godot_VScrollBarSignalNames.new = {}
+__bolt_godot_VScrollBarSignalNames.__name__ = true
 
 __bolt_godot__Vector2_Vector2_Impl_.new = {}
 __bolt_godot__Vector2_Vector2_Impl_.__name__ = true
@@ -2979,6 +3126,7 @@ __boltEd_Explorer.prototype.init = function(self)
       self.refreshButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/Refresh");
       self.newButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/New");
       self.tree = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/DirTree");
+      self.itemList = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/CurrentDirItemList");
     return _hx_pcall_default
   end)
   if not _hx_status and _hx_result == "_hx_pcall_break" then
@@ -3007,6 +3155,10 @@ end
 __boltEd_Explorer.prototype.start = function(self) 
   self.rootDirIndex = self:buildRoot();
   self:createTreeItemFromDirTree(self.rootDirIndex);
+  local currentDirIndex = self:getDirIndex(self.selectedPath);
+  if (currentDirIndex ~= nil) then 
+    self:createCurrentDirItemList(currentDirIndex);
+  end;
 end
 __boltEd_Explorer.prototype.buildTree = function(self,parent,path) 
   if (path == nil) then 
@@ -3160,6 +3312,7 @@ __boltEd_Explorer.prototype.createTreeItemFromDirTree = function(self,dirIndex,p
   local folderTexture = godot.ImageTexture.__new();
   folderTexture:createFromImage(folderImage);
   if (parentItem == nil) then 
+    self.tree:clear();
     treeItem = self.tree:createItem(nil);
     treeItem:setText(0, dirIndex.dirName);
     treeItem:setIcon(0, projectTexture);
@@ -3177,6 +3330,77 @@ __boltEd_Explorer.prototype.createTreeItemFromDirTree = function(self,dirIndex,p
       local dir = _g1[_g];
       _g = _g + 1;
       self:createTreeItemFromDirTree(dir, treeItem);
+    end;
+  end;
+end
+__boltEd_Explorer.prototype.loadIcon = function(self,path) 
+  local iconFile = self.ioCore:loadBuffer(path);
+  local iconImage = godot.Image.__new();
+  if (StringTools.endsWith(path, ".png")) then 
+    iconImage:loadPngFromBuffer(iconFile);
+  else
+    if (StringTools.endsWith(path, ".jpg") or StringTools.endsWith(path, ".jpeg")) then 
+      iconImage:loadJpgFromBuffer(iconFile);
+    else
+      if (StringTools.endsWith(path, ".bmp")) then 
+        iconImage:loadBmpFromBuffer(iconFile);
+      else
+        if (StringTools.endsWith(path, ".webp")) then 
+          iconImage:loadWebpFromBuffer(iconFile);
+        end;
+      end;
+    end;
+  end;
+  local iconTexture = godot.ImageTexture.__new();
+  iconTexture:createFromImage(iconImage);
+  do return iconTexture end
+end
+__boltEd_Explorer.prototype.createCurrentDirItemList = function(self,dirIndex) 
+  if (dirIndex == nil) then 
+    do return end;
+  end;
+  if (dirIndex.directories ~= nil) then 
+    local _g = 0;
+    local _g1 = dirIndex.directories;
+    while (_g < _g1.length) do _hx_do_first_1 = false;
+      
+      local dir = _g1[_g];
+      _g = _g + 1;
+      self.itemList:addItem(dir.dirName, self:loadIcon("data://FugueIcons/bonus/icons-32/folder.png"));
+      local itemIdxCount = self.itemList:getItemCount();
+      local _g = 0;
+      local _g1 = itemIdxCount;
+      while (_g < _g1) do _hx_do_first_2 = false;
+        
+        _g = _g + 1;
+        local i = _g - 1;
+        if (self.itemList:getItemText(i) == dir.dirName) then 
+          self.itemList:setItemMetadata(i, dir.path);
+          break;
+        end;
+      end;
+    end;
+  end;
+  if (dirIndex.files ~= nil) then 
+    local _g = 0;
+    local _g1 = dirIndex.files;
+    while (_g < _g1.length) do _hx_do_first_1 = false;
+      
+      local file = _g1[_g];
+      _g = _g + 1;
+      self.itemList:addItem(file.fileName, self:loadIcon("data://FugueIcons/bonus/icons-32/document.png"));
+      local itemIdxCount = self.itemList:getItemCount();
+      local _g = 0;
+      local _g1 = itemIdxCount;
+      while (_g < _g1) do _hx_do_first_2 = false;
+        
+        _g = _g + 1;
+        local i = _g - 1;
+        if (self.itemList:getItemText(i) == file.fileName) then 
+          self.itemList:setItemMetadata(i, file.path);
+          break;
+        end;
+      end;
     end;
   end;
 end
@@ -4719,6 +4943,96 @@ local _hx_static_init = function()
   
   __bolt_godot_ImageTextureStorage.CompressLossless = 2;
   
+  __bolt_godot_ItemListSelectMode.Single = 0;
+  
+  __bolt_godot_ItemListSelectMode.Multi = 1;
+  
+  __bolt_godot_ItemListIconMode.Top = 0;
+  
+  __bolt_godot_ItemListIconMode.Left = 1;
+  
+  __bolt_godot_ItemListGrowHorizontal.Begin = 0;
+  
+  __bolt_godot_ItemListGrowHorizontal.End = 1;
+  
+  __bolt_godot_ItemListGrowHorizontal.Both = 2;
+  
+  __bolt_godot_ItemListGrowVertical.Begin = 0;
+  
+  __bolt_godot_ItemListGrowVertical.End = 1;
+  
+  __bolt_godot_ItemListGrowVertical.Both = 2;
+  
+  __bolt_godot_ItemListFocusMode.None = 0;
+  
+  __bolt_godot_ItemListFocusMode.Click = 1;
+  
+  __bolt_godot_ItemListFocusMode.All = 2;
+  
+  __bolt_godot_ItemListMouseFilter.Stop = 0;
+  
+  __bolt_godot_ItemListMouseFilter.Pass = 1;
+  
+  __bolt_godot_ItemListMouseFilter.Ignore = 2;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Arrow = 0;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Ibeam = 1;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.PointingHand = 2;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Cross = 3;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Wait = 4;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Busy = 5;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Drag = 6;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.CanDrop = 7;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Forbidden = 8;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Vsize = 9;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Hsize = 10;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Bdiagsize = 11;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Fdiagsize = 12;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Move = 13;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Vsplit = 14;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Hsplit = 15;
+  
+  __bolt_godot_ItemListMouseDefaultCursorShape.Help = 16;
+  
+  __bolt_godot_ItemListPauseMode.Inherit = 0;
+  
+  __bolt_godot_ItemListPauseMode.Stop = 1;
+  
+  __bolt_godot_ItemListPauseMode.Process = 2;
+  
+  __bolt_godot_ItemListPhysicsInterpolationMode.Inherit = 0;
+  
+  __bolt_godot_ItemListPhysicsInterpolationMode.Off = 1;
+  
+  __bolt_godot_ItemListPhysicsInterpolationMode.On = 2;
+  
+  __bolt_godot_ItemListSignalNames.itemActivated = "item_activated";
+  
+  __bolt_godot_ItemListSignalNames.itemRmbSelected = "item_rmb_selected";
+  
+  __bolt_godot_ItemListSignalNames.itemSelected = "item_selected";
+  
+  __bolt_godot_ItemListSignalNames.multiSelected = "multi_selected";
+  
+  __bolt_godot_ItemListSignalNames.nothingSelected = "nothing_selected";
+  
+  __bolt_godot_ItemListSignalNames.rmbClicked = "rmb_clicked";
+  
   __bolt_godot_LabelAlign.Left = 0;
   
   __bolt_godot_LabelAlign.Center = 1;
@@ -5323,6 +5637,80 @@ local _hx_static_init = function()
   
   __bolt_godot_PopupMenuSignalNames.indexPressed = "index_pressed";
   
+  __bolt_godot_RangeGrowHorizontal.Begin = 0;
+  
+  __bolt_godot_RangeGrowHorizontal.End = 1;
+  
+  __bolt_godot_RangeGrowHorizontal.Both = 2;
+  
+  __bolt_godot_RangeGrowVertical.Begin = 0;
+  
+  __bolt_godot_RangeGrowVertical.End = 1;
+  
+  __bolt_godot_RangeGrowVertical.Both = 2;
+  
+  __bolt_godot_RangeFocusMode.None = 0;
+  
+  __bolt_godot_RangeFocusMode.Click = 1;
+  
+  __bolt_godot_RangeFocusMode.All = 2;
+  
+  __bolt_godot_RangeMouseFilter.Stop = 0;
+  
+  __bolt_godot_RangeMouseFilter.Pass = 1;
+  
+  __bolt_godot_RangeMouseFilter.Ignore = 2;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Arrow = 0;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Ibeam = 1;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.PointingHand = 2;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Cross = 3;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Wait = 4;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Busy = 5;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Drag = 6;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.CanDrop = 7;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Forbidden = 8;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Vsize = 9;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Hsize = 10;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Bdiagsize = 11;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Fdiagsize = 12;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Move = 13;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Vsplit = 14;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Hsplit = 15;
+  
+  __bolt_godot_RangeMouseDefaultCursorShape.Help = 16;
+  
+  __bolt_godot_RangePauseMode.Inherit = 0;
+  
+  __bolt_godot_RangePauseMode.Stop = 1;
+  
+  __bolt_godot_RangePauseMode.Process = 2;
+  
+  __bolt_godot_RangePhysicsInterpolationMode.Inherit = 0;
+  
+  __bolt_godot_RangePhysicsInterpolationMode.Off = 1;
+  
+  __bolt_godot_RangePhysicsInterpolationMode.On = 2;
+  
+  __bolt_godot_RangeSignalNames.changed = "changed";
+  
+  __bolt_godot_RangeSignalNames.valueChanged = "value_changed";
+  
   __bolt_godot_ResourceSignalNames.changed = "changed";
   
   __bolt_godot_SceneTreeSignalNames.connectedToServer = "connected_to_server";
@@ -5362,6 +5750,78 @@ local _hx_static_init = function()
   __bolt_godot_SceneTreeTweenSignalNames.loopFinished = "loop_finished";
   
   __bolt_godot_SceneTreeTweenSignalNames.stepFinished = "step_finished";
+  
+  __bolt_godot_ScrollBarGrowHorizontal.Begin = 0;
+  
+  __bolt_godot_ScrollBarGrowHorizontal.End = 1;
+  
+  __bolt_godot_ScrollBarGrowHorizontal.Both = 2;
+  
+  __bolt_godot_ScrollBarGrowVertical.Begin = 0;
+  
+  __bolt_godot_ScrollBarGrowVertical.End = 1;
+  
+  __bolt_godot_ScrollBarGrowVertical.Both = 2;
+  
+  __bolt_godot_ScrollBarFocusMode.None = 0;
+  
+  __bolt_godot_ScrollBarFocusMode.Click = 1;
+  
+  __bolt_godot_ScrollBarFocusMode.All = 2;
+  
+  __bolt_godot_ScrollBarMouseFilter.Stop = 0;
+  
+  __bolt_godot_ScrollBarMouseFilter.Pass = 1;
+  
+  __bolt_godot_ScrollBarMouseFilter.Ignore = 2;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Arrow = 0;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Ibeam = 1;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.PointingHand = 2;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Cross = 3;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Wait = 4;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Busy = 5;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Drag = 6;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.CanDrop = 7;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Forbidden = 8;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Vsize = 9;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Hsize = 10;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Bdiagsize = 11;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Fdiagsize = 12;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Move = 13;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Vsplit = 14;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Hsplit = 15;
+  
+  __bolt_godot_ScrollBarMouseDefaultCursorShape.Help = 16;
+  
+  __bolt_godot_ScrollBarPauseMode.Inherit = 0;
+  
+  __bolt_godot_ScrollBarPauseMode.Stop = 1;
+  
+  __bolt_godot_ScrollBarPauseMode.Process = 2;
+  
+  __bolt_godot_ScrollBarPhysicsInterpolationMode.Inherit = 0;
+  
+  __bolt_godot_ScrollBarPhysicsInterpolationMode.Off = 1;
+  
+  __bolt_godot_ScrollBarPhysicsInterpolationMode.On = 2;
+  
+  __bolt_godot_ScrollBarSignalNames.scrolling = "scrolling";
   
   __bolt_godot_SkyRadianceSize.Size32 = 0;
   
@@ -5682,6 +6142,76 @@ local _hx_static_init = function()
   __bolt_godot_VBoxContainerPhysicsInterpolationMode.Off = 1;
   
   __bolt_godot_VBoxContainerPhysicsInterpolationMode.On = 2;
+  
+  __bolt_godot_VScrollBarGrowHorizontal.Begin = 0;
+  
+  __bolt_godot_VScrollBarGrowHorizontal.End = 1;
+  
+  __bolt_godot_VScrollBarGrowHorizontal.Both = 2;
+  
+  __bolt_godot_VScrollBarGrowVertical.Begin = 0;
+  
+  __bolt_godot_VScrollBarGrowVertical.End = 1;
+  
+  __bolt_godot_VScrollBarGrowVertical.Both = 2;
+  
+  __bolt_godot_VScrollBarFocusMode.None = 0;
+  
+  __bolt_godot_VScrollBarFocusMode.Click = 1;
+  
+  __bolt_godot_VScrollBarFocusMode.All = 2;
+  
+  __bolt_godot_VScrollBarMouseFilter.Stop = 0;
+  
+  __bolt_godot_VScrollBarMouseFilter.Pass = 1;
+  
+  __bolt_godot_VScrollBarMouseFilter.Ignore = 2;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Arrow = 0;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Ibeam = 1;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.PointingHand = 2;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Cross = 3;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Wait = 4;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Busy = 5;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Drag = 6;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.CanDrop = 7;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Forbidden = 8;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Vsize = 9;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Hsize = 10;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Bdiagsize = 11;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Fdiagsize = 12;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Move = 13;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Vsplit = 14;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Hsplit = 15;
+  
+  __bolt_godot_VScrollBarMouseDefaultCursorShape.Help = 16;
+  
+  __bolt_godot_VScrollBarPauseMode.Inherit = 0;
+  
+  __bolt_godot_VScrollBarPauseMode.Stop = 1;
+  
+  __bolt_godot_VScrollBarPauseMode.Process = 2;
+  
+  __bolt_godot_VScrollBarPhysicsInterpolationMode.Inherit = 0;
+  
+  __bolt_godot_VScrollBarPhysicsInterpolationMode.Off = 1;
+  
+  __bolt_godot_VScrollBarPhysicsInterpolationMode.On = 2;
   
   __bolt_godot_ViewportMsaa.Disabled = 0;
   
