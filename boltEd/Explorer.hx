@@ -11,6 +11,7 @@ import bolt.godot.ImageTexture;
 import bolt.godot.Image;
 import boltEd.explorer.DirIndex;
 import boltEd.explorer.FileIndex;
+import boltEd.explorer.FileHandler;
 import bolt.godot.AcceptDialog;
 import bolt.godot.Vector2;
 import bolt.io.IoCore;
@@ -32,6 +33,8 @@ class Explorer {
     public var rootDirIndex : DirIndex;
 
     public var selectedPath : String = "project://";
+
+    public var fileHandlers : Array<FileHandler> = new Array<FileHandler>();
     
     public function getDirIndex(path : String = "project://",  dirIndex : DirIndex = null) : DirIndex {
         if (dirIndex == null) {

@@ -28,7 +28,18 @@ class EditorWindow extends Widget {
 
     public var explorer : Explorer;
 
+    Array<Plugin> plugins = new Array<Plugin>();
+
     public override function init() {
+        untyped __lua__("_G.plugins = self.plugins");
+
+        var globalPluginFileListTable = ioCore.getFileList("data://plugins/", ".lua", false);
+        var globalPluginFileList = Table.toArray(globalPluginFileListTable);
+        for (i in 0...globalPluginFileList.length) {
+            var pluginFile = globalPluginFileList[i];
+            untyped __lua__("require(pluginFile)");
+        }
+
         explorer = new Explorer(this);
         document.loadFromPath("data://editorWindow.xml", ioCore);
         explorer.init();
@@ -113,6 +124,14 @@ class EditorWindow extends Widget {
 
         var ioManager : IoManager = cast ioCore;
         ioManager.registerPath(dirPath, "project://");
+
+        var projectPluginFileListTable = ioCore.getFileList("project://plugins/", ".lua", false);
+        var projectPluginFileList = Table.toArray(projectPluginFileListTable);
+        for (i in 0...projectPluginFileList.length) {
+            var pluginFile = projectPluginFileList[i];
+            untyped __lua__("require(pluginFile)");
+        }
+
         try {
             explorer.start();
         } catch (e : Dynamic) {

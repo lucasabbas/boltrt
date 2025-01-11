@@ -1,5 +1,5 @@
 --library boltrt
---class-path boltEd
+--class-path boltEdSrc
 --main boltEd.Main
 --lua boltEd/main.lua
 -D lua-vanilla
