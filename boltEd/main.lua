@@ -3102,45 +3102,47 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   self.projectPath = dirPath;
   local ioManager = self.ioCore;
   ioManager:registerPath(dirPath, "project://");
-  local plugins = Array.new();
-  _G.plugins = self.plugins;
-  local projectPluginFileListTable = self.ioCore:getFileList("project://plugins/", ".lua", false);
-  local length = nil;
-  local tab = __lua_PairTools.copy(projectPluginFileListTable);
-  local length = length;
-  local projectPluginFileList;
-  if (length == nil) then 
-    length = _hx_table.maxn(tab);
-    if (length > 0) then 
-      local head = tab[1];
-      _G.table.remove(tab, 1);
-      tab[0] = head;
-      projectPluginFileList = _hx_tab_array(tab, length);
+  if (self.ioCore:directoryExists("project://plugins/")) then 
+    local plugins = Array.new();
+    _G.plugins = self.plugins;
+    local projectPluginFileListTable = self.ioCore:getFileList("project://plugins/", ".lua", false);
+    local length = nil;
+    local tab = __lua_PairTools.copy(projectPluginFileListTable);
+    local length = length;
+    local projectPluginFileList;
+    if (length == nil) then 
+      length = _hx_table.maxn(tab);
+      if (length > 0) then 
+        local head = tab[1];
+        _G.table.remove(tab, 1);
+        tab[0] = head;
+        projectPluginFileList = _hx_tab_array(tab, length);
+      else
+        projectPluginFileList = _hx_tab_array({}, 0);
+      end;
     else
-      projectPluginFileList = _hx_tab_array({}, 0);
+      projectPluginFileList = _hx_tab_array(tab, length);
     end;
-  else
-    projectPluginFileList = _hx_tab_array(tab, length);
-  end;
-  local _g = 0;
-  local _g1 = projectPluginFileList.length;
-  while (_g < _g1) do _hx_do_first_1 = false;
-    
-    _g = _g + 1;
-    local i = _g - 1;
-    local pluginFile = projectPluginFileList[i];
-    require(pluginFile);
-  end;
-  local _g = 0;
-  local _g1 = plugins.length;
-  while (_g < _g1) do _hx_do_first_1 = false;
-    
-    _g = _g + 1;
-    local i = _g - 1;
-    local plugin = plugins[i];
-    plugin.explorerObj = self.explorer;
-    plugin.window = self;
-    plugin:init();
+    local _g = 0;
+    local _g1 = projectPluginFileList.length;
+    while (_g < _g1) do _hx_do_first_1 = false;
+      
+      _g = _g + 1;
+      local i = _g - 1;
+      local pluginFile = projectPluginFileList[i];
+      require(pluginFile);
+    end;
+    local _g = 0;
+    local _g1 = plugins.length;
+    while (_g < _g1) do _hx_do_first_1 = false;
+      
+      _g = _g + 1;
+      local i = _g - 1;
+      local plugin = plugins[i];
+      plugin.explorerObj = self.explorer;
+      plugin.window = self;
+      plugin:init();
+    end;
   end;
   local _hx_status, _hx_result = pcall(function() 
   
@@ -3151,13 +3153,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=154,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=156,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=159,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=161,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
