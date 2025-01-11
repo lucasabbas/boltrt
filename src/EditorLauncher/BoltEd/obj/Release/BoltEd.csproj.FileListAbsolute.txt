@@ -4,3 +4,9 @@ C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Release\BoltEd.csproj.Assemb
 C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Release\BoltEd.csproj.CoreCompileInputs.cache
 C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Release\bolted.exe
 C:\Users\mintkat\bolt\src\EditorLauncher\BoltEd\obj\Release\bolted.pdb
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\bin\Release\bolted.exe
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\bin\Release\bolted.pdb
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\obj\Release\BoltEd.csproj.AssemblyReference.cache
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\obj\Release\BoltEd.csproj.CoreCompileInputs.cache
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\obj\Release\bolted.exe
+C:\Users\mintkat\boltrt\src\EditorLauncher\BoltEd\obj\Release\bolted.pdb

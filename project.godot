@@ -14,7 +14,6 @@ config/name="Bolt"
 run/main_scene="res://src/Main.tscn"
 boot_splash/image="res://assets/splashscreen.png"
 boot_splash/fullsize=false
-boot_splash/bg_color=Color( 0.14902, 0.14902, 0.14902, 1 )
 config/icon="res://assets/bolticon.png"
 config/windows_native_icon="res://icon.ico"
 

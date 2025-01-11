@@ -58,8 +58,8 @@ Section "Bolt Runtime" SEC01
   SetOutPath "$INSTDIR"
   SetOverwrite ifnewer
   File "bin\win32\bolt.exe"
-  File "bin\win32ed\boltEd.exe"
-  File "bin\win32ed\boltEd.pck"
+  File "bin\win32\bolted.exe"
+  #File "bin\win32ed\boltEd.pck"
   File "bin\win32\bolt.pck"
   SetOutPath "$INSTDIR\data_Bolt\Assemblies"
   SetOverwrite try  
@@ -11546,7 +11546,7 @@ Section "Bolt Runtime" SEC01
 
   
 
-  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\boltEd.exe"
+  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolted.exe"
   WriteRegStr HKCR ".bolt" ""  "Bolt Project"
   WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
   WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
@@ -11615,7 +11615,7 @@ Section Uninstall
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
   Delete "$INSTDIR\bolt.pck"  
-  Delete "$INSTDIR\boltEd.exe"
+  Delete "$INSTDIR\bolted.exe"
   Delete "$INSTDIR\boltEd.pck"
   Delete "$INSTDIR\bolt.exe"
   Delete "$INSTDIR\bolt.pck"
