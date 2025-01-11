@@ -1181,12 +1181,18 @@ StringBuf.prototype.__class__ =  StringBuf
 
 StringTools.new = {}
 StringTools.__name__ = true
+StringTools.startsWith = function(s,start) 
+  do return s:sub(1, #start) == start end;
+end
 StringTools.endsWith = function(s,_end) 
   if (_end ~= "") then 
     do return s:sub(-#_end) == _end end;
   else
     do return true end;
   end;
+end
+StringTools.replace = function(s,sub,by) 
+  do return String.prototype.split(s, sub):join(by) end;
 end
 
 __bolt_App.new = function() 
@@ -3174,8 +3180,12 @@ __boltEd_Explorer.new = function(ew)
   return self
 end
 __boltEd_Explorer.super = function(self,ew) 
+  self.isInitialized = false;
+  self.previousDirs = Array.new();
+  self.nextDirs = Array.new();
   self.fileHandlers = Array.new();
   self.selectedPath = "project://";
+  self.rootDirIndex = nil;
   self.editorWindow = ew;
   self.ioCore = self.editorWindow.ioCore;
 end
@@ -3206,12 +3216,41 @@ __boltEd_Explorer.prototype.getDirIndex = function(self,path,dirIndex)
   do return nil end
 end
 __boltEd_Explorer.prototype.init = function(self) 
+  local _gthis = self;
   local _hx_status, _hx_result = pcall(function() 
   
-      self.refreshButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/Refresh");
-      self.newButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/New");
+      self.folderTexture = self:loadIcon("data://FugueIcons/bonus/icons-32/folder.png");
+      self.backButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Back");
+      if (self.backButton == nil) then 
+        _G.print("backButton is null");
+      end;
+      godot.SignalToFunc.connect(self.backButton, "pressed", function() 
+        _gthis:goBackADir();
+      end);
+      self.forwardButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Forward");
+      if (self.forwardButton == nil) then 
+        _G.print("forwardButton is null");
+      end;
+      godot.SignalToFunc.connect(self.forwardButton, "pressed", function() 
+        _gthis:goForwardADir();
+      end);
+      self.upButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Up");
+      godot.SignalToFunc.connect(self.upButton, "pressed", function() 
+        _gthis:goUpADir();
+      end);
+      self.refreshButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Refresh");
+      godot.SignalToFunc.connect(self.refreshButton, "pressed", function() 
+        _gthis:refresh();
+      end);
+      self.newButton = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/New");
       self.tree = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/DirTree");
+      godot.SignalToFunc.connect(self.tree, "item_selected", function() 
+        _gthis:onTreeItemSelected();
+      end);
       self.itemList = self.editorWindow.document:getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/CurrentDirItemList");
+      godot.SignalToFunc.connect(self.itemList, "item_activated", function() 
+        _gthis:onItemListItemActivated();
+      end);
     return _hx_pcall_default
   end)
   if not _hx_status and _hx_result == "_hx_pcall_break" then
@@ -3238,10 +3277,24 @@ __boltEd_Explorer.prototype.buildRoot = function(self)
   do return root end
 end
 __boltEd_Explorer.prototype.start = function(self) 
+  self.isInitialized = false;
   self.rootDirIndex = self:buildRoot();
   self:createTreeItemFromDirTree(self.rootDirIndex);
+  self:updatePath("project://");
+  self.isInitialized = true;
+end
+__boltEd_Explorer.prototype.refresh = function(self) 
+  self.isInitialized = false;
+  self.rootDirIndex = self:buildRoot();
+  self:createTreeItemFromDirTree(self.rootDirIndex);
+  self:updatePath(self.selectedPath);
+  self.isInitialized = true;
+end
+__boltEd_Explorer.prototype.updatePath = function(self,path) 
+  self.selectedPath = path;
   local currentDirIndex = self:getDirIndex(self.selectedPath);
   if (currentDirIndex ~= nil) then 
+    self.itemList:clear();
     self:createCurrentDirItemList(currentDirIndex);
   end;
 end
@@ -3451,7 +3504,7 @@ __boltEd_Explorer.prototype.createCurrentDirItemList = function(self,dirIndex)
       
       local dir = _g1[_g];
       _g = _g + 1;
-      self.itemList:addItem(dir.dirName, self:loadIcon("data://FugueIcons/bonus/icons-32/folder.png"));
+      self.itemList:addItem(dir.dirName, self.folderTexture);
       local itemIdxCount = self.itemList:getItemCount();
       local _g = 0;
       local _g1 = itemIdxCount;
@@ -3483,10 +3536,114 @@ __boltEd_Explorer.prototype.createCurrentDirItemList = function(self,dirIndex)
         local i = _g - 1;
         if (self.itemList:getItemText(i) == file.fileName) then 
           self.itemList:setItemMetadata(i, file.path);
+          local _g = 0;
+          local _g1 = self.fileHandlers;
+          while (_g < _g1.length) do _hx_do_first_3 = false;
+            
+            local handler = _g1[_g];
+            _g = _g + 1;
+            if (StringTools.endsWith(file.path, handler.extension)) then 
+              self.itemList:setItemIcon(i, self:loadIcon(handler.iconPath));
+            end;
+          end;
           break;
         end;
       end;
     end;
+  end;
+end
+__boltEd_Explorer.prototype.onItemListItemActivated = function(self) 
+  if (not self.isInitialized) then 
+    do return end;
+  end;
+  local indexes = self.itemList:getItemCount();
+  local index = nil;
+  local _g = 0;
+  local _g1 = indexes;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    if (self.itemList:isSelected(i)) then 
+      index = i;
+      break;
+    end;
+  end;
+  if (index == nil) then 
+    do return end;
+  end;
+  local path = self.itemList:getItemMetadata(index);
+  if (self.itemList:getItemIcon(index) == self.folderTexture) then 
+    self.previousDirs:push(self.selectedPath);
+    self:updatePath(path);
+  else
+    local _g = 0;
+    local _g1 = self.fileHandlers;
+    while (_g < _g1.length) do _hx_do_first_1 = false;
+      
+      local handler = _g1[_g];
+      _g = _g + 1;
+      if (StringTools.endsWith(path, handler.extension)) then 
+        handler:openFile(path);
+        break;
+      end;
+    end;
+  end;
+end
+__boltEd_Explorer.prototype.goForwardADir = function(self) 
+  _G.print("goForwardADir");
+  if (not self.isInitialized) then 
+    do return end;
+  end;
+  if (self.nextDirs.length > 0) then 
+    _G.print(Std.string(self.selectedPath));
+    self.previousDirs:push(self.selectedPath);
+    self:updatePath(self.nextDirs:pop());
+    _G.print(Std.string(self.selectedPath));
+  end;
+end
+__boltEd_Explorer.prototype.goBackADir = function(self) 
+  _G.print("goBackADir");
+  if (not self.isInitialized) then 
+    do return end;
+  end;
+  if (self.previousDirs.length > 0) then 
+    _G.print(Std.string(self.selectedPath));
+    self.nextDirs:push(self.selectedPath);
+    self:updatePath(self.previousDirs:pop());
+    _G.print(Std.string(self.selectedPath));
+  end;
+end
+__boltEd_Explorer.prototype.goUpADir = function(self) 
+  _G.print(Std.string(self.selectedPath));
+  if (not self.isInitialized) then 
+    do return end;
+  end;
+  if (self.selectedPath == "project://") then 
+    do return end;
+  end;
+  if (self.nextDirs.length ~= 0) then 
+    self.nextDirs = Array.new();
+  end;
+  local pathArray = String.prototype.split(self.selectedPath, "/");
+  local newPath = Std.string(pathArray:slice(0, pathArray.length - 1):join("/")) .. Std.string("/");
+  if (StringTools.endsWith(self.selectedPath, "/")) then 
+    newPath = Std.string(pathArray:slice(0, pathArray.length - 2):join("/")) .. Std.string("/");
+  end;
+  if (not StringTools.startsWith(newPath, "project://")) then 
+    newPath = StringTools.replace(newPath, "project:/", "project://");
+  end;
+  self:updatePath(newPath);
+  _G.print(Std.string(self.selectedPath));
+end
+__boltEd_Explorer.prototype.onTreeItemSelected = function(self) 
+  if (not self.isInitialized) then 
+    do return end;
+  end;
+  local selcted = self.tree:getSelected();
+  if (selcted ~= nil) then 
+    self.previousDirs:push(self.selectedPath);
+    self:updatePath(selcted:getMetadata(0));
   end;
 end
 

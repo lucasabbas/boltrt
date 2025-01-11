@@ -1,5 +1,6 @@
 package boltEd;
 
+import bolt.godot.SignalToFunc;
 import lua.Boot;
 import haxe.Constraints.Function;
 import bolt.godot.Button;
@@ -22,6 +23,12 @@ class Explorer {
 
     public var ioCore : IoCore;
 
+    public var backButton : Button;
+
+    public var forwardButton : Button;
+
+    public var upButton : Button;
+
     public var refreshButton : Button;
 
     public var newButton : MenuButton;
@@ -30,11 +37,19 @@ class Explorer {
 
     public var itemList : ItemList;
 
-    public var rootDirIndex : DirIndex;
+    public var rootDirIndex : DirIndex = null;
 
     public var selectedPath : String = "project://";
 
     public var fileHandlers : Array<FileHandler> = new Array<FileHandler>();
+
+    public var folderTexture : ImageTexture;
+
+    public var nextDirs : Array<String> = new Array<String>();
+
+    public var previousDirs : Array<String> = new Array<String>();
+
+    public var isInitialized : Bool = false;
     
     public function getDirIndex(path : String = "project://",  dirIndex : DirIndex = null) : DirIndex {
         if (dirIndex == null) {
@@ -62,10 +77,26 @@ class Explorer {
 
     public function init() {
         try {
-            refreshButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/Refresh");
-            newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/ToolBar/HBoxContainer/New");
+            folderTexture = loadIcon("data://FugueIcons/bonus/icons-32/folder.png");
+            backButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Back");
+            if (backButton == null) {
+                Sys.println("backButton is null");
+            }
+            SignalToFunc.connect(backButton, "pressed", () -> goBackADir());
+            forwardButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Forward");
+            if (forwardButton == null) {
+                Sys.println("forwardButton is null");
+            }
+            SignalToFunc.connect(forwardButton, "pressed", () -> goForwardADir());
+            upButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Up");
+            SignalToFunc.connect(upButton, "pressed", () -> goUpADir());
+            refreshButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/Refresh");
+            SignalToFunc.connect(refreshButton, "pressed", () -> refresh());
+            newButton = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/Toolbar/HBoxContainer/New");
             tree = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/DirTree");
+            SignalToFunc.connect(tree, "item_selected", () -> onTreeItemSelected());
             itemList = cast editorWindow.document.getObject("Control/VBoxContainer/HSplitContainer/Control/VSplitContainer/Dock/Explorer/VBoxContainer/HSplitContainer/CurrentDirItemList");
+            SignalToFunc.connect(itemList, "item_activated", () -> onItemListItemActivated());
         }
         catch (e) {
             throw e;}
@@ -89,12 +120,32 @@ class Explorer {
     }
 
     public function start() : Void {
+        isInitialized = false;
         rootDirIndex = buildRoot();
         createTreeItemFromDirTree(rootDirIndex);
+
+        updatePath("project://");
+
+        isInitialized = true;
+    }
+
+    public function refresh() : Void {
+        isInitialized = false;
+        rootDirIndex = buildRoot();
+        createTreeItemFromDirTree(rootDirIndex);
+
+        updatePath(selectedPath);
+
+        isInitialized = true;
+    }
+
+    public function updatePath(path : String) {
+        selectedPath = path;
 
         var currentDirIndex = getDirIndex(selectedPath);
 
         if (currentDirIndex != null) {
+            itemList.clear();
             createCurrentDirItemList(currentDirIndex);
         }
     }
@@ -262,7 +313,7 @@ class Explorer {
             for (dir in dirIndex.directories) {
                 itemList.addItem(
                     dir.dirName,
-                    loadIcon("data://FugueIcons/bonus/icons-32/folder.png"),
+                    folderTexture,
                 );
                 var itemIdxCount = itemList.getItemCount();
                 for (i in 0...itemIdxCount) {
@@ -284,11 +335,110 @@ class Explorer {
                 for (i in 0...itemIdxCount) {
                     if (itemList.getItemText(i) == file.fileName) {
                         itemList.setItemMetadata(i, file.path);
+                        
+                        for (handler in fileHandlers) {
+                            if (StringTools.endsWith(file.path, handler.extension)) {
+                                itemList.setItemIcon(i, loadIcon(handler.iconPath));
+                            }
+                        }
                         break;
                     }
                 }
             }
         }
         
+    }
+
+    public function onItemListItemActivated() {
+        if (!isInitialized) {
+            return;
+        }
+        var indexes : Int = cast itemList.getItemCount();
+        var index : Int = null;
+
+        for (i in 0...indexes) {
+            if (itemList.isSelected(i)) {
+                index = i;
+                break;
+            }
+        }
+        if (index == null) {
+            return;
+        }
+        var path : String = cast itemList.getItemMetadata(index);
+        if (itemList.getItemIcon(index) == folderTexture) {
+            previousDirs.push(selectedPath);
+            updatePath(path);
+        }
+        else {
+            for (handler in fileHandlers) {
+                if (StringTools.endsWith(path, handler.extension)) {
+                    handler.openFile(path);
+                    break;
+                }
+            }
+        }
+    }
+
+    public function goForwardADir() {
+        Sys.println("goForwardADir");
+        if (!isInitialized) {
+            return;
+        }
+        if (nextDirs.length > 0) {
+            Sys.println(selectedPath);
+            previousDirs.push(selectedPath);
+            updatePath(nextDirs.pop());
+            Sys.println(selectedPath);
+        }
+    }
+
+    public function goBackADir() {
+        Sys.println("goBackADir");
+        if (!isInitialized) {
+            return;
+        }
+        if (previousDirs.length > 0) {
+            Sys.println(selectedPath);
+            nextDirs.push(selectedPath);
+            updatePath(previousDirs.pop());
+            Sys.println(selectedPath);
+        }
+    }
+
+    public function goUpADir() {
+        Sys.println(selectedPath);
+        if (!isInitialized) {
+            return;
+        }
+        if (selectedPath == "project://") {
+            return;
+        }
+        if (nextDirs.length != 0) {
+            nextDirs = new Array<String>();
+        }
+        var pathArray = selectedPath.split("/");
+        var newPath = pathArray.slice(0, pathArray.length - 1).join("/") + "/";
+        if (StringTools.endsWith(selectedPath, "/")) {
+            newPath = pathArray.slice(0, pathArray.length - 2).join("/") + "/";
+        }
+        if (!StringTools.startsWith(newPath, "project://")) {
+            newPath = StringTools.replace(newPath, "project:/", "project://");
+        }
+
+        updatePath(newPath);
+        Sys.println(selectedPath);
+    }
+
+
+    public function onTreeItemSelected() {
+        if (!isInitialized) {
+            return;
+        }
+        var selcted = tree.getSelected();
+        if (selcted != null) {
+            previousDirs.push(selectedPath);
+            updatePath(cast selcted.getMetadata(0));
+        }
     }
 }
