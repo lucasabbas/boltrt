@@ -10,7 +10,7 @@ import bolt.ui.Widget;
 import bolt.godot.MenuButton;
 import bolt.godot.Vector2;
 import bolt.io.IoManager;
-
+import lua.Table;
 
 class EditorWindow extends Widget {
     public var fileMenuButton: MenuButton;
@@ -28,9 +28,9 @@ class EditorWindow extends Widget {
 
     public var explorer : Explorer;
 
-    Array<Plugin> plugins = new Array<Plugin>();
-
     public override function init() {
+        var plugins : Array<Plugin> = new Array<Plugin>();
+        
         untyped __lua__("_G.plugins = self.plugins");
 
         var globalPluginFileListTable = ioCore.getFileList("data://plugins/", ".lua", false);
@@ -103,6 +103,13 @@ class EditorWindow extends Widget {
                 boltProjPath = untyped __lua__("_G.boltFile");
             }
         }
+
+        for (i in 0...plugins.length) {
+            var plugin = plugins[i];
+            plugin.explorerObj = explorer;
+            plugin.window = this;
+            plugin.init();
+        }
         
         if (StringTools.contains(boltProjPath, ".bolt")){
             openProject(boltProjPath);
@@ -125,11 +132,22 @@ class EditorWindow extends Widget {
         var ioManager : IoManager = cast ioCore;
         ioManager.registerPath(dirPath, "project://");
 
-        var projectPluginFileListTable = ioCore.getFileList("project://plugins/", ".lua", false);
-        var projectPluginFileList = Table.toArray(projectPluginFileListTable);
-        for (i in 0...projectPluginFileList.length) {
-            var pluginFile = projectPluginFileList[i];
-            untyped __lua__("require(pluginFile)");
+        if (ioCore.directoryExists("project://plugins/")) {
+            var plugins : Array<Plugin> = new Array<Plugin>();
+            untyped __lua__("_G.plugins = self.plugins");
+            var projectPluginFileListTable = ioCore.getFileList("project://plugins/", ".lua", false);
+            var projectPluginFileList = Table.toArray(projectPluginFileListTable);
+            for (i in 0...projectPluginFileList.length) {
+                var pluginFile = projectPluginFileList[i];
+                untyped __lua__("require(pluginFile)");
+            }
+
+            for (i in 0...plugins.length) {
+                var plugin = plugins[i];
+                plugin.explorerObj = explorer;
+                plugin.window = this;
+                plugin.init();
+            }
         }
 
         try {

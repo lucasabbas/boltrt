@@ -541,7 +541,9 @@ __bolt_ui_Widget = _hx_e()
 __boltEd_EditorWindow = _hx_e()
 __boltEd_Explorer = _hx_e()
 __boltEd_Main = _hx_e()
+__boltEd_Plugin = _hx_e()
 __boltEd_explorer_DirIndex = _hx_e()
+__boltEd_explorer_FileHandler = _hx_e()
 __boltEd_explorer_FileIndex = _hx_e()
 __haxe_StackItem = _hx_e()
 __haxe__CallStack_CallStack_Impl_ = _hx_e()
@@ -2968,6 +2970,35 @@ __boltEd_EditorWindow.__name__ = true
 __boltEd_EditorWindow.prototype = _hx_e();
 __boltEd_EditorWindow.prototype.init = function(self) 
   local _gthis = self;
+  local plugins = Array.new();
+  _G.plugins = self.plugins;
+  local globalPluginFileListTable = self.ioCore:getFileList("data://plugins/", ".lua", false);
+  local length = nil;
+  local tab = __lua_PairTools.copy(globalPluginFileListTable);
+  local length = length;
+  local globalPluginFileList;
+  if (length == nil) then 
+    length = _hx_table.maxn(tab);
+    if (length > 0) then 
+      local head = tab[1];
+      _G.table.remove(tab, 1);
+      tab[0] = head;
+      globalPluginFileList = _hx_tab_array(tab, length);
+    else
+      globalPluginFileList = _hx_tab_array({}, 0);
+    end;
+  else
+    globalPluginFileList = _hx_tab_array(tab, length);
+  end;
+  local _g = 0;
+  local _g1 = globalPluginFileList.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local pluginFile = globalPluginFileList[i];
+    require(pluginFile);
+  end;
   self.explorer = __boltEd_Explorer.new(self);
   self.document:loadFromPath("data://editorWindow.xml", self.ioCore);
   self.explorer:init();
@@ -3045,6 +3076,17 @@ __boltEd_EditorWindow.prototype.init = function(self)
       boltProjPath = _G.boltFile;
     end;
   end;
+  local _g = 0;
+  local _g1 = plugins.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local plugin = plugins[i];
+    plugin.explorerObj = self.explorer;
+    plugin.window = self;
+    plugin:init();
+  end;
   if (String.prototype.indexOf(boltProjPath, ".bolt") ~= -1) then 
     self:openProject(boltProjPath);
   end;
@@ -3060,6 +3102,46 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   self.projectPath = dirPath;
   local ioManager = self.ioCore;
   ioManager:registerPath(dirPath, "project://");
+  local plugins = Array.new();
+  _G.plugins = self.plugins;
+  local projectPluginFileListTable = self.ioCore:getFileList("project://plugins/", ".lua", false);
+  local length = nil;
+  local tab = __lua_PairTools.copy(projectPluginFileListTable);
+  local length = length;
+  local projectPluginFileList;
+  if (length == nil) then 
+    length = _hx_table.maxn(tab);
+    if (length > 0) then 
+      local head = tab[1];
+      _G.table.remove(tab, 1);
+      tab[0] = head;
+      projectPluginFileList = _hx_tab_array(tab, length);
+    else
+      projectPluginFileList = _hx_tab_array({}, 0);
+    end;
+  else
+    projectPluginFileList = _hx_tab_array(tab, length);
+  end;
+  local _g = 0;
+  local _g1 = projectPluginFileList.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local pluginFile = projectPluginFileList[i];
+    require(pluginFile);
+  end;
+  local _g = 0;
+  local _g1 = plugins.length;
+  while (_g < _g1) do _hx_do_first_1 = false;
+    
+    _g = _g + 1;
+    local i = _g - 1;
+    local plugin = plugins[i];
+    plugin.explorerObj = self.explorer;
+    plugin.window = self;
+    plugin:init();
+  end;
   local _hx_status, _hx_result = pcall(function() 
   
       self.explorer:start();
@@ -3069,13 +3151,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=119,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=154,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=124,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=159,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
@@ -3090,6 +3172,7 @@ __boltEd_Explorer.new = function(ew)
   return self
 end
 __boltEd_Explorer.super = function(self,ew) 
+  self.fileHandlers = Array.new();
   self.selectedPath = "project://";
   self.editorWindow = ew;
   self.ioCore = self.editorWindow.ioCore;
@@ -3455,6 +3538,22 @@ __boltEd_Main.prototype.__class__ =  __boltEd_Main
 __boltEd_Main.__super__ = __bolt_App
 setmetatable(__boltEd_Main.prototype,{__index=__bolt_App.prototype})
 
+__boltEd_Plugin.new = function() 
+  local self = _hx_new(__boltEd_Plugin.prototype)
+  __boltEd_Plugin.super(self)
+  return self
+end
+__boltEd_Plugin.super = function(self) 
+  self.explorerObj = nil;
+  self.window = nil;
+end
+__boltEd_Plugin.__name__ = true
+__boltEd_Plugin.prototype = _hx_e();
+__boltEd_Plugin.prototype.init = function(self) 
+end
+
+__boltEd_Plugin.prototype.__class__ =  __boltEd_Plugin
+
 __boltEd_explorer_DirIndex.new = function(path,parent) 
   local self = _hx_new(__boltEd_explorer_DirIndex.prototype)
   __boltEd_explorer_DirIndex.super(self,path,parent)
@@ -3474,6 +3573,26 @@ __boltEd_explorer_DirIndex.__name__ = true
 __boltEd_explorer_DirIndex.prototype = _hx_e();
 
 __boltEd_explorer_DirIndex.prototype.__class__ =  __boltEd_explorer_DirIndex
+
+__boltEd_explorer_FileHandler.new = function(w,e) 
+  local self = _hx_new(__boltEd_explorer_FileHandler.prototype)
+  __boltEd_explorer_FileHandler.super(self,w,e)
+  return self
+end
+__boltEd_explorer_FileHandler.super = function(self,w,e) 
+  self.window = nil;
+  self.explorerObj = nil;
+  self.iconPath = "";
+  self.extension = "";
+  self.window = w;
+  self.explorerObj = e;
+end
+__boltEd_explorer_FileHandler.__name__ = true
+__boltEd_explorer_FileHandler.prototype = _hx_e();
+__boltEd_explorer_FileHandler.prototype.openFile = function(self,string) 
+end
+
+__boltEd_explorer_FileHandler.prototype.__class__ =  __boltEd_explorer_FileHandler
 
 __boltEd_explorer_FileIndex.new = function(path,parent) 
   local self = _hx_new(__boltEd_explorer_FileIndex.prototype)

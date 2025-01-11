@@ -3,7 +3,7 @@ package boltEd;
 class Plugin {
     public var window : EditorWindow = null;
 
-    public var Explorer : Explorer = null;
+    public var explorerObj : Explorer = null;
 
     public function new() {
     }
