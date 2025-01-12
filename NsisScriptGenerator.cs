@@ -60,7 +60,7 @@ public class NsisScriptGenerator : MainLoop
         var partFour = System.IO.File.ReadAllText("./bolt.part-four.nsi.txt");
         sb.Append(partFour);
 
-        System.IO.File.WriteAllText(fullPath + "/bolt.nsi", sb.ToString());
+        System.IO.File.WriteAllText(fullPath + "/bolt.nsi", sb.ToString().Replace(ProjectSettings.GlobalizePath("res://"), ""));
     }
 
     public List<string> BuildListOfFiles(string dirPath) {

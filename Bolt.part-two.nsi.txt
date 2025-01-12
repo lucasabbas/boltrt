@@ -1,17 +1,25 @@
- 
-
-  
-
-  WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolt.exe"
+WriteRegStr HKCR ".bolt" ""  "$INSTDIR\bolted.exe"
   WriteRegStr HKCR ".bolt" ""  "Bolt Project"
   WriteRegStr HKCR ".bolt\DefaultIcon" ""  "$INSTDIR\bolt.exe"
   WriteRegStr HKCR ".bolt\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta" ""  "Bolt Application"
+  WriteRegStr HKCR ".bta\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".bta\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz" ""  "Bolt Application"
+  WriteRegStr HKCR ".btz\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btz\shell\open\command" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip" ""  "Bolt Application"
+  WriteRegStr HKCR ".btzip\DefaultIcon" ""  "$INSTDIR\bolt.exe"
+  WriteRegStr HKCR ".btzip\shell\open\command" "" "$INSTDIR\bolt.exe"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
   CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
-  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Bolt.lnk" "$INSTDIR\bolt.exe"
-  CreateShortCut "$DESKTOP\Bolt.lnk" "$INSTDIR\bolt.exe"
+  CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Bolt SDK.lnk" "$INSTDIR\BoltEd.exe"
+  CreateShortCut "$DESKTOP\Bolt SDK.lnk" "$INSTDIR\BoltEd.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -25,7 +33,7 @@ SectionEnd
 
 Section -Post
   WriteUninstaller "$INSTDIR\uninst.exe"
-  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\bolt.exe"
+  WriteRegStr HKLM "${PRODUCT_DIR_REGKEY}" "" "$INSTDIR\BoltEd.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayName" "$(^Name)"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "UninstallString" "$INSTDIR\uninst.exe"
   WriteRegStr ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}" "DisplayIcon" "$INSTDIR\bolt.exe"
@@ -58,4 +66,5 @@ Section Uninstall
   !insertmacro MUI_STARTMENU_GETFOLDER "Application" $ICONS_GROUP
   Delete "$INSTDIR\${PRODUCT_NAME}.url"
   Delete "$INSTDIR\uninst.exe"
-  Delete "$INSTDIR\bolt.pck"
+  Delete "$INSTDIR\bolt.pck"  
+  Delete "$INSTDIR\boltEd.pck"
