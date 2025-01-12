@@ -292,5 +292,5 @@ VSlider/styles/grabber_area = SubResource( 18 )
 VSlider/styles/grabber_area_highlight = SubResource( 18 )
 VSlider/styles/slider = SubResource( 19 )
 WindowDialog/constants/close_h_ofs = 20
-WindowDialog/constants/title_height = 18
+WindowDialog/constants/title_height = 20
 WindowDialog/styles/panel = SubResource( 20 )

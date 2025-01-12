@@ -2,6 +2,8 @@ package boltEd;
 
 import bolt.godot.PopupMenu.PopupMenuSignalNames;
 import bolt.godot.OS;
+import bolt.godot.Engine;
+import bolt.sys.Mono;
 import haxe.macro.Expr.Catch;
 import bolt.godot.FileDialog;
 import bolt.godot.SignalToFunc;
@@ -9,6 +11,9 @@ import bolt.godot.Button;
 import bolt.ui.Widget;
 import bolt.godot.MenuButton;
 import bolt.godot.Vector2;
+import bolt.godot.Image;
+import bolt.godot.ImageTexture;
+import bolt.godot.extensions.AcceptDialogPlus;
 import bolt.io.IoManager;
 import lua.Table;
 
@@ -27,6 +32,8 @@ class EditorWindow extends Widget {
     public var projectName : String;
 
     public var explorer : Explorer;
+
+    public var aboutDialog : AcceptDialogPlus;
 
     public override function init() {
         var plugins : Array<Plugin> = new Array<Plugin>();
@@ -64,6 +71,16 @@ class EditorWindow extends Widget {
                 document.getTree().quit();
             }
         });
+
+        SignalToFunc.connect(editMenu, PopupMenuSignalNames.idPressed, (id : Int) -> {
+            
+        });
+
+        SignalToFunc.connect(helpMenu, PopupMenuSignalNames.idPressed, (id : Int) -> {
+            if (id == 0) {
+                aboutDialog.popupCentered(new Vector2(0, 0));
+            }
+        });
         //trace(fileMenuButton != null);
         //trace(editMenuButton != null);
         //trace(helpMenuButton != null);
@@ -87,6 +104,30 @@ class EditorWindow extends Widget {
         SignalToFunc.connect(openFileDialog, FileDialogSignalNames.fileSelected, (filePath : String) -> openProject(filePath));
 
         document.addChild(openFileDialog);
+
+        try {
+            aboutDialog = new AcceptDialogPlus();
+            aboutDialog.windowTitle = "About";
+            var iconImage = new Image();
+            iconImage.loadPngFromBuffer(ioCore.loadBuffer("data://icon_032.png"));
+            var iconTexture = new ImageTexture();
+            iconTexture.createFromImage(iconImage);
+            aboutDialog.setIcon(iconTexture);
+            aboutDialog.text = "Bolt version 0.0.9\n";
+            var engineVersionTable = Engine.getVersionInfo();
+            var engineVersion = Table.toMap(engineVersionTable);
+            aboutDialog.text += "Godot Version: " + engineVersion["major"] + "." + engineVersion["minor"] + "." + engineVersion["patch"] + "\n";
+            aboutDialog.text += ".NET Framework Version: " + Mono.frameworkVersion + "\n";
+            aboutDialog.text += "Mono Version: " + Mono.version + "\n";
+            aboutDialog.text += "Mono Runtime Version: " + Mono.runtimeVersion + "\n";
+            aboutDialog.text += "CPU Architecture: " + Mono.cpuArchitecture + "\n";
+            aboutDialog.text += "Operating System: " + Mono.operatingSystem + "\n";
+            document.addChild(aboutDialog);
+        }
+        catch (e) {
+            Sys.println(e + " : " + e.stack);
+        }
+        
 
         var args = OS.getCmdlineArgs();
         var argsArray = lua.Table.toArray(args);

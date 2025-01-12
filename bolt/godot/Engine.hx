@@ -1,30 +1,32 @@
 package bolt.godot;
 
+import lua.Table;
+
 class EngineSignalNames {
 }
 @:native("godot.Engine")
 extern class Engine extends Object {
-    public var editorHint: Bool;
-    public var iterationsPerSecond: Int;
-    public var physicsJitterFix: Float;
-    public var printErrorMessages: Bool;
-    public var targetFps: Int;
-    public var timeScale: Float;
-    public function getAuthorInfo(): Map<Dynamic, Dynamic>;
-    public function getCopyrightInfo(): Array<Dynamic>;
-    public function getDonorInfo(): Map<Dynamic, Dynamic>;
-    public function getFramesDrawn(): Int;
-    public function getFramesPerSecond(): Float;
-    public function getIdleFrames(): Int;
-    public function getLicenseInfo(): Map<Dynamic, Dynamic>;
-    public function getLicenseText(): String;
-    public function getMainLoop(): MainLoop;
-    public function getPhysicsFrames(): Int;
-    public function getPhysicsInterpolationFraction(): Float;
-    public function getSingleton(name: String): Object;
-    public function getVersionInfo(): Map<Dynamic, Dynamic>;
-    public function hasSingleton(name: String): Bool;
-    public function isInPhysicsFrame(): Bool;
+    public static var editorHint: Bool;
+    public static var iterationsPerSecond: Int;
+    public static var physicsJitterFix: Float;
+    public static var printErrorMessages: Bool;
+    public static var targetFps: Int;
+    public static var timeScale: Float;
+    public static function getAuthorInfo(): Map<Dynamic, Dynamic>;
+    public static function getCopyrightInfo(): Array<Dynamic>;
+    public static function getDonorInfo(): Map<Dynamic, Dynamic>;
+    public static function getFramesDrawn(): Int;
+    public static function getFramesPerSecond(): Float;
+    public static function getIdleFrames(): Int;
+    public static function getLicenseInfo(): Map<Dynamic, Dynamic>;
+    public static function getLicenseText(): String;
+    public static function getMainLoop(): MainLoop;
+    public static function getPhysicsFrames(): Int;
+    public static function getPhysicsInterpolationFraction(): Float;
+    public static function getSingleton(name: String): Object;
+    public static function getVersionInfo(): Table<Dynamic, Dynamic>;
+    public static function hasSingleton(name: String): Bool;
+    public static function isInPhysicsFrame(): Bool;
     @:native("__new")
     public function new();
 }

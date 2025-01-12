@@ -10,7 +10,7 @@ enum AcceptDialogPlusTypeInfo {
     Info;
 }
 
-@:native("godot.AcceptDialogPlus")
+@:native("gdx.AcceptDialogPlus")
 extern class AcceptDialogPlus extends AcceptDialog {
     public var type: AcceptDialogPlusTypeInfo;
 
@@ -18,7 +18,8 @@ extern class AcceptDialogPlus extends AcceptDialog {
 
     public var text: String;
 
-    public function new(type : AcceptDialogPlusTypeInfo = AcceptDialogPlusTypeInfo.Info);
+    @:native("__new")
+    public function new(type : AcceptDialogPlusTypeInfo = cast AcceptDialogPlusTypeInfo.Info);
 
     public function setIcon(icon : Texture): Void;
 }

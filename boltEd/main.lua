@@ -285,6 +285,7 @@ __bolt_godot_DirectionalLightMergingMode = _hx_e()
 __bolt_godot_DirectionalLightPauseMode = _hx_e()
 __bolt_godot_DirectionalLightPhysicsInterpolationMode = _hx_e()
 __bolt_godot_DirectionalLightSignalNames = _hx_e()
+__bolt_godot_EngineSignalNames = _hx_e()
 __bolt_godot_EnvironmentBackgroundMode = _hx_e()
 __bolt_godot_EnvironmentTonemapMode = _hx_e()
 __bolt_godot_EnvironmentSsaoQuality = _hx_e()
@@ -537,6 +538,7 @@ __bolt_godot_WindowDialogPhysicsInterpolationMode = _hx_e()
 __bolt_godot_WindowDialogSignalNames = _hx_e()
 __bolt_godot_WorldSignalNames = _hx_e()
 __bolt_godot_World2DSignalNames = _hx_e()
+__bolt_godot_extensions_AcceptDialogPlusTypeInfo = _hx_e()
 __bolt_ui_Widget = _hx_e()
 __boltEd_EditorWindow = _hx_e()
 __boltEd_Explorer = _hx_e()
@@ -547,10 +549,13 @@ __boltEd_explorer_FileHandler = _hx_e()
 __boltEd_explorer_FileIndex = _hx_e()
 __haxe_StackItem = _hx_e()
 __haxe__CallStack_CallStack_Impl_ = _hx_e()
+__haxe_IMap = _hx_e()
 __haxe_Exception = _hx_e()
 __haxe_Log = _hx_e()
 __haxe_NativeStackTrace = _hx_e()
 __haxe_ValueException = _hx_e()
+__haxe_ds_ObjectMap = _hx_e()
+__haxe_ds_StringMap = _hx_e()
 __haxe_exceptions_PosException = _hx_e()
 __haxe_exceptions_NotImplementedException = _hx_e()
 __haxe_iterators_ArrayIterator = _hx_e()
@@ -1680,6 +1685,9 @@ __bolt_godot_DirectionalLightPhysicsInterpolationMode.__name__ = true
 
 __bolt_godot_DirectionalLightSignalNames.new = {}
 __bolt_godot_DirectionalLightSignalNames.__name__ = true
+
+__bolt_godot_EngineSignalNames.new = {}
+__bolt_godot_EngineSignalNames.__name__ = true
 
 __bolt_godot_EnvironmentBackgroundMode.new = {}
 __bolt_godot_EnvironmentBackgroundMode.__name__ = true
@@ -2939,6 +2947,14 @@ __bolt_godot_WorldSignalNames.__name__ = true
 
 __bolt_godot_World2DSignalNames.new = {}
 __bolt_godot_World2DSignalNames.__name__ = true
+_hxClasses["bolt.godot.extensions.AcceptDialogPlusTypeInfo"] = { __ename__ = true, __constructs__ = _hx_tab_array({[0]="Error","Warning","Info"},3)}
+__bolt_godot_extensions_AcceptDialogPlusTypeInfo = _hxClasses["bolt.godot.extensions.AcceptDialogPlusTypeInfo"];
+__bolt_godot_extensions_AcceptDialogPlusTypeInfo.Error = _hx_tab_array({[0]="Error",0,__enum__ = __bolt_godot_extensions_AcceptDialogPlusTypeInfo},2)
+
+__bolt_godot_extensions_AcceptDialogPlusTypeInfo.Warning = _hx_tab_array({[0]="Warning",1,__enum__ = __bolt_godot_extensions_AcceptDialogPlusTypeInfo},2)
+
+__bolt_godot_extensions_AcceptDialogPlusTypeInfo.Info = _hx_tab_array({[0]="Info",2,__enum__ = __bolt_godot_extensions_AcceptDialogPlusTypeInfo},2)
+
 
 __bolt_ui_Widget.new = function(ioCore,parentNode) 
   local self = _hx_new(__bolt_ui_Widget.prototype)
@@ -3028,6 +3044,14 @@ __boltEd_EditorWindow.prototype.init = function(self)
       end;
     end;
   end);
+  godot.SignalToFunc.connect(editMenu, __bolt_godot_PopupMenuSignalNames.idPressed, function(id) 
+    do return end;
+  end);
+  godot.SignalToFunc.connect(helpMenu, __bolt_godot_PopupMenuSignalNames.idPressed, function(id) 
+    if (id == 0) then 
+      _gthis.aboutDialog:popupCentered(__bolt_godot__Vector2_Vector2_Impl_._new(0, 0));
+    end;
+  end);
   self.newProjectButton = self.document:getObject("Control/VBoxContainer/ToolBar/HBoxContainer/NewProjectButton");
   self.openProjectButton = self.document:getObject("Control/VBoxContainer/ToolBar/HBoxContainer/OpenProjectButton");
   godot.SignalToFunc.connect(self.newProjectButton, "pressed", function() 
@@ -3046,6 +3070,76 @@ __boltEd_EditorWindow.prototype.init = function(self)
     _gthis:openProject(filePath);
   end);
   self.document:addChild(self.openFileDialog);
+  local _hx_status, _hx_result = pcall(function() 
+  
+      self.aboutDialog = gdx.AcceptDialogPlus.__new();
+      self.aboutDialog.windowTitle = "About";
+      local iconImage = godot.Image.__new();
+      iconImage:loadPngFromBuffer(self.ioCore:loadBuffer("data://icon_032.png"));
+      local iconTexture = godot.ImageTexture.__new();
+      iconTexture:createFromImage(iconImage);
+      self.aboutDialog:setIcon(iconTexture);
+      self.aboutDialog.text = "Bolt version 0.0.9\n";
+      local engineVersionTable = godot.Engine.getVersionInfo();
+      local obj = __haxe_ds_ObjectMap.new();
+      __lua_PairTools.pairsFold(engineVersionTable, function(k,v,m) 
+        obj.h[k] = v;
+        obj.k[k] = true;
+        do return obj end;
+      end, obj);
+      local engineVersion = obj;
+      local fh = self.aboutDialog;
+      local ret = engineVersion.h.major;
+      local ret1 = engineVersion.h.minor;
+      local ret2 = engineVersion.h.patch;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string(Std.string(Std.string(Std.string(Std.string("Godot Version: ") .. Std.string(((function() 
+        local _hx_1
+        if (ret == __haxe_ds_StringMap.tnull) then 
+        _hx_1 = nil; else 
+        _hx_1 = ret; end
+        return _hx_1
+      end )()))) .. Std.string(".")) .. Std.string(((function() 
+        local _hx_2
+        if (ret1 == __haxe_ds_StringMap.tnull) then 
+        _hx_2 = nil; else 
+        _hx_2 = ret1; end
+        return _hx_2
+      end )()))) .. Std.string(".")) .. Std.string(((function() 
+        local _hx_3
+        if (ret2 == __haxe_ds_StringMap.tnull) then 
+        _hx_3 = nil; else 
+        _hx_3 = ret2; end
+        return _hx_3
+      end )()))) .. Std.string("\n")));
+      local fh = self.aboutDialog;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string(".NET Framework Version: ") .. Std.string(__mono__.frameworkVersion)) .. Std.string("\n")));
+      local fh = self.aboutDialog;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string("Mono Version: ") .. Std.string(__mono__.version)) .. Std.string("\n")));
+      local fh = self.aboutDialog;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string("Mono Runtime Version: ") .. Std.string(__mono__.runtimeVersion)) .. Std.string("\n")));
+      local fh = self.aboutDialog;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string("CPU Architecture: ") .. Std.string(__mono__.cpuArchitecture)) .. Std.string("\n")));
+      local fh = self.aboutDialog;
+      fh.text = Std.string(fh.text) .. Std.string((Std.string(Std.string("Operating System: ") .. Std.string(__mono__.operatingSystem)) .. Std.string("\n")));
+      self.document:addChild(self.aboutDialog);
+    return _hx_pcall_default
+  end)
+  if not _hx_status and _hx_result == "_hx_pcall_break" then
+  elseif not _hx_status then 
+    local _g = _hx_result;
+    local e = __haxe_Exception.caught(_g);
+    local v = Std.string(Std.string(e)) .. Std.string(" : ");
+    local tmp = e:get_stack();
+    _G.print(Std.string(Std.string(v) .. Std.string(((function() 
+      local _hx_4
+      if (tmp == nil) then 
+      _hx_4 = "null"; else 
+      _hx_4 = _hx_wrap_if_string_field(__haxe__CallStack_CallStack_Impl_,'toString')(tmp); end
+      return _hx_4
+    end )()))));
+  elseif _hx_result ~= _hx_pcall_default then
+    return _hx_result
+  end;
   local args = godot.OS.getCmdlineArgs();
   local length = nil;
   local tab = __lua_PairTools.copy(args);
@@ -3159,13 +3253,13 @@ __boltEd_EditorWindow.prototype.openProject = function(self,filePath)
   elseif not _hx_status then 
     local _g = _hx_result;
     local e = __haxe_Exception.caught(_g):unwrap();
-    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=156,className="boltEd.EditorWindow",methodName="openProject"}));
+    __haxe_Log.trace(Std.string("Error: ") .. Std.string(Std.string(e)), _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=197,className="boltEd.EditorWindow",methodName="openProject"}));
   elseif _hx_result ~= _hx_pcall_default then
     return _hx_result
   end;
 end
 __boltEd_EditorWindow.prototype.openProjectDialog = function(self) 
-  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=161,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
+  __haxe_Log.trace("Open Project", _hx_o({__fields__={fileName=true,lineNumber=true,className=true,methodName=true},fileName="boltEd/EditorWindow.hx",lineNumber=202,className="boltEd.EditorWindow",methodName="openProjectDialog"}));
   local fileDialogSize = __bolt_godot__Vector2_Vector2_Impl_._new(550, 350);
   self.openFileDialog:popupCentered(fileDialogSize);
 end
@@ -3887,6 +3981,9 @@ __haxe__CallStack_CallStack_Impl_.itemToString = function(b,s)
     b.length = b.length + #str; end;
 end
 
+__haxe_IMap.new = {}
+__haxe_IMap.__name__ = true
+
 __haxe_Exception.new = function(message,previous,native) 
   local self = _hx_new(__haxe_Exception.prototype)
   __haxe_Exception.super(self,message,previous,native)
@@ -4061,6 +4158,35 @@ end
 __haxe_ValueException.prototype.__class__ =  __haxe_ValueException
 __haxe_ValueException.__super__ = __haxe_Exception
 setmetatable(__haxe_ValueException.prototype,{__index=__haxe_Exception.prototype})
+
+__haxe_ds_ObjectMap.new = function() 
+  local self = _hx_new(__haxe_ds_ObjectMap.prototype)
+  __haxe_ds_ObjectMap.super(self)
+  return self
+end
+__haxe_ds_ObjectMap.super = function(self) 
+  self.h = ({});
+  self.k = ({});
+end
+__haxe_ds_ObjectMap.__name__ = true
+__haxe_ds_ObjectMap.__interfaces__ = {__haxe_IMap}
+__haxe_ds_ObjectMap.prototype = _hx_e();
+
+__haxe_ds_ObjectMap.prototype.__class__ =  __haxe_ds_ObjectMap
+
+__haxe_ds_StringMap.new = function() 
+  local self = _hx_new(__haxe_ds_StringMap.prototype)
+  __haxe_ds_StringMap.super(self)
+  return self
+end
+__haxe_ds_StringMap.super = function(self) 
+  self.h = ({});
+end
+__haxe_ds_StringMap.__name__ = true
+__haxe_ds_StringMap.__interfaces__ = {__haxe_IMap}
+__haxe_ds_StringMap.prototype = _hx_e();
+
+__haxe_ds_StringMap.prototype.__class__ =  __haxe_ds_StringMap
 
 __haxe_exceptions_PosException.new = function(message,previous,pos) 
   local self = _hx_new(__haxe_exceptions_PosException.prototype)
@@ -4275,6 +4401,10 @@ __lua_UserData.__name__ = true
 
 __lua_PairTools.new = {}
 __lua_PairTools.__name__ = true
+__lua_PairTools.pairsFold = function(table,func,seed) 
+  for k,v in _G.pairs(table) do seed = func(k,v,seed) end;
+  do return seed end;
+end
 __lua_PairTools.copy = function(table1) 
   local ret = ({});
   for k,v in _G.pairs(table1) do ret[k] = v end;
@@ -6708,6 +6838,8 @@ local _hx_static_init = function()
   __bolt_godot_WindowDialogPhysicsInterpolationMode.Off = 1;
   
   __bolt_godot_WindowDialogPhysicsInterpolationMode.On = 2;
+  
+  __haxe_ds_StringMap.tnull = ({});
   
   
 end
