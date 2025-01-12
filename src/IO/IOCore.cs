@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Bolt.Scripting;
+using MoonSharp.Interpreter;
 
 namespace Bolt.IO
 {
@@ -33,6 +34,16 @@ namespace Bolt.IO
         public virtual void SaveBuffer(string assetPath, byte[] bytes)
         {
 
+        }
+
+        public void SaveBuffer(string assetPath, List<DynValue> byteTable)
+        {
+            List<byte> bytes = new List<byte>();
+            foreach (var value in byteTable)
+            {
+                bytes.Add(Convert.ToByte(value.Number));
+            }
+            SaveBuffer(assetPath, bytes.ToArray());
         }
 
         public List<String> GetFileListAll(string extension, bool recursive = true)
