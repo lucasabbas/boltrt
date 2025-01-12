@@ -1,5 +1,7 @@
 package bolt;
 
+import haxe.io.BytesBuffer;
+import haxe.io.BytesData;
 import haxe.io.Bytes;
 import lua.Table;
 
@@ -14,5 +16,16 @@ class Io {
 
         var table : Table<Int, Float> = Table.fromArray(floatArray);
         return table;
+    }
+
+    static function numberTableToBytes(table : Table<Int, Float>) {
+        var floatArray : Array<Float> = Table.toArray(table);
+        var bytesBuffer : BytesBuffer = new BytesBuffer();
+        for (i in 0...floatArray.length) {
+            var float : Float = floatArray[i];
+            bytesBuffer.addFloat(float);
+        }
+        var bytes : Bytes = bytesBuffer.getBytes();
+        return bytes;
     }
 }
