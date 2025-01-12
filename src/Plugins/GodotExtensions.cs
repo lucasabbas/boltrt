@@ -16,6 +16,8 @@ namespace Bolt.Plugins
             UserData.RegisterType<FreeLookCamera>();
             UserData.RegisterType<MouseRayCast3D>();
             UserData.RegisterType<UiDocument>();
+            UserData.RegisterType<AcceptDialogPlus>();
+            UserData.RegisterType<ConfirmationDialogPlus>();
             //UserData.RegisterType<UiStyleSheet>();
             //UserData.RegisterType<TabManager>();
 
@@ -23,6 +25,8 @@ namespace Bolt.Plugins
             GdExtNamespace["FreeLookCamera"] = UserData.CreateStatic(typeof(FreeLookCamera));
             GdExtNamespace["MouseRayCast"] = UserData.CreateStatic(typeof(MouseRayCast3D));
             GdExtNamespace["UiDocument"] = UserData.CreateStatic(typeof(UiDocument));
+            GdExtNamespace["AcceptDialogPlus"] = UserData.CreateStatic(typeof(AcceptDialogPlus));
+            GdExtNamespace["ConfirmationDialogPlus"] = UserData.CreateStatic(typeof(ConfirmationDialogPlus));
             //GdExtNamespace["UiStyleSheet"] = typeof(UiStyleSheet);
             //GdExtNamespace["TabManager"] = typeof(TabManager);
         }

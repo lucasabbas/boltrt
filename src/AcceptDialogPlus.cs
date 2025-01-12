@@ -44,5 +44,11 @@ namespace Bolt
             AddChild(_hBoxContainer);
             Label = (Label)_hBoxContainer.GetNode("Label");
         }
+
+        public void SetIcon(Texture iconTexture)
+        {
+            TextureRect icon = (TextureRect)_hBoxContainer.GetNode("IconHolder/Icon");
+            icon.Texture = iconTexture;
+        }
     }
 }
