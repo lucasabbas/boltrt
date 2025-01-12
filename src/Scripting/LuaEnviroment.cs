@@ -181,6 +181,18 @@ namespace Bolt.Scripting
 
         private void LoadPluginDll(string path)
         {
+            if (path.EndsWith("win://") || path.EndsWith("unix://") || path.Contains("://"))
+            {
+                path = IoCore.GetFullPath(path);
+                if (path.StartsWith("/"))
+                    throw new Exception("path must not start with /, and must not be in a zip file");
+            }
+            
+            if (!System.IO.File.Exists(path))
+            {
+                throw new Exception("File does not exist");
+            }
+            
             Assembly assembly = Assembly.LoadFile(path);
             foreach (Type type in assembly.GetTypes())
             {
