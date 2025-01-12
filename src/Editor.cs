@@ -25,10 +25,10 @@ public class Editor : LuaNode
         var editorPath = basePath + "boltEd/editor.bolt";
         StartFromLKProject(editorPath);
 
-        //OS.WindowBorderless = false;
-		//OS.WindowResizable = true;
-		//OS.WindowSize = new Vector2(1024, 600);
-		//OS.CenterWindow();
+        OS.WindowBorderless = false;
+		OS.WindowResizable = true;
+		OS.WindowSize = new Vector2(1024, 600);
+		OS.CenterWindow();
     }
 
 }

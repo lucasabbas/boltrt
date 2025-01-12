@@ -64,9 +64,9 @@ public class Standalone : LuaNode
 			StartFromPath(path);
 
 
-		//OS.WindowBorderless = false;
-		//OS.WindowResizable = true;
-		//OS.WindowSize = new Vector2(1024, 600);
-		//OS.CenterWindow();
+		OS.WindowBorderless = false;
+		OS.WindowResizable = true;
+		OS.WindowSize = new Vector2(1024, 600);
+		OS.CenterWindow();
 	}
 }
