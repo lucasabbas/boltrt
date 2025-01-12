@@ -25,6 +25,14 @@ window/size/resizable=false
 window/size/borderless=true
 window/size/borderless.X11=false
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-openxr/plugin.cfg" )
+
+[gdnative]
+
+singletons=[ "res://addons/godot-openxr/config/godot_openxr.gdnlib", "res://webrtc.tres" ]
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
