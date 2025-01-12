@@ -1,10 +1,12 @@
 package boltEd;
 
+import bolt.godot.LineEdit;
 import bolt.godot.SignalToFunc;
 import lua.Boot;
 import haxe.Constraints.Function;
 import bolt.godot.Button;
 import bolt.godot.MenuButton;
+import bolt.godot.LineEdit;
 import bolt.godot.Tree;
 import bolt.godot.TreeItem;
 import bolt.godot.ItemList;
@@ -32,6 +34,8 @@ class Explorer {
     public var refreshButton : Button;
 
     public var newButton : MenuButton;
+
+    public var addressBar : LineEdit;
 
     public var tree : Tree;
 
