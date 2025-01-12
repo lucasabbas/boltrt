@@ -29,6 +29,7 @@ public class Editor : LuaNode
 		OS.WindowResizable = true;
 		OS.WindowSize = new Vector2(1024, 600);
 		OS.CenterWindow();
+        OS.WindowMaximized = true;
     }
 
 }
